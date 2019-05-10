@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2019-05-02 10:50\n"
+"PO-Revision-Date: 2019-05-10 14:58\n"
 
 #. builder.Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Settings\AdminMenu.cs:24
@@ -33,21 +33,23 @@ msgid "General"
 msgstr ""
 
 #. _notifier.Success(H["Site settings updated successfully."]);
-#: OrchardCore.Settings\Controllers\AdminController.cs:89
+#: OrchardCore.Settings\Controllers\AdminController.cs:94
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "Site settings updated successfully."
 msgstr ""
 
 #. _notifier.Warning(H["The site needs to be restarted for the settings to take effect"]);
 #. _notifier.Warning(H["The site needs to be restarted for the settings to take effect"]);
-#: OrchardCore.Settings\Controllers\AdminController.cs:135
-#: OrchardCore.Settings\Controllers\AdminController.cs:157
+#. _notifier.Warning(H["The site needs to be restarted for the settings to take effect"]);
+#: OrchardCore.Settings\Controllers\AdminController.cs:140
+#: OrchardCore.Settings\Controllers\AdminController.cs:148
+#: OrchardCore.Settings\Controllers\AdminController.cs:170
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "The site needs to be restarted for the settings to take effect"
 msgstr ""
 
 #. ModelState.AddModelError(nameof(cultureName), S["Invalid culture name"]);
-#: OrchardCore.Settings\Controllers\AdminController.cs:139
+#: OrchardCore.Settings\Controllers\AdminController.cs:152
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "Invalid culture name"
 msgstr ""
@@ -136,10 +138,10 @@ msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Local to server"
 msgstr ""
 
-#. <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times."]</span>
+#. <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:52
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
-msgid "Determines the default time zone used when displaying and editing dates and times."
+msgid "Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."
 msgstr ""
 
 #. <label asp-for="Culture">@T["Default Culture"]</label>
@@ -149,19 +151,25 @@ msgid "Default Culture"
 msgstr ""
 
 #. <option value="">@T["System ({0} | {1})", CultureInfo.InstalledUICulture.Name, CultureInfo.InstalledUICulture.DisplayName]</option>
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:58
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:60
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "System ({0} | {1})"
 msgstr ""
 
-#. <span class="hint">@T["Determines the default culture used"]</span>
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:67
+#. <option value="">@T["System ({0})", !String.IsNullOrEmpty(CultureInfo.InstalledUICulture.DisplayName) ? CultureInfo.InstalledUICulture.DisplayName : CultureInfo.InstalledUICulture.NativeName]</option>
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:64
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
-msgid "Determines the default culture used"
+msgid "System ({0})"
+msgstr ""
+
+#. <span class="hint">@T["Determines the default culture used. It is recommended to assign a default culture manually since the system culture can differ from a system to an other."]</span>
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:86
+msgctxt "OrchardCore.Settings.Views.Settings.Edit"
+msgid "Determines the default culture used. It is recommended to assign a default culture manually since the system culture can differ from a system to an other."
 msgstr ""
 
 #. <p>@Html.ActionLink(T["Add or remove supported cultures for the site"].Value, "Culture")</p>
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:68
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:87
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Add or remove supported cultures for the site"
 msgstr ""
@@ -184,19 +192,19 @@ msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Settings"
 msgstr ""
 
-#. <p class="breadcrumb">@Html.ActionLink(T["Manage Settings"].Value, "Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
+#. <p class="breadcrumb"><a href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })">@T["Manage Settings"]</a>&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
 #: OrchardCore.Settings\Views\Admin\Culture.cshtml:6
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Manage Settings"
 msgstr ""
 
-#. <p class="breadcrumb">@Html.ActionLink(T["Manage Settings"].Value, "Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
+#. <p class="breadcrumb"><a href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })">@T["Manage Settings"]</a>&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
 #: OrchardCore.Settings\Views\Admin\Culture.cshtml:6
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "&#62;"
 msgstr ""
 
-#. <p class="breadcrumb">@Html.ActionLink(T["Manage Settings"].Value, "Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
+#. <p class="breadcrumb"><a href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })">@T["Manage Settings"]</a>&nbsp;@T["&#62;"]&nbsp;@T["Supported Cultures"]</p>
 #: OrchardCore.Settings\Views\Admin\Culture.cshtml:6
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Supported Cultures"
@@ -215,21 +223,27 @@ msgid "Add a culture:"
 msgstr ""
 
 #. <label for="CultureName">@T["Other"]:</label>
-#: OrchardCore.Settings\Views\Admin\Culture.cshtml:24
+#: OrchardCore.Settings\Views\Admin\Culture.cshtml:35
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Other"
 msgstr ""
 
 #. <button class="btn btn-primary" type="submit">@T["Add"]</button>
-#: OrchardCore.Settings\Views\Admin\Culture.cshtml:30
+#: OrchardCore.Settings\Views\Admin\Culture.cshtml:41
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Add"
 msgstr ""
 
 #. <h3>@T["Cultures this site supports"]</h3>
-#: OrchardCore.Settings\Views\Admin\Culture.cshtml:35
+#: OrchardCore.Settings\Views\Admin\Culture.cshtml:46
 msgctxt "OrchardCore.Settings.Views.Admin.Culture"
 msgid "Cultures this site supports"
+msgstr ""
+
+#. <a class="btn btn-primary" href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = "general" })">@T["Close"]</a>
+#: OrchardCore.Settings\Views\Admin\Culture.cshtml:66
+msgctxt "OrchardCore.Settings.Views.Admin.Culture"
+msgid "Close"
 msgstr ""
 
 #. <h1>@RenderTitleSegments(T["Settings"])</h1>
@@ -275,7 +289,7 @@ msgid "Exports the current site settings."
 msgstr ""
 
 #. <button type="submit" class="btn btn-link" title="@T["Delete"]">
-#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:15
+#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
 msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
 msgid "Delete"
 msgstr ""
