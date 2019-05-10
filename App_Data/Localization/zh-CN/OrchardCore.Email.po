@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-05-08 01:56\n"
+"PO-Revision-Date: 2019-05-10 15:23\n"
 
 #. .Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -33,61 +33,37 @@ msgid "Smtp"
 msgstr "Smtp"
 
 #. _notifier.Success(H["Message sent successfully"]);
-#: OrchardCore.Email\Controllers\AdminController.cs:82
+#: OrchardCore.Email\Controllers\AdminController.cs:80
 msgctxt "OrchardCore.Email.Controllers.AdminController"
 msgid "Message sent successfully"
 msgstr "信息已成功发送"
 
-#. ModelState.AddModelError(string.Empty, T["Invalid \"To\" email : "] + email);
-#: OrchardCore.Email\Controllers\AdminController.cs:104
-msgctxt "OrchardCore.Email.Controllers.AdminController"
-msgid "Invalid \"To\" email : "
-msgstr "无效的“至”电子邮件： "
-
-#. ModelState.AddModelError(string.Empty, T["Invalid \"Bcc\" email : "] + email);
-#: OrchardCore.Email\Controllers\AdminController.cs:116
-msgctxt "OrchardCore.Email.Controllers.AdminController"
-msgid "Invalid \"Bcc\" email : "
-msgstr "无效的“至”电子邮件： "
-
-#. ModelState.AddModelError(string.Empty, T["Invalid \"Cc\" email : "] + email);
-#: OrchardCore.Email\Controllers\AdminController.cs:128
-msgctxt "OrchardCore.Email.Controllers.AdminController"
-msgid "Invalid \"Cc\" email : "
-msgstr "无效的“至”电子邮件： "
-
-#. ModelState.AddModelError(string.Empty, T["Invalid \"Reply To\" email : "] + email);
-#: OrchardCore.Email\Controllers\AdminController.cs:140
-msgctxt "OrchardCore.Email.Controllers.AdminController"
-msgid "Invalid \"Reply To\" email : "
-msgstr "无效的“至”电子邮件： "
-
 #. return SmtpResult.Failed(S["SMTP settings must be configured before an email can be sent."]);
-#: OrchardCore.Email\Services\SmtpService.cs:33
+#: OrchardCore.Email\Services\SmtpService.cs:38
 msgctxt "OrchardCore.Email.Services.SmtpService"
 msgid "SMTP settings must be configured before an email can be sent."
 msgstr "SMTP设置必须配置，然后才能发送电子邮件。"
 
-#. return SmtpResult.Failed(S["An error occurred while sending an email: '{0}'", e.Message]);
-#: OrchardCore.Email\Services\SmtpService.cs:51
+#. return SmtpResult.Failed(S["An error occurred while sending an email: '{0}'", ex.Message]);
+#: OrchardCore.Email\Services\SmtpService.cs:65
 msgctxt "OrchardCore.Email.Services.SmtpService"
 msgid "An error occurred while sending an email: '{0}'"
 msgstr "在发送邮件时发生错误。"
 
 #. public override LocalizedString Category => T["Messaging"];
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:36
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:35
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr "消息"
 
 #. return Outcomes(T["Done"], T["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:71
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:70
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr "完成"
 
 #. return Outcomes(T["Done"], T["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:71
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:70
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "失败"
@@ -122,134 +98,164 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Network"
 msgstr "网络"
 
-#. @T["Pickup directory from IIS"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:20
-msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "Pickup directory from IIS"
-msgstr "从 IIS 拾取目录"
-
 #. @T["Specified pickup directory"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:23
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Specified pickup directory"
 msgstr "指定的拾取目录"
 
 #. <span class="hint">@T["The delivery method used when sending email. Use Network in production. The other options can be useful when developing and testing."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:27
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The delivery method used when sending email. Use Network in production. The other options can be useful when developing and testing."
 msgstr "发送电子邮件时使用的传递方法。在生产中使用网络。其他选项可以在开发和测试时有用。"
 
 #. <h2 class="card-title">@T["Network delivery options"]</h2>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:35
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Network delivery options"
 msgstr "网络传递选项"
 
 #. <label asp-for="Host">@T["Host name"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:38
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Host name"
 msgstr "主机名"
 
 #. <span class="hint">@T["The SMTP server domain, e.g. <i>smtp.mailprovider.com</i>."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:41
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:38
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The SMTP server domain, e.g. <i>smtp.mailprovider.com</i>."
 msgstr "SMTP 服务器域, 例如, <i>smtp.mailprovider.com</i>。"
 
 #. <label asp-for="Port">@T["Port number"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:45
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:43
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Port number"
 msgstr "端口号"
 
 #. <span class="hint">@T["The SMTP server port, usually 25."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:48
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:46
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The SMTP server port, usually 25."
 msgstr "SMTP 服务器端口, 通常为25。"
 
-#. <label class="custom-control-label" asp-for="EnableSsl">@T["Enable SSL communications"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:55
+#. <label asp-for="EncryptionMethod">@T["Encryption method to use"]</label>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:50
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "Enable SSL communications"
-msgstr "启用 SSL 通信"
+msgid "Encryption method to use"
+msgstr ""
 
-#. <span class="hint">@T["— {0}", "Check if the SMTP server requires SSL communications."]</span>
+#. @T["None"] - @T["Connect to server using insecure connection."]
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:53
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "None"
+msgstr ""
+
+#. @T["None"] - @T["Connect to server using insecure connection."]
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:53
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Connect to server using insecure connection."
+msgstr ""
+
+#. @T["SSL/TLS"] - @T["Connect to server using SSL/TSL secure connection"]
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:56
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "— {0}"
-msgstr "- {0}"
+msgid "SSL/TLS"
+msgstr ""
+
+#. @T["SSL/TLS"] - @T["Connect to server using SSL/TSL secure connection"]
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:56
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Connect to server using SSL/TSL secure connection"
+msgstr ""
+
+#. @T["STARTTLS"] - @T["Connect to server using insecure connection and upgrade to secure using SSL/TLS"]
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:59
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "STARTTLS"
+msgstr ""
+
+#. @T["STARTTLS"] - @T["Connect to server using insecure connection and upgrade to secure using SSL/TLS"]
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:59
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Connect to server using insecure connection and upgrade to secure using SSL/TLS"
+msgstr ""
+
+#. <span class="hint">@T["The encryption method used when connecting to mail server."]</span>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:63
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "The encryption method used when connecting to mail server."
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="AutoSelectEncryption">@T["Auto Select Encryption method"]</label>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:71
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Auto Select Encryption method"
+msgstr ""
+
+#. <span class="hint">— @T["Check to let the system select the encryption method based on port."]</span>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:72
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Check to let the system select the encryption method based on port."
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="RequireCredentials">@T["Require credentials"] </label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:64
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:80
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Require credentials"
 msgstr "要求凭据"
 
 #. <label class="custom-control-label" asp-for="UseDefaultCredentials">@T["Use Windows authentication"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:73
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:89
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Use Windows authentication"
 msgstr "使用 Windows 身份验证"
 
 #. <span class="hint d-block">@T["When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:74
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:90
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
 msgstr "选择此选项后, 应用池或主机进程标识用于通过邮件服务器进行身份验证。"
 
 #. <label asp-for="UserName">@T["User name"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:80
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "User name"
 msgstr "用户名"
 
 #. <span class="hint">@T["The username for authentication."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:83
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:99
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The username for authentication."
 msgstr "身份验证的用户名。"
 
 #. <label asp-for="Password">@T["Password"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:87
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:103
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Password"
 msgstr "密码"
 
 #. <span class="hint">@T["The password for authentication."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:90
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:106
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The password for authentication."
 msgstr "用于身份验证的密码。"
 
-#. <h2 class="card-title">@T["Pickup directory from IIS delivery options"]</h2>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:102
-msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "Pickup directory from IIS delivery options"
-msgstr "来自 IIS 传递选项的拾取目录"
-
-#. @T["No options."]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:105
-msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "No options."
-msgstr "无选项"
-
 #. <h2 class="card-title">@T["Specified pickup directory delivery options"]</h2>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:115
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:117
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Specified pickup directory delivery options"
 msgstr "指定的拾取目录传递选项"
 
 #. <label asp-for="PickupDirectoryLocation">@T["Pickup directory location"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:118
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:120
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Pickup directory location"
 msgstr "拾取目录位置"
 
 #. <span class="hint">@T[@"E.g. <i>C:\Path\To\This\Site\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:121
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:123
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "E.g. <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."
 msgstr "例如 <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> 将电子邮件放在 C 驱动器上 <i>PickedUpEmail</i> 目录中。"
@@ -368,11 +374,11 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
 msgstr "身体是否包含 HTML？"
 
-#. <span class="hint">@T["— {0}", "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
+#. <span class="hint">— @T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:35
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "— {0}"
-msgstr "- {0}"
+msgid "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."
+msgstr ""
 
 #. <h4 class="card-title"><i class="fa fa-envelope"></i>@T["Send Email"]</h4>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
