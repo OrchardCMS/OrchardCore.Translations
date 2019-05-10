@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Serbian (Latin)\n"
 "Language: sr_CS\n"
-"PO-Revision-Date: 2019-05-02 10:46\n"
+"PO-Revision-Date: 2019-05-10 15:05\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -25,117 +25,139 @@ msgid "Assets"
 msgstr ""
 
 #. error = T["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#: OrchardCore.Media\Controllers\AdminController.cs:190
+#. error = T["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
+#: OrchardCore.Media\Controllers\AdminController.cs:210
+#: OrchardCore.Media\Controllers\AdminController.cs:240
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr ""
 
 #. error = T["The file {0} is too big. The limit is {1}MB", file.FileName, (int)Math.Floor((double) maxFileSize / 1024 / 1024)].ToString()
-#: OrchardCore.Media\Controllers\AdminController.cs:205
+#. error = T["The file {0} is too big. The limit is {1}MB", file.FileName, (int)Math.Floor((double) maxFileSize / 1024 / 1024)].ToString()
+#: OrchardCore.Media\Controllers\AdminController.cs:225
+#: OrchardCore.Media\Controllers\AdminController.cs:255
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "The file {0} is too big. The limit is {1}MB"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:253
+#: OrchardCore.Media\Controllers\AdminController.cs:304
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:259
+#: OrchardCore.Media\Controllers\AdminController.cs:310
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:307
+#: OrchardCore.Media\Controllers\AdminController.cs:360
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr ""
 
 #. return BadRequest(T["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:375
+#: OrchardCore.Media\Controllers\AdminController.cs:438
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:403
+#: OrchardCore.Media\Controllers\AdminController.cs:467
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:409
+#: OrchardCore.Media\Controllers\AdminController.cs:473
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr ""
 
+#. updater.ModelState.AddModelError(Prefix, S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:79
+msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
+msgid "{0}: There was an error handling the files."
+msgstr ""
+
 #. updater.ModelState.AddModelError(Prefix, S["{0}: A media is required.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:64
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:90
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: A media is required."
 msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, S["{0}: Selecting multiple media is forbidden.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:69
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:95
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr ""
 
-#. <input type="hidden" id="onlyOneItemMessage" value="@T["Only one item is allowed on this field."]" />
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:25
-msgctxt "OrchardCore.Media.Views.MediaField.Edit"
-msgid "Only one item is allowed on this field."
+#. <span v-show="!smallThumbs" title="@T["Small Thumbs"]"><i class="fa fa-compress"></i></span>
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:36
+msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
+msgid "Small Thumbs"
+msgstr ""
+
+#. <span v-show="smallThumbs" title="@T["Large Thumbs"]"><i class="fa fa-expand"></i></span>
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:37
+msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
+msgid "Large Thumbs"
+msgstr ""
+
+#. <code class="text-right" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:46
+msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
+msgid "{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
+msgstr ""
+
+#. <option value="Attached" selected="@(currentEditor == "Attached")">@T["Attached"]</option>
+#: OrchardCore.Media\Views\MediaField-Attached.Option.cshtml:4
+msgctxt "OrchardCore.Media.Views.MediaField-Attached.Option"
+msgid "Attached"
 msgstr ""
 
 #. <span v-show="!smallThumbs" title="@T["Small Thumbs"]"><i class="fa fa-compress"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:41
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:37
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Small Thumbs"
 msgstr ""
 
 #. <span v-show="smallThumbs" title="@T["Large Thumbs"]"><i class="fa fa-expand"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:42
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:38
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Large Thumbs"
 msgstr ""
 
 #. <code class="text-right" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:48
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:44
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
-#. <span class="text-danger small d-block">@T["Not Found"]</span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:79
-msgctxt "OrchardCore.Media.Views.MediaField.Edit"
-msgid "Not Found"
-msgstr ""
-
-#. <span class="text-danger small d-block text-center">@T["It will be discarded on saving"]</span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:80
-msgctxt "OrchardCore.Media.Views.MediaField.Edit"
-msgid "It will be discarded on saving"
-msgstr ""
-
 #. <h5 class="modal-title">@T["Select Media"]</h5>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:100
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:62
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Select Media"
 msgstr ""
 
 #. <button type="button" class="btn btn-primary mediaFieldSelectButton">@T["OK"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:108
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:70
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "OK"
 msgstr ""
 
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:109
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:71
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Cancel"
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.Media\Views\MediaField.Option.cshtml:4
+msgctxt "OrchardCore.Media.Views.MediaField.Option"
+msgid "Standard"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="Required">@T["Required"]</label>
@@ -175,7 +197,7 @@ msgid "The hint text to display on the editor."
 msgstr ""
 
 #. <h1>@RenderTitleSegments(T["Assets"])</h1>
-#: OrchardCore.Media\Views\Admin\Index.cshtml:46
+#: OrchardCore.Media\Views\Admin\Index.cshtml:47
 msgctxt "OrchardCore.Media.Views.Admin.Index"
 msgid "Assets"
 msgstr ""
@@ -474,5 +496,29 @@ msgstr ""
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified media."
+msgstr ""
+
+#. <input type="hidden" id="onlyOneItemMessage" value="@T["Only one item is allowed on this field."]" />
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:2
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "Only one item is allowed on this field."
+msgstr ""
+
+#. <input type="hidden" id="t-media-not-found" value="@T["Not Found"]" />
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:5
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "Not Found"
+msgstr ""
+
+#. <input type="hidden" id="t-discard-warning" value="@T["It will be discarded on saving"]" />
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:6
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "It will be discarded on saving"
+msgstr ""
+
+#. <input type="hidden" id="t-no-images" value="@T["No Images"]" />
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:7
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "No Images"
 msgstr ""
 
