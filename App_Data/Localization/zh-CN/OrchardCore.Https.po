@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-05-02 10:45\n"
+"PO-Revision-Date: 2019-05-10 15:24\n"
 
 #. .Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Https\AdminMenu.cs:25
@@ -40,7 +40,7 @@ msgstr "为了安全起见, 允许在 HTTP 上启用 HTTPS 已被阻止。"
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:3
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
-msgstr ""
+msgstr "当设置保存时，将重新加载当前租户。"
 
 #. <label class="custom-control-label" asp-for="RequireHttps">@T["Require HTTPS"]</label>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:8
@@ -48,21 +48,23 @@ msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Require HTTPS"
 msgstr "需要 HTTPS"
 
-#. <span class="hint">@T["— {0}", "Require HTTPS for all requests"]</span>
-#. <span class="hint">@T["— {0}", "Indicates to browsers that connecting without transport security (e.g SSL or TLS) isn't allowed."]</span>
-#. <span class="hint">@T["— {0}", "Specifies whether a permanent redirect, 308 Moved Permanently, should be used instead of a temporary redirect, 307 Found, when redirecting to HTTPS"]</span>
+#. <span class="hint">— @T["Require HTTPS for all requests"]</span>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:9
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:17
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:27
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
-msgid "— {0}"
-msgstr "— {0}"
+msgid "Require HTTPS for all requests"
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="EnableStrictTransportSecurity">@T["Enable HSTS"]</label>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Enable HSTS"
 msgstr "启用 HSTS"
+
+#. <span class="hint">— @T["Indicates to browsers that connecting without transport security (e.g SSL or TLS) isn't allowed."]</span>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:17
+msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
+msgid "Indicates to browsers that connecting without transport security (e.g SSL or TLS) isn't allowed."
+msgstr ""
 
 #. <div class="alert alert-danger">@T["This option should be enabled with caution, as it may prevent users from connecting if HTTPS was later disabled or wasn't available."]</div>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:20
@@ -76,6 +78,12 @@ msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Require HTTPS Permanent"
 msgstr "需要 HTTPS 永久"
 
+#. <span class="hint">— @T["Specifies whether a permanent redirect, 308 Moved Permanently, should be used instead of a temporary redirect, 307 Found, when redirecting to HTTPS"]</span>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:27
+msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
+msgid "Specifies whether a permanent redirect, 308 Moved Permanently, should be used instead of a temporary redirect, 307 Found, when redirecting to HTTPS"
+msgstr ""
+
 #. <label asp-for="SslPort">@T["SSL Port"]</label>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
@@ -86,5 +94,5 @@ msgstr "SSL 端口"
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "The SSL Port Number, leave empty to let the middlware try to determinate it."
-msgstr ""
+msgstr "SSL 端口号，留空让middlware尝试阻止它。"
 
