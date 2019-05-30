@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-05-30 13:45\n"
+"PO-Revision-Date: 2019-05-30 14:08\n"
 
 #. builder.Add(T["OpenID Connect"], "15", category =>
 #: OrchardCore.OpenId\AdminMenu.cs:32
@@ -174,19 +174,19 @@ msgstr "Cấu hình xác nhận OpenID được cập nhật thành công."
 #: OrchardCore.OpenId\Services\OpenIdClientService.cs:60
 msgctxt "OrchardCore.OpenId.Services.OpenIdClientService"
 msgid "The authority cannot be null or empty."
-msgstr "Quyền sử dụng không được rỗng hoặc trống."
+msgstr "Authority không được rỗng hoặc trống."
 
 #. results.Add(new ValidationResult(T["The authority must be a valid absolute URL."], new[]
 #: OrchardCore.OpenId\Services\OpenIdClientService.cs:67
 msgctxt "OrchardCore.OpenId.Services.OpenIdClientService"
 msgid "The authority must be a valid absolute URL."
-msgstr "Cấp quyền phải là một URL tuyệt đối hợp lệ."
+msgstr "Authority phải là một URL tuyệt đối hợp lệ."
 
 #. results.Add(new ValidationResult(T["The authority cannot contain a query string or a fragment."], new[]
 #: OrchardCore.OpenId\Services\OpenIdClientService.cs:74
 msgctxt "OrchardCore.OpenId.Services.OpenIdClientService"
 msgid "The authority cannot contain a query string or a fragment."
-msgstr "Cấp quyền không thể chứa một chuỗi truy vấn hoặc một đoạn."
+msgstr "Authority không thể chứa một chuỗi truy vấn hoặc một đoạn."
 
 #. results.Add(new ValidationResult(T["The response type cannot be null or empty."], new[]
 #: OrchardCore.OpenId\Services\OpenIdClientService.cs:82
@@ -222,13 +222,13 @@ msgstr "Ít nhất một luồng OpenID Connect phải được bật."
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:104
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The authority must be a valid absolute URL."
-msgstr "Cấp quyền phải là một URL tuyệt đối hợp lệ."
+msgstr "Authority phải là một URL tuyệt đối hợp lệ."
 
 #. results.Add(new ValidationResult(T["The authority cannot contain a query string or a fragment."], new[]
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:112
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The authority cannot contain a query string or a fragment."
-msgstr "Cấp quyền không thể chứa một chuỗi truy vấn hoặc một đoạn."
+msgstr "Authority không thể chứa một chuỗi truy vấn hoặc một đoạn."
 
 #. results.Add(new ValidationResult(T["The certificate cannot be found."], new[]
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:129
@@ -294,7 +294,7 @@ msgstr "Luồng ẩn không thể kích hoạt khi điểm cuối ủy quyền b
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:83
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "Either a tenant or an authority must be registered."
-msgstr "Người thuê hoặc người có thẩm quyền phải được đăng ký."
+msgstr "Khách hàng hoặc authority phải được đăng ký."
 
 #. results.Add(new ValidationResult(T["The specified authority is not valid."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:94
@@ -306,7 +306,7 @@ msgstr "Xác thực được chỉ định là không hợp lệ."
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:102
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "The authority cannot contain a query string or a fragment."
-msgstr "Sự xác minh không thể chứa một chuỗi truy vấn hoặc một fragment."
+msgstr "Authority không thể chứa một chuỗi truy vấn hoặc một fragment."
 
 #. results.Add(new ValidationResult(T["No audience can be set when using another tenant."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:111
@@ -318,7 +318,7 @@ msgstr "Không có audience nào được thiết lập khi đang sử dụng m�
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:119
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "An audience must be set when configuring the authority."
-msgstr "Một audience phải được thiết lập khi đang cấu hình sự xác minh."
+msgstr "Một đối tượng phải được thiết lập khi cấu hình authority."
 
 #. results.Add(new ValidationResult(T["The audience cannot start with the special 'oct:' prefix."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:128
@@ -368,13 +368,13 @@ msgstr "Tên hiển thị của IdP"
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:15
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Authority"
-msgstr "Xác minh"
+msgstr "Authority"
 
 #. <span class="hint">@T["Authority to use when making OpenIdConnect calls"]</span>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:18
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Authority to use when making OpenIdConnect calls"
-msgstr "Quyền sử dụng khi thực hiện gọi OpenIdConnect"
+msgstr "Authority sử dụng khi thực hiện gọi OpenIdConnect"
 
 #. <label>@T["ClientId"]</label>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:22
@@ -642,7 +642,7 @@ msgstr "Các tùy chọn này đều là tùy chọn và chỉ dành cho ngườ
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:88
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Authority"
-msgstr "Xác minh"
+msgstr "Authority"
 
 #. <span class="hint">@T["The base URL of the identity server (this site). If none is provided, a default value based on the site host is automatically computed."]</span>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:91
@@ -736,7 +736,7 @@ msgstr "Xác minh server tenant"
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:25
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Authority"
-msgstr "Xác minh"
+msgstr "Authority"
 
 #. <span class="hint">@T["The address of the remote OpenID Connect server. Using a HTTPS address is strongly recommended."]</span>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:28
