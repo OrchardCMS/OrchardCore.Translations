@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2019-07-10 09:46\n"
+"PO-Revision-Date: 2019-07-10 10:13\n"
 
 #. .Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -39,13 +39,13 @@ msgid "Message sent successfully"
 msgstr "پیام با موفقیت ارسال شد"
 
 #. return SmtpResult.Failed(S["SMTP settings must be configured before an email can be sent."]);
-#: OrchardCore.Email\Services\SmtpService.cs:38
+#: OrchardCore.Email\Services\SmtpService.cs:40
 msgctxt "OrchardCore.Email.Services.SmtpService"
 msgid "SMTP settings must be configured before an email can be sent."
 msgstr "پیش از ارسال ایمیل، تنظیمات SMTP باید پیکربندی شده باشد."
 
 #. return SmtpResult.Failed(S["An error occurred while sending an email: '{0}'", ex.Message]);
-#: OrchardCore.Email\Services\SmtpService.cs:65
+#: OrchardCore.Email\Services\SmtpService.cs:63
 msgctxt "OrchardCore.Email.Services.SmtpService"
 msgid "An error occurred while sending an email: '{0}'"
 msgstr "خطایی هنگام ارسال ایمیل رخ داد: {0}"
@@ -67,6 +67,328 @@ msgstr "انجام شد"
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "ناموفق"
+
+#. [assembly: global::Microsoft.AspNetCore.Razor.Hosting.RazorCompiledItemAttribute(typeof(AspNetCore.Views_SmtpSettings_Edit), @"mvc.1.0.view", @"/Views/SmtpSettings.Edit.cshtml")]
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:4
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The current tenant will be reloaded when the settings are saved."
+msgstr "پس از ذخیره تنظیمات، tenant جاری ، مجددا بارگذاری خواهد شد."
+
+#. {
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:7
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Sender email address"
+msgstr "ایمیل فرستنده"
+
+#. using System.Collections.Generic;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:10
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The default email address to use as a sender."
+msgstr "آدرس ایمیل پیش فرض که به عنوان ارسال کننده استفاده می‌شود."
+
+#. using Microsoft.AspNetCore.Mvc.Rendering;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:14
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Delivery method"
+msgstr "روش ارسال"
+
+#. using OrchardCore.Email;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:17
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Network"
+msgstr "شبکه"
+
+#. #line hidden
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:20
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Specified pickup directory"
+msgstr "دایرکتوری انتخاب مشخص شده"
+
+#. {
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:24
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The delivery method used when sending email. Use Network in production. The other options can be useful when developing and testing."
+msgstr "روش ارسالی که برای فرستادن ایمیل استفاده می شود. برای محصول نهایی از شبکه استفاده شود. از تنظیمات دیگر می توان برای گسترش و تِست استفاده کرد."
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_7 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-group flex-fill"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:32
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Network delivery options"
+msgstr "تنظیمات ارسال شبکه‌"
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_10 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("custom-control-label"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:35
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Host name"
+msgstr "نام هاست"
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_13 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-group clearfix"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:38
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The SMTP server domain, e.g. <i>smtp.mailprovider.com</i>."
+msgstr ""
+
+#. #pragma warning restore 0169
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:45
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Port number"
+msgstr "شماره پورت"
+
+#. private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:48
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The SMTP server port, usually 25."
+msgstr ""
+
+#. __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:55
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Encryption method to use"
+msgstr ""
+
+#. }
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:58
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "None"
+msgstr "هیچ کدام"
+
+#. }
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:58
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Connect to server using insecure connection."
+msgstr "اتصال به سِروِر با استفاده از پروتکل ناامن."
+
+#. private global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:61
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#. private global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:61
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Connect to server using SSL/TSL secure connection"
+msgstr "اتصال به سِروِر با استفاده از پروتکل امن SSL/TSL"
+
+#. private global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:64
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#. private global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:64
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Connect to server using insecure connection and upgrade to secure using SSL/TLS"
+msgstr "اتصال به سِروِر با استفاده از یک پروتکل ناامن و ارتقا به پروتکل امن با استفاده از SSL/TSL"
+
+#. #pragma warning disable 1998
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:68
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The encryption method used when connecting to mail server."
+msgstr ""
+
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:77
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Auto Select Encryption method"
+msgstr ""
+
+#. #line default
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:78
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Check to let the system select the encryption method based on port."
+msgstr ""
+
+#. BeginContext(223, 6, true);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:86
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Require credentials"
+msgstr ""
+
+#. #line default
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:95
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Use Windows authentication"
+msgstr "استفاده از تایید اعتبار ویندوز"
+
+#. #line hidden
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:96
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
+msgstr ""
+
+#. #line 7 "D:\Orchard\OrchardCore\src\OrchardCore.Modules\OrchardCore.Email\Views\SmtpSettings.Edit.cshtml"
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:102
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "User name"
+msgstr "نام کاربری"
+
+#. #line default
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:105
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The username for authentication."
+msgstr "نام کاربری برای تایید اعتبار."
+
+#. if (!__tagHelperExecutionContext.Output.IsContentModified)
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:109
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Password"
+msgstr "رمز عبور"
+
+#. }
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:112
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "The password for authentication."
+msgstr "رمزعبور برای تایید اعتبار."
+
+#. __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:123
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Specified pickup directory delivery options"
+msgstr ""
+
+#. __tagHelperExecutionContext.Add(__OrchardCore_DisplayManagement_TagHelpers_InputIsDisabledTagHelper);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:126
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "Pickup directory location"
+msgstr ""
+
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.Edit.cshtml.g.cs:129
+msgctxt "AspNetCore.Views_SmtpSettings_Edit"
+msgid "E.g. <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."
+msgstr "برای مثال <i>C:\\Path\\To\\This\\Site\\ایمیل انتخاب شده</i> to place emails in a <i>ایمیل انتخاب شده</i> مستقیما روی دِرایو C."
+
+#. #pragma checksum "D:\Orchard\OrchardCore\src\OrchardCore.Modules\OrchardCore.Email\Views\SmtpSettings.TestButton.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "53e9ca741c3a6a5009c2b66061e16af23a3a7a57"
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\SmtpSettings.TestButton.cshtml.g.cs:1
+msgctxt "AspNetCore.Views_SmtpSettings_TestButton"
+msgid "Test settings"
+msgstr "تنظیمات تِست"
+
+#. #pragma warning disable 1591
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:3
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Settings"
+msgstr "تنظیمات"
+
+#. using System.Collections.Generic;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:10
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "To"
+msgstr "به"
+
+#. [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a0da9d301c9cad0c597a5a15a03d09c98fea5c1b", @"/Views/_ViewImports.cshtml")]
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:17
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Bcc"
+msgstr "Bcc"
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:24
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Cc"
+msgstr "Cc"
+
+#. #pragma warning restore 0169
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:31
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Reply To"
+msgstr "پاسخ به"
+
+#. {
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:38
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Subject"
+msgstr "عنوان"
+
+#. }
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:45
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Body"
+msgstr "متن"
+
+#. private global::OrchardCore.DisplayManagement.TagHelpers.InputIsDisabledTagHelper __OrchardCore_DisplayManagement_TagHelpers_InputIsDisabledTagHelper;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Admin\Index.cshtml.g.cs:51
+msgctxt "AspNetCore.Views_Admin_Index"
+msgid "Send"
+msgstr "ارسال"
+
+#. namespace AspNetCore
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Design.cshtml.g.cs:6
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Design"
+msgid "Send Email"
+msgstr "ارسال ایمیل"
+
+#. [assembly:global::Microsoft.AspNetCore.Mvc.Razor.Compilation.RazorViewAttribute(@"/Views/Items/EmailTask.Fields.Edit.cshtml", typeof(AspNetCore.Views_Items_EmailTask_Fields_Edit))]
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:5
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "Sender"
+msgstr "فرستنده"
+
+#. #line hidden
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:8
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "The sender's email address. Leave blank to use the configured email address. With Liquid support."
+msgstr "آدرس ایمیل فرستنده. برای استفاده از آدرس ایمیل پیکر بندی شده، خالی بگذارید. با پشتیبانی Liquid."
+
+#. using System.Threading.Tasks;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:12
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "Recipients"
+msgstr "دریافت کننده‌‌ها"
+
+#. using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:15
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "The comma-separated list of recipient email addresses. With Liquid support."
+msgstr ""
+
+#. #line default
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:19
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "Subject"
+msgstr "عنوان"
+
+#. [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a0da9d301c9cad0c597a5a15a03d09c98fea5c1b", @"/Views/_ViewImports.cshtml")]
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:22
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "The subject of the email message. With Liquid support."
+msgstr "عنوان ایمیل. با پشتیبانی Liquid."
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control code"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:26
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "Body"
+msgstr "متن"
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rows", new global::Microsoft.AspNetCore.Html.HtmlString("5"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:28
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "The body of the email message. With Liquid support."
+msgstr "متن ایمیل. با پشتیبانی Liquid."
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_9 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("depends-on", "admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:34
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "Does the Body contain HTML?"
+msgstr ""
+
+#. private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_10 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-name", "codemirror-mode-javascript", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Edit.cshtml.g.cs:35
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Edit"
+msgid "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."
+msgstr ""
+
+#. #pragma checksum "D:\Orchard\OrchardCore\src\OrchardCore.Modules\OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "e520a25bf7394fc6e4d880a4c8c3a877b1fa491b"
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Thumbnail.cshtml.g.cs:1
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Thumbnail"
+msgid "Send Email"
+msgstr ""
+
+#. // <auto-generated/>
+#: OrchardCore.Email\obj\Debug\netstandard2.0\Razor\Views\Items\EmailTask.Fields.Thumbnail.cshtml.g.cs:2
+msgctxt "AspNetCore.Views_Items_EmailTask_Fields_Thumbnail"
+msgid "Send an email."
+msgstr ""
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:4
@@ -129,133 +451,133 @@ msgid "The SMTP server domain, e.g. <i>smtp.mailprovider.com</i>."
 msgstr ""
 
 #. <label asp-for="Port">@T["Port number"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:43
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:45
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Port number"
 msgstr "شماره پورت"
 
 #. <span class="hint">@T["The SMTP server port, usually 25."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:46
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:48
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The SMTP server port, usually 25."
 msgstr ""
 
 #. <label asp-for="EncryptionMethod">@T["Encryption method to use"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:50
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:55
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Encryption method to use"
 msgstr ""
 
 #. @T["None"] - @T["Connect to server using insecure connection."]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:53
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:58
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "None"
 msgstr "هیچ کدام"
 
 #. @T["None"] - @T["Connect to server using insecure connection."]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:53
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:58
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Connect to server using insecure connection."
-msgstr ""
+msgstr "اتصال به سِروِر با استفاده از پروتکل ناامن."
 
 #. @T["SSL/TLS"] - @T["Connect to server using SSL/TSL secure connection"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:56
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:61
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
 #. @T["SSL/TLS"] - @T["Connect to server using SSL/TSL secure connection"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:56
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:61
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Connect to server using SSL/TSL secure connection"
-msgstr ""
+msgstr "اتصال به سِروِر با استفاده از پروتکل امن SSL/TSL"
 
 #. @T["STARTTLS"] - @T["Connect to server using insecure connection and upgrade to secure using SSL/TLS"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:59
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
 #. @T["STARTTLS"] - @T["Connect to server using insecure connection and upgrade to secure using SSL/TLS"]
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:59
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Connect to server using insecure connection and upgrade to secure using SSL/TLS"
-msgstr ""
+msgstr "اتصال به سِروِر با استفاده از یک پروتکل ناامن و ارتقا به پروتکل امن با استفاده از SSL/TSL"
 
 #. <span class="hint">@T["The encryption method used when connecting to mail server."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:63
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:68
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The encryption method used when connecting to mail server."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="AutoSelectEncryption">@T["Auto Select Encryption method"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:71
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:77
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Auto Select Encryption method"
 msgstr ""
 
 #. <span class="hint">— @T["Check to let the system select the encryption method based on port."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:72
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:78
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Check to let the system select the encryption method based on port."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="RequireCredentials">@T["Require credentials"] </label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:80
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:86
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Require credentials"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseDefaultCredentials">@T["Use Windows authentication"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:89
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:95
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Use Windows authentication"
 msgstr "استفاده از اعتبار ویندوز"
 
 #. <span class="hint d-block">@T["When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:90
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
 msgstr ""
 
 #. <label asp-for="UserName">@T["User name"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:102
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "User name"
 msgstr "نام کاربری"
 
 #. <span class="hint">@T["The username for authentication."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:99
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:105
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The username for authentication."
 msgstr "نام کاربری برای تایید اعتبار."
 
 #. <label asp-for="Password">@T["Password"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:103
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:109
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Password"
 msgstr "رمز عبور"
 
 #. <span class="hint">@T["The password for authentication."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:106
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:112
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The password for authentication."
 msgstr "رمزعبور برای تایید اعتبار."
 
 #. <h2 class="card-title">@T["Specified pickup directory delivery options"]</h2>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:117
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:123
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Specified pickup directory delivery options"
 msgstr ""
 
 #. <label asp-for="PickupDirectoryLocation">@T["Pickup directory location"]</label>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:120
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:126
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Pickup directory location"
-msgstr ""
+msgstr "انتخاب موقعیت مستقیم"
 
 #. <span class="hint">@T[@"E.g. <i>C:\Path\To\This\Site\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."]</span>
-#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:123
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:129
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "E.g. <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."
 msgstr "برای مثال <i>C:\\Path\\To\\This\\Site\\ایمیل انتخاب شده</i> to place emails in a <i>ایمیل انتخاب شده</i> مستقیما روی دِرایو C."
@@ -282,13 +604,13 @@ msgstr "به"
 #: OrchardCore.Email\Views\Admin\Index.cshtml:17
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Bcc"
-msgstr "رونوشت پنهان به"
+msgstr "Bcc"
 
 #. <label asp-for="Cc">@T["Cc"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:24
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Cc"
-msgstr "رونوشت به"
+msgstr "Cc"
 
 #. <label asp-for="ReplyTo">@T["Reply To"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:31
@@ -366,13 +688,13 @@ msgstr "متن"
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:28
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The body of the email message. With Liquid support."
-msgstr "بدنه ایمیل. با پشتیبانی Liquid."
+msgstr "متن ایمیل. با پشتیبانی Liquid."
 
 #. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:34
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
-msgstr "آیا بدنه شاملHTML می‌شود؟"
+msgstr "آیا متن ایمیل شاملHTML می‌شود؟"
 
 #. <span class="hint">— @T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:35
