@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2019-08-12 06:33\n"
+"PO-Revision-Date: 2019-08-12 06:42\n"
 
 #. builder.Add(T["OpenID Connect"], "15", category =>
 #: OrchardCore.OpenId\AdminMenu.cs:32
@@ -116,13 +116,13 @@ msgstr "هیچ سرویس ثبت شده‌ای جهت ارائه نقش‌ها �
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:300
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "No client secret can be set for public applications."
-msgstr "امکان استفاده از client secret برای برنامه‌های کاربردی عمومی وجود ندارد."
+msgstr "امکان استفاده از کلید امن سرویس‌گیرنده برای برنامه‌های‌کاربردی عمومی وجود ندارد."
 
 #. ModelState.AddModelError(nameof(model.ClientSecret), T["The client secret is required for confidential applications."]);
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:136
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "The client secret is required for confidential applications."
-msgstr "client secret برای برنامه‌های کاربردی محرمانه ضروری است."
+msgstr "کلید امن سرویس‌گیرنده برای برنامه‌های‌کاربردی محرمانه ضروری است."
 
 #. ModelState.AddModelError(nameof(model.ClientId), T["The client identifier is already taken by another application."]);
 #. ModelState.AddModelError(nameof(model.ClientId), T["The client identifier is already taken by another application."]);
@@ -136,7 +136,7 @@ msgstr "این client identifier قبلا توسط برنامه‌کاربردی
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:294
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "Setting a new client secret is required."
-msgstr "تنظیم یک client secret جدید ضروری است."
+msgstr "تنظیم یک کلید امن سرویس‌گیرنده جدید ضروری است."
 
 #. _notifier.Warning(H["OpenID Connect settings are not properly configured."]);
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:474
@@ -550,13 +550,13 @@ msgstr "کلید امن سرویس‌گیرنده را تنظیم می‌کند.
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:6
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
-msgstr ""
+msgstr "پس از ذخیره تنظیمات، tenant جاری، مجدد بارگذاری خواهد شد."
 
 #. <label class="custom-control-label" asp-for="EnableTokenEndpoint">@T["Enable Token Endpoint"]</label>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:12
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Token Endpoint"
-msgstr ""
+msgstr "نقطه‌پایانی توکن فعال شود "
 
 #. <span class="hint">— @T["Enables action"] /connect/token</span>
 #. <span class="hint">— @T["Enables action"] /connect/authorize</span>
@@ -826,13 +826,13 @@ msgstr "کِلایِنت عمومی"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:29
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Confidential applications MUST send their client secret when communicating with the token and revocation endpoints. This guarantees that only the legit client can exchange an authorization code or get a refresh token."
-msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید client secret متعلق به خودشان را ارسال کنند. این تضمین می‌کند که فقط کلاینت مجاز می‌تواند کد احراز هویت یا توکن تازه‌سازی را کسب کند."
+msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد احراز هویت یا توکن تازه‌سازی را فقط برای کلاینتی که مجاز به دریافت آن است، میسر می‌کند."
 
 #. <label asp-for="ClientSecret">@T["Client Secret"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:32
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Client Secret"
-msgstr ""
+msgstr "کلید امن سرویس‌گیرنده"
 
 #. <label class="custom-control-label" asp-for="AllowAuthorizationCodeFlow">@T["Allow Authorization Code Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:41
@@ -866,7 +866,7 @@ msgstr "اطلاعات بیشتر:"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:80
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Recommended Parameters:"
-msgstr "پارامتر های توصیه شده:"
+msgstr "پارامترهای پیشنهادی:"
 
 #. <label class="custom-control-label" asp-for="AllowImplicitFlow">@T["Allow Implicit Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:50
@@ -1010,19 +1010,19 @@ msgstr "کِلایِنت عمومی"
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:30
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Confidential applications MUST send their client secret when communicating with the token and revocation endpoints. This guarantees that only the legit client can exchange an authorization code or get a refresh token."
-msgstr ""
+msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد احراز هویت یا توکن تازه‌سازی را فقط برای کلاینتی که مجاز به دریافت آن است، میسر می‌کند."
 
 #. <label asp-for="ClientSecret">@T["Client Secret"] (@T["enter a new value to replace the existing secret"])</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:33
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Client Secret"
-msgstr ""
+msgstr "کلید امن سرویس‌گیرنده"
 
 #. <label asp-for="ClientSecret">@T["Client Secret"] (@T["enter a new value to replace the existing secret"])</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:33
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "enter a new value to replace the existing secret"
-msgstr ""
+msgstr "یک مقدار جدید برای جایگیزینی با کلید امن فعلی وارد کنید"
 
 #. <label class="custom-control-label" asp-for="AllowAuthorizationCodeFlow">@T["Allow Authorization Code Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:42
