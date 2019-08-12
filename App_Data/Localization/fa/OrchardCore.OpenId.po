@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2019-08-12 08:15\n"
+"PO-Revision-Date: 2019-08-12 08:32\n"
 
 #. builder.Add(T["OpenID Connect"], "15", category =>
 #: OrchardCore.OpenId\AdminMenu.cs:32
@@ -28,13 +28,13 @@ msgstr "تنظیمات"
 #: OrchardCore.OpenId\AdminMenu.cs:45
 msgctxt "OrchardCore.OpenId.AdminMenu"
 msgid "Authentication client"
-msgstr "احراز هوی کِلایِنت"
+msgstr "احرازهویت سرویس‌گیرنده"
 
 #. settings.Add(T["Authorization server"], "2", server => server
 #: OrchardCore.OpenId\AdminMenu.cs:53
 msgctxt "OrchardCore.OpenId.AdminMenu"
 msgid "Authorization server"
-msgstr "سروِر صدور مجوز عبور"
+msgstr "سروِر صدورمجوز"
 
 #. settings.Add(T["Token validation"], "3", validation => validation
 #: OrchardCore.OpenId\AdminMenu.cs:61
@@ -82,7 +82,7 @@ msgstr "پارامتر 'client_id' مشخص‌شده نامعتبر است."
 #: OrchardCore.OpenId\Controllers\AccessController.cs:365
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The logged in user is not allowed to access this client application."
-msgstr "کاربری که به سیستم وارد شده است، اجازه دسترسی به برنامه‌کاربردی این کلاینت را ندارد."
+msgstr "کاربری که به سیستم وارد شده است، اجازه دسترسی به برنامه‌کاربردی این سرویس‌گیرنده را ندارد."
 
 #. ErrorDescription = T["Interactive user consent is required."]
 #: OrchardCore.OpenId\Controllers\AccessController.cs:113
@@ -130,7 +130,7 @@ msgstr "کلید امن سرویس‌گیرنده برای برنامه‌های
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:310
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "The client identifier is already taken by another application."
-msgstr "این client identifier قبلا توسط برنامه‌کاربردی دیگری گرفته شده است."
+msgstr "این مشخص‌کننده سرویس‌گیرنده قبلا توسط برنامه‌کاربردی دیگری گرفته شده است."
 
 #. ModelState.AddModelError(nameof(model.ClientSecret), T["Setting a new client secret is required."]);
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:294
@@ -264,13 +264,13 @@ msgstr "password flow نمی‌تواند فعال شود وقتی که endpoint
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:170
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The client credentials flow cannot be enabled when the token endpoint is disabled."
-msgstr "client credentials flow نمی‌تواند فعال شود وقتی که endpoint توکن غیرفعال است."
+msgstr "جریان اعتبارنامه‌های سرویس‌گیرنده نمی‌تواند فعال شود وقتی که نقطه‌پایانی توکن غیرفعال است."
 
 #. results.Add(new ValidationResult(T["The authorization code flow cannot be enabled when the authorization and token endpoints are disabled."], new[]
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:179
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The authorization code flow cannot be enabled when the authorization and token endpoints are disabled."
-msgstr "جریان کد مجوز عبور نمی‌تواند فعال شود وقتی که نقاط‌پایانی توکن و مجوز عبور غیر فعال است."
+msgstr "جریان کد مجوز نمی‌تواند فعال شود وقتی که نقاط‌پایانی توکن و صدورمجوز غیرفعال است."
 
 #. results.Add(new ValidationResult(T["The refresh token flow cannot be enabled when the token endpoint is disabled."], new[]
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:189
@@ -282,13 +282,13 @@ msgstr "refresh token flow نمی‌تواند فعال شود وقتی که end
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:197
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The refresh token flow can only be enabled if the password, authorization code or hybrid flows are enabled."
-msgstr "جریان تازه‌سازی توکن فقط می‌تواند زمانی فعال شود که جریا‌ن پسورد، جریان کد مجوز عبور یا جریان ترکیبی فعال باشد."
+msgstr "جریان تازه‌سازی توکن فقط می‌تواند زمانی فعال شود که جریا‌ن پسورد، جریان کد مجوز یا جریان ترکیبی فعال باشد."
 
 #. results.Add(new ValidationResult(T["The implicit flow cannot be enabled when the authorization endpoint is disabled."], new[]
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:206
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The implicit flow cannot be enabled when the authorization endpoint is disabled."
-msgstr "جریان ضمنی نمی‌تواند فعال شود وقتی که نقطه‌پایانی صدور مجوز عبور غیرفعال است."
+msgstr "جریان ضمنی نمی‌تواند فعال شود وقتی که نقطه‌پایانی صدورمجوز غیرفعال است."
 
 #. results.Add(new ValidationResult(T["Either a tenant or an authority must be registered."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:83
@@ -380,13 +380,13 @@ msgstr "مجوز برای استفاده از تماس های اتصال OpenId"
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:22
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "ClientId"
-msgstr "شناسه کِلایِنت"
+msgstr "ClientId"
 
 #. <span class="hint">@T["the 'client_id'"]</span>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:25
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "the 'client_id'"
-msgstr "شناسه_کِلایِنت"
+msgstr "'client_id'"
 
 #. <label>@T["CallbackPath"]</label>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:29
@@ -592,7 +592,7 @@ msgstr "نقطه‌پایانی اطلاعات کاربری فعال شود"
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:46
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Authorization Code Flow"
-msgstr "جریان کد مجوز عبور مجاز باشد"
+msgstr "جریان کد مجوز مجاز باشد"
 
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
@@ -760,7 +760,7 @@ msgstr "نام یکتایی که با این تِننت (tenant) مرتبط اس
 #: OrchardCore.OpenId\Views\Access\Authorize.cshtml:5
 msgctxt "OrchardCore.OpenId.Views.Access.Authorize"
 msgid "Authorization"
-msgstr "مجوز"
+msgstr "صدورمجوز"
 
 #. <p class="lead text-left">@T["Do you want to grant <strong>{0}</strong> access to your data? (scopes requested: {1})", @Model.ApplicationName, @Model.Scope]</p>
 #: OrchardCore.OpenId\Views\Access\Authorize.cshtml:7
@@ -796,7 +796,7 @@ msgstr "ایجاد یک برنامه کاربردی جدید"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:14
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Client Id"
-msgstr "شناسه کِلایِنت"
+msgstr "شناسه سرویس‌گیرنده"
 
 #. <label asp-for="DisplayName">@T["Display Name"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:19
@@ -820,13 +820,13 @@ msgstr "سرویس‌گیرنده محرمانه"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:27
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Public client"
-msgstr "کِلایِنت عمومی"
+msgstr "سرویس‌گیرنده عمومی"
 
 #. <div class="hint">@T["Confidential applications MUST send their client secret when communicating with the token and revocation endpoints. This guarantees that only the legit client can exchange an authorization code or get a refresh token."]</div>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:29
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Confidential applications MUST send their client secret when communicating with the token and revocation endpoints. This guarantees that only the legit client can exchange an authorization code or get a refresh token."
-msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد مجوز عبور یا توکن تازه‌سازی را فقط برای کلاینتی که مجاز به دریافت آن است، میسر می‌کند."
+msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد مجوز یا توکن تازه‌سازی را فقط برای سرویس‌گیرنده‌ای که مجاز به دریافت آن است، میسر می‌کند."
 
 #. <label asp-for="ClientSecret">@T["Client Secret"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:32
@@ -838,7 +838,7 @@ msgstr "کلید امن سرویس‌گیرنده"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:41
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Authorization Code Flow"
-msgstr "جریان کد مجوز عبور مجاز باشد"
+msgstr "جریان کد مجوز مجاز باشد"
 
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
@@ -950,7 +950,7 @@ msgstr "تایید خارجی"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:118
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "The consent type affects the way authorization requests are handled."
-msgstr "نوع تایید در نحوه رسیدگی به درخواست‌های صدور مجوز عبور تاثیر می‌گذارد."
+msgstr "نوع تایید در نحوه رسیدگی به درخواست‌های صدورمجوز تاثیر می‌گذارد."
 
 #. <h6>@T["Client Credentials Roles"]</h6>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:129
@@ -1010,7 +1010,7 @@ msgstr "کِلایِنت عمومی"
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:30
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Confidential applications MUST send their client secret when communicating with the token and revocation endpoints. This guarantees that only the legit client can exchange an authorization code or get a refresh token."
-msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد مجوز عبور یا توکن تازه‌سازی را فقط برای کلاینتی که مجاز به دریافت آن است، میسر می‌کند."
+msgstr "برنامه‌های‌کاربردی محرمانه در هنگام برقراری ارتباط با نقطات‌پایانی توکن و ابطال (the token and revocation endpoints)، باید کلید امن سرویس‌گیرنده‌ خود را ارسال کنند. این امر دریافت کد مجوز یا توکن تازه‌سازی را فقط برای سرویس‌گیرنده‌ای که مجاز به دریافت آن است، میسر می‌کند."
 
 #. <label asp-for="ClientSecret">@T["Client Secret"] (@T["enter a new value to replace the existing secret"])</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:33
@@ -1028,7 +1028,7 @@ msgstr "یک مقدار جدید برای جایگیزینی با کلید ام�
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:42
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Authorization Code Flow"
-msgstr "جریان کد مجوز عبور مجاز باشد"
+msgstr "جریان کد مجوز مجاز باشد"
 
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
 #. <span class="hint">— @T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
@@ -1074,7 +1074,7 @@ msgstr "جریان رمز عبور مجاز باشد"
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:69
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Client Credentials Flow"
-msgstr ""
+msgstr "جریان اعتبارنامه‌های سرویس‌گیرنده مجاز باشد"
 
 #. <label class="custom-control-label" asp-for="AllowRefreshTokenFlow">@T["Allow Refresh Token Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:78
@@ -1140,13 +1140,13 @@ msgstr "تایید خارجی"
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:120
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "The consent type affects the way authorization requests are handled."
-msgstr "نوع تایید در نحوه رسیدگی به درخواست‌های صدور مجوز تاثیر می‌گذارد."
+msgstr "نوع تایید در نحوه رسیدگی به درخواست‌های صدورمجوز تاثیر می‌گذارد."
 
 #. <h6>@T["Client Credentials Roles"]</h6>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:131
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Client Credentials Roles"
-msgstr ""
+msgstr "نقش‌های اعتبارنامه‌های سرویس‌گیرنده"
 
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:144
