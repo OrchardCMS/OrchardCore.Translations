@@ -1,0 +1,24 @@
+image: Visual Studio 2017
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
+branches:
+  only:
+    - l10n_master # The branch that Crowdin targets when updates are made on .po files
+    - master      # The branch that is published on Nuget.org
+init:
+  - git config --global core.autocrlf true
+install:
+  - ps: $env:BuildNumber= $env:APPVEYOR_BUILD_NUMBER
+build_script:
+  - dotnet --version
+artifacts:
+  - path: 'artifacts\**\*.nupkg'
+deploy:
+  - provider: NuGet
+    on:
+      branch: master
+    server: https://www.nuget.org/api/v2/package
+    api_key:
+      secure: FAKE_KEY
+    skip_symbols: true
+    artifact: /.*\.nupkg/
