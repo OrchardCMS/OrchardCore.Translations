@@ -24,9 +24,6 @@ function createNuGetPackagesFolder()
 
 function createNuGetPackage([string]$culture)
 {
-    echo ""
-    echo "Creating '$packageName' NuGet package"
-
     $packageName = $packageNamePrefix + $culture;
     $NuGetSpecFileName = $packageName + $packageSpecExtension;
     $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $localizationFolder, $culture, $NuGetSpecFileName);
@@ -34,6 +31,9 @@ function createNuGetPackage([string]$culture)
     $PackageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$packageVersionNumber")
     $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
     $localizationFolderPath = [IO.Path]::Combine($contentFolderPath, $localizationFolder)
+
+    echo ""
+    echo "Creating '$packageName' NuGet package"
     
     New-Item -Path $PackageFolderPath -ItemType "Directory"
     New-Item -Path $contentFolderPath -ItemType "Directory"
