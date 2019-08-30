@@ -3,12 +3,14 @@ $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
 $packageNamePrefix = "OrchardCore.Translations."
-$PackageVersionNumber = "1.0.0" # Find a proper way to get version number
+$packageVersionNumber = "1.0.0" # Find a proper way to get version number
 
 $packageSpecExtension = ".nuspec"
-$packageSpecTemplate = "_template" + $packageSpecExtension
+$packageSpecTemplate = "_template$packageSpecExtension"
 
-Write-Host "Start generating translation NuGet packages ..."
+$compressedFileExtension = ".zip"
+
+echo "Start generating translation NuGet packages .."
 
 createNuGetPackagesFolder;
 
@@ -33,13 +35,14 @@ function createNuGetPackagesFolder()
 
 function createNuGetPackage([string]$culture)
 {
-    Write-Host "Creating '$packageName' NuGet package"
+    echo ""
+    echo "Creating '$packageName' NuGet package"
 
     $packageName = $packageNamePrefix + $culture;
     $NuGetSpecFileName = $packageName + $packageSpecExtension;
     $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $localizationFolder, $culture, $NuGetSpecFileName);
 
-    $PackageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$PackageVersionNumber")
+    $PackageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$packageVersionNumber")
     $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
     $localizationFolderPath = [IO.Path]::Combine($contentFolderPath, $localizationFolder)
     
@@ -53,31 +56,29 @@ function createNuGetPackage([string]$culture)
 
     prepareNuGetSpec $culture;
 
-    $packageFullName = "$packageName.$PackageVersionNumber.$packageExtension"
+    $packageFullName = "$packageName.$packageVersionNumber.$packageExtension"
     $packagePath = [IO.Path]::Combine($packagesFolder, $packageFullName)
-    $compressedCultureFileName = "$packageName.$PackageVersionNumber.zip"
+    $compressedCultureFileName = "$packageName.$packageVersionNumber$compressedFileExtension"
     $compressedCulturePath = [IO.Path]::Combine($packagesFolder, $compressedCultureFileName)
     $cultureFolder = [IO.Path]::Combine($PWD, $localizationFolder, $culture);
 
-    Compress-Archive -Path $PackageFolderPath -DestinationPath "$PackageFolderPath.zip" -CompressionLevel Optimal -Update
+    Compress-Archive -Path $PackageFolderPath -DestinationPath "$PackageFolderPath$compressedFileExtension" -CompressionLevel Optimal -Update
     Rename-Item "$PackageFolderPath.zip" $packageFullName
     Remove-Item -Path $PackageFolderPath -Recurse
-
-    Write-Host
 }
 
 function prepareNuGetSpec([string]$culture)
 {
-    $PackageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$PackageVersionNumber")
+    $packageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$packageVersionNumber")
 
     $packageName = $packageNamePrefix + $culture
     $NuGetSpecFileName = $packageName + $packageSpecExtension
-    $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $PackageFolderPath, $NuGetSpecFileName)
+    $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $packageFolderPath, $NuGetSpecFileName)
 
     $nugetSpec = [xml](Get-Content -Path $packageSpecTemplate)
     $metadata = $nugetSpec.package.metadata
     $metadata.id = $packageName
-    $metadata.version = $PackageVersionNumber
+    $metadata.version = $packageVersionNumber
     $metadata.authors = "Hisham Bin Ateya"
     $metadata.owners = "Orchard Core Team"
     $metadata.description = "Orchard Core translation for '$culture' culture"
