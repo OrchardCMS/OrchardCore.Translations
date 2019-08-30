@@ -80,7 +80,6 @@ createNuGetPackagesFolder
 
 foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
     createNuGetPackage $cultureFolder.Name;
-    break;
 }
 
 echo "Done!!";
