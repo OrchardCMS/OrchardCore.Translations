@@ -12,7 +12,7 @@ install:
   - ps: $env:BuildNumber= $env:APPVEYOR_BUILD_NUMBER
 build_script:
   - dotnet --version
-  - ps: .\pack.ps1
+  - ps: . .\pack.ps1
 artifacts:
   - path: 'artifacts\**\*.nupkg'
 deploy:
