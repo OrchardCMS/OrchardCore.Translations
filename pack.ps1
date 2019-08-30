@@ -10,17 +10,6 @@ $packageSpecTemplate = "_template$packageSpecExtension"
 
 $compressedFileExtension = ".zip"
 
-echo "Start generating translation NuGet packages .."
-
-createNuGetPackagesFolder;
-
-foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
-    createNuGetPackage $cultureFolder.Name;
-    break;
-}
-
-echo "Done!!";
-
 function createNuGetPackagesFolder()
 {
     if(-Not(Test-Path -Path $packagesFolder))
@@ -84,3 +73,14 @@ function prepareNuGetSpec([string]$culture)
     $metadata.description = "Orchard Core translation for '$culture' culture"
     $nugetSpec.Save($NuGetSpecFilePath)
 }
+
+echo "Start generating translation NuGet packages .."
+
+createNuGetPackagesFolder
+
+foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
+    createNuGetPackage $cultureFolder.Name;
+    break;
+}
+
+echo "Done!!";
