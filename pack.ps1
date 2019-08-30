@@ -1,4 +1,4 @@
-﻿$packagesFolder = "NuGet Packages"
+﻿$packagesFolder = "artifacts"
 $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
