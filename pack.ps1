@@ -1,4 +1,5 @@
-﻿$packagesFolder = "artifacts"
+﻿$packagesFolder = "MyGet"
+$artifactsFolder = "artifacts"
 $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
@@ -9,18 +10,6 @@ $packageSpecExtension = ".nuspec"
 $packageSpecTemplate = "_template$packageSpecExtension"
 
 $compressedFileExtension = ".zip"
-
-function createNuGetPackagesFolder()
-{
-    if(-Not(Test-Path -Path $packagesFolder))
-    {
-        New-Item -Path $packagesFolder -ItemType "Directory"
-    }
-    else
-    {
-        Remove-Item -Path $packagesFolder\* -Recurse -Force
-    }
-}
 
 function createNuGetPackage([string]$culture)
 {
@@ -45,7 +34,7 @@ function createNuGetPackage([string]$culture)
 
     prepareNuGetSpec $culture;
 
-    $packageFullName = "$packageName.$packageVersionNumber.$packageExtension"
+    $packageFullName = "$packageName.$packageVersionNumber$packageExtension"
     $packagePath = [IO.Path]::Combine($packagesFolder, $packageFullName)
     $compressedCultureFileName = "$packageName.$packageVersionNumber$compressedFileExtension"
     $compressedCulturePath = [IO.Path]::Combine($packagesFolder, $compressedCultureFileName)
@@ -74,12 +63,20 @@ function prepareNuGetSpec([string]$culture)
     $nugetSpec.Save($NuGetSpecFilePath)
 }
 
-echo "Start generating translation NuGet packages .."
+echo "Start generating translations NuGet packages .."
 
-createNuGetPackagesFolder
-
-foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
-    createNuGetPackage $cultureFolder.Name;
+if(Test-Path -Path $artifactsFolder)
+{
+    Remove-Item -Path $artifactsFolder\* -Recurse -Force
 }
 
-echo "Done!!";
+New-Item -Path $packagesFolder -ItemType "Directory"
+
+foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
+    createNuGetPackage $cultureFolder.Name
+}
+
+Move-Item -Path $packagesFolder -Destination $artifactsFolder
+
+echo ""
+echo "Translations NuGet packages created successfully!!"
