@@ -4,7 +4,7 @@ $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
 $packageNamePrefix = "OrchardCore.Translations."
-$packageVersionNumber = "1.0.0" # Find a proper way to get version number
+$packageVersionNumber = "1.0.0"
 
 $packageSpecExtension = ".nuspec"
 $packageSpecTemplate = "_template$packageSpecExtension"
@@ -21,7 +21,6 @@ function createNuGetPackage([string]$culture)
     $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
     $localizationFolderPath = [IO.Path]::Combine($contentFolderPath, $localizationFolder)
 
-    echo ""
     echo "Creating '$packageName' NuGet package"
     
     New-Item -Path $PackageFolderPath -ItemType "Directory"
@@ -67,16 +66,16 @@ echo "Start generating translations NuGet packages .."
 
 if(Test-Path -Path $artifactsFolder)
 {
+    echo "Delete $artifactsFolder folder" 
     Remove-Item -Path $artifactsFolder\* -Recurse -Force
 }
 
 New-Item -Path $packagesFolder -ItemType "Directory"
 
-foreach($cultureFolder in $(Get-ChildItem $localizationFolder)) {
+foreach($cultureFolder in $(Get-ChildItem $localizationFolder -Directory)) {
     createNuGetPackage $cultureFolder.Name
 }
 
 Move-Item -Path $packagesFolder -Destination $artifactsFolder
 
-echo ""
 echo "Translations NuGet packages created successfully!!"
