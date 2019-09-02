@@ -11,22 +11,23 @@ $pkgSpecTemplate = "_template.$pkgSpecExtension"
 
 function createNuGetPackage([string]$pkgName, [string]$culture)
 {
+    echo "Copying content files .."
+
     $pkgId = "$pkgName.$pkgVersion"
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)   
 
     $pkgContentFolderPath = [IO.Path]::Combine($pkgFolderPath, "content")
-    New-Item -Path $pkgContentFolderPath -ItemType "Directory"
+    New-Item -Path $pkgContentFolderPath -ItemType "Directory" | Out-Null
     
     $pkgCultureFolderPath = [IO.Path]::Combine($pkgContentFolderPath, $localizationFolderName, $culture)
-
     $cultureFolder = [IO.Path]::Combine($localizationFolderName, $culture)
     Copy-Item -Path $cultureFolder -Destination $pkgCultureFolderPath -Recurse
-
+    
     buildNuGetSpec $pkgName $culture
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
-    .\nuget pack $pkgSpecFilePath
+    .\nuget pack $pkgSpecFilePath | Out-Null
   
     $pkgTempFilePath = "$pkgId.$pkgExtension"
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
@@ -36,6 +37,8 @@ function createNuGetPackage([string]$pkgName, [string]$culture)
 
 function buildNuGetSpec($pkgName, $culture)
 {
+    echo "Building '$pkgName.$pkgSpecExtension' .."
+
     $pkgSpecDocument = [xml](Get-Content -Path $pkgSpecTemplate)
     $metadata = $pkgSpecDocument.package.metadata
     $metadata.id = $pkgName
@@ -48,15 +51,19 @@ function buildNuGetSpec($pkgName, $culture)
     $pkgSpecDocument.Save($pkgSpecFilePath)
 }
 
-echo "Start generating translations NuGet packages .."
+echo "Start generating translations NuGet packages"
+echo ""
 
 foreach($cultureFolder in $(Get-ChildItem $localizationFolderName -Directory)) {
     $culture = $cultureFolder.Name
-    $pkgName = $pkgNamePrefix + $culture   
+    $pkgName = $pkgNamePrefix + $culture
+    $pkgId = "$pkgName.$pkgVersion"
     
-    echo "Creating '$pkgName' NuGet package"
+    echo "Creating '$pkgId.$pkgExtension' .."
 
     createNuGetPackage $pkgName $culture
+
+    echo ""
 }
 
 echo "Translations NuGet packages created successfully!!"
