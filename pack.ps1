@@ -45,6 +45,11 @@ function createNuGetPackage([string]$culture)
     #Remove-Item -Path $PackageFolderPath -Recurse
     $NuGetSpecFilePath = [IO.Path]::Combine($PackageFolderPath, $NuGetSpecFileName)
     .\nuget pack $NuGetSpecFilePath
+  
+    $pkgId = "$packageName.$packageVersionNumber"
+    $pkgTempFilePath = [IO.Path]::Combine($PWD, $pkgId + $packageExtension)
+    $pkgFilePath = [IO.Path]::Combine($artifactsFolder, $pkgId + $packageExtension)
+    Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
 }
 
 function prepareNuGetSpec([string]$culture)
