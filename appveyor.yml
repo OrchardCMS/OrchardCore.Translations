@@ -13,7 +13,7 @@ install:
   - ps: Start-FileDownload 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
 build_script:
   - dotnet --version
-  - ps: .\pack.ps1
+  - ps: .\pack.ps1 -version 1.0.0-beta-$env:APPVEYOR_BUILD_NUMBER
 artifacts:
   - path: 'artifacts\**\*.nupkg'
 deploy:

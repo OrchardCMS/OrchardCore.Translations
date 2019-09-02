@@ -1,9 +1,11 @@
-﻿$artifactsFolderName = "artifacts"
+﻿Param([Parameter(Mandatory=$true)][string]$version)
+
+$artifactsFolderName = "artifacts"
 $localizationFolderName = "Localization"
 
 $pkgExtension = "nupkg"
 $pkgNamePrefix = "OrchardCore.Translations."
-$pkgVersion = "1.0.0-beta-$env:BuildNumber"
+$pkgVersion = $version
 $pkgDescription = "Orchard Core translation for '{0}' culture"
 
 $pkgSpecExtension = "nuspec"
