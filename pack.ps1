@@ -17,7 +17,6 @@ function createNuGetPackage([string]$culture)
 {
     $packageName = $packageNamePrefix + $culture
     $NuGetSpecFileName = "$packageName.$packageSpecExtension"
-    $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $localizationFolder, $culture, $NuGetSpecFileName)
 
     $PackageFolderPath = [IO.Path]::Combine($artifactsFolder, "$packageName.$packageVersionNumber")
     $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
@@ -44,8 +43,8 @@ function createNuGetPackage([string]$culture)
     #Compress-Archive -Path $PackageFolderPath -DestinationPath "$PackageFolderPath$compressedFileExtension" -CompressionLevel Optimal -Update
     #Rename-Item "$PackageFolderPath.zip" $packageFullName
     #Remove-Item -Path $PackageFolderPath -Recurse
-
-    nuget.exe pack $NuGetSpecFilePath
+    $NuGetSpecFilePath = [IO.Path]::Combine($PackageFolderPath, $NuGetSpecFileName)
+    .\nuget pack $NuGetSpecFilePath
 }
 
 function prepareNuGetSpec([string]$culture)
