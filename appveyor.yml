@@ -10,6 +10,7 @@ init:
   - git config --global core.autocrlf true
 install:
   - ps: $env:BuildNumber= $env:APPVEYOR_BUILD_NUMBER
+  appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 build_script:
   - dotnet --version
   - ps: .\pack.ps1
