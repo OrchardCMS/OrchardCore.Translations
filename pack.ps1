@@ -56,8 +56,6 @@ function prepareNuGetSpec([string]$culture)
     $metadata = $nugetSpec.package.metadata
     $metadata.id = $packageName
     $metadata.version = $packageVersionNumber
-    $metadata.authors = "Hisham Bin Ateya"
-    $metadata.owners = "Orchard Core Team"
     $metadata.description = "Orchard Core translation for '$culture' culture"
     $nugetSpec.Save($NuGetSpecFilePath)
 }
