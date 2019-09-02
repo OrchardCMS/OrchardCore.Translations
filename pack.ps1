@@ -1,5 +1,4 @@
-﻿$packagesFolder = "MyGet"
-$artifactsFolder = "artifacts"
+﻿$artifactsFolder = "artifacts"
 $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
@@ -17,7 +16,7 @@ function createNuGetPackage([string]$culture)
     $NuGetSpecFileName = $packageName + $packageSpecExtension;
     $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $localizationFolder, $culture, $NuGetSpecFileName);
 
-    $PackageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$packageVersionNumber")
+    $PackageFolderPath = [IO.Path]::Combine($artifactsFolder, "$packageName.$packageVersionNumber")
     $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
     $localizationFolderPath = [IO.Path]::Combine($contentFolderPath, $localizationFolder)
 
@@ -34,9 +33,9 @@ function createNuGetPackage([string]$culture)
     prepareNuGetSpec $culture;
 
     $packageFullName = "$packageName.$packageVersionNumber$packageExtension"
-    $packagePath = [IO.Path]::Combine($packagesFolder, $packageFullName)
+    $packagePath = [IO.Path]::Combine($artifactsFolder, $packageFullName)
     $compressedCultureFileName = "$packageName.$packageVersionNumber$compressedFileExtension"
-    $compressedCulturePath = [IO.Path]::Combine($packagesFolder, $compressedCultureFileName)
+    $compressedCulturePath = [IO.Path]::Combine($artifactsFolder, $compressedCultureFileName)
     $cultureFolder = [IO.Path]::Combine($PWD, $localizationFolder, $culture);
 
     Compress-Archive -Path $PackageFolderPath -DestinationPath "$PackageFolderPath$compressedFileExtension" -CompressionLevel Optimal -Update
@@ -46,7 +45,7 @@ function createNuGetPackage([string]$culture)
 
 function prepareNuGetSpec([string]$culture)
 {
-    $packageFolderPath = [IO.Path]::Combine($packagesFolder, "$packageName.$packageVersionNumber")
+    $packageFolderPath = [IO.Path]::Combine($artifactsFolder, "$packageName.$packageVersionNumber")
 
     $packageName = $packageNamePrefix + $culture
     $NuGetSpecFileName = $packageName + $packageSpecExtension
@@ -62,18 +61,8 @@ function prepareNuGetSpec([string]$culture)
 
 echo "Start generating translations NuGet packages .."
 
-if(Test-Path -Path $artifactsFolder)
-{
-    echo "Delete $artifactsFolder folder" 
-    Remove-Item -Path $artifactsFolder\* -Recurse -Force
-}
-
-New-Item -Path $packagesFolder -ItemType "Directory"
-
 foreach($cultureFolder in $(Get-ChildItem $localizationFolder -Directory)) {
     createNuGetPackage $cultureFolder.Name
 }
-
-Move-Item -Path $packagesFolder -Destination $artifactsFolder
 
 echo "Translations NuGet packages created successfully!!"
