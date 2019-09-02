@@ -3,7 +3,7 @@ $localizationFolder = "Localization"
 
 $packageExtension = ".nupkg"
 $packageNamePrefix = "OrchardCore.Translations."
-$packageVersionNumber = "1.0.0"
+$packageVersionNumber = "1.0.0-beta-$env:BuildNumber"
 
 $packageSpecExtension = ".nuspec"
 $packageSpecTemplate = "_template$packageSpecExtension"
