@@ -1,78 +1,62 @@
-﻿$artifactsFolder = "artifacts"
-$localizationFolder = "Localization"
+﻿$artifactsFolderName = "artifacts"
+$localizationFolderName = "Localization"
 
-$packageExtension = ".nupkg"
-$packageNamePrefix = "OrchardCore.Translations."
-$packageVersionNumber = "1.0.0-beta-$env:BuildNumber"
-
-$packageSpecExtension = "nuspec"
-$packageSpecTemplate = "_template.$packageSpecExtension"
-
-$compressedFileExtension = ".zip"
-
+$pkgExtension = "nupkg"
+$pkgNamePrefix = "OrchardCore.Translations."
+$pkgVersion = "1.0.0-beta-$env:BuildNumber"
 $pkgDescription = "Orchard Core translation for '{0}' culture"
-$pkgAuthor = "The Orchard Team"
 
-function createNuGetPackage([string]$culture)
+$pkgSpecExtension = "nuspec"
+$pkgSpecTemplate = "_template.$pkgSpecExtension"
+
+function createNuGetPackage([string]$pkgName, [string]$culture)
 {
-    $packageName = $packageNamePrefix + $culture
-    $NuGetSpecFileName = "$packageName.$packageSpecExtension"
+    $pkgId = "$pkgName.$pkgVersion"
+    $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)   
 
-    $PackageFolderPath = [IO.Path]::Combine($artifactsFolder, "$packageName.$packageVersionNumber")
-    $contentFolderPath = [IO.Path]::Combine($PackageFolderPath, "content")
-    $localizationFolderPath = [IO.Path]::Combine($contentFolderPath, $localizationFolder)
-
-    echo "Creating '$packageName' NuGet package"
+    $pkgContentFolderPath = [IO.Path]::Combine($pkgFolderPath, "content")
+    New-Item -Path $pkgContentFolderPath -ItemType "Directory"
     
-    New-Item -Path $PackageFolderPath -ItemType "Directory"
-    New-Item -Path $contentFolderPath -ItemType "Directory"
-    New-Item -Path $localizationFolderPath -ItemType "Directory"
+    $pkgCultureFolderPath = [IO.Path]::Combine($pkgContentFolderPath, $localizationFolderName, $culture)
+
+    $cultureFolder = [IO.Path]::Combine($localizationFolderName, $culture)
+    Copy-Item -Path $cultureFolder -Destination $pkgCultureFolderPath -Recurse
+
+    buildNuGetSpec $pkgName $culture
     
-    $cultureFolder = [IO.Path]::Combine($localizationFolder, $culture)
-    $cultureFolderPath = [IO.Path]::Combine($localizationFolderPath, $culture)
-    Copy-Item -Path $cultureFolder -Destination $cultureFolderPath -Recurse
-
-    prepareNuGetSpec $culture
-
-    $packageFullName = "$packageName.$packageVersionNumber$packageExtension"
-    $packagePath = [IO.Path]::Combine($artifactsFolder, $packageFullName)
-    $compressedCultureFileName = "$packageName.$packageVersionNumber$compressedFileExtension"
-    $compressedCulturePath = [IO.Path]::Combine($artifactsFolder, $compressedCultureFileName)
-    $cultureFolder = [IO.Path]::Combine($PWD, $localizationFolder, $culture);
-
-    #Compress-Archive -Path $PackageFolderPath -DestinationPath "$PackageFolderPath$compressedFileExtension" -CompressionLevel Optimal -Update
-    #Rename-Item "$PackageFolderPath.zip" $packageFullName
-    #Remove-Item -Path $PackageFolderPath -Recurse
-    $NuGetSpecFilePath = [IO.Path]::Combine($PackageFolderPath, $NuGetSpecFileName)
-    .\nuget pack $NuGetSpecFilePath
+    $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
+    $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
+    .\nuget pack $pkgSpecFilePath
   
-    $pkgId = "$packageName.$packageVersionNumber"
-    $pkgTempFilePath = [IO.Path]::Combine($PWD, $pkgId + $packageExtension)
-    $pkgFilePath = [IO.Path]::Combine($artifactsFolder, $pkgId + $packageExtension)
+    $pkgTempFilePath = "$pkgId.$pkgExtension"
+    $pkgFilePath = "$pkgFolderPath.$pkgExtension"
     Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
+    Remove-Item -Path $pkgFolderPath -Recurse
 }
 
-function prepareNuGetSpec([string]$culture)
+function buildNuGetSpec($pkgName, $culture)
 {
-    $packageFolderPath = [IO.Path]::Combine($artifactsFolder, "$packageName.$packageVersionNumber")
-
-    $packageName = $packageNamePrefix + $culture
-    $NuGetSpecFileName = "$packageName.$packageSpecExtension"
-    $NuGetSpecFilePath = [IO.Path]::Combine($PWD, $packageFolderPath, $NuGetSpecFileName)
-
-    $nugetSpec = [xml](Get-Content -Path $packageSpecTemplate)
-    $metadata = $nugetSpec.package.metadata
-    $metadata.id = $packageName
-    $metadata.version = $packageVersionNumber
+    $pkgSpecDocument = [xml](Get-Content -Path $pkgSpecTemplate)
+    $metadata = $pkgSpecDocument.package.metadata
+    $metadata.id = $pkgName
+    $metadata.version = $pkgVersion
     $metadata.description = [String]::Format($pkgDescription, $culture)
-    $metadata.authors = $pkgAuthor
-    $nugetSpec.Save($NuGetSpecFilePath)
+    
+    $pkgId = $pkgNamePrefix + $culture
+    $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, "$pkgId.$pkgVersion")
+    $pkgSpecFilePath = [IO.Path]::Combine($PWD, $pkgFolderPath, "$pkgId.$pkgSpecExtension")
+    $pkgSpecDocument.Save($pkgSpecFilePath)
 }
 
 echo "Start generating translations NuGet packages .."
 
-foreach($cultureFolder in $(Get-ChildItem $localizationFolder -Directory)) {
-    createNuGetPackage $cultureFolder.Name
+foreach($cultureFolder in $(Get-ChildItem $localizationFolderName -Directory)) {
+    $culture = $cultureFolder.Name
+    $pkgName = $pkgNamePrefix + $culture   
+    
+    echo "Creating '$pkgName' NuGet package"
+
+    createNuGetPackage $pkgName $culture
 }
 
 echo "Translations NuGet packages created successfully!!"
