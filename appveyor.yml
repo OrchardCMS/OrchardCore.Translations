@@ -6,14 +6,18 @@ branches:
     - l10n_master # The branch that Crowdin targets when updates are made on .po files
     - master      # The branch that is published on Nuget.org
     - l10n-pack   # For testing purpose
+environment:
+  packageVersion: 1.0.0
 init:
   - git config --global core.autocrlf true
+  - ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
+  - ps: $env:nugetVersion = "$env:packageVersion-beta-$env:appveyor_build_number"
+  - ps: Update-AppveyorBuild -Version $env:buildVersion
 install:
-  - ps: $env:BuildNumber= $env:APPVEYOR_BUILD_NUMBER
   - ps: Start-FileDownload 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
 build_script:
   - dotnet --version
-  - ps: .\pack.ps1 -version 1.0.0-beta-$env:APPVEYOR_BUILD_NUMBER
+  - ps: .\pack.ps1
 artifacts:
   - path: 'artifacts\**\*.nupkg'
 deploy:
