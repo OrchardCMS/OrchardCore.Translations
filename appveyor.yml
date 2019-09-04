@@ -8,9 +8,10 @@ branches:
     - l10n-pack   # For testing purpose
 environment:
   packageVersion: 1.0.0
+  versionPrefix: -beta
 init:
   - git config --global core.autocrlf true
-  - ps: $env:nugetVersion = "$env:packageVersion-beta-$env:appveyor_build_number"
+  - ps: $env:nugetVersion = "$env:packageVersion$env:versionPrefix.$env:appveyor_build_number"
 install:
   - ps: Start-FileDownload 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
 build_script:
