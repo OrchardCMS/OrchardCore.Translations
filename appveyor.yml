@@ -8,7 +8,7 @@ branches:
     - l10n-pack   # For testing purpose
 environment:
   packageVersion: 1.0.0
-  versionPrefix: -beta
+  versionPrefix: -beta3
 init:
   - git config --global core.autocrlf true
   - ps: $env:nugetVersion = "$env:packageVersion$env:versionPrefix.$env:appveyor_build_number"
