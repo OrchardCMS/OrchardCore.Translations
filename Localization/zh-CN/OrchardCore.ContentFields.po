@@ -4,13 +4,13 @@ msgstr ""
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/Localization/OrchardCore.ContentFields.pot\n"
+"X-Crowdin-File: /dev/Localization/OrchardCore.ContentFields.pot\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-08-27 05:42\n"
+"PO-Revision-Date: 2019-09-06 12:38\n"
 
 #. updater.ModelState.AddModelError(Prefix, T["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:95
@@ -49,6 +49,18 @@ msgid "The text default value is required for {0}."
 msgstr "{0} 需要文本默认值。"
 
 #. updater.ModelState.AddModelError(Prefix, T["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.ContentFields\Drivers\LocalizationSetContentPickerFieldDisplayDriver.cs:99
+msgctxt "OrchardCore.ContentFields.Fields.LocalizationSetContentPickerFieldDisplayDriver"
+msgid "The {0} field is required."
+msgstr ""
+
+#. updater.ModelState.AddModelError(Prefix, T["The {0} field cannot contain multiple items.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.ContentFields\Drivers\LocalizationSetContentPickerFieldDisplayDriver.cs:104
+msgctxt "OrchardCore.ContentFields.Fields.LocalizationSetContentPickerFieldDisplayDriver"
+msgid "The {0} field cannot contain multiple items."
+msgstr ""
+
+#. updater.ModelState.AddModelError(Prefix, T["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\NumericFieldDriver.cs:67
 msgctxt "OrchardCore.ContentFields.Fields.NumericFieldDisplayDriver"
 msgid "The {0} field is required."
@@ -85,7 +97,7 @@ msgid "Invalid number of digits for {0}, max allowed: {1}."
 msgstr "{0} 的位数无效, 最大允许值为: {1}。"
 
 #. updater.ModelState.AddModelError(Prefix, T["A value is required for {0}.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.ContentFields\Drivers\TextFieldDriver.cs:54
+#: OrchardCore.ContentFields\Drivers\TextFieldDriver.cs:53
 msgctxt "OrchardCore.ContentFields.Fields.TextFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr "需要 {0} 的值。"
@@ -348,7 +360,7 @@ msgstr "编辑器上为此字段显示的提示文本。"
 #: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:22
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
 #. <label asp-for="Text" class="@textClass">@T["Link text"]</label>
 #: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:35
@@ -469,6 +481,98 @@ msgstr "文本的默认值"
 msgctxt "OrchardCore.ContentFields.Views.LinkFieldSettings.Edit"
 msgid "The default link text proposed when creating a content item."
 msgstr "创建内容项时建议的默认链接文本。"
+
+#. <span class="value">@T["No content items."]</span>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.cshtml:29
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField"
+msgid "No content items."
+msgstr ""
+
+#. <div class="align-items-center align-self-center"><span>{{ item.displayText }}</span> <span v-show="!item.hasPublished" class="text-muted small">(@T["Not published"])</span></div>
+#. <div v-cloak><span>{{ props.option.displayText }}</span><span class="small ml-2" v-show="!props.option.hasPublished">(@T["Not published"])</span></div>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:38
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:59
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
+msgid "Not published"
+msgstr ""
+
+#. label="displayText" placeholder="@T["Type to search"]"
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:52
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
+msgid "Type to search"
+msgstr ""
+
+#. select-label="@T["Select"]" deselect-label="@T["Remove"]">
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:57
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
+msgid "Select"
+msgstr ""
+
+#. select-label="@T["Select"]" deselect-label="@T["Remove"]">
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:57
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
+msgid "Remove"
+msgstr ""
+
+#. @T["No result found"]
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:62
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
+msgid "No result found"
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Option.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Option"
+msgid "Standard"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="Required">@T["Required"]</label>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:8
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Required"
+msgstr ""
+
+#. <span class="hint">— @T["Whether to ensure at least one element is selected."]</span>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:9
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Whether to ensure at least one element is selected."
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="Multiple">@T["Allow multiple"]</label>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:16
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Allow multiple"
+msgstr ""
+
+#. <span class="hint">— @T["Whether to allow multiple elements to be selected."]</span>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:17
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Whether to allow multiple elements to be selected."
+msgstr ""
+
+#. <label asp-for="DisplayedContentTypes">@T["Content Types"]</label>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:22
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Content Types"
+msgstr ""
+
+#. <span class="hint">@T["The content types to display. Choose at least one."]</span>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:23
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "The content types to display. Choose at least one."
+msgstr ""
+
+#. <label asp-for="Hint">@T["Hint"]</label>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:29
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "Hint"
+msgstr ""
+
+#. <span class="hint">@T["The hint text to display for this field on the editor."]</span>
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerFieldSettings.Edit.cshtml:31
+msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerFieldSettings.Edit"
+msgid "The hint text to display for this field on the editor."
+msgstr ""
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
 #: OrchardCore.ContentFields\Views\Media-HtmlField.Modal.cshtml:7
@@ -654,7 +758,7 @@ msgstr "多线"
 #: OrchardCore.ContentFields\Views\TextField-Url.Option.cshtml:4
 msgctxt "OrchardCore.ContentFields.Views.TextField-Url.Option"
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.ContentFields\Views\TextField.DisplayOption.cshtml:4
@@ -678,37 +782,37 @@ msgstr "选择标题级别以使用"
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:7
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H1"
-msgstr "H1"
+msgstr ""
 
 #. <option value="h2">@T["H2"]</option>
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:8
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H2"
-msgstr "H2"
+msgstr ""
 
 #. <option value="h3">@T["H3"]</option>
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:9
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H3"
-msgstr "H3"
+msgstr ""
 
 #. <option value="h4">@T["H4"]</option>
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:10
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H4"
-msgstr "H4"
+msgstr ""
 
 #. <option value="h5">@T["H5"]</option>
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:11
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H5"
-msgstr "H5"
+msgstr ""
 
 #. <option value="h6">@T["H6"]</option>
 #: OrchardCore.ContentFields\Views\TextFieldHeaderDisplaySettings.Edit.cshtml:12
 msgctxt "OrchardCore.ContentFields.Views.TextFieldHeaderDisplaySettings.Edit"
 msgid "H6"
-msgstr "H6"
+msgstr ""
 
 #. <th scope="col">@T["Option Label"]</th>
 #: OrchardCore.ContentFields\Views\TextFieldPredefinedListEditorSettings.Edit.cshtml:18
