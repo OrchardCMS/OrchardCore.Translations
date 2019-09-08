@@ -42,7 +42,7 @@ function createNuGetMetaPackage()
     $pkgName = $pkgNamePrefix + "All"
     $pkgId = "$pkgName.$pkgVersion"
 
-    echo "Creating '$pkgId.$pkgExtension' .."
+    echo "Creating '$pkgId.$pkgExtension' ..."
 
     buildNuGetMetaPackageSpec $pkgName
     
@@ -74,7 +74,7 @@ function buildNuGetPackageSpec($pkgName, $culture)
 
 function buildNuGetMetaPackageSpec($pkgName)
 {
-    echo "Building '$pkgName.$pkgSpecExtension' .."
+    echo "Building '$pkgName.$pkgSpecExtension' ..."
 
     $pkgSpecDocument = [xml](Get-Content -Path $pkgSpecTemplate)
     $metadata = $pkgSpecDocument.package.metadata
@@ -83,6 +83,7 @@ function buildNuGetMetaPackageSpec($pkgName)
     $metadata.description = "Orchard Core translation for all supported cultures"
 
     $dependencies = $pkgSpecDocument.CreateElement("dependencies")
+    $dependencies.RemoveAllAttributes()
     
     foreach($culture in $cultures)
     {
@@ -91,8 +92,7 @@ function buildNuGetMetaPackageSpec($pkgName)
         $dependency.SetAttribute("version", $pkgVersion)
         $dependencies.AppendChild($dependency) | Out-Null
     }
-    
-    #TODO: Remove extra xmlns attribute
+
     $metadata.AppendChild($dependencies) | Out-Null
 
     $pkgId = $pkgNamePrefix + "All"
@@ -109,14 +109,14 @@ foreach($cultureFolder in $(Get-ChildItem $localizationFolderName -Directory)) {
     $pkgId = "$pkgName.$pkgVersion"
     $cultures.Add($culture)
     
-    echo "Creating '$pkgId.$pkgExtension' .."
+    echo "Creating '$pkgId.$pkgExtension' ..."
 
     createNuGetPackage $pkgName $culture
 
     echo ""
 }
 
-echo "Creating translations meta package"
+echo "Creating translations meta package ..."
 createNuGetMetaPackage
 
 echo ""
