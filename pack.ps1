@@ -1,6 +1,8 @@
 ﻿$artifactsFolderName = "artifacts"
 $localizationFolderName = "Localization"
 
+$cultures = New-Object Collections.Generic.List[String]
+
 $pkgExtension = "nupkg"
 $pkgNamePrefix = "OrchardCore.Translations."
 $pkgVersion = $env:nugetVersion
@@ -23,7 +25,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture)
     $cultureFolder = [IO.Path]::Combine($localizationFolderName, $culture)
     Copy-Item -Path $cultureFolder -Destination $pkgCultureFolderPath -Recurse
     
-    buildNuGetSpec $pkgName $culture
+    buildNuGetPackageSpec $pkgName $culture
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
@@ -35,7 +37,26 @@ function createNuGetPackage([string]$pkgName, [string]$culture)
     Remove-Item -Path $pkgFolderPath -Recurse
 }
 
-function buildNuGetSpec($pkgName, $culture)
+function createNuGetMetaPackage()
+{
+    $pkgName = $pkgNamePrefix + "All"
+    $pkgId = "$pkgName.$pkgVersion"
+
+    echo "Creating '$pkgId.$pkgExtension' ..."
+
+    buildNuGetMetaPackageSpec $pkgName
+    
+    $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
+    $pkgSpecFilePath = [IO.Path]::Combine($artifactsFolderName, $pkgSpecFileName)
+    .\nuget pack $pkgSpecFilePath | Out-Null
+  
+    $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
+    $pkgFilePath = "$pkgFolderPath.$pkgExtension"
+    $pkgTempFilePath = "$pkgId.$pkgExtension"
+    Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
+}
+
+function buildNuGetPackageSpec($pkgName, $culture)
 {
     echo "Building '$pkgName.$pkgSpecExtension' .."
 
@@ -51,6 +72,34 @@ function buildNuGetSpec($pkgName, $culture)
     $pkgSpecDocument.Save($pkgSpecFilePath)
 }
 
+function buildNuGetMetaPackageSpec($pkgName)
+{
+    echo "Building '$pkgName.$pkgSpecExtension' ..."
+
+    $pkgSpecDocument = [xml](Get-Content -Path $pkgSpecTemplate)
+    $metadata = $pkgSpecDocument.package.metadata
+    $metadata.id = $pkgName
+    $metadata.version = $pkgVersion
+    $metadata.description = "Orchard Core translation for all supported cultures"
+
+    $dependencies = $pkgSpecDocument.CreateElement("dependencies")
+    $dependencies.RemoveAllAttributes()
+    
+    foreach($culture in $cultures)
+    {
+        $dependency = $pkgSpecDocument.CreateElement("dependency")
+        $dependency.SetAttribute("id", $pkgNamePrefix + $culture)
+        $dependency.SetAttribute("version", $pkgVersion)
+        $dependencies.AppendChild($dependency) | Out-Null
+    }
+
+    $metadata.AppendChild($dependencies) | Out-Null
+
+    $pkgId = $pkgNamePrefix + "All"
+    $pkgSpecFilePath = [IO.Path]::Combine($PWD, $artifactsFolderName, "$pkgId.$pkgSpecExtension")
+    $pkgSpecDocument.Save($pkgSpecFilePath)
+}
+
 echo "Start generating translations NuGet packages"
 echo ""
 
@@ -58,12 +107,17 @@ foreach($cultureFolder in $(Get-ChildItem $localizationFolderName -Directory)) {
     $culture = $cultureFolder.Name
     $pkgName = $pkgNamePrefix + $culture
     $pkgId = "$pkgName.$pkgVersion"
+    $cultures.Add($culture)
     
-    echo "Creating '$pkgId.$pkgExtension' .."
+    echo "Creating '$pkgId.$pkgExtension' ..."
 
     createNuGetPackage $pkgName $culture
 
     echo ""
 }
 
+echo "Creating translations meta package ..."
+createNuGetMetaPackage
+
+echo ""
 echo "Translations NuGet packages created successfully!!"
