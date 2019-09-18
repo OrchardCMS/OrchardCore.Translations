@@ -1,9 +1,9 @@
 # Orchard Core Translations
 
-Orchard Core translations provide two kind of NuGet packages:
+Orchard Core translations provide two kinds of NuGet packages:
 
-- __Culture Specific Package__: A NuGet package that target only one culture, named `OrchardCore.Translation.{culture}.nupkg` where `{culture}` is the target culture name.
-- __Translations Meta Package__: A NuGet package named `OrchardCore.Translation.All.nupkg` which references all translation packages that Orchard Core supports out-of-the-box.
+- __Culture Specific Packages__: A NuGet package that targets a single culture, named `OrchardCore.Translation.{culture}.nupkg` where `{culture}` is the culture it contains.
+- __Translations Meta Package__: A NuGet package named `OrchardCore.Translation.All.nupkg` which references all translation packages that Orchard Core supports out of the box.
 
 Crowdin Translations: 
 
