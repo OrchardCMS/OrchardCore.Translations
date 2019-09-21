@@ -10,6 +10,7 @@ $pkgDescription = "Orchard Core translation for '{0}' culture"
 
 $pkgSpecExtension = "nuspec"
 $pkgPropsExtension = "props"
+$pkgBuildFolderName = "buildTransitive"
 $pkgSpecTemplate = "_template.$pkgSpecExtension"
 $pkgPropsTemplate = "_template.$pkgPropsExtension"
 
@@ -27,9 +28,9 @@ function createNuGetPackage([string]$pkgName, [string]$culture)
     $cultureFolder = [IO.Path]::Combine($localizationFolderName, $culture)
     Copy-Item -Path $cultureFolder -Destination $pkgCultureFolderPath -Recurse
     
-    echo "Copying '.props' template file .."
+    echo "Copying '$pkgName.$pkgPropsExtension' ..."
 
-    $pkgBuildFolderPath = [IO.Path]::Combine($pkgFolderPath, "buildTransitive")
+    $pkgBuildFolderPath = [IO.Path]::Combine($pkgFolderPath, $pkgBuildFolderName)
     New-Item -Path $pkgBuildFolderPath -ItemType "Directory" | Out-Null
     
     $pkgPropsFileName = "$pkgName.$pkgPropsExtension"
