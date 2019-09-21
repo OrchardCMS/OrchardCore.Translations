@@ -118,7 +118,7 @@ msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Could not delete the user"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:319
+#: OrchardCore.Users\Controllers\AdminController.cs:321
 #. _notifier.Success(TH["Password updated correctly."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Password updated correctly."
@@ -167,48 +167,60 @@ msgid "The email is already used."
 msgstr ""
 
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:32
+#. public override LocalizedString DisplayText => T["Assign User Role Task"];
+msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
+msgid "Assign User Role Task"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:33
 #. public override LocalizedString Category => T["User"];
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "User"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:48
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:49
 #. return Outcomes(T["Done"], T["Failed"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:48
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:49
 #. return Outcomes(T["Done"], T["Failed"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Failed"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:45
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:43
+#. public override LocalizedString DisplayText => T["Register User Task"];
+msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
+msgid "Register User Task"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:46
 #. public override LocalizedString Category => T["Content"];
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:71
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:71
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:71
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:141
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:142
 #. updater.ModelState.TryAddModelError("", T["No email service is available"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
@@ -224,6 +236,12 @@ msgstr ""
 #. return Outcomes(T["Done"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.UserActivity"
 msgid "Done"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\UserCreatedEvent.cs:15
+#. public override LocalizedString DisplayText => T["User Created Event"];
+msgctxt "OrchardCore.Users.Workflows.Activities.UserCreatedEvent"
+msgid "User Created Event"
 msgstr ""
 
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:7
@@ -526,37 +544,37 @@ msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Username"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:30
-#. <label asp-for="Password" class="">@T["Password"]
+#: OrchardCore.Users\Views\Account\Login.cshtml:31
+#. @T["Password"]
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Password"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:33
+#: OrchardCore.Users\Views\Account\Login.cshtml:34
 #. <a asp-controller="ResetPassword" asp-action="ForgotPassword" class="label-link">@T["Forgot your password?"]</a>
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Forgot your password?"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:42
-#. <label asp-for="RememberMe" class="form-check-label">@T["Remember me"]</label>
+#: OrchardCore.Users\Views\Account\Login.cshtml:43
+#. <label asp-for="RememberMe" class="custom-control-label">@T["Remember me"]</label>
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Remember me"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:46
+#: OrchardCore.Users\Views\Account\Login.cshtml:47
 #. <button type="submit" class="btn btn-primary" tabindex="4">@T["Log in"]</button>
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Log in"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:50
+#: OrchardCore.Users\Views\Account\Login.cshtml:51
 #. <a asp-controller="Registration" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@T["Register as a new user"]</a>
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Register as a new user"
 msgstr ""
 
-#: OrchardCore.Users\Views\Account\Login.cshtml:60
+#: OrchardCore.Users\Views\Account\Login.cshtml:61
 #. <h4>@T["Use another service to log in."]</h4>
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Use another service to log in."
@@ -604,24 +622,36 @@ msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:4
+#: OrchardCore.Users\Views\Admin\Index.cshtml:5
 #. <h1>@RenderTitleSegments(T["Users"])</h1>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Users"
 msgstr ""
 
 #: OrchardCore.Users\Views\Admin\Index.cshtml:9
-#. <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add User"]</a>
+#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add User"]</a>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Add User"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:41
-#. <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2 my-2 my-lg-0" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-#: OrchardCore.Users\Views\Admin\Index.cshtml:42
-#. <button type="submit" class="btn btn-secondary">@T["Search"]</button>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:19
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Filter"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:21
+#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" autofocus="autofocus" />
+#: OrchardCore.Users\Views\Admin\Index.cshtml:23
+#. <button type="submit" class="btn btn-sm btn-secondary">@T["Search"]</button>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Search"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:44
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\AssignUserRoleTask.Fields.Design.cshtml:5

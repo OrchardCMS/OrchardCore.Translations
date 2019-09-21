@@ -227,9 +227,9 @@ msgid "Query"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:28
-#. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
+#. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
-msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
+msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\LuceneQuery.SummaryAdmin.cshtml:3
@@ -329,25 +329,53 @@ msgid "Query"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Reset Index"
+msgstr ""
+
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "This will restart the indexing of all content items. Continue?"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Yes"
+msgstr ""
+
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "No"
+msgstr ""
+
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Reset"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Rebuild Index"
+msgstr ""
+
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Your index will be rebuilt, which might alter some services during the process. Continue?"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Rebuild"
 msgstr ""
@@ -395,9 +423,9 @@ msgid "You can use the <a href=\"{0}\">Match All query</a> to search all documen
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:37
-#. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
+#. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
-msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
+msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:41
