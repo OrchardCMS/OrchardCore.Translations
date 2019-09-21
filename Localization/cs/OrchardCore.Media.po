@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2019-09-04 18:58\n"
+"PO-Revision-Date: 2019-09-21 09:14\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -24,47 +24,71 @@ msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Assets"
 msgstr "Soubory"
 
+#. builder.Add(S["Configuration"], content => content
+#: OrchardCore.Media\AdminMenu.cs:52
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Configuration"
+msgstr ""
+
+#. .Add(S["Asset Cache"], "1", contentItems => contentItems
+#: OrchardCore.Media\AdminMenu.cs:53
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Asset Cache"
+msgstr ""
+
 #. error = T["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#: OrchardCore.Media\Controllers\AdminController.cs:208
+#: OrchardCore.Media\Controllers\AdminController.cs:173
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr "Tato přípona souboru není povolena: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:257
+#: OrchardCore.Media\Controllers\AdminController.cs:222
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr "Nelze odstranit kořenovou složku"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:263
+#: OrchardCore.Media\Controllers\AdminController.cs:228
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr "Cestu nelze odstranit, protože se nejedná o adresář"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:313
+#: OrchardCore.Media\Controllers\AdminController.cs:278
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr "Soubor nelze přesunout protože v cílovém adresáři již existuje soubor se stejným názvem"
 
 #. return BadRequest(T["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:389
+#: OrchardCore.Media\Controllers\AdminController.cs:354
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr "Při přesouvání souborů se vyskytla chyba. Soubory již možná existují v cílové m adresáři? Soubory s chybou: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:418
+#: OrchardCore.Media\Controllers\AdminController.cs:383
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr "Složku nelze vytvořit, protože již existuje složka se stejným názvem"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:424
+#: OrchardCore.Media\Controllers\AdminController.cs:389
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr "Složku nelze vytvořit, protože již existuje soubor se stejným názvem"
+
+#. _notifier.Error(H["Asset cache purged, with errors."]);
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:54
+msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+msgid "Asset cache purged, with errors."
+msgstr ""
+
+#. _notifier.Information(H["Asset cache purged."]);
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:58
+msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+msgid "Asset cache purged."
+msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.Media\Drivers\MediaFieldDriver.cs:79
@@ -304,17 +328,29 @@ msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "This folder is empty"
 msgstr "Tato složka je prázdná"
 
-#. <input type="hidden" id="deleteFolderMessage" value="@T["Are you sure you want to delete this folder?"]" />
+#. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Delete media folder"
+msgstr ""
+
+#. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete this folder?"
 msgstr "Opravdu chcete smazat tuto složku?"
 
-#. <input type="hidden" id="deleteMediaMessage" value="@T["Are you sure you want to delete this media?"]" />
+#. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
-msgid "Are you sure you want to delete this media?"
-msgstr "Opravdu chcete smazat tento soubor?"
+msgid "Delete media"
+msgstr ""
+
+#. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Are you sure you want to delete these media items?"
+msgstr ""
 
 #. <input type="hidden" id="moveMediaMessage" value="@T["Are you sure you want to move the selected media to this folder?"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
@@ -511,6 +547,40 @@ msgstr "Média"
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified media."
 msgstr "Exportuje všechny nebo jen vybrané soubory."
+
+#. <h1>@RenderTitleSegments(T["Asset Cache"])</h1>
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:1
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "Asset Cache"
+msgstr ""
+
+#. <p class="alert alert-secondary">@T["Media is configured with appsettings.json."]</p>
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:3
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "Media is configured with appsettings.json."
+msgstr ""
+
+#. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
+#. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
+#. @T["Purge All"]
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:14
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "Purge All"
+msgstr ""
+
+#. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "Are you sure you want to purge the entire asset cache?"
+msgstr ""
+
+#. <span class="hint">— @T["Purge all the assets from the cache"]</span>
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "Purge all the assets from the cache"
+msgstr ""
 
 #. <input type="hidden" id="onlyOneItemMessage" value="@T["Only one item is allowed on this field."]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:2
