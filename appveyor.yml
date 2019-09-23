@@ -7,7 +7,7 @@ branches:
     - master      # The branch that is published on Nuget.org
 environment:
   packageVersion: 1.0.0
-  versionPrefix: -rc
+  versionPrefix: -rc1
 init:
   - git config --global core.autocrlf true
   - ps: $env:nugetVersion = "$env:packageVersion$env:versionPrefix-$env:appveyor_build_number"
