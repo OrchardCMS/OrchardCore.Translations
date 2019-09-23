@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-09-06 12:49\n"
+"PO-Revision-Date: 2019-09-21 09:36\n"
 
 #. .Add(T["Configuration"], "10", configuration => configuration
 #. .Add(T["Configuration"], configuration => configuration
@@ -18,13 +18,13 @@ msgstr ""
 #: OrchardCore.Lucene\AdminMenu.cs:36
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguration"
 
 #. .Add(T["Site"], "10", import => import
 #: OrchardCore.Lucene\AdminMenu.cs:27
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Site"
-msgstr ""
+msgstr "Seite"
 
 #. .Add(T["Lucene Indices"], "7", indexes => indexes
 #: OrchardCore.Lucene\AdminMenu.cs:28
@@ -42,7 +42,7 @@ msgstr ""
 #: OrchardCore.Lucene\AdminMenu.cs:37
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #. .Add(T["Search"], T["Search"], entry => entry
 #. .Add(T["Search"], T["Search"], entry => entry
@@ -50,7 +50,7 @@ msgstr ""
 #: OrchardCore.Lucene\AdminMenu.cs:38
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #. return new HtmlString($"<option value=\"Lucene\" selected=\"selected\">{T["Lucene"]}</option>");
 #. return new HtmlString($"<option value=\"Lucene\">{T["Lucene"]}</option>");
@@ -298,25 +298,25 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:14
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Add"
-msgstr ""
+msgstr "Hinzufügen"
 
 #. <h1>@RenderTitleSegments(T["Create Index"])</h1>
 #: OrchardCore.Lucene\Views\Admin\Create.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Admin.Create"
 msgid "Create Index"
-msgstr ""
+msgstr "Neuen Index erstellen"
 
 #. <label asp-for="IndexName">@T["Index Name"]</label>
 #: OrchardCore.Lucene\Views\Admin\Create.cshtml:9
 msgctxt "OrchardCore.Lucene.Views.Admin.Create"
 msgid "Index Name"
-msgstr ""
+msgstr "Index-Name"
 
 #. <button class="btn btn-primary" type="submit">@T["Create"]</button>
 #: OrchardCore.Lucene\Views\Admin\Create.cshtml:16
 msgctxt "OrchardCore.Lucene.Views.Admin.Create"
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 #: OrchardCore.Lucene\Views\Admin\Create.cshtml:17
@@ -342,25 +342,53 @@ msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Query"
 msgstr ""
 
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Reset Index"
+msgstr ""
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "This will restart the indexing of all content items. Continue?"
 msgstr ""
 
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Yes"
+msgstr ""
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "No"
+msgstr ""
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Reset"
 msgstr ""
 
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Rebuild Index"
+msgstr ""
+
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Your index will be rebuilt, which might alter some services during the process. Continue?"
 msgstr ""
 
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Rebuild"
@@ -370,7 +398,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:27
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #. @T["<strong>Nothing here!</strong> There are no indexes for the moment."]
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:38
@@ -388,7 +416,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:22
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Index"
-msgstr ""
+msgstr "Index"
 
 #. <span class="hint">@T["The lucene index to search on"]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:29
@@ -400,7 +428,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:34
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Template"
-msgstr ""
+msgstr "Vorlage"
 
 #. <span class="hint">@T["You can use the <a href=\"{0}\">Match All query</a> to search all documents.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Lucene", Query = matchAllQuery, IndexName = Model.IndexName }))]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:36
@@ -418,43 +446,43 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:41
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Parameters"
-msgstr ""
+msgstr "Parameter"
 
 #. <span class="hint">@T["An optional Json object containing the parameter values for this query."]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:43
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "An optional Json object containing the parameter values for this query."
-msgstr ""
+msgstr "Ein optionales Json-Objekt, das die Parameterwerte für diese Abfrage enthält."
 
 #. <button type="submit" class="btn btn-primary">@T["Query"]</button>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:47
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Query"
-msgstr ""
+msgstr "Abfrage"
 
 #. <span class="text-muted">@T["Query executed in {0} ms", Model.Elapsed.TotalMilliseconds]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:53
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Query executed in {0} ms"
-msgstr ""
+msgstr "Abfrage ausgeführt in {0} ms"
 
 #. <a href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Queries", id = "Lucene", query = Model.DecodedQuery })" class="btn btn-success">@T["Create"]</a>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:61
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 #. <h5>@T["Search Indexes"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "Search Indexes"
-msgstr ""
+msgstr "Suchindizes"
 
 #. @T["Include all search indexes."]
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:17
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "Include all search indexes."
-msgstr ""
+msgstr "Alle Suchindexe einbeziehen."
 
 #. <span class="hint">@T["The search indexes to add as part of the plan."]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:27
@@ -466,71 +494,71 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:11
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "Search Indexes"
-msgstr ""
+msgstr "Suchindizes"
 
 #. <span class="badge badge-success">@T["All"]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:15
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #. <span class="badge badge-warning">@T["No index selected."]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:26
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "No index selected."
-msgstr ""
+msgstr "Kein Index ausgewählt."
 
 #. <h4 class="card-title">@T["Search Indexes"]</h4>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Thumbnail"
 msgid "Search Indexes"
-msgstr ""
+msgstr "Suchindizes"
 
 #. <p>@T["Exports all or specified search indexes."]</p>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified search indexes."
-msgstr ""
+msgstr "Exportiert alle oder angegebenen Suchindizes."
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Edit"
 msgid "Search Settings"
-msgstr ""
+msgstr "Sucheinstellungen"
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Summary.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Summary"
 msgid "Search Settings"
-msgstr ""
+msgstr "Sucheinstellungen"
 
 #. <span class="hint">@T["Adds search settings to the plan."]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Summary.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Summary"
 msgid "Adds search settings to the plan."
-msgstr ""
+msgstr "Fügt Sucheinstellungen zum Plan hinzu."
 
 #. <h4 class="card-title">@T["Search Settings"]</h4>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Search Settings"
-msgstr ""
+msgstr "Sucheinstellungen"
 
 #. <p>@T["Exports search settings."]</p>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports search settings."
-msgstr ""
+msgstr "Exportiert Sucheinstellungen."
 
 #. <button type="submit" class="btn btn-primary">@T["Search"]</button>
 #: OrchardCore.Lucene\Views\Search\Index.cshtml:9
 msgctxt "OrchardCore.Lucene.Views.Search.Index"
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #. <p class="alert alert-warning">@T["There are no such results."]</p>
 #: OrchardCore.Lucene\Views\Search\Index.cshtml:28
 msgctxt "OrchardCore.Lucene.Views.Search.Index"
 msgid "There are no such results."
-msgstr ""
+msgstr "Es gibt keine Ergebnisse."
 

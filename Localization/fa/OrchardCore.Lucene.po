@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2019-09-06 12:23\n"
+"PO-Revision-Date: 2019-09-23 11:35\n"
 
 #. .Add(T["Configuration"], "10", configuration => configuration
 #. .Add(T["Configuration"], configuration => configuration
@@ -58,7 +58,7 @@ msgstr "جستجو"
 #: OrchardCore.Lucene\LuceneContentPickerShapeProvider.cs:26
 msgctxt "OrchardCore.Lucene.LuceneContentPickerShapeProvider"
 msgid "Lucene"
-msgstr ""
+msgstr "Lucene"
 
 #. ModelState.AddModelError(nameof(AdminEditViewModel.IndexName), S["An index named {0} already exists."]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:96
@@ -244,7 +244,7 @@ msgstr "کوئری"
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:28
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
-msgstr ""
+msgstr "کوئری جستجو باید در فرمت کوئری‌هایی که در Elasticsearch استفاده می‌شود، ایجاد گردد. برخی از مستندات مربوطه در <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">اینجا</a> موجود است."
 
 #. <span class="hint">@T["Lucene query"]</span>
 #: OrchardCore.Lucene\Views\LuceneQuery.SummaryAdmin.cshtml:3
@@ -286,7 +286,7 @@ msgstr "لیستی از فیلدها، که آیتم‌های آن توسط وی
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:10
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Lucene"
-msgstr ""
+msgstr "Lucene"
 
 #. <p class="hint">@T["Queries a Lucene index."]</p>
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:11
@@ -342,25 +342,53 @@ msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Query"
 msgstr "کوئری"
 
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Reset Index"
+msgstr "تنظیم‌مجدد فهرست"
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "This will restart the indexing of all content items. Continue?"
 msgstr "این مورد همه آیتم‌های محتوا را مجدد ایندکس می‌کند. ادامه دهد؟"
 
-#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-message="@T["This will restart the indexing of all content items. Continue?"]" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Yes"
+msgstr "بله"
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "No"
+msgstr "خیر"
+
+#. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:25
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Reset"
 msgstr "تنظیم مجدد"
 
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Lucene.Views.Admin.Index"
+msgid "Rebuild Index"
+msgstr "بازسازی فهرست"
+
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Your index will be rebuilt, which might alter some services during the process. Continue?"
 msgstr "فهرست شما مجدد ساخته خواهد شد. در این فرایند، ممکن است برخی از سرویس‌ها تغییر کنند. ادامه پیدا کند؟"
 
-#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
+#. <a asp-action="Rebuild" asp-route-id="@entry.Name" class="btn btn-warning btn-sm" data-title="@T["Rebuild Index"]" data-message="@T["Your index will be rebuilt, which might alter some services during the process. Continue?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl">@T["Rebuild"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:26
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Rebuild"
@@ -412,7 +440,7 @@ msgstr "شما می‌توانید از <a href=\"{0}\">Match All query</a> بر
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:37
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
-msgstr ""
+msgstr "کوئری جستجو باید در فرمت کوئری‌هایی که در Elasticsearch استفاده می‌شود، ایجاد گردد. برخی از مستندات مربوطه در <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">اینجا</a> موجود است."
 
 #. <label asp-for="Parameters">@T["Parameters"]</label>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:41

@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-09-04 18:53\n"
+"PO-Revision-Date: 2019-09-21 09:04\n"
 
 #. builder.Add(S["Configuration"], cfg => cfg
 #: OrchardCore.AdminMenu\AdminMenu.cs:30
@@ -172,13 +172,13 @@ msgstr "Exportiert alle Admin-Menüs."
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:10
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #. <label asp-for="LinkText">@T["Link Text"]</label>
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:13
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Link Text"
-msgstr ""
+msgstr "Link Text"
 
 #. <span class="hint">@T["The Link Text as it will be shown in the tree."]</span>
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:16
@@ -226,7 +226,7 @@ msgstr "Wählen Sie ein Symbol"
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeSummary.cshtml:4
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeSummary"
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #. <h4 class="card-title">@T["Link Admin Node"]</h4>
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeThumbnail.cshtml:3
@@ -250,7 +250,7 @@ msgstr "Platzhalter"
 #: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:13
 msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
 msgid "Link Text"
-msgstr ""
+msgstr "Link Text"
 
 #. <span class="hint">@T["The text of the menu item as it will be shown in the tree."]</span>
 #: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:16
@@ -310,7 +310,7 @@ msgstr "Admin-Menü {0} erstellen"
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:9
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:11
@@ -340,7 +340,7 @@ msgstr "Admin-Menü bearbeiten: {0}"
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:10
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:12
@@ -367,66 +367,72 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #. <h1>@RenderTitleSegments(T["Admin Menus"])</h1>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:6
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:8
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Admin Menus"
 msgstr "Admin-Menüs"
 
-#. @T["Add Admin Menu"]
+#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Admin Menu"]</a>
 #: OrchardCore.AdminMenu\Views\Menu\List.cshtml:12
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Add Admin Menu"
 msgstr "Admin-Menü hinzufügen"
 
-#. <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-#. <button type="submit" class="btn btn-secondary">@T["Search"]</button>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:17
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:18
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:22
+msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
+msgid "Filter"
+msgstr ""
+
+#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" autofocus="autofocus" />
+#. <button type="submit" class="btn btn-sm btn-secondary">@T["Search"]</button>
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:24
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:26
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Search"
 msgstr "Suche"
 
 #. <a asp-controller="Node" asp-action="List" asp-route-id="@entry.AdminMenu.Id" class="btn btn-secondary btn-sm">@T["Edit Nodes"]</a>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:32
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:43
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Edit Nodes"
 msgstr "Knoten bearbeiten"
 
 #. <a asp-action="Edit" asp-route-id="@entry.AdminMenu.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:33
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #. class="btn btn-danger" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:37
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:48
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Delete"
 msgstr "Löschen"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:39
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:50
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Toggle Dropdown"
 msgstr "Dropdown ein-/ausklappen"
 
 #. class="dropdown-item btn-sm" itemprop="UnsafeUrl">@(entry.AdminMenu.Enabled ? T["Disable"] : T["Enable"])</a>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:55
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Disable"
 msgstr "Deaktivieren"
 
 #. class="dropdown-item btn-sm" itemprop="UnsafeUrl">@(entry.AdminMenu.Enabled ? T["Disable"] : T["Enable"])</a>
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:55
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Enable"
 msgstr "Aktivieren"
 
-#. @T["<strong>Nothing here!</strong>"]
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:56
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:67
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
-msgid "<strong>Nothing here!</strong>"
-msgstr "<strong>Nichts hier!</strong>"
+msgid "<strong>Nothing here!</strong> Your search returned no results."
+msgstr ""
 
 #. <h1>@RenderTitleSegments(T["Create Node"])</h1>
 #: OrchardCore.AdminMenu\Views\Node\Create.cshtml:3

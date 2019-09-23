@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2019-09-06 12:23\n"
+"PO-Revision-Date: 2019-09-23 11:35\n"
 
 #. .Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -184,7 +184,7 @@ msgstr "این ایمیل قبلا استفاده شده است."
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:32
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Assign User Role Task"
-msgstr ""
+msgstr "وظیفه اختصاص نقش کاربر"
 
 #. public override LocalizedString Category => T["User"];
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:33
@@ -208,7 +208,7 @@ msgstr "ناموفق"
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:43
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
-msgstr ""
+msgstr "وظیفه ثبت‌نام کاربر"
 
 #. public override LocalizedString Category => T["Content"];
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:46
@@ -256,7 +256,7 @@ msgstr "انجام شد"
 #: OrchardCore.Users\Workflows\Activities\UserCreatedEvent.cs:15
 msgctxt "OrchardCore.Users.Workflows.Activities.UserCreatedEvent"
 msgid "User Created Event"
-msgstr ""
+msgstr "رویداد کاربر ایجادشده"
 
 #. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:7
@@ -558,38 +558,38 @@ msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Username"
 msgstr "نام کاربری"
 
-#. <label asp-for="Password" class="">@T["Password"]
-#: OrchardCore.Users\Views\Account\Login.cshtml:30
+#. @T["Password"]
+#: OrchardCore.Users\Views\Account\Login.cshtml:31
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Password"
 msgstr "رمز عبور"
 
 #. <a asp-controller="ResetPassword" asp-action="ForgotPassword" class="label-link">@T["Forgot your password?"]</a>
-#: OrchardCore.Users\Views\Account\Login.cshtml:33
+#: OrchardCore.Users\Views\Account\Login.cshtml:34
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Forgot your password?"
 msgstr "رمز عبور خود را فراموش کرده‌اید؟"
 
-#. <label asp-for="RememberMe" class="form-check-label">@T["Remember me"]</label>
-#: OrchardCore.Users\Views\Account\Login.cshtml:42
+#. <label asp-for="RememberMe" class="custom-control-label">@T["Remember me"]</label>
+#: OrchardCore.Users\Views\Account\Login.cshtml:43
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Remember me"
 msgstr "مرا به خاطر بسپار"
 
 #. <button type="submit" class="btn btn-primary" tabindex="4">@T["Log in"]</button>
-#: OrchardCore.Users\Views\Account\Login.cshtml:46
+#: OrchardCore.Users\Views\Account\Login.cshtml:47
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Log in"
 msgstr "ورود"
 
 #. <a asp-controller="Registration" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@T["Register as a new user"]</a>
-#: OrchardCore.Users\Views\Account\Login.cshtml:50
+#: OrchardCore.Users\Views\Account\Login.cshtml:51
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Register as a new user"
 msgstr "ثبت نام به عنوان یک کاربر جدید"
 
 #. <h4>@T["Use another service to log in."]</h4>
-#: OrchardCore.Users\Views\Account\Login.cshtml:60
+#: OrchardCore.Users\Views\Account\Login.cshtml:61
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Use another service to log in."
 msgstr "برای ورود به سیستم از سرویس دیگری استفاده کنید."
@@ -637,24 +637,36 @@ msgid "Cancel"
 msgstr "انصراف"
 
 #. <h1>@RenderTitleSegments(T["Users"])</h1>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:4
+#: OrchardCore.Users\Views\Admin\Index.cshtml:5
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Users"
 msgstr "کاربران"
 
-#. <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add User"]</a>
+#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add User"]</a>
 #: OrchardCore.Users\Views\Admin\Index.cshtml:9
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Add User"
 msgstr "افزودن کاربر"
 
-#. <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2 my-2 my-lg-0" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-#. <button type="submit" class="btn btn-secondary">@T["Search"]</button>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:41
-#: OrchardCore.Users\Views\Admin\Index.cshtml:42
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:19
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Filter"
+msgstr "فیلتر"
+
+#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" autofocus="autofocus" />
+#. <button type="submit" class="btn btn-sm btn-secondary">@T["Search"]</button>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:21
+#: OrchardCore.Users\Views\Admin\Index.cshtml:23
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Search"
 msgstr "جستجو"
+
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
+#: OrchardCore.Users\Views\Admin\Index.cshtml:44
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "<strong>Nothing here!</strong> Your search returned no results."
+msgstr "<strong>هیچی اینجا نیست!</strong> هیچ نتیجه‌ای برای جستجوی شما یافت نشد."
 
 #. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["Assign user to role"])</h4>
 #: OrchardCore.Users\Views\Items\AssignUserRoleTask.Fields.Design.cshtml:5

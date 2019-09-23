@@ -10,31 +10,31 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-09-04 19:09\n"
+"PO-Revision-Date: 2019-09-21 09:36\n"
 
 #. builder.Add(T["Configuration"], configuration => configuration
 #: OrchardCore.Recipes\AdminMenu.cs:26
 msgctxt "OrchardCore.Recipes.AdminMenu"
 msgid "Configuration"
-msgstr ""
+msgstr "構成"
 
 #. .Add(T["Recipes"], "1", recipes => recipes
 #: OrchardCore.Recipes\AdminMenu.cs:28
 msgctxt "OrchardCore.Recipes.AdminMenu"
 msgid "Recipes"
-msgstr ""
+msgstr "サイト種別"
 
 #. await Context.Output.WriteLineAsync(T["No recipes found."]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:30
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "No recipes found."
-msgstr ""
+msgstr "サイト種別が見つかりません"
 
 #. await Context.Output.WriteLineAsync(T["List of available recipes"]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:34
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "List of available recipes"
-msgstr ""
+msgstr "利用可能なサイト種別の一覧"
 
 #. await Context.Output.WriteLineAsync(T["--------------------------"]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:35
@@ -46,77 +46,103 @@ msgstr ""
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:40
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "Recipe: {0}"
-msgstr ""
+msgstr "サイト種別: {0}"
 
 #. await Context.Output.WriteLineAsync(T["  Version:     {0}", recipe.Version]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:41
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "  Version:     {0}"
-msgstr ""
+msgstr "  バージョン:     {0}"
 
 #. await Context.Output.WriteLineAsync(T["  Tags:        {0}", string.Join(",", recipe.Tags)]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:42
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "  Tags:        {0}"
-msgstr ""
+msgstr "  タグ:        {0}"
 
 #. await Context.Output.WriteLineAsync(T["  Description: {0}", recipe.Description]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:43
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "  Description: {0}"
-msgstr ""
+msgstr "  説明: {0}"
 
 #. await Context.Output.WriteLineAsync(T["  Author:      {0}", recipe.Author]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:44
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "  Author:      {0}"
-msgstr ""
+msgstr "  作成者:      {0}"
 
 #. await Context.Output.WriteLineAsync(T["  Website:     {0}", recipe.WebSite]);
 #: OrchardCore.Recipes\Commands\RecipesCommands.cs:45
 msgctxt "OrchardCore.Recipes.Commands.RecipesCommands"
 msgid "  Website:     {0}"
-msgstr ""
+msgstr "  Webサイト:     {0}"
 
 #. _notifier.Error(T["Recipe was not found"]);
 #: OrchardCore.Recipes\Controllers\AdminController.cs:99
 msgctxt "OrchardCore.Recipes.Controllers.AdminController"
 msgid "Recipe was not found"
-msgstr ""
+msgstr "サイト種別は見つかりませんでした"
 
 #. _notifier.Success(T["The recipe '{0}' has been run successfully", recipe.Name]);
 #: OrchardCore.Recipes\Controllers\AdminController.cs:126
 msgctxt "OrchardCore.Recipes.Controllers.AdminController"
 msgid "The recipe '{0}' has been run successfully"
-msgstr ""
+msgstr "サイト種別 {0} は正常に実行されました"
 
-#. <h1>@(T["Recipes"])</h1>
-#: OrchardCore.Recipes\Views\Admin\Index.cshtml:5
+#. <h1>@RenderTitleSegments(T["Recipes"])</h1>
+#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:6
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Recipes"
+msgstr "サイト種別"
+
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:15
+msgctxt "OrchardCore.Recipes.Views.Admin.Index"
+msgid "Filter"
 msgstr ""
 
-#. <input id="search-box" class="form-control" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-#: OrchardCore.Recipes\Views\Admin\Index.cshtml:9
+#. <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:17
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #. @T["Setup Recipe"]
-#: OrchardCore.Recipes\Views\Admin\Index.cshtml:39
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:48
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Setup Recipe"
-msgstr ""
+msgstr "サイト種別をセットアップする"
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-message="@T["Are you sure you want to run the recipe?"]" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
-#: OrchardCore.Recipes\Views\Admin\Index.cshtml:55
+#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Are you sure you want to run the recipe?"
+msgstr "サイト種別を適用してよろしいですか?"
+
+#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
+msgctxt "OrchardCore.Recipes.Views.Admin.Index"
+msgid "Yes"
 msgstr ""
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-message="@T["Are you sure you want to run the recipe?"]" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
-#: OrchardCore.Recipes\Views\Admin\Index.cshtml:55
+#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
+msgctxt "OrchardCore.Recipes.Views.Admin.Index"
+msgid "No"
+msgstr ""
+
+#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok="@T["Yes"]" data-cancel="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Run"
+msgstr "適用"
+
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
+#: OrchardCore.Recipes\Views\Admin\Index.cshtml:72
+msgctxt "OrchardCore.Recipes.Views.Admin.Index"
+msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr ""
 
