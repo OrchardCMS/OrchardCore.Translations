@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2019-10-23 16:46\n"
+"PO-Revision-Date: 2019-10-23 16:54\n"
 
 #. .Add(T["Configuration"], "10", configuration => configuration
 #: OrchardCore.Tenants\AdminMenu.cs:35
@@ -78,7 +78,7 @@ msgstr "Ένας ενοικιαστής με το ίδιο όνομα υπάρχ
 #: OrchardCore.Tenants\Controllers\AdminController.cs:545
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
-msgstr ""
+msgstr "Μη έγκυρο όνομα ενοικιαστή. Πρέπει να περιέχει μόνο χαρακτήρες και χωρίς κενά."
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:550
@@ -120,13 +120,13 @@ msgstr ""
 #: OrchardCore.Tenants\Controllers\ApiController.cs:165
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Tenant not found: '{0}'"
-msgstr ""
+msgstr "Ο ενοικιαστής δεν βρέθηκε: '{0}'"
 
 #. return BadRequest(S["The tenant can't be setup."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:175
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
-msgstr ""
+msgstr "Ο ενοικιαστής δεν μπορεί να ρυθμιστεί."
 
 #. return BadRequest(S["The database provider is not defined."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:189
@@ -156,31 +156,31 @@ msgstr ""
 #: OrchardCore.Tenants\Views\NavigationItemText-design.Id.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.NavigationItemText-design.Id"
 msgid "Design"
-msgstr ""
+msgstr "Σχέδιο"
 
 #. <h1>@RenderTitleSegments(T["Create Tenant"])</h1>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Create Tenant"
-msgstr ""
+msgstr "Δημιουργία Ενοικιαστή"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:10
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #. <span class="hint">@T["The name of the tenant."]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:13
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The name of the tenant."
-msgstr ""
+msgstr "Το όνομα του ενοικιαστή."
 
 #. <label asp-for="RequestUrlPrefix">@T["Url Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:18
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Url Prefix"
-msgstr ""
+msgstr "Πρόθεμα Url"
 
 #. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardproject.net/site1\""]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:21
@@ -236,7 +236,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:58
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString.ToString().ToLower()" data-table-prefix="@provider.HasTablePrefix.ToString().ToLower()" data-connection-string-sample="@T["The connection string to your database instance. e.g., {0}", provider.SampleConnectionString]">@provider.Name</option>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:61
@@ -254,7 +254,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:74
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Connection string"
-msgstr ""
+msgstr "Συμβολοσειρά σύνδεσης"
 
 #. <button class="btn btn-primary" type="submit">@T["Create"]</button>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:83
@@ -296,7 +296,7 @@ msgstr "Πρόθεμα Url"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:20
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardproject.net/site1\""
-msgstr ""
+msgstr "(Προαιρετικό) Παράδειγμα: Εάν το πρόθεμα είναι \"site1\", η διεύθυνση URL του ενοικιαστή είναι \"https://orchardproject.net/site1\""
 
 #. <label asp-for="RequestUrlHost">@T["Hostname"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:24
@@ -340,13 +340,13 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:58
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "What type of database to use?"
-msgstr ""
+msgstr "Τι είδους βάση δεδομένων πρέπει να χρησιμοποιήσεις;"
 
 #. <option value="" data-connection-string="false">@T["None"]</option>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:60
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:68
@@ -382,7 +382,7 @@ msgstr "Ακύρωση"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:42
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Tenants"
-msgstr ""
+msgstr "Ενοικιαστές"
 
 #. @T["Bulk Actions"]
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:47
@@ -410,7 +410,7 @@ msgstr "Ενεργοποίηση"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:53
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Add Tenant"
-msgstr ""
+msgstr "Πρόσθεσε τον Ενοικιαστή"
 
 #. <span class="input-group-text bg-secondary text-light">@T["Keyword"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:65
