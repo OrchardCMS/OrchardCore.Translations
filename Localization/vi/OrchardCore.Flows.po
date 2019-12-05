@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-09-04 19:28\n"
+"PO-Revision-Date: 2019-12-05 10:06\n"
 
 #. Description = T["A BagPart allows to add content items directly within another content item"];
 #: OrchardCore.Flows\GraphQL\BagPartQueryObjectType.cs:16
@@ -31,7 +31,7 @@ msgid "At least one content type must be selected."
 msgstr "Ít nhất một loại nội dung phải được chọn."
 
 #. @T["Add Item"]
-#: OrchardCore.Flows\Views\BagPart.Edit.cshtml:44
+#: OrchardCore.Flows\Views\BagPart.Edit.cshtml:55
 msgctxt "OrchardCore.Flows.Views.BagPart.Edit"
 msgid "Add Item"
 msgstr "Thêm mục"
@@ -54,93 +54,117 @@ msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
 msgid "Display Type"
 msgstr "Loại Hiển thị"
 
-#. <span class="hint">@T["The display type to use when rendering the content items. Default is Summary."]</span>
+#. <span class="hint">@T["The display type to use when rendering the content items. Default is Detail."]</span>
 #: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
-msgid "The display type to use when rendering the content items. Default is Summary."
-msgstr "Loại hiển thị dùng để kết xuất những mục nội dung. Mặc định là Tóm lược."
+msgid "The display type to use when rendering the content items. Default is Detail."
+msgstr ""
+
+#. @T["{0} — <span class=\"hint\">{1}</span>", contentItem.DisplayText, contentType]
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:16
+msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
+msgid "{0} — <span class=\"hint\">{1}</span>"
+msgstr ""
+
+#. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:21
+msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
+msgid "Delete"
+msgstr ""
+
+#. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:21
+msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
+msgid "Are you sure you want to remove this item?"
+msgstr ""
+
+#. <span data-content-type-display-text="@contentTypeDisplayText" class="widget-editor-header-text">@T["{0} {1}", contentItemDisplayText, contentTypeDisplayText]</span>
+#: OrchardCore.Flows\Views\ContentCard-FlowPart.Edit.cshtml:21
+msgctxt "OrchardCore.Flows.Views.ContentCard-FlowPart.Edit"
+msgid "{0} {1}"
+msgstr ""
+
+#. <button type="button" title="@T["Insert Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+#: OrchardCore.Flows\Views\ContentCard-FlowPart.Edit.cshtml:31
+msgctxt "OrchardCore.Flows.Views.ContentCard-FlowPart.Edit"
+msgid "Insert Widget"
+msgstr ""
+
+#. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
+#: OrchardCore.Flows\Views\ContentCard-FlowPart.Edit.cshtml:55
+msgctxt "OrchardCore.Flows.Views.ContentCard-FlowPart.Edit"
+msgid "Delete"
+msgstr ""
+
+#. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
+#: OrchardCore.Flows\Views\ContentCard-FlowPart.Edit.cshtml:55
+msgctxt "OrchardCore.Flows.Views.ContentCard-FlowPart.Edit"
+msgid "Are you sure you want to remove this item?"
+msgstr ""
+
+#. <input asp-for="Alignment" type="radio" autocomplete="off" value="Left"><i class="fa fa-align-left" aria-hidden="true"></i> @T["Left"]
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:10
+msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
+msgid "Left"
+msgstr ""
+
+#. <input asp-for="Alignment" type="radio" autocomplete="off" value="Center"><i class="fa fa-align-center" aria-hidden="true"></i> @T["Center"]
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:13
+msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
+msgid "Center"
+msgstr ""
+
+#. <input asp-for="Alignment" type="radio" autocomplete="off" value="Right"><i class="fa fa-align-right" aria-hidden="true"></i> @T["Right"]
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:16
+msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
+msgid "Right"
+msgstr ""
+
+#. <input asp-for="Alignment" type="radio" autocomplete="off" value="Justify"><i class="fa fa-align-justify" aria-hidden="true"></i> @T["Justify"]
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:19
+msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
+msgid "Justify"
+msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="25">@T["25%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:21
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:30
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "25%"
 msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="33">@T["33%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:24
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:33
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "33%"
 msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="50">@T["50%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:27
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:36
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "50%"
 msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="66">@T["66%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:30
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:39
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "66%"
 msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="75">@T["75%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:33
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:42
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "75%"
 msgstr ""
 
 #. <input asp-for="Size" type="radio" autocomplete="off" value="100">@T["100%"]
-#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:36
+#: OrchardCore.Flows\Views\FlowMetadata.Edit.cshtml:45
 msgctxt "OrchardCore.Flows.Views.FlowMetadata.Edit"
 msgid "100%"
 msgstr ""
 
-#. @T["Add Widget"]
-#: OrchardCore.Flows\Views\FlowPart.Edit.cshtml:45
+#. <button type="button" title="@T["Add Widget"]" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+#: OrchardCore.Flows\Views\FlowPart.Edit.cshtml:62
 msgctxt "OrchardCore.Flows.Views.FlowPart.Edit"
 msgid "Add Widget"
 msgstr "Thêm Tiện ích"
-
-#. @T["{0} — <span class=\"hint\">{1}</span>", contentItem.DisplayText, contentType]
-#: OrchardCore.Flows\Views\Widget-Bag.Edit.cshtml:12
-msgctxt "OrchardCore.Flows.Views.Widget-Bag.Edit"
-msgid "{0} — <span class=\"hint\">{1}</span>"
-msgstr ""
-
-#. <button type="button" class="btn btn-secondary widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\Widget-Bag.Edit.cshtml:15
-msgctxt "OrchardCore.Flows.Views.Widget-Bag.Edit"
-msgid "Delete"
-msgstr ""
-
-#. <button type="button" class="btn btn-secondary widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\Widget-Bag.Edit.cshtml:15
-msgctxt "OrchardCore.Flows.Views.Widget-Bag.Edit"
-msgid "Are you sure you want to remove this item?"
-msgstr ""
-
-#. <span data-content-type-display-text="@contentTypeDisplayText" class="widget-editor-header-text">@T["{0} {1}", contentItemDisplayText, contentTypeDisplayText]</span>
-#: OrchardCore.Flows\Views\Widget-Flow.Edit.cshtml:15
-msgctxt "OrchardCore.Flows.Views.Widget-Flow.Edit"
-msgid "{0} {1}"
-msgstr ""
-
-#. <button type="button" title="@T["Insert Widget"]" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-#: OrchardCore.Flows\Views\Widget-Flow.Edit.cshtml:18
-msgctxt "OrchardCore.Flows.Views.Widget-Flow.Edit"
-msgid "Insert Widget"
-msgstr "Chèn Tiện ích"
-
-#. <button type="button" class="btn btn-secondary widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\Widget-Flow.Edit.cshtml:34
-msgctxt "OrchardCore.Flows.Views.Widget-Flow.Edit"
-msgid "Delete"
-msgstr ""
-
-#. <button type="button" class="btn btn-secondary widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\Widget-Flow.Edit.cshtml:34
-msgctxt "OrchardCore.Flows.Views.Widget-Flow.Edit"
-msgid "Are you sure you want to remove this item?"
-msgstr ""
 
