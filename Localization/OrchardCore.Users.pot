@@ -1,77 +1,71 @@
-#: OrchardCore.Users\AdminMenu.cs:27
-#. .Add(T["Configuration"], configuration => configuration
-msgctxt "OrchardCore.Users.AdminMenu"
-msgid "Configuration"
-msgstr ""
-
-#: OrchardCore.Users\AdminMenu.cs:28
-#. .Add(T["Security"], "5", security => security
+#: OrchardCore.Users\AdminMenu.cs:26
+#. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 msgctxt "OrchardCore.Users.AdminMenu"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:29
-#. .Add(T["Users"], "5", installed => installed
+#: OrchardCore.Users\AdminMenu.cs:28
+#. .Add(S["Users"], "5", installed => installed
 msgctxt "OrchardCore.Users.AdminMenu"
 msgid "Users"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:34
-#. .Add(T["Settings"], settings => settings
+#: OrchardCore.Users\AdminMenu.cs:33
+#. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Users.AdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:35
-#. .Add(T["Login"], T["Login"], registration => registration
-#: OrchardCore.Users\AdminMenu.cs:35
-#. .Add(T["Login"], T["Login"], registration => registration
+#: OrchardCore.Users\AdminMenu.cs:34
+#. .Add(S["Login"], S["Login"], registration => registration
+#: OrchardCore.Users\AdminMenu.cs:34
+#. .Add(S["Login"], S["Login"], registration => registration
 msgctxt "OrchardCore.Users.AdminMenu"
 msgid "Login"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:63
-#. .Add(T["Configuration"], configuration => configuration
+#: OrchardCore.Users\AdminMenu.cs:64
+#. .Add(S["Security"], security => security
 msgctxt "OrchardCore.Users.RegistrationAdminMenu"
-msgid "Configuration"
+msgid "Security"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:64
-#. .Add(T["Settings"], settings => settings
+#: OrchardCore.Users\AdminMenu.cs:65
+#. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Users.RegistrationAdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:65
-#. .Add(T["Registration"], T["Registration"], registration => registration
-#: OrchardCore.Users\AdminMenu.cs:65
-#. .Add(T["Registration"], T["Registration"], registration => registration
+#: OrchardCore.Users\AdminMenu.cs:66
+#. .Add(S["Registration"], S["Registration"], registration => registration
+#: OrchardCore.Users\AdminMenu.cs:66
+#. .Add(S["Registration"], S["Registration"], registration => registration
 msgctxt "OrchardCore.Users.RegistrationAdminMenu"
 msgid "Registration"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:93
-#. .Add(T["Configuration"], configuration => configuration
+#: OrchardCore.Users\AdminMenu.cs:94
+#. .Add(S["Security"], security => security
 msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
-msgid "Configuration"
+msgid "Security"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:94
-#. .Add(T["Settings"], settings => settings
+#: OrchardCore.Users\AdminMenu.cs:95
+#. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Users\AdminMenu.cs:95
-#. .Add(T["Reset password"], T["Reset password"], password => password
-#: OrchardCore.Users\AdminMenu.cs:95
-#. .Add(T["Reset password"], T["Reset password"], password => password
+#: OrchardCore.Users\AdminMenu.cs:96
+#. .Add(S["Reset password"], S["Reset password"], password => password
+#: OrchardCore.Users\AdminMenu.cs:96
+#. .Add(S["Reset password"], S["Reset password"], password => password
 msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Reset password"
 msgstr ""
 
 #: OrchardCore.Users\Commands\UserCommands.cs:50
-#. Context.Output.WriteLine(T["User created successfully"]);
+#. Context.Output.WriteLine(S["User created successfully"]);
 msgctxt "OrchardCore.Users.Commands.UserCommands"
 msgid "User created successfully"
 msgstr ""
@@ -94,73 +88,121 @@ msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:183
+#: OrchardCore.Users\Controllers\AdminController.cs:149
+#. new SelectListItem() { Text = TH["All"].Value, Value = nameof(UsersFilter.All) },
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "All"
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:156
+#. new SelectListItem() { Text = TH["Name"].Value, Value = nameof(UsersOrder.Name) },
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "Name"
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:157
+#. new SelectListItem() { Text = TH["Email"].Value, Value = nameof(UsersOrder.Email) },
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "Email"
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:163
+#. new SelectListItem() { Text = TH["Approve"].Value, Value = nameof(UsersBulkAction.Approve) },
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "Approve"
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:165
+#. new SelectListItem() { Text = TH["Delete"].Value, Value = nameof(UsersBulkAction.Delete) }
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "Delete"
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:198
+#. _notifier.Success(TH["User {0} successfully approved.", item.UserName]);
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "User {0} successfully approved."
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:205
+#. _notifier.Success(TH["User {0} successfully deleted.", item.UserName]);
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "User {0} successfully deleted."
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:212
+#. _notifier.Success(TH["User {0} successfully disabled.", item.UserName]);
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "User {0} successfully disabled."
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:259
 #. _notifier.Success(TH["User created successfully"]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User created successfully"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:240
+#: OrchardCore.Users\Controllers\AdminController.cs:316
 #. _notifier.Success(TH["User updated successfully"]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User updated successfully"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:264
+#: OrchardCore.Users\Controllers\AdminController.cs:340
 #. _notifier.Success(TH["User deleted successfully"]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User deleted successfully"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:270
+#: OrchardCore.Users\Controllers\AdminController.cs:346
 #. _notifier.Error(TH["Could not delete the user"]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Could not delete the user"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:321
+#: OrchardCore.Users\Controllers\AdminController.cs:397
 #. _notifier.Success(TH["Password updated correctly."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Password updated correctly."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\RegistrationController.cs:162
+#: OrchardCore.Users\Controllers\RegistrationController.cs:164
 #. _notifier.Success(TH["Verification email sent."]);
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Verification email sent."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\RegistrationController.cs:172
+#: OrchardCore.Users\Controllers\RegistrationController.cs:174
 #. await SendEmailAsync(user.Email, T["Confirm your account"], new ConfirmEmailViewModel() { User = user, ConfirmEmailUrl = callbackUrl });
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Confirm your account"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ResetPasswordController.cs:90
+#: OrchardCore.Users\Controllers\ResetPasswordController.cs:92
 #. await SendEmailAsync(user.Email, T["Reset your password"], new LostPasswordViewModel() { User = user, LostPasswordUrl = resetPasswordUrl });
 msgctxt "OrchardCore.Users.Controllers.ResetPasswordController"
 msgid "Reset your password"
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:84
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:73
 #. context.Updater.ModelState.AddModelError("UserName", T["A user name is required."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A user name is required."
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:89
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:78
 #. context.Updater.ModelState.AddModelError("Email", T["An email is required."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "An email is required."
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:101
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:87
 #. context.Updater.ModelState.AddModelError(string.Empty, T["The user name is already used."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The user name is already used."
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:111
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:97
 #. context.Updater.ModelState.AddModelError(string.Empty, T["The email is already used."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The email is already used."
@@ -190,37 +232,37 @@ msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Failed"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:43
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:50
 #. public override LocalizedString DisplayText => T["Register User Task"];
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:46
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:53
 #. public override LocalizedString Category => T["Content"];
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:72
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 #. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:142
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:145
 #. updater.ModelState.TryAddModelError("", T["No email service is available"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
@@ -254,6 +296,12 @@ msgstr ""
 #. <span class="hint">— @T["Requires an active site theme."]</span>
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Requires an active site theme."
+msgstr ""
+
+#: OrchardCore.Users\Views\NavigationItemText-security.Id.cshtml:1
+#. <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span><span class="title">@T["Security"]</span>
+msgctxt "OrchardCore.Users.Views.NavigationItemText-security.Id"
+msgid "Security"
 msgstr ""
 
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:7
@@ -418,13 +466,13 @@ msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Roles"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:4
+#: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:2
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Users.Views.UserSaveButtons.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:5
+#: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:3
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Users.Views.UserSaveButtons.Edit"
 msgid "Cancel"
@@ -622,36 +670,80 @@ msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:5
+#: OrchardCore.Users\Views\Admin\Index.cshtml:9
 #. <h1>@RenderTitleSegments(T["Users"])</h1>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Users"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:9
+#: OrchardCore.Users\Views\Admin\Index.cshtml:19
+#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" />
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Search"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:24
 #. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add User"]</a>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Add User"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:19
-#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:35
+#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
-msgid "Filter"
+msgid "Select All"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:21
-#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" autofocus="autofocus" />
-#: OrchardCore.Users\Views\Admin\Index.cshtml:23
-#. <button type="submit" class="btn btn-sm btn-secondary">@T["Search"]</button>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.Users.Views.Admin.Index"
-msgid "Search"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Items {0} to {1}"
 msgstr ""
 
-#: OrchardCore.Users\Views\Admin\Index.cshtml:44
+#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:43
+#. @T["Actions"]
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Actions"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Bulk Action"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Are you sure you want to {0} this/these item(s)?"
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:83
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
+msgstr ""
+
+#: OrchardCore.Users\Views\Admin\Index.cshtml:136
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#: OrchardCore.Users\Views\Admin\Index.cshtml:141
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "selected"
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\AssignUserRoleTask.Fields.Design.cshtml:5

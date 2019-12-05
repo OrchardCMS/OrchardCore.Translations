@@ -1,58 +1,58 @@
-#: OrchardCore.Roles\AdminMenu.cs:25
-#. .Add(T["Configuration"], configuration => configuration
-msgctxt "OrchardCore.Roles.AdminMenu"
-msgid "Configuration"
-msgstr ""
-
-#: OrchardCore.Roles\AdminMenu.cs:26
-#. .Add(T["Security"], "5", security => security
+#: OrchardCore.Roles\AdminMenu.cs:24
+#. builder.Add(S["Security"], security => security
 msgctxt "OrchardCore.Roles.AdminMenu"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.Roles\AdminMenu.cs:27
-#. .Add(T["Roles"], "10", installed => installed
+#: OrchardCore.Roles\AdminMenu.cs:25
+#. .Add(S["Roles"], "10", installed => installed
 msgctxt "OrchardCore.Roles.AdminMenu"
 msgid "Roles"
 msgstr ""
 
 #: OrchardCore.Roles\Controllers\AdminController.cs:103
+#. ModelState.AddModelError(string.Empty, T["Invalid role name."]);
+msgctxt "OrchardCore.Roles.Controllers.AdminController"
+msgid "Invalid role name."
+msgstr ""
+
+#: OrchardCore.Roles\Controllers\AdminController.cs:108
 #. ModelState.AddModelError(string.Empty, T["The role is already used."]);
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "The role is already used."
 msgstr ""
 
-#: OrchardCore.Roles\Controllers\AdminController.cs:113
+#: OrchardCore.Roles\Controllers\AdminController.cs:118
 #. _notifier.Success(TH["Role created successfully"]);
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role created successfully"
 msgstr ""
 
-#: OrchardCore.Roles\Controllers\AdminController.cs:149
+#: OrchardCore.Roles\Controllers\AdminController.cs:154
 #. _notifier.Success(TH["Role deleted successfully"]);
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role deleted successfully"
 msgstr ""
 
-#: OrchardCore.Roles\Controllers\AdminController.cs:155
+#: OrchardCore.Roles\Controllers\AdminController.cs:160
 #. _notifier.Error(TH["Could not delete this role"]);
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Could not delete this role"
 msgstr ""
 
-#: OrchardCore.Roles\Controllers\AdminController.cs:224
+#: OrchardCore.Roles\Controllers\AdminController.cs:229
 #. _notifier.Success(TH["Role updated successfully."]);
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role updated successfully."
 msgstr ""
 
-#: OrchardCore.Roles\Controllers\AdminController.cs:252
+#: OrchardCore.Roles\Controllers\AdminController.cs:258
 #. string title = String.IsNullOrWhiteSpace(category) ? T["{0} Feature", featureName] : category;
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "{0} Feature"
 msgstr ""
 
-#: OrchardCore.Roles\Services\RoleStore.cs:106
+#: OrchardCore.Roles\Services\RoleStore.cs:125
 #. return IdentityResult.Failed(new IdentityError { Description = T["Can't delete system roles."] });
 msgctxt "OrchardCore.Roles.Services.RoleStore"
 msgid "Can't delete system roles."
@@ -76,13 +76,19 @@ msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "The role name is required."
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Create.cshtml:16
+#: OrchardCore.Roles\Views\Admin\Create.cshtml:15
+#. <label asp-for="RoleDescription">@T["Role description"]</label>
+msgctxt "OrchardCore.Roles.Views.Admin.Create"
+msgid "Role description"
+msgstr ""
+
+#: OrchardCore.Roles\Views\Admin\Create.cshtml:20
 #. <button class="btn btn-primary" type="submit">@T["Create"]</button>
 msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "Create"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Create.cshtml:17
+#: OrchardCore.Roles\Views\Admin\Create.cshtml:21
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "Cancel"
@@ -100,19 +106,19 @@ msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Edit.cshtml:22
+#: OrchardCore.Roles\Views\Admin\Edit.cshtml:21
 #. <th class="col-10">@T["Permission"]</th>
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Permission"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Edit.cshtml:23
+#: OrchardCore.Roles\Views\Admin\Edit.cshtml:22
 #. <th class="col-1">@T["Allow"]</th>
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Allow"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Edit.cshtml:24
+#: OrchardCore.Roles\Views\Admin\Edit.cshtml:23
 #. <th class="col-1">@T["Effective"]</th>
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Effective"
@@ -130,13 +136,13 @@ msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Security Critical"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Edit.cshtml:62
+#: OrchardCore.Roles\Views\Admin\Edit.cshtml:60
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Edit.cshtml:63
+#: OrchardCore.Roles\Views\Admin\Edit.cshtml:61
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Cancel"
@@ -178,7 +184,7 @@ msgctxt "OrchardCore.Roles.Views.Admin.Index"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Roles\Views\Admin\Index.cshtml:45
+#: OrchardCore.Roles\Views\Admin\Index.cshtml:46
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Roles.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."

@@ -1,24 +1,22 @@
 #: OrchardCore.Settings\AdminMenu.cs:24
-#. builder.Add(T["Configuration"], configuration => configuration
+#. builder.Add(S["Configuration"], configuration => configuration
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.Settings\AdminMenu.cs:25
-#. .Add(T["Settings"], "1", settings => settings
+#. .Add(S["Settings"], "1", settings => settings
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Settings"
 msgstr ""
 
 #: OrchardCore.Settings\AdminMenu.cs:26
-#. .Add(T["General"], T["General"], entry => entry
-#: OrchardCore.Settings\AdminMenu.cs:26
-#. .Add(T["General"], T["General"], entry => entry
+#. .Add(S["General"], "1", entry => entry
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr ""
 
-#: OrchardCore.Settings\Controllers\AdminController.cs:85
+#: OrchardCore.Settings\Controllers\AdminController.cs:79
 #. _notifier.Success(H["Site settings updated successfully."]);
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "Site settings updated successfully."
@@ -67,96 +65,108 @@ msgid "Enter the fully qualified base URL of the web site."
 msgstr ""
 
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:30
+#. <label asp-for="PageSize">@T["Page size"]</label>
+msgctxt "OrchardCore.Settings.Views.Settings.Edit"
+msgid "Page size"
+msgstr ""
+
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:33
+#. <span class="hint">@T["The default page size."]</span>
+msgctxt "OrchardCore.Settings.Views.Settings.Edit"
+msgid "The default page size."
+msgstr ""
+
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:39
 #. <label asp-for="TimeZone">@T["Default Time Zone"]</label>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Default Time Zone"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:32
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:41
 #. <option value="">@T["Local to server"]</option>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Local to server"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:41
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:50
 #. <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."]</span>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:45
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:54
 #. <h5 class="form-group">@T["Resource Settings"]<span class="hint"> — @T["Settings for scripts and stylesheets"]</span></h5>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Resource Settings"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:45
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:54
 #. <h5 class="form-group">@T["Resource Settings"]<span class="hint"> — @T["Settings for scripts and stylesheets"]</span></h5>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Settings for scripts and stylesheets"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:49
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:58
 #. <label class="custom-control-label" asp-for="@Model.AppendVersion">@T["Use resources cache busting"]</label>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Use resources cache busting"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:50
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:59
 #. <span class="hint">— @T["Whether cache busting (append a version) is used for scripts and stylesheets"]</span>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Whether cache busting (append a version) is used for scripts and stylesheets"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:57
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:66
 #. <label class="custom-control-label" asp-for="@Model.UseCdn">@T["Use framework CDN (Content Delivery Network)"]</label>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Use framework CDN (Content Delivery Network)"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:58
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:67
 #. <span class="hint">— @T["Whether a framework CDN is used for registered scripts and stylesheets, such as jQuery, or their local version"]</span>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Whether a framework CDN is used for registered scripts and stylesheets, such as jQuery, or their local version"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:63
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:72
 #. <label asp-for="CdnBaseUrl">@T["Site CDN (Content Delivery Network) base url"]</label>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Site CDN (Content Delivery Network) base url"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:66
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:75
 #. <span class="hint">@T["A base CDN URL prefixed to the local scripts and stylesheets. It is disabled if the value is empty or if the Resource Debug Mode is enabled, e.g. <em>https://cdn.mysite.com</em>"]</span>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "A base CDN URL prefixed to the local scripts and stylesheets. It is disabled if the value is empty or if the Resource Debug Mode is enabled, e.g. <em>https://cdn.mysite.com</em>"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:71
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:80
 #. <label asp-for="ResourceDebugMode">@T["Resource Debug Mode"]</label>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Resource Debug Mode"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:73
-#. <option value="@ResourceDebugMode.FromConfiguration.ToString()">@T["From environment — enabled in <em>Production</em>, disabled otherwise"]</option>
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:82
+#. <option value="@ResourceDebugMode.FromConfiguration.ToString()">@T["From environment — disabled in <em>Production</em>, enabled otherwise"]</option>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
-msgid "From environment — enabled in <em>Production</em>, disabled otherwise"
+msgid "From environment — disabled in <em>Production</em>, enabled otherwise"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:74
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:83
 #. <option value="@ResourceDebugMode.Enabled.ToString()">@T["Enabled — use debuggable version of resources"]</option>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Enabled — use debuggable version of resources"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:75
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:84
 #. <option value="@ResourceDebugMode.Disabled.ToString()">@T["Disabled — use minified version of resources"]</option>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Disabled — use minified version of resources"
 msgstr ""
 
-#: OrchardCore.Settings\Views\Settings.Edit.cshtml:77
+#: OrchardCore.Settings\Views\Settings.Edit.cshtml:86
 #. <span class="hint">@T["Determines whether scripts and stylesheets load in their debuggable or minified form."]</span>
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."

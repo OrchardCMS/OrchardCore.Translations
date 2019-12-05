@@ -1,7 +1,25 @@
 #: OrchardCore.Workflows\AdminMenu.cs:24
-#. builder.Add(T["Workflows"], "5", workflow => workflow
+#. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 msgctxt "OrchardCore.Workflows.AdminMenu"
 msgid "Workflows"
+msgstr ""
+
+#: OrchardCore.Workflows\Activities\CommitTransactionTask.cs:21
+#. public override LocalizedString DisplayText => T["Commit Transaction Task"];
+msgctxt "OrchardCore.Workflows.Activities.CommitTransactionTask"
+msgid "Commit Transaction Task"
+msgstr ""
+
+#: OrchardCore.Workflows\Activities\CommitTransactionTask.cs:22
+#. public override LocalizedString Category => T["Primitives"];
+msgctxt "OrchardCore.Workflows.Activities.CommitTransactionTask"
+msgid "Primitives"
+msgstr ""
+
+#: OrchardCore.Workflows\Activities\CommitTransactionTask.cs:26
+#. return Outcomes(T["Done"]);
+msgctxt "OrchardCore.Workflows.Activities.CommitTransactionTask"
+msgid "Done"
 msgstr ""
 
 #: OrchardCore.Workflows\Activities\CorrelateTask.cs:23
@@ -172,13 +190,13 @@ msgctxt "OrchardCore.Workflows.Activities.NotifyTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Workflows\Activities\ScriptTask.cs:26
+#: OrchardCore.Workflows\Activities\ScriptTask.cs:25
 #. public override LocalizedString DisplayText => T["Script Task"];
 msgctxt "OrchardCore.Workflows.Activities.ScriptTask"
 msgid "Script Task"
 msgstr ""
 
-#: OrchardCore.Workflows\Activities\ScriptTask.cs:27
+#: OrchardCore.Workflows\Activities\ScriptTask.cs:26
 #. public override LocalizedString Category => T["Control Flow"];
 msgctxt "OrchardCore.Workflows.Activities.ScriptTask"
 msgid "Control Flow"
@@ -256,27 +274,57 @@ msgctxt "OrchardCore.Workflows.Controllers.ActivityController"
 msgid "Activity updated successfully"
 msgstr ""
 
-#: OrchardCore.Workflows\Controllers\WorkflowController.cs:175
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:127
+#. new SelectListItem() { Text = T["All"].Value, Value = nameof(WorkflowFilter.All) },
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "All"
+msgstr ""
+
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:128
+#. new SelectListItem() { Text = T["Faulted"].Value, Value = nameof(WorkflowFilter.Faulted) },
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "Faulted"
+msgstr ""
+
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:129
+#. new SelectListItem() { Text = T["Finished"].Value, Value = nameof(WorkflowFilter.Finished) }
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "Finished"
+msgstr ""
+
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:133
+#. new SelectListItem() { Text = T["Delete"].Value, Value = nameof(WorkflowBulkAction.Delete) }
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "Delete"
+msgstr ""
+
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:223
 #. _notifier.Success(T["Workflow {0} has been deleted.", id]);
-#: OrchardCore.Workflows\Controllers\WorkflowController.cs:209
-#. _notifier.Success(T["Workflow {0} has been deleted.", workflow.WorkflowId]);
+#: OrchardCore.Workflows\Controllers\WorkflowController.cs:252
+#. _notifier.Success(T["Workflow {0} has been deleted.", workflow.Id]);
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
 msgid "Workflow {0} has been deleted."
 msgstr ""
 
-#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:186
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:155
+#. new SelectListItem() { Text = S["Delete"].Value, Value = nameof(WorkflowTypeBulkAction.Delete) }
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
+msgid "Delete"
+msgstr ""
+
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:195
 #. _notifier.Success(H["Workflow {0} has been deleted.", workflowType.Name]);
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow {0} has been deleted."
 msgstr ""
 
-#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:445
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:455
 #. _notifier.Success(H["Workflow type has been saved."]);
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow type has been saved."
 msgstr ""
 
-#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:465
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:475
 #. _notifier.Success(H["Workflow type {0} deleted", workflowType.Name]);
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow type {0} deleted"
@@ -372,19 +420,19 @@ msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestTask"
 msgid "Unhandled Http Status"
 msgstr ""
 
-#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:37
+#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:34
 #. public override LocalizedString DisplayText => T["Http Response Task"];
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpResponseTask"
 msgid "Http Response Task"
 msgstr ""
 
-#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:38
+#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:35
 #. public override LocalizedString Category => T["HTTP"];
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpResponseTask"
 msgid "HTTP"
 msgstr ""
 
-#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:66
+#: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:63
 #. return Outcomes(T["Done"]);
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpResponseTask"
 msgid "Done"
@@ -420,7 +468,7 @@ msgctxt "OrchardCore.Workflows.UserTasks.Activities.UserTaskEvent"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Workflows\UserTasks\Drivers\UserTaskEventContentDriver.cs:78
+#: OrchardCore.Workflows\UserTasks\Drivers\UserTaskEventContentDriver.cs:72
 #. _notifier.Error(T["Not authorized to trigger '{0}'", action]);
 msgctxt "OrchardCore.Workflows.UserTasks.Drivers.UserTaskEventContentDriver"
 msgid "Not authorized to trigger '{0}'"
@@ -475,18 +523,18 @@ msgid "Workflows"
 msgstr ""
 
 #: OrchardCore.Workflows\Views\Activity\Create.cshtml:4
-#. <h1>@RenderTitleSegments(T["Add {0}", Model.Activity.Name.CamelFriendly()])</h1>
+#. <h1>@RenderTitleSegments(T["Add {0}", Model.Activity.DisplayText.Value])</h1>
 msgctxt "OrchardCore.Workflows.Views.Activity.Create"
 msgid "Add {0}"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Activity\Create.cshtml:13
+#: OrchardCore.Workflows\Views\Activity\Create.cshtml:12
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Workflows.Views.Activity.Create"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Activity\Create.cshtml:14
+#: OrchardCore.Workflows\Views\Activity\Create.cshtml:13
 #. <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Cancel"]</a>
 msgctxt "OrchardCore.Workflows.Views.Activity.Create"
 msgid "Cancel"
@@ -498,13 +546,13 @@ msgctxt "OrchardCore.Workflows.Views.Activity.EditActivity"
 msgid "Edit {0}"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Activity\EditActivity.cshtml:13
+#: OrchardCore.Workflows\Views\Activity\EditActivity.cshtml:12
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Workflows.Views.Activity.EditActivity"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Activity\EditActivity.cshtml:14
+#: OrchardCore.Workflows\Views\Activity\EditActivity.cshtml:13
 #. <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Cancel"]</a>
 msgctxt "OrchardCore.Workflows.Views.Activity.EditActivity"
 msgid "Cancel"
@@ -538,6 +586,24 @@ msgstr ""
 #. <p>@T["Exports all the Workflow Types of the system."]</p>
 msgctxt "OrchardCore.Workflows.Views.Items.AllWorkflowTypeDeploymentStep.Fields.Thumbnail"
 msgid "Exports all the Workflow Types of the system."
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Design.cshtml:7
+#. <h4><i class="fa fa-@className"></i>@Model.Activity.GetTitleOrDefault(() => T["Commit Transaction"])</h4>
+msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Design"
+msgid "Commit Transaction"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Thumbnail.cshtml:1
+#. <h4 class="card-title"><i class="fa fa-info-circle"></i>@T["Commit Transaction"]</h4>
+msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Thumbnail"
+msgid "Commit Transaction"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Thumbnail.cshtml:2
+#. <p>@T["Commit the current transaction."]</p>
+msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Thumbnail"
+msgid "Commit the current transaction."
 msgstr ""
 
 #: OrchardCore.Workflows\Views\Items\CorrelateTask.Fields.Design.cshtml:4
@@ -1674,39 +1740,87 @@ msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:5
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:12
 #. <h1>@RenderTitleSegments(T["{0} Workflows", Model.WorkflowType.Name])</h1>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "{0} Workflows"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:9
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:16
 #. <li class="breadcrumb-item"><a asp-action="Index" asp-controller="WorkflowType">@T["Workflow Types"]</a></li>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Workflow Types"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:11
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:18
 #. <li class="breadcrumb-item active" aria-current="page">@T["Workflows"]</li>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Workflows"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:20
-#. @T["Bulk Actions"]
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:35
+#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
-msgid "Bulk Actions"
+msgid "Select All"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:24
-#. @T["Delete"]
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:69
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Workflows.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Workflows.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Items {0} to {1}"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.Workflows.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:43
+#. @T["Actions"]
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Actions"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Bulk Action"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Are you sure you want to {0} these items?"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:56
+#. <select asp-for="Options.Filter" asp-items="Model.Options.WorkflowsStatuses" class="selectpicker show-tick" data-header="@T["Filter by status"]" data-live-search="true" data-selected-text-format="static" data-dropdown-align-right="auto" data-width="fit" title="@T["Status"]">
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Filter by status"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:56
+#. <select asp-for="Options.Filter" asp-items="Model.Options.WorkflowsStatuses" class="selectpicker show-tick" data-header="@T["Filter by status"]" data-live-search="true" data-selected-text-format="static" data-dropdown-align-right="auto" data-width="fit" title="@T["Status"]">
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Status"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:95
 #. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:79
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:104
 #. <span class="hint">@T["Created {0}", (object)(await DisplayAsync(await New.TimeSpan(Utc: entry.Workflow.CreatedUtc)))]</span>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Created {0}"
@@ -1752,16 +1866,24 @@ msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Aborted"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:123
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:148
 #. @T["<strong>Nothing here!</strong> There are no halted workflows at the moment."]
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "<strong>Nothing here!</strong> There are no halted workflows at the moment."
 msgstr ""
 
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:129
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:158
 #. <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Back"]</a>
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Back"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:209
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:214
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "selected"
 msgstr ""
 
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:3
@@ -1818,13 +1940,13 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:41
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:40
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:42
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:41
 #. <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Cancel"]</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Cancel"
@@ -1960,87 +2082,129 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:42
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:41
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:43
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:42
 #. <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Cancel"]</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:4
-#. <h1>@RenderTitleSegments(T["Manage Workflow Types"])</h1>
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:11
+#. <h1>@RenderTitleSegments(T["Manage WorkflowTypes Types"])</h1>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
-msgid "Manage Workflow Types"
+msgid "Manage WorkflowTypes Types"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:10
-#. <a asp-action="EditProperties" asp-route-returnUrl="@FullRequestPath" asp- class="btn btn-primary" role="button"> @T["Create Workflow Type"]</a>
-msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
-msgid "Create Workflow Type"
-msgstr ""
-
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:13
-#. @T["Bulk Actions"]
-msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
-msgid "Bulk Actions"
-msgstr ""
-
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:17
-#. @T["Delete"]
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:42
-#. <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
-msgid "Delete"
-msgstr ""
-
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:24
-#. <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:25
-#. <button type="submit" class="btn btn-secondary my-2 my-sm-0">@T["Search"]</button>
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:21
+#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" />
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:40
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:26
+#. <a asp-action="EditProperties" asp-route-returnUrl="@FullRequestPath" class="btn btn-sm btn-primary" role="button">@T["Create Workflow Type"]</a>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Create Workflow Type"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:37
+#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Select All"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:38
+#. <label id="items" for="select-all">@T.Plural(Model.WorkflowTypes.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:38
+#. <label id="items" for="select-all">@T.Plural(Model.WorkflowTypes.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Items {0} to {1}"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:38
+#. <label id="items" for="select-all">@T.Plural(Model.WorkflowTypes.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:45
+#. @T["Actions"]
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Actions"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:50
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Bulk Action"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:50
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Are you sure you want to {0} these items?"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:65
 #. <a asp-action="Edit" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:41
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:66
 #. <a asp-action="EditProperties" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Properties"]</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Properties"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:43
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:67
+#. <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Delete"
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:68
 #. <a asp-action="Duplicate" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Duplicate"]</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Duplicate"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:57
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:80
 #. <span class="badge badge-secondary">@T["Disabled"]</span>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Disabled"
 msgstr ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:61
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:84
 #. <a asp-action="Index" asp-controller="Workflow" asp-route-workflowtypeid="@entry.WorkflowType.Id" class="badge badge-info">@T.Plural(entry.WorkflowCount, "1 instance", "{0} instances")</a>
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "1 instance"
 msgid_plural "{0} instances"
 msgstr[0] ""
 
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:75
-#. @T["<strong>Nothing here!</strong> There are no workflow types at the moment."]
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:95
+#. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
-msgid "<strong>Nothing here!</strong> There are no workflow types at the moment."
+msgid "<strong>Nothing here!</strong> Your search returned no results."
+msgstr ""
+
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:147
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:152
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "selected"
 msgstr ""
 
 #: OrchardCore.Workflows\Views\Shared\Components\SelectWorkflowType\Default.cshtml:4
