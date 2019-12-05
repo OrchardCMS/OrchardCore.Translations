@@ -10,34 +10,42 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2019-10-18 14:34\n"
+"PO-Revision-Date: 2019-12-05 10:22\n"
 
-#. builder.Add(T["Configuration"], content => content
+#. builder.Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:24
 msgctxt "OrchardCore.Queries.AdminMenu"
-msgid "Configuration"
-msgstr "Παραμετροποίηση"
+msgid "Search"
+msgstr ""
 
-#. .Add(T["Queries"], "1", contentItems => contentItems
-#: OrchardCore.Queries\AdminMenu.cs:25
+#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
+#: OrchardCore.Queries\AdminMenu.cs:26
+#: OrchardCore.Queries\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Queries"
 msgstr "Ερωτήματα"
 
+#. .Add(S["All queries"], "1", queries => queries
+#: OrchardCore.Queries\AdminMenu.cs:27
+msgctxt "OrchardCore.Queries.AdminMenu"
+msgid "All queries"
+msgstr ""
+
 #. _notifier.Success(H["Query created successfully"]);
-#: OrchardCore.Queries\Controllers\AdminController.cs:156
+#: OrchardCore.Queries\Controllers\AdminController.cs:163
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query created successfully"
 msgstr "Το ερώτημα δημιουργήθηκε με επιτυχία"
 
 #. _notifier.Success(H["Query updated successfully"]);
-#: OrchardCore.Queries\Controllers\AdminController.cs:212
+#: OrchardCore.Queries\Controllers\AdminController.cs:219
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query updated successfully"
 msgstr "Το ερώτημα ενημερώθηκε με επιτυχία"
 
 #. _notifier.Success(H["Query deleted successfully"]);
-#: OrchardCore.Queries\Controllers\AdminController.cs:239
+#: OrchardCore.Queries\Controllers\AdminController.cs:246
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query deleted successfully"
 msgstr "Το ερώτημα διαγράφηκε επιτυχώς"
@@ -60,29 +68,35 @@ msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "A query with the same name already exists"
 msgstr "Υπάρχει ήδη ένα ερώτημα με το ίδιο όνομα"
 
-#. .Add(T["Configuration"], "10", configuration => configuration
+#. .Add(S["Search"], search => search
 #: OrchardCore.Queries\Sql\AdminMenu.cs:25
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
-msgid "Configuration"
-msgstr "Παραμετροποίηση"
+msgid "Search"
+msgstr ""
 
-#. .Add(T["Site"], "10", site => site
+#. .Add(S["Queries"], "10", queries => queries
+#: OrchardCore.Queries\Sql\AdminMenu.cs:26
+msgctxt "OrchardCore.Queries.Sql.AdminMenu"
+msgid "Queries"
+msgstr ""
+
+#. .Add(S["Run SQL Query"], "5", sql => sql
 #: OrchardCore.Queries\Sql\AdminMenu.cs:27
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
-msgid "Site"
-msgstr "Ιστοσελίδα"
-
-#. .Add(T["SQL Queries"], "5", queries => queries
-#: OrchardCore.Queries\Sql\AdminMenu.cs:28
-msgctxt "OrchardCore.Queries.Sql.AdminMenu"
-msgid "SQL Queries"
-msgstr "Ερωτήματα SQL"
+msgid "Run SQL Query"
+msgstr ""
 
 #. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
 #: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:60
 msgctxt "OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver"
 msgid "The query field is required"
-msgstr "Το πεδίο ερώτησης απαιτείται"
+msgstr "Το πεδίο ερώτησης είναι υποχρεωτικό"
+
+#. <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
+#: OrchardCore.Queries\Views\NavigationItemText-search.Id.cshtml:1
+msgctxt "OrchardCore.Queries.Views.NavigationItemText-search.Id"
+msgid "Search"
+msgstr ""
 
 #. <h4>@T["SQL"]</h4>
 #: OrchardCore.Queries\Views\Query-Sql.Link.cshtml:5
@@ -94,13 +108,13 @@ msgstr "SQL"
 #: OrchardCore.Queries\Views\Query-Sql.Link.cshtml:6
 msgctxt "OrchardCore.Queries.Views.Query-Sql.Link"
 msgid "Queries the SQL database."
-msgstr "Ρώτησε τη βάση δεδομένων SQL."
+msgstr "Ερωτήματα βάσης δεδομένων SQL."
 
 #. <a class="btn btn-primary btn-sm" asp-route-action="Create" asp-route-controller="Admin" asp-route-id="@Model.Name" asp-area="OrchardCore.Queries">@T["Add"]</a>
 #: OrchardCore.Queries\Views\Query-Sql.Link.cshtml:9
 msgctxt "OrchardCore.Queries.Views.Query-Sql.Link"
 msgid "Add"
-msgstr "Προσθηκη"
+msgstr "Προσθήκη"
 
 #. class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Queries\Views\Query.Buttons.SummaryAdmin.cshtml:6
@@ -154,7 +168,7 @@ msgstr "Το σχήμα που θα χρησιμοποιήσει το api για
 #: OrchardCore.Queries\Views\Query.Link.cshtml:1
 msgctxt "OrchardCore.Queries.Views.Query.Link"
 msgid "If you see this message you need to create a custom shape template for {0}"
-msgstr "Αν βλέπεις αυτό το μήνυμα, πρέπει να δημιουργήσεις ένα προσαρμοσμένο πρότυπο μορφής για το {0}"
+msgstr "Αν βλέπετε αυτό το μήνυμα, πρέπει να δημιουργήσετε ένα προσαρμοσμένο πρότυπο μορφής για το {0}"
 
 #. class="btn btn-success btn-sm">@T["Run"]</a>
 #: OrchardCore.Queries\Views\SqlQuery.Buttons.SummaryAdmin.cshtml:11
@@ -172,7 +186,7 @@ msgstr "Επιστροφή Εγγράφων"
 #: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:11
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "Check to return the corresponding documents."
-msgstr "Επίλεξε για να επιστρέψεις τα αντίστοιχα έγγραφα."
+msgstr "Επιλέξτε για να επιστρέψετε τα αντίστοιχα έγγραφα."
 
 #. <span class="hint">@T["When checked, the result has to be a list of document ids."]</span>
 #: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:13
@@ -211,57 +225,71 @@ msgid "Edit '{0}' query"
 msgstr "Επεξεργασία του ερωτήματος '{0}'"
 
 #. <h1>@RenderTitleSegments(T["Queries"])</h1>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:5
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:6
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Queries"
 msgstr "Ερωτήματα"
 
-#. <button type="button" class="btn btn-primary float-right" role="button" data-toggle="modal" data-target="#modalAddQuery">@T["Add Query"]</button>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:9
-msgctxt "OrchardCore.Queries.Views.Admin.Index"
-msgid "Add Query"
-msgstr "Προσθήκη Ερωτήματος"
-
-#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:18
-msgctxt "OrchardCore.Queries.Views.Admin.Index"
-msgid "Filter"
-msgstr "Φίλτρο"
-
-#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" autofocus="autofocus" />
-#. <button type="submit" class="btn btn-sm btn-secondary">@T["Search"]</button>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:20
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:22
+#. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus="autofocus" />
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:12
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Search"
 msgstr "Αναζήτηση"
 
+#. <button type="button" class="btn btn-primary float-right" role="button" data-toggle="modal" data-target="#modalAddQuery">@T["Add Query"]</button>
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:17
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid "Add Query"
+msgstr "Προσθήκη Ερωτήματος"
+
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+msgstr[1] ""
+
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid "Items {0} to {1}"
+msgstr ""
+
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:26
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+msgstr[1] ""
+
 #. @T["<strong>Nothing here!</strong> There are no queries for the moment."]
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:45
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:44
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> There are no queries for the moment."
-msgstr "<strong>Τίποτα δεν υπάρχει εδώ!</strong> Δεν υπάρχουν προς το παρόν ερωτήματα."
+msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Δεν υπάρχουν προς το παρόν ερωτήματα."
 
 #. <h5 class="modal-title">@T["Available Query Types"]</h5>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:57
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:58
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Available Query Types"
 msgstr "Διαθέσιμοι Τύποι Ερωτημάτων"
 
 #. <p class="p-3 mb-2 bg-warning text-white">@T["You need to enable a feature which provides a query source."] <a asp-action="Features" asp-controller="Admin" asp-area="OrchardCore.Features">@T["Go to Features"]</a></p>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:65
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:66
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "You need to enable a feature which provides a query source."
-msgstr "Πρέπει να ενεργοποιήσεις μια λειτουργία που παρέχει μια πηγή ερωτήματος."
+msgstr "Πρέπει να ενεργοποιήσετε μια λειτουργία που παρέχει μια πηγή ερωτήματος."
 
 #. <p class="p-3 mb-2 bg-warning text-white">@T["You need to enable a feature which provides a query source."] <a asp-action="Features" asp-controller="Admin" asp-area="OrchardCore.Features">@T["Go to Features"]</a></p>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:65
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:66
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Go to Features"
 msgstr "Πήγαινε στις Λειτουργίες"
 
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:82
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:83
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Cancel"
 msgstr "Άκυρο"
@@ -282,7 +310,7 @@ msgstr "Πρότυπο"
 #: OrchardCore.Queries\Views\Admin\Query.cshtml:24
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "You can <a href=\"{0}\">click here</a> to query all content items."
-msgstr "Μπορείς να <a href=\"{0}\">κάνεις κλικ εδώ</a> για να αναζητήσεις όλα τα στοιχεία περιεχομένου."
+msgstr "Μπορείτε να <a href=\"{0}\">κάνεις κλικ εδώ</a> για να αναζητήσετε όλα τα στοιχεία περιεχομένου."
 
 #. <span class="hint">@T["The SQL query uses standard SQL92 syntax and is converted based on the actual database. Tables will be prefixed automatically."]</span>
 #: OrchardCore.Queries\Views\Admin\Query.cshtml:25
@@ -324,7 +352,7 @@ msgstr "Το ερώτημα καθώς θα εκτελεστεί από τη β�
 #: OrchardCore.Queries\Views\Admin\Query.cshtml:58
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Create"
-msgstr "Δημιουργια"
+msgstr "Δημιουργία"
 
 #. <span class="text-muted">@T["Query executed in {0} ms", Model.Elapsed.TotalMilliseconds]</span>
 #: OrchardCore.Queries\Views\Admin\Query.cshtml:66
