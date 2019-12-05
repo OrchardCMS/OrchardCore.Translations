@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2019-10-07 16:56\n"
+"PO-Revision-Date: 2019-12-05 10:13\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -18,77 +18,85 @@ msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Content"
 msgstr "Περιεχόμενο"
 
-#. .Add(S["Assets"], "3", layers => layers
-#: OrchardCore.Media\AdminMenu.cs:26
+#. .Add(S["Media Library"], "1.1", layers => layers
+#: OrchardCore.Media\AdminMenu.cs:27
 msgctxt "OrchardCore.Media.AdminMenu"
-msgid "Assets"
-msgstr "Πόροι"
+msgid "Media Library"
+msgstr ""
 
-#. builder.Add(S["Configuration"], content => content
-#: OrchardCore.Media\AdminMenu.cs:52
-msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
-msgid "Configuration"
-msgstr "Παραμετροποίηση"
-
-#. .Add(S["Asset Cache"], "1", contentItems => contentItems
+#. builder.Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:53
 msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
-msgid "Asset Cache"
-msgstr "Πόροι στη Προσωρινή Μνήμη"
+msgid "Content"
+msgstr ""
+
+#. .Add(S["Media Cache"], "1.2", contentItems => contentItems
+#: OrchardCore.Media\AdminMenu.cs:54
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Media Cache"
+msgstr ""
 
 #. error = T["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#: OrchardCore.Media\Controllers\AdminController.cs:173
+#. return StatusCode(StatusCodes.Status403Forbidden, T["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
+#: OrchardCore.Media\Controllers\AdminController.cs:172
+#: OrchardCore.Media\Controllers\AdminController.cs:277
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr "Αυτή η επέκταση αρχείου δεν επιτρέπεται: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:222
+#: OrchardCore.Media\Controllers\AdminController.cs:221
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr "Δεν είναι δυνατή η διαγραφή του αρχικού φακέλου μέσων"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:228
+#: OrchardCore.Media\Controllers\AdminController.cs:227
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr "Δεν είναι δυνατή η διαγραφή διαδρομής επειδή δεν είναι κατάλογος"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:278
+#: OrchardCore.Media\Controllers\AdminController.cs:282
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η μετακίνηση μέσων επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
 
 #. return BadRequest(T["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:354
+#: OrchardCore.Media\Controllers\AdminController.cs:358
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr "Σφάλμα κατά τη μετακίνηση αρχείων. Ίσως υπάρχουν ήδη στον φάκελο προορισμού; Αρχεία σε σφάλμα: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:383
+#: OrchardCore.Media\Controllers\AdminController.cs:387
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένας φάκελος υπάρχει ήδη με το ίδιο όνομα"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:389
+#: OrchardCore.Media\Controllers\AdminController.cs:393
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
 
+#. _notifier.Error(H["The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."]);
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:61
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
+msgid "The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."
+msgstr ""
+
 #. _notifier.Error(H["Asset cache purged, with errors."]);
-#: OrchardCore.Media\Controllers\MediaCacheController.cs:54
-msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:68
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
 msgid "Asset cache purged, with errors."
-msgstr "Ο πόρος στη προσωρινή μνήμη καθαρίστηκε, με σφάλματα."
+msgstr ""
 
 #. _notifier.Information(H["Asset cache purged."]);
-#: OrchardCore.Media\Controllers\MediaCacheController.cs:58
-msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:72
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
 msgid "Asset cache purged."
-msgstr "Ο πόρος στη προσωρινή μνήμη καθαρίστηκε."
+msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.Media\Drivers\MediaFieldDriver.cs:79
@@ -108,19 +116,19 @@ msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr "{0}: Η επιλογή πολλαπλών μέσων είναι απαγορευμένη."
 
-#. Description = T["Media assets are items that are part of your media library."],
+#. Description = S["Media assets are items that are part of your media library."],
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:28
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media assets are items that are part of your media library."
 msgstr "Οι πόροι πολυμέσων είναι στοιχεία που αποτελούν μέρος της βιβλιοθήκης πολυμέσων σας."
 
-#. Description = T["Media asset path."]
+#. Description = S["Media asset path."]
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:34
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media asset path."
 msgstr "Διαδρομή των πόρων μέσων."
 
-#. Description = T["Whether to get the assets from just the top directory or from all sub-directories as well."]
+#. Description = S["Whether to get the assets from just the top directory or from all sub-directories as well."]
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:39
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Whether to get the assets from just the top directory or from all sub-directories as well."
@@ -228,6 +236,12 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "The hint text to display on the editor."
 msgstr "Το κείμενο υπόδειξης για εμφάνιση στον editor."
 
+#. <span class="icon"><i class="fa fa-images" aria-hidden="true"></i></span><span class="title">@T["Media"]</span>
+#: OrchardCore.Media\Views\NavigationItemText-media.Id.cshtml:1
+msgctxt "OrchardCore.Media.Views.NavigationItemText-media.Id"
+msgid "Media"
+msgstr ""
+
 #. <h1>@RenderTitleSegments(T["Assets"])</h1>
 #: OrchardCore.Media\Views\Admin\Index.cshtml:47
 msgctxt "OrchardCore.Media.Views.Admin.Index"
@@ -238,13 +252,13 @@ msgstr "Πόροι"
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:7
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Drop your media here"
-msgstr "Απόθεσε τις εικόνες εδώ"
+msgstr "Αποθέστε τις εικόνες εδώ"
 
 #. <p>@T["Your files will be uploaded to the current folder when you drop them here"]</p>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:8
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Your files will be uploaded to the current folder when you drop them here"
-msgstr "Τα αρχεία σου θα μεταφορτωθούν στον τρέχοντα φάκελο όταν τα αποθέσεις εδώ"
+msgstr "Τα αρχεία σας θα μεταφορτωθούν στον τρέχοντα φάκελο όταν τα αποθέσετε εδώ"
 
 #. @T["Select All"]
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:29
@@ -320,7 +334,7 @@ msgstr "List View"
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:106
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Nothing to show with this filter"
-msgstr "Τίποτα που δεν εμφανίζεται με αυτό το φίλτρο"
+msgstr "Δεν εμφανίζεται τίποτα με αυτό το φίλτρο"
 
 #. <div class="alert-info pt-2 pb-2 pl-2 pr-2" v-show="mediaItems.length < 1">@T["This folder is empty"]</div>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:107
@@ -338,7 +352,7 @@ msgstr "Διαγράψτε το φάκελο μέσων"
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete this folder?"
-msgstr "Είσαι βέβαιος ότι θέλεις να διαγράψεις αυτόν το φάκελο;"
+msgstr "Είστε βέβαιος(α) ότι θέλετε να διαγράψετε αυτόν το φάκελο;"
 
 #. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
@@ -350,13 +364,31 @@ msgstr "Διαγραφή πολυμέσου"
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete these media items?"
-msgstr "Είστε βέβαιος ότι θέλεις να διαγράψεις αυτά τα στοιχεία πολυμέσων;"
+msgstr "Είστε βέβαιος(α) ότι θέλετε να διαγράψετε αυτά τα στοιχεία πολυμέσων;"
 
-#. <input type="hidden" id="moveMediaMessage" value="@T["Are you sure you want to move the selected media to this folder?"]" />
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Move media"
+msgstr ""
+
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to move the selected media to this folder?"
-msgstr "Είσαι βέβαιος ότι θέλεις να μετακινήσεις τα επιλεγμένα πολυμέσα σε αυτόν το φάκελο;"
+msgstr "Είστε βέβαιος(α) ότι θέλετε να μετακινήσετε τα επιλεγμένα πολυμέσα σε αυτόν το φάκελο;"
+
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Yes"
+msgstr ""
+
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "No"
+msgstr ""
 
 #. <input type="hidden" id="sameFolderMessage" value="@T["The media is already on this folder"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:134
@@ -549,13 +581,13 @@ msgid "Exports all or specified media."
 msgstr "Εξάγει όλα ή συγκεκριμένα πολύμέσα."
 
 #. <h1>@RenderTitleSegments(T["Asset Cache"])</h1>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:1
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:2
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Asset Cache"
 msgstr "Πόροι στη Προσωρινή Μνήμη"
 
 #. <p class="alert alert-secondary">@T["Media is configured with appsettings.json."]</p>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:3
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:6
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Media is configured with appsettings.json."
 msgstr "Τα πολυμέσα είναι διαμορφωμένα με το appsettings.json."
@@ -563,24 +595,30 @@ msgstr "Τα πολυμέσα είναι διαμορφωμένα με το apps
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
 #. @T["Purge All"]
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:14
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:17
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Purge All"
-msgstr "Εκκαθάριση Ολων"
+msgstr "Εκκαθάριση Όλων"
 
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Are you sure you want to purge the entire asset cache?"
-msgstr "Είσαι βέβαιος ότι θέλεις να καθαρίσεις ολόκληρη τη προσωρινή μνήμη απο πόρους;"
+msgstr "Είστε βέβαιος(α) ότι θέλετε να καθαρίσετε ολόκληρη τη προσωρινή μνήμη απο πόρους;"
 
 #. <span class="hint">— @T["Purge all the assets from the cache"]</span>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:18
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Purge all the assets from the cache"
 msgstr "Καθαρίστε όλα τα στοιχεία από την προσωρινή μνήμη"
+
+#. <p class="alert alert-danger">@T["The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."]</p>
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:27
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."
+msgstr ""
 
 #. <input type="hidden" id="onlyOneItemMessage" value="@T["Only one item is allowed on this field."]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:2
