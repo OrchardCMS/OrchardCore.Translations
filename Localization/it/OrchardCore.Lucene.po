@@ -1,16 +1,14 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Lucene.pot\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: Antoine Griffard (agriffard)\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-12-05 10:18\n"
+"PO-Revision-Date: 2019-12-16 12:37\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #. .Add(S["Search"], S["Search"], entry => entry
@@ -28,7 +26,7 @@ msgstr "Cerca"
 #: OrchardCore.Lucene\AdminMenu.cs:27
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Indexing"
-msgstr ""
+msgstr "Indicizzazione"
 
 #. .Add(S["Lucene Indices"], "7", indexes => indexes
 #: OrchardCore.Lucene\AdminMenu.cs:28
@@ -40,7 +38,7 @@ msgstr "Indici Lucene"
 #: OrchardCore.Lucene\AdminMenu.cs:32
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Run Lucene Query"
-msgstr ""
+msgstr "Esegui Query Lucene"
 
 #. .Add(S["Settings"], settings => settings
 #: OrchardCore.Lucene\AdminMenu.cs:36
@@ -72,31 +70,31 @@ msgstr "Si è verificato un errore durante la creazione dell'indice"
 #: OrchardCore.Lucene\Controllers\AdminController.cs:144
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> created successfully."
-msgstr ""
+msgstr "Indice <em>{0}</em> creato con successo."
 
 #. _notifier.Success(H["Index <em>{0}</em> reset successfully.", id]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:165
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> reset successfully."
-msgstr ""
+msgstr "Indice <em>{0}</em> resettato con successo."
 
 #. _notifier.Success(H["Index <em>{0}</em> rebuilt successfully.", id]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:186
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> rebuilt successfully."
-msgstr ""
+msgstr "Indice <em>{0}</em> ricostruito con successo."
 
 #. _notifier.Success(H["Index <em>{0}</em> deleted successfully.", model.IndexName]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:208
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> deleted successfully."
-msgstr ""
+msgstr "Indice <em>{0}</em> eliminato con successo."
 
 #. _notifier.Error(H["An error occurred while deleting the index."]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:212
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while deleting the index."
-msgstr ""
+msgstr "Errore durante l'eliminazione dell'indice."
 
 #. ModelState.AddModelError(nameof(AdminEditViewModel.IndexName), S["The index name is required."]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:305
@@ -126,7 +124,7 @@ msgstr "Il campo indice è obbligatorio"
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Lucene.Views.ContentIndexSettings.Edit"
 msgid "Include this element in the index"
-msgstr ""
+msgstr "Includi questo elemento all'indice"
 
 #. <span class="hint">— @T["Check to include the value of this element in the index."]</span>
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:7
@@ -276,13 +274,13 @@ msgstr "Campi di ricerca predefiniti"
 #: OrchardCore.Lucene\Views\LuceneSettings.Edit.cshtml:27
 msgctxt "OrchardCore.Lucene.Views.LuceneSettings.Edit"
 msgid "A comma separated list of fields to use for search pages. The default value is <code>Content.ContentItem.FullText</code>."
-msgstr ""
+msgstr "Un elenco di campi separato da virgole da utilizzare per le pagine di ricerca. Il valore predefinito è <code>Content.ContentItem.FullText</code>."
 
 #. <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
 #: OrchardCore.Lucene\Views\NavigationItemText-search.Id.cshtml:1
 msgctxt "OrchardCore.Lucene.Views.NavigationItemText-search.Id"
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #. <h4>@T["Lucene"]</h4>
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:10
@@ -330,7 +328,7 @@ msgstr "Annulla"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:11
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Indices"
-msgstr ""
+msgstr "Indici"
 
 #. <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add Index"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:14
@@ -343,22 +341,22 @@ msgstr "Aggiungi Indice"
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "1 item"
 msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 elemento"
+msgstr[1] "{0} elementi"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Indexes.Count(), "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:24
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Elementi da {0} a {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Indexes.Count(), "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:24
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " {0} elemento in totale"
+msgstr[1] " {0} elementi in totale"
 
 #. <a asp-action="Query" asp-route-IndexName="@entry.Name" class="btn btn-success btn-sm">@T["Query"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:34
@@ -428,7 +426,7 @@ msgstr "Elimina"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:48
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> There are no indices for the moment."
-msgstr ""
+msgstr "<strong>Nessun elemento!</strong> Non ci sono Indici per il momento."
 
 #. <h1>@RenderTitleSegments(T["Lucene Query"])</h1>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:17
@@ -488,7 +486,7 @@ msgstr "Query"
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:54
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Found {0} result(s) in {1} ms"
-msgstr ""
+msgstr "Trovato {0} risultato(i) in {1} ms"
 
 #. <a href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Queries", id = "Lucene", query = Model.DecodedQuery })" class="btn btn-success">@T["Create"]</a>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:62
