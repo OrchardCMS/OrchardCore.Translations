@@ -8,33 +8,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2019-12-16 12:48\n"
+"PO-Revision-Date: 2020-03-31 14:04\n"
 
 #. ModelState.AddModelError(nameof(model.ConnectionString), S["The connection string is mandatory for this provider."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:101
+#: OrchardCore.Setup\Controllers\SetupController.cs:105
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The connection string is mandatory for this provider."
 msgstr "连接字符串对于此提供程序是必需的。"
 
 #. ModelState.AddModelError(nameof(model.Password), S["The password is required."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:107
+#: OrchardCore.Setup\Controllers\SetupController.cs:111
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password is required."
 msgstr "密码为必填项"
 
 #. ModelState.AddModelError(nameof(model.PasswordConfirmation), S["The password confirmation doesn't match the password."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:112
+#: OrchardCore.Setup\Controllers\SetupController.cs:116
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password confirmation doesn't match the password."
 msgstr "密码确认与密码不匹配。"
 
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:121
-#: OrchardCore.Setup\Controllers\SetupController.cs:126
+#: OrchardCore.Setup\Controllers\SetupController.cs:125
+#: OrchardCore.Setup\Controllers\SetupController.cs:130
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "Invalid recipe."
 msgstr "配方无效。"
+
+#. ModelState.AddModelError(nameof(model.Email), S["Invalid email."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:135
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "Invalid email."
+msgstr ""
+
+#. <title>@T["Orchard Setup"]</title>
+#: OrchardCore.Setup\Views\_Layout.cshtml:17
+msgctxt "OrchardCore.Setup.Views._Layout"
+msgid "Orchard Setup"
+msgstr ""
+
+#. <label for="culturesList" class="mr-2">@T["Change language"]</label>
+#: OrchardCore.Setup\Views\_Layout.cshtml:33
+msgctxt "OrchardCore.Setup.Views._Layout"
+msgid "Change language"
+msgstr ""
 
 #: OrchardCore.Setup\Views\Setup\Index.cshtml:0
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
@@ -144,115 +162,115 @@ msgid "Recipes allow you to setup your site with additional pre-configured optio
 msgstr "菜谱允许您使用额外的预先配置的选项、功能和设置从框中设置站点。"
 
 #. <label asp-for="SiteTimeZone">@T["Default Time Zone"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:124
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:123
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Default Time Zone"
 msgstr "默认的时区"
 
 #. <span class="text-muted form-text small">@T["Determines the default time zone used when displaying and editing dates and times."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:134
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:133
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Determines the default time zone used when displaying and editing dates and times."
 msgstr "确定显示和编辑日期和时间时使用的默认时区。"
 
 #. @T["Database"]
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:142
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:140
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Database"
 msgstr "数据库"
 
 #. <span class="text-muted form-text small">@T["The database is used to store the site's configuration and its contents. You can specify a custom table prefix if you intend to reuse the same database for multiple sites."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:143
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:141
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The database is used to store the site's configuration and its contents. You can specify a custom table prefix if you intend to reuse the same database for multiple sites."
 msgstr "数据库用于存储站点的配置及其内容。如果打算为多个站点重用同一数据库, 则可以指定自定义表前缀。"
 
 #. <label asp-for="DatabaseProvider">@T["What type of database to use?"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:147
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:145
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "What type of database to use?"
 msgstr "要使用哪种类型的数据库？"
 
 #. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString" data-table-prefix="@provider.HasTablePrefix" data-connection-string-sample="@T["The connection string to your database instance. e.g., {0}", provider.SampleConnectionString]">@provider.Name</option>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:151
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:149
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The connection string to your database instance. e.g., {0}"
 msgstr ""
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:158
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:156
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Table Prefix"
 msgstr "表名前缀"
 
 #. <label asp-for="ConnectionString">@T["Connection string"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:166
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:164
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Connection string"
 msgstr "连接字符串"
 
 #. <div class="input-group-append reveal" title="@T["Show/hide connection string"]">
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:170
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:168
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Show/hide connection string"
 msgstr "显示/隐藏连接字符串"
 
 #. @T["Super User"]
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:181
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:179
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Super User"
 msgstr "超级用户"
 
 #. <span class="text-muted form-text small">@T["The super user has all the rights. It should be used only during Setup and for disaster recovery."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:182
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:180
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The super user has all the rights. It should be used only during Setup and for disaster recovery."
 msgstr "超级用户拥有所有的权利。它只应在安装期间和灾难恢复时使用。"
 
 #. <label asp-for="UserName">@T["User name"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:186
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:184
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "User name"
 msgstr "用户名"
 
 #. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:188
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:186
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The user name is required."
 msgstr "用户名是必需的。"
 
 #. <label for="Email">@T["Email"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:191
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:189
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Email"
 msgstr "电子邮箱"
 
 #. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:193
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:191
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The email is invalid."
 msgstr "电子邮件地址无效。"
 
 #. <label asp-for="Password">@T["Password"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:199
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:197
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password"
 msgstr "密码"
 
 #. <input asp-for="Password" type="password" class="form-control" data-toggle="popover" data-placement="top" data-trigger="focus" data-title="@T["Password strength"]" data-content="@passwordTooltip" required pattern="@passwordRegex" />
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:200
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:198
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password strength"
 msgstr "密码强度"
 
 #. <label asp-for="PasswordConfirmation">@T["Password Confirmation"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:206
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:204
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password Confirmation"
 msgstr "密码确认"
 
 #. <button class="btn btn-primary" type="submit" id="SubmitButton">@T["Finish Setup"]</button>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:213
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:211
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Finish Setup"
 msgstr "完成安装"
