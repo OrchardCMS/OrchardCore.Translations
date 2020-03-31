@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2019-12-16 12:40\n"
+"PO-Revision-Date: 2020-03-31 13:45\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -39,31 +39,31 @@ msgid "Widgets"
 msgstr ""
 
 #. _notifier.Success(H["Layer deleted successfully."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:227
+#: OrchardCore.Layers\Controllers\AdminController.cs:228
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
 msgstr "Katman başarıyla silindi."
 
 #. _notifier.Error(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:231
+#: OrchardCore.Layers\Controllers\AdminController.cs:232
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer couldn't be deleted: you must remove any associated widgets first."
 msgstr "Katman silinemedi: öncelikle ilişkili widget'leri kaldırmalısınız."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:307
+#: OrchardCore.Layers\Controllers\AdminController.cs:308
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
 msgstr "Katman adı zorunludur."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:311
+#: OrchardCore.Layers\Controllers\AdminController.cs:312
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
 msgstr "Katman adı zaten mevcut."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Rule), S["The rule is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:316
+#: OrchardCore.Layers\Controllers\AdminController.cs:317
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The rule is required."
 msgstr "Kural zorunludur."
@@ -75,7 +75,7 @@ msgid "Zone is missing"
 msgstr "Bölge yok"
 
 #. Description = S["Site layers define the rules and zone placement for widgets."],
-#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:29
+#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:28
 msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
 msgid "Site layers define the rules and zone placement for widgets."
 msgstr "Site katmanları (Layers), widget'lar için kuralları ve bölge yerleşimini tanımlar."
@@ -177,61 +177,67 @@ msgid "Save"
 msgstr "Kaydet"
 
 #. <h1>@RenderTitleSegments(T["Edit Widgets and Layers"])</h1>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:14
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:15
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit Widgets and Layers"
 msgstr ""
 
 #. @T["Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:21
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:22
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."
 msgstr "Widget başarıyla taşındı. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Geri Al</strong></a>."
 
 #. <h3>@T["Zones"]</h3>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:30
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:31
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Zones"
 msgstr "Bölgeler"
 
+#. <p class="alert alert-warning">@T["Please <a href=\"{0}\">define the available zones</a> before adding Widgets", Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = LayerSiteSettingsDisplayDriver.GroupId })]</p>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:35
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widgets"
+msgstr ""
+
 #. @T["Add Widget"]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:65
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:74
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add Widget"
 msgstr "Widget ekle"
 
 #. <h3>@T["Layers"]</h3>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:88
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:98
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
 msgstr "Katmanlar"
 
 #. <span class="hint">@T["Select a layer to reveal its associated widgets."]</span>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:90
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:100
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
 msgstr "İlişkili widget'leri görmek için bir katman seçin."
 
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:104
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:114
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit"
 msgstr "Düzenle"
 
 #. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:105
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:115
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Delete"
 msgstr "Sil"
 
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:118
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:128
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr "Widget eklemeden önce lütfen <a href=\"{0}\">bir katman oluşturun</a>"
 
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:121
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:131
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr "Ekle"
