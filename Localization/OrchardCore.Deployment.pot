@@ -5,40 +5,56 @@ msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.Deployment\AdminMenu.cs:26
-#. .Add(S["Import/Export"], S["Import/Export"], import => import
+#. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
 #: OrchardCore.Deployment\AdminMenu.cs:26
-#. .Add(S["Import/Export"], S["Import/Export"], import => import
+#. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
 msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Import/Export"
 msgstr ""
 
 #: OrchardCore.Deployment\AdminMenu.cs:27
-#. .Add(S["Deployment Plans"], "5", deployment => deployment
+#. .Add(S["Deployment Plans"], S["Deployment Plans"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Deployment\AdminMenu.cs:27
+#. .Add(S["Deployment Plans"], S["Deployment Plans"].PrefixPosition(), deployment => deployment
 msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Deployment Plans"
 msgstr ""
 
 #: OrchardCore.Deployment\AdminMenu.cs:32
-#. .Add(S["Package Import"], "5", deployment => deployment
+#. .Add(S["Package Import"], S["Package Import"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Deployment\AdminMenu.cs:32
+#. .Add(S["Package Import"], S["Package Import"].PrefixPosition(), deployment => deployment
 msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Package Import"
 msgstr ""
 
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:176
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:112
+#. new SelectListItem() { Text = S["Delete"], Value = nameof(DeploymentPlansBulkAction.Delete) }
+msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
+msgid "Delete"
+msgstr ""
+
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:143
+#. _notifier.Success(H["Deployment plan {0} successfully deleted.", item.Name]);
+msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
+msgid "Deployment plan {0} successfully deleted."
+msgstr ""
+
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:219
 #. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["The name is mandatory."]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:235
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:278
 #. ModelState.AddModelError(nameof(EditDeploymentPlanViewModel.Name), S["The name is mandatory."]);
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "The name is mandatory."
 msgstr ""
 
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:245
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:288
 #. _notifier.Success(H["Deployment plan updated successfully"]);
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan updated successfully"
 msgstr ""
 
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:271
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:314
 #. _notifier.Success(H["Deployment plan deleted successfully"]);
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan deleted successfully"
@@ -228,42 +244,92 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:3
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:9
 #. <h1>@RenderTitleSegments(T["Deployment Plans"])</h1>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Deployment Plans"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:8
-#. <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add Deployment Plan"]</a>
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
-msgid "Add Deployment Plan"
-msgstr ""
-
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:12
-#. <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2" placeholder="@T["Search"]" type="search" autofocus>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:13
-#. <button type="submit" class="btn btn-secondary">@T["Search"]</button>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:19
+#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:28
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:24
+#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Deployment Plan"]</a>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Add Deployment Plan"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:35
+#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Select All"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Items {0} to {1}"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
+#. <label id="items" for="select-all">@T.Plural(Model.DeploymentPlans.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:43
+#. @T["Actions"]
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Actions"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Bulk Action"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:48
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "Are you sure you want to {0} these items?"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:63
 #. <a asp-action="Edit" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:29
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:64
 #. <a asp-action="Delete" asp-route-id="@entry.DeploymentPlan.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:40
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:79
 #. @T["<strong>Nothing here!</strong> There are no deployment plans for the moment."]
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "<strong>Nothing here!</strong> There are no deployment plans for the moment."
+msgstr ""
+
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:134
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:145
+#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "selected"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:1

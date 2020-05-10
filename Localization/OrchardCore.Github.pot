@@ -1,17 +1,19 @@
-#: OrchardCore.GitHub\AdminMenu.cs:28
+#: OrchardCore.GitHub\AdminMenu.cs:23
 #. builder.Add(S["Security"], security => security
 msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.GitHub\AdminMenu.cs:29
+#: OrchardCore.GitHub\AdminMenu.cs:24
 #. .Add(S["Authentication"], authentication => authentication
 msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
 msgid "Authentication"
 msgstr ""
 
-#: OrchardCore.GitHub\AdminMenu.cs:30
-#. .Add(S["GitHub"], "14", settings => settings
+#: OrchardCore.GitHub\AdminMenu.cs:25
+#. .Add(S["GitHub"], S["GitHub"].PrefixPosition(), settings => settings
+#: OrchardCore.GitHub\AdminMenu.cs:25
+#. .Add(S["GitHub"], S["GitHub"].PrefixPosition(), settings => settings
 msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
 msgid "GitHub"
 msgstr ""
@@ -26,6 +28,24 @@ msgstr ""
 #. yield return new ValidationResult(S["ClientSecret is required"], new string[] { nameof(settings.ClientSecret) });
 msgctxt "OrchardCore.GitHub.Services.GitHubAuthenticationService"
 msgid "ClientSecret is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:7
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "API key is required")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "API key is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:10
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "API secret key is required")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "API secret key is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:13
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "Invalid path"
 msgstr ""
 
 #: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:4

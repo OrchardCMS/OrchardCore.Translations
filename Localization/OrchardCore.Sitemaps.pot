@@ -5,68 +5,74 @@ msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.Sitemaps\AdminMenu.cs:25
-#. .Add(S["SEO"], S["SEO"], admt => admt
+#. .Add(S["SEO"], S["SEO"].PrefixPosition(), seo => seo
 #: OrchardCore.Sitemaps\AdminMenu.cs:25
-#. .Add(S["SEO"], S["SEO"], admt => admt
+#. .Add(S["SEO"], S["SEO"].PrefixPosition(), seo => seo
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "SEO"
 msgstr ""
 
 #: OrchardCore.Sitemaps\AdminMenu.cs:27
-#. .Add(S["Sitemaps"], "5", sitemaps => sitemaps
+#. .Add(S["Sitemaps"], S["Sitemaps"].PrefixPosition("1"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:27
+#. .Add(S["Sitemaps"], S["Sitemaps"].PrefixPosition("1"), sitemaps => sitemaps
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemaps"
 msgstr ""
 
 #: OrchardCore.Sitemaps\AdminMenu.cs:31
-#. .Add(S["Sitemap Indexes"], "10", sitemaps => sitemaps
+#. .Add(S["Sitemap Indexes"], S["Sitemap Indexes"].PrefixPosition("2"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:31
+#. .Add(S["Sitemap Indexes"], S["Sitemap Indexes"].PrefixPosition("2"), sitemaps => sitemaps
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemap Indexes"
 msgstr ""
 
 #: OrchardCore.Sitemaps\AdminMenu.cs:35
-#. .Add(S["Sitemaps Cache"], "15", sitemaps => sitemaps
+#. .Add(S["Sitemaps Cache"], S["Sitemaps Cache"].PrefixPosition("3"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:35
+#. .Add(S["Sitemaps Cache"], S["Sitemaps Cache"].PrefixPosition("3"), sitemaps => sitemaps
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemaps Cache"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:279
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:274
 #. _notifier.Success(H["Sitemap updated successfully"]);
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap updated successfully"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:308
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:303
 #. _notifier.Success(H["Sitemap deleted successfully"]);
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap deleted successfully"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:334
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:329
 #. _notifier.Success(H["Sitemap toggled successfully"]);
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap toggled successfully"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:63
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:60
 #. _notifier.Error(H["Sitemap cache purged, with errors."]);
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache purged, with errors."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:67
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:64
 #. _notifier.Information(H["Sitemap cache purged."]);
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache purged."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:84
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:81
 #. _notifier.Error(H["Error purging sitemap cache item."]);
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Error purging sitemap cache item."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:88
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:85
 #. _notifier.Information(H["Sitemap cache item purged."]);
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache item purged."
@@ -120,31 +126,31 @@ msgctxt "OrchardCore.Sitemaps.Controllers.SourceController"
 msgid "Sitemap source deleted successfully"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:39
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:40
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink can't be set to the homepage"]);
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink can't be set to the homepage"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:45
-#. updater.ModelState.AddModelError(Prefix, Path, S["Please do not use any of the following characters in your permalink: {0}. No spaces are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:46
+#. updater.ModelState.AddModelError(Prefix, Path, S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
-msgid "Please do not use any of the following characters in your permalink: {0}. No spaces are allowed (please use dashes or underscores instead)."
+msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:51
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:52
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink must end with {0}.", SitemapPathExtension]);
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink must end with {0}."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:56
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:57
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink is too long. The permalink can only be up to {0} characters.", MaxPathLength]);
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:73
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:74
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink is already in use."]);
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink is already in use."

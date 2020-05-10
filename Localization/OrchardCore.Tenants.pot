@@ -5,9 +5,9 @@ msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.Tenants\AdminMenu.cs:36
-#. .Add(S["Tenants"], S["Tenants"], deployment => deployment
+#. .Add(S["Tenants"], "am-" + S["Tenants"], deployment => deployment
 #: OrchardCore.Tenants\AdminMenu.cs:36
-#. .Add(S["Tenants"], S["Tenants"], deployment => deployment
+#. .Add(S["Tenants"], "am-" + S["Tenants"], deployment => deployment
 msgctxt "OrchardCore.Tenants.AdminMenu"
 msgid "Tenants"
 msgstr ""
@@ -134,61 +134,61 @@ msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The url prefix can not contain more than one segment."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:93
+#: OrchardCore.Tenants\Controllers\ApiController.cs:81
 #. ModelState.AddModelError(nameof(CreateApiViewModel.Name), S["Invalid tenant name. Must contain characters only and no spaces."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:112
+#: OrchardCore.Tenants\Controllers\ApiController.cs:100
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Host and url prefix can not be empty at the same time."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:119
+#: OrchardCore.Tenants\Controllers\ApiController.cs:107
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["The url prefix can not contain more than one segment."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The url prefix can not contain more than one segment."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:167
+#: OrchardCore.Tenants\Controllers\ApiController.cs:155
 #. return BadRequest(S["Invalid email."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Invalid email."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:172
+#: OrchardCore.Tenants\Controllers\ApiController.cs:160
 #. ModelState.AddModelError(nameof(SetupApiViewModel.Name), S["Tenant not found: '{0}'", model.Name]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Tenant not found: '{0}'"
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:182
+#: OrchardCore.Tenants\Controllers\ApiController.cs:170
 #. return BadRequest(S["The tenant can't be setup."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:196
+#: OrchardCore.Tenants\Controllers\ApiController.cs:184
 #. return BadRequest(S["The database provider is not defined."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The database provider is not defined."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:215
+#: OrchardCore.Tenants\Controllers\ApiController.cs:203
 #. return BadRequest(S["The connection string is required for this database provider."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The connection string is required for this database provider."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:231
+#: OrchardCore.Tenants\Controllers\ApiController.cs:219
 #. return BadRequest(S["Either 'Recipe' or 'RecipeName' is required."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Either 'Recipe' or 'RecipeName' is required."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:257
+#: OrchardCore.Tenants\Controllers\ApiController.cs:245
 #. return BadRequest(S["Recipe '{0}' not found.", recipeName]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Recipe '{0}' not found."
@@ -345,9 +345,9 @@ msgid "Url Prefix"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:29
-#. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardproject.net/site1\""]</span>
+#. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardcore.net/site1\""]</span>
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
-msgid "(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardproject.net/site1\""
+msgid "(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardcore.net/site1\""
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:33
@@ -357,9 +357,9 @@ msgid "Hostname"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:36
-#. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant site URL is \"https://orchardproject.net/\""]</span>
+#. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant site URL is \"https://orchardcore.net/\""]</span>
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
-msgid "Example: If host is \"orchardproject.net\", the tenant site URL is \"https://orchardproject.net/\""
+msgid "Example: If host is \"orchardproject.net\", the tenant site URL is \"https://orchardcore.net/\""
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:37
@@ -467,9 +467,9 @@ msgid "Url Prefix"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:27
-#. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardproject.net/site1\""]</span>
+#. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardcore.net/site1\""]</span>
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
-msgid "(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardproject.net/site1\""
+msgid "(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardcore.net/site1\""
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:31
@@ -479,9 +479,9 @@ msgid "Hostname"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:34
-#. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant URL is \"https://orchardproject.net/\""]</span>
+#. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant URL is \"https://orchardcore.net/\""]</span>
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
-msgid "Example: If host is \"orchardproject.net\", the tenant URL is \"https://orchardproject.net/\""
+msgid "Example: If host is \"orchardproject.net\", the tenant URL is \"https://orchardcore.net/\""
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:35
@@ -627,15 +627,15 @@ msgid "Actions"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:123
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Bulk Action"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:123
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
-msgid "Are you sure you want to {0} this/these item(s)?"
+msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:130
@@ -728,9 +728,9 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr ""
 
-#: OrchardCore.Tenants\Views\Admin\Index.cshtml:253
+#: OrchardCore.Tenants\Views\Admin\Index.cshtml:255
 #. selectedItems.text($(":checkbox[name='tenantNames']:checked").length + ' @T["selected"]');
-#: OrchardCore.Tenants\Views\Admin\Index.cshtml:264
+#: OrchardCore.Tenants\Views\Admin\Index.cshtml:266
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "selected"
