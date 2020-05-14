@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
-"PO-Revision-Date: 2019-12-31 16:23\n"
+"PO-Revision-Date: 2020-03-31 14:14\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:26
@@ -38,40 +38,60 @@ msgstr "Вход"
 
 #. .Add(S["Security"], security => security
 #: OrchardCore.Users\AdminMenu.cs:64
-msgctxt "OrchardCore.Users.RegistrationAdminMenu"
+msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
 msgid "Security"
-msgstr "Сигурност"
+msgstr ""
 
 #. .Add(S["Settings"], settings => settings
 #: OrchardCore.Users\AdminMenu.cs:65
-msgctxt "OrchardCore.Users.RegistrationAdminMenu"
+msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
 msgid "Settings"
-msgstr "Настройки"
+msgstr ""
 
-#. .Add(S["Registration"], S["Registration"], registration => registration
-#. .Add(S["Registration"], S["Registration"], registration => registration
+#. .Add(S["Email"], S["Email"], registration => registration
+#. .Add(S["Email"], S["Email"], registration => registration
 #: OrchardCore.Users\AdminMenu.cs:66
 #: OrchardCore.Users\AdminMenu.cs:66
-msgctxt "OrchardCore.Users.RegistrationAdminMenu"
-msgid "Registration"
-msgstr "Регистрация"
+msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
+msgid "Email"
+msgstr ""
 
 #. .Add(S["Security"], security => security
 #: OrchardCore.Users\AdminMenu.cs:94
-msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
+msgctxt "OrchardCore.Users.RegistrationAdminMenu"
 msgid "Security"
 msgstr "Сигурност"
 
 #. .Add(S["Settings"], settings => settings
 #: OrchardCore.Users\AdminMenu.cs:95
+msgctxt "OrchardCore.Users.RegistrationAdminMenu"
+msgid "Settings"
+msgstr "Настройки"
+
+#. .Add(S["Registration"], S["Registration"], registration => registration
+#. .Add(S["Registration"], S["Registration"], registration => registration
+#: OrchardCore.Users\AdminMenu.cs:96
+#: OrchardCore.Users\AdminMenu.cs:96
+msgctxt "OrchardCore.Users.RegistrationAdminMenu"
+msgid "Registration"
+msgstr "Регистрация"
+
+#. .Add(S["Security"], security => security
+#: OrchardCore.Users\AdminMenu.cs:124
+msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
+msgid "Security"
+msgstr "Сигурност"
+
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Users\AdminMenu.cs:125
 msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Settings"
 msgstr "Настройки"
 
 #. .Add(S["Reset password"], S["Reset password"], password => password
 #. .Add(S["Reset password"], S["Reset password"], password => password
-#: OrchardCore.Users\AdminMenu.cs:96
-#: OrchardCore.Users\AdminMenu.cs:96
+#: OrchardCore.Users\AdminMenu.cs:126
+#: OrchardCore.Users\AdminMenu.cs:126
 msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Reset password"
 msgstr "Възстановяване на парола"
@@ -82,308 +102,458 @@ msgctxt "OrchardCore.Users.Commands.UserCommands"
 msgid "User created successfully"
 msgstr "Потребителят е създаден успешно"
 
-#. ModelState.AddModelError(string.Empty, T["You must confirm your email."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:154
+#. ModelState.AddModelError(string.Empty, S["You must confirm your email."]);
+#: OrchardCore.Users\Controllers\AccountController.cs:152
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "You must confirm your email."
 msgstr "Трябва да потвърдите новата си парола."
 
-#. ModelState.AddModelError(String.Empty, T["Your account is disabled. Please contact an administrator."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:168
+#. ModelState.AddModelError(String.Empty, S["Your account is disabled. Please contact an administrator."]);
+#: OrchardCore.Users\Controllers\AccountController.cs:166
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Your account is disabled. Please contact an administrator."
 msgstr "Вашият акаунт е деактивиран. Моля, свържете се с администратор."
 
-#. ModelState.AddModelError("", T["Local login is disabled."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:190
+#. ModelState.AddModelError("", S["Local login is disabled."]);
+#: OrchardCore.Users\Controllers\AccountController.cs:188
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Local login is disabled."
 msgstr "Локалния вход е деактивиран."
 
-#. ModelState.AddModelError(string.Empty, T["Invalid login attempt."]);
-#. ModelState.AddModelError(string.Empty, T["Invalid login attempt."]);
-#. ModelState.AddModelError(string.Empty, T["Invalid login attempt."]);
-#. ModelState.AddModelError(string.Empty, T["Invalid login attempt."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:216
-#: OrchardCore.Users\Controllers\AccountController.cs:394
-#: OrchardCore.Users\Controllers\AccountController.cs:471
-#: OrchardCore.Users\Controllers\AccountController.cs:595
+#. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
+#. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
+#. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
+#. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
+#: OrchardCore.Users\Controllers\AccountController.cs:214
+#: OrchardCore.Users\Controllers\AccountController.cs:391
+#: OrchardCore.Users\Controllers\AccountController.cs:467
+#: OrchardCore.Users\Controllers\AccountController.cs:587
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Invalid login attempt."
 msgstr "Неуспешен опит за влизане."
 
-#. string message = T["Site does not allow user registration."];
-#: OrchardCore.Users\Controllers\AccountController.cs:422
+#. string message = S["Site does not allow user registration."];
+#: OrchardCore.Users\Controllers\AccountController.cs:418
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
 msgstr "Сайтът не позволява регистрация на потребители."
 
-#. }, T["Confirm your account"], _logger);
-#. user = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, T["Confirm your account"], _logger);
-#: OrchardCore.Users\Controllers\AccountController.cs:452
-#: OrchardCore.Users\Controllers\AccountController.cs:536
+#. }, S["Confirm your account"], _logger);
+#. user = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, S["Confirm your account"], _logger);
+#: OrchardCore.Users\Controllers\AccountController.cs:448
+#: OrchardCore.Users\Controllers\AccountController.cs:530
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Confirm your account"
 msgstr "Потвърдете акаунта си"
 
-#. new SelectListItem() { Text = TH["All"].Value, Value = nameof(UsersFilter.All) },
-#: OrchardCore.Users\Controllers\AdminController.cs:152
+#. new SelectListItem() { Text = S["All"], Value = nameof(UsersFilter.All) },
+#: OrchardCore.Users\Controllers\AdminController.cs:159
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "All"
 msgstr "Всички"
 
-#. new SelectListItem() { Text = TH["Name"].Value, Value = nameof(UsersOrder.Name) },
-#: OrchardCore.Users\Controllers\AdminController.cs:159
+#. new SelectListItem() { Text = S["Name"], Value = nameof(UsersOrder.Name) },
+#: OrchardCore.Users\Controllers\AdminController.cs:166
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Name"
 msgstr "Име"
 
-#. new SelectListItem() { Text = TH["Email"].Value, Value = nameof(UsersOrder.Email) },
-#: OrchardCore.Users\Controllers\AdminController.cs:160
+#. new SelectListItem() { Text = S["Email"], Value = nameof(UsersOrder.Email) },
+#: OrchardCore.Users\Controllers\AdminController.cs:167
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Email"
 msgstr "Имейл"
 
-#. new SelectListItem() { Text = TH["Approve"].Value, Value = nameof(UsersBulkAction.Approve) },
-#: OrchardCore.Users\Controllers\AdminController.cs:166
+#. new SelectListItem() { Text = S["Approve"], Value = nameof(UsersBulkAction.Approve) },
+#: OrchardCore.Users\Controllers\AdminController.cs:173
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Approve"
 msgstr "Одобрен"
 
-#. new SelectListItem() { Text = TH["Enable"].Value, Value = nameof(UsersBulkAction.Enable) },
-#: OrchardCore.Users\Controllers\AdminController.cs:167
+#. new SelectListItem() { Text = S["Enable"], Value = nameof(UsersBulkAction.Enable) },
+#: OrchardCore.Users\Controllers\AdminController.cs:174
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Enable"
 msgstr "Активен"
 
-#. new SelectListItem() { Text = TH["Disable"].Value, Value = nameof(UsersBulkAction.Disable) },
-#: OrchardCore.Users\Controllers\AdminController.cs:168
+#. new SelectListItem() { Text = S["Disable"], Value = nameof(UsersBulkAction.Disable) },
+#: OrchardCore.Users\Controllers\AdminController.cs:175
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Disable"
 msgstr "Деактивиране"
 
-#. new SelectListItem() { Text = TH["Delete"].Value, Value = nameof(UsersBulkAction.Delete) }
-#: OrchardCore.Users\Controllers\AdminController.cs:169
+#. new SelectListItem() { Text = S["Delete"], Value = nameof(UsersBulkAction.Delete) }
+#: OrchardCore.Users\Controllers\AdminController.cs:176
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Delete"
 msgstr "Изтрий"
 
-#. _notifier.Success(TH["User {0} successfully approved.", item.UserName]);
-#: OrchardCore.Users\Controllers\AdminController.cs:202
+#. _notifier.Success(H["User {0} successfully approved.", item.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:209
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully approved."
 msgstr "Потребителят {0} е успешно одобрен."
 
-#. _notifier.Success(TH["User {0} successfully deleted.", item.UserName]);
-#: OrchardCore.Users\Controllers\AdminController.cs:209
+#. _notifier.Success(H["User {0} successfully deleted.", item.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:216
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully deleted."
 msgstr "Потребителят {0} е успешно изтрит."
 
-#. _notifier.Success(TH["User {0} successfully disabled.", item.UserName]);
-#: OrchardCore.Users\Controllers\AdminController.cs:217
+#. _notifier.Success(H["User {0} successfully disabled.", item.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:224
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully disabled."
 msgstr "Потребителят {0} е успешно деактивиран."
 
-#. _notifier.Success(TH["User {0} successfully enabled.", item.UserName]);
-#: OrchardCore.Users\Controllers\AdminController.cs:225
+#. _notifier.Success(H["User {0} successfully enabled.", item.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:232
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully enabled."
 msgstr "Потребителят {0} е успешно активиран."
 
-#. _notifier.Success(TH["User created successfully"]);
-#: OrchardCore.Users\Controllers\AdminController.cs:272
+#. _notifier.Success(H["User created successfully"]);
+#: OrchardCore.Users\Controllers\AdminController.cs:279
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User created successfully"
 msgstr "Потребителят е създаден успешно"
 
-#. _notifier.Success(TH["User updated successfully"]);
-#: OrchardCore.Users\Controllers\AdminController.cs:329
+#. _notifier.Success(H["User updated successfully"]);
+#: OrchardCore.Users\Controllers\AdminController.cs:336
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User updated successfully"
 msgstr "Потребителят е актуализиран успешно"
 
-#. _notifier.Success(TH["User deleted successfully"]);
-#: OrchardCore.Users\Controllers\AdminController.cs:353
+#. _notifier.Success(H["User deleted successfully"]);
+#: OrchardCore.Users\Controllers\AdminController.cs:360
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User deleted successfully"
 msgstr "Потребителят е изтрит успешно"
 
-#. _notifier.Error(TH["Could not delete the user"]);
-#: OrchardCore.Users\Controllers\AdminController.cs:359
+#. _notifier.Error(H["Could not delete the user"]);
+#: OrchardCore.Users\Controllers\AdminController.cs:366
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Could not delete the user"
 msgstr "Потребителят не може да бъде изтрит"
 
-#. _notifier.Success(TH["Password updated correctly."]);
-#: OrchardCore.Users\Controllers\AdminController.cs:410
+#. _notifier.Success(H["Password updated correctly."]);
+#: OrchardCore.Users\Controllers\AdminController.cs:417
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Password updated correctly."
 msgstr "Паролата е актуализирана коректно."
 
-#. if (await this.RegisterUser(model, T["Confirm your account"], _logger) != null)
-#. await this.SendEmailConfirmationTokenAsync(user, T["Confirm your account"]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:78
-#: OrchardCore.Users\Controllers\RegistrationController.cs:126
+#. ModelState.AddModelError("Email", S["This email is already your current one."]);
+#: OrchardCore.Users\Controllers\ChangeEmailController.cs:74
+msgctxt "OrchardCore.Users.Controllers.ChangeEmailController"
+msgid "This email is already your current one."
+msgstr ""
+
+#. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
+#: OrchardCore.Users\Controllers\ChangeEmailController.cs:78
+msgctxt "OrchardCore.Users.Controllers.ChangeEmailController"
+msgid "A user with the same email already exists."
+msgstr ""
+
+#. ModelState.AddModelError("Email", S["Invalid email."]);
+#: OrchardCore.Users\Controllers\RegistrationController.cs:79
+msgctxt "OrchardCore.Users.Controllers.RegistrationController"
+msgid "Invalid email."
+msgstr ""
+
+#. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
+#: OrchardCore.Users\Controllers\RegistrationController.cs:86
+msgctxt "OrchardCore.Users.Controllers.RegistrationController"
+msgid "A user with the same email already exists."
+msgstr ""
+
+#. if (await this.RegisterUser(model, S["Confirm your account"], _logger) != null)
+#. await this.SendEmailConfirmationTokenAsync(user, S["Confirm your account"]);
+#: OrchardCore.Users\Controllers\RegistrationController.cs:95
+#: OrchardCore.Users\Controllers\RegistrationController.cs:144
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Confirm your account"
 msgstr "Потвърдете Вашия профил"
 
-#. _notifier.Success(TH["Verification email sent."]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:128
+#. _notifier.Success(H["Verification email sent."]);
+#: OrchardCore.Users\Controllers\RegistrationController.cs:146
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Verification email sent."
 msgstr "Изпратен е и-мейл за потвърждение."
 
-#. await this.SendEmailAsync(user.Email, T["Reset your password"], new LostPasswordViewModel() { User = user, LostPasswordUrl = resetPasswordUrl });
-#: OrchardCore.Users\Controllers\ResetPasswordController.cs:90
+#. await this.SendEmailAsync(user.Email, S["Reset your password"], new LostPasswordViewModel() { User = user, LostPasswordUrl = resetPasswordUrl });
+#: OrchardCore.Users\Controllers\ResetPasswordController.cs:87
 msgctxt "OrchardCore.Users.Controllers.ResetPasswordController"
 msgid "Reset your password"
 msgstr "Възстановете паролата си"
 
-#. context.Updater.ModelState.AddModelError("UserName", T["A user name is required."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:75
+#. context.Updater.ModelState.AddModelError("UserName", S["A user name is required."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:97
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A user name is required."
 msgstr "Въведете потребителско име."
 
-#. context.Updater.ModelState.AddModelError("Email", T["An email is required."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:80
+#. context.Updater.ModelState.AddModelError("Email", S["An email is required."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:102
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "An email is required."
 msgstr "Въведете и-мейл."
 
-#. context.Updater.ModelState.AddModelError(string.Empty, T["The user name is already used."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:89
+#. context.Updater.ModelState.AddModelError(string.Empty, S["The user name is already used."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:111
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The user name is already used."
 msgstr "Потребителското име вече се използва."
 
-#. context.Updater.ModelState.AddModelError(string.Empty, T["The email is already used."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:99
+#. context.Updater.ModelState.AddModelError(string.Empty, S["The email is already used."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:121
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The email is already used."
 msgstr "Този имейл адрес вече се използва."
 
+#. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:20
+msgctxt "OrchardCore.Users.ViewModels.ChangeEmailViewModel"
+msgid "Email is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:24
+msgctxt "OrchardCore.Users.ViewModels.ChangeEmailViewModel"
+msgid "Invalid Email."
+msgstr ""
+
+#. yield return new ValidationResult(S["Current password is required."], new[] { nameof(CurrentPassword) });
+#: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:24
+msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
+msgid "Current password is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Password is required."], new[] { nameof(Password) });
+#: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:29
+msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
+msgid "Password is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(PasswordConfirmation) });
+#: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:34
+msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
+msgid "The new password and confirmation password do not match."
+msgstr ""
+
+#. yield return new ValidationResult(S["Invalid Email."], new[] { "Email" });
+#: OrchardCore.Users\ViewModels\EditUserViewModel.cs:39
+msgctxt "OrchardCore.Users.ViewModels.EditUserViewModel"
+msgid "Invalid Email."
+msgstr ""
+
 #. yield return new ValidationResult(S["Password is required"], new[] { nameof(Password) });
-#: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:19
+#: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:18
 msgctxt "OrchardCore.Users.ViewModels.LinkExternalLoginViewModel"
 msgid "Password is required"
 msgstr "Изисква се парола"
 
+#. yield return new ValidationResult(S["Username is required."], new[] { "UserName" });
+#: OrchardCore.Users\ViewModels\LoginViewModel.cs:22
+msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
+msgid "Username is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Password is required."], new[] { "Password" });
+#: OrchardCore.Users\ViewModels\LoginViewModel.cs:27
+msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
+msgid "Password is required."
+msgstr ""
+
 #. yield return new ValidationResult(S["Email is required!"], new[] { "Email" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:31
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:37
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Email is required!"
 msgstr "Изисква се имейл!"
 
+#. yield return new ValidationResult(S["Invalid Email."], new[] { "Email" });
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:42
+msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
+msgid "Invalid Email."
+msgstr ""
+
 #. yield return new ValidationResult(S["Username is required!"], new[] { "UserName" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:36
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:47
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Username is required!"
 msgstr "Изисква се потребителско име!"
 
 #. yield return new ValidationResult(S["Password is required!"], new[] { "Password" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:41
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:52
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Password is required!"
 msgstr "Изисква се парола!"
 
 #. yield return new ValidationResult(S["Confirm Password do not match"], new[] { "ConfirmPassword" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:46
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:57
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Confirm Password do not match"
 msgstr "Потвърдената парола не съвпада"
 
 #. yield return new ValidationResult(string.Format(S["Password must be between {0} and {1} characters"], 6, 100), new[] { "Password" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:51
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:62
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Password must be between {0} and {1} characters"
 msgstr "Паролата трябва да бъде между {0} и {1} символа"
 
-#. public override LocalizedString DisplayText => T["Assign User Role Task"];
+#. yield return new ValidationResult(S["Username is required."], new[] { nameof(UserName) });
+#: OrchardCore.Users\ViewModels\RegisterViewModel.cs:26
+msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
+msgid "Username is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\RegisterViewModel.cs:31
+msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
+msgid "Email is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\RegisterViewModel.cs:35
+msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
+msgid "Invalid Email."
+msgstr ""
+
+#. yield return new ValidationResult(S["Password is required."], new[] { nameof(Password) });
+#: OrchardCore.Users\ViewModels\RegisterViewModel.cs:40
+msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
+msgid "Password is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(ConfirmPassword) });
+#: OrchardCore.Users\ViewModels\RegisterViewModel.cs:45
+msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
+msgid "The new password and confirmation password do not match."
+msgstr ""
+
+#. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:26
+msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
+msgid "Email is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:30
+msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
+msgid "Invalid Email."
+msgstr ""
+
+#. yield return new ValidationResult(S["New password is required."], new[] { nameof(NewPassword) });
+#: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:35
+msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
+msgid "New password is required."
+msgstr ""
+
+#. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(PasswordConfirmation) });
+#: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:40
+msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
+msgid "The new password and confirmation password do not match."
+msgstr ""
+
+#. public override LocalizedString DisplayText => S["Assign User Role Task"];
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:32
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Assign User Role Task"
 msgstr "Задаване на Роли на Потребител"
 
-#. public override LocalizedString Category => T["User"];
-#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:33
+#. public override LocalizedString Category => S["User"];
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:34
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "User"
 msgstr "Потребител"
 
-#. return Outcomes(T["Done"], T["Failed"]);
-#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:49
+#. return Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:50
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Done"
 msgstr "Готово"
 
-#. return Outcomes(T["Done"], T["Failed"]);
-#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:49
+#. return Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:50
 msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Failed"
 msgstr "Неуспешно"
 
-#. public override LocalizedString DisplayText => T["Register User Task"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:50
+#. public override LocalizedString DisplayText => S["Register User Task"];
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:51
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr ""
 
-#. public override LocalizedString Category => T["Content"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:53
+#. public override LocalizedString Category => S["Content"];
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:54
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Content"
 msgstr "Съдържание"
 
-#. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr "Готово"
 
-#. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr ""
 
-#. return Outcomes(T["Done"], T["Valid"], T["Invalid"]);
+#. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr ""
 
-#. updater.ModelState.TryAddModelError("", T["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:145
+#. updater.ModelState.TryAddModelError("", S["No email service is available"]);
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:144
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr ""
 
-#. public override LocalizedString Category => T["User"];
-#: OrchardCore.Users\Workflows\Activities\UserActivity.cs:24
+#. public override LocalizedString Category => S["User"];
+#: OrchardCore.Users\Workflows\Activities\UserActivity.cs:27
 msgctxt "OrchardCore.Users.Workflows.Activities.UserActivity"
 msgid "User"
 msgstr "Потребител"
 
-#. return Outcomes(T["Done"]);
-#: OrchardCore.Users\Workflows\Activities\UserActivity.cs:37
+#. return Outcomes(S["Done"]);
+#: OrchardCore.Users\Workflows\Activities\UserActivity.cs:40
 msgctxt "OrchardCore.Users.Workflows.Activities.UserActivity"
 msgid "Done"
 msgstr "Готово"
 
-#. public override LocalizedString DisplayText => T["User Created Event"];
+#. public override LocalizedString DisplayText => S["User Created Event"];
 #: OrchardCore.Users\Workflows\Activities\UserCreatedEvent.cs:15
 msgctxt "OrchardCore.Users.Workflows.Activities.UserCreatedEvent"
 msgid "User Created Event"
 msgstr ""
 
-#. public override LocalizedString DisplayText => T["User Loggedin Event"];
+#. public override LocalizedString DisplayText => S["User Disabled Event"];
+#: OrchardCore.Users\Workflows\Activities\UserDisabledEvent.cs:15
+msgctxt "OrchardCore.Users.Workflows.Activities.UserDisabledEvent"
+msgid "User Disabled Event"
+msgstr ""
+
+#. public override LocalizedString DisplayText => S["User Enabled Event"];
+#: OrchardCore.Users\Workflows\Activities\UserEnabledEvent.cs:15
+msgctxt "OrchardCore.Users.Workflows.Activities.UserEnabledEvent"
+msgid "User Enabled Event"
+msgstr ""
+
+#. public override LocalizedString DisplayText => S["User Loggedin Event"];
 #: OrchardCore.Users\Workflows\Activities\UserLoggedInEvent.cs:15
 msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
 msgid "User Loggedin Event"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="AllowChangeEmail">@T["Allow the users to change their email"]</label>
+#: OrchardCore.Users\Views\ChangeEmailSettings.Edit.cshtml:7
+msgctxt "OrchardCore.Users.Views.ChangeEmailSettings.Edit"
+msgid "Allow the users to change their email"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
@@ -871,25 +1041,25 @@ msgid "Username"
 msgstr ""
 
 #. <label asp-for="Email" class="col-md-3 control-label">@T["Email"]</label>
-#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:30
+#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:29
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "Email"
 msgstr ""
 
 #. <label asp-for="Password" class="col-md-3 control-label">@T["Password"]</label>
-#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:41
+#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:40
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "Password"
 msgstr ""
 
 #. <label asp-for="ConfirmPassword" class="col-md-3 control-label">@T["Confirm password"]</label>
-#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:49
+#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:48
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "Confirm password"
 msgstr ""
 
 #. <button type="submit" class="btn btn-primary">@T["Register"]</button>
-#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:61
+#: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:60
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "Register"
 msgstr ""
@@ -942,7 +1112,7 @@ msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Users"
 msgstr ""
 
-#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" />
+#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 #: OrchardCore.Users\Views\Admin\Index.cshtml:19
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Search"
@@ -1007,11 +1177,41 @@ msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr ""
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 #: OrchardCore.Users\Views\Admin\Index.cshtml:136
-#: OrchardCore.Users\Views\Admin\Index.cshtml:141
+#: OrchardCore.Users\Views\Admin\Index.cshtml:147
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "selected"
+msgstr ""
+
+#. <h2>@T["Email changed"]</h2>
+#: OrchardCore.Users\Views\ChangeEmail\ChangeEmailConfirmation.cshtml:5
+msgctxt "OrchardCore.Users.Views.ChangeEmail.ChangeEmailConfirmation"
+msgid "Email changed"
+msgstr ""
+
+#. @T["Thank you for changing your email."]
+#: OrchardCore.Users\Views\ChangeEmail\ChangeEmailConfirmation.cshtml:8
+msgctxt "OrchardCore.Users.Views.ChangeEmail.ChangeEmailConfirmation"
+msgid "Thank you for changing your email."
+msgstr ""
+
+#. <h2>@T["Change Email"]</h2>
+#: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:7
+msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
+msgid "Change Email"
+msgstr ""
+
+#. <label asp-for="Email" class="col-md-3 control-label">@T["Email"]</label>
+#: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:11
+msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
+msgid "Email"
+msgstr ""
+
+#. <button type="submit" class="btn btn-primary">@T["Submit"]</button>
+#: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:19
+msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
+msgid "Submit"
 msgstr ""
 
 #. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["Assign user to role"])</h4>
@@ -1114,6 +1314,42 @@ msgstr ""
 #: OrchardCore.Users\Views\Items\UserCreatedEvent.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Users.Views.Items.UserCreatedEvent.Fields.Thumbnail"
 msgid "User is created."
+msgstr ""
+
+#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Disabled"])</h4>
+#: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Design"
+msgid "User Disabled"
+msgstr ""
+
+#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Disabled"]</h4>
+#: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Thumbnail"
+msgid "User Disabled"
+msgstr ""
+
+#. <p>@T["User is disabled."]</p>
+#: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Thumbnail"
+msgid "User is disabled."
+msgstr ""
+
+#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
+#: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Design"
+msgid "User Enabled"
+msgstr ""
+
+#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Enabled"]</h4>
+#: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
+msgid "User Enabled"
+msgstr ""
+
+#. <p>@T["User is enabled."]</p>
+#: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
+msgid "User is enabled."
 msgstr ""
 
 #. <h4><i class="fa fa-id-card"></i>@Model.Activity.GetTitleOrDefault(() => T["User LoggedIn"])</h4>
