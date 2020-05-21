@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Danish\n"
 "Language: da_DK\n"
-"PO-Revision-Date: 2020-05-10 20:36\n"
+"PO-Revision-Date: 2020-05-21 17:37\n"
 
 #. updater.ModelState.AddModelError(Prefix, S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:91
@@ -23,7 +23,7 @@ msgid "The {0} field cannot contain multiple items."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(nameof(field.Html), S["{0} doesn't contain a valid Liquid expression. Details: {1}", fieldName, string.Join(" ", errors)]);
-#: OrchardCore.ContentFields\Drivers\HtmlFieldDisplayDriver.cs:64
+#: OrchardCore.ContentFields\Drivers\HtmlFieldDisplayDriver.cs:84
 msgctxt "OrchardCore.ContentFields.Drivers.HtmlFieldDisplayDriver"
 msgid "{0} doesn't contain a valid Liquid expression. Details: {1}"
 msgstr ""
@@ -420,16 +420,28 @@ msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr ""
 
+#. <label class="custom-control-label" asp-for="SanitizeHtml">@T["Sanitize Html"]</label>
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:14
+msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
+msgid "Sanitize Html"
+msgstr ""
+
+#. <span class="hint">— @T["Whether the Html is sanitized to prevent custom scripts."]</span>
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:15
+msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
+msgid "Whether the Html is sanitized to prevent custom scripts."
+msgstr ""
+
 #. <label class="custom-control-label" asp-for="InsertMediaWithUrl">@T["Insert Media with url"]</label>
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:6
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldTrumbowygEditorSettings.Edit"
 msgid "Insert Media with url"
 msgstr ""
 
-#. <span class="hint">— @T["Whether the url is used when selected from Insert Media (By default, the Liquid Tag is inserted)."]</span>
+#. <span class="hint">— @T["Whether the url is used when selected from Insert Media (By default, the Short Code is inserted)."]</span>
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:7
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldTrumbowygEditorSettings.Edit"
-msgid "Whether the url is used when selected from Insert Media (By default, the Liquid Tag is inserted)."
+msgid "Whether the url is used when selected from Insert Media (By default, the Short Code is inserted)."
 msgstr ""
 
 #. <label asp-for="Options">@T["Enter the editor options"]</label>
