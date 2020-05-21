@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
-"PO-Revision-Date: 2020-03-31 14:19\n"
+"PO-Revision-Date: 2020-05-21 17:39\n"
 
 #. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 #: OrchardCore.Workflows\AdminMenu.cs:24
@@ -275,13 +275,13 @@ msgid "Done"
 msgstr "تم"
 
 #. _notifier.Success(H["Activity added successfully"]);
-#: OrchardCore.Workflows\Controllers\ActivityController.cs:122
+#: OrchardCore.Workflows\Controllers\ActivityController.cs:112
 msgctxt "OrchardCore.Workflows.Controllers.ActivityController"
 msgid "Activity added successfully"
 msgstr "تمت إضافة نشاط بنجاح"
 
 #. _notifier.Success(H["Activity updated successfully"]);
-#: OrchardCore.Workflows\Controllers\ActivityController.cs:178
+#: OrchardCore.Workflows\Controllers\ActivityController.cs:168
 msgctxt "OrchardCore.Workflows.Controllers.ActivityController"
 msgid "Activity updated successfully"
 msgstr "تم تحديث النشاط بنجاح"
@@ -391,19 +391,19 @@ msgid "Done"
 msgstr "تم"
 
 #. public override LocalizedString DisplayText => S["Http Request Event"];
-#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:27
+#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:28
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestEvent"
 msgid "Http Request Event"
 msgstr "حدث طلب Http"
 
 #. public override LocalizedString Category => S["HTTP"];
-#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:28
+#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:29
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestEvent"
 msgid "HTTP"
 msgstr "HTTP"
 
 #. return Outcomes(S["Done"]);
-#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:65
+#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:66
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestEvent"
 msgid "Done"
 msgstr "تم"
@@ -421,7 +421,7 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #. return Outcomes(S["Matched"]);
-#: OrchardCore.Workflows\Http\Activities\HttpRequestFilterEvent.cs:82
+#: OrchardCore.Workflows\Http\Activities\HttpRequestFilterEvent.cs:86
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestFilterEvent"
 msgid "Matched"
 msgstr "متطابقة"
@@ -1838,8 +1838,8 @@ msgstr "رجوع"
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:180
-#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:191
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:182
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:193
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "selected"
 msgstr ""
@@ -1916,29 +1916,29 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
 msgid "Workflow Types"
 msgstr "أنواع تدفق العمل"
 
-#. <button type="button" id="add-task-button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#activity-picker" data-picker-title="@T["Available Tasks"]" data-activity-type="Task">
-#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:16
-msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
-msgid "Available Tasks"
-msgstr "المهام المتوفرة"
-
-#. @T["Add Task"]
-#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:17
-msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
-msgid "Add Task"
-msgstr "إضافة مهمة"
-
 #. <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#activity-picker" data-picker-title="@T["Available Events"]" data-activity-type="Event">
-#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:19
+#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:16
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
 msgid "Available Events"
 msgstr "الأحداث المتوفرة"
 
 #. @T["Add Event"]
-#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:20
+#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:17
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
 msgid "Add Event"
 msgstr "إضافة حدث"
+
+#. <button type="button" id="add-task-button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#activity-picker" data-picker-title="@T["Available Tasks"]" data-activity-type="Task">
+#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:19
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
+msgid "Available Tasks"
+msgstr "المهام المتوفرة"
+
+#. @T["Add Task"]
+#: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:20
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
+msgid "Add Task"
+msgstr "إضافة مهمة"
 
 #. <a class="btn btn-secondary btn-sm" asp-action="EditProperties" asp-route-id="@Model.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath">@T["Properties"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:26
@@ -2174,8 +2174,8 @@ msgstr ""
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:147
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:158
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:149
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:160
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "selected"
 msgstr ""
