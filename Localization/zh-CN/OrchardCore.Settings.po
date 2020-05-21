@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-12-23 17:43\n"
+"PO-Revision-Date: 2020-05-09 17:03\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Settings\AdminMenu.cs:24
@@ -29,10 +29,16 @@ msgid "General"
 msgstr "常规"
 
 #. _notifier.Success(H["Site settings updated successfully."]);
-#: OrchardCore.Settings\Controllers\AdminController.cs:79
+#: OrchardCore.Settings\Controllers\AdminController.cs:81
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "Site settings updated successfully."
 msgstr "设置更新成功"
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(site.BaseUrl), S["The Base url must be a fully qualified URL."]);
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:68
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The Base url must be a fully qualified URL."
+msgstr "基础网址必须是完全合格的 URL。"
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:5
@@ -80,7 +86,7 @@ msgstr "输入该网站的完整基 URL。"
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:30
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Page size"
-msgstr "页面大小"
+msgstr "分页大小"
 
 #. <span class="hint">@T["The default page size."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:33
@@ -191,7 +197,7 @@ msgid "Save"
 msgstr "保存"
 
 #. <a id="button-cancel" href="@returnUrl" class="btn btn-secondary">@T["Cancel"]</a>
-#: OrchardCore.Settings\Views\SiteSettings.SaveButton.cshtml:8
+#: OrchardCore.Settings\Views\SiteSettings.SaveButton.cshtml:9
 msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Cancel"
 msgstr "取消"
