@@ -8,52 +8,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2020-05-09 20:25\n"
+"PO-Revision-Date: 2020-05-21 17:41\n"
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Markdown), S["{0} doesn't contain a valid Liquid expression. Details: {1}", partName, string.Join(" ", errors)]);
-#: OrchardCore.Markdown\Drivers\MarkdownBodyPartDisplay.cs:55
+#: OrchardCore.Markdown\Drivers\MarkdownBodyPartDisplay.cs:70
 msgctxt "OrchardCore.Markdown.Drivers.MarkdownBodyPartDisplay"
 msgid "{0} doesn't contain a valid Liquid expression. Details: {1}"
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(nameof(field.Markdown), S["{0} field doesn't contain a valid Liquid expression. Details: {1}", fieldName, string.Join(" ", errors)]);
-#: OrchardCore.Markdown\Drivers\MarkdownFieldDriver.cs:66
+#: OrchardCore.Markdown\Drivers\MarkdownFieldDriver.cs:96
 msgctxt "OrchardCore.Markdown.Drivers.MarkdownFieldDisplayDriver"
 msgid "{0} field doesn't contain a valid Liquid expression. Details: {1}"
 msgstr "Pole {0} neobsahuje platný Liquid výraz. Podrobnosti: {1}"
 
 #. Description = S["Content stored as Markdown. You can also query the HTML interpreted version of Markdown."];
-#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:18
+#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:24
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownBodyQueryObjectType"
 msgid "Content stored as Markdown. You can also query the HTML interpreted version of Markdown."
 msgstr "Obsah uložený fe formátu Markdown. Dotazovat se můžete na HTML resprezentaci Markdown obsahu."
 
 #. .Description(S["the markdown value"]);
-#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:21
+#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:27
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownBodyQueryObjectType"
 msgid "the markdown value"
 msgstr "hodnota ve formátu markdown"
 
 #. .Description(S["the HTML representation of the markdown content"])
-#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:25
+#: OrchardCore.Markdown\GraphQL\MarkdownBodyQueryObjectType.cs:31
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownBodyQueryObjectType"
 msgid "the HTML representation of the markdown content"
 msgstr "HTML reprezentace markdown obsahu"
 
 #. Description = S["Content stored as Markdown. You can also query the HTML interpreted version of Markdown."];
-#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:17
+#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:29
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownFieldQueryObjectType"
 msgid "Content stored as Markdown. You can also query the HTML interpreted version of Markdown."
 msgstr "Obsah uložený fe formátu Markdown. Dotazovat se můžete na HTML resprezentaci Markdown obsahu."
 
 #. .Description(S["the markdown value"]);
-#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:20
+#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:32
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownFieldQueryObjectType"
 msgid "the markdown value"
 msgstr "hodnota ve formátu Markdown"
 
 #. .Description(S["the HTML representation of the markdown content"])
-#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:24
+#: OrchardCore.Markdown\GraphQL\MarkdownFieldQueryObjectType.cs:36
 msgctxt "OrchardCore.Markdown.GraphQL.MarkdownFieldQueryObjectType"
 msgid "the HTML representation of the markdown content"
 msgstr "HTML reprezentace markdown obsahu"
@@ -87,6 +87,18 @@ msgstr "Tělo položky obsahu ve formátu Markdown."
 msgctxt "OrchardCore.Markdown.Views.MarkdownBodyPart.Option"
 msgid "Standard"
 msgstr "Standardní"
+
+#. <label class="custom-control-label" asp-for="SanitizeHtml">@T["Sanitize Html"]</label>
+#: OrchardCore.Markdown\Views\MarkdownBodyPartSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Markdown.Views.MarkdownBodyPartSettings.Edit"
+msgid "Sanitize Html"
+msgstr ""
+
+#. <span class="hint">— @T["Whether the Html output from the Markdown is sanitized to prevent custom scripts."]</span>
+#: OrchardCore.Markdown\Views\MarkdownBodyPartSettings.Edit.cshtml:7
+msgctxt "OrchardCore.Markdown.Views.MarkdownBodyPartSettings.Edit"
+msgid "Whether the Html output from the Markdown is sanitized to prevent custom scripts."
+msgstr ""
 
 #. <option value="TextArea" selected="@(currentEditor == "TextArea")">@T["Multi-line"]</option>
 #: OrchardCore.Markdown\Views\MarkdownField-TextArea.Option.cshtml:4
@@ -123,6 +135,18 @@ msgstr "Nápověda"
 msgctxt "OrchardCore.Markdown.Views.MarkdownFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr "Text nápovědy zobrazený pro toto pole."
+
+#. <label class="custom-control-label" asp-for="SanitizeHtml">@T["Sanitize Html"]</label>
+#: OrchardCore.Markdown\Views\MarkdownFieldSettings.Edit.cshtml:14
+msgctxt "OrchardCore.Markdown.Views.MarkdownFieldSettings.Edit"
+msgid "Sanitize Html"
+msgstr ""
+
+#. <span class="hint">— @T["Whether the Html output is sanitized to prevent custom scripts."]</span>
+#: OrchardCore.Markdown\Views\MarkdownFieldSettings.Edit.cshtml:15
+msgctxt "OrchardCore.Markdown.Views.MarkdownFieldSettings.Edit"
+msgid "Whether the Html output is sanitized to prevent custom scripts."
+msgstr ""
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
 #: OrchardCore.Markdown\Views\Media-MarkdownBodyPart.Modal.cshtml:7
