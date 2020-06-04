@@ -70,7 +70,7 @@ function createNuGetMetaPackage()
 
 function buildNuGetPackageSpec($pkgName, $culture)
 {
-    echo "Building '$pkgName.$pkgSpecExtension' .."
+    echo "Building '$pkgName.$pkgSpecExtension' ..."
 
     $pkgSpecDocument = [xml](Get-Content -Path $pkgSpecTemplate)
     $metadata = $pkgSpecDocument.package.metadata
@@ -115,17 +115,29 @@ function buildNuGetMetaPackageSpec($pkgName)
 echo "Start generating translations NuGet packages"
 echo ""
 
-foreach($cultureFolder in $(Get-ChildItem $localizationFolderName -Directory)) {
-    $culture = $cultureFolder.Name
-    $pkgName = $pkgNamePrefix + $culture
-    $pkgId = "$pkgName.$pkgVersion"
-    $cultures.Add($culture)
+$json = Get-Content -Raw -Path cultures.json | ConvertFrom-Json
+
+foreach ($culture in $json.cultures)
+{
+    $cultureName = $culture.name
     
-    echo "Creating '$pkgId.$pkgExtension' ..."
+    if($culture.'generate-package')
+    {
+        $pkgName = $pkgNamePrefix + $cultureName
+        $pkgId = "$pkgName.$pkgVersion"
+        
+        echo "Preparing a NuGet package for '$($culture.'display-name')' culture"
+        echo "Creating '$pkgId.$pkgExtension' ..."
 
-    createNuGetPackage $pkgName $culture
+        createNuGetPackage $pkgName $cultureName
 
-    echo ""
+        echo ""
+    }
+
+    if($culture.'meta-package')
+    {
+        $cultures.Add($cultureName)
+    }
 }
 
 echo "Creating translations meta package ..."
