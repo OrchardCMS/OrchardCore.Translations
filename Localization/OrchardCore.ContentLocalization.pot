@@ -1,69 +1,81 @@
 #: OrchardCore.ContentLocalization\AdminMenu.cs:28
-#. .Add(T["Configuration"], configuration => configuration
+#. .Add(S["Configuration"], localization => localization
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.ContentLocalization\AdminMenu.cs:29
-#. .Add(T["Settings"], settings => settings
+#. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Settings"
 msgstr ""
 
 #: OrchardCore.ContentLocalization\AdminMenu.cs:30
-#. .Add(T["ContentCulturePicker"], T["ContentCulturePicker"], registration => registration
+#. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
 #: OrchardCore.ContentLocalization\AdminMenu.cs:30
-#. .Add(T["ContentCulturePicker"], T["ContentCulturePicker"], registration => registration
+#. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
-msgid "ContentCulturePicker"
+msgid "Content Culture Picker"
 msgstr ""
 
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:78
-#. _notifier.Warning(T["A localization already exist for '{0}'", targetCulture]);
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:74
+#. _notifier.Warning(H["A localization already exist for '{0}'", targetCulture]);
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "A localization already exist for '{0}'"
 msgstr ""
 
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:85
-#. _notifier.Information(T["Successfully created localized version of the content."]);
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:81
+#. _notifier.Information(H["Successfully created localized version of the content."]);
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Successfully created localized version of the content."
 msgstr ""
 
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:90
-#. _notifier.Warning(T["Could not create localized version of the content item"]);
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:86
+#. _notifier.Warning(H["Could not create localized version of the content item"]);
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Could not create localized version of the content item"
 msgstr ""
 
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:13
-#. Description = T["the localization part of the content item"];
+#. Description = S["the localization part of the content item"];
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the localization part of the content item"
 msgstr ""
 
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:15
-#. AddScalarFilterFields<StringGraphType>("culture", T["the culture of the content item to filter"]);
+#. AddScalarFilterFields<StringGraphType>("culture", S["the culture of the content item to filter"]);
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the culture of the content item to filter"
 msgstr ""
 
-#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:12
-#. Description = T["Localization cultures for your content item."];
+#: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:16
+#. Field(x => x.LocalizationSet).Description(S["the localization set of the content item to filter"]);
+msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
+msgid "the localization set of the content item to filter"
+msgstr ""
+
+#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:18
+#. Description = S["Localization cultures for your content item."];
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
 msgid "Localization cultures for your content item."
 msgstr ""
 
-#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:14
-#. Field(x => x.Culture).Description(T["The culture for your content item."]);
+#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:20
+#. Field(x => x.Culture).Description(S["The culture for your content item."]);
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
 msgid "The culture for your content item."
 msgstr ""
 
-#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:15
-#. Field(x => x.LocalizationSet).Description(T["The localization set for your content item."]);
+#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:21
+#. Field(x => x.LocalizationSet).Description(S["The localization set for your content item."]);
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
 msgid "The localization set for your content item."
+msgstr ""
+
+#: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:25
+#. .Description(S["The localizations of the content item."])
+msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
+msgid "The localizations of the content item."
 msgstr ""
 
 #: OrchardCore.ContentLocalization\Views\ContentCulturePickerSettings.Edit.cshtml:7
@@ -100,6 +112,12 @@ msgstr ""
 #. <p>@T["Your site does not have any cultures. Current System culture is {1} | {0}", CultureInfo.InstalledUICulture.Name, CultureInfo.InstalledUICulture.DisplayName]</p>
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Your site does not have any cultures. Current System culture is {1} | {0}"
+msgstr ""
+
+#: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:22
+#. <p><a asp-route-area="OrchardCore.Settings" asp-controller="Admin" asp-action="Index" asp-route-groupId = "localization">@T["Add or remove supported cultures for the site"]</a></p>
+msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
+msgid "Add or remove supported cultures for the site"
 msgstr ""
 
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:33

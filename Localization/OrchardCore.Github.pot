@@ -1,25 +1,51 @@
-#: OrchardCore.GitHub\AdminMenu.cs:30
-#. builder.Add(T["GitHub"], "15", settings => settings
+#: OrchardCore.GitHub\AdminMenu.cs:23
+#. builder.Add(S["Security"], security => security
+msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
+msgid "Security"
+msgstr ""
+
+#: OrchardCore.GitHub\AdminMenu.cs:24
+#. .Add(S["Authentication"], authentication => authentication
+msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
+msgid "Authentication"
+msgstr ""
+
+#: OrchardCore.GitHub\AdminMenu.cs:25
+#. .Add(S["GitHub"], S["GitHub"].PrefixPosition(), settings => settings
+#: OrchardCore.GitHub\AdminMenu.cs:25
+#. .Add(S["GitHub"], S["GitHub"].PrefixPosition(), settings => settings
 msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
 msgid "GitHub"
 msgstr ""
 
-#: OrchardCore.GitHub\AdminMenu.cs:32
-#. .Add(T["GitHub Authentication"], "10", client => client
-msgctxt "OrchardCore.GitHub.AdminMenuGitHubLogin"
-msgid "GitHub Authentication"
-msgstr ""
-
-#: OrchardCore.GitHub\Services\GithubAuthenticationService.cs:60
-#. yield return new ValidationResult(T["ClientID is required"], new string[] { nameof(settings.ClientID) });
+#: OrchardCore.GitHub\Services\GithubAuthenticationService.cs:56
+#. yield return new ValidationResult(S["ClientID is required"], new string[] { nameof(settings.ClientID) });
 msgctxt "OrchardCore.GitHub.Services.GitHubAuthenticationService"
 msgid "ClientID is required"
 msgstr ""
 
-#: OrchardCore.GitHub\Services\GithubAuthenticationService.cs:65
-#. yield return new ValidationResult(T["ClientSecret is required"], new string[] { nameof(settings.ClientSecret) });
+#: OrchardCore.GitHub\Services\GithubAuthenticationService.cs:61
+#. yield return new ValidationResult(S["ClientSecret is required"], new string[] { nameof(settings.ClientSecret) });
 msgctxt "OrchardCore.GitHub.Services.GitHubAuthenticationService"
 msgid "ClientSecret is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:7
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "API key is required")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "API key is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:10
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "API secret key is required")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "API secret key is required"
+msgstr ""
+
+#: OrchardCore.GitHub\ViewModels\GithubAuthenticationSettingsViewModel.cs:13
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+msgctxt "OrchardCore.GitHub.ViewModels.GitHubAuthenticationSettingsViewModel"
+msgid "Invalid path"
 msgstr ""
 
 #: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:4
@@ -34,37 +60,37 @@ msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "GitHub Authentication Settings"
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:11
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:10
 #. <label asp-for="ClientID">@T["Client ID"]</label>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "Client ID"
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:14
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:13
 #. <span class="hint">@T["The Client ID defined in the general tab of your <a target=\"_blank\" href=\"https://github.com/settings/apps\">GitHub App</a>."]</span>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "The Client ID defined in the general tab of your <a target=\"_blank\" href=\"https://github.com/settings/apps\">GitHub App</a>."
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:20
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:19
 #. <label asp-for="ClientSecret">@T["Client secret"]</label>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "Client secret"
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:23
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:22
 #. <span class="hint">@T["The secret for your app."]</span>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "The secret for your app."
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:29
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:28
 #. <label asp-for="CallbackUrl">@T["CallbackPath"]</label>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "CallbackPath"
 msgstr ""
 
-#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:32
+#: OrchardCore.GitHub\Views\GithubAuthenticationSettings.Edit.cshtml:31
 #. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
 msgctxt "OrchardCore.GitHub.Views.GithubAuthenticationSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."

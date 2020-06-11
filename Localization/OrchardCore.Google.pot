@@ -1,25 +1,59 @@
-#: OrchardCore.Google\AdminMenu.cs:30
-#. builder.Add(T["Google"], "15", settings => settings
-msgctxt "OrchardCore.Google.AdminMenuGoogleAuthentication"
+#: OrchardCore.Google\AdminMenu.cs:24
+#. builder.Add(S["Security"], security => security
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
+msgid "Security"
+msgstr ""
+
+#: OrchardCore.Google\AdminMenu.cs:25
+#. .Add(S["Authentication"], authentication => authentication
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
+msgid "Authentication"
+msgstr ""
+
+#: OrchardCore.Google\AdminMenu.cs:26
+#. .Add(S["Google"], S["Google"].PrefixPosition(), settings => settings
+#: OrchardCore.Google\AdminMenu.cs:26
+#. .Add(S["Google"], S["Google"].PrefixPosition(), settings => settings
+msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
 msgid "Google"
 msgstr ""
 
-#: OrchardCore.Google\AdminMenu.cs:32
-#. .Add(T["Google Authentication"], "20", client => client
-msgctxt "OrchardCore.Google.AdminMenuGoogleAuthentication"
-msgid "Google Authentication"
+#: OrchardCore.Google\AdminMenu.cs:55
+#. builder.Add(S["Configuration"], configuration => configuration
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
+msgid "Configuration"
 msgstr ""
 
-#: OrchardCore.Google\AdminMenu.cs:61
-#. builder.Add(T["Google"], "15", settings => settings
-msgctxt "OrchardCore.Google.AdminMenuGoogleAnalytics"
-msgid "Google"
+#: OrchardCore.Google\AdminMenu.cs:56
+#. .Add(S["Settings"], settings => settings
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
+msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Google\AdminMenu.cs:63
-#. .Add(T["Google Analytics"], "10", client => client
-msgctxt "OrchardCore.Google.AdminMenuGoogleAnalytics"
+#: OrchardCore.Google\AdminMenu.cs:57
+#. .Add(S["Google Analytics"], S["Google Analytics"].PrefixPosition(), settings => settings
+#: OrchardCore.Google\AdminMenu.cs:57
+#. .Add(S["Google Analytics"], S["Google Analytics"].PrefixPosition(), settings => settings
+msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
 msgid "Google Analytics"
+msgstr ""
+
+#: OrchardCore.Google\Authentication\ViewModels\GoogleAuthenticationSettingsViewModel.cs:7
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "ClientID key is required")]
+msgctxt "OrchardCore.Google.Authentication.ViewModels.GoogleAuthenticationSettingsViewModel"
+msgid "ClientID key is required"
+msgstr ""
+
+#: OrchardCore.Google\Authentication\ViewModels\GoogleAuthenticationSettingsViewModel.cs:10
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "ClientSecret is required")]
+msgctxt "OrchardCore.Google.Authentication.ViewModels.GoogleAuthenticationSettingsViewModel"
+msgid "ClientSecret is required"
+msgstr ""
+
+#: OrchardCore.Google\Authentication\ViewModels\GoogleAuthenticationSettingsViewModel.cs:13
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+msgctxt "OrchardCore.Google.Authentication.ViewModels.GoogleAuthenticationSettingsViewModel"
+msgid "Invalid path"
 msgstr ""
 
 #: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:4
@@ -52,37 +86,37 @@ msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "Google Authentication Settings"
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:11
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:10
 #. <label asp-for="ClientID">@T["Client ID"]</label>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "Client ID"
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:14
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:13
 #. <span class="hint">@T["The client id defined in Google API console for the application."]</span>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "The client id defined in Google API console for the application."
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:20
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:19
 #. <label asp-for="ClientSecret">@T["API secret key"]</label>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "API secret key"
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:23
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:22
 #. <span class="hint">@T["The client secret defined in Google API console for the application."]</span>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "The client secret defined in Google API console for the application."
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:29
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:28
 #. <label asp-for="CallbackPath">@T["CallbackPath"]</label>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "CallbackPath"
 msgstr ""
 
-#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:32
+#: OrchardCore.Google\Views\GoogleAuthenticationSettings.Edit.cshtml:31
 #. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
 msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
@@ -92,5 +126,11 @@ msgstr ""
 #. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google"]</span>
 msgctxt "OrchardCore.Google.Views.NavigationItemText-google.Id"
 msgid "Google"
+msgstr ""
+
+#: OrchardCore.Google\Views\NavigationItemText-googleAnalytics.Id.cshtml:1
+#. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google Analytics"]</span>
+msgctxt "OrchardCore.Google.Views.NavigationItemText-googleAnalytics.Id"
+msgid "Google Analytics"
 msgstr ""
 

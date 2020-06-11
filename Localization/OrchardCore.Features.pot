@@ -1,35 +1,37 @@
 #: OrchardCore.Features\AdminMenu.cs:25
-#. .Add(T["Configuration"], "10", configuration => configuration
+#. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
 msgctxt "OrchardCore.Features.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #: OrchardCore.Features\AdminMenu.cs:27
-#. .Add(T["Features"], "6", deployment => deployment
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Features\AdminMenu.cs:27
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
 msgctxt "OrchardCore.Features.AdminMenu"
 msgid "Features"
 msgstr ""
 
-#: OrchardCore.Features\Controllers\AdminController.cs:104
-#. ModelState.AddModelError("featureIds", T["Please select one or more features."].ToString());
+#: OrchardCore.Features\Controllers\AdminController.cs:94
+#. ModelState.AddModelError("featureIds", H["Please select one or more features."].ToString());
 msgctxt "OrchardCore.Features.Controllers.AdminController"
 msgid "Please select one or more features."
 msgstr ""
 
-#: OrchardCore.Features\Controllers\AdminController.cs:204
-#. _notifier.Success(T["{0} was {1}", feature.Name ?? feature.Id, enabled ? "enabled" : "disabled"]);
+#: OrchardCore.Features\Controllers\AdminController.cs:194
+#. _notifier.Success(H["{0} was {1}", feature.Name ?? feature.Id, enabled ? "enabled" : "disabled"]);
 msgctxt "OrchardCore.Features.Controllers.AdminController"
 msgid "{0} was {1}"
 msgstr ""
 
-#: OrchardCore.Features\Services\ModuleService.cs:77
-#. _notifier.Success(T["{0} was enabled", enabledFeature.Name]);
+#: OrchardCore.Features\Services\ModuleService.cs:71
+#. _notifier.Success(H["{0} was enabled", enabledFeature.Name]);
 msgctxt "OrchardCore.Features.Services.ModuleService"
 msgid "{0} was enabled"
 msgstr ""
 
-#: OrchardCore.Features\Services\ModuleService.cs:104
-#. _notifier.Success(T["{0} was disabled", feature.Name]);
+#: OrchardCore.Features\Services\ModuleService.cs:98
+#. _notifier.Success(H["{0} was disabled", feature.Name]);
 msgctxt "OrchardCore.Features.Services.ModuleService"
 msgid "{0} was disabled"
 msgstr ""
@@ -54,15 +56,15 @@ msgstr ""
 
 #: OrchardCore.Features\Views\Admin\Features.cshtml:17
 #. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Disable)">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:137
-#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable"
 msgstr ""
 
 #: OrchardCore.Features\Views\Admin\Features.cshtml:18
 #. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Enable)">@T["Enable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:127
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
 #. <a asp-action="Enable" asp-route-id="@feature.Descriptor.Id" class="btn btn-primary btn-sm" itemprop="UnsafeUrl">@T["Enable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Enable"
@@ -81,7 +83,7 @@ msgid "Filter"
 msgstr ""
 
 #: OrchardCore.Features\Views\Admin\Features.cshtml:33
-#. <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
+#. <input id="search-box" class="form-control mr-sm-2" placeholder="@T["Search"]" type="search" autofocus>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Search"
 msgstr ""
@@ -93,33 +95,33 @@ msgstr ""
 
 #: OrchardCore.Features\Views\Admin\Features.cshtml:0
 msgctxt "OrchardCore.Features.Views.Admin.Features"
-msgid "Are you sure you want to disable this feature? Continue?"
+msgid "Are you sure you want to disable the {0} feature? Continue?"
 msgstr ""
 
 #: OrchardCore.Features\Views\Admin\Features.cshtml:0
 msgctxt "OrchardCore.Features.Views.Admin.Features"
-msgid "Disabling this feature will also disable the following dependent features:{0}Continue?"
+msgid "Disabling the {0} feature will also disable the following dependent features:{1}Continue?"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:137
-#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable Feature"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:137
-#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Yes"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:137
-#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok="@T["Yes"]" data-cancel="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:139
+#. <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "No"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:146
+#: OrchardCore.Features\Views\Admin\Features.cshtml:148
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "<strong>Nothing here!</strong> Your search returned no results."

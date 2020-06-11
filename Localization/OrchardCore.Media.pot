@@ -4,110 +4,122 @@ msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Media\AdminMenu.cs:26
-#. .Add(S["Assets"], "3", layers => layers
+#: OrchardCore.Media\AdminMenu.cs:27
+#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), layers => layers
+#: OrchardCore.Media\AdminMenu.cs:27
+#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), layers => layers
 msgctxt "OrchardCore.Media.AdminMenu"
-msgid "Assets"
-msgstr ""
-
-#: OrchardCore.Media\AdminMenu.cs:52
-#. builder.Add(S["Configuration"], content => content
-msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
-msgid "Configuration"
+msgid "Media Library"
 msgstr ""
 
 #: OrchardCore.Media\AdminMenu.cs:53
-#. .Add(S["Asset Cache"], "1", contentItems => contentItems
+#. builder.Add(S["Content"], content => content
 msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
-msgid "Asset Cache"
+msgid "Content"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\AdminController.cs:173
-#. error = T["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
+#: OrchardCore.Media\AdminMenu.cs:54
+#. .Add(S["Media Cache"], S["Media Cache"].PrefixPosition(), contentItems => contentItems
+#: OrchardCore.Media\AdminMenu.cs:54
+#. .Add(S["Media Cache"], S["Media Cache"].PrefixPosition(), contentItems => contentItems
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Media Cache"
+msgstr ""
+
+#: OrchardCore.Media\Controllers\AdminController.cs:171
+#. error = S["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
+#: OrchardCore.Media\Controllers\AdminController.cs:280
+#. return StatusCode(StatusCodes.Status403Forbidden, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr ""
 
 #: OrchardCore.Media\Controllers\AdminController.cs:222
-#. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete root media folder"]);
+#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete root media folder"]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr ""
 
 #: OrchardCore.Media\Controllers\AdminController.cs:228
-#. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot delete path because it is not a directory"]);
+#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete path because it is not a directory"]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\AdminController.cs:278
-#. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot move media because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:285
+#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot move media because a file already exists with the same name"]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\AdminController.cs:354
-#. return BadRequest(T["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
+#: OrchardCore.Media\Controllers\AdminController.cs:361
+#. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\AdminController.cs:383
-#. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a folder already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:390
+#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a folder already exists with the same name"]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\AdminController.cs:389
-#. return StatusCode(StatusCodes.Status403Forbidden, T["Cannot create folder because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:396
+#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a file already exists with the same name"]);
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr ""
 
-#: OrchardCore.Media\Controllers\MediaCacheController.cs:54
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:61
+#. _notifier.Error(H["The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."]);
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
+msgid "The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."
+msgstr ""
+
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:68
 #. _notifier.Error(H["Asset cache purged, with errors."]);
-msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
 msgid "Asset cache purged, with errors."
 msgstr ""
 
-#: OrchardCore.Media\Controllers\MediaCacheController.cs:58
+#: OrchardCore.Media\Controllers\MediaCacheController.cs:72
 #. _notifier.Information(H["Asset cache purged."]);
-msgctxt "OrchardCore.Media.Azure.Controllers.MediaCacheController"
+msgctxt "OrchardCore.Media.Controllers.MediaCacheController"
 msgid "Asset cache purged."
 msgstr ""
 
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:79
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:81
 #. updater.ModelState.AddModelError(Prefix, S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: There was an error handling the files."
 msgstr ""
 
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:90
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:92
 #. updater.ModelState.AddModelError(Prefix, S["{0}: A media is required.", context.PartFieldDefinition.DisplayName()]);
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: A media is required."
 msgstr ""
 
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:95
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:97
 #. updater.ModelState.AddModelError(Prefix, S["{0}: Selecting multiple media is forbidden.", context.PartFieldDefinition.DisplayName()]);
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr ""
 
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:28
-#. Description = T["Media assets are items that are part of your media library."],
+#. Description = S["Media assets are items that are part of your media library."],
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media assets are items that are part of your media library."
 msgstr ""
 
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:34
-#. Description = T["Media asset path."]
+#. Description = S["Media asset path."]
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media asset path."
 msgstr ""
 
 #: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:39
-#. Description = T["Whether to get the assets from just the top directory or from all sub-directories as well."]
+#. Description = S["Whether to get the assets from just the top directory or from all sub-directories as well."]
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Whether to get the assets from just the top directory or from all sub-directories as well."
 msgstr ""
@@ -136,37 +148,43 @@ msgctxt "OrchardCore.Media.Views.MediaField-Attached.Option"
 msgid "Attached"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:37
+#: OrchardCore.Media\Views\MediaField.DisplayOption.cshtml:4
+#. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
+msgctxt "OrchardCore.Media.Views.MediaField.DisplayOption"
+msgid "Standard"
+msgstr ""
+
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:35
 #. <span v-show="!smallThumbs" title="@T["Small Thumbs"]"><i class="fa fa-compress"></i></span>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Small Thumbs"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:38
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:36
 #. <span v-show="smallThumbs" title="@T["Large Thumbs"]"><i class="fa fa-expand"></i></span>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Large Thumbs"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:44
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:42
 #. <code class="text-right" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "{{{{ selectedMedia.name }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:62
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:59
 #. <h5 class="modal-title">@T["Select Media"]</h5>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Select Media"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:70
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:67
 #. <button type="button" class="btn btn-primary mediaFieldSelectButton">@T["OK"]</button>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "OK"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:71
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:68
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Cancel"
@@ -214,7 +232,13 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "The hint text to display on the editor."
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\Index.cshtml:47
+#: OrchardCore.Media\Views\NavigationItemText-media.Id.cshtml:1
+#. <span class="icon"><i class="fa fa-images" aria-hidden="true"></i></span><span class="title">@T["Media"]</span>
+msgctxt "OrchardCore.Media.Views.NavigationItemText-media.Id"
+msgid "Media"
+msgstr ""
+
+#: OrchardCore.Media\Views\Admin\Index.cshtml:44
 #. <h1>@RenderTitleSegments(T["Assets"])</h1>
 msgctxt "OrchardCore.Media.Views.Admin.Index"
 msgid "Assets"
@@ -232,255 +256,273 @@ msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Your files will be uploaded to the current folder when you drop them here"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:29
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:28
 #. @T["Select All"]
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Select All"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:32
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:31
 #. @T["Select None"]
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Select None"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:35
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:34
 #. @T["Invert"]
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Invert"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:38
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:37
 #. @T["Delete"] <span class="badge badge-pill badge-light" v-show="selectedMedias.length > 0">{{ selectedMedias.length}}</span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:136
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
 #. <input type="hidden" id="t-delete-button" value="@T["Delete"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:46
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:45
 #. <input type="text" id="media-filter-input" v-model="mediaFilter" class="form-control input-filter" placeholder="@T["Filter..."]" aria-label="@T["Filter..."]">
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:46
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:45
 #. <input type="text" id="media-filter-input" v-model="mediaFilter" class="form-control input-filter" placeholder="@T["Filter..."]" aria-label="@T["Filter..."]">
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Filter..."
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:58
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:57
 #. @T["Upload"]
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Upload"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:66
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:65
 #. <span class="breadcrumb-item" :class="{ active: isHome }"><a :href="isHome ? null : '#'" v-on:click="selectRoot">@T["Media Library"]</a></span>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Media Library"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:76
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:74
 #. <span title="@T["Small Thumbs"]"><i class="fa fa-compress"></i></span>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Small Thumbs"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:79
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:77
 #. <span title="@T["Large Thumbs"]"><i class="fa fa-expand"></i></span>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Large Thumbs"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:84
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:82
 #. <span title="@T["Grid View"]"><i class="fa fa-th-large"></i></span>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Grid View"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:87
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:85
 #. <span title="@T["List View"]"><i class="fa fa-th-list"></i></span>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "List View"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:106
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:104
 #. <div class="alert-info pt-2 pb-2 pl-2 pr-2" v-show="mediaItems.length > 0 && filteredMediaItems.length < 1">@T["Nothing to show with this filter"]</div>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Nothing to show with this filter"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:107
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:105
 #. <div class="alert-info pt-2 pb-2 pl-2 pr-2" v-show="mediaItems.length < 1">@T["This folder is empty"]</div>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "This folder is empty"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:126
 #. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete media folder"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:126
 #. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete this folder?"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:127
 #. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete media"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:127
 #. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete these media items?"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
-#. <input type="hidden" id="moveMediaMessage" value="@T["Are you sure you want to move the selected media to this folder?"]" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Move media"
+msgstr ""
+
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to move the selected media to this folder?"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:134
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Yes"
+msgstr ""
+
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
+#. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "No"
+msgstr ""
+
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:129
 #. <input type="hidden" id="sameFolderMessage" value="@T["The media is already on this folder"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "The media is already on this folder"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:135
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:130
 #. <input type="hidden" id="t-edit-button" value="@T["Edit"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:137
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
 #. <input type="hidden" id="t-view-button" value="@T["View"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "View"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:135
 #. <input type="hidden" id="t-uploads" value="@T["Uploads"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Uploads"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:136
 #. <input type="hidden" id="t-errors" value="@T["Errors"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Errors"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:137
 #. <input type="hidden" id="t-clear-errors" value="@T["Clear Errors"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Clear Errors"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:146
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
 #. <input type="hidden" id="t-image-header" value="@T["Image"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Image"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
 #. <input type="hidden" id="t-name-header" value="@T["Name"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Name"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
 #. <input type="hidden" id="t-size-header" value="@T["Size"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Size"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
 #. <input type="hidden" id="t-type-header" value="@T["Type"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Type"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:146
 #. <input type="hidden" id="t-pager-first-button" value="@T["First"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "First"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:153
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
 #. <input type="hidden" id="t-pager-previous-button" value="@T["Previous"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Previous"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:154
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
 #. <input type="hidden" id="t-pager-next-button" value="@T["Next"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Next"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:155
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
 #. <input type="hidden" id="t-pager-last-button" value="@T["Last"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:156
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:150
 #. <input type="hidden" id="t-pager-page-size-label" value="@T["Page Size"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page Size"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:157
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:151
 #. <input type="hidden" id="t-pager-page-label" value="@T["Page:"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page:"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:158
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
 #. <input type="hidden" id="t-pager-total-label" value="@T["Total items:"]" />
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Total items:"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:165
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:158
 #. <h5 class="modal-title" id="modelTitle">@T["Create Folder"]</h5>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Create Folder"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:172
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:165
 #. <label for="input" class="form-control-label" id="input-label">@T["Folder name"]</label>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Folder name"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:178
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:171
 #. <button type="button" class="btn btn-primary" id="modalFooterOk">@T["Ok"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:203
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:196
 #. <button type="button" class="btn btn-primary" id="renameMediaModalFooterOk">@T["Ok"]</button>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Ok"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:179
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:172
 #. <button type="button" class="btn btn-light" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:204
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:197
 #. <button type="button" class="btn btn-light" data-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:189
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:182
 #. <h5 class="modal-title" id="modelTitle">@T["Rename Item"]</h5>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Rename Item"
 msgstr ""
 
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:196
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:189
 #. <label for="input" class="form-control-label" id="input-label">@T["New Name"]</label>
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "New Name"
@@ -534,38 +576,44 @@ msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified media."
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:1
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:2
 #. <h1>@RenderTitleSegments(T["Asset Cache"])</h1>
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Asset Cache"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:3
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:6
 #. <p class="alert alert-secondary">@T["Media is configured with appsettings.json."]</p>
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Media is configured with appsettings.json."
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:14
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:17
 #. @T["Purge All"]
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Purge All"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:12
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
 #. <a asp-action="Purge" class="btn btn-sm btn-danger float-right" data-title="@T["Purge All"]" data-message="@T["Are you sure you want to purge the entire asset cache?"]" itemprop="RemoveUrl UnsafeUrl">@T["Purge All"]</a>
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Are you sure you want to purge the entire asset cache?"
 msgstr ""
 
-#: OrchardCore.Media\Views\MediaCache\Index.cshtml:15
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:18
 #. <span class="hint">— @T["Purge all the assets from the cache"]</span>
 msgctxt "OrchardCore.Media.Views.MediaCache.Index"
 msgid "Purge all the assets from the cache"
+msgstr ""
+
+#: OrchardCore.Media\Views\MediaCache\Index.cshtml:26
+#. <p class="alert alert-danger">@T["The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."]</p>
+msgctxt "OrchardCore.Media.Views.MediaCache.Index"
+msgid "The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."
 msgstr ""
 
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:2
