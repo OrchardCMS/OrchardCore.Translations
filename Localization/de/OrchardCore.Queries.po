@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-04-14 12:25\n"
+"PO-Revision-Date: 2020-06-12 08:37\n"
 
 #. builder.Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:24
@@ -16,8 +16,8 @@ msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Search"
 msgstr "Suche"
 
-#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
-#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
 #: OrchardCore.Queries\AdminMenu.cs:26
 #: OrchardCore.Queries\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.AdminMenu"
@@ -72,17 +72,27 @@ msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Search"
 msgstr "Suche"
 
-#. .Add(S["Queries"], "10", queries => queries
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
+#: OrchardCore.Queries\Sql\AdminMenu.cs:26
 #: OrchardCore.Queries\Sql\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Queries"
 msgstr "Abfragen"
 
-#. .Add(S["Run SQL Query"], "5", sql => sql
+#. .Add(S["Run SQL Query"],S["Run SQL Query"].PrefixPosition(), sql => sql
+#. .Add(S["Run SQL Query"],S["Run SQL Query"].PrefixPosition(), sql => sql
+#: OrchardCore.Queries\Sql\AdminMenu.cs:27
 #: OrchardCore.Queries\Sql\AdminMenu.cs:27
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Run SQL Query"
 msgstr "SQL-Abfrage ausführen"
+
+#. ModelState.AddModelError("", S["An error occurred while executing the SQL query: {0}", e.Message]);
+#: OrchardCore.Queries\Sql\Controllers\AdminController.cs:100
+msgctxt "OrchardCore.Queries.Sql.Controllers.AdminController"
+msgid "An error occurred while executing the SQL query: {0}"
+msgstr ""
 
 #. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
 #: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:60
