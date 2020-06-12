@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-03-31 13:53\n"
+"PO-Revision-Date: 2020-06-12 08:52\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
-#. .Add(S["Search"], S["Search"], entry => entry
-#. .Add(S["Search"], S["Search"], entry => entry
+#. .Add(S["Search"],S["Search"].PrefixPosition(), entry => entry
+#. .Add(S["Search"],S["Search"].PrefixPosition(), entry => entry
 #: OrchardCore.Lucene\AdminMenu.cs:25
 #: OrchardCore.Lucene\AdminMenu.cs:37
 #: OrchardCore.Lucene\AdminMenu.cs:37
@@ -20,21 +20,25 @@ msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Search"
 msgstr "検索"
 
-#. .Add(S["Indexing"], S["Indexing"], import => import
-#. .Add(S["Indexing"], S["Indexing"], import => import
+#. .Add(S["Indexing"], S["Indexing"].PrefixPosition(), import => import
+#. .Add(S["Indexing"], S["Indexing"].PrefixPosition(), import => import
 #: OrchardCore.Lucene\AdminMenu.cs:27
 #: OrchardCore.Lucene\AdminMenu.cs:27
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Indexing"
 msgstr ""
 
-#. .Add(S["Lucene Indices"], "7", indexes => indexes
+#. .Add(S["Lucene Indices"], S["Lucene Indices"].PrefixPosition(), indexes => indexes
+#. .Add(S["Lucene Indices"], S["Lucene Indices"].PrefixPosition(), indexes => indexes
+#: OrchardCore.Lucene\AdminMenu.cs:28
 #: OrchardCore.Lucene\AdminMenu.cs:28
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Lucene Indices"
 msgstr ""
 
-#. .Add(S["Run Lucene Query"], "8", queries => queries
+#. .Add(S["Run Lucene Query"], S["Run Lucene Query"].PrefixPosition(), queries => queries
+#. .Add(S["Run Lucene Query"], S["Run Lucene Query"].PrefixPosition(), queries => queries
+#: OrchardCore.Lucene\AdminMenu.cs:32
 #: OrchardCore.Lucene\AdminMenu.cs:32
 msgctxt "OrchardCore.Lucene.AdminMenu"
 msgid "Run Lucene Query"
@@ -47,127 +51,127 @@ msgid "Settings"
 msgstr "設定"
 
 #. new SelectListItem() { Text = S["Reset"], Value = nameof(ContentsBulkAction.Reset) },
-#: OrchardCore.Lucene\Controllers\AdminController.cs:109
+#: OrchardCore.Lucene\Controllers\AdminController.cs:112
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Reset"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Rebuild"], Value = nameof(ContentsBulkAction.Rebuild) },
-#: OrchardCore.Lucene\Controllers\AdminController.cs:110
+#: OrchardCore.Lucene\Controllers\AdminController.cs:113
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Rebuild"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
-#: OrchardCore.Lucene\Controllers\AdminController.cs:111
+#: OrchardCore.Lucene\Controllers\AdminController.cs:114
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Delete"
 msgstr ""
 
 #. .Select(x => new SelectListItem { Text = x.Name + " (" + x.DisplayName + ")", Value = x.Name }).Prepend(new SelectListItem { Text = S["Any culture"], Value = "any" }),
 #. .Select(x => new SelectListItem { Text = x.Name + " (" + x.DisplayName + ")", Value = x.Name }).Prepend(new SelectListItem { Text = S["Any culture"], Value = "any" });
-#: OrchardCore.Lucene\Controllers\AdminController.cs:145
-#: OrchardCore.Lucene\Controllers\AdminController.cs:183
+#: OrchardCore.Lucene\Controllers\AdminController.cs:148
+#: OrchardCore.Lucene\Controllers\AdminController.cs:186
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Any culture"
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexName), S["An index named {0} already exists.", model.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:169
+#: OrchardCore.Lucene\Controllers\AdminController.cs:172
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An index named {0} already exists."
 msgstr "インデックス名 {0} は既に存在します"
 
-#. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexName), S["An index named {0} doesn't exists.", model.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:176
+#. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexName), S["An index named {0} doesn't exist.", model.IndexName]);
+#: OrchardCore.Lucene\Controllers\AdminController.cs:179
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
-msgid "An index named {0} doesn't exists."
+msgid "An index named {0} doesn't exist."
 msgstr ""
 
 #. _notifier.Error(H["An error occurred while creating the index"]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:201
+#: OrchardCore.Lucene\Controllers\AdminController.cs:204
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while creating the index"
 msgstr "インデックスを作成中にエラーが発生しました"
 
 #. _notifier.Success(H["Index <em>{0}</em> created successfully.", model.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:206
+#: OrchardCore.Lucene\Controllers\AdminController.cs:209
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> created successfully."
 msgstr ""
 
 #. _notifier.Error(H["An error occurred while editing the index"]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:218
+#: OrchardCore.Lucene\Controllers\AdminController.cs:221
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while editing the index"
 msgstr ""
 
 #. _notifier.Success(H["Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>", model.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:223
+#: OrchardCore.Lucene\Controllers\AdminController.cs:226
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>"
 msgstr ""
 
 #. _notifier.Success(H["Index <em>{0}</em> reset successfully.", id]);
 #. _notifier.Success(H["Index <em>{0}</em> reset successfully.", item.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:245
-#: OrchardCore.Lucene\Controllers\AdminController.cs:421
+#: OrchardCore.Lucene\Controllers\AdminController.cs:248
+#: OrchardCore.Lucene\Controllers\AdminController.cs:424
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> reset successfully."
 msgstr ""
 
 #. _notifier.Success(H["Index <em>{0}</em> rebuilt successfully.", id]);
 #. _notifier.Success(H["Index <em>{0}</em> rebuilt successfully.", item.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:266
-#: OrchardCore.Lucene\Controllers\AdminController.cs:440
+#: OrchardCore.Lucene\Controllers\AdminController.cs:269
+#: OrchardCore.Lucene\Controllers\AdminController.cs:443
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> rebuilt successfully."
 msgstr ""
 
 #. _notifier.Success(H["Index <em>{0}</em> deleted successfully.", model.IndexName]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:288
+#: OrchardCore.Lucene\Controllers\AdminController.cs:291
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index <em>{0}</em> deleted successfully."
 msgstr ""
 
 #. _notifier.Error(H["An error occurred while deleting the index."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:292
+#: OrchardCore.Lucene\Controllers\AdminController.cs:295
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while deleting the index."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(model.DecodedQuery), S["Invalid query : {0}", e.Message]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:369
+#: OrchardCore.Lucene\Controllers\AdminController.cs:372
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Invalid query : {0}"
 msgstr ""
 
 #. _notifier.Warning(H["Couldn't remove selected index."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:396
+#: OrchardCore.Lucene\Controllers\AdminController.cs:399
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Couldn't remove selected index."
 msgstr ""
 
 #. _notifier.Success(H["Index successfully removed."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:403
+#: OrchardCore.Lucene\Controllers\AdminController.cs:406
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Index successfully removed."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexedContentTypes), S["At least one content type selection is required."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:455
+#: OrchardCore.Lucene\Controllers\AdminController.cs:458
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "At least one content type selection is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexName), S["The index name is required."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:460
+#: OrchardCore.Lucene\Controllers\AdminController.cs:463
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "The index name is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexName), S["The index name contains unallowed chars."]);
-#: OrchardCore.Lucene\Controllers\AdminController.cs:464
+#: OrchardCore.Lucene\Controllers\AdminController.cs:467
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "The index name contains unallowed chars."
 msgstr ""
@@ -520,16 +524,16 @@ msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Actions"
 msgstr ""
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:40
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Bulk Action"
 msgstr ""
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} this/these item(s)?", @item.Text.ToLower()]">@item.Text</a>
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:40
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
-msgid "Are you sure you want to {0} this/these item(s)?"
+msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
 #. <a asp-action="Query" asp-route-IndexName="@entry.Name" class="btn btn-success btn-sm">@T["Query"]</a>
@@ -610,8 +614,8 @@ msgstr ""
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Lucene\Views\Admin\Index.cshtml:123
-#: OrchardCore.Lucene\Views\Admin\Index.cshtml:134
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:125
+#: OrchardCore.Lucene\Views\Admin\Index.cshtml:136
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "selected"
 msgstr ""
