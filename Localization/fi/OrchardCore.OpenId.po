@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2020-03-31 14:01\n"
+"PO-Revision-Date: 2020-06-12 08:48\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.OpenId\AdminMenu.cs:31
@@ -16,7 +16,9 @@ msgctxt "OrchardCore.OpenId.AdminMenu"
 msgid "Security"
 msgstr ""
 
-#. .Add(S["OpenID Connect"], "15", category =>
+#. .Add(S["OpenID Connect"], S["OpenID Connect"].PrefixPosition(), category =>
+#. .Add(S["OpenID Connect"], S["OpenID Connect"].PrefixPosition(), category =>
+#: OrchardCore.OpenId\AdminMenu.cs:32
 #: OrchardCore.OpenId\AdminMenu.cs:32
 msgctxt "OrchardCore.OpenId.AdminMenu"
 msgid "OpenID Connect"
@@ -69,11 +71,11 @@ msgstr ""
 #. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
 #. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
 #. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:80
-#: OrchardCore.OpenId\Controllers\AccessController.cs:141
-#: OrchardCore.OpenId\Controllers\AccessController.cs:259
-#: OrchardCore.OpenId\Controllers\AccessController.cs:320
-#: OrchardCore.OpenId\Controllers\AccessController.cs:382
+#: OrchardCore.OpenId\Controllers\AccessController.cs:78
+#: OrchardCore.OpenId\Controllers\AccessController.cs:139
+#: OrchardCore.OpenId\Controllers\AccessController.cs:257
+#: OrchardCore.OpenId\Controllers\AccessController.cs:318
+#: OrchardCore.OpenId\Controllers\AccessController.cs:380
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The specified 'client_id' parameter is invalid."
 msgstr ""
@@ -81,27 +83,27 @@ msgstr ""
 #. ErrorDescription = S["The logged in user is not allowed to access this client application."]
 #. ErrorDescription = S["The logged in user is not allowed to access this client application."]
 #. ErrorDescription = S["The logged in user is not allowed to access this client application."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:97
-#: OrchardCore.OpenId\Controllers\AccessController.cs:161
-#: OrchardCore.OpenId\Controllers\AccessController.cs:365
+#: OrchardCore.OpenId\Controllers\AccessController.cs:95
+#: OrchardCore.OpenId\Controllers\AccessController.cs:159
+#: OrchardCore.OpenId\Controllers\AccessController.cs:363
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The logged in user is not allowed to access this client application."
 msgstr ""
 
 #. ErrorDescription = S["Interactive user consent is required."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:113
+#: OrchardCore.OpenId\Controllers\AccessController.cs:111
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "Interactive user consent is required."
 msgstr ""
 
 #. ErrorDescription = S["The resource owner password credentials grant is not supported."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:332
+#: OrchardCore.OpenId\Controllers\AccessController.cs:330
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The resource owner password credentials grant is not supported."
 msgstr ""
 
 #. ErrorDescription = S["The user is not logged in."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:552
+#: OrchardCore.OpenId\Controllers\AccessController.cs:550
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The user is not logged in."
 msgstr ""
@@ -150,8 +152,8 @@ msgstr ""
 
 #. ModelState.AddModelError(nameof(model.Name), S["The name is already taken by another scope."]);
 #. ModelState.AddModelError(nameof(model.Name), S["The name is already taken by another scope."]);
-#: OrchardCore.OpenId\Controllers\ScopeController.cs:124
-#: OrchardCore.OpenId\Controllers\ScopeController.cs:223
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:122
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:221
 msgctxt "OrchardCore.OpenId.Controllers.ScopeController"
 msgid "The name is already taken by another scope."
 msgstr ""
@@ -163,7 +165,7 @@ msgid "OpenID server configuration successfully updated."
 msgstr ""
 
 #. ErrorDescription = S["The userinfo endpoint can only be used with access tokens representing users."]
-#: OrchardCore.OpenId\Controllers\UserInfoController.cs:58
+#: OrchardCore.OpenId\Controllers\UserInfoController.cs:55
 msgctxt "OrchardCore.OpenId.Controllers.UserInfoController"
 msgid "The userinfo endpoint can only be used with access tokens representing users."
 msgstr ""
@@ -350,16 +352,42 @@ msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "No appropriate scope was found."
 msgstr ""
 
-#. yield return new ValidationResult(S["{0} is not wellformed", url], new[] { memberName });
+#. yield return new ValidationResult(S["{0} is not well-formed", url], new[] { memberName });
 #: OrchardCore.OpenId\ViewModels\CreateOpenIdApplicationViewModel.cs:50
 msgctxt "OrchardCore.OpenId.ViewModels.CreateOpenIdApplicationViewModel"
-msgid "{0} is not wellformed"
+msgid "{0} is not well-formed"
 msgstr ""
 
-#. yield return new ValidationResult(S["{0} is not wellformed", url], new[] { memberName });
+#. yield return new ValidationResult(S["{0} is not well-formed", url], new[] { memberName });
 #: OrchardCore.OpenId\ViewModels\EditOpenIdApplicationViewModel.cs:54
 msgctxt "OrchardCore.OpenId.ViewModels.EditOpenIdApplicationViewModel"
-msgid "{0} is not wellformed"
+msgid "{0} is not well-formed"
+msgstr ""
+
+#. [Required(ErrorMessage = "Authority is required")]
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:12
+msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
+msgid "Authority is required"
+msgstr ""
+
+#. [Required(ErrorMessage = "ClientId is required")]
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:15
+msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
+msgid "ClientId is required"
+msgstr ""
+
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:20
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:26
+msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
+msgid "Invalid path"
+msgstr ""
+
+#. [Url(ErrorMessage = "Invalid signeout redirect url")]
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:23
+msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
+msgid "Invalid signeout redirect url"
 msgstr ""
 
 #. <span class="icon"><i class="fa fa-openid" aria-hidden="true"></i></span><span class="title">@T["OpenID Connect"]</span>
@@ -464,8 +492,20 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "extra scopes except openid and profile"
 msgstr ""
 
+#. <label class="custom-control-label" asp-for="StoreExternalTokens">@T["Store tokens"]</label>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:60
+msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
+msgid "Store tokens"
+msgstr ""
+
+#. <span class="hint">— @T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:61
+msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
+msgid "Store external authentication tokens for reuse"
+msgstr ""
+
 #. <h3>@T["Code Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:57
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:65
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Code Authentication Flow"
 msgstr ""
@@ -473,15 +513,15 @@ msgstr ""
 #. <h5 class="mb-3"><a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></h5>
 #. <h5 class="mb-3"><a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest</a></h5>
 #. <h5 class="mb-3"><a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthRequest" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthRequest</a></h5>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:58
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:68
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:95
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:66
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:76
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:103
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "see: "
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseCodeFlow">@T["Use 'code' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:62
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:70
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'code' response type"
 msgstr ""
@@ -492,78 +532,78 @@ msgstr ""
 #. <span class="hint"><a href="http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample" target="_blank">— @T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample</a></span>
 #. <span class="hint"><a href="http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample" target="_blank">— @T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample</a></span>
 #. <span class="hint"><a href="http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample" target="_blank">— @T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample</a></span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:63
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:74
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:71
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:82
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:90
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:101
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:98
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:109
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:117
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "example:"
 msgstr ""
 
 #. <h3>@T["Hybrid Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:67
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:75
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Hybrid Authentication Flow"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseCodeIdTokenFlow">@T["Use 'code id_token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:73
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:81
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'code id_token' response type"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseCodeIdTokenTokenFlow">@T["Use 'code id_token token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:81
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:89
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'code id_token token' response type"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseCodeTokenFlow">@T["Use 'code token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:89
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:97
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'code token' response type"
 msgstr ""
 
 #. <h3>@T["Implicit Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:94
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:102
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Implicit Authentication Flow"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseIdTokenFlow">@T["Use 'id_token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:100
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:108
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'id_token' response type"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseIdTokenTokenFlow">@T["Use 'id_token token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:108
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:116
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'id_token token' response type"
 msgstr ""
 
 #. <label>@T["Response Mode"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:114
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:122
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Response Mode"
 msgstr ""
 
 #. <span class="hint">@T["Configure Response Mode see: http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:121
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:129
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Configure Response Mode see: http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"
 msgstr ""
 
 #. <label>@T["Client Secret"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:125
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:133
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Client Secret"
 msgstr ""
 
 #. <span class="hint">@T["set client secret."]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:128
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:136
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "set client secret."
 msgstr ""
