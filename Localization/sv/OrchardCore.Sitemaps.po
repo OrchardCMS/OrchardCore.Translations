@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
-"PO-Revision-Date: 2020-05-11 18:43\n"
+"PO-Revision-Date: 2020-06-12 09:06\n"
 
 #. builder.Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, cfg => cfg
 #: OrchardCore.Sitemaps\AdminMenu.cs:24
@@ -16,70 +16,76 @@ msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#. .Add(S["SEO"], S["SEO"], admt => admt
-#. .Add(S["SEO"], S["SEO"], admt => admt
+#. .Add(S["SEO"], S["SEO"].PrefixPosition(), seo => seo
+#. .Add(S["SEO"], S["SEO"].PrefixPosition(), seo => seo
 #: OrchardCore.Sitemaps\AdminMenu.cs:25
 #: OrchardCore.Sitemaps\AdminMenu.cs:25
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "SEO"
 msgstr "SEO"
 
-#. .Add(S["Sitemaps"], "5", sitemaps => sitemaps
+#. .Add(S["Sitemaps"], S["Sitemaps"].PrefixPosition("1"), sitemaps => sitemaps
+#. .Add(S["Sitemaps"], S["Sitemaps"].PrefixPosition("1"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:27
 #: OrchardCore.Sitemaps\AdminMenu.cs:27
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemaps"
 msgstr "Webbplatskarta"
 
-#. .Add(S["Sitemap Indexes"], "10", sitemaps => sitemaps
+#. .Add(S["Sitemap Indexes"], S["Sitemap Indexes"].PrefixPosition("2"), sitemaps => sitemaps
+#. .Add(S["Sitemap Indexes"], S["Sitemap Indexes"].PrefixPosition("2"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:31
 #: OrchardCore.Sitemaps\AdminMenu.cs:31
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemap Indexes"
 msgstr "Webbplatskarta index"
 
-#. .Add(S["Sitemaps Cache"], "15", sitemaps => sitemaps
+#. .Add(S["Sitemaps Cache"], S["Sitemaps Cache"].PrefixPosition("3"), sitemaps => sitemaps
+#. .Add(S["Sitemaps Cache"], S["Sitemaps Cache"].PrefixPosition("3"), sitemaps => sitemaps
+#: OrchardCore.Sitemaps\AdminMenu.cs:35
 #: OrchardCore.Sitemaps\AdminMenu.cs:35
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Sitemaps Cache"
 msgstr "Webbplatskarta cache"
 
 #. _notifier.Success(H["Sitemap updated successfully"]);
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:279
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:274
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap updated successfully"
 msgstr "Webbplatskartan har uppdaterats"
 
 #. _notifier.Success(H["Sitemap deleted successfully"]);
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:308
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:303
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap deleted successfully"
 msgstr "Webbplatskartan har tagits bort"
 
 #. _notifier.Success(H["Sitemap toggled successfully"]);
-#: OrchardCore.Sitemaps\Controllers\AdminController.cs:334
+#: OrchardCore.Sitemaps\Controllers\AdminController.cs:329
 msgctxt "OrchardCore.Sitemaps.Controllers.AdminController"
 msgid "Sitemap toggled successfully"
 msgstr "Webbplatskartan har slagits på/av"
 
 #. _notifier.Error(H["Sitemap cache purged, with errors."]);
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:63
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:60
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache purged, with errors."
 msgstr "Webbplatskarta cache rensad, med fel."
 
 #. _notifier.Information(H["Sitemap cache purged."]);
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:67
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:64
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache purged."
 msgstr "Webbplatskartans cache har rensats."
 
 #. _notifier.Error(H["Error purging sitemap cache item."]);
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:84
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:81
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Error purging sitemap cache item."
 msgstr "Fel vid rensning av webbplatskartans cache."
 
 #. _notifier.Information(H["Sitemap cache item purged."]);
-#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:88
+#: OrchardCore.Sitemaps\Controllers\SitemapCacheController.cs:85
 msgctxt "OrchardCore.Sitemaps.Controllers.SitemapCacheController"
 msgid "Sitemap cache item purged."
 msgstr "Objekt rensat från webbplatskartan."
@@ -133,31 +139,31 @@ msgid "Sitemap source deleted successfully"
 msgstr "Källa har tagits bort från webbplatskartan"
 
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink can't be set to the homepage"]);
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:39
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:40
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink can't be set to the homepage"
 msgstr "Din permalänk kan inte ställas in till hemsidan"
 
-#. updater.ModelState.AddModelError(Prefix, Path, S["Please do not use any of the following characters in your permalink: {0}. No spaces are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:45
+#. updater.ModelState.AddModelError(Prefix, Path, S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:46
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
-msgid "Please do not use any of the following characters in your permalink: {0}. No spaces are allowed (please use dashes or underscores instead)."
-msgstr "Vänligen använd inte något av följande tecken i din permalänk: {0}. Inga mellanslag är tillåtna (använd streck eller understreck istället)."
+msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
+msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink must end with {0}.", SitemapPathExtension]);
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:51
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:52
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink must end with {0}."
 msgstr "Din permalänk måste sluta med {0}."
 
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink is too long. The permalink can only be up to {0} characters.", MaxPathLength]);
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:56
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:57
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr "Din permalänk är för lång. Permalänk kan bara vara upp till {0} tecken."
 
 #. updater.ModelState.AddModelError(Prefix, Path, S["Your permalink is already in use."]);
-#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:73
+#: OrchardCore.Sitemaps\Services\SitemapHelperService.cs:74
 msgctxt "OrchardCore.Sitemaps.Services.SitemapHelperService"
 msgid "Your permalink is already in use."
 msgstr "Din permalänk används redan."
