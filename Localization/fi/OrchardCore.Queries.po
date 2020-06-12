@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2020-03-31 14:01\n"
+"PO-Revision-Date: 2020-06-12 08:48\n"
 
 #. builder.Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:24
@@ -16,8 +16,8 @@ msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Search"
 msgstr ""
 
-#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
-#. .Add(S["Queries"], S["Queries"], contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
 #: OrchardCore.Queries\AdminMenu.cs:26
 #: OrchardCore.Queries\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.AdminMenu"
@@ -72,16 +72,26 @@ msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Search"
 msgstr ""
 
-#. .Add(S["Queries"], "10", queries => queries
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
+#: OrchardCore.Queries\Sql\AdminMenu.cs:26
 #: OrchardCore.Queries\Sql\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Queries"
 msgstr ""
 
-#. .Add(S["Run SQL Query"], "5", sql => sql
+#. .Add(S["Run SQL Query"],S["Run SQL Query"].PrefixPosition(), sql => sql
+#. .Add(S["Run SQL Query"],S["Run SQL Query"].PrefixPosition(), sql => sql
+#: OrchardCore.Queries\Sql\AdminMenu.cs:27
 #: OrchardCore.Queries\Sql\AdminMenu.cs:27
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Run SQL Query"
+msgstr ""
+
+#. ModelState.AddModelError("", S["An error occurred while executing the SQL query: {0}", e.Message]);
+#: OrchardCore.Queries\Sql\Controllers\AdminController.cs:100
+msgctxt "OrchardCore.Queries.Sql.Controllers.AdminController"
+msgid "An error occurred while executing the SQL query: {0}"
 msgstr ""
 
 #. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
