@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Email.pot\n"
+"X-Crowdin-File-ID: 548\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2020-06-12 09:10\n"
+"PO-Revision-Date: 2020-08-05 15:01\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -61,13 +63,13 @@ msgid "Messaging"
 msgstr "消息"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:76
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr "完成"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:76
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "失败"
@@ -222,11 +224,11 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Use Windows authentication"
 msgstr "使用 Windows 身份验证"
 
-#. <span class="hint d-block">@T["When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."]</span>
+#. <span class="hint d-block">@T["When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."]</span>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
-msgstr "选择此选项后, 应用池或主机进程标识用于通过邮件服务器进行身份验证。"
+msgid "When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."
+msgstr ""
 
 #. <label asp-for="UserName">@T["User name"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:102
@@ -360,56 +362,68 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Sender"
 msgstr "发送者"
 
-#. <span class="hint">@T["The sender's email address. Required if not the same as the From email address. With Liquid support."]</span>
+#. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The sender's email address. Required if not the same as the From email address. With Liquid support."
-msgstr "实际发件人的电子邮件地址，与发件人不同时需设置。支持Liquid。"
+msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
+msgstr ""
+
+#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "ReplyTo"
+msgstr ""
+
+#. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
+msgstr ""
 
 #. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Recipients"
 msgstr "收件人"
 
 #. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of recipient email addresses. With Liquid support."
 msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
 
 #. <label asp-for="SubjectExpression">@T["Subject"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
 msgstr "主题"
 
 #. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
 msgstr "电子邮件的主题。流体支持。"
 
 #. <label asp-for="Body">@T["Body"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
 msgstr "主体"
 
 #. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:35
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The body of the email message. With Liquid support."
 msgstr "电子邮件的正文。流体支持。"
 
 #. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:41
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:48
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
 msgstr "身体是否包含 HTML？"
 
 #. <span class="hint">— @T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:49
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."
 msgstr "如果选中，请显示邮件消息的尸体是 HTML。如果不加控制，则邮件消息的正文是纯文本。"
