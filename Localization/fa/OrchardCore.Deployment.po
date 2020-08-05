@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: fa\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Deployment.pot\n"
+"X-Crowdin-File-ID: 540\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2020-05-10 20:56\n"
+"PO-Revision-Date: 2020-08-05 14:58\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Deployment\AdminMenu.cs:25
@@ -39,6 +41,14 @@ msgstr "برنامه‌های استقرار"
 msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Package Import"
 msgstr "وارد‌کردن پکیج"
+
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Deployment\AdminMenu.cs:37
+#: OrchardCore.Deployment\AdminMenu.cs:37
+msgctxt "OrchardCore.Deployment.AdminMenu"
+msgid "JSON Import"
+msgstr ""
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(DeploymentPlansBulkAction.Delete) }
 #: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:112
@@ -72,16 +82,34 @@ msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan deleted successfully"
 msgstr "برنامه استقرار با موفقیت پاک شد"
 
-#. _notifier.Success(H["Deployment package imported"]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:80
+#. _notifier.Error(H["Only zip or json files are supported"]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:84
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
-msgid "Deployment package imported"
-msgstr "پکیج استقرار وارد شده است"
+msgid "Only zip or json files are supported"
+msgstr ""
+
+#. _notifier.Success(H["Deployment package imported."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:91
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Deployment package imported."
+msgstr ""
 
 #. _notifier.Error(H["Please add a file to import."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:97
+#: OrchardCore.Deployment\Controllers\ImportController.cs:108
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Please add a file to import."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(model.Json), S["The recipe is written in an incorrect json format."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:134
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "The recipe is written in an incorrect json format."
+msgstr ""
+
+#. _notifier.Success(H["Recipe imported."]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:148
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Recipe imported."
 msgstr ""
 
 #. _notifier.Success(H["Deployment plan step added successfully"]);
@@ -357,6 +385,18 @@ msgstr "واردکردن پکیج استقرار"
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import"
 msgstr "واردکردن"
+
+#. <h1>@RenderTitleSegments(T["JSON Import"])</h1>
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:2
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
+msgid "JSON Import"
+msgstr ""
+
+#. <button class="btn btn-primary" type="submit">@T["Import"]</button>
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:15
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
+msgid "Import"
+msgstr ""
 
 #. <h5>@T["Custom File"]</h5>
 #: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:3
