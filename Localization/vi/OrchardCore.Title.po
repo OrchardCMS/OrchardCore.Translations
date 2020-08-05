@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2020-06-24 16:22\n"
+"PO-Revision-Date: 2020-08-05 14:57\n"
 
-#. updater.ModelState.AddModelError(Prefix, S["A value is required for Title."]);
-#: OrchardCore.Title\Drivers\TitlePartDisplay.cs:50
+#. updater.ModelState.AddModelError(Prefix, nameof(model.Title), S["A value is required for Title."]);
+#: OrchardCore.Title\Drivers\TitlePartDisplay.cs:60
 msgctxt "OrchardCore.Title.Drivers.TitlePartDisplay"
 msgid "A value is required for Title."
 msgstr "Tiêu đề bắt buộc phải có."
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:57
+#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:59
 msgctxt "OrchardCore.Title.Settings.TitlePartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Mẫu không chứa biểu thức Liquid hợp lệ. Chi tiết: {0}"
@@ -55,43 +55,55 @@ msgid "Standard"
 msgstr "Tiêu chuẩn"
 
 #. <label asp-for="Options">@T["Options"]</label>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:15
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Options"
 msgstr "Tùy chọn"
 
 #. <option value="@TitlePartOptions.Editable" selected="@(Model.Options == TitlePartOptions.Editable)">@T["Title is editable"]</option>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:17
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:18
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Title is editable"
 msgstr "Tiêu đề có thể chỉnh sửa"
 
 #. <option value="@TitlePartOptions.EditableRequired" selected="@(Model.Options == TitlePartOptions.EditableRequired)">@T["Title is editable and required"]</option>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:18
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Title is editable and required"
 msgstr "Tiêu đề đang chỉnh sửa"
 
 #. <option value="@TitlePartOptions.GeneratedDisabled" selected="@(Model.Options == TitlePartOptions.GeneratedDisabled)">@T["Title is generated and input is disabled"]</option>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:19
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Title is generated and input is disabled"
 msgstr "Tiêu đề được tạo và nhập vào bị vô hiệu hóa"
 
 #. <option value="@TitlePartOptions.GeneratedHidden" selected="@(Model.Options == TitlePartOptions.GeneratedHidden)">@T["Title is generated and input is hidden"]</option>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:20
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Title is generated and input is hidden"
 msgstr "Tiêu đề được tạo và nhập vào bị ẩn"
 
+#. <label asp-for="RenderTitle" class="custom-control-label">@T["Render Title"]</label>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:28
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Render Title"
+msgstr ""
+
+#. <span class="hint">— @T["Check to render the title in display views."]</span>
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:29
+msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgid "Check to render the title in display views."
+msgstr ""
+
 #. <label asp-for="Pattern">@T["Pattern"]</label>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:26
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "Pattern"
 msgstr "Mẫu"
 
 #. <span class="hint">@T["The pattern used to render the title of this content type. With Liquid support."]</span>
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:28
+#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:37
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
 msgid "The pattern used to render the title of this content type. With Liquid support."
 msgstr "Mẫu được sử dụng để phát sinh tiêu đề của loại nội dung này. Hỗ trợ Liquid."
