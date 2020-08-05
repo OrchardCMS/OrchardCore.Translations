@@ -42,13 +42,19 @@ msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Name is required"
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:75
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:73
+#. updater.ModelState.AddModelError(nameof(model.Schema), S["Invalid schema JSON supplied."]);
+msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
+msgid "Invalid schema JSON supplied."
+msgstr ""
+
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:78
 #. updater.ModelState.AddModelError(nameof(model.Name), S["Name contains illegal characters"]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Name contains illegal characters"
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:83
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:86
 #. updater.ModelState.AddModelError(nameof(model.Name), S["A query with the same name already exists"]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "A query with the same name already exists"
@@ -172,31 +178,31 @@ msgctxt "OrchardCore.Queries.Views.SqlQuery.Buttons.SummaryAdmin"
 msgid "Run"
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:10
+#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:14
 #. <label class="custom-control-label" asp-for="ReturnDocuments">@T["Return Documents"]</label>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "Return Documents"
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:11
+#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:15
 #. <span class="hint">— @T["Check to return the corresponding documents."]</span>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "Check to return the corresponding documents."
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:13
+#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:17
 #. <span class="hint">@T["When checked, the result has to be a list of document ids."]</span>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "When checked, the result has to be a list of document ids."
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:17
+#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:21
 #. <label asp-for="Query">@T["Query"]</label>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:19
+#: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:23
 #. <span class="hint">@T["The SQL query to execute."]</span>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "The SQL query to execute."
@@ -288,67 +294,67 @@ msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:13
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:14
 #. <h1>@RenderTitleSegments(T["SQL Query"])</h1>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "SQL Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:22
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:23
 #. <label asp-for="DecodedQuery">@T["Template"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Template"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:24
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:25
 #. <span class="hint">@T["You can <a href=\"{0}\">click here</a> to query all content items.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Queries", Query = matchAllQuery }))]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "You can <a href=\"{0}\">click here</a> to query all content items."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:25
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:26
 #. <span class="hint">@T["The SQL query uses standard SQL92 syntax and is converted based on the actual database. Tables will be prefixed automatically."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "The SQL query uses standard SQL92 syntax and is converted based on the actual database. Tables will be prefixed automatically."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:31
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:32
 #. <label asp-for="Parameters">@T["Parameters"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Parameters"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:33
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:34
 #. <span class="hint">@T["An optional Json object containing the parameter values for this query."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "An optional Json object containing the parameter values for this query."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:41
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:42
 #. <button type="submit" class="btn btn-primary">@T["Query"]</button>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:51
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:52
 #. <label asp-for="RawSql">@T["Final SQL Query"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Final SQL Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:53
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:54
 #. <span class="hint">@T["The query as it will be executed by the SQL database."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "The query as it will be executed by the SQL database."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:57
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:58
 #. <a href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Queries", id = "Sql", query = Model.DecodedQuery })" class="btn btn-success">@T["Create"]</a>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Create"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:65
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:66
 #. <span class="text-muted">@T["Query executed in {0} ms", Model.Elapsed.TotalMilliseconds]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Query executed in {0} ms"

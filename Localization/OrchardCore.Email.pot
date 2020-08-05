@@ -36,25 +36,25 @@ msgctxt "OrchardCore.Email.Services.SmtpService"
 msgid "An error occurred while sending an email: '{0}'"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:30
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:34
 #. public override LocalizedString DisplayText => S["Email Task"];
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Email Task"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:31
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:35
 #. public override LocalizedString Category => S["Messaging"];
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:72
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:72
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
@@ -211,9 +211,9 @@ msgid "Use Windows authentication"
 msgstr ""
 
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
-#. <span class="hint d-block">@T["When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."]</span>
+#. <span class="hint d-block">@T["When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."]</span>
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
+msgid "When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."
 msgstr ""
 
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:102
@@ -349,54 +349,66 @@ msgid "Sender"
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
-#. <span class="hint">@T["The sender's email address. Required if not the same as the From email address. With Liquid support."]</span>
+#. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The sender's email address. Required if not the same as the From email address. With Liquid support."
+msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "ReplyTo"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+#. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
 #. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Recipients"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
 #. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of recipient email addresses. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
 #. <label asp-for="SubjectExpression">@T["Subject"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
 #. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
 #. <label asp-for="Body">@T["Body"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:35
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
 #. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The body of the email message. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:41
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:48
 #. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:49
 #. <span class="hint">— @T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."

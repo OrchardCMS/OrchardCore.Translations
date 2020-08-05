@@ -54,51 +54,37 @@ msgctxt "OrchardCore.OpenId.AdminMenu"
 msgid "Scopes"
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\AccessController.cs:78
-#. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:139
-#. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:257
-#. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:318
-#. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:380
-#. ErrorDescription = S["The specified 'client_id' parameter is invalid."]
-msgctxt "OrchardCore.OpenId.Controllers.AccessController"
-msgid "The specified 'client_id' parameter is invalid."
-msgstr ""
-
-#: OrchardCore.OpenId\Controllers\AccessController.cs:95
-#. ErrorDescription = S["The logged in user is not allowed to access this client application."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:159
-#. ErrorDescription = S["The logged in user is not allowed to access this client application."]
-#: OrchardCore.OpenId\Controllers\AccessController.cs:363
-#. ErrorDescription = S["The logged in user is not allowed to access this client application."]
+#: OrchardCore.OpenId\Controllers\AccessController.cs:102
+#. S["The logged in user is not allowed to access this client application."]
+#: OrchardCore.OpenId\Controllers\AccessController.cs:239
+#. S["The logged in user is not allowed to access this client application."]
+#: OrchardCore.OpenId\Controllers\AccessController.cs:529
+#. S["The logged in user is not allowed to access this client application."]
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The logged in user is not allowed to access this client application."
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\AccessController.cs:111
-#. ErrorDescription = S["Interactive user consent is required."]
+#: OrchardCore.OpenId\Controllers\AccessController.cs:152
+#. S["Interactive user consent is required."]
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "Interactive user consent is required."
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\AccessController.cs:330
-#. ErrorDescription = S["The resource owner password credentials grant is not supported."]
-msgctxt "OrchardCore.OpenId.Controllers.AccessController"
-msgid "The resource owner password credentials grant is not supported."
-msgstr ""
-
-#: OrchardCore.OpenId\Controllers\AccessController.cs:550
-#. ErrorDescription = S["The user is not logged in."]
+#: OrchardCore.OpenId\Controllers\AccessController.cs:174
+#. S["The user is not logged in."]
 msgctxt "OrchardCore.OpenId.Controllers.AccessController"
 msgid "The user is not logged in."
 msgstr ""
 
+#: OrchardCore.OpenId\Controllers\AccessController.cs:496
+#. S["The resource owner password credentials grant is not supported."]
+msgctxt "OrchardCore.OpenId.Controllers.AccessController"
+msgid "The resource owner password credentials grant is not supported."
+msgstr ""
+
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:110
 #. _notifier.Warning(H["There are no registered services to provide roles."]);
-#: OrchardCore.OpenId\Controllers\ApplicationController.cs:267
+#: OrchardCore.OpenId\Controllers\ApplicationController.cs:262
 #. _notifier.Warning(H["There are no registered services to provide roles."]);
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "There are no registered services to provide roles."
@@ -106,7 +92,7 @@ msgstr ""
 
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:129
 #. ModelState.AddModelError(nameof(model.ClientSecret), S["No client secret can be set for public applications."]);
-#: OrchardCore.OpenId\Controllers\ApplicationController.cs:300
+#: OrchardCore.OpenId\Controllers\ApplicationController.cs:295
 #. ModelState.AddModelError(nameof(model.ClientSecret), S["No client secret can be set for public applications."]);
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "No client secret can be set for public applications."
@@ -120,19 +106,19 @@ msgstr ""
 
 #: OrchardCore.OpenId\Controllers\ApplicationController.cs:139
 #. ModelState.AddModelError(nameof(model.ClientId), S["The client identifier is already taken by another application."]);
-#: OrchardCore.OpenId\Controllers\ApplicationController.cs:310
+#: OrchardCore.OpenId\Controllers\ApplicationController.cs:305
 #. ModelState.AddModelError(nameof(model.ClientId), S["The client identifier is already taken by another application."]);
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "The client identifier is already taken by another application."
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\ApplicationController.cs:294
+#: OrchardCore.OpenId\Controllers\ApplicationController.cs:289
 #. ModelState.AddModelError(nameof(model.ClientSecret), S["Setting a new client secret is required."]);
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "Setting a new client secret is required."
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\ApplicationController.cs:474
+#: OrchardCore.OpenId\Controllers\ApplicationController.cs:469
 #. _notifier.Warning(H["OpenID Connect settings are not properly configured."]);
 msgctxt "OrchardCore.OpenId.Controllers.ApplicationController"
 msgid "OpenID Connect settings are not properly configured."
@@ -152,8 +138,8 @@ msgctxt "OrchardCore.OpenId.Controllers.ServerConfigurationController"
 msgid "OpenID server configuration successfully updated."
 msgstr ""
 
-#: OrchardCore.OpenId\Controllers\UserInfoController.cs:55
-#. ErrorDescription = S["The userinfo endpoint can only be used with access tokens representing users."]
+#: OrchardCore.OpenId\Controllers\UserInfoController.cs:60
+#. S["The userinfo endpoint can only be used with access tokens representing users."]
 msgctxt "OrchardCore.OpenId.Controllers.UserInfoController"
 msgid "The userinfo endpoint can only be used with access tokens representing users."
 msgstr ""
@@ -224,117 +210,129 @@ msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The authority cannot contain a query string or a fragment."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:121
-#. results.Add(new ValidationResult(S["Reference tokens can only be enabled when using the Encrypted token format."], new[]
-msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
-msgid "Reference tokens can only be enabled when using the Encrypted token format."
-msgstr ""
-
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:137
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:129
 #. results.Add(new ValidationResult(S["The certificate cannot be found."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The certificate cannot be found."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:144
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:136
 #. results.Add(new ValidationResult(S["The certificate doesn't contain the required private key."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The certificate doesn't contain the required private key."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:151
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:143
 #. results.Add(new ValidationResult(S["The certificate is not valid because it is marked as archived."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The certificate is not valid because it is marked as archived."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:158
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:150
 #. results.Add(new ValidationResult(S["The certificate is not valid for current date."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The certificate is not valid for current date."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:167
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:159
 #. results.Add(new ValidationResult(S["The password flow cannot be enabled when the token endpoint is disabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The password flow cannot be enabled when the token endpoint is disabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:175
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:167
 #. results.Add(new ValidationResult(S["The client credentials flow cannot be enabled when the token endpoint is disabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The client credentials flow cannot be enabled when the token endpoint is disabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:184
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:176
 #. results.Add(new ValidationResult(S["The authorization code flow cannot be enabled when the authorization and token endpoints are disabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The authorization code flow cannot be enabled when the authorization and token endpoints are disabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:194
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:186
 #. results.Add(new ValidationResult(S["The refresh token flow cannot be enabled when the token endpoint is disabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The refresh token flow cannot be enabled when the token endpoint is disabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:202
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:194
 #. results.Add(new ValidationResult(S["The refresh token flow can only be enabled if the password, authorization code or hybrid flows are enabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The refresh token flow can only be enabled if the password, authorization code or hybrid flows are enabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdServerService.cs:211
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:203
 #. results.Add(new ValidationResult(S["The implicit flow cannot be enabled when the authorization endpoint is disabled."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "The implicit flow cannot be enabled when the authorization endpoint is disabled."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:83
+#: OrchardCore.OpenId\Services\OpenIdServerService.cs:211
+#. results.Add(new ValidationResult(S["Access token encryption can only be disabled when using JWT tokens."], new[]
+msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
+msgid "Access token encryption can only be disabled when using JWT tokens."
+msgstr ""
+
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:85
 #. results.Add(new ValidationResult(S["Either a tenant or an authority must be registered."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "Either a tenant or an authority must be registered."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:94
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:96
 #. results.Add(new ValidationResult(S["The specified authority is not valid."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "The specified authority is not valid."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:102
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:104
 #. results.Add(new ValidationResult(S["The authority cannot contain a query string or a fragment."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "The authority cannot contain a query string or a fragment."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:111
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:113
 #. results.Add(new ValidationResult(S["No audience can be set when using another tenant."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "No audience can be set when using another tenant."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:119
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:121
 #. results.Add(new ValidationResult(S["An audience must be set when configuring the authority."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "An audience must be set when configuring the authority."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:128
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:129
+#. results.Add(new ValidationResult(S["Token type validation can only be disabled for remote servers."], new[]
+msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
+msgid "Token type validation can only be disabled for remote servers."
+msgstr ""
+
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:138
 #. results.Add(new ValidationResult(S["The audience cannot start with the special 'oct:' prefix."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "The audience cannot start with the special 'oct:' prefix."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:141
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:151
 #. results.Add(new ValidationResult(S["The specified tenant is not valid."]));
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:152
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:171
 #. results.Add(new ValidationResult(S["The specified tenant is not valid."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "The specified tenant is not valid."
 msgstr ""
 
-#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:163
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:162
+#. results.Add(new ValidationResult(S["Selecting a server tenant for which reference access tokens are enabled is currently not supported."], new[]
+msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
+msgid "Selecting a server tenant for which reference access tokens are enabled is currently not supported."
+msgstr ""
+
+#: OrchardCore.OpenId\Services\OpenIdValidationService.cs:181
 #. results.Add(new ValidationResult(S["No appropriate scope was found."], new[]
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "No appropriate scope was found."
@@ -373,9 +371,9 @@ msgid "Invalid path"
 msgstr ""
 
 #: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:23
-#. [Url(ErrorMessage = "Invalid signeout redirect url")]
+#. [Url(ErrorMessage = "Invalid SignedOut redirect url")]
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
-msgid "Invalid signeout redirect url"
+msgid "Invalid SignedOut redirect url"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\NavigationItemText-openid.Id.cshtml:1
@@ -719,9 +717,9 @@ msgid "The base URL of the identity server (this site). If none is provided, a d
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:95
-#. <label asp-for="CertificateStoreLocation">@T["Certificate Store Location"]</label>
+#. <label asp-for="EncryptionCertificateStoreLocation">@T["Encryption Certificate Store Location"]</label>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Certificate Store Location"
+msgid "Encryption Certificate Store Location"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:97
@@ -730,74 +728,142 @@ msgstr ""
 #. <option value="">@T["None"]</option>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:127
 #. <option value="">@T["None"]</option>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:161
+#. <option value="">@T["None"]</option>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:175
+#. <option value="">@T["None"]</option>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:191
+#. <option value="">@T["None"]</option>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "None"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:105
-#. <span class="hint">@T["Select the certificate location."]</span>
+#. <span class="hint">@T["Select the encryption certificate location."]</span>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Select the certificate location."
+msgid "Select the encryption certificate location."
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:109
-#. <label asp-for="CertificateStoreName">@T["Certificate Store Name"]</label>
+#. <label asp-for="EncryptionCertificateStoreName">@T["Encryption Certificate Store Name"]</label>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Certificate Store Name"
+msgid "Encryption Certificate Store Name"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:119
-#. <span class="hint">@T["Select the certificate store."]</span>
+#. <span class="hint">@T["Select the encryption certificate store."]</span>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Select the certificate store."
+msgid "Select the encryption certificate store."
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:125
-#. <label asp-for="CertificateThumbprint">@T["Certificate"]</label>
+#. <label asp-for="EncryptionCertificateThumbprint">@T["Encryption Certificate"]</label>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Certificate"
+msgid "Encryption Certificate"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:150
-#. <span class="hint">@T["Select the certificate for signing tokens."]</span>
+#. <span class="hint">@T["Select the encryption certificate."]</span>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Select the certificate for signing tokens."
+msgid "Select the encryption certificate."
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:154
+#. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["You need to add a certificate to your server for setting up OpenID Connect module."]</div>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:218
 #. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["You need to add a certificate to your server for setting up OpenID Connect module."]</div>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "You need to add a certificate to your server for setting up OpenID Connect module."
 msgstr ""
 
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:161
-#. <label class="custom-control-label" asp-for="UseRollingTokens">@T["Use Rolling Tokens"]</label>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:159
+#. <label asp-for="SigningCertificateStoreLocation">@T["Signing Certificate Store Location"]</label>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Use Rolling Tokens"
+msgid "Signing Certificate Store Location"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:162
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:169
+#. <span class="hint">@T["Select the signing certificate location."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Select the signing certificate location."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:173
+#. <label asp-for="SigningCertificateStoreName">@T["Signing Certificate Store Name"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Signing Certificate Store Name"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:183
+#. <span class="hint">@T["Select the signing certificate store."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Select the signing certificate store."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:189
+#. <label asp-for="SigningCertificateThumbprint">@T["Signing Certificate"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Signing Certificate"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:214
+#. <span class="hint">@T["Select the signing certificate."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Select the signing certificate."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:225
+#. <label class="custom-control-label" asp-for="UseRollingRefreshTokens">@T["Use Rolling Refresh Tokens"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Use Rolling Refresh Tokens"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:226
 #. <span class="hint">— @T["When this option is enabled, a new refresh token is issued for each refresh token request (and the previous one is automatically revoked)."]</span>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "When this option is enabled, a new refresh token is issued for each refresh token request (and the previous one is automatically revoked)."
 msgstr ""
 
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:168
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:231
 #. <label asp-for="AccessTokenFormat">@T["Token Format"]</label>
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Token Format"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:181
-#. <label class="custom-control-label" asp-for="UseReferenceTokens">@T["Use Reference Tokens"]</label>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:234
+#. @T["ASP.NET Core Data Protection"]
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Use Reference Tokens"
+msgid "ASP.NET Core Data Protection"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:182
-#. <span class="hint">— @T["When this option is enabled, it allows to keep track of all the issued tokens, when storing a very large number of claims in the authorization codes, access tokens and refresh tokens or when immediate revocation of reference access tokens is desired."]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:237
+#. @T["JSON Web Token (JWT)"]
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "When this option is enabled, it allows to keep track of all the issued tokens, when storing a very large number of claims in the authorization codes, access tokens and refresh tokens or when immediate revocation of reference access tokens is desired."
+msgid "JSON Web Token (JWT)"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:246
+#. <label class="custom-control-label" asp-for="DisableAccessTokenEncryption">@T["Disable Access Token Encryption (only for JWT tokens)"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Disable Access Token Encryption (only for JWT tokens)"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:247
+#. <span class="hint">— @T["When this option is enabled, the JWT access token tokens are not encrypted."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "When this option is enabled, the JWT access token tokens are not encrypted."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:254
+#. <label class="custom-control-label" asp-for="UseReferenceAccessTokens">@T["Use Reference Access Tokens"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Use Reference Access Tokens"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:255
+#. <span class="hint">— @T["When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."
 msgstr ""
 
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:4
@@ -836,13 +902,25 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "The unique name associated with this tenant. If none is provided, the tenant name is automatically used as the default audience."
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Access\Authorize.cshtml:9
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:41
+#. <label class="custom-control-label" asp-for="DisableTokenTypeValidation">@T["Disable token type validation"]</label>
+msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
+msgid "Disable token type validation"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:42
+#. <span class="hint">— @T["Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."]</span>
+msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
+msgid "Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Access\Authorize.cshtml:10
 #. <h1>@T["Authorization"]</h1>
 msgctxt "OrchardCore.OpenId.Views.Access.Authorize"
 msgid "Authorization"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Access\Authorize.cshtml:11
+#: OrchardCore.OpenId\Views\Access\Authorize.cshtml:12
 #. <p class="lead text-left">@T["Do you want to grant <strong>{0}</strong> access to your data? (scopes requested: {1})", Model.ApplicationName, Model.Scope]</p>
 msgctxt "OrchardCore.OpenId.Views.Access.Authorize"
 msgid "Do you want to grant <strong>{0}</strong> access to your data? (scopes requested: {1})"
@@ -854,13 +932,13 @@ msgctxt "OrchardCore.OpenId.Views.Access.Error"
 msgid "Ooooops, something went really bad! :("
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Access\Logout.cshtml:9
+#: OrchardCore.OpenId\Views\Access\Logout.cshtml:10
 #. <h1>@T["Log out"]</h1>
 msgctxt "OrchardCore.OpenId.Views.Access.Logout"
 msgid "Log out"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Access\Logout.cshtml:11
+#: OrchardCore.OpenId\Views\Access\Logout.cshtml:12
 #. <p class="lead text-left">@T["Are you sure you want to log out?"]</p>
 msgctxt "OrchardCore.OpenId.Views.Access.Logout"
 msgid "Are you sure you want to log out?"
@@ -1030,6 +1108,24 @@ msgstr ""
 #. @T["The consent type affects the way authorization requests are handled."]
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "The consent type affects the way authorization requests are handled."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:120
+#. <li>@T["When the consent is explicit, the authorization request must be approved by the end user. <strong>This is the recommended option.</strong></li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "When the consent is explicit, the authorization request must be approved by the end user. <strong>This is the recommended option.</strong></li>"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:121
+#. <li>@T["When the consent is implicit, the authorization request is assumed to be pre-approved and no consent form is displayed.</li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "When the consent is implicit, the authorization request is assumed to be pre-approved and no consent form is displayed.</li>"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:122
+#. <li>@T["When the consent is external, the authorization request is rejected unless a pre-existing authorization (granted programmatically) already exists.</li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "When the consent is external, the authorization request is rejected unless a pre-existing authorization (granted programmatically) already exists.</li>"
 msgstr ""
 
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:129
@@ -1222,6 +1318,24 @@ msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "The consent type affects the way authorization requests are handled."
 msgstr ""
 
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:122
+#. <li>@T["When the consent is explicit, the authorization request must be approved by the end user. <strong>This is the recommended option.</strong></li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "When the consent is explicit, the authorization request must be approved by the end user. <strong>This is the recommended option.</strong></li>"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:123
+#. <li>@T["When the consent is implicit, the authorization request is assumed to be pre-approved and no consent form is displayed.</li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "When the consent is implicit, the authorization request is assumed to be pre-approved and no consent form is displayed.</li>"
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:124
+#. <li>@T["When the consent is external, the authorization request is rejected unless a pre-existing authorization (granted programmatically) already exists.</li>"]
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "When the consent is external, the authorization request is rejected unless a pre-existing authorization (granted programmatically) already exists.</li>"
+msgstr ""
+
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:131
 #. <h6>@T["Client Credentials Roles"]</h6>
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
@@ -1324,19 +1438,25 @@ msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Tenants"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:39
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:36
+#. <span class="hint">@T["Note: the server tenant is always included in the access token audiences, even if no scope is requested."]</span>
+msgctxt "OrchardCore.OpenId.Views.Scope.Create"
+msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:40
 #. <label asp-for="Resources">@T["Additional resources (API audiences)"]</label>
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Additional resources (API audiences)"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:45
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:46
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:46
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:47
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Cancel"
@@ -1372,19 +1492,25 @@ msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Tenants"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:39
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:36
+#. <span class="hint">@T["Note: the server tenant is always included in the access token audiences, even if no scope is requested."]</span>
+msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
+msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
+msgstr ""
+
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:40
 #. <label asp-for="Resources">@T["Additional resources (API audiences)"]</label>
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Additional resources (API audiences)"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:45
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:46
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:46
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:47
 #. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Cancel"

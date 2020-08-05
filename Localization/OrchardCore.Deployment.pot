@@ -28,6 +28,14 @@ msgctxt "OrchardCore.Deployment.AdminMenu"
 msgid "Package Import"
 msgstr ""
 
+#: OrchardCore.Deployment\AdminMenu.cs:37
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Deployment\AdminMenu.cs:37
+#. .Add(S["JSON Import"], S["JSON Import"].PrefixPosition(), deployment => deployment
+msgctxt "OrchardCore.Deployment.AdminMenu"
+msgid "JSON Import"
+msgstr ""
+
 #: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:112
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(DeploymentPlansBulkAction.Delete) }
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
@@ -60,16 +68,34 @@ msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan deleted successfully"
 msgstr ""
 
-#: OrchardCore.Deployment\Controllers\ImportController.cs:80
-#. _notifier.Success(H["Deployment package imported"]);
+#: OrchardCore.Deployment\Controllers\ImportController.cs:84
+#. _notifier.Error(H["Only zip or json files are supported"]);
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
-msgid "Deployment package imported"
+msgid "Only zip or json files are supported"
 msgstr ""
 
-#: OrchardCore.Deployment\Controllers\ImportController.cs:97
+#: OrchardCore.Deployment\Controllers\ImportController.cs:91
+#. _notifier.Success(H["Deployment package imported."]);
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Deployment package imported."
+msgstr ""
+
+#: OrchardCore.Deployment\Controllers\ImportController.cs:108
 #. _notifier.Error(H["Please add a file to import."]);
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Please add a file to import."
+msgstr ""
+
+#: OrchardCore.Deployment\Controllers\ImportController.cs:134
+#. ModelState.AddModelError(nameof(model.Json), S["The recipe is written in an incorrect json format."]);
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "The recipe is written in an incorrect json format."
+msgstr ""
+
+#: OrchardCore.Deployment\Controllers\ImportController.cs:148
+#. _notifier.Success(H["Recipe imported."]);
+msgctxt "OrchardCore.Deployment.Controllers.ImportController"
+msgid "Recipe imported."
 msgstr ""
 
 #: OrchardCore.Deployment\Controllers\StepController.cs:121
@@ -341,6 +367,18 @@ msgstr ""
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:8
 #. <button class="btn btn-primary" type="submit">@T["Import"]</button>
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
+msgid "Import"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:2
+#. <h1>@RenderTitleSegments(T["JSON Import"])</h1>
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
+msgid "JSON Import"
+msgstr ""
+
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:15
+#. <button class="btn btn-primary" type="submit">@T["Import"]</button>
+msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "Import"
 msgstr ""
 
