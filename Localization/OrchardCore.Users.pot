@@ -86,49 +86,49 @@ msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Reset password"
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:218
+#: OrchardCore.Users\Startup.cs:219
 #. return new SiteSettingsPropertyDeploymentStepDriver<LoginSettings>(S["Login settings"], S["Exports the Login settings."]);
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Login settings"
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:218
+#: OrchardCore.Users\Startup.cs:219
 #. return new SiteSettingsPropertyDeploymentStepDriver<LoginSettings>(S["Login settings"], S["Exports the Login settings."]);
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Exports the Login settings."
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:269
+#: OrchardCore.Users\Startup.cs:270
 #. return new SiteSettingsPropertyDeploymentStepDriver<ChangeEmailSettings>(S["Change Email settings"], S["Exports the Change Email settings."]);
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Change Email settings"
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:269
+#: OrchardCore.Users\Startup.cs:270
 #. return new SiteSettingsPropertyDeploymentStepDriver<ChangeEmailSettings>(S["Change Email settings"], S["Exports the Change Email settings."]);
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Exports the Change Email settings."
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:312
+#: OrchardCore.Users\Startup.cs:313
 #. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Registration settings"
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:312
+#: OrchardCore.Users\Startup.cs:313
 #. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Exports the Registration settings."
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:376
+#: OrchardCore.Users\Startup.cs:377
 #. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Reset Password settings"
 msgstr ""
 
-#: OrchardCore.Users\Startup.cs:376
+#: OrchardCore.Users\Startup.cs:377
 #. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Exports the Reset Password settings."
@@ -600,6 +600,36 @@ msgctxt "OrchardCore.Users.Workflows.Activities.UserUpdatedEvent"
 msgid "User Updated Event"
 msgstr ""
 
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:28
+#. public override LocalizedString Category => S["User"];
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "User"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:42
+#. public override LocalizedString DisplayText => S["Validate User Task"];
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Validate User Task"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Anonymous"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Authenticated"
+msgstr ""
+
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "InRole"
+msgstr ""
+
 #: OrchardCore.Users\Views\ChangeEmailSettings.Edit.cshtml:7
 #. <label class="custom-control-label" asp-for="AllowChangeEmail">@T["Allow the users to change their email"]</label>
 msgctxt "OrchardCore.Users.Views.ChangeEmailSettings.Edit"
@@ -846,25 +876,25 @@ msgctxt "OrchardCore.Users.Views.TemplateUserLostPassword"
 msgid "Thank you"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserButtons.cshtml:7
+#: OrchardCore.Users\Views\UserButtons.cshtml:8
 #. <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserButtons.cshtml:8
-#. <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Users\Views\UserButtons.cshtml:9
+#. <a class="btn btn-danger btn-sm @(currentUser ? "disabled" : "")" asp-action="Delete" asp-route-id="@user.Id" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserButtons.cshtml:9
+#: OrchardCore.Users\Views\UserButtons.cshtml:11
 #. <a asp-action="EditPassword" asp-route-id="@user.Id" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Edit Password"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserButtons.cshtml:14
+#: OrchardCore.Users\Views\UserButtons.cshtml:16
 #. <button asp-action="SendVerificationEmail" asp-controller="Registration" class="btn btn-info btn-sm">@T["Send verification email"]</button>
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Send verification email"
@@ -914,13 +944,13 @@ msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Roles"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:57
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:71
 #. <label asp-for="IsEnabled" class="custom-control-label cursor-pointer">@T["Is enabled?"]</label>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Is enabled?"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:58
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:72
 #. <span class="hint">— @T["Uncheck to disable this user account."]</span>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Uncheck to disable this user account."
@@ -1401,13 +1431,13 @@ msgid "User is Deleted."
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Design.cshtml:4
-#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Disabled"])</h4>
+#. <h4><i class="fa fa-user-times"></i>@Model.Activity.GetTitleOrDefault(() => T["User Disabled"])</h4>
 msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Design"
 msgid "User Disabled"
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Thumbnail.cshtml:1
-#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Disabled"]</h4>
+#. <h4 class="card-title"><i class="fa fa-user-times"></i>@T["User Disabled"]</h4>
 msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Thumbnail"
 msgid "User Disabled"
 msgstr ""
@@ -1419,13 +1449,13 @@ msgid "User is disabled."
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
-#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
+#. <h4><i class="fa fa-user-check"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Design"
 msgid "User Enabled"
 msgstr ""
 
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Thumbnail.cshtml:1
-#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Enabled"]</h4>
+#. <h4 class="card-title"><i class="fa fa-user-check"></i>@T["User Enabled"]</h4>
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
 msgid "User Enabled"
 msgstr ""
@@ -1470,6 +1500,42 @@ msgstr ""
 #. <p>@T["User is updated."]</p>
 msgctxt "OrchardCore.Users.Views.Items.UserUpdatedEvent.Fields.Thumbnail"
 msgid "User is updated."
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Design.cshtml:7
+#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate User"])</h4>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Design"
+msgid "Validate User"
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:6
+#. <label asp-for="SetUserName" class="form-check-label">@T["Set the 'UserName' workflow property if the user is authenticated"]</label>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "Set the 'UserName' workflow property if the user is authenticated"
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:10
+#. <label asp-for="Roles">@T["Roles"]</label>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "Roles"
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:13
+#. <span class="hint">@T["The 'InRole' outcome will be triggerred if the user has at least one of the selected roles."]</span>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "The 'InRole' outcome will be triggerred if the user has at least one of the selected roles."
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Thumbnail.cshtml:1
+#. <h4 class="card-title"><i class="fa fa-user"></i>@T["Validate User"]</h4>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Thumbnail"
+msgid "Validate User"
+msgstr ""
+
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Thumbnail.cshtml:2
+#. <p>@T["Check if the user exists for the current request and has the specified role(s)."]</p>
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Thumbnail"
+msgid "Check if the user exists for the current request and has the specified role(s)."
 msgstr ""
 
 #: OrchardCore.Users\Views\Registration\ConfirmEmail.cshtml:5
