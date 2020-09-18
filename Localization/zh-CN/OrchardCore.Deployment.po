@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2020-08-17 09:24\n"
+"PO-Revision-Date: 2020-09-18 12:19\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Deployment\AdminMenu.cs:25
@@ -65,19 +65,27 @@ msgstr "部署计划 {0} 已成功删除。"
 #. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["The name is mandatory."]);
 #. ModelState.AddModelError(nameof(EditDeploymentPlanViewModel.Name), S["The name is mandatory."]);
 #: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:219
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:278
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:284
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "The name is mandatory."
 msgstr "该名称是必需的。"
 
+#. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["A deployment plan with the same name already exists."]);
+#. ModelState.AddModelError(nameof(CreateDeploymentPlanViewModel.Name), S["A deployment plan with the same name already exists."]);
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:225
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:291
+msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
+msgid "A deployment plan with the same name already exists."
+msgstr ""
+
 #. _notifier.Success(H["Deployment plan updated successfully"]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:288
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:302
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan updated successfully"
 msgstr "部署计划更新成功"
 
 #. _notifier.Success(H["Deployment plan deleted successfully"]);
-#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:314
+#: OrchardCore.Deployment\Controllers\DeploymentPlanController.cs:328
 msgctxt "OrchardCore.Deployment.Controllers.DeploymentPlanController"
 msgid "Deployment plan deleted successfully"
 msgstr "部署计划更新成功"
@@ -178,12 +186,6 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Name"
 msgstr "名称"
 
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required."]</span>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:10
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
-msgid "The name is required."
-msgstr "该名称是必需的。"
-
 #. <button class="btn btn-primary" type="submit">@T["Create"]</button>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:14
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
@@ -265,12 +267,6 @@ msgstr "编辑部署计划"
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Name"
 msgstr "名称"
-
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required."]</span>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:11
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
-msgid "The name is required."
-msgstr "该名称是必需的。"
 
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:15
