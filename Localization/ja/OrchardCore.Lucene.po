@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-10-07 22:32\n"
+"PO-Revision-Date: 2020-10-07 22:42\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #. .Add(S["Search"],S["Search"].PrefixPosition(), entry => entry
@@ -460,7 +460,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:51
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "Check to index draft if it exists, otherwise only the published version is indexed."
-msgstr ""
+msgstr "下書きをインデックスに含めるか指定します。そうでなければ公開したバージョンのみインデックスに含めます。"
 
 #. <button class="btn btn-primary" type="submit">@T["Create"]</button>
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:59
@@ -594,19 +594,19 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:62
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Rebuild"
-msgstr ""
+msgstr "再作成"
 
 #. <a asp-action="Edit" asp-route-IndexName="@entry.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:63
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #. <a asp-action="Delete" asp-route-IndexName="@entry.Name" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #. @T["<strong>Nothing here!</strong> There are no indices for the moment."]
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:74
@@ -632,19 +632,19 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:23
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Index"
-msgstr ""
+msgstr "インデックス"
 
 #. <span class="hint">@T["The lucene index to search on"]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:30
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "The lucene index to search on"
-msgstr ""
+msgstr "検索で使用する Lucene インデックス"
 
 #. <label asp-for="DecodedQuery">@T["Template"]</label>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:34
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Template"
-msgstr ""
+msgstr "テンプレート"
 
 #. <span class="hint">@T["You can use the <a href=\"{0}\">Match All query</a> to search all documents.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Lucene", Query = matchAllQuery, IndexName = Model.IndexName }))]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:36
@@ -662,7 +662,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:41
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Parameters"
-msgstr ""
+msgstr "パラメータ"
 
 #. <span class="hint">@T["An optional Json object containing the parameter values for this query."]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:43
@@ -674,7 +674,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:47
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Query"
-msgstr ""
+msgstr "クエリ"
 
 #. <p><span class="text-muted">@T["Found {0} result(s) in {1} ms", Model.Count.ToString(), Model.Elapsed.TotalMilliseconds.ToString()]</span></p>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:54
@@ -686,13 +686,13 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:62
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Create"
-msgstr ""
+msgstr "作成"
 
 #. <h5>@T["Search Indexes"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "Search Indexes"
-msgstr ""
+msgstr "検索インデックス"
 
 #. @T["Include all search indexes."]
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:17
@@ -716,7 +716,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:15
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "All"
-msgstr ""
+msgstr "全て"
 
 #. <span class="badge badge-warning">@T["No index selected."]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:26
@@ -740,13 +740,13 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Edit"
 msgid "Search Settings"
-msgstr ""
+msgstr "検索の設定"
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Summary.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Summary"
 msgid "Search Settings"
-msgstr ""
+msgstr "検索の設定"
 
 #. <span class="hint">@T["Adds search settings to the plan."]</span>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Summary.cshtml:5
@@ -758,11 +758,11 @@ msgstr ""
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Search Settings"
-msgstr ""
+msgstr "検索の設定"
 
 #. <p>@T["Exports search settings."]</p>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports search settings."
-msgstr ""
+msgstr "検索設定をエクスポート"
 
