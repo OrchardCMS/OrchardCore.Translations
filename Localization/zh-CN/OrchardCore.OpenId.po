@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2020-09-24 02:23\n"
+"PO-Revision-Date: 2020-10-08 00:52\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.OpenId\AdminMenu.cs:31
@@ -288,7 +288,7 @@ msgstr "当授权终点禁用时，不可启用隐含的流量。"
 #: OrchardCore.OpenId\Services\OpenIdServerService.cs:211
 msgctxt "OrchardCore.OpenId.Services.OpenIdServerService"
 msgid "Access token encryption can only be disabled when using JWT tokens."
-msgstr ""
+msgstr "访问令牌加密只能在使用 JWT 令牌时被禁用。"
 
 #. results.Add(new ValidationResult(S["Either a tenant or an authority must be registered."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:85
@@ -324,7 +324,7 @@ msgstr "配置权限时必须设置访问群体。"
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:129
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "Token type validation can only be disabled for remote servers."
-msgstr ""
+msgstr "令牌类型验证只能禁用远程服务器。"
 
 #. results.Add(new ValidationResult(S["The audience cannot start with the special 'oct:' prefix."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:138
@@ -344,7 +344,7 @@ msgstr "指定的租户无效。"
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:162
 msgctxt "OrchardCore.OpenId.Services.OpenIdValidationService"
 msgid "Selecting a server tenant for which reference access tokens are enabled is currently not supported."
-msgstr ""
+msgstr "选择一个已启用参考访问令牌的服务器租户目前不支持。"
 
 #. results.Add(new ValidationResult(S["No appropriate scope was found."], new[]
 #: OrchardCore.OpenId\Services\OpenIdValidationService.cs:181
@@ -388,7 +388,7 @@ msgstr "无效路径"
 #: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:23
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
 msgid "Invalid SignedOut redirect url"
-msgstr ""
+msgstr "无效的退出重定向地址"
 
 #. <span class="icon"><i class="fa fa-openid" aria-hidden="true"></i></span><span class="title">@T["OpenID Connect"]</span>
 #: OrchardCore.OpenId\Views\NavigationItemText-openid.Id.cshtml:1
@@ -734,7 +734,7 @@ msgstr "标识服务器 (此站点) 的基本 URL。如果没有提供, 则会�
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:95
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Encryption Certificate Store Location"
-msgstr ""
+msgstr "加密证书商店位置"
 
 #. <option value="">@T["None"]</option>
 #. <option value="">@T["None"]</option>
@@ -756,7 +756,7 @@ msgstr "无"
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:105
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the encryption certificate location."
-msgstr ""
+msgstr "选择加密证书位置。"
 
 #. <label asp-for="EncryptionCertificateStoreName">@T["Encryption Certificate Store Name"]</label>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:109
@@ -860,25 +860,25 @@ msgstr "JSON Web 令牌 (JWT)"
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:246
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Disable Access Token Encryption (only for JWT tokens)"
-msgstr ""
+msgstr "禁用访问令牌加密 (仅用于 JWT 令牌)"
 
 #. <span class="hint">— @T["When this option is enabled, the JWT access token tokens are not encrypted."]</span>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:247
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "When this option is enabled, the JWT access token tokens are not encrypted."
-msgstr ""
+msgstr "启用此选项时，JWT 访问令牌不会加密。"
 
 #. <label class="custom-control-label" asp-for="UseReferenceAccessTokens">@T["Use Reference Access Tokens"]</label>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:254
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Use Reference Access Tokens"
-msgstr ""
+msgstr "使用参考访问令牌"
 
 #. <span class="hint">— @T["When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."]</span>
 #: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:255
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."
-msgstr ""
+msgstr "启用此选项后，访问令牌将存储在数据库中，固定大小令牌将还给客户端， 这可能有助于储存大量的索赔。 注意：当其他租户被配置为使用此服务器时，此选项当前无法启用。"
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:4
@@ -926,7 +926,7 @@ msgstr "禁用令牌类型验证"
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:42
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."
-msgstr ""
+msgstr "令牌类型验证可以禁用来接受不支持 'at+jwt' 类型头的服务器发布的 JWT 令牌。"
 
 #. <h1>@T["Authorization"]</h1>
 #: OrchardCore.OpenId\Views\Access\Authorize.cshtml:10
@@ -1128,7 +1128,7 @@ msgstr "同意类型会影响授权请求的处理方式。"
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:120
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "When the consent is explicit, the authorization request must be approved by the end user. <strong>This is the recommended option.</strong>"
-msgstr ""
+msgstr "当表示同意时，授权请求必须得到最终用户的批准。 <strong>这是推荐选项。</strong>"
 
 #. <li>@T["When the consent is implicit, the authorization request is assumed to be pre-approved and no consent form is displayed."]</li>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:121
@@ -1348,7 +1348,7 @@ msgstr ""
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:124
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "When the consent is external, the authorization request is rejected unless a pre-existing authorization (granted programmatically) already exists."
-msgstr ""
+msgstr "如果同意是外来的，则除非事先存在的授权（按方案授予）已经存在，否则批准请求将被拒绝。"
 
 #. <h6>@T["Client Credentials Roles"]</h6>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:131
@@ -1456,7 +1456,7 @@ msgstr "租户"
 #: OrchardCore.OpenId\Views\Scope\Create.cshtml:36
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
-msgstr ""
+msgstr "注意：服务器租户总是包含在访问令牌受众中，即使没有请求范围。"
 
 #. <label asp-for="Resources">@T["Additional resources (API audiences)"]</label>
 #: OrchardCore.OpenId\Views\Scope\Create.cshtml:40
@@ -1510,7 +1510,7 @@ msgstr "租客"
 #: OrchardCore.OpenId\Views\Scope\Edit.cshtml:36
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
-msgstr ""
+msgstr "注意：服务器租户总是包含在访问令牌受众中，即使没有请求范围。"
 
 #. <label asp-for="Resources">@T["Additional resources (API audiences)"]</label>
 #: OrchardCore.OpenId\Views\Scope\Edit.cshtml:40
