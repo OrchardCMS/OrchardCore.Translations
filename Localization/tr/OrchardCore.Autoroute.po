@@ -10,32 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2020-08-22 10:52\n"
-
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink can't be set to the homepage, please use the homepage option instead."]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:126
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
-msgstr "Your permalink can't be set to the homepage, please use the homepage option instead.\n"
-"Geçici link anasayfaya ayarlnamaz, bunun için anasayfa seçeneğini kullanınız."
-
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:132
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
-msgstr "Lütfen kalıcı bağlantılarda bu karakterlerden birini kullanmayın: {0}. Boşluk ve çift slash'e izin verilmez.(Onun yerine tire veya altçizgi kullanabilirsiniz)."
-
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink is too long. The permalink can only be up to {0} characters.", MaxPathLength]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:137
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink is too long. The permalink can only be up to {0} characters."
-msgstr "Kalıcı bağlantın çok uzun. Kalıcı link sadece {0} karaktere kadar olabilir."
-
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink is already in use."]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:154
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink is already in use."
-msgstr "Kalıcı link zaten kullanılıyor."
+"PO-Revision-Date: 2020-10-31 11:26\n"
 
 #. Description = S["the custom URL part of the content item"];
 #: OrchardCore.Autoroute\GraphQL\AutorouteInputObjectType.cs:13
@@ -61,26 +36,26 @@ msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteQueryObjectType"
 msgid "The permalinks for your content item."
 msgstr "İçerik öğeniz için kalıcı bağlantılar."
 
-#. context.Fail(S["Your permalink can't be set to the homepage, please use the homepage option instead."]);
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:160
+#. context.Fail(S["Your permalink can't be set to the homepage, please use the homepage option instead."], nameof(part.Path));
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:156
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
 msgstr "Kalıcı linki anasayfa olarak ayarlayamazsınız. Onun yerine Anasayfa seçeneğini kullanabilirsiniz."
 
-#. context.Fail(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:166
+#. context.Fail(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], nameof(part.Path));
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:162
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
 msgstr "Lütfen kalıcı bağlantılarda bu karakterlerden birini kullanmayın: {0}. Boşluk ve çift slash'e izin verilmez.(Onun yerine tire veya altçizgi kullanabilirsiniz)."
 
-#. context.Fail(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePartDisplay.MaxPathLength]);
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:171
+#. context.Fail(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePartDisplay.MaxPathLength], nameof(part.Path));
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:167
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr "Kalıcı bağlantı boyutu çok büyük. En fazla {0} karakter uzunluğunda olabilir."
 
-#. context.Fail(S["Your permalink is already in use."]);
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:176
+#. context.Fail(S["Your permalink is already in use."], nameof(part.Path));
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:172
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is already in use."
 msgstr "Bu kalıcı bağlantı zaten kullanımda."
