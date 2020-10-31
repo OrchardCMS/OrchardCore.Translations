@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
-"PO-Revision-Date: 2020-10-09 09:07\n"
+"PO-Revision-Date: 2020-10-31 12:05\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Recipes\AdminMenu.cs:25
@@ -75,19 +75,19 @@ msgid "  Website:     {0}"
 msgstr "  Уебсайт: {0}"
 
 #. _notifier.Error(H["Recipe was not found"]);
-#: OrchardCore.Recipes\Controllers\AdminController.cs:97
+#: OrchardCore.Recipes\Controllers\AdminController.cs:98
 msgctxt "OrchardCore.Recipes.Controllers.AdminController"
 msgid "Recipe was not found"
 msgstr "Рецептата не е намерена"
 
-#. _notifier.Success(H["The recipe '{0}' has been run successfully", recipe.Name]);
-#: OrchardCore.Recipes\Controllers\AdminController.cs:125
+#. _notifier.Success(H["The recipe '{0}' has been run successfully", recipe.DisplayName]);
+#: OrchardCore.Recipes\Controllers\AdminController.cs:126
 msgctxt "OrchardCore.Recipes.Controllers.AdminController"
 msgid "The recipe '{0}' has been run successfully"
 msgstr "Рецептата {0} е приложена успешно"
 
 #. <h1>@RenderTitleSegments(T["Recipes"])</h1>
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#. <a id="btn-run-@Html.GenerateIdFromName(recipe.Name)" asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:6
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
@@ -112,25 +112,25 @@ msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Setup Recipe"
 msgstr "Настрой рецепта"
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#. <a id="btn-run-@Html.GenerateIdFromName(recipe.Name)" asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Are you sure you want to run the recipe?"
 msgstr "Сигурни ли сте, че искате да приложите рецептата?"
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#. <a id="btn-run-@Html.GenerateIdFromName(recipe.Name)" asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Yes"
 msgstr "Да"
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#. <a id="btn-run-@Html.GenerateIdFromName(recipe.Name)" asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "No"
 msgstr "Не"
 
-#. <a asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
+#. <a id="btn-run-@Html.GenerateIdFromName(recipe.Name)" asp-action="Execute" asp-route-basePath="@recipe.BasePath" asp-route-fileName="@recipe.FileName" role="button" class="btn btn-primary btn-sm" data-title="@T["Recipes"]" data-message="@T["Are you sure you want to run the recipe?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" itemprop="RemoveUrl UnsafeUrl">@T["Run"]</a>
 #: OrchardCore.Recipes\Views\Admin\Index.cshtml:64
 msgctxt "OrchardCore.Recipes.Views.Admin.Index"
 msgid "Run"
