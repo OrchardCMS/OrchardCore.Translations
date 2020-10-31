@@ -1,15 +1,3 @@
-#: OrchardCore.Alias\Drivers\AliasPartDisplayDriver.cs:59
-#. updater.ModelState.AddModelError(Prefix, nameof(alias.Alias), S["Your alias is too long. The alias can only be up to {0} characters.", MaxAliasLength]);
-msgctxt "OrchardCore.Alias.Drivers.AliasPartDisplayDriver"
-msgid "Your alias is too long. The alias can only be up to {0} characters."
-msgstr ""
-
-#: OrchardCore.Alias\Drivers\AliasPartDisplayDriver.cs:64
-#. updater.ModelState.AddModelError(Prefix, nameof(alias.Alias), S["Your alias is already in use."]);
-msgctxt "OrchardCore.Alias.Drivers.AliasPartDisplayDriver"
-msgid "Your alias is already in use."
-msgstr ""
-
 #: OrchardCore.Alias\GraphQL\AliasInputObjectType.cs:13
 #. Description = S["the alias part of the content item"];
 msgctxt "OrchardCore.Alias.GraphQL.AliasInputObjectType"
@@ -29,13 +17,13 @@ msgid "Alternative path for the content item"
 msgstr ""
 
 #: OrchardCore.Alias\Handlers\AliasPartHandler.cs:52
-#. context.Fail(S["Your alias is too long. The alias can only be up to {0} characters.", AliasPartDisplayDriver.MaxAliasLength]);
+#. context.Fail(S["Your alias is too long. The alias can only be up to {0} characters.", AliasPartDisplayDriver.MaxAliasLength], nameof(part.Alias));
 msgctxt "OrchardCore.Alias.Handlers.AliasPartHandler"
 msgid "Your alias is too long. The alias can only be up to {0} characters."
 msgstr ""
 
 #: OrchardCore.Alias\Handlers\AliasPartHandler.cs:57
-#. context.Fail(S["Your alias is already in use."]);
+#. context.Fail(S["Your alias is already in use."], nameof(part.Alias));
 msgctxt "OrchardCore.Alias.Handlers.AliasPartHandler"
 msgid "Your alias is already in use."
 msgstr ""

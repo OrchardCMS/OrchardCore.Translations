@@ -306,13 +306,13 @@ msgid "The name is required"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:15
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "Create"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:16
-#. <a class="btn btn-secondary" asp-route-action="List">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "Cancel"
 msgstr ""
@@ -336,19 +336,19 @@ msgid "The name is required"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Save"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:15
-#. <a class="btn btn-primary" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
+#. <a class="btn btn-primary edit-nodes" role="button" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Edit Admin Nodes"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:16
-#. <a class="btn btn-secondary" asp-route-action="List">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Cancel"
 msgstr ""
@@ -360,7 +360,7 @@ msgid "Admin Menus"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Menu\List.cshtml:12
-#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Admin Menu"]</a>
+#. <a asp-route-action="Create" class="btn btn-primary float-right create" role="button">@T["Add Admin Menu"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Add Admin Menu"
 msgstr ""
@@ -428,12 +428,12 @@ msgid "Create Node"
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Node\Create.cshtml:14
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Create"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:18
+#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:19
 #. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Cancel"
@@ -470,7 +470,7 @@ msgid "The position order of this link in the admin menu."
 msgstr ""
 
 #: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:26
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "Save"
 msgstr ""
@@ -481,7 +481,7 @@ msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:37
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:38
 #. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "Cancel"
@@ -493,37 +493,37 @@ msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Edit Nodes for '{0}'"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:19
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:20
 #. @T["Add Node"]
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Add Node"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:51
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:53
 #. @T["<strong>Nothing here!</strong> There are no nodes on this tree for the moment."]
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "<strong>Nothing here!</strong> There are no nodes on this tree for the moment."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:57
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:59
 #. <a class="btn btn-secondary" asp-route-controller="menu" asp-route-action="List">@T["Back"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Back"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:66
-#. <h5 class="modal-title">@T["Available Admin Nodes"]</h5>
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:68
+#. <h5 class="modal-title" id="admin-tree-nodes-title">@T["Available Admin Nodes"]</h5>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Available Admin Nodes"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:82
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:84
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:88
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:90
 #. <div id="move-error-message" class="d-none" data-message="@T["There was an error when moving the tree node."]"></div>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "There was an error when moving the tree node."

@@ -1,27 +1,3 @@
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:126
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink can't be set to the homepage, please use the homepage option instead."]);
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
-msgstr ""
-
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:132
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
-msgstr ""
-
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:137
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink is too long. The permalink can only be up to {0} characters.", MaxPathLength]);
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink is too long. The permalink can only be up to {0} characters."
-msgstr ""
-
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplay.cs:154
-#. updater.ModelState.AddModelError(Prefix, nameof(autoroute.Path), S["Your permalink is already in use."]);
-msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplay"
-msgid "Your permalink is already in use."
-msgstr ""
-
 #: OrchardCore.Autoroute\GraphQL\AutorouteInputObjectType.cs:13
 #. Description = S["the custom URL part of the content item"];
 msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteInputObjectType"
@@ -46,26 +22,26 @@ msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteQueryObjectType"
 msgid "The permalinks for your content item."
 msgstr ""
 
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:160
-#. context.Fail(S["Your permalink can't be set to the homepage, please use the homepage option instead."]);
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:156
+#. context.Fail(S["Your permalink can't be set to the homepage, please use the homepage option instead."], nameof(part.Path));
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
 msgstr ""
 
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:166
-#. context.Fail(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage]);
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:162
+#. context.Fail(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], nameof(part.Path));
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
 msgstr ""
 
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:171
-#. context.Fail(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePartDisplay.MaxPathLength]);
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:167
+#. context.Fail(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePartDisplay.MaxPathLength], nameof(part.Path));
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr ""
 
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:176
-#. context.Fail(S["Your permalink is already in use."]);
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:172
+#. context.Fail(S["Your permalink is already in use."], nameof(part.Path));
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is already in use."
 msgstr ""

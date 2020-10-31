@@ -173,13 +173,13 @@ msgid "Name"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:14
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Create"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:15
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Cancel"
 msgstr ""
@@ -190,53 +190,53 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Deployment Plan"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:13
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:12
 #. @T["Execute"]
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Execute"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:22
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:18
 #. @T["Add Step"]
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Add Step"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:45
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:40
 #. @T["<strong>Nothing here!</strong> There are no steps on this plan for the moment."]
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "<strong>Nothing here!</strong> There are no steps on this plan for the moment."
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:55
-#. <h5 class="modal-title">@T["Available Steps"]</h5>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:50
+#. <h5 class="modal-title" id="available-steps-title">@T["Available Steps"]</h5>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Steps"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:62
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:57
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:62
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:57
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Filter"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:77
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:72
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:113
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:108
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:87
-#. <h5 class="modal-title">@T["Available Targets"]</h5>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:82
+#. <h5 class="modal-title" id="available-targets-title">@T["Available Targets"]</h5>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Targets"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:105
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:100
 #. <a class="btn btn-primary btn-sm" href="@Url.RouteUrl(routeWithId)" itemprop="UnsafeUrl">@T["Select"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Select"
@@ -255,13 +255,13 @@ msgid "Name"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:15
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Save"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:16
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Cancel"
 msgstr ""
@@ -279,7 +279,7 @@ msgid "Search"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:24
-#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Deployment Plan"]</a>
+#. <a asp-route-action="Create" class="btn btn-primary float-right create">@T["Add Deployment Plan"]</a>
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Add Deployment Plan"
 msgstr ""
@@ -361,7 +361,7 @@ msgid "Import Deployment Package"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:8
-#. <button class="btn btn-primary" type="submit">@T["Import"]</button>
+#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import"
 msgstr ""
@@ -373,7 +373,7 @@ msgid "JSON Import"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Import\Json.cshtml:15
-#. <button class="btn btn-primary" type="submit">@T["Import"]</button>
+#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
 msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "Import"
 msgstr ""
@@ -625,13 +625,13 @@ msgid "Create Step"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Step\Create.cshtml:14
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Create"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Step\Create.cshtml:15
-#. <a class="btn btn-secondary" asp-route-action="Display" asp-route-controller="DeploymentPlan" asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Display" asp-route-controller="DeploymentPlan" asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Cancel"
 msgstr ""
@@ -643,18 +643,18 @@ msgid "Edit Step"
 msgstr ""
 
 #: OrchardCore.Deployment\Views\Step\Edit.cshtml:14
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:21
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:22
 #. itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:26
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:28
 #. asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Cancel"
