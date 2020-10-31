@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2020-10-25 19:22\n"
+"PO-Revision-Date: 2020-10-31 11:27\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.AdminMenu\AdminMenu.cs:29
@@ -319,13 +319,13 @@ msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "The name is required"
 msgstr "이름을 입력해 주십시오"
 
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:15
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "Create"
 msgstr "생성"
 
-#. <a class="btn btn-secondary" asp-route-action="List">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
 #: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:16
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
 msgid "Cancel"
@@ -349,19 +349,19 @@ msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "The name is required"
 msgstr "이름을 입력해 주십시오"
 
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Save"
 msgstr "저장"
 
-#. <a class="btn btn-primary" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
+#. <a class="btn btn-primary edit-nodes" role="button" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:15
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Edit Admin Nodes"
 msgstr "관리자 노드 수정"
 
-#. <a class="btn btn-secondary" asp-route-action="List">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
 #: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:16
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Cancel"
@@ -373,7 +373,7 @@ msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Admin Menus"
 msgstr "관리자 메뉴"
 
-#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add Admin Menu"]</a>
+#. <a asp-route-action="Create" class="btn btn-primary float-right create" role="button">@T["Add Admin Menu"]</a>
 #: OrchardCore.AdminMenu\Views\Menu\List.cshtml:12
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Add Admin Menu"
@@ -441,14 +441,14 @@ msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Create Node"
 msgstr "노드 생성"
 
-#. <button class="btn btn-primary" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.AdminMenu\Views\Node\Create.cshtml:14
 msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Create"
 msgstr "생성"
 
 #. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:18
+#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:19
 msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Cancel"
 msgstr "취소"
@@ -483,7 +483,7 @@ msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "The position order of this link in the admin menu."
 msgstr "관리자 메뉴에서 링크의 순서"
 
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:26
 msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "Save"
@@ -496,7 +496,7 @@ msgid "Delete"
 msgstr "삭제"
 
 #. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:37
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:38
 msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
 msgid "Cancel"
 msgstr "취소"
@@ -508,37 +508,37 @@ msgid "Edit Nodes for '{0}'"
 msgstr "'{0}' 노스 수정"
 
 #. @T["Add Node"]
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:19
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:20
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Add Node"
 msgstr "노드 추가"
 
 #. @T["<strong>Nothing here!</strong> There are no nodes on this tree for the moment."]
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:51
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:53
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "<strong>Nothing here!</strong> There are no nodes on this tree for the moment."
 msgstr "<strong>존재하지 않습니다!</strong> 트리에 노드가 없습니다."
 
 #. <a class="btn btn-secondary" asp-route-controller="menu" asp-route-action="List">@T["Back"]</a>
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:57
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:59
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Back"
 msgstr "뒤로"
 
-#. <h5 class="modal-title">@T["Available Admin Nodes"]</h5>
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:66
+#. <h5 class="modal-title" id="admin-tree-nodes-title">@T["Available Admin Nodes"]</h5>
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:68
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Available Admin Nodes"
 msgstr "존재하는 관리자 노드"
 
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:82
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:84
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Cancel"
 msgstr "취소"
 
 #. <div id="move-error-message" class="d-none" data-message="@T["There was an error when moving the tree node."]"></div>
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:88
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:90
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "There was an error when moving the tree node."
 msgstr "트리 노드를 옮길때 오류가 발생했습니다."
