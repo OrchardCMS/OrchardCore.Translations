@@ -236,8 +236,8 @@ msgctxt "OrchardCore.Content.Controllers.ApiController"
 msgid "One or more validation errors occurred."
 msgstr ""
 
-#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:91
-#. context.Updater.ModelState.AddModelError("CommonPart.Owner", S["Invalid user name"]);
+#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:99
+#. context.Updater.ModelState.AddModelError("CommonPart.OwnerName", S["Invalid user name"]);
 msgctxt "OrchardCore.Contents.Drivers.OwnerEditorDriver"
 msgid "Invalid user name"
 msgstr ""
@@ -525,15 +525,15 @@ msgid "The date when the content item was created or first published."
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPart-Owner.Edit.cshtml:5
-#. <label asp-for="Owner">@T["Owner"]</label>
+#. <label asp-for="OwnerName">@T["Owner Name"]</label>
 msgctxt "OrchardCore.Contents.Views.CommonPart-Owner.Edit"
-msgid "Owner"
+msgid "Owner Name"
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPart-Owner.Edit.cshtml:8
-#. <span class="hint">@T["The owner of the content item."]</span>
+#. <span class="hint">@T["The name of the owner of the content item."]</span>
 msgctxt "OrchardCore.Contents.Views.CommonPart-Owner.Edit"
-msgid "The owner of the content item."
+msgid "The name of the owner of the content item."
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPartSettings.Edit.cshtml:6
@@ -543,7 +543,7 @@ msgid "Display date editor"
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPartSettings.Edit.cshtml:7
-#. <span class="hint">— @T["Check to be able to edit the creation date of the content item."]</span>
+#. <span class="hint dashed">@T["Check to be able to edit the creation date of the content item."]</span>
 msgctxt "OrchardCore.Contents.Views.CommonPartSettings.Edit"
 msgid "Check to be able to edit the creation date of the content item."
 msgstr ""
@@ -555,7 +555,7 @@ msgid "Display owner editor"
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPartSettings.Edit.cshtml:14
-#. <span class="hint">— @T["Check to be able to edit the owner of the content item. The <code>SiteOwner</code> permission will also be required."]</span>
+#. <span class="hint dashed">@T["Check to be able to edit the owner of the content item. The <code>SiteOwner</code> permission will also be required."]</span>
 msgctxt "OrchardCore.Contents.Views.CommonPartSettings.Edit"
 msgid "Check to be able to edit the owner of the content item. The <code>SiteOwner</code> permission will also be required."
 msgstr ""
@@ -919,7 +919,7 @@ msgid "Edit"
 msgstr ""
 
 #: OrchardCore.Contents\Views\ContentsButtonEdit_SummaryAdmin.cshtml:20
-#. <a display-for="@contentItem" class="btn btn-success btn-sm">@T["View"]</a>
+#. <a display-for="@contentItem" target="_blank" class="btn btn-success btn-sm">@T["View"]</a>
 msgctxt "OrchardCore.Contents.Views.ContentsButtonEdit_SummaryAdmin"
 msgid "View"
 msgstr ""
@@ -965,7 +965,7 @@ msgid "Include display text"
 msgstr ""
 
 #: OrchardCore.Contents\Views\FullTextAspectSettings.Edit.cshtml:20
-#. <span class="hint">— @T["Check to include the display text in the full-text content."]</span>
+#. <span class="hint dashed">@T["Check to include the display text in the full-text content."]</span>
 msgctxt "OrchardCore.Contents.Views.FullTextAspectSettings.Edit"
 msgid "Check to include the display text in the full-text content."
 msgstr ""
@@ -977,7 +977,7 @@ msgid "Include body parts"
 msgstr ""
 
 #: OrchardCore.Contents\Views\FullTextAspectSettings.Edit.cshtml:26
-#. <span class="hint">— @T["Check to include the body parts content in the full-text content."]</span>
+#. <span class="hint dashed">@T["Check to include the body parts content in the full-text content."]</span>
 msgctxt "OrchardCore.Contents.Views.FullTextAspectSettings.Edit"
 msgid "Check to include the body parts content in the full-text content."
 msgstr ""
@@ -989,7 +989,7 @@ msgid "Use custom full-text"
 msgstr ""
 
 #: OrchardCore.Contents\Views\FullTextAspectSettings.Edit.cshtml:32
-#. <span class="hint">— @T["Check to define a custom Liquid template generating some text to include in the full-text content."]</span>
+#. <span class="hint dashed">@T["Check to define a custom Liquid template generating some text to include in the full-text content."]</span>
 msgctxt "OrchardCore.Contents.Views.FullTextAspectSettings.Edit"
 msgid "Check to define a custom Liquid template generating some text to include in the full-text content."
 msgstr ""
@@ -1463,7 +1463,7 @@ msgid "Nothing here!"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesAdminNode.Fields.TreeSummary.cshtml:42
-#. <span class="text-muted">- @T["Content Types"]</span>
+#. <span class="text-muted dashed">@T["Content Types"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesAdminNode.Fields.TreeSummary"
 msgid "Content Types"
 msgstr ""
@@ -1707,7 +1707,7 @@ msgid "Nothing here!"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.SummaryAdmin.cshtml:38
-#. <span class="text-muted">- @T["Sitemap Content Types"]</span>
+#. <span class="text-muted dashed">@T["Sitemap Content Types"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesSitemapSource.SummaryAdmin"
 msgid "Sitemap Content Types"
 msgstr ""
@@ -1857,7 +1857,7 @@ msgid "Publish"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\CreateContentTask.Fields.Edit.cshtml:15
-#. <span class="hint">— @T["Check if you want the content item to be published when being created. Leave unchecked to create a draft version."]</span>
+#. <span class="hint dashed">@T["Check if you want the content item to be published when being created. Leave unchecked to create a draft version."]</span>
 msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Edit"
 msgid "Check if you want the content item to be published when being created. Leave unchecked to create a draft version."
 msgstr ""
