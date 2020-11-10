@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: el\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Users.pot\n"
+"X-Crowdin-File-ID: 630\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2020-06-02 12:33\n"
+"PO-Revision-Date: 2020-11-09 09:59\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:26
@@ -42,13 +44,13 @@ msgstr "Σύνδεση"
 #: OrchardCore.Users\AdminMenu.cs:65
 msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
 msgid "Security"
-msgstr ""
+msgstr "Ασφάλεια"
 
 #. .Add(S["Settings"], settings => settings
 #: OrchardCore.Users\AdminMenu.cs:66
 msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
 msgid "Settings"
-msgstr ""
+msgstr "Ρυθμίσεις"
 
 #. .Add(S["Email"], S["Email"].PrefixPosition(), registration => registration
 #. .Add(S["Email"], S["Email"].PrefixPosition(), registration => registration
@@ -56,7 +58,7 @@ msgstr ""
 #: OrchardCore.Users\AdminMenu.cs:67
 msgctxt "OrchardCore.Users.ChangeEmailAdminMenu"
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #. .Add(S["Security"], security => security
 #: OrchardCore.Users\AdminMenu.cs:95
@@ -98,6 +100,54 @@ msgctxt "OrchardCore.Users.ResetPasswordAdminMenu"
 msgid "Reset password"
 msgstr "Επαναφορά κωδικού πρόσβασης"
 
+#. return new SiteSettingsPropertyDeploymentStepDriver<LoginSettings>(S["Login settings"], S["Exports the Login settings."]);
+#: OrchardCore.Users\Startup.cs:222
+msgctxt "OrchardCore.Users.LoginDeploymentStartup"
+msgid "Login settings"
+msgstr "Ρυθμίσεις σύνδεσης"
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<LoginSettings>(S["Login settings"], S["Exports the Login settings."]);
+#: OrchardCore.Users\Startup.cs:222
+msgctxt "OrchardCore.Users.LoginDeploymentStartup"
+msgid "Exports the Login settings."
+msgstr "Εξάγει τις ρυθμίσεις σύνδεσης."
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<ChangeEmailSettings>(S["Change Email settings"], S["Exports the Change Email settings."]);
+#: OrchardCore.Users\Startup.cs:273
+msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
+msgid "Change Email settings"
+msgstr "Αλλαγή ρυθμίσεων e-mail"
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<ChangeEmailSettings>(S["Change Email settings"], S["Exports the Change Email settings."]);
+#: OrchardCore.Users\Startup.cs:273
+msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
+msgid "Exports the Change Email settings."
+msgstr "Εξάγει τις ρυθμίσεις αλλαγής email."
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
+#: OrchardCore.Users\Startup.cs:316
+msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
+msgid "Registration settings"
+msgstr "Ρυθμίσεις εγγραφής"
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
+#: OrchardCore.Users\Startup.cs:316
+msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
+msgid "Exports the Registration settings."
+msgstr "Εξάγει τις ρυθμίσεις εγγραφής."
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
+#: OrchardCore.Users\Startup.cs:380
+msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
+msgid "Reset Password settings"
+msgstr "Επαναφορά ρυθμίσεων κωδικού πρόσβασης"
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
+#: OrchardCore.Users\Startup.cs:380
+msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
+msgid "Exports the Reset Password settings."
+msgstr "Εξάγει τις ρυθμίσεις Επαναφορά κωδικού πρόσβασης."
+
 #. Context.Output.WriteLine(S["User created successfully"]);
 #: OrchardCore.Users\Commands\UserCommands.cs:51
 msgctxt "OrchardCore.Users.Commands.UserCommands"
@@ -110,11 +160,11 @@ msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "You must confirm your email."
 msgstr "Πρέπει να επιβεβαιώσεις το email σου."
 
-#. ModelState.AddModelError(String.Empty, S["Your account is disabled. Please contact an administrator."]);
+#. ModelState.AddModelError(String.Empty, S["The specified user is not allowed to sign in."]);
 #: OrchardCore.Users\Controllers\AccountController.cs:166
 msgctxt "OrchardCore.Users.Controllers.AccountController"
-msgid "Your account is disabled. Please contact an administrator."
-msgstr "Ο λογαριασμός σου έχει απενεργοποιηθεί. Παρακαλώ, επικοινώνησε με τον διαχειριστή."
+msgid "The specified user is not allowed to sign in."
+msgstr "Ο συγκεκριμένος χρήστης δεν επιτρέπεται να συνδεθεί."
 
 #. ModelState.AddModelError("", S["Local login is disabled."]);
 #: OrchardCore.Users\Controllers\AccountController.cs:188
@@ -127,26 +177,26 @@ msgstr "Η τοπική σύνδεση είναι απενεργοποιημέν
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 #: OrchardCore.Users\Controllers\AccountController.cs:214
-#: OrchardCore.Users\Controllers\AccountController.cs:401
-#: OrchardCore.Users\Controllers\AccountController.cs:477
-#: OrchardCore.Users\Controllers\AccountController.cs:597
+#: OrchardCore.Users\Controllers\AccountController.cs:403
+#: OrchardCore.Users\Controllers\AccountController.cs:479
+#: OrchardCore.Users\Controllers\AccountController.cs:599
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Invalid login attempt."
 msgstr "Μη έγκυρη απόπειρα σύνδεσης."
 
 #. string message = S["Site does not allow user registration."];
-#: OrchardCore.Users\Controllers\AccountController.cs:428
+#: OrchardCore.Users\Controllers\AccountController.cs:430
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
 msgstr "Ο ιστότοπος δεν επιτρέπει την εγγραφή χρήστη."
 
 #. }, S["Confirm your account"], _logger);
 #. user = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, S["Confirm your account"], _logger);
-#: OrchardCore.Users\Controllers\AccountController.cs:458
-#: OrchardCore.Users\Controllers\AccountController.cs:540
+#: OrchardCore.Users\Controllers\AccountController.cs:460
+#: OrchardCore.Users\Controllers\AccountController.cs:542
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Confirm your account"
-msgstr "Επιβεβαίωσε το λογαριασμό σου"
+msgstr "Επιβεβαιώστε τον λογαριασμό σας"
 
 #. new SelectListItem() { Text = S["All"], Value = nameof(UsersFilter.All) },
 #: OrchardCore.Users\Controllers\AdminController.cs:159
@@ -248,36 +298,42 @@ msgstr "Ο Κωδικός πρόσβασης τροποποιήθηκε με ε�
 #: OrchardCore.Users\Controllers\ChangeEmailController.cs:67
 msgctxt "OrchardCore.Users.Controllers.ChangeEmailController"
 msgid "This email is already your current one."
-msgstr ""
+msgstr "Αυτό το email είναι ήδη το τρέχον."
 
 #. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
 #: OrchardCore.Users\Controllers\ChangeEmailController.cs:71
 msgctxt "OrchardCore.Users.Controllers.ChangeEmailController"
 msgid "A user with the same email already exists."
-msgstr ""
+msgstr "Υπάρχει ήδη ένας χρήστης με το ίδιο email."
 
-#. ModelState.AddModelError("Email", S["Invalid email."]);
+#. ModelState.AddModelError("Email", S["Email is required."]);
 #: OrchardCore.Users\Controllers\RegistrationController.cs:79
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
-msgid "Invalid email."
+msgid "Email is required."
 msgstr ""
 
 #. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:86
+#: OrchardCore.Users\Controllers\RegistrationController.cs:89
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "A user with the same email already exists."
-msgstr ""
+msgstr "Υπάρχει ήδη ένας χρήστης με το ίδιο email."
+
+#. ModelState.AddModelError("Email", S["Invalid email."]);
+#: OrchardCore.Users\Controllers\RegistrationController.cs:94
+msgctxt "OrchardCore.Users.Controllers.RegistrationController"
+msgid "Invalid email."
+msgstr "Μη έγκυρο email."
 
 #. if (await this.RegisterUser(model, S["Confirm your account"], _logger) != null)
 #. await this.SendEmailConfirmationTokenAsync(user, S["Confirm your account"]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:95
-#: OrchardCore.Users\Controllers\RegistrationController.cs:144
+#: OrchardCore.Users\Controllers\RegistrationController.cs:102
+#: OrchardCore.Users\Controllers\RegistrationController.cs:151
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Confirm your account"
 msgstr "Επιβεβαιώστε το λογαριασμό σας"
 
 #. _notifier.Success(H["Verification email sent."]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:146
+#: OrchardCore.Users\Controllers\RegistrationController.cs:153
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Verification email sent."
 msgstr "Ένα μήνυμα επαλήθευσης ηλεκτρονικού ταχυδρομείου έχει σταλεί."
@@ -288,65 +344,89 @@ msgctxt "OrchardCore.Users.Controllers.ResetPasswordController"
 msgid "Reset your password"
 msgstr "Επαναφέρετε τον κωδικό πρόσβασης σας"
 
+#. _notifier.Warning(H["Cannot disable the only administrator."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:101
+msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
+msgid "Cannot disable the only administrator."
+msgstr ""
+
+#. _notifier.Warning(H["Cannot disable current user."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:113
+msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
+msgid "Cannot disable current user."
+msgstr ""
+
 #. context.Updater.ModelState.AddModelError("UserName", S["A user name is required."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:97
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:126
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A user name is required."
 msgstr "Απαιτείται το όνομα χρήστη."
 
 #. context.Updater.ModelState.AddModelError("Email", S["An email is required."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:102
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:131
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "An email is required."
 msgstr "Απαιτείται η διεύθυνση ηλεκτρονικού ταχυδρομείου."
 
 #. context.Updater.ModelState.AddModelError(string.Empty, S["The user name is already used."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:111
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:140
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The user name is already used."
 msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη."
 
+#. context.Updater.ModelState.AddModelError(string.Empty, S["Cannot modify user name of the currently logged in user."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:146
+msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
+msgid "Cannot modify user name of the currently logged in user."
+msgstr ""
+
 #. context.Updater.ModelState.AddModelError(string.Empty, S["The email is already used."]);
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:121
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:155
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The email is already used."
 msgstr "Η διεύθυνση ηλεκτρονικού ταχυδρομείου χρησιμοποιείται ήδη."
 
-#. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
-#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:20
-msgctxt "OrchardCore.Users.ViewModels.ChangeEmailViewModel"
-msgid "Email is required."
+#. _notifier.Warning(H["Cannot remove administrator role from the only administrator."]);
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:197
+msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
+msgid "Cannot remove administrator role from the only administrator."
 msgstr ""
 
+#. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
+#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:19
+msgctxt "OrchardCore.Users.ViewModels.ChangeEmailViewModel"
+msgid "Email is required."
+msgstr "Απαιτείται η διεύθυνση email."
+
 #. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
-#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:24
+#: OrchardCore.Users\ViewModels\ChangeEmailViewModel.cs:23
 msgctxt "OrchardCore.Users.ViewModels.ChangeEmailViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Μη έγκυρο email."
 
 #. yield return new ValidationResult(S["Current password is required."], new[] { nameof(CurrentPassword) });
 #: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:24
 msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
 msgid "Current password is required."
-msgstr ""
+msgstr "Απαιτείται τρέχων κωδικός πρόσβασης."
 
 #. yield return new ValidationResult(S["Password is required."], new[] { nameof(Password) });
 #: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:29
 msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Απαιτείται κωδικός πρόσβασης."
 
 #. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(PasswordConfirmation) });
 #: OrchardCore.Users\ViewModels\ChangePasswordViewModel.cs:34
 msgctxt "OrchardCore.Users.ViewModels.ChangePasswordViewModel"
 msgid "The new password and confirmation password do not match."
-msgstr ""
+msgstr "Ο νέος κωδικός πρόσβασης και ο κωδικός επιβεβαίωσης δεν ταιριάζουν."
 
 #. yield return new ValidationResult(S["Invalid Email."], new[] { "Email" });
-#: OrchardCore.Users\ViewModels\EditUserViewModel.cs:39
+#: OrchardCore.Users\ViewModels\EditUserViewModel.cs:38
 msgctxt "OrchardCore.Users.ViewModels.EditUserViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Μη έγκυρο email."
 
 #. yield return new ValidationResult(S["Password is required"], new[] { nameof(Password) });
 #: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:18
@@ -358,46 +438,46 @@ msgstr "Απαιτείται κωδικός πρόσβασης"
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:22
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username is required."
-msgstr ""
+msgstr "Το Όνομα χρήστη είναι απαραίτητο."
 
 #. yield return new ValidationResult(S["Password is required."], new[] { "Password" });
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:27
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Απαιτείται κωδικός πρόσβασης."
 
 #. yield return new ValidationResult(S["Email is required!"], new[] { "Email" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:37
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:36
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Email is required!"
 msgstr "Απαιτείται η διεύθυνση ηλεκτρονικού ταχυδρομείου!"
 
 #. yield return new ValidationResult(S["Invalid Email."], new[] { "Email" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:42
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:41
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Μη έγκυρο email."
 
 #. yield return new ValidationResult(S["Username is required!"], new[] { "UserName" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:47
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:46
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Username is required!"
 msgstr "Το Όνομα χρήστη είναι απαραίτητο!"
 
 #. yield return new ValidationResult(S["Password is required!"], new[] { "Password" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:52
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:51
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Password is required!"
 msgstr "Απαιτείται κωδικός πρόσβασης!"
 
 #. yield return new ValidationResult(S["Confirm Password do not match"], new[] { "ConfirmPassword" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:57
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:56
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Confirm Password do not match"
 msgstr "Η επιβεβαίωση του κωδικού πρόσβασης δεν ταιριάζει"
 
 #. yield return new ValidationResult(string.Format(S["Password must be between {0} and {1} characters"], 6, 100), new[] { "Password" });
-#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:62
+#: OrchardCore.Users\ViewModels\RegisterExternalLoginViewModel.cs:61
 msgctxt "OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel"
 msgid "Password must be between {0} and {1} characters"
 msgstr "Ο κωδικός πρόσβασης πρέπει να είναι μεταξύ {0} και {1} χαρακτήρων"
@@ -406,55 +486,55 @@ msgstr "Ο κωδικός πρόσβασης πρέπει να είναι μετ
 #: OrchardCore.Users\ViewModels\RegisterViewModel.cs:26
 msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
 msgid "Username is required."
-msgstr ""
+msgstr "Το Όνομα χρήστη είναι απαραίτητο."
 
 #. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
 #: OrchardCore.Users\ViewModels\RegisterViewModel.cs:31
 msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
 msgid "Email is required."
-msgstr ""
+msgstr "Απαιτείται η διεύθυνση email."
 
 #. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
 #: OrchardCore.Users\ViewModels\RegisterViewModel.cs:35
 msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Μη έγκυρο email."
 
 #. yield return new ValidationResult(S["Password is required."], new[] { nameof(Password) });
 #: OrchardCore.Users\ViewModels\RegisterViewModel.cs:40
 msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Απαιτείται κωδικός πρόσβασης."
 
 #. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(ConfirmPassword) });
 #: OrchardCore.Users\ViewModels\RegisterViewModel.cs:45
 msgctxt "OrchardCore.Users.ViewModels.RegisterViewModel"
 msgid "The new password and confirmation password do not match."
-msgstr ""
+msgstr "Ο νέος κωδικός πρόσβασης και ο κωδικός επιβεβαίωσης δεν ταιριάζουν."
 
 #. yield return new ValidationResult(S["Email is required."], new[] { nameof(Email) });
 #: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:26
 msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
 msgid "Email is required."
-msgstr ""
+msgstr "Απαιτείται η διεύθυνση email."
 
 #. yield return new ValidationResult(S["Invalid Email."], new[] { nameof(Email) });
 #: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:30
 msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Μη έγκυρο email."
 
 #. yield return new ValidationResult(S["New password is required."], new[] { nameof(NewPassword) });
 #: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:35
 msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
 msgid "New password is required."
-msgstr ""
+msgstr "Ο νέος κωδικός πρόσβασης απαιτείται."
 
 #. yield return new ValidationResult(S["The new password and confirmation password do not match."], new[] { nameof(PasswordConfirmation) });
 #: OrchardCore.Users\ViewModels\ResetPasswordViewModel.cs:40
 msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
 msgid "The new password and confirmation password do not match."
-msgstr ""
+msgstr "Ο νέος κωδικός πρόσβασης και ο κωδικός επιβεβαίωσης δεν ταιριάζουν."
 
 #. public override LocalizedString DisplayText => S["Assign User Role Task"];
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:31
@@ -481,37 +561,37 @@ msgid "Failed"
 msgstr "Απέτυχε"
 
 #. public override LocalizedString DisplayText => S["Register User Task"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:51
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:55
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr "Εγγραφή εργασίας χρήστη"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:54
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:58
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Content"
 msgstr "Περιεχόμενο"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr "Ολοκληρώθηκε"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr "Έγκυρο"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:79
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr "Μη έγκυρο"
 
 #. updater.ModelState.TryAddModelError("", S["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:144
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:148
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr "Δεν διατίθεται υπηρεσία ηλεκτρονικού ταχυδρομείου"
@@ -534,17 +614,23 @@ msgctxt "OrchardCore.Users.Workflows.Activities.UserCreatedEvent"
 msgid "User Created Event"
 msgstr "Δημιουργία συμβάντος από χρήστη"
 
+#. public override LocalizedString DisplayText => S["User Deleted Event"];
+#: OrchardCore.Users\Workflows\Activities\UserDeletedEvent.cs:15
+msgctxt "OrchardCore.Users.Workflows.Activities.UserDeletedEvent"
+msgid "User Deleted Event"
+msgstr "Συμβάν που διαγράφηκε από τον χρήστη"
+
 #. public override LocalizedString DisplayText => S["User Disabled Event"];
 #: OrchardCore.Users\Workflows\Activities\UserDisabledEvent.cs:15
 msgctxt "OrchardCore.Users.Workflows.Activities.UserDisabledEvent"
 msgid "User Disabled Event"
-msgstr ""
+msgstr "Συμβάν που απενεργοποιήθηκε από τον χρήστη"
 
 #. public override LocalizedString DisplayText => S["User Enabled Event"];
 #: OrchardCore.Users\Workflows\Activities\UserEnabledEvent.cs:15
 msgctxt "OrchardCore.Users.Workflows.Activities.UserEnabledEvent"
 msgid "User Enabled Event"
-msgstr ""
+msgstr "Συμβάν ενεργοποιημένο από τον χρήστη"
 
 #. public override LocalizedString DisplayText => S["User Loggedin Event"];
 #: OrchardCore.Users\Workflows\Activities\UserLoggedInEvent.cs:15
@@ -552,62 +638,98 @@ msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
 msgid "User Loggedin Event"
 msgstr "Συμβάν Συνδεδεμένου χρήστης"
 
+#. public override LocalizedString DisplayText => S["User Updated Event"];
+#: OrchardCore.Users\Workflows\Activities\UserUpdatedEvent.cs:15
+msgctxt "OrchardCore.Users.Workflows.Activities.UserUpdatedEvent"
+msgid "User Updated Event"
+msgstr "Συμβάν ενημερωμένο από το χρήστη"
+
+#. public override LocalizedString Category => S["User"];
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:28
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "User"
+msgstr "Χρήστης"
+
+#. public override LocalizedString DisplayText => S["Validate User Task"];
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:42
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Validate User Task"
+msgstr "Επικύρωση εργασίας χρήστη"
+
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Anonymous"
+msgstr "Ανώνυμος"
+
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "Authenticated"
+msgstr "Επικυρωμένος"
+
+#. return Outcomes(S["Anonymous"], S["Authenticated"], S["InRole"]);
+#: OrchardCore.Users\Workflows\Activities\ValidateUserTask.cs:46
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "InRole"
+msgstr "InRole"
+
 #. <label class="custom-control-label" asp-for="AllowChangeEmail">@T["Allow the users to change their email"]</label>
 #: OrchardCore.Users\Views\ChangeEmailSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Users.Views.ChangeEmailSettings.Edit"
 msgid "Allow the users to change their email"
-msgstr ""
+msgstr "Επιτρέψε στους χρήστες να αλλάξουν το email τους"
 
 #. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:14
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use site theme for login page"
-msgstr "Χρησιμοποίησε το θέμα ιστότοπου για τη σελίδα σύνδεσης"
+msgstr "Χρησιμοποιήστε το θέμα του ιστότοπου για τη σελίδα σύνδεσης"
 
-#. <span class="hint">— @T["Requires an active site theme."]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:15
+#. <span class="hint dashed">@T["Requires an active site theme."]</span>
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Requires an active site theme."
 msgstr "Απαιτεί ένα ενεργό θέμα ιστότοπου."
 
 #. <label class="custom-control-label" asp-for="UseExternalProviderIfOnlyOneDefined">@T["Use external provider for login."]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:23
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use external provider for login."
-msgstr "Χρησιμοποίησε έναν εξωτερικό πάροχο για να συνδεθείς."
+msgstr "Χρησιμοποιήστε εξωτερικό πάροχο για σύνδεση."
 
-#. <span class="hint">— @T["If only one external provider is defined, auto challenge the provider to login. You should also configure registration options"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:24
+#. <span class="hint dashed">@T["If only one external provider is defined, auto challenge the provider to login. You should also configure registration options"]</span>
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "If only one external provider is defined, auto challenge the provider to login. You should also configure registration options"
 msgstr "Εάν οριστεί ένας μόνο εξωτερικός πάροχος, αυτόματα θα είναι ο πάροχος σύνδεσης. Θα πρέπει επίσης να ρυθμίσεις τις επιλογές εγγραφής"
 
 #. <label class="custom-control-label" asp-for="DisableLocalLogin">@T["Disable local password login."]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:32
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Disable local password login."
 msgstr "Απενεργοποίηση σύνδεσης τοπικού κωδικού πρόσβασης."
 
-#. <span class="hint">— @T["When selected, users are not allowed to login with username/password. Make sure there is at least one admin with linked account"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:33
+#. <span class="hint dashed">@T["When selected, users are not allowed to login with username/password. Make sure there is at least one admin with linked account"]</span>
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:34
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "When selected, users are not allowed to login with username/password. Make sure there is at least one admin with linked account"
-msgstr "Όταν επιλεγεί, οι χρήστες δεν επιτρέπεται να συνδεθούν με όνομα χρήστη / κωδικό πρόσβασης. Βεβαιωσου ότι υπάρχει τουλάχιστον ένας διαχειριστής με συνδεδεμένο λογαριασμό"
+msgstr "Όταν επιλεγεί, οι χρήστες δεν επιτρέπεται να συνδεθούν με όνομα χρήστη / κωδικό πρόσβασης. Βεβαιωθείτε ότι υπάρχει τουλάχιστον ένας διαχειριστής με συνδεδεμένο λογαριασμό"
 
 #. <label class="custom-control-label" asp-for="UseScriptToSyncRoles">@T["Use a script to set user roles based on external provider claims"]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:41
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:42
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use a script to set user roles based on external provider claims"
-msgstr "Χρησιμοποίησε μια δέσμη ενεργειών για να ορίσεις τους ρόλους των χρηστών με βάση τις εξωτερικές αξιώσεις παροχέων"
+msgstr "Χρησιμοποιήστε μια δέσμη ενεργειών για να ορίσετε τους ρόλους των χρηστών με βάση τις εξωτερικές αξιώσεις παροχέων"
 
-#. <span class="hint">— @T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:42
+#. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:43
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
 msgstr "Αν επιλεγεί, οι IExternalLoginEventHandlers που ορίζονται σε ενότητες δεν ενεργοποιούνται"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript()">@T["Reset Script"]</button>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:75
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:76
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Reset Script"
 msgstr "Επαναφορά Script"
@@ -622,121 +744,121 @@ msgstr "Ασφάλεια"
 #: OrchardCore.Users\Views\NavigationItemText-users.Id.cshtml:1
 msgctxt "OrchardCore.Users.Views.NavigationItemText-users.Id"
 msgid "Users"
-msgstr ""
+msgstr "Χρήστες"
 
 #. <label asp-for="UsersCanRegister">@T["Configure users registration."]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:12
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Configure users registration."
 msgstr "Ρύθμιση παραμέτρων εγγραφής χρηστών."
 
 #. <li>@T["when NoRegistration is selected, no new users can register"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:23
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when NoRegistration is selected, no new users can register"
 msgstr "όταν έχει επιλεγεί η επιλογή NoRegistration, δεν μπορούν να εγγραφούν νέοι χρήστες"
 
 #. <li>@T["when AllowRegistration is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:24
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when AllowRegistration is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"
 msgstr "όταν επιλεγεί η επιλογή AllowRegistration, εμφανίζεται ένας σύνδεσμος που επιτρέπει στους χρήστες να εγγραφούν στον ιστότοπο. Εάν υπάρχουν εξωτερικοί παροχείς, μετά την επικύρωση ο χρήστης μπορεί να εγγραφεί"
 
 #. <li>@T["when AllowOnlyExternalUsers is selected, only users authenticated with external providers can register on the site"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:25
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:26
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when AllowOnlyExternalUsers is selected, only users authenticated with external providers can register on the site"
 msgstr "όταν επιλεγεί το AllowOnlyExternalUsers, μόνο οι χρήστες που έχουν πιστοποιηθεί με εξωτερικούς παρόχους μπορούν να εγγραφούν στον ιστότοπο"
 
 #. <label class="custom-control-label" asp-for="UsersMustValidateEmail">@T["Users must verify their email address"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:34
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Users must verify their email address"
 msgstr "Οι χρήστες πρέπει να επιβεβαιώσουν τη διεύθυνση ηλεκτρονικού ταχυδρομείου τους"
 
 #. <div class="alert alert-warning collapse" id="warnEmailValidation">@T["The users whose email address has not been confirmed will not be able to login or reset their password."]</div>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:38
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:39
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "The users whose email address has not been confirmed will not be able to login or reset their password."
 msgstr "Οι χρήστες των οποίων η διεύθυνση ηλεκτρονικού ταχυδρομείου δεν έχει επιβεβαιωθεί, δεν θα μπορούν να συνδεθούν ή να επαναφέρουν τον κωδικό πρόσβασης τους."
 
 #. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for registration page"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:44
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:45
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use site theme for registration page"
-msgstr "Χρησιμοποίησε το θέμα ιστότοπου για τη σελίδα εγγραφής"
+msgstr "Χρησιμοποιήστε το θέμα του ιστότοπου για τη σελίδα εγγραφής"
 
-#. <span class="hint">— @T["Requires an active site theme."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:45
+#. <span class="hint dashed">@T["Requires an active site theme."]</span>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:46
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Requires an active site theme."
 msgstr "Απαιτεί ένα ενεργό θέμα ιστότοπου."
 
-#. <h5 class="form-group">@T["External Authentication"]<span class="hint"> — @T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:49
+#. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:50
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "External Authentication"
 msgstr "Εξωτερικός έλεγχος ταυτότητας"
 
-#. <h5 class="form-group">@T["External Authentication"]<span class="hint"> — @T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:49
+#. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:50
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Settings when registering with external authentication providers"
 msgstr "Ρυθμίσεις κατά την εγγραφή με εξωτερικούς παρόχους ελέγχου ταυτότητας"
 
 #. <label class="custom-control-label" asp-for="UseScriptToGenerateUsername">@T["Use a script to generate userName based on external provider claims"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:55
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:56
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use a script to generate userName based on external provider claims"
-msgstr "Χρησιμοποιήσε ένα script για να δημιουργήσεις όνομα χρήστη βασισμένο σε εξωτερικούς ισχυρισμούς παρόχου"
+msgstr "Χρησιμοποιήστε ένα script για να δημιουργήσετε όνομα χρήστη βασισμένο σε εξωτερικούς ισχυρισμούς παρόχου"
 
-#. <span class="hint">— @T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:56
+#. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:57
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
 msgstr "Αν επιλεγεί, οι IExternalLoginEventHandlers που ορίζονται σε ενότητες δεν ενεργοποιούνται"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript()">@T["Reset Script"]</button>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:84
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:85
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Reset Script"
 msgstr "Επαναφορά Script"
 
 #. <label class="custom-control-label" asp-for="NoUsernameForExternalUsers">@T["Do not ask username"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:92
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:93
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask username"
 msgstr "Μην ζητάς όνομα χρήστη"
 
-#. <span class="hint">— @T["When a new user logs in with an external provider, he is not required to provide a local username.You can customize how it looks by providing an IExternalLoginEventHandler or write a script."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:93
+#. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."]</span>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:94
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
-msgid "When a new user logs in with an external provider, he is not required to provide a local username.You can customize how it looks by providing an IExternalLoginEventHandler or write a script."
-msgstr "Όταν ένας νέος χρήστης συνδέεται με έναν εξωτερικό πάροχο, δεν είναι υποχρεωμένος να παρέχει ένα τοπικό όνομα χρήστη. Μπορείς να προσαρμόσεις τον τρόπο εμφάνισής του παρέχοντας ένα IExternalLoginEventHandler ή γράφοντας ένα σενάριο."
+msgid "When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="NoEmailForExternalUsers">@T["Do not ask email address"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:100
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:101
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask email address"
 msgstr "Μην ζητάς διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
-#. <span class="hint">— @T["When a new user logs in with an external provider and the email claim is defined, he is not required to provide a local email address."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:101
+#. <span class="hint dashed">@T["When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."]</span>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:102
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
-msgid "When a new user logs in with an external provider and the email claim is defined, he is not required to provide a local email address."
-msgstr "Όταν ένας νέος χρήστης συνδέεται με έναν εξωτερικό πάροχο και απαιτήται ο ορίζεται της ηλεκτρονικής αλληλογραφίας, τότε δεν είναι υποχρεωμένος να παρέχει μια τοπική διεύθυνση ηλεκτρονικού ταχυδρομείου."
+msgid "When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="NoPasswordForExternalUsers">@T["Do not create local password for external users"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:108
-msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
-msgid "Do not create local password for external users"
-msgstr "Μη δημιουργήσεις τοπικό κωδικό πρόσβασης για εξωτερικούς χρήστες"
-
-#. <span class="hint">— @T["When a new user logs in with an external provider, he is not required to provide a local password."]</span>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:109
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
-msgid "When a new user logs in with an external provider, he is not required to provide a local password."
-msgstr "Όταν ένας νέος χρήστης συνδέεται με έναν εξωτερικό πάροχο, δεν απαιτείται να παρέχει έναν τοπικό κωδικό πρόσβασης."
+msgid "Do not create local password for external users"
+msgstr "Μην δημιουργείτε τοπικό κωδικό πρόσβασης για εξωτερικούς χρήστες"
+
+#. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local password."]</span>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:110
+msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
+msgid "When a new user logs in with an external provider, they are not required to provide a local password."
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="AllowResetPassword">@T["Allow the users to reset their password"]</label>
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:7
@@ -744,7 +866,7 @@ msgctxt "OrchardCore.Users.Views.ResetPasswordSettings.Edit"
 msgid "Allow the users to reset their password"
 msgstr "Επιτρέψτε στους χρήστες να επαναφέρουν τον κωδικό πρόσβασής τους"
 
-#. <span class="hint">— @T["An email will be sent to the user's email address with a reset link."]</span>
+#. <span class="hint dashed">@T["An email will be sent to the user's email address with a reset link."]</span>
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.ResetPasswordSettings.Edit"
 msgid "An email will be sent to the user's email address with a reset link."
@@ -754,9 +876,9 @@ msgstr "Ένα μήνυμα ηλεκτρονικού ταχυδρομείου θ
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Users.Views.ResetPasswordSettings.Edit"
 msgid "Use site theme for password reset page"
-msgstr "Χρησιμοποίησε τη σελίδα ιστοτόπου για τη σελίδα επαναφοράς κωδικού πρόσβασης"
+msgstr "Χρησιμοποιήστε το θέμα ιστότοπου για τη σελίδα επαναφοράς κωδικού πρόσβασης"
 
-#. <span class="hint">— @T["Requires an active site theme."]</span>
+#. <span class="hint dashed">@T["Requires an active site theme."]</span>
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Users.Views.ResetPasswordSettings.Edit"
 msgid "Requires an active site theme."
@@ -798,26 +920,26 @@ msgctxt "OrchardCore.Users.Views.TemplateUserLostPassword"
 msgid "Thank you"
 msgstr "Σας ευχαριστούμε"
 
-#. <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Users\Views\UserButtons.cshtml:7
+#. <a asp-action="Edit" asp-route-id="@user.UserId" class="btn btn-primary btn-sm">@T["Edit"]</a>
+#: OrchardCore.Users\Views\UserButtons.cshtml:8
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#. <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Users\Views\UserButtons.cshtml:8
+#. <a class="btn btn-danger btn-sm @(currentUser ? "disabled" : "")" asp-action="Delete" asp-route-id="@user.UserId" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Users\Views\UserButtons.cshtml:9
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#. <a asp-action="EditPassword" asp-route-id="@user.Id" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
-#: OrchardCore.Users\Views\UserButtons.cshtml:9
+#. <a asp-action="EditPassword" asp-route-id="@user.UserId" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
+#: OrchardCore.Users\Views\UserButtons.cshtml:11
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Edit Password"
 msgstr "Επεξεργασία κωδικού πρόσβασης"
 
 #. <button asp-action="SendVerificationEmail" asp-controller="Registration" class="btn btn-info btn-sm">@T["Send verification email"]</button>
-#: OrchardCore.Users\Views\UserButtons.cshtml:14
+#: OrchardCore.Users\Views\UserButtons.cshtml:16
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "Send verification email"
 msgstr "Αποστολή email επιβεβαίωσης"
@@ -872,19 +994,19 @@ msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Is enabled?"
 msgstr "Είναι ενεργοποιημένο;"
 
-#. <span class="hint">— @T["Uncheck to disable this user account."]</span>
+#. <span class="hint dashed">@T["Uncheck to disable this user account."]</span>
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:58
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Uncheck to disable this user account."
 msgstr "Καταργήστε την επιλογή για να απενεργοποιήσετε αυτόν τον λογαριασμό χρήστη."
 
-#. <button class="btn btn-primary" type="submit">@T["Save"]</button>
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:2
 msgctxt "OrchardCore.Users.Views.UserSaveButtons.Edit"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 #: OrchardCore.Users\Views\UserSaveButtons.Edit.cshtml:3
 msgctxt "OrchardCore.Users.Views.UserSaveButtons.Edit"
 msgid "Cancel"
@@ -956,7 +1078,7 @@ msgstr "Σύνδεση του λογαριασμού σου."
 #: OrchardCore.Users\Views\Account\LinkExternalLogin.cshtml:10
 msgctxt "OrchardCore.Users.Views.Account.LinkExternalLogin"
 msgid "You've successfully authenticated with <strong>{0}</strong>. You already have an account with this email address. Enter your local account password and click the Register button to link the accounts and finish logging in."
-msgstr "Έγινε επιτυχής επιβεβαίωση με τη ταυτότητα σας με <strong> {0} </strong>. Έχεις ήδη λογαριασμό με αυτήν τη διεύθυνση ηλεκτρονικού ταχυδρομείου. Εισήγαγε τον τοπικό κωδικό πρόσβασης του λογαριασμού σου και κάντε κλικ στο κουμπί Εγγραφή για να συνδέσεις τους λογαριασμούς και να ολοκληρώσεις τη σύνδεση."
+msgstr "Έγινε επιτυχής επιβεβαίωση με τη ταυτότητα σας με <strong> {0} </strong>. Έχετε ήδη λογαριασμό με αυτήν τη διεύθυνση ηλεκτρονικού ταχυδρομείου. Εισαγάγετε τον τοπικό κωδικό πρόσβασης του λογαριασμού σας και κάντε κλικ στο κουμπί Εγγραφή για να συνδέσετε τους λογαριασμούς και να ολοκληρώσεις τη σύνδεση."
 
 #. <label for="UserName" class="col-md-3 control-label">@T["Username"]</label>
 #: OrchardCore.Users\Views\Account\LinkExternalLogin.cshtml:16
@@ -983,52 +1105,52 @@ msgid "Register"
 msgstr "Εγγραφή"
 
 #. <h4>@T["Use a local account to log in."]</h4>
-#: OrchardCore.Users\Views\Account\Login.cshtml:24
+#: OrchardCore.Users\Views\Account\Login.cshtml:26
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Use a local account to log in."
-msgstr "Χρησιμοποίησε έναν τοπικό λογαριασμό για να συνδεθείς."
+msgstr "Χρησιμοποιήστε έναν τοπικό λογαριασμό για να συνδεθείτε."
 
 #. <label asp-for="UserName">@T["Username"]</label>
-#: OrchardCore.Users\Views\Account\Login.cshtml:28
+#: OrchardCore.Users\Views\Account\Login.cshtml:30
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Username"
 msgstr "Όνομα χρήστη"
 
 #. @T["Password"]
-#: OrchardCore.Users\Views\Account\Login.cshtml:34
+#: OrchardCore.Users\Views\Account\Login.cshtml:36
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
 #. <a asp-controller="ResetPassword" asp-action="ForgotPassword" class="label-link">@T["Forgot your password?"]</a>
-#: OrchardCore.Users\Views\Account\Login.cshtml:37
+#: OrchardCore.Users\Views\Account\Login.cshtml:39
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Forgot your password?"
 msgstr "Ξεχάσατε τον κωδικό πρόσβασης;"
 
 #. <label asp-for="RememberMe" class="custom-control-label">@T["Remember me"]</label>
-#: OrchardCore.Users\Views\Account\Login.cshtml:46
+#: OrchardCore.Users\Views\Account\Login.cshtml:52
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Remember me"
 msgstr "Να με θυμάσαι"
 
 #. <button type="submit" class="btn btn-primary" tabindex="4">@T["Log in"]</button>
-#: OrchardCore.Users\Views\Account\Login.cshtml:50
+#: OrchardCore.Users\Views\Account\Login.cshtml:56
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Log in"
 msgstr "Είσοδος"
 
 #. <a asp-controller="Registration" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@T["Register as a new user"]</a>
-#: OrchardCore.Users\Views\Account\Login.cshtml:54
+#: OrchardCore.Users\Views\Account\Login.cshtml:60
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Register as a new user"
 msgstr "Εγγραφείτε ως νέος χρήστης"
 
 #. <h4>@T["Use another service to log in."]</h4>
-#: OrchardCore.Users\Views\Account\Login.cshtml:64
+#: OrchardCore.Users\Views\Account\Login.cshtml:70
 msgctxt "OrchardCore.Users.Views.Account.Login"
 msgid "Use another service to log in."
-msgstr "Χρησιμοποίησε άλλη υπηρεσία για να συνδεθείς."
+msgstr "Χρησιμοποιήστε άλλη υπηρεσία για να συνδεθείτε."
 
 #. <h4>@T["Create a new account."]</h4>
 #: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:8
@@ -1040,7 +1162,7 @@ msgstr "Δημιουργία νέου λογαριασμού."
 #: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:10
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "You've successfully authenticated with <strong>{0}</strong>. Please fill the form below and click the Register button to complete the registration."
-msgstr "Η ταυτότητά σου επιβεβαίωθηκε επιτυχώς με <strong> {0} </strong>. Συμπλήρωσε την παρακάτω φόρμα και κάνε κλικ στο κουμπί Εγγραφή για να ολοκληρώσεις την εγγραφή."
+msgstr "Η ταυτότητα σας επιβεβαίωθηκε επιτυχώς με <strong> {0} </strong>. Συμπληρώστε την παρακάτω φόρμα και κάντε κλικ στο κουμπί Εγγραφή για να ολοκληρώσετε την εγγραφή."
 
 #. <label asp-for="UserName" class="col-md-3 control-label">@T["Username"]</label>
 #: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:18
@@ -1090,26 +1212,26 @@ msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "Edit Password"
 msgstr "Επεξεργασία κωδικού πρόσβασης"
 
-#. <label asp-for="NewPassword" class="col-md-3 control-label">@T["New password"]</label>
-#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:10
+#. <label asp-for="NewPassword" class="w-md-50 control-label">@T["New password"]</label>
+#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:9
 msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "New password"
 msgstr "Νέος κωδικός πρόσβασης"
 
-#. <label asp-for="PasswordConfirmation" class="col-md-3 control-label">@T["New password confirmation"]</label>
-#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:18
+#. <label asp-for="PasswordConfirmation" class="w-md-50 control-label">@T["New password confirmation"]</label>
+#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:17
 msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "New password confirmation"
 msgstr "Επιβεβαίωση νέου κωδικού πρόσβασης"
 
-#. <button type="submit" class="btn btn-primary">@T["Submit"]</button>
-#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:26
+#. <button class="btn btn-primary submit" type="submit">@T["Submit"]</button>
+#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:25
 msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "Submit"
 msgstr "Υποβολή"
 
-#. <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:27
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
+#: OrchardCore.Users\Views\Admin\EditPassword.cshtml:26
 msgctxt "OrchardCore.Users.Views.Admin.EditPassword"
 msgid "Cancel"
 msgstr "Άκυρο"
@@ -1120,26 +1242,32 @@ msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Users"
 msgstr "Χρήστες"
 
+#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:21
+msgctxt "OrchardCore.Users.Views.Admin.Index"
+msgid "Filter"
+msgstr ""
+
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Users\Views\Admin\Index.cshtml:19
+#: OrchardCore.Users\Views\Admin\Index.cshtml:23
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#. <a asp-route-action="Create" class="btn btn-primary float-right" role="button">@T["Add User"]</a>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:24
+#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add User"]</a>
+#: OrchardCore.Users\Views\Admin\Index.cshtml:26
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Add User"
 msgstr "Προσθήκη χρήστη"
 
 #. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:35
+#: OrchardCore.Users\Views\Admin\Index.cshtml:38
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Select All"
 msgstr "Επιλογή Όλων"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#: OrchardCore.Users\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "1 item"
 msgid_plural "{0} items"
@@ -1147,13 +1275,13 @@ msgstr[0] "1 αντικείμενο"
 msgstr[1] "{0} αντικείμενα"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#: OrchardCore.Users\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Items {0} to {1}"
 msgstr "Αντικειμένα {0} έως {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Users.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:36
+#: OrchardCore.Users\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
@@ -1161,33 +1289,33 @@ msgstr[0] " / {0} αντικείμενο συνολικά"
 msgstr[1] " / {0} αντικείμενα συνολικά"
 
 #. @T["Actions"]
-#: OrchardCore.Users\Views\Admin\Index.cshtml:43
+#: OrchardCore.Users\Views\Admin\Index.cshtml:46
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Actions"
 msgstr "Ενέργειες"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:48
+#: OrchardCore.Users\Views\Admin\Index.cshtml:51
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Bulk Action"
 msgstr "Μαζική Ενέργεια"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
-#: OrchardCore.Users\Views\Admin\Index.cshtml:48
+#: OrchardCore.Users\Views\Admin\Index.cshtml:51
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Είστε βέβαιοι ότι θέλετε να {0} αυτά τα στοιχεία;"
 
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
-#: OrchardCore.Users\Views\Admin\Index.cshtml:83
+#: OrchardCore.Users\Views\Admin\Index.cshtml:86
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Η αναζήτηση δεν επέστρεψε κανένα αποτέλεσμα."
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Users\Views\Admin\Index.cshtml:138
-#: OrchardCore.Users\Views\Admin\Index.cshtml:149
+#: OrchardCore.Users\Views\Admin\Index.cshtml:141
+#: OrchardCore.Users\Views\Admin\Index.cshtml:152
 msgctxt "OrchardCore.Users.Views.Admin.Index"
 msgid "selected"
 msgstr "επιλεγμένα"
@@ -1196,31 +1324,31 @@ msgstr "επιλεγμένα"
 #: OrchardCore.Users\Views\ChangeEmail\ChangeEmailConfirmation.cshtml:5
 msgctxt "OrchardCore.Users.Views.ChangeEmail.ChangeEmailConfirmation"
 msgid "Email changed"
-msgstr ""
+msgstr "Το email άλλαξε"
 
 #. @T["Thank you for changing your email."]
 #: OrchardCore.Users\Views\ChangeEmail\ChangeEmailConfirmation.cshtml:8
 msgctxt "OrchardCore.Users.Views.ChangeEmail.ChangeEmailConfirmation"
 msgid "Thank you for changing your email."
-msgstr ""
+msgstr "Σας ευχαριστούμε που αλλάξατε το email σας."
 
 #. <h2>@T["Change Email"]</h2>
 #: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:7
 msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
 msgid "Change Email"
-msgstr ""
+msgstr "Αλλαγή Email"
 
 #. <label asp-for="Email" class="col-md-3 control-label">@T["Email"]</label>
 #: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:11
 msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #. <button type="submit" class="btn btn-primary">@T["Submit"]</button>
 #: OrchardCore.Users\Views\ChangeEmail\Index.cshtml:19
 msgctxt "OrchardCore.Users.Views.ChangeEmail.Index"
 msgid "Submit"
-msgstr ""
+msgstr "Αποστολή"
 
 #. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["Assign user to role"])</h4>
 #: OrchardCore.Users\Views\Items\AssignUserRoleTask.Fields.Design.cshtml:5
@@ -1286,13 +1414,13 @@ msgstr "Αποστολή email επιβεβαίωσης"
 #: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Edit"
 msgid "Subject for confirmation email"
-msgstr ""
+msgstr "Θέμα για επιβεβαίωση μέσω email"
 
 #. <span class="hint">@T["The subject of the message. Supports Liquid syntax."]</span>
 #: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Edit.cshtml:16
 msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Edit"
 msgid "The subject of the message. Supports Liquid syntax."
-msgstr ""
+msgstr "Το θέμα του μηνύματος. Υποστηρίζει Liquid σύνταξη."
 
 #. <label asp-for="ConfirmationEmailTemplate">@T["Template for confirmation email"]</label>
 #: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Edit.cshtml:20
@@ -1318,13 +1446,13 @@ msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Thumbnail"
 msgid "Register user from form fields."
 msgstr "Εγγραφή χρήστη από τα πεδία της φόρμας."
 
-#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Created"])</h4>
+#. <h4><i class="fa fa-user-plus"></i>@Model.Activity.GetTitleOrDefault(() => T["User Created"])</h4>
 #: OrchardCore.Users\Views\Items\UserCreatedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Users.Views.Items.UserCreatedEvent.Fields.Design"
 msgid "User Created"
 msgstr "Δημιουργία χρήστη"
 
-#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Created"]</h4>
+#. <h4 class="card-title"><i class="fa fa-user-plus"></i>@T["User Created"]</h4>
 #: OrchardCore.Users\Views\Items\UserCreatedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Users.Views.Items.UserCreatedEvent.Fields.Thumbnail"
 msgid "User Created"
@@ -1336,41 +1464,59 @@ msgctxt "OrchardCore.Users.Views.Items.UserCreatedEvent.Fields.Thumbnail"
 msgid "User is created."
 msgstr "Ο χρήστης δημιουργήθηκε."
 
-#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Disabled"])</h4>
+#. <h4><i class="fa fa-user-minus"></i>@Model.Activity.GetTitleOrDefault(() => T["User Deleted"])</h4>
+#: OrchardCore.Users\Views\Items\UserDeletedEvent.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Users.Views.Items.UserDeletedEvent.Fields.Design"
+msgid "User Deleted"
+msgstr "Ο χρήστης διαγράφηκε"
+
+#. <h4 class="card-title"><i class="fa fa-user-minus"></i>@T["User Deleted"]</h4>
+#: OrchardCore.Users\Views\Items\UserDeletedEvent.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.UserDeletedEvent.Fields.Thumbnail"
+msgid "User Deleted"
+msgstr "Ο χρήστης διαγράφηκε"
+
+#. <p>@T["User is Deleted."]</p>
+#: OrchardCore.Users\Views\Items\UserDeletedEvent.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Users.Views.Items.UserDeletedEvent.Fields.Thumbnail"
+msgid "User is Deleted."
+msgstr "Ο χρήστης είναι διαγεγραμμένος."
+
+#. <h4><i class="fa fa-user-times"></i>@Model.Activity.GetTitleOrDefault(() => T["User Disabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Design"
 msgid "User Disabled"
-msgstr ""
+msgstr "Ο Χρήστης Απενεργοποιήθηκε"
 
-#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Disabled"]</h4>
+#. <h4 class="card-title"><i class="fa fa-user-times"></i>@T["User Disabled"]</h4>
 #: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Thumbnail"
 msgid "User Disabled"
-msgstr ""
+msgstr "Ο Χρήστης Απενεργοποιήθηκε"
 
 #. <p>@T["User is disabled."]</p>
 #: OrchardCore.Users\Views\Items\UserDisabledEvent.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Users.Views.Items.UserDisabledEvent.Fields.Thumbnail"
 msgid "User is disabled."
-msgstr ""
+msgstr "Ο χρήστης είναι απενεργοποιημένος."
 
-#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
+#. <h4><i class="fa fa-user-check"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Design"
 msgid "User Enabled"
-msgstr ""
+msgstr "Ο Χρήστης Ενεργοποιήθηκε"
 
-#. <h4 class="card-title"><i class="fa fa-user"></i>@T["User Enabled"]</h4>
+#. <h4 class="card-title"><i class="fa fa-user-check"></i>@T["User Enabled"]</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
 msgid "User Enabled"
-msgstr ""
+msgstr "Ο Χρήστης Ενεργοποιήθηκε"
 
 #. <p>@T["User is enabled."]</p>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
 msgid "User is enabled."
-msgstr ""
+msgstr "Ο χρήστης είναι ενεργοποιημένος."
 
 #. <h4><i class="fa fa-id-card"></i>@Model.Activity.GetTitleOrDefault(() => T["User LoggedIn"])</h4>
 #: OrchardCore.Users\Views\Items\UserLoggedInEvent.Fields.Design.cshtml:4
@@ -1389,6 +1535,60 @@ msgstr "Συνδεδεμένος χρήστης"
 msgctxt "OrchardCore.Users.Views.Items.UserLoggedInEvent.Fields.Thumbnail"
 msgid "User Logged in."
 msgstr "Συνδεδεμένος χρήστης."
+
+#. <h4><i class="fa fa-user-edit"></i>@Model.Activity.GetTitleOrDefault(() => T["User Updated"])</h4>
+#: OrchardCore.Users\Views\Items\UserUpdatedEvent.Fields.Design.cshtml:4
+msgctxt "OrchardCore.Users.Views.Items.UserUpdatedEvent.Fields.Design"
+msgid "User Updated"
+msgstr "Ο χρήστης Ενημερώθηκε"
+
+#. <h4 class="card-title"><i class="fa fa-user-edit"></i>@T["User Updated"]</h4>
+#: OrchardCore.Users\Views\Items\UserUpdatedEvent.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.UserUpdatedEvent.Fields.Thumbnail"
+msgid "User Updated"
+msgstr "Ο χρήστης Ενημερώθηκε"
+
+#. <p>@T["User is updated."]</p>
+#: OrchardCore.Users\Views\Items\UserUpdatedEvent.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Users.Views.Items.UserUpdatedEvent.Fields.Thumbnail"
+msgid "User is updated."
+msgstr "Ο χρήστης είναι ενημερώμενος."
+
+#. <h4><i class="fa fa-user"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate User"])</h4>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Design.cshtml:7
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Design"
+msgid "Validate User"
+msgstr "Επικύρωση χρήστη"
+
+#. <label asp-for="SetUserName" class="form-check-label">@T["Set the 'UserName' workflow property if the user is authenticated"]</label>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:6
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "Set the 'UserName' workflow property if the user is authenticated"
+msgstr ""
+
+#. <label asp-for="Roles">@T["Roles"]</label>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:10
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "Roles"
+msgstr ""
+
+#. <span class="hint">@T["The 'InRole' outcome will be triggerred if the user has at least one of the selected roles."]</span>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Edit"
+msgid "The 'InRole' outcome will be triggerred if the user has at least one of the selected roles."
+msgstr ""
+
+#. <h4 class="card-title"><i class="fa fa-user"></i>@T["Validate User"]</h4>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Thumbnail"
+msgid "Validate User"
+msgstr ""
+
+#. <p>@T["Check if the user exists for the current request and has the specified role(s)."]</p>
+#: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Users.Views.Items.ValidateUserTask.Fields.Thumbnail"
+msgid "Check if the user exists for the current request and has the specified role(s)."
+msgstr ""
 
 #. <h2>@T["Email confirmation"]</h2>
 #: OrchardCore.Users\Views\Registration\ConfirmEmail.cshtml:5

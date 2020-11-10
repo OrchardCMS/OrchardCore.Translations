@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: ar\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.ContentLocalization.pot\n"
+"X-Crowdin-File-ID: 524\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
-"PO-Revision-Date: 2020-05-10 20:39\n"
+"PO-Revision-Date: 2020-11-09 09:15\n"
 
 #. .Add(S["Configuration"], localization => localization
 #: OrchardCore.ContentLocalization\AdminMenu.cs:28
@@ -31,22 +33,28 @@ msgid "Content Culture Picker"
 msgstr "قائمة محتوى اللغات"
 
 #. _notifier.Warning(H["A localization already exist for '{0}'", targetCulture]);
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:74
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:75
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "A localization already exist for '{0}'"
 msgstr "هنالك تعريب موجود لـ '{0}'"
 
 #. _notifier.Information(H["Successfully created localized version of the content."]);
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:81
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:82
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Successfully created localized version of the content."
 msgstr "تم إنشاء نسخة تعريب للمحتوى بنجاح."
 
 #. _notifier.Warning(H["Could not create localized version of the content item"]);
-#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:86
+#: OrchardCore.ContentLocalization\Controllers\AdminController.cs:87
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Could not create localized version of the content item"
 msgstr "لا يمكن انشاء نسخة تعريبية لعنصر المحتوى"
+
+#. new SelectListItem() { Text = S["All cultures"], Value = "" }
+#: OrchardCore.ContentLocalization\Drivers\LocalizationContentsAdminListDisplayDriver.cs:40
+msgctxt "OrchardCore.ContentLocalization.Drivers.LocalizationContentsAdminListDisplayDriver"
+msgid "All cultures"
+msgstr "كل اللغات"
 
 #. Description = S["the localization part of the content item"];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:13
@@ -60,11 +68,11 @@ msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the culture of the content item to filter"
 msgstr "لغة عنصر المحتوى للتصفية"
 
-#. Field(x => x.LocalizationSet).Description(S["the localization set of the content item to filter"]);
+#. Field(x => x.LocalizationSet, nullable: true).Description(S["the localization set of the content item to filter"]);
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:16
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the localization set of the content item to filter"
-msgstr ""
+msgstr "مجموعة الترجمات لعنصر المحتوى المراد تصفيته"
 
 #. Description = S["Localization cultures for your content item."];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:18
@@ -88,7 +96,7 @@ msgstr "مجموعة الترجمات لعنصر المحتوى."
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:25
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
 msgid "The localizations of the content item."
-msgstr ""
+msgstr "ترجمة عنصر المحتوى."
 
 #. <label class="custom-control-label" asp-for="SetCookie">@T["Set Cookie"]</label>
 #: OrchardCore.ContentLocalization\Views\ContentCulturePickerSettings.Edit.cshtml:7
@@ -96,7 +104,7 @@ msgctxt "OrchardCore.ContentLocalization.Views.ContentCulturePickerSettings.Edit
 msgid "Set Cookie"
 msgstr "ضبط الكوكيز"
 
-#. <span class="hint">— @T["Sets the localization cookie when switching cultures using the ContentCulturePicker"]</span>
+#. <span class="hint dashed">@T["Sets the localization cookie when switching cultures using the ContentCulturePicker"]</span>
 #: OrchardCore.ContentLocalization\Views\ContentCulturePickerSettings.Edit.cshtml:8
 msgctxt "OrchardCore.ContentLocalization.Views.ContentCulturePickerSettings.Edit"
 msgid "Sets the localization cookie when switching cultures using the ContentCulturePicker"
@@ -108,11 +116,23 @@ msgctxt "OrchardCore.ContentLocalization.Views.ContentCulturePickerSettings.Edit
 msgid "Homepage redirect "
 msgstr "الإنتقال إلى الصفحة الرئيسية "
 
-#. <span class="hint">— @T["Redirects to the homepage of the target culture if the ContentItem of the target culture does not exist."]</span>
+#. <span class="hint dashed">@T["Redirects to the homepage of the target culture if the ContentItem of the target culture does not exist."]</span>
 #: OrchardCore.ContentLocalization\Views\ContentCulturePickerSettings.Edit.cshtml:16
 msgctxt "OrchardCore.ContentLocalization.Views.ContentCulturePickerSettings.Edit"
 msgid "Redirects to the homepage of the target culture if the ContentItem of the target culture does not exist."
 msgstr "الإنتقال إلى الصفحة الرئيسية للغة المحددة في حالة عدم توفر ترجمة لعنصر المحتوى."
+
+#. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick mr-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
+#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
+msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
+msgid "Filter by culture"
+msgstr "التصفية بحسب اللغة"
+
+#. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick mr-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
+#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
+msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
+msgid "Culture"
+msgstr "اللغة"
 
 #. @T["Current Culture: {1} | {0}", Model.CultureInfo.Name, Model.CultureInfo.DisplayName]
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:12
@@ -130,7 +150,7 @@ msgstr "موقعك لا يحتوي على أية لغات. لغة النظام �
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:22
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Add or remove supported cultures for the site"
-msgstr ""
+msgstr "إضافة أو حذف اللغات المدعومة لهذا الموقع"
 
 #. <a class="list-group-item list-group-item-action" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" title=@T["Edit {0}", culture.Culture.DisplayName]><i class="fa fa-edit"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:33

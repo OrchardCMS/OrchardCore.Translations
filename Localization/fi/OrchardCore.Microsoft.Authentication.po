@@ -2,49 +2,55 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Microsoft.Authentication.pot\n"
+"X-Crowdin-File-ID: 586\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2020-03-31 14:01\n"
+"PO-Revision-Date: 2020-11-09 09:53\n"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:28
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:24
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Security"
 msgstr ""
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:29
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:25
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Authentication"
-msgstr ""
+msgstr "Autentikointi"
 
-#. .Add(S["Microsoft"], "10", client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:30
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:59
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:55
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Security"
 msgstr ""
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:60
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:56
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Authentication"
-msgstr ""
+msgstr "Autentikointi"
 
-#. .Add(S["Azure Active Directory"], "20", client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:61
+#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
+#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Azure Active Directory"
-msgstr ""
+msgstr "Azure Active Directory"
 
 #. yield return new ValidationResult(S["DisplayName is required"], new string[] { nameof(settings.DisplayName) });
 #: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:58
@@ -56,13 +62,13 @@ msgstr ""
 #: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:63
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "AppId is required"
-msgstr ""
+msgstr "AppId on pakollinen"
 
 #. yield return new ValidationResult(S["TenantId is required"], new string[] { nameof(settings.TenantId) });
 #: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:68
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "TenantId is required"
-msgstr ""
+msgstr "TenantId on pakollinen"
 
 #. yield return new ValidationResult(S["AppId is required"], new string[] { nameof(settings.AppId) });
 #: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:56
@@ -74,7 +80,43 @@ msgstr ""
 #: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:61
 msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppSecret is required"
+msgstr "AppSecret on pakollinen"
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:10
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Application Id is required"
 msgstr ""
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Tenant Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:13
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Tenant Id is required"
+msgstr ""
+
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:16
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Invalid path"
+msgstr "Virheellinen polku"
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:7
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Application Id is required"
+msgstr ""
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Secret is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:10
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Application Secret is required"
+msgstr ""
+
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:13
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Invalid path"
+msgstr "Virheellinen polku"
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:4
@@ -82,17 +124,17 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
 msgstr ""
 
-#. <h3>@T["Microsoft Account Authentication Settings"]</h3>
+#. <h3>@T["Azure AD Authentication Settings"]</h3>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Microsoft Account Authentication Settings"
-msgstr ""
+msgid "Azure AD Authentication Settings"
+msgstr "Azure AD autentikaatioasetukset"
 
 #. <label>@T["Display Name"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:9
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "Display Name"
-msgstr ""
+msgstr "Näyttönimi"
 
 #. <span class="hint">@T["The display name of the provider."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:12
@@ -134,6 +176,18 @@ msgstr ""
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:39
+msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
+msgid "Store tokens"
+msgstr ""
+
+#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:40
+msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
+msgid "Store external authentication tokens for reuse"
 msgstr ""
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
@@ -184,9 +238,21 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
 msgstr ""
 
+#. <label class="custom-control-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:32
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
+msgid "Store tokens"
+msgstr ""
+
+#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:33
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
+msgid "Store external authentication tokens for reuse"
+msgstr ""
+
 #. <span class="icon"><i class="fab fa-microsoft" aria-hidden="true"></i></span><span class="title">@T["Microsoft"]</span>
 #: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-microsoft.Id.cshtml:1
 msgctxt "OrchardCore.Microsoft.Authentication.Views.NavigationItemText-microsoft.Id"
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 

@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Lists.pot\n"
+"X-Crowdin-File-ID: 572\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2020-03-31 13:52\n"
+"PO-Revision-Date: 2020-11-09 09:38\n"
 
 #. Description = S["the list part of the content item"];
 #: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:13
@@ -35,7 +37,7 @@ msgid "Represents a collection of content items."
 msgstr ""
 
 #. throw new Exception(S["The specified Blog Post doesn't exist anymore. Please create a new Blog Post."]);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:375
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:371
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The specified Blog Post doesn't exist anymore. Please create a new Blog Post."
 msgstr ""
@@ -46,61 +48,69 @@ msgstr ""
 #: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:498
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "Not authorized to delete this content"
-msgstr ""
+msgstr "Ei oikeutta poistaa tätä sisältöä"
 
 #. throw new InvalidOperationException(S["The username or e-mail or password provided is incorrect."].Value);
 #: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:447
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The username or e-mail or password provided is incorrect."
-msgstr ""
+msgstr "Käyttäjänimi tai sähköpostiosoite tai salasana on virheellinen."
 
 #. context.Updater.ModelState.AddModelError(nameof(model.ContainedContentTypes), S["At least one content type must be selected."]);
 #: OrchardCore.Lists\Settings\ListPartSettingsDisplayDriver.cs:68
 msgctxt "OrchardCore.Lists.Settings.ListPartSettingsDisplayDriver"
 msgid "At least one content type must be selected."
-msgstr ""
+msgstr "Vähintään yksi sisältötyypi on valittava."
 
 #. <p class="alert alert-warning">@T["The list is empty"]</p>
 #: OrchardCore.Lists\Views\ListPart.cshtml:20
 msgctxt "OrchardCore.Lists.Views.ListPart"
 msgid "The list is empty"
-msgstr ""
+msgstr "Luettelo on tyhjä"
 
 #. <a asp-action="EditTypePart" asp-controller="Admin" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.ListPart.ContentItem.ContentType" asp-route-name="ListPart">@T["Please specify at least one contained content type."]</a>
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:17
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:15
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Please specify at least one contained content type."
 msgstr ""
 
-#. @T["Create {0}", contentTypeDefinition.DisplayName]
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:28
+#. @T["Edit {0}", @Model.ListPart.ContentItem.DisplayText]
+#. @T["Edit {0}", @Model.ListPart.ContentItem.DisplayText]
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:27
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:42
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
-msgid "Create {0}"
+msgid "Edit {0}"
 msgstr ""
 
+#. @T["Create {0}", contentTypeDefinition.DisplayName]
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:30
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Create {0}"
+msgstr "Luo {0}"
+
 #. @T["Create"]
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:39
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:45
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Create"
 msgstr ""
 
 #. <div id="update-order-error-message" class="d-none" data-message="@T["There was an error when updating the order of the items."]" />
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:76
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:83
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "There was an error when updating the order of the items."
 msgstr ""
 
 #. <p class="alert alert-warning">@T["The list is empty."]</p>
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:81
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:88
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "The list is empty."
-msgstr ""
+msgstr "Luettelo on tyhjä."
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.Lists\Views\ListPart.DisplayOption.cshtml:4
 msgctxt "OrchardCore.Lists.Views.ListPart.DisplayOption"
 msgid "Standard"
-msgstr ""
+msgstr "Vakio"
 
 #. <label asp-for="FeedProxyUrl">@T["Feed proxy Url"]</label>
 #: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:5
@@ -114,10 +124,10 @@ msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "Provide a custom public url which will be used to proxy the local rss feed."
 msgstr ""
 
-#. <span class="hint">@T["The current feed is available at <a href=\"{0}\">{0}</a>.", Url.Action("Index", "Feed", new { area = "OrchardCore.Feeds", ContentItemId = Model.ContentItem.ContentItemId }, Context.Request.Scheme)]</span>
+#. <span class="hint">@T["The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>.", Url.Action("Index", "Feed", new { area = "OrchardCore.Feeds", ContentItemId = Model.ContentItem.ContentItemId }, Context.Request.Scheme)]</span>
 #: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:8
 msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
-msgid "The current feed is available at <a href=\"{0}\">{0}</a>."
+msgid "The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>."
 msgstr ""
 
 #. <label asp-for="FeedItemsCount">@T["Feed items count"]</label>
@@ -142,15 +152,15 @@ msgstr ""
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "The number of items to display per page."
-msgstr ""
+msgstr "Näytettävien kohteiden määrä sivua kohden."
 
 #. <label class="custom-control-label" asp-for="EnableOrdering">@T["Enable Ordering"]</label>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Enable Ordering"
-msgstr ""
+msgstr "Ota järjestäminen käyttöön"
 
-#. <span class="hint">— @T["Check this option to enable manual ordering of items."]</span>
+#. <span class="hint dashed">@T["Check this option to enable manual ordering of items."]</span>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Check this option to enable manual ordering of items."
@@ -160,7 +170,7 @@ msgstr ""
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Contained Content Types"
-msgstr ""
+msgstr "Sisälletyt sisältötyypit"
 
 #. <span class="hint">@T["The content types that this list can contain, e.g. Blog Post for a Blog."]</span>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:20
@@ -172,7 +182,7 @@ msgstr ""
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:8
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Lists"
-msgstr ""
+msgstr "Listat"
 
 #. <label asp-for="IconForContentItems">@T["Icon for the content items"]</label>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:18
@@ -186,37 +196,37 @@ msgstr ""
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:72
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon"
-msgstr ""
+msgstr "Ikoni"
 
 #. @T["Add parent menu item"]
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:51
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Add parent menu item"
-msgstr ""
+msgstr "Lisää ylävalikon nimike"
 
 #. <label asp-for="IconForParentLink">@T["Icon for the parent menu item"]</label>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:58
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon for the parent menu item"
-msgstr ""
+msgstr "Ylävalikon nimikkeen kuvake"
 
 #. <h5 class="modal-title">@T["Pick an icon"]</h5>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:95
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Pick an icon"
-msgstr ""
+msgstr "Valitse ikoni"
 
-#. <span class="text-muted">- @T["Lists"]</span>
+#. <span class="text-muted dashed">@T["Lists"]</span>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:11
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeSummary"
 msgid "Lists"
-msgstr ""
+msgstr "Listat"
 
 #. <h4 class="card-title">@T["Lists"]</h4>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeThumbnail.cshtml:3
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeThumbnail"
 msgid "Lists"
-msgstr ""
+msgstr "Listat"
 
 #. <p>@T["Adds links for list content items"]</p>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeThumbnail.cshtml:4

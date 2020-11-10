@@ -2,13 +2,15 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Email.pot\n"
+"X-Crowdin-File-ID: 548\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-05-10 20:40\n"
+"PO-Revision-Date: 2020-11-09 09:33\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -22,13 +24,13 @@ msgctxt "OrchardCore.Email.AdminMenu"
 msgid "Settings"
 msgstr "設定"
 
-#. .Add(S["Smtp"], S["Smtp"].PrefixPosition(), entry => entry
-#. .Add(S["Smtp"], S["Smtp"].PrefixPosition(), entry => entry
+#. .Add(S["Email"], S["Email"].PrefixPosition(), entry => entry
+#. .Add(S["Email"], S["Email"].PrefixPosition(), entry => entry
 #: OrchardCore.Email\AdminMenu.cs:26
 #: OrchardCore.Email\AdminMenu.cs:26
 msgctxt "OrchardCore.Email.AdminMenu"
-msgid "Smtp"
-msgstr "Smtp"
+msgid "Email"
+msgstr "メールアドレス"
 
 #. _notifier.Success(H["Message sent successfully"]);
 #: OrchardCore.Email\Controllers\AdminController.cs:65
@@ -49,40 +51,40 @@ msgid "An error occurred while sending an email: '{0}'"
 msgstr "メールの送信中にエラーが発生しました。:「{0}」"
 
 #. public override LocalizedString DisplayText => S["Email Task"];
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:30
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:34
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Email Task"
 msgstr "メールタスク"
 
 #. public override LocalizedString Category => S["Messaging"];
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:31
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:35
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr "メッセージング"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:72
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr "完了しました"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:72
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:82
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "失敗しました"
 
-#. <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="title">@T["Smtp"]</span>
+#. <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="title">@T["Email"]</span>
 #: OrchardCore.Email\Views\NavigationItemText-email.Id.cshtml:1
 msgctxt "OrchardCore.Email.Views.NavigationItemText-email.Id"
-msgid "Smtp"
-msgstr ""
+msgid "Email"
+msgstr "メールアドレス"
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
-msgstr ""
+msgstr "現在のテナントは設定が保存された時に再読み込みされます"
 
 #. <label asp-for="DefaultSender">@T["Sender email address"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:7
@@ -112,19 +114,19 @@ msgstr "ネットワーク"
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Specified pickup directory"
-msgstr ""
+msgstr "指定したディレクトリに保存"
 
 #. <span class="hint">@T["The delivery method used when sending email. Use Network in production. The other options can be useful when developing and testing."]</span>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The delivery method used when sending email. Use Network in production. The other options can be useful when developing and testing."
-msgstr ""
+msgstr "メールを送信する際に使用される配信方法です。本番環境では\"ネットワーク\"を使用してください。その他のオプションは開発やテストに役立ちます。"
 
 #. <h2 class="card-title">@T["Network delivery options"]</h2>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Network delivery options"
-msgstr ""
+msgstr "ネットワーク配送オプション"
 
 #. <label asp-for="Host">@T["Host name"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:35
@@ -190,25 +192,25 @@ msgstr "STARTTLS"
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Connect to server using insecure connection and upgrade to secure using SSL/TLS"
-msgstr ""
+msgstr "安全でない接続を使用してサーバーに接続してから、安全なSSL/TLS にアップグレードします。"
 
 #. <span class="hint">@T["The encryption method used when connecting to mail server."]</span>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:68
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The encryption method used when connecting to mail server."
-msgstr ""
+msgstr "メールサーバーに接続する際に使用される暗号化方法。"
 
 #. <label class="custom-control-label" asp-for="AutoSelectEncryption">@T["Auto Select Encryption method"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:77
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Auto Select Encryption method"
-msgstr ""
+msgstr "暗号化方法を自動選択"
 
-#. <span class="hint">— @T["Check to let the system select the encryption method based on port."]</span>
+#. <span class="hint dashed">@T["Check to let the system select the encryption method based on port."]</span>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:78
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Check to let the system select the encryption method based on port."
-msgstr ""
+msgstr "ポートに基づく暗号化方式をシステムに選択させる場合チェックします。"
 
 #. <label class="custom-control-label" asp-for="RequireCredentials">@T["Require credentials"] </label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:86
@@ -222,10 +224,10 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Use Windows authentication"
 msgstr ""
 
-#. <span class="hint d-block">@T["When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."]</span>
+#. <span class="hint d-block">@T["When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."]</span>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:96
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
-msgid "When this option is selected, the aplication pool or host-process identity is used to authenticate with the mail server."
+msgid "When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."
 msgstr ""
 
 #. <label asp-for="UserName">@T["User name"]</label>
@@ -238,7 +240,7 @@ msgstr "ユーザー名"
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:105
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The username for authentication."
-msgstr ""
+msgstr "認証用のユーザー名"
 
 #. <label asp-for="Password">@T["Password"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:109
@@ -250,7 +252,7 @@ msgstr "パスワード"
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:112
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The password for authentication."
-msgstr ""
+msgstr "認証用のパスワード"
 
 #. <h2 class="card-title">@T["Specified pickup directory delivery options"]</h2>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:123
@@ -268,13 +270,13 @@ msgstr ""
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:129
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "E.g. <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."
-msgstr ""
+msgstr "例: <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> は C ドライブの <i>PickedEmail</i> ディレクトリにメールを配置します。"
 
 #. <a href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Email" })" class="btn btn-secondary">@T["Test settings"]</a>
 #: OrchardCore.Email\Views\SmtpSettings.TestButton.cshtml:1
 msgctxt "OrchardCore.Email.Views.SmtpSettings.TestButton"
 msgid "Test settings"
-msgstr ""
+msgstr "テスト設定"
 
 #. <h1>@RenderTitleSegments(T["Settings"])</h1>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:3
@@ -292,13 +294,13 @@ msgstr "宛先"
 #: OrchardCore.Email\Views\Admin\Index.cshtml:17
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Sender"
-msgstr ""
+msgstr "送信者"
 
 #. <span class="hint">@T["The sender is optional, it is useful when the email author is different than the email submitter."]</span>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:20
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "The sender is optional, it is useful when the email author is different than the email submitter."
-msgstr ""
+msgstr "送信者はオプションです。メール作成者とメール送信者が異なる場合に便利です。"
 
 #. <label asp-for="Bcc">@T["Bcc"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:25
@@ -334,7 +336,7 @@ msgstr "本文"
 #: OrchardCore.Email\Views\Admin\Index.cshtml:59
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Send"
-msgstr ""
+msgstr "送信"
 
 #. <h4><i class="fa fa-envelope"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Design.cshtml:6
@@ -346,7 +348,7 @@ msgstr "メール送付"
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "From"
-msgstr ""
+msgstr "差出人"
 
 #. <span class="hint">@T["The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:8
@@ -360,69 +362,81 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Sender"
 msgstr "送信者"
 
-#. <span class="hint">@T["The sender's email address. Required if not the same as the From email address. With Liquid support."]</span>
+#. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The sender's email address. Required if not the same as the From email address. With Liquid support."
+msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
+msgstr ""
+
+#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "ReplyTo"
+msgstr ""
+
+#. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
 msgstr ""
 
 #. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Recipients"
-msgstr ""
+msgstr "宛先"
 
 #. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of recipient email addresses. With Liquid support."
-msgstr ""
+msgstr "受信者のメールアドレスのカンマ区切りリスト。Liquid 式を利用可能。"
 
 #. <label asp-for="SubjectExpression">@T["Subject"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
 msgstr "件名"
 
 #. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
-msgstr ""
+msgstr "電子メールの件名。リキッド式を利用可能。"
 
 #. <label asp-for="Body">@T["Body"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
 msgstr "本文"
 
 #. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:35
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The body of the email message. With Liquid support."
-msgstr ""
-
-#. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:41
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Does the Body contain HTML?"
-msgstr ""
-
-#. <span class="hint">— @T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The body of the email message. With Liquid support."
+msgstr "電子メールの本文。リキッド式を利用可能。"
+
+#. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:48
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Does the Body contain HTML?"
+msgstr "本文にはHTMLを含みますか？"
+
+#. <span class="hint dashed">@T["If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:49
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message is HTML. If unchecked, indicates the body of the email message is plain text."
-msgstr ""
+msgstr "チェックされている場合、メールメッセージの本文がHTMLであることを示します。チェックされていない場合、メールメッセージの本文がプレーンテキストであることを示します。"
 
 #. <h4 class="card-title"><i class="fa fa-envelope"></i>@T["Send Email"]</h4>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
 msgid "Send Email"
-msgstr ""
+msgstr "メール送信"
 
 #. <p>@T["Send an email."]</p>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
 msgid "Send an email."
-msgstr ""
+msgstr "メールを送信"
 

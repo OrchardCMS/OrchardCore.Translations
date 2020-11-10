@@ -2,46 +2,52 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /dev/Localization/OrchardCore.Microsoft.Authentication.pot\n"
+"X-Crowdin-File-ID: 586\n"
 "Project-Id-Version: orchard-core\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2020-03-31 13:59\n"
+"PO-Revision-Date: 2020-11-09 09:52\n"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:28
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:24
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:29
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:25
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Authentication"
-msgstr ""
+msgstr "Аутентификация"
 
-#. .Add(S["Microsoft"], "10", client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:30
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Microsoft"
 msgstr "Microsoft"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:59
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:55
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Security"
 msgstr "Безопасность"
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:60
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:56
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Authentication"
 msgstr "Аутентификация"
 
-#. .Add(S["Azure Active Directory"], "20", client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:61
+#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
+#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
+#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Azure Active Directory"
 msgstr "Активная директория Azure"
@@ -76,17 +82,53 @@ msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppSecret is required"
 msgstr "Требуется AppSecret"
 
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:10
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Application Id is required"
+msgstr "Требуется идентификатор приложения"
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Tenant Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:13
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Tenant Id is required"
+msgstr "Требуется Id владельца"
+
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:16
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
+msgid "Invalid path"
+msgstr "Недопустимый путь"
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Id is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:7
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Application Id is required"
+msgstr "Требуется идентификатор приложения"
+
+#. [Required(AllowEmptyStrings = false, ErrorMessage = "Application Secret is required")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:10
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Application Secret is required"
+msgstr "Требуется секрет приложения"
+
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:13
+msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
+msgid "Invalid path"
+msgstr "Недопустимый путь"
+
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
 msgstr "Текущий тенант будет перезагружен, когда настройки будут сохранены."
 
-#. <h3>@T["Microsoft Account Authentication Settings"]</h3>
+#. <h3>@T["Azure AD Authentication Settings"]</h3>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Microsoft Account Authentication Settings"
-msgstr "Настройки аутентификации учетной записи Microsoft"
+msgid "Azure AD Authentication Settings"
+msgstr "Настройки аутентификации Azure AD"
 
 #. <label>@T["Display Name"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:9
@@ -104,7 +146,7 @@ msgstr "Отображаемое имя провайдера."
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "AppId"
-msgstr ""
+msgstr "AppId"
 
 #. <span class="hint">@T["The Application ID found on the Azure AD App registration parameters."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:19
@@ -116,7 +158,7 @@ msgstr "ID приложения найден в параметрах регис�
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:23
 msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "TenantId"
-msgstr ""
+msgstr "TenantId"
 
 #. <span class="hint">@T["The Tenant (Directory) ID found on the Azure AD App registration parameters."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:26
@@ -136,6 +178,18 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
 msgstr "Путь к запросу в базовом пути приложения, где будет возвращен пользователь-агент. middleware будет обрабатывать этот запрос, когда он прибывает."
 
+#. <label class="custom-control-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:39
+msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
+msgid "Store tokens"
+msgstr "Хранить токены"
+
+#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:40
+msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
+msgid "Store external authentication tokens for reuse"
+msgstr "Хранить внешние токены аутентификации для повторного использования"
+
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
@@ -152,7 +206,7 @@ msgstr "Настройки аутентификации учетной запи�
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:9
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "AppId"
-msgstr ""
+msgstr "AppId"
 
 #. <span class="hint">@T["The Application ID found on the Microsoft developer portal parameters."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:12
@@ -164,7 +218,7 @@ msgstr "ID приложения найден на страницах порта�
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Secret Key"
-msgstr ""
+msgstr "Секретный ключ"
 
 #. <span class="hint">@T["The Application secret key found on the Microsoft developer portal parameters."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:19
@@ -183,6 +237,18 @@ msgstr "Путь обратного вызова"
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
 msgstr "Путь к запросу в базовом пути приложения, где будет возвращен пользователь-агент. middleware будет обрабатывать этот запрос, когда он прибывает."
+
+#. <label class="custom-control-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:32
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
+msgid "Store tokens"
+msgstr "Хранить токены"
+
+#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:33
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
+msgid "Store external authentication tokens for reuse"
+msgstr "Хранить внешние токены аутентификации для повторного использования"
 
 #. <span class="icon"><i class="fab fa-microsoft" aria-hidden="true"></i></span><span class="title">@T["Microsoft"]</span>
 #: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-microsoft.Id.cshtml:1
