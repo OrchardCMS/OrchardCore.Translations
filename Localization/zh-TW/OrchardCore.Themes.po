@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2020-10-31 11:41\n"
+"PO-Revision-Date: 2020-12-18 16:30\n"
 
 #. .Add(S["Design"], NavigationConstants.AdminMenuDesignPosition, design => design
 #: OrchardCore.Themes\AdminMenu.cs:25
@@ -25,9 +25,7 @@ msgid "Themes"
 msgstr "主题"
 
 #. _notifier.Success(H["{0} was enabled", feature.Name ?? feature.Id]);
-#. _notifier.Success(H["{0} was enabled", feature.Name ?? feature.Id]);
 #: OrchardCore.Themes\Controllers\AdminController.cs:160
-#: OrchardCore.Themes\Controllers\AdminController.cs:239
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "{0} was enabled"
 msgstr "已启用 {0}"
@@ -50,11 +48,17 @@ msgctxt "OrchardCore.Themes.Controllers.AdminController"
 msgid "The Admin theme was reset."
 msgstr "管理主题已重置。"
 
-#. _notifier.Success(H["{0} was disabled", feature.Name ?? feature.Id]);
+#. _notifier.Success(H["{0} was disabled.", feature.Name ?? feature.Id]);
 #: OrchardCore.Themes\Controllers\AdminController.cs:217
 msgctxt "OrchardCore.Themes.Controllers.AdminController"
-msgid "{0} was disabled"
-msgstr "{0} 已禁用"
+msgid "{0} was disabled."
+msgstr ""
+
+#. _notifier.Success(H["{0} was enabled.", feature.Name ?? feature.Id]);
+#: OrchardCore.Themes\Controllers\AdminController.cs:239
+msgctxt "OrchardCore.Themes.Controllers.AdminController"
+msgid "{0} was enabled."
+msgstr ""
 
 #. throw new InvalidOperationException(H["The theme \"{0}\" is already in the stack of themes that need features disabled.", themeName].ToString());
 #: OrchardCore.Themes\Services\ThemeService.cs:42
@@ -86,7 +90,7 @@ msgctxt "OrchardCore.Themes.Views.NavigationItemText-themes.Id"
 msgid "Design"
 msgstr ""
 
-#. <h1>@RenderTitleSegments(T["Themes"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Themes"])</h1></zone>
 #: OrchardCore.Themes\Views\Admin\Index.cshtml:3
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Themes"
@@ -98,38 +102,20 @@ msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "There are no themes installed."
 msgstr "没有安装主题。"
 
-#. <small>@T["By: {0}", themeEntry.Extension.Manifest.Author]</small><br />
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:22
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "By: {0}"
-msgstr "由: {0}"
-
-#. <small>@T["Tags: {0}", string.Join(", ", themeEntry.Extension.Manifest.Tags.ToArray())]</small><br />
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:30
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "Tags: {0}"
-msgstr ""
-
-#. <small>@T["Version: {0}", themeEntry.Extension.Manifest.Version]</small>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
-msgctxt "OrchardCore.Themes.Views.Admin.Index"
-msgid "Version: {0}"
-msgstr "版本: {0}"
-
 #. <button type="submit" class="btn btn-sm btn-primary">@T["Make Current"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:40
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:44
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Make Current"
 msgstr ""
 
 #. <button type="submit" class="btn btn-sm btn-secondary">@T["Disable"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:48
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:52
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Disable"
 msgstr "禁用"
 
 #. <button type="submit" class="btn btn-sm btn-secondary">@T["Enable"]</button>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:54
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:58
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Enable"
 msgstr "启用"
@@ -145,41 +131,41 @@ msgid "This is the current Site theme"
 msgstr ""
 
 #. <h4>@T["Reset current themes"]</h4>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:79
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:83
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset current themes"
 msgstr ""
 
 #. <p>@T["The following actions reset the themes. It is used for sites that can't use theming."]</p>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:80
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:84
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "The following actions reset the themes. It is used for sites that can't use theming."
 msgstr "以下操作重置主题。它用于不能使用主题的网站。"
 
 #. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
 #. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:85
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:85
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Site Theme"
 msgstr "重置网站主题"
 
 #. <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:81
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:85
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Site theme?"
 msgstr "确实要重置 \"网站\" 主题吗？"
 
 #. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
 #. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:86
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:86
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Admin Theme"
 msgstr "重置管理主题"
 
 #. <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:82
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:86
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Admin theme?"
 msgstr "确实要重置 \"管理\" 主题吗？"
