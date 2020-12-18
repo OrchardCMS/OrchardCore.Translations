@@ -105,7 +105,7 @@ msgid "A comma separated list of values, representing the available zones for <a
 msgstr ""
 
 #: OrchardCore.Layers\Views\Admin\Create.cshtml:3
-#. <h1>@RenderTitleSegments(T["Create Layer"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Layer"])</h1></zone>
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create Layer"
 msgstr ""
@@ -135,7 +135,7 @@ msgid "Create"
 msgstr ""
 
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:3
-#. <h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1></zone>
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Edit Layer - {0}"
 msgstr ""
@@ -165,7 +165,7 @@ msgid "Save"
 msgstr ""
 
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:15
-#. <h1>@RenderTitleSegments(T["Edit Widgets and Layers"])</h1>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Widgets and Layers"])</h1></zone>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit Widgets and Layers"
 msgstr ""
@@ -188,43 +188,49 @@ msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widgets"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:74
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:76
 #. @T["Add Widget"]
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add Widget"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:98
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:100
 #. <h3>@T["Layers"]</h3>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:100
-#. <span class="hint">@T["Select a layer to reveal its associated widgets."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:103
+#. @T["Select a layer to reveal its associated widgets."]
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:114
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:104
+#. <i class="fa fa-book"></i> <a href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Layers/#rules" target="_blank">@T["See documentation"]</a>
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "See documentation"
+msgstr ""
+
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:119
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:115
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:120
 #. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:128
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:133
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:131
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:136
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"

@@ -19,21 +19,21 @@ msgid "Please select one or more features."
 msgstr ""
 
 #: OrchardCore.Features\Controllers\AdminController.cs:194
-#. _notifier.Success(H["{0} was {1}", feature.Name ?? feature.Id, enabled ? "enabled" : "disabled"]);
+#. _notifier.Success(H["{0} was {1}.", feature.Name ?? feature.Id, enabled ? "enabled" : "disabled"]);
 msgctxt "OrchardCore.Features.Controllers.AdminController"
-msgid "{0} was {1}"
+msgid "{0} was {1}."
 msgstr ""
 
 #: OrchardCore.Features\Services\ModuleService.cs:71
-#. _notifier.Success(H["{0} was enabled", enabledFeature.Name]);
+#. _notifier.Success(H["{0} was enabled.", enabledFeature.Name]);
 msgctxt "OrchardCore.Features.Services.ModuleService"
-msgid "{0} was enabled"
+msgid "{0} was enabled."
 msgstr ""
 
 #: OrchardCore.Features\Services\ModuleService.cs:98
-#. _notifier.Success(H["{0} was disabled", feature.Name]);
+#. _notifier.Success(H["{0} was disabled.", feature.Name]);
 msgctxt "OrchardCore.Features.Services.ModuleService"
-msgid "{0} was disabled"
+msgid "{0} was disabled."
 msgstr ""
 
 #: OrchardCore.Features\Views\NavigationItemText-configuration.Id.cshtml:1
@@ -42,47 +42,41 @@ msgctxt "OrchardCore.Features.Views.NavigationItemText-configuration.Id"
 msgid "Configuration"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:7
-#. <h1>@RenderTitleSegments(T["Features"])</h1>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:5
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Features"])</h1></zone>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Features"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:16
-#. <span class="input-group-text bg-secondary text-light">@T["Filter"]</span>
-msgctxt "OrchardCore.Features.Views.Admin.Features"
-msgid "Filter"
-msgstr ""
-
-#: OrchardCore.Features\Views\Admin\Features.cshtml:18
-#. <input id="search-box" class="form-control mr-sm-2" placeholder="@T["Search"]" type="search" autofocus>
+#: OrchardCore.Features\Views\Admin\Features.cshtml:13
+#. <input id="search-box" class="form-control mr-sm-2" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:22
+#: OrchardCore.Features\Views\Admin\Features.cshtml:17
 #. @T["Bulk Actions"]
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Bulk Actions"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:25
+#: OrchardCore.Features\Views\Admin\Features.cshtml:20
 #. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Disable)">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:134
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
 #. <a id="btn-disable-@Html.GenerateIdFromName(feature.Descriptor.Id)" asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:26
+#: OrchardCore.Features\Views\Admin\Features.cshtml:21
 #. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Enable)">@T["Enable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:124
+#: OrchardCore.Features\Views\Admin\Features.cshtml:119
 #. <a id="btn-enable-@Html.GenerateIdFromName(feature.Descriptor.Id)" asp-action="Enable" asp-route-id="@feature.Descriptor.Id" class="btn btn-primary btn-sm" itemprop="UnsafeUrl">@T["Enable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Enable"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:27
+#: OrchardCore.Features\Views\Admin\Features.cshtml:22
 #. <a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Toggle)">@T["Toggle"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Toggle"
@@ -103,25 +97,25 @@ msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disabling the {0} feature will also disable the following dependent features:{1}Continue?"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:134
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
 #. <a id="btn-disable-@Html.GenerateIdFromName(feature.Descriptor.Id)" asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable Feature"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:134
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
 #. <a id="btn-disable-@Html.GenerateIdFromName(feature.Descriptor.Id)" asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Yes"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:134
+#: OrchardCore.Features\Views\Admin\Features.cshtml:129
 #. <a id="btn-disable-@Html.GenerateIdFromName(feature.Descriptor.Id)" asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "No"
 msgstr ""
 
-#: OrchardCore.Features\Views\Admin\Features.cshtml:145
+#: OrchardCore.Features\Views\Admin\Features.cshtml:140
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
