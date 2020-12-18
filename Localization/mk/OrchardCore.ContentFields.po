@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Macedonian\n"
 "Language: mk_MK\n"
-"PO-Revision-Date: 2020-11-09 09:17\n"
+"PO-Revision-Date: 2020-12-18 16:35\n"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.ContentItemIds), S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:92
@@ -125,6 +125,18 @@ msgstr "Вредност е задолжителна за {0}."
 msgctxt "OrchardCore.ContentFields.Drivers.TimeFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr "Вредност е задолжителна за {0}."
+
+#. updater.ModelState.AddModelError(Prefix, nameof(field.UserIds), S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.ContentFields\Drivers\UserPickerFieldDisplayDriver.cs:86
+msgctxt "OrchardCore.ContentFields.Drivers.UserPickerFieldDisplayDriver"
+msgid "The {0} field is required."
+msgstr ""
+
+#. updater.ModelState.AddModelError(Prefix, nameof(field.UserIds), S["The {0} field cannot contain multiple items.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.ContentFields\Drivers\UserPickerFieldDisplayDriver.cs:91
+msgctxt "OrchardCore.ContentFields.Drivers.UserPickerFieldDisplayDriver"
+msgid "The {0} field cannot contain multiple items."
+msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.RawAddress), S["A value is required for '{0}'.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\YoutubeFieldDisplayDriver.cs:59
@@ -446,11 +458,17 @@ msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "Sanitize Html"
 msgstr "Пречисти Html"
 
-#. <span class="hint dashed">@T["Whether the Html is sanitized to prevent custom scripts."]</span>
-#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:15
+#. @T["Whether the Html is sanitized to prevent custom scripts."]
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:16
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "Whether the Html is sanitized to prevent custom scripts."
 msgstr "Дали Html е пречистен за да се отстранат прилагодени скрипти."
+
+#. <i class="fa fa-book"></i> <a href="@(OrchardCore.Admin.Constants.DocsUrl)reference/core/Sanitizer" target="_blank">@T["See documentation"]</a>
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:17
+msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
+msgid "See documentation"
+msgstr ""
 
 #. <label class="custom-control-label" asp-for="InsertMediaWithUrl">@T["Insert Media with url"]</label>
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:6
@@ -1117,6 +1135,128 @@ msgstr "Помош"
 msgctxt "OrchardCore.ContentFields.Views.TimeFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr "Текстот за помош кој би бил прикажан за ова поле."
+
+#. <span class="value">@T["No users."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerField-UserNames.Display.cshtml:23
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField-UserNames.Display"
+msgid "No users."
+msgstr ""
+
+#. <option value="UserNames" selected="@(currentDisplayMode == "UserNames")">@T["User Names"]</option>
+#: OrchardCore.ContentFields\Views\UserPickerField-UserNames.DisplayOption.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField-UserNames.DisplayOption"
+msgid "User Names"
+msgstr ""
+
+#. <span class="value">@T["No users."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerField.cshtml:24
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField"
+msgid "No users."
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
+#: OrchardCore.ContentFields\Views\UserPickerField.DisplayOption.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.DisplayOption"
+msgid "Standard"
+msgstr ""
+
+#. <div class="align-items-center align-self-center"><span>{{ user.displayText }}</span> <span v-show="!user.isEnabled" class="text-muted small">(@T["Not enabled"])</span></div>
+#. <div v-cloak><span>{{ props.option.displayText }}</span><span class="small ml-2" v-show="!props.option.isEnabled">(@T["Not enabled"])</span></div>
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:29
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:50
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
+msgid "Not enabled"
+msgstr ""
+
+#. label="displayText" placeholder="@T["Type to search"]"
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:43
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
+msgid "Type to search"
+msgstr ""
+
+#. select-label="@T["Select"]" deselect-label="@T["Remove"]">
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:48
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
+msgid "Select"
+msgstr ""
+
+#. select-label="@T["Select"]" deselect-label="@T["Remove"]">
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:48
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
+msgid "Remove"
+msgstr ""
+
+#. @T["No result found"]
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:53
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
+msgid "No result found"
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.ContentFields\Views\UserPickerField.Option.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Option"
+msgid "Standard"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="Required">@T["Required"]</label>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:8
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Required"
+msgstr ""
+
+#. <span class="hint dashed">@T["Whether to ensure at least one element is selected."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:9
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Whether to ensure at least one element is selected."
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="Multiple">@T["Allow multiple"]</label>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:16
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Allow multiple"
+msgstr ""
+
+#. <span class="hint dashed">@T["Whether to allow multiple elements to be selected."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:17
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Whether to allow multiple elements to be selected."
+msgstr ""
+
+#. <label asp-for="Roles">@T["Roles"]</label>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:22
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Roles"
+msgstr ""
+
+#. <span class="hint">@T["The roles that a user must belong to. Choose at least one."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:23
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "The roles that a user must belong to. Choose at least one."
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="DisplayAllUsers">@T["Display All Users"]</label>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:27
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Display All Users"
+msgstr ""
+
+#. <span class="hint dashed">@T["Whether to allow picker to display users from all roles."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:28
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Whether to allow picker to display users from all roles."
+msgstr ""
+
+#. <label asp-for="Hint">@T["Hint"]</label>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:47
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "Hint"
+msgstr ""
+
+#. <span class="hint">@T["The hint text to display for this field on the editor."]</span>
+#: OrchardCore.ContentFields\Views\UserPickerFieldSettings.Edit.cshtml:50
+msgctxt "OrchardCore.ContentFields.Views.UserPickerFieldSettings.Edit"
+msgid "The hint text to display for this field on the editor."
+msgstr ""
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.ContentFields\Views\YoutubeField.DisplayOption.cshtml:4
