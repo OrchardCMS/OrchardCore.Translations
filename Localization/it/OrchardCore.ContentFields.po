@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2020-12-18 16:15\n"
+"PO-Revision-Date: 2021-01-04 09:42\n"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.ContentItemIds), S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:92
@@ -77,6 +77,12 @@ msgstr "Il campo {0} è obbligatorio."
 msgctxt "OrchardCore.ContentFields.Drivers.LocalizationSetContentPickerFieldDisplayDriver"
 msgid "The {0} field cannot contain multiple items."
 msgstr "Il campo {0} non può contenere più elementi."
+
+#. updater.ModelState.AddModelError(Prefix, nameof(field.Values), S["A value is required for {0}.", context.PartFieldDefinition.DisplayName()]);
+#: OrchardCore.ContentFields\Drivers\MultiTextFieldDisplayDriver.cs:71
+msgctxt "OrchardCore.ContentFields.Fields.MultiTextFieldDisplayDriver"
+msgid "A value is required for {0}."
+msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.Value), S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.ContentFields\Drivers\NumericFieldDisplayDriver.cs:69
@@ -155,6 +161,12 @@ msgstr "Formato dell'indirizzo non valido"
 msgctxt "OrchardCore.ContentFields.Settings.HtmlFieldTrumbowygEditorSettingsDriver"
 msgid "The options are written in an incorrect format."
 msgstr "Le opzioni sono scritte in un formato errato."
+
+#. context.Updater.ModelState.AddModelError(Prefix, S["The options are written in an incorrect format."]);
+#: OrchardCore.ContentFields\Settings\MultiTextFieldSettingsDriver.cs:49
+msgctxt "OrchardCore.ContentFields.Settings.MultiTextFieldSettingsDriver"
+msgid "The options are written in an incorrect format."
+msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, S["The options are written in an incorrect format."]);
 #: OrchardCore.ContentFields\Settings\TextFieldPredefinedListEditorSettingsDriver.cs:53
@@ -464,7 +476,7 @@ msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "Whether the Html is sanitized to prevent custom scripts."
 msgstr "Se l'Html viene ripulito, tutti gli script personalizzati saranno rimossi."
 
-#. <i class="fa fa-book"></i> <a href="@(OrchardCore.Admin.Constants.DocsUrl)reference/core/Sanitizer" target="_blank">@T["See documentation"]</a>
+#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/core/Sanitizer" target="_blank">@T["See documentation"]</a>
 #: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:17
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "See documentation"
@@ -476,11 +488,11 @@ msgctxt "OrchardCore.ContentFields.Views.HtmlFieldTrumbowygEditorSettings.Edit"
 msgid "Insert Media with url"
 msgstr "Inserisci immagini tramite url"
 
-#. <span class="hint dashed">@T["Whether the url is used when selected from Insert Media (By default, the Short Code is inserted)."]</span>
+#. <span class="hint dashed">@T["Whether the url is used when selected from Insert Media (By default, the Shortcode is inserted)."]</span>
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:7
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldTrumbowygEditorSettings.Edit"
-msgid "Whether the url is used when selected from Insert Media (By default, the Short Code is inserted)."
-msgstr "Viene utilizzato il tag img e un url quando si utilizza la funzione \"Inserisci Media\" (normalmente viene utilizzato un Tag Liquid)."
+msgid "Whether the url is used when selected from Insert Media (By default, the Shortcode is inserted)."
+msgstr ""
 
 #. <label asp-for="Options">@T["Enter the editor options"]</label>
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:12
@@ -741,6 +753,170 @@ msgstr "OK"
 msgctxt "OrchardCore.ContentFields.Views.Media-HtmlField.Modal"
 msgid "Cancel"
 msgstr "Annulla"
+
+#. <option value="CheckboxList" selected="@(currentEditor == "CheckboxList")">@T["Checkbox List"]</option>
+#: OrchardCore.ContentFields\Views\MultiTextField-CheckboxList.Option.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-CheckboxList.Option"
+msgid "Checkbox List"
+msgstr ""
+
+#. placeholder="@T["Type to search"]"
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:37
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
+msgid "Type to search"
+msgstr ""
+
+#. select-label="@T["Select"]"
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:38
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
+msgid "Select"
+msgstr ""
+
+#. deselect-label="@T["Remove"]"
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:39
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
+msgid "Remove"
+msgstr ""
+
+#. @T["No values found"]
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:49
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
+msgid "No values found"
+msgstr ""
+
+#. <option value="Picker" selected="@(currentEditor == "Picker")">@T["Picker"]</option>
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Option.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Option"
+msgid "Picker"
+msgstr ""
+
+#: OrchardCore.ContentFields\Views\MultiTextField.cshtml:0
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField"
+msgid ":"
+msgstr ""
+
+#: OrchardCore.ContentFields\Views\MultiTextField.cshtml:0
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField"
+msgid ", "
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
+#: OrchardCore.ContentFields\Views\MultiTextField.DisplayOption.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField.DisplayOption"
+msgid "Standard"
+msgstr ""
+
+#. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
+#: OrchardCore.ContentFields\Views\MultiTextField.Option.cshtml:4
+msgctxt "OrchardCore.ContentFields.Views.MultiTextField.Option"
+msgid "Standard"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="Required">@T["Required"]</label>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:6
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Required"
+msgstr ""
+
+#. <span class="hint">— @T["Whether a value is required."]</span>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:7
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Whether a value is required."
+msgstr ""
+
+#. <label asp-for="Hint">@T["Hint"]</label>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:13
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Hint"
+msgstr ""
+
+#. <span class="hint">@T["The hint text to display for this field on the editor."]</span>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:15
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "The hint text to display for this field on the editor."
+msgstr ""
+
+#. <th scope="col">@T["Option Label"]</th>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:30
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Option Label"
+msgstr ""
+
+#. <th scope="col">@T["Value"]</th>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:31
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Value"
+msgstr ""
+
+#. <th scope="col" colspan="3">@T["Default?"]</th>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:32
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Default?"
+msgstr ""
+
+#. <label class="custom-control-label" title="@T["Set as default"]" v-bind:for="'customRadio_' + index"></label>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:46
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Set as default"
+msgstr ""
+
+#. <a v-on:click="remove(index)" href="javascript:void(0)" title="@T["Remove element from list"]" class="btn">
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:50
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Remove element from list"
+msgstr ""
+
+#. <a v-on:click="add()" class="btn btn-light w-100 btn-sm"><i class="fas fa-plus small"></i> @T["Add an option"]</a>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:60
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Add an option"
+msgstr ""
+
+#. <h5 class="modal-title">@T["Edit Data"]</h5>
+#. <a href="javascript:void(0)" v-on:click="showModal" class="float-right" title="@T["Edit Data"]"><i class="fas fa-edit"></i></a>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:73
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:103
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Edit Data"
+msgstr ""
+
+#. <label for="options-textarea">@T["Options"]</label>
+#. <label asp-for="Options">@T["Options"]</label>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:80
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:102
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Options"
+msgstr ""
+
+#. <span class="hint">@T["A JSON representation of the allowed values, e.g. {0}", "[ { name: 'First option', value: 'option1' }, { name: 'Second option', value: 'option2' } ]"]</span>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:82
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "A JSON representation of the allowed values, e.g. {0}"
+msgstr ""
+
+#. <label for="options-defaultvalue">@T["Default value"]</label>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:85
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Default value"
+msgstr ""
+
+#. <span class="hint">@T["(Optional) The default to assign to the text field."]</span>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:87
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "(Optional) The default to assign to the text field."
+msgstr ""
+
+#. <button type="button" class="btn btn-primary btn-submit" v-on:click="closeModal()">@T["OK"]</button>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:91
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "OK"
+msgstr ""
+
+#. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
+#: OrchardCore.ContentFields\Views\MultiTextFieldSettings.Edit.cshtml:92
+msgctxt "OrchardCore.ContentFields.Views.MultiTextFieldSettings.Edit"
+msgid "Cancel"
+msgstr ""
 
 #. <option value="Range" selected="@(currentEditor == "Range")">@T["Range"]</option>
 #: OrchardCore.ContentFields\Views\NumericField-Range.Option.cshtml:4
