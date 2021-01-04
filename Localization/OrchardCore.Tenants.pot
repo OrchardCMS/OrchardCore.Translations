@@ -134,61 +134,67 @@ msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The url prefix can not contain more than one segment."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:81
+#: OrchardCore.Tenants\Controllers\ApiController.cs:86
 #. ModelState.AddModelError(nameof(CreateApiViewModel.Name), S["Invalid tenant name. Must contain characters only and no spaces."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:100
+#: OrchardCore.Tenants\Controllers\ApiController.cs:105
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Host and url prefix can not be empty at the same time."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:107
+#: OrchardCore.Tenants\Controllers\ApiController.cs:112
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["The url prefix can not contain more than one segment."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The url prefix can not contain more than one segment."
 msgstr ""
 
 #: OrchardCore.Tenants\Controllers\ApiController.cs:155
-#. return BadRequest(S["Invalid email."]);
+#. ModelState.AddModelError(nameof(model.UserName), S["User name '{0}' is invalid, can only contain letters or digits.", model.UserName]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
-msgid "Invalid email."
+msgid "User name '{0}' is invalid, can only contain letters or digits."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:160
+#: OrchardCore.Tenants\Controllers\ApiController.cs:161
+#. ModelState.AddModelError(nameof(model.Email), S["The email is invalid."]);
+msgctxt "OrchardCore.Tenants.Controllers.ApiController"
+msgid "The email is invalid."
+msgstr ""
+
+#: OrchardCore.Tenants\Controllers\ApiController.cs:171
 #. ModelState.AddModelError(nameof(SetupApiViewModel.Name), S["Tenant not found: '{0}'", model.Name]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Tenant not found: '{0}'"
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:170
+#: OrchardCore.Tenants\Controllers\ApiController.cs:181
 #. return BadRequest(S["The tenant can't be setup."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:184
+#: OrchardCore.Tenants\Controllers\ApiController.cs:195
 #. return BadRequest(S["The database provider is not defined."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The database provider is not defined."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:203
+#: OrchardCore.Tenants\Controllers\ApiController.cs:214
 #. return BadRequest(S["The connection string is required for this database provider."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The connection string is required for this database provider."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:219
+#: OrchardCore.Tenants\Controllers\ApiController.cs:230
 #. return BadRequest(S["Either 'Recipe' or 'RecipeName' is required."]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Either 'Recipe' or 'RecipeName' is required."
 msgstr ""
 
-#: OrchardCore.Tenants\Controllers\ApiController.cs:245
+#: OrchardCore.Tenants\Controllers\ApiController.cs:256
 #. return BadRequest(S["Recipe '{0}' not found.", recipeName]);
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Recipe '{0}' not found."
@@ -266,25 +272,25 @@ msgctxt "OrchardCore.Tenants.Workflows.Activities.EnableTenantTask"
 msgid "Failed"
 msgstr ""
 
-#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:34
+#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:52
 #. public override LocalizedString Category => S["Tenant"];
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Tenant"
 msgstr ""
 
-#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:36
+#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:54
 #. public override LocalizedString DisplayText => S["Setup Tenant Task"];
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Setup Tenant Task"
 msgstr ""
 
-#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:88
+#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:106
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:88
+#: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:106
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Failed"
@@ -675,51 +681,57 @@ msgid "Url host"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:180
-#. <a asp-action="Edit" asp-route-id="@entry.Name" class="btn text-primary btn-sm" data-toggle="tooltip" title="@T["Edit"]"><i class="fa fa-edit"></i></a>
+#. <a asp-action="Edit" asp-route-id="@entry.Name" class="btn btn-primary btn-sm edit">@T["Edit"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Edit"
 msgstr ""
 
+#: OrchardCore.Tenants\Views\Admin\Index.cshtml:183
+#. <a class="btn btn-info btn-sm view" href="@GetDisplayUrl(entry, originalPathBase)" target="_blank">@T["View"]</a>
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "View"
+msgstr ""
+
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:187
-#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn text-danger btn-sm" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]" data-toggle="tooltip" title="@T["Disable"]"><i class="fa fa-toggle-off"></i></a>
+#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:187
-#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn text-danger btn-sm" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]" data-toggle="tooltip" title="@T["Disable"]"><i class="fa fa-toggle-off"></i></a>
+#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Disable"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:187
-#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn text-danger btn-sm" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]" data-toggle="tooltip" title="@T["Disable"]"><i class="fa fa-toggle-off"></i></a>
+#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Are you sure you want to disable this tenant?"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:187
-#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn text-danger btn-sm" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]" data-toggle="tooltip" title="@T["Disable"]"><i class="fa fa-toggle-off"></i></a>
+#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Ok"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:187
-#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn text-danger btn-sm" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]" data-toggle="tooltip" title="@T["Disable"]"><i class="fa fa-toggle-off"></i></a>
+#. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" itemprop="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:191
-#. <a asp-action="Enable" asp-route-id="@entry.Name" class="btn text-success btn-sm" itemprop="UnsafeUrl" data-toggle="tooltip" title="@T["Enable"]"><i class="fa fa-toggle-on"></i></a>
+#. <a asp-action="Enable" asp-route-id="@entry.Name" class="btn btn-success btn-sm enable" itemprop="UnsafeUrl">@T["Enable"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Enable"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:195
-#. <a class="btn text-info btn-sm" id="btn-setup-@entry.Name" href="@GetEncodedUrl(entry, originalPathBase)" data-toggle="tooltip" title="@T["Setup"]"><i class="fa fa-cog"></i></a>
+#. <a class="btn btn-info btn-sm setup" id="btn-setup-@entry.Name" href="@GetEncodedUrl(entry, originalPathBase)">@T["Setup"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Setup"
 msgstr ""
 
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:197
-#. <a asp-action="Reload" asp-route-id="@entry.Name" class="btn text-secondary btn-sm" itemprop="UnsafeUrl" data-toggle="tooltip" title="@T["Reload"]"><i class="fa fa-redo"></i></a>
+#. <a asp-action="Reload" asp-route-id="@entry.Name" class="btn btn-secondary btn-sm reload" itemprop="UnsafeUrl">@T["Reload"]</a>
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Reload"
 msgstr ""
