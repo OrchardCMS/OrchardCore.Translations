@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-12-18 16:11\n"
+"PO-Revision-Date: 2021-01-04 10:17\n"
 
 #. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 #: OrchardCore.Workflows\AdminMenu.cs:24
@@ -1728,13 +1728,13 @@ msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
 msgid "Back"
 msgstr ""
 
-#. <a class="btn btn-danger" data-unsafe-url="@T["Are you sure you want to delete this workflow?"]" asp-action="Delete" asp-route-id="@Model.Workflow.Id">@T["Delete"]</a>
+#. <a class="btn btn-danger" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl" asp-action="Delete" asp-route-id="@Model.Workflow.Id">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:94
 msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
-msgid "Are you sure you want to delete this workflow?"
+msgid "Are you sure you want to delete this workflow instance?"
 msgstr ""
 
-#. <a class="btn btn-danger" data-unsafe-url="@T["Are you sure you want to delete this workflow?"]" asp-action="Delete" asp-route-id="@Model.Workflow.Id">@T["Delete"]</a>
+#. <a class="btn btn-danger" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl" asp-action="Delete" asp-route-id="@Model.Workflow.Id">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:94
 msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
 msgid "Delete"
@@ -1826,7 +1826,13 @@ msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Sort"
 msgstr ""
 
-#. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Workflows\Views\Workflow\Index.cshtml:95
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Are you sure you want to delete this workflow instance?"
+msgstr ""
+
+#. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:95
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Delete"
@@ -2140,7 +2146,7 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Properties"
 msgstr ""
 
-#. <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#. <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:66
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Delete"
@@ -2152,14 +2158,14 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Duplicate"
 msgstr ""
 
-#. <span class="badge badge-secondary">@T["Disabled"]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:79
+#. <span class="badge text-danger"><i class="fas fa-power-off"></i> @T["Disabled"]</span>
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:77
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Disabled"
 msgstr ""
 
-#. <a asp-action="Index" asp-controller="Workflow" asp-route-workflowtypeid="@entry.WorkflowType.Id" class="badge badge-info">@T.Plural(entry.WorkflowCount, "1 instance", "{0} instances")</a>
-#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:83
+#. <a asp-action="Index" asp-controller="Workflow" asp-route-workflowtypeid="@entry.WorkflowType.Id" class="badge ta-badge"><i class="fa fa-list-ol"></i> @T.Plural(entry.WorkflowCount, "1 instance", "{0} instances")</a>
+#: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:81
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "1 instance"
 msgid_plural "{0} instances"
