@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2020-11-09 09:37\n"
+"PO-Revision-Date: 2021-01-04 18:05\n"
 
 #. Description = S["the list part of the content item"];
 #: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:13
@@ -69,39 +69,69 @@ msgid "The list is empty"
 msgstr "该清单为空"
 
 #. <a asp-action="EditTypePart" asp-controller="Admin" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.ListPart.ContentItem.ContentType" asp-route-name="ListPart">@T["Please specify at least one contained content type."]</a>
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:15
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:23
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Please specify at least one contained content type."
 msgstr "请至少指定一个包含的内容类型。"
 
+#. <i class="fa fa-filter" title="@T["Filters"]"></i>
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:35
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Filters"
+msgstr "筛选"
+
+#. <a class="dropdown-item" href="?Status=Draft">@T["Only draft items"]</a>
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:39
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Only draft items"
+msgstr "仅草稿项"
+
+#. <a class="dropdown-item" href="?Status=Published">@T["Only published items"]</a>
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:40
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Only published items"
+msgstr "仅已发布项目"
+
+#. <a class="dropdown-item" href="?Status=Owner">@T["Owned by me"]</a>
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:41
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Owned by me"
+msgstr "我的"
+
+#. <input name="@nameof(ListPartFilterViewModel.DisplayText)" value="@Model.ListPartFilterViewModel.DisplayText" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:46
+msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
+msgid "Search"
+msgstr "搜索"
+
 #. @T["Edit {0}", @Model.ListPart.ContentItem.DisplayText]
 #. @T["Edit {0}", @Model.ListPart.ContentItem.DisplayText]
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:27
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:42
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:55
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:64
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Edit {0}"
 msgstr "编辑 {0}"
 
 #. @T["Create {0}", contentTypeDefinition.DisplayName]
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:30
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:58
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Create {0}"
 msgstr "创建 {0}"
 
 #. @T["Create"]
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:45
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:67
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "Create"
 msgstr "创建"
 
 #. <div id="update-order-error-message" class="d-none" data-message="@T["There was an error when updating the order of the items."]" />
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:83
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:110
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "There was an error when updating the order of the items."
 msgstr "更新项目顺序时出错。"
 
 #. <p class="alert alert-warning">@T["The list is empty."]</p>
-#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:88
+#: OrchardCore.Lists\Views\ListPart.DetailAdmin.cshtml:115
 msgctxt "OrchardCore.Lists.Views.ListPart.DetailAdmin"
 msgid "The list is empty."
 msgstr "该清单为空."
@@ -128,7 +158,7 @@ msgstr "提供用于代理本地 rss 源的自定义公共 url。"
 #: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:8
 msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>."
-msgstr ""
+msgstr "当前的源可用于 <a href=\"{0}\" target=\"_blank\">{0}</a>。"
 
 #. <label asp-for="FeedItemsCount">@T["Feed items count"]</label>
 #: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:12

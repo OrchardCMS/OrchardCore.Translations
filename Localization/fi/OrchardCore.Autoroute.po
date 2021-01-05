@@ -10,7 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2020-11-09 09:14\n"
+"PO-Revision-Date: 2020-12-18 16:16\n"
+
+#. updater.ModelState.AddModelError(Prefix, nameof(model.Path), S["Your permalink is already in use."]);
+#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplayDriver.cs:129
+msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplayDriver"
+msgid "Your permalink is already in use."
+msgstr ""
 
 #. Description = S["the custom URL part of the content item"];
 #: OrchardCore.Autoroute\GraphQL\AutorouteInputObjectType.cs:13
@@ -36,29 +42,29 @@ msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteQueryObjectType"
 msgid "The permalinks for your content item."
 msgstr "Pysyvät osoitteet (permalinks) sisältökohteellesi."
 
-#. context.Fail(S["Your permalink can't be set to the homepage, please use the homepage option instead."], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:160
-msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
-msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
-msgstr "Pysyvää osoitetta (permalink) ei voi asettaa kotisivulle. Käytä etusivun asetusta tämän sijaan."
-
-#. context.Fail(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:166
-msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
-msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
-msgstr "Älä käytä seuraavia merkkejä pysyvässä osoitteessa (permalink): {0}. Välilyönnit ja peräkkäiset kauttaviivat eivät ole sallittuja (käytä väliviivoja tai alaviivoja niiden sijaan)."
-
-#. context.Fail(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePartDisplay.MaxPathLength], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:171
-msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
-msgid "Your permalink is too long. The permalink can only be up to {0} characters."
-msgstr "Pysyvä osoite (permalink) on liian pitkä. Pysyvä osoite saa sisältää enintään {0} merkkiä."
-
 #. context.Fail(S["Your permalink is already in use."], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:176
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:130
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is already in use."
 msgstr "Pysyvä osoite (permalink) on jo käytössä."
+
+#. yield return new ValidationResult(S["Your permalink can't be set to the homepage, please use the homepage option instead."], new[] { nameof(autoroute.Path) });
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:14
+msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
+msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
+msgstr ""
+
+#. yield return new ValidationResult(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], new[] { nameof(autoroute.Path) });
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:20
+msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
+msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
+msgstr ""
+
+#. yield return new ValidationResult(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePart.MaxPathLength], new[] { nameof(autoroute.Path) });
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:25
+msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
+msgid "Your permalink is too long. The permalink can only be up to {0} characters."
+msgstr ""
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 #: OrchardCore.Autoroute\Settings\AutoroutePartSettingsDisplayDriver.cs:69
@@ -67,85 +73,85 @@ msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Malli ei sisällä validia Liquid-lauseketta. Tarkat tiedot: {0}"
 
 #. <label class="custom-control-label" asp-for="Disabled">@T["Disabled"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:18
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:20
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Disabled"
 msgstr "Pois Käytöstä"
 
 #. <span class="hint dashed">@T["Check to disable autoroute for this content item."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:19
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:21
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to disable autoroute for this content item."
 msgstr "Valitse poistaaksesi autoroute käytöstä tälle sisältökohteelle."
 
 #. <label asp-for="Path">@T["Permalink"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:26
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:28
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Permalink"
 msgstr "Pysyvä osoite (permalink)"
 
 #. <span class="hint">@T["The url of the content item. Leave empty to auto-generate it."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:39
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:47
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "The url of the content item. Leave empty to auto-generate it."
 msgstr "Sisältökohteen URL-osoite. Jos tyhjä, niin se generoidaan automaattisesti."
 
 #. <span class="hint">@T["The url of the content item. It will be automatically generated."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:43
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:51
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "The url of the content item. It will be automatically generated."
 msgstr "Sisältökohteen URL-osoite. Luodaan automaattisesti."
 
 #. <div class="alert alert-info">@T["This content item is the current homepage"]</div>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:52
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:60
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "This content item is the current homepage"
 msgstr "Tämä sisältökohde on nykyinen kotisivu"
 
 #. <label class="custom-control-label" asp-for="SetHomepage">@T["Set as homepage"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:61
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:69
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Set as homepage"
 msgstr "Aseta kotisivuksi"
 
 #. <span class="hint dashed">@T["Check to set this content item as the homepage once published."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:62
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:70
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to set this content item as the homepage once published."
 msgstr "Valitse tämä, jos haluat asettaa tämän sisältökohteen kotisivuksi, kun se julkaistaan."
 
 #. <label class="custom-control-label" asp-for="UpdatePath">@T["Refresh the path"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:74
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:82
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Refresh the path"
 msgstr "Päivitä polku"
 
 #. <span class="hint dashed">@T["Check to refresh the path. Warning: the previous URL won't be accessible anymore."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:75
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:83
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to refresh the path. Warning: the previous URL won't be accessible anymore."
 msgstr "Tarkista päivittääksesi polku. Varoitus: edellinen URL-osoite ei tule olemaan enää käytettävissä."
 
 #. <label class="custom-control-label" asp-for="RouteContainedItems">@T["Route contained items"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:85
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:93
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Route contained items"
 msgstr "Reitti sisälsi kohteita"
 
 #. <span class="hint dashed">@T["Check to enabling the routing of child content items."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:86
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:94
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to enabling the routing of child content items."
 msgstr "Valitse tämä, jos haluat sallia alisisältöjen (child content) reitityksen."
 
 #. <label class="custom-control-label" asp-for="Absolute">@T["Absolute"]</label>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:96
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:104
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Absolute"
 msgstr "Absoluuttinen"
 
 #. <span class="hint dashed">@T["Check to specify that a child content item will be routed to an absolute path."]</span>
-#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:97
+#: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:105
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to specify that a child content item will be routed to an absolute path."
 msgstr "Valitse tämä, jos haluat, että alisisältö (child content item) reititetään absoluuttisella polulla."
