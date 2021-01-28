@@ -6,7 +6,10 @@ $cultures = New-Object Collections.Generic.List[String]
 $pkgExtension = "nupkg"
 $pkgNamePrefix = "OrchardCore.Translations."
 $pkgVersion = $env:nugetVersion
-$pkgDescription = "Orchard Core translation for '{0}' culture"
+$pkgTitle = "Orchard Core translations for '{0}' culture"
+$pkgDescription = "Orchard Core CMS is a Web Content Management System (CMS) built on top of the Orchard Core Framework.
+
+Orchard Core translations for '{0}' ({1}) culture"
 
 $pkgSpecExtension = "nuspec"
 $pkgPropsExtension = "props"
@@ -14,7 +17,7 @@ $pkgBuildFolderName = "buildTransitive"
 $pkgSpecTemplate = "_template.$pkgSpecExtension"
 $pkgPropsTemplate = "_template.$pkgPropsExtension"
 
-function createNuGetPackage([string]$pkgName, [string]$culture)
+function createNuGetPackage([string]$pkgName, [string]$culture, [string]$cultureDisplayName)
 {
     echo "Copying content files .."
 
@@ -37,7 +40,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture)
     $pkgPropsFilePath = [IO.Path]::Combine($pkgBuildFolderPath, $pkgPropsFileName)
     Copy-Item -Path $pkgPropsTemplate -Destination $pkgPropsFilePath
 
-    buildNuGetPackageSpec $pkgName $culture
+    buildNuGetPackageSpec $pkgName $culture $cultureDisplayName
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
@@ -68,7 +71,7 @@ function createNuGetMetaPackage()
     Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
 }
 
-function buildNuGetPackageSpec($pkgName, $culture)
+function buildNuGetPackageSpec($pkgName, $culture, $cultureDisplayName)
 {
     echo "Building '$pkgName.$pkgSpecExtension' ..."
 
@@ -76,7 +79,8 @@ function buildNuGetPackageSpec($pkgName, $culture)
     $metadata = $pkgSpecDocument.package.metadata
     $metadata.id = $pkgName
     $metadata.version = $pkgVersion
-    $metadata.description = [String]::Format($pkgDescription, $culture)
+    $metadata.title = [String]::Format($pkgTitle, $cultureDisplayName)
+    $metadata.description = [String]::Format($pkgDescription, $cultureDisplayName, $culture)
     
     $pkgId = $pkgNamePrefix + $culture
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, "$pkgId.$pkgVersion")
@@ -92,7 +96,10 @@ function buildNuGetMetaPackageSpec($pkgName)
     $metadata = $pkgSpecDocument.package.metadata
     $metadata.id = $pkgName
     $metadata.version = $pkgVersion
-    $metadata.description = "Orchard Core translation for all supported cultures"
+    $metadata.title = "Orchard Core Translations for All cultures"
+    $metadata.description = "Orchard Core CMS is a Web Content Management System (CMS) built on top of the Orchard Core Framework.
+    
+    Orchard Core translation for all supported cultures"
 
     $dependencies = $pkgSpecDocument.CreateElement("dependencies")
     $dependencies.RemoveAllAttributes()
@@ -120,7 +127,8 @@ $json = Get-Content -Raw -Path cultures.json | ConvertFrom-Json
 foreach ($culture in $json.cultures)
 {
     $cultureName = $culture.name
-    
+    $cultureDisplayName = $culture.'display-name'
+   
     if($culture.'generate-package')
     {
         $pkgName = $pkgNamePrefix + $cultureName
@@ -129,7 +137,7 @@ foreach ($culture in $json.cultures)
         echo "Preparing a NuGet package for '$($culture.'display-name')' culture"
         echo "Creating '$pkgId.$pkgExtension' ..."
 
-        createNuGetPackage $pkgName $cultureName
+        createNuGetPackage $pkgName $cultureName $cultureDisplayName
 
         echo ""
     }
