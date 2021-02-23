@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2021-02-23 13:34\n"
+"PO-Revision-Date: 2021-02-23 13:48\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #. .Add(S["Search"], S["Search"].PrefixPosition(), entry => entry
@@ -94,7 +94,7 @@ msgstr "Hakuindeksiä {0} ei löydy."
 #: OrchardCore.Lucene\Controllers\AdminController.cs:225
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while creating the index."
-msgstr ""
+msgstr "Virhe luotaessa hakuindeksiä."
 
 #. _notifier.Success(H["Index <em>{0}</em> created successfully.", model.IndexName]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:230
@@ -106,7 +106,7 @@ msgstr "Hakuindeksi <em>{0}</em> luotiin onnistuneesti."
 #: OrchardCore.Lucene\Controllers\AdminController.cs:242
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while editing the index."
-msgstr ""
+msgstr "Virhe muokatessa hakuindeksiä."
 
 #. _notifier.Success(H["Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>", model.IndexName]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:247
@@ -176,7 +176,7 @@ msgstr "Hakuindeksin nimi sisältää virheellisiä merkkejä."
 #: OrchardCore.Lucene\Controllers\SearchController.cs:158
 msgctxt "OrchardCore.Lucene.Controllers.SearchController"
 msgid "Incorrect query syntax."
-msgstr ""
+msgstr "Väärä kyselyn syntaksi."
 
 #. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
 #: OrchardCore.Lucene\Drivers\LuceneQueryDisplayDriver.cs:63
@@ -268,7 +268,7 @@ msgstr "Käytettävä Lucene-hakuindeksi"
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:21
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Return Content Items"
-msgstr ""
+msgstr "Palauta sisältökohteet"
 
 #. <span class="hint dashed">@T["Check to return the corresponding content items."]</span>
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:22
@@ -328,7 +328,7 @@ msgstr ""
 #: OrchardCore.Lucene\Views\LuceneSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Lucene.Views.LuceneSettings.Edit"
 msgid "Allow Lucene queries in search forms"
-msgstr ""
+msgstr "Salli Lucene-kyselyt hakulomakkeissa"
 
 #. <span class="hint dashed">@T["Whether search queries should be allowed to use <a href=\"https://lucene.apache.org/core/2_9_4/queryparsersyntax.html\">Lucene query parser syntax</a>."]</span>
 #: OrchardCore.Lucene\Views\LuceneSettings.Edit.cshtml:33
@@ -412,7 +412,7 @@ msgstr "Kulttuuri"
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:28
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "The content culture that it will index."
-msgstr ""
+msgstr "Sisällön kulttuuri, jota se indeksoi."
 
 #. <label asp-for="IndexedContentTypes">@T["Content Types"]</label>
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:33
@@ -424,7 +424,7 @@ msgstr "Sisältötyypit"
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:34
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "The content types to index. Choose at least one."
-msgstr ""
+msgstr "Indeksoitava sisältötyyppi. Valitse vähintään yksi."
 
 #. <label asp-for="IndexLatest">@T["Index options"]</label>
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:47
@@ -526,7 +526,7 @@ msgstr "Massatoiminnot"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:49
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Oletko varma, että haluat {0} nämä kohteet?"
 
 #. <a asp-action="Query" asp-route-IndexName="@entry.Name" class="btn btn-success btn-sm">@T["Query"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:69
@@ -694,7 +694,7 @@ msgstr "Sisällytä kaikki hakuindeksit."
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:27
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "The search indexes to add as part of the plan."
-msgstr ""
+msgstr "Hakuindeksit, jotka lisätään osaksi suunnitelmaa."
 
 #. <h5>@T["Search Indexes"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:11
@@ -724,7 +724,7 @@ msgstr "Hakuindeksit"
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified search indexes."
-msgstr ""
+msgstr "Vie kaikki tai määritellyt hakuindeksit."
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Edit.cshtml:3
@@ -742,7 +742,7 @@ msgstr "Hakuasetukset"
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Summary.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneSettingsDeploymentStep.Fields.Summary"
 msgid "Adds search settings to the plan."
-msgstr ""
+msgstr "Lisää haun asetukset suunnitelmaan."
 
 #. <h4 class="card-title">@T["Search Settings"]</h4>
 #: OrchardCore.Lucene\Views\Items\LuceneSettingsDeploymentStep.Fields.Thumbnail.cshtml:3
