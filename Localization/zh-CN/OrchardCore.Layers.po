@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-01-04 10:03\n"
+"PO-Revision-Date: 2021-03-18 10:17\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -41,40 +41,64 @@ msgid "Widgets"
 msgstr "小部件"
 
 #. _notifier.Success(H["Layer deleted successfully."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:228
+#: OrchardCore.Layers\Controllers\AdminController.cs:258
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
 msgstr "图层删除成功。"
 
 #. _notifier.Error(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:232
+#: OrchardCore.Layers\Controllers\AdminController.cs:262
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer couldn't be deleted: you must remove any associated widgets first."
 msgstr "无法删除图层: 必须先删除关联的小部件。"
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:308
+#: OrchardCore.Layers\Controllers\AdminController.cs:338
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
 msgstr "图层名称是必需的。"
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:312
+#: OrchardCore.Layers\Controllers\AdminController.cs:342
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
 msgstr "图层名称已存在。"
 
-#. ModelState.AddModelError(nameof(LayerEditViewModel.Rule), S["The rule is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:317
-msgctxt "OrchardCore.Layers.Controllers.AdminController"
-msgid "The rule is required."
-msgstr "该规则是必需的。"
+#. _notifier.Success(H["Condition added successfully."]);
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:134
+msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
+msgid "Condition added successfully."
+msgstr ""
 
-#. context.Updater.ModelState.AddModelError("LayerMetadata.Zone", S["Zone is missing"]);
-#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:76
+#. _notifier.Success(H["Condition updated successfully."]);
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:203
+msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
+msgid "Condition updated successfully."
+msgstr ""
+
+#. _notifier.Error(H["The condition has validation errors."]);
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:207
+msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
+msgid "The condition has validation errors."
+msgstr ""
+
+#. _notifier.Success(H["Condition deleted successfully."]);
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:241
+msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
+msgid "Condition deleted successfully."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Zone", S["Zone is missing"]);
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:77
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Zone is missing"
 msgstr "缺少区域"
+
+#. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Layer", S["Layer is missing"]);
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:82
+msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
+msgid "Layer is missing"
+msgstr ""
 
 #. Description = S["Site layers define the rules and zone placement for widgets."],
 #: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:30
@@ -130,50 +154,44 @@ msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Rule">@T["Rule"]</label>
-#: OrchardCore.Layers\Views\Admin\Create.cshtml:13
-msgctxt "OrchardCore.Layers.Views.Admin.Create"
-msgid "Rule"
-msgstr "规则"
-
 #. <label asp-for="Description">@T["Description"]</label>
-#: OrchardCore.Layers\Views\Admin\Create.cshtml:19
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:13
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Description"
 msgstr "描述"
 
 #. <input class="button" type="submit" value="@T["Create"]" />
-#: OrchardCore.Layers\Views\Admin\Create.cshtml:24
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:18
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create"
 msgstr "创建"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1></zone>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:3
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:14
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Edit Layer - {0}"
 msgstr "编辑层- {0}"
 
 #. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:7
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:18
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Rule">@T["Rule"]</label>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Layers.Views.Admin.Edit"
-msgid "Rule"
-msgstr "规则"
-
 #. <label asp-for="Description">@T["Description"]</label>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:19
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:24
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Description"
 msgstr "描述"
 
-#. <input class="button" type="submit" value="@T["Save"]" />
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:24
+#. <div class="d-none" id="ruleOrderErrorMessage" data-message="@T["Error updating rule order"]"></div>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:31
+msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Error updating rule order"
+msgstr ""
+
+#. <input class="button mt-3" type="submit" value="@T["Save"]" />
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:35
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Save"
 msgstr "保存"
@@ -203,49 +221,49 @@ msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widge
 msgstr "请在添加部件前 <a href=\"{0}\">定义可用区域</a>"
 
 #. @T["Add Widget"]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:76
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:78
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add Widget"
 msgstr "添加部件"
 
 #. <h3>@T["Layers"]</h3>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:100
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:103
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
 msgstr "图层"
 
 #. @T["Select a layer to reveal its associated widgets."]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:103
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:106
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
 msgstr "选择一个图层以显示其关联的小部件。"
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Layers/#rules" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:104
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:107
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "See documentation"
 msgstr "查看文档"
 
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:119
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:122
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit"
 msgstr "编辑"
 
 #. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:120
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:123
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Delete"
 msgstr "删除"
 
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:133
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:136
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr "请 <a href=\"{0}\">在添加小部件之前创建一个层</a>"
 
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:136
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:139
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr "添加"
@@ -279,4 +297,34 @@ msgstr "全部图层"
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
 msgid "Exports all layers."
 msgstr "导出所有层。"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Rule"])</h1></zone>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:3
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Create Rule"
+msgstr ""
+
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:14
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Create"
+msgstr ""
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-controller="Admin" asp-route-name="@Model.Name">@T["Cancel"]</a>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Cancel"
+msgstr ""
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Rule"])</h1></zone>
+#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:3
+msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
+msgid "Edit Rule"
+msgstr ""
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:13
+msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
+msgid "Save"
+msgstr ""
 
