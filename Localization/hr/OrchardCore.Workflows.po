@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Croatian\n"
 "Language: hr_HR\n"
-"PO-Revision-Date: 2021-01-04 10:16\n"
+"PO-Revision-Date: 2021-03-18 10:43\n"
 
 #. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 #: OrchardCore.Workflows\AdminMenu.cs:24
@@ -345,13 +345,13 @@ msgid "Workflow {0} has been deleted."
 msgstr ""
 
 #. _notifier.Success(H["Workflow has been saved."]);
-#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:457
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:465
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow has been saved."
 msgstr ""
 
 #. _notifier.Success(H["Workflow {0} deleted", workflowType.Name]);
-#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:477
+#: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:485
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow {0} deleted"
 msgstr ""
@@ -369,7 +369,7 @@ msgid "Background"
 msgstr ""
 
 #. return Outcomes(S["Done"]);
-#: OrchardCore.Workflows\Timers\TimerEvent.cs:55
+#: OrchardCore.Workflows\Timers\TimerEvent.cs:49
 msgctxt "OrchardCore.Workflows.Timers.TimerEvent"
 msgid "Done"
 msgstr ""
@@ -1874,62 +1874,110 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Copy Workflow"
 msgstr ""
 
+#. <a class="nav-link active" id="properties-tab" data-toggle="tab" href="#properties" role="tab" aria-controls="site" aria-selected="true">@T["Properties"]</a>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:10
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Properties"
+msgstr ""
+
+#. <a class="nav-link" id="advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="resources">@T["Advanced"]</a>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:13
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Advanced"
+msgstr ""
+
 #. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:9
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:20
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Name"
 msgstr ""
 
 #. <div class="hint">@T["The name of the workflow."]</div>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:12
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:23
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "The name of the workflow."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="IsEnabled">@T["Enabled"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:18
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:29
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Enabled"
 msgstr ""
 
 #. <span class="hint">@T["Uncheck to prevent workflows of this type from being executed."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:19
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:30
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Uncheck to prevent workflows of this type from being executed."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="IsSingleton">@T["Single instance"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:26
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:37
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Single instance"
 msgstr ""
 
 #. <span class="hint">@T["Check to ensure only one workflow of this type can execute at a time. Leave unchecked to allow any number of workflows to execute at the same time."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:27
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:38
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Check to ensure only one workflow of this type can execute at a time. Leave unchecked to allow any number of workflows to execute at the same time."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="DeleteFinishedWorkflows">@T["Delete successfully completed workflows"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:34
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:45
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Delete successfully completed workflows"
 msgstr ""
 
 #. <span class="hint">@T["Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:35
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:46
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."
 msgstr ""
 
+#. <div><span asp-validation-for="LockTimeout" class="text-danger">@T["Invalid lock timeout value in the advanced tab"]</span></div>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:50
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Invalid lock timeout value in the advanced tab"
+msgstr ""
+
+#. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:51
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Invalid lock expiration value in the advanced tab"
+msgstr ""
+
+#. <label asp-for="LockTimeout">@T["Lock timeout (ms)"]</label>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:56
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Lock timeout (ms)"
+msgstr ""
+
+#. <span class="hint">@T["The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:58
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."
+msgstr ""
+
+#. <label asp-for="LockExpiration">@T["Lock expiration (ms)"]</label>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:62
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Lock expiration (ms)"
+msgstr ""
+
+#. <span class="hint">@T["The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:64
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."
+msgstr ""
+
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:40
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:70
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Save"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" href="@Model.ReturnUrl">@T["Cancel"]</a>
-#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:41
+#: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:71
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Cancel"
 msgstr ""
@@ -2016,62 +2064,110 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Edit Workflow"
 msgstr ""
 
+#. <a class="nav-link active" id="properties-tab" data-toggle="tab" href="#properties" role="tab" aria-controls="site" aria-selected="true">@T["Properties"]</a>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:11
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Properties"
+msgstr ""
+
+#. <a class="nav-link" id="advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="resources">@T["Advanced"]</a>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:14
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Advanced"
+msgstr ""
+
 #. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:10
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:21
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Name"
 msgstr ""
 
 #. <div class="hint">@T["The name of the workflow."]</div>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:13
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:24
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "The name of the workflow."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="IsEnabled">@T["Enabled"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:19
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:30
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Enabled"
 msgstr ""
 
 #. <span class="hint">@T["Uncheck to prevent workflows of this type from being executed."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:20
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:31
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Uncheck to prevent workflows of this type from being executed."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="IsSingleton">@T["Single instance"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:27
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:38
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Single instance"
 msgstr ""
 
 #. <span class="hint">@T["Check to ensure only one workflow of this type can execute at a time. Leave unchecked to allow any number of workflows to execute at the same time."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:28
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:39
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Check to ensure only one workflow of this type can execute at a time. Leave unchecked to allow any number of workflows to execute at the same time."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="DeleteFinishedWorkflows">@T["Delete successfully completed workflows"]</label>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:35
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:46
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Delete successfully completed workflows"
 msgstr ""
 
 #. <span class="hint">@T["Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."]</span>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:36
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:47
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Check to automatically delete workflows that have completed successfully. Leave unchecked to maintain a history of executed workflows."
 msgstr ""
 
+#. <div><span asp-validation-for="LockTimeout" class="text-danger">@T["Invalid lock timeout value in the advanced tab"]</span></div>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:51
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Invalid lock timeout value in the advanced tab"
+msgstr ""
+
+#. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:52
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Invalid lock expiration value in the advanced tab"
+msgstr ""
+
+#. <label asp-for="LockTimeout">@T["Lock timeout (ms)"]</label>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:57
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Lock timeout (ms)"
+msgstr ""
+
+#. <span class="hint">@T["The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:59
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."
+msgstr ""
+
+#. <label asp-for="LockExpiration">@T["Lock expiration (ms)"]</label>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:63
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Lock expiration (ms)"
+msgstr ""
+
+#. <span class="hint">@T["The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:65
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."
+msgstr ""
+
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:41
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:71
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Save"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" href="@Model.ReturnUrl">@T["Cancel"]</a>
-#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:42
+#: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:72
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Cancel"
 msgstr ""
