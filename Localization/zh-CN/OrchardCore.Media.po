@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-01-28 20:59\n"
+"PO-Revision-Date: 2021-03-18 10:26\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -79,51 +79,51 @@ msgid "Media Cache"
 msgstr "媒体缓存"
 
 #. error = S["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#. return StatusCode(StatusCodes.Status403Forbidden, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
-#: OrchardCore.Media\Controllers\AdminController.cs:179
-#: OrchardCore.Media\Controllers\AdminController.cs:290
+#. return StatusCode(StatusCodes.Status400BadRequest, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
+#: OrchardCore.Media\Controllers\AdminController.cs:163
+#: OrchardCore.Media\Controllers\AdminController.cs:274
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr "不允许此文件扩展名: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:232
+#: OrchardCore.Media\Controllers\AdminController.cs:216
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr "无法删除跟目录媒体文件夹"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:238
+#: OrchardCore.Media\Controllers\AdminController.cs:222
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr "无法删除路径，因为它不是目录"
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:295
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot move media because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:279
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr "无法移动媒体，因为已存在具有相同名称的文件"
 
 #. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:371
+#: OrchardCore.Media\Controllers\AdminController.cs:355
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr "移动文件时出错。也许它们已经存在于目标文件夹中？出错的文件：{0}"
 
 #. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because the folder name contains invalid characters"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:393
+#: OrchardCore.Media\Controllers\AdminController.cs:377
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because the folder name contains invalid characters"
 msgstr "无法创建文件夹，因为文件夹名称包含无效字符"
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:407
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a folder already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:391
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr "无法创建文件夹，因为已存在具有相同名称的文件夹"
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:413
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:397
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr "无法创建文件夹，因为已存在具有相同名称的文件"
