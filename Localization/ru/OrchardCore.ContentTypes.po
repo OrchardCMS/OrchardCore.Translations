@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2021-05-08 11:43\n"
+"PO-Revision-Date: 2021-06-01 09:30\n"
 
 #. builder.Add(S["Content"], content => content
 #: OrchardCore.ContentTypes\AdminMenu.cs:28
@@ -233,7 +233,7 @@ msgid "The stereotype should be alphanumeric."
 msgstr "Стереотип должен быть буквенно-цифровым."
 
 #. context.Updater.ModelState.AddModelError("DisplayName", S["The Content Type name can't be empty."]);
-#: OrchardCore.ContentTypes\Editors\DefaultContentTypeDisplayDriver.cs:37
+#: OrchardCore.ContentTypes\Editors\DefaultContentTypeDisplayDriver.cs:38
 msgctxt "OrchardCore.ContentTypes.Editors.DefaultContentTypeDisplayDriver"
 msgid "The Content Type name can't be empty."
 msgstr "Название типа содержимого не может быть пустым."
@@ -244,62 +244,86 @@ msgctxt "OrchardCore.ContentTypes.Services.ContentDefinitionService"
 msgid "Cannot add part named '{0}'. It already exists."
 msgstr "Невозможно добавить часть с именем '{0}'. Она уже существует."
 
+#. <label asp-for="ContentPartDefinition.Name">@T["Technical Name"]</label>
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:5
+msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
+msgid "Technical Name"
+msgstr ""
+
+#. <span class="hint w-100">@T["Technical name of the part."]</span>
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:7
+msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
+msgid "Technical name of the part."
+msgstr ""
+
 #. <label asp-for="DisplayName">@T["Display Name"]</label>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:6
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:11
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Display Name"
 msgstr "Отображаемое имя"
 
-#. <span class="hint">@T["Name of the part as it will be displayed in screens. Leave empty to use defaults."]</span>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:9
+#. <span class="hint w-100">@T["Name of the part as it will be displayed in screens. Leave empty to use defaults."]</span>
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:13
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Name of the part as it will be displayed in screens. Leave empty to use defaults."
 msgstr "Имя части, как она будет отображаться на экранах. Оставьте пустым, чтобы использовать по умолчанию."
 
 #. <label asp-for="Description">@T["Description"]</label>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:14
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:17
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Description"
 msgstr "Описание"
 
-#. <span class="hint">@T["Optionally provide a description for this part."]</span>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:18
+#. <span class="hint w-100">@T["Optionally provide a description for this part."]</span>
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:20
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Optionally provide a description for this part."
 msgstr "Опционально укажите описание для этой части."
 
 #. <label class="custom-control-label" asp-for="Attachable">@T["Attachable"]</label>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:24
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:26
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Attachable"
 msgstr "Прикрепляемая"
 
 #. <span class="hint">@T["Check to allow this part to be attached to other content types."]</span>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:25
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:27
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Check to allow this part to be attached to other content types."
 msgstr "Отметьте, чтобы разрешить этой части прикрепляться к другим типам содержимого."
 
 #. <label class="custom-control-label" asp-for="Reusable">@T["Reusable"]</label>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:32
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:34
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Reusable"
 msgstr "Переиспользуемая"
 
 #. <span class="hint">@T["Check to allow this part to be attached multiple times."]</span>
-#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:33
+#: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:35
 msgctxt "OrchardCore.ContentTypes.Views.ContentPartSettings.Edit"
 msgid "Check to allow this part to be attached multiple times."
 msgstr "Отметьте, чтобы разрешить эту часть присоединить несколько раз."
 
-#. <label asp-for="DisplayName">@T["Display Name"]</label>
+#. <label asp-for="Name">@T["Technical Name"]</label>
 #: OrchardCore.ContentTypes\Views\ContentType.Edit.cshtml:4
+msgctxt "OrchardCore.ContentTypes.Views.ContentType.Edit"
+msgid "Technical Name"
+msgstr ""
+
+#. <span class="hint w-100">@T["Technical name of the type."]</span>
+#: OrchardCore.ContentTypes\Views\ContentType.Edit.cshtml:6
+msgctxt "OrchardCore.ContentTypes.Views.ContentType.Edit"
+msgid "Technical name of the type."
+msgstr ""
+
+#. <label asp-for="DisplayName">@T["Display Name"]</label>
+#: OrchardCore.ContentTypes\Views\ContentType.Edit.cshtml:9
 msgctxt "OrchardCore.ContentTypes.Views.ContentType.Edit"
 msgid "Display Name"
 msgstr "Отображаемое имя"
 
 #. <span class="hint w-100">@T["Name of the type as it will be displayed on screens."]</span>
-#: OrchardCore.ContentTypes\Views\ContentType.Edit.cshtml:6
+#: OrchardCore.ContentTypes\Views\ContentType.Edit.cshtml:11
 msgctxt "OrchardCore.ContentTypes.Views.ContentType.Edit"
 msgid "Name of the type as it will be displayed on screens."
 msgstr "Название типа, как оно будет отображаться на экранах."
@@ -752,50 +776,38 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Edit Content Part - {0}"
 msgstr "Изменить часть контента - {0}"
 
-#. <label asp-for="Name">@T["Technical Name"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:19
-msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
-msgid "Technical Name"
-msgstr "Техничеcкое название"
-
-#. <span class="hint">@T["Technical name of the part."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:22
-msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
-msgid "Technical name of the part."
-msgstr "Техническое название части."
-
 #. <h3>@T["Fields"]</h3>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:35
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:27
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Fields"
 msgstr "Поля"
 
 #. <a asp-route-action="EditField" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:45
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:37
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Edit"
 msgstr "Редактировать"
 
 #. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:46
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:38
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Remove"
 msgstr "Удалить"
 
 #. <a asp-route-action="AddFieldTo" asp-route-id="@Model.PartDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:57
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:49
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Add Field"
 msgstr "Добавить поле"
 
 #. <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:61
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:53
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Save"
 msgstr "Сохранить"
 
 #. <button class="btn btn-danger delete" type="submit" name="submit.Delete" value="Delete" data-url-af="RemoveUrl">@T["Delete"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:62
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:54
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Delete"
 msgstr "Удалить"
