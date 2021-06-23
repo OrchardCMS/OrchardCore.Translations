@@ -10,27 +10,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2021-01-04 10:08\n"
+"PO-Revision-Date: 2021-06-20 19:04\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
 msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Content"
-msgstr ""
+msgstr "Вміст"
 
-#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), layers => layers
-#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), layers => layers
+#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), media => media
+#. .Add(S["Media Library"], S["Media Library"].PrefixPosition(), media => media
 #: OrchardCore.Media\AdminMenu.cs:27
 #: OrchardCore.Media\AdminMenu.cs:27
 msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Media Library"
-msgstr ""
+msgstr "Медіа бібліотека"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Media\AdminMenu.cs:33
 msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Configuration"
-msgstr ""
+msgstr "Конфігурація"
 
 #. .Add(S["Media"], S["Media"].PrefixPosition(), media => media
 #. .Add(S["Media"], S["Media"].PrefixPosition(), media => media
@@ -38,7 +38,7 @@ msgstr ""
 #: OrchardCore.Media\AdminMenu.cs:34
 msgctxt "OrchardCore.Media.AdminMenu"
 msgid "Media"
-msgstr ""
+msgstr "Медіа"
 
 #. .Add(S["Media Options"], S["Media Options"].PrefixPosition(), options => options
 #. .Add(S["Media Options"], S["Media Options"].PrefixPosition(), options => options
@@ -60,7 +60,7 @@ msgstr ""
 #: OrchardCore.Media\AdminMenu.cs:65
 msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
 msgid "Configuration"
-msgstr ""
+msgstr "Конфігурація"
 
 #. .Add(S["Media"], S["Media"].PrefixPosition(), media => media
 #. .Add(S["Media"], S["Media"].PrefixPosition(), media => media
@@ -68,7 +68,7 @@ msgstr ""
 #: OrchardCore.Media\AdminMenu.cs:66
 msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
 msgid "Media"
-msgstr ""
+msgstr "Медіа"
 
 #. .Add(S["Media Cache"], S["Media Cache"].PrefixPosition(), cache => cache
 #. .Add(S["Media Cache"], S["Media Cache"].PrefixPosition(), cache => cache
@@ -79,51 +79,51 @@ msgid "Media Cache"
 msgstr ""
 
 #. error = S["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#. return StatusCode(StatusCodes.Status403Forbidden, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
-#: OrchardCore.Media\Controllers\AdminController.cs:179
-#: OrchardCore.Media\Controllers\AdminController.cs:290
+#. return StatusCode(StatusCodes.Status400BadRequest, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
+#: OrchardCore.Media\Controllers\AdminController.cs:162
+#: OrchardCore.Media\Controllers\AdminController.cs:273
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:232
+#: OrchardCore.Media\Controllers\AdminController.cs:215
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
-msgstr ""
+msgstr "Не вдалося видалити кореневу папку"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:238
+#: OrchardCore.Media\Controllers\AdminController.cs:221
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr ""
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:295
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot move media because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:278
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr ""
 
 #. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:371
+#: OrchardCore.Media\Controllers\AdminController.cs:354
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because the folder name contains invalid characters"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:393
+#: OrchardCore.Media\Controllers\AdminController.cs:376
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because the folder name contains invalid characters"
 msgstr ""
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:407
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a folder already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:390
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr ""
 
-#. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:413
+#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:396
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr ""
@@ -150,7 +150,7 @@ msgstr ""
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:91
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #. ModelState.AddModelError(nameof(MediaProfileViewModel.Name), S["The name is mandatory."]);
 #. ModelState.AddModelError(nameof(MediaProfileViewModel.Name), S["The name is mandatory."]);
@@ -186,7 +186,7 @@ msgstr ""
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:347
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Default"
-msgstr ""
+msgstr "За замовчуванням"
 
 #. model.AvailableWidths.Add(new SelectListItem() { Text = S["Custom Size"], Value = "-1" });
 #. model.AvailableHeights.Add(new SelectListItem() { Text = S["Custom Size"], Value = "-1" });
@@ -206,13 +206,13 @@ msgstr ""
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:339
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Max"
-msgstr ""
+msgstr "Максимальний"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Crop"], Value = ((int)ResizeMode.Crop).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:340
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Crop"
-msgstr ""
+msgstr "Обрізати"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Pad"], Value = ((int)ResizeMode.Pad).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:341
@@ -230,7 +230,7 @@ msgstr ""
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:343
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Min"
-msgstr ""
+msgstr "Мін"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Stretch"], Value = ((int)ResizeMode.Stretch).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:344
@@ -242,31 +242,31 @@ msgstr ""
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:348
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Bmp"
-msgstr ""
+msgstr "Bmp"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Gif"], Value = ((int)Format.Gif).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:349
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Gif"
-msgstr ""
+msgstr "Gif"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Jpg"], Value = ((int)Format.Jpg).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:350
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Jpg"
-msgstr ""
+msgstr "Jpg"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Png"], Value = ((int)Format.Png).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:351
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Png"
-msgstr ""
+msgstr "Png"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Tga"], Value = ((int)Format.Tga).ToString() });
 #: OrchardCore.Media\Controllers\MediaProfilesController.cs:352
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Tga"
-msgstr ""
+msgstr "Tga"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
 #: OrchardCore.Media\Drivers\MediaFieldDriver.cs:119
@@ -332,7 +332,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaField.DisplayOption.cshtml:4
 msgctxt "OrchardCore.Media.Views.MediaField.DisplayOption"
 msgid "Standard"
-msgstr ""
+msgstr "Стандарт"
 
 #. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fas fa-compress-alt"></i></span>
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:25
@@ -362,25 +362,25 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:56
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "OK"
-msgstr ""
+msgstr "Гаразд"
 
 #. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:57
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
 #: OrchardCore.Media\Views\MediaField.Option.cshtml:4
 msgctxt "OrchardCore.Media.Views.MediaField.Option"
 msgid "Standard"
-msgstr ""
+msgstr "Стандартний"
 
 #. <label class="custom-control-label" asp-for="Required">@T["Required"]</label>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Required"
-msgstr ""
+msgstr "Обов’язково"
 
 #. <span class="hint">— @T["Whether a media is required."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:7
@@ -428,7 +428,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Hint"
-msgstr ""
+msgstr "Підказка"
 
 #. <span class="hint">@T["The hint text to display on the editor."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:36
@@ -476,7 +476,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:34
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Invert"
-msgstr ""
+msgstr "Інвертувати"
 
 #. @T["Delete"] <span class="badge badge-pill badge-light" v-show="selectedMedias.length > 0">{{ selectedMedias.length}}</span>
 #. <input type="hidden" id="t-delete-button" value="@T["Delete"]" />
@@ -484,19 +484,19 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:131
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #. <span title="@T["Grid View"]"><i class="fa fa-th-large"></i></span>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:42
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Grid View"
-msgstr ""
+msgstr "Сітка"
 
 #. <span title="@T["List View"]"><i class="fa fa-th-list"></i></span>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:45
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "List View"
-msgstr ""
+msgstr "Список"
 
 #. <span title="@T["Small Thumbs"]"><i class="fa fa-compress"></i></span>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:50
@@ -516,7 +516,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:61
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Filter..."
-msgstr ""
+msgstr "Фільтр..."
 
 #. @T["Upload"]
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:73
@@ -582,25 +582,25 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:128
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 #. <input type="hidden" id="sameFolderMessage" value="@T["The media is already on this folder"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:129
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "The media is already on this folder"
-msgstr ""
+msgstr "Медіафайл вже знаходиться у цій папці"
 
 #. <input type="hidden" id="t-edit-button" value="@T["Edit"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:130
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Edit"
-msgstr ""
+msgstr "Редагувати"
 
 #. <input type="hidden" id="t-view-button" value="@T["View"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:132
@@ -618,97 +618,97 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:136
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Errors"
-msgstr ""
+msgstr "Помилки"
 
 #. <input type="hidden" id="t-clear-errors" value="@T["Clear Errors"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:137
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Clear Errors"
-msgstr ""
+msgstr "Очистити помилки"
 
 #. <input type="hidden" id="t-image-header" value="@T["Image"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Image"
-msgstr ""
+msgstr "Зображення"
 
 #. <input type="hidden" id="t-name-header" value="@T["Name"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Name"
-msgstr ""
+msgstr "Ім’я"
 
 #. <input type="hidden" id="t-lastModify-header" value="@T["Last modification"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last modification"
-msgstr ""
+msgstr "Останні зміни"
 
 #. <input type="hidden" id="t-size-header" value="@T["Size"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Size"
-msgstr ""
+msgstr "Розмір"
 
 #. <input type="hidden" id="t-type-header" value="@T["Type"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:144
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #. <input type="hidden" id="t-pager-first-button" value="@T["First"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "First"
-msgstr ""
+msgstr "Перший"
 
 #. <input type="hidden" id="t-pager-previous-button" value="@T["Previous"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Previous"
-msgstr ""
+msgstr "Попередній"
 
 #. <input type="hidden" id="t-pager-next-button" value="@T["Next"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Next"
-msgstr ""
+msgstr "Наступний"
 
 #. <input type="hidden" id="t-pager-last-button" value="@T["Last"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:150
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last"
-msgstr ""
+msgstr "Останній"
 
 #. <input type="hidden" id="t-pager-page-size-label" value="@T["Page Size"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:151
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page Size"
-msgstr ""
+msgstr "Розмір сторінки"
 
 #. <input type="hidden" id="t-pager-page-label" value="@T["Page:"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page:"
-msgstr ""
+msgstr "Сторінка:"
 
 #. <input type="hidden" id="t-pager-total-label" value="@T["Total items:"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:153
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Total items:"
-msgstr ""
+msgstr "Всього:"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Create Folder"]</h5>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:159
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Create Folder"
-msgstr ""
+msgstr "Створити теку"
 
 #. <label for="input" class="form-control-label" id="input-label">@T["Folder name"]</label>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:166
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Folder name"
-msgstr ""
+msgstr "Назва теки"
 
 #. <button type="button" class="btn btn-primary" id="modalFooterOk">@T["Ok"]</button>
 #. <button type="button" class="btn btn-primary" id="renameMediaModalFooterOk">@T["Ok"]</button>
@@ -716,7 +716,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:197
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Ok"
-msgstr ""
+msgstr "Гаразд"
 
 #. <button type="button" class="btn btn-light" data-dismiss="modal">@T["Cancel"]</button>
 #. <button type="button" class="btn btn-light" data-dismiss="modal">@T["Cancel"]</button>
@@ -724,19 +724,19 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:198
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Rename Item"]</h5>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:183
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Rename Item"
-msgstr ""
+msgstr "Перейменувати"
 
 #. <label for="input" class="form-control-label" id="input-label">@T["New Name"]</label>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:190
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "New Name"
-msgstr ""
+msgstr "Нове ім’я"
 
 #. <h1>@RenderTitleSegments(T["Media options"])</h1>
 #: OrchardCore.Media\Views\Admin\Options.cshtml:6
@@ -808,7 +808,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Admin\Options.cshtml:46
 msgctxt "OrchardCore.Media.Views.Admin.Options"
 msgid "Max file size"
-msgstr ""
+msgstr "Макс. розмір файлу"
 
 #. <span class="hint">@T["The maximum size of an uploaded file in bytes."]</span>
 #: OrchardCore.Media\Views\Admin\Options.cshtml:49
@@ -886,13 +886,13 @@ msgstr ""
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Edit"
 msgid "Media"
-msgstr ""
+msgstr "Медіа"
 
 #. @T["Include all media."]
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Edit.cshtml:12
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Edit"
 msgid "Include all media."
-msgstr ""
+msgstr "Включити всі медіа."
 
 #. <span class="hint">@T["The media to add as part of the plan."]</span>
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Edit.cshtml:22
@@ -904,13 +904,13 @@ msgstr ""
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Summary.cshtml:9
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Summary"
 msgid "Media"
-msgstr ""
+msgstr "Медіа"
 
 #. <span class="badge badge-success">@T["All"]</span>
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Summary.cshtml:13
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Summary"
 msgid "All"
-msgstr ""
+msgstr "Всі"
 
 #. <span class="badge badge-warning">@T["No media selected."]</span>
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Summary.cshtml:31
@@ -922,7 +922,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Thumbnail"
 msgid "Media"
-msgstr ""
+msgstr "Медіа"
 
 #. <p>@T["Exports all or specified media."]</p>
 #: OrchardCore.Media\Views\Items\MediaDeploymentStep.Fields.Thumbnail.cshtml:4
@@ -980,7 +980,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:9
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Name"
-msgstr ""
+msgstr "Ім’я"
 
 #. <span class="hint">@T["The name of the media profile."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:14
@@ -992,7 +992,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:20
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Hint"
-msgstr ""
+msgstr "Підказка"
 
 #. <span class="hint">@T["The hint for the media profile."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:25
@@ -1004,7 +1004,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:31
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #. <span class="hint">@T["Select the width for the processed image. A default value means a width command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:38
@@ -1016,7 +1016,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:44
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Height"
-msgstr ""
+msgstr "Висота"
 
 #. <span class="hint">@T["Select the height for the processed image. A default value means a height command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:51
@@ -1052,7 +1052,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:79
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #. <span class="hint">@T["Select the format for the processed image. A default value means a format command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:84
@@ -1064,7 +1064,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:90
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Quality"
-msgstr ""
+msgstr "Якість"
 
 #. <span class="hint">@T["The quality percentage for the processed image. Only supported with the JPG format. A value of 100% means a quality command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:95
@@ -1076,7 +1076,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:101
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:103
@@ -1094,7 +1094,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Create.cshtml:110
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Media Profile"])</h1></zone>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:3
@@ -1106,7 +1106,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:10
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Name"
-msgstr ""
+msgstr "Назва"
 
 #. <span class="hint">@T["The name of the media profile."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:15
@@ -1118,7 +1118,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:21
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Hint"
-msgstr ""
+msgstr "Підказка"
 
 #. <span class="hint">@T["The hint for the media profile."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:26
@@ -1130,7 +1130,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:32
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #. <span class="hint">@T["Select the width for the processed image. A default value means a width command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:39
@@ -1142,7 +1142,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:45
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Height"
-msgstr ""
+msgstr "Висота"
 
 #. <span class="hint">@T["Select the height for the processed image. A default value means a height command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:52
@@ -1166,7 +1166,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:69
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Background Color"
-msgstr ""
+msgstr "Колір тла"
 
 #. <span class="hint">@T["Select the background color for the processed image. An empty value means a bgcolor command will not be applied. Examples of valid values: 'white', 'ffff00', 'ffff0080', '128,64,32' and '128,64,32,16'."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:74
@@ -1178,7 +1178,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:80
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #. <span class="hint">@T["Select the format for the processed image. A default value means a format command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:85
@@ -1190,7 +1190,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:91
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Quality"
-msgstr ""
+msgstr "Якість"
 
 #. <span class="hint">@T["The quality percentage for the processed image. Only supported with the JPG format. A value of 100% means a quality command will not be applied."]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:96
@@ -1202,7 +1202,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:102
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:104
@@ -1220,7 +1220,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Edit.cshtml:111
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Media Profiles"])</h1></zone>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:8
@@ -1232,75 +1232,75 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:21
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Profile"]</a>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:24
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Add Profile"
-msgstr ""
+msgstr "Додати профіль"
 
 #. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:37
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Select All"
-msgstr ""
+msgstr "Обрати все"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "1 item"
 msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "1 елемент"
+msgstr[1] "{0} елементів"
+msgstr[2] "{0} елементів"
+msgstr[3] "{0} елементів"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Елементів: {0} з {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " / {0} усього"
+msgstr[1] " / {0} всього"
+msgstr[2] " / {0} всього"
+msgstr[3] " / {0} всього"
 
 #. @T["Actions"]
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:45
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Actions"
-msgstr ""
+msgstr "Дії"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:50
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Масова дія"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:50
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Ви справді бажаєте {0} ці елементи?"
 
 #. <a asp-action="Edit" asp-route-name="@entry.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:66
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Edit"
-msgstr ""
+msgstr "Редагувати"
 
 #. <a asp-action="Delete" asp-route-name="@entry.Name" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:67
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #. @T["<strong>Nothing here!</strong> There are no media profiles for the moment."]
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:82
@@ -1314,7 +1314,7 @@ msgstr ""
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:142
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "selected"
-msgstr ""
+msgstr "вибрано"
 
 #. <h5 class="modal-title">@T["Select an anchor"]</h5>
 #: OrchardCore.Media\Views\Shared\MediaFieldEditAnchorModal.cshtml:5
@@ -1332,25 +1332,25 @@ msgstr ""
 #: OrchardCore.Media\Views\Shared\MediaFieldEditAnchorModal.cshtml:22
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditAnchorModal"
 msgid "OK"
-msgstr ""
+msgstr "Гаразд"
 
 #. <button type="button" class="btn btn-secondary" v-on:click="cancelAnchoringModal">@T["Cancel"]</button>
 #: OrchardCore.Media\Views\Shared\MediaFieldEditAnchorModal.cshtml:23
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditAnchorModal"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #. <input type="hidden" id="onlyOneItemMessage" value="@T["Only one item is allowed on this field."]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:6
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
 msgid "Only one item is allowed on this field."
-msgstr ""
+msgstr "У цьому полі дозволено лише один елемент."
 
 #. <input type="hidden" id="t-media-not-found" value="@T["Not Found"]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:9
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
 msgid "Not Found"
-msgstr ""
+msgstr "Не знайдено"
 
 #. <input type="hidden" id="t-discard-warning" value="@T["It will be discarded on saving"]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:10
@@ -1362,7 +1362,7 @@ msgstr ""
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:11
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
 msgid "No Images"
-msgstr ""
+msgstr "Немає зображень"
 
 #. <h5 class="modal-title">@T["Enter media text"]</h5>
 #: OrchardCore.Media\Views\Shared\MediaFieldEditMediaTextModal.cshtml:5
@@ -1374,11 +1374,11 @@ msgstr ""
 #: OrchardCore.Media\Views\Shared\MediaFieldEditMediaTextModal.cshtml:16
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditMediaTextModal"
 msgid "OK"
-msgstr ""
+msgstr "Гаразд"
 
 #. <button type="button" class="btn btn-secondary" v-on:click="cancelMediaTextModal">@T["Cancel"]</button>
 #: OrchardCore.Media\Views\Shared\MediaFieldEditMediaTextModal.cshtml:17
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditMediaTextModal"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-01-04 10:02\n"
+"PO-Revision-Date: 2021-06-14 01:44\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.Microsoft.Authentication\AdminMenu.cs:24
@@ -53,31 +53,31 @@ msgid "Azure Active Directory"
 msgstr "Azure 活动目录"
 
 #. yield return new ValidationResult(S["DisplayName is required"], new string[] { nameof(settings.DisplayName) });
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:58
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:65
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "DisplayName is required"
 msgstr "显示名称是必需的"
 
 #. yield return new ValidationResult(S["AppId is required"], new string[] { nameof(settings.AppId) });
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:63
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:70
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "AppId is required"
 msgstr "AppId 是必需的"
 
 #. yield return new ValidationResult(S["TenantId is required"], new string[] { nameof(settings.TenantId) });
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:68
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:75
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "TenantId is required"
 msgstr "需要租户ID"
 
 #. yield return new ValidationResult(S["AppId is required"], new string[] { nameof(settings.AppId) });
-#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:56
+#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:64
 msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppId is required"
 msgstr "AppId 是必需的。"
 
 #. yield return new ValidationResult(S["AppSecret is required"], new string[] { nameof(settings.AppSecret) });
-#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:61
+#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:69
 msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppSecret is required"
 msgstr "App Secret 是必需的。"
@@ -208,56 +208,62 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "See documentation"
 msgstr "查看文档"
 
+#. <p class="alert alert-danger">@T["An error occurred while decrypting a setting. Please apply and save."]</p>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
+msgid "An error occurred while decrypting a setting. Please apply and save."
+msgstr "解密设置时出错。请应用并保存。"
+
 #. <h3>@T["Microsoft Account Authentication Settings"]</h3>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:9
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Microsoft Account Authentication Settings"
 msgstr "Microsoft 帐户认证设置"
 
 #. <label>@T["AppId"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:12
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "AppId"
 msgstr "AppId"
 
 #. <span class="hint">@T["The Application ID found on the Microsoft developer portal parameters."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:15
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "The Application ID found on the Microsoft developer portal parameters."
 msgstr "Microsoft 开发者门户参数中找到了应用程序ID。"
 
 #. <label>@T["Secret Key"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:19
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Secret Key"
 msgstr "密钥"
 
 #. <span class="hint">@T["The Application secret key found on the Microsoft developer portal parameters."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:22
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:27
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "The Application secret key found on the Microsoft developer portal parameters."
 msgstr "Microsoft 开发者门户参数中找到了应用程序密密钥。"
 
 #. <label>@T["CallbackPath"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:26
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:31
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "CallbackPath"
 msgstr "回调地址"
 
 #. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:29
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:34
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
 msgstr "应用程序的基路径中的请求路径，用户代理将被返回。中间软件将会到达时处理此请求。"
 
 #. <label class="custom-control-label" asp-for="SaveTokens">@T["Store tokens"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:35
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:40
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Store tokens"
 msgstr "存储令牌"
 
 #. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
-#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:36
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:41
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Store external authentication tokens for reuse"
 msgstr "存储外部身份验证令牌以便重新使用"
@@ -273,4 +279,34 @@ msgstr "Azure 活动目录"
 msgctxt "OrchardCore.Microsoft.Authentication.Views.NavigationItemText-microsoft.Id"
 msgid "Microsoft"
 msgstr "微软"
+
+#. <h5>@T["Azure AD Settings"]</h5>
+#: OrchardCore.Microsoft.Authentication\Views\Items\AzureADDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Edit"
+msgid "Azure AD Settings"
+msgstr "Azure 广告设置"
+
+#. <h5>@T["Azure AD Settings"]</h5>
+#: OrchardCore.Microsoft.Authentication\Views\Items\AzureADDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Summary"
+msgid "Azure AD Settings"
+msgstr "Azure 广告设置"
+
+#. <span class="hint">@T["Adds Azure AD settings to the plan."]</span>
+#: OrchardCore.Microsoft.Authentication\Views\Items\AzureADDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Summary"
+msgid "Adds Azure AD settings to the plan."
+msgstr "将 Azure AD设置添加到计划中。"
+
+#. <h4 class="card-title">@T["Azure AD Settings"]</h4>
+#: OrchardCore.Microsoft.Authentication\Views\Items\AzureADDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Thumbnail"
+msgid "Azure AD Settings"
+msgstr "Azure 广告设置"
+
+#. <p>@T["Exports the Azure AD settings."]</p>
+#: OrchardCore.Microsoft.Authentication\Views\Items\AzureADDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Thumbnail"
+msgid "Exports the Azure AD settings."
+msgstr "导出 Azure 广告设置。"
 

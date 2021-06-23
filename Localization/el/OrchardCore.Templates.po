@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2021-01-04 09:56\n"
+"PO-Revision-Date: 2021-05-08 11:43\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Templates\AdminMenu.cs:25
@@ -18,7 +18,9 @@ msgctxt "OrchardCore.Templates.AdminMenu"
 msgid "Design"
 msgstr "Σχέδιο"
 
-#. .Add(S["Templates"], "Templates", import => import
+#. .Add(S["Templates"], S["Templates"].PrefixPosition(), import => import
+#. .Add(S["Templates"], S["Templates"].PrefixPosition(), import => import
+#: OrchardCore.Templates\AdminMenu.cs:26
 #: OrchardCore.Templates\AdminMenu.cs:26
 msgctxt "OrchardCore.Templates.AdminMenu"
 msgid "Templates"
@@ -30,7 +32,9 @@ msgctxt "OrchardCore.Templates.AdminTemplatesAdminMenu"
 msgid "Design"
 msgstr "Σχέδιο"
 
-#. .Add(S["Admin Templates"], "Admin Templates", import => import
+#. .Add(S["Admin Templates"], S["Admin Templates"].PrefixPosition(), import => import
+#. .Add(S["Admin Templates"], S["Admin Templates"].PrefixPosition(), import => import
+#: OrchardCore.Templates\AdminTemplatesAdminMenu.cs:26
 #: OrchardCore.Templates\AdminTemplatesAdminMenu.cs:26
 msgctxt "OrchardCore.Templates.AdminTemplatesAdminMenu"
 msgid "Admin Templates"
@@ -40,7 +44,7 @@ msgstr "Πρότυπα Διαχειριστή"
 #: OrchardCore.Templates\Controllers\TemplateController.cs:105
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #. ModelState.AddModelError(nameof(TemplateViewModel.Name), S["The name is mandatory."]);
 #. ModelState.AddModelError(nameof(TemplateViewModel.Name), S["The name is mandatory."]);
@@ -56,7 +60,7 @@ msgstr "Το όνομα είναι υποχρεωτικό."
 #: OrchardCore.Templates\Controllers\TemplateController.cs:266
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "The content is mandatory."
-msgstr ""
+msgstr "Το περιεχόμενο είναι υποχρεωτικό."
 
 #. ModelState.AddModelError(nameof(TemplateViewModel.Name), S["A template with the same name already exists."]);
 #. ModelState.AddModelError(nameof(TemplateViewModel.Name), S["A template with the same name already exists."]);
@@ -70,19 +74,19 @@ msgstr "Υπάρχει ήδη ένα πρότυπο με το ίδιο όνομ�
 #: OrchardCore.Templates\Controllers\TemplateController.cs:184
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "The \"{0}\" template has been created."
-msgstr ""
+msgstr "Το πρότυπο \"{0}\" έχει δημιουργηθεί."
 
 #. _notifier.Success(H["Template deleted successfully."]);
 #: OrchardCore.Templates\Controllers\TemplateController.cs:326
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "Template deleted successfully."
-msgstr ""
+msgstr "Το πρότυπο διαγράφηκε επιτυχώς."
 
 #. _notifier.Success(H["Templates successfully removed."]);
 #: OrchardCore.Templates\Controllers\TemplateController.cs:358
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "Templates successfully removed."
-msgstr ""
+msgstr "Το περιεχόμενο καταργήθηκε με επιτυχία."
 
 #. Description = S["Template for a {0} part in detail views", contentPartDefinition.DisplayName()]
 #: OrchardCore.Templates\Settings\TemplateContentPartDefinitionDriver.cs:27
@@ -106,7 +110,7 @@ msgstr "Πρότυπο για ένα στοιχείο {0} περιεχομένο
 #: OrchardCore.Templates\Settings\TemplateContentTypeDefinitionDriver.cs:41
 msgctxt "OrchardCore.Templates.Settings.TemplateContentTypeDefinitionDriver"
 msgid "Template for a {0} content item in summary views"
-msgstr "Πρότυπο για ένα στοιχείο {0} περιεχομένου σε λεπτομερείς προβολές"
+msgstr "Πρότυπο για ένα στοιχείο {0} περιεχομένου σε προβολές περίληψης"
 
 #. Description = S["Template for the {0} part in a {1} type in detail views", partName, contentTypePartDefinition.ContentTypeDefinition.DisplayName]
 #: OrchardCore.Templates\Settings\TemplateContentTypePartDefinitionDriver.cs:29
@@ -127,10 +131,22 @@ msgid "Edit templates"
 msgstr "Επεξεργασία προτύπου"
 
 #. <h5>@T["All Admin Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Edit"
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:3
+msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "All Admin Templates"
-msgstr "Όλα τα Πρότυπα Διαχειριστή"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
+msgid "Export templates as files"
+msgstr ""
+
+#. <span class="hint">@T["Check if the templates should be exported as files instead of inline."]</span>
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
+msgid "Check if the templates should be exported as files instead of inline."
+msgstr ""
 
 #. <h5>@T["All Admin Templates"]</h5>
 #: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Summary.cshtml:3
@@ -157,10 +173,22 @@ msgid "Exports admin templates."
 msgstr "Εξαγωγή προτύπων διαχειριστή."
 
 #. <h5>@T["All Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Edit"
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:3
+msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "All Templates"
-msgstr "Όλα τα Πρότυπα"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
+msgid "Export templates as files"
+msgstr ""
+
+#. <span class="hint">@T["Check if the templates should be exported as files instead of inline."]</span>
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
+msgid "Check if the templates should be exported as files instead of inline."
+msgstr ""
 
 #. <h5>@T["All Templates"]</h5>
 #: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Summary.cshtml:3
@@ -204,82 +232,82 @@ msgid "Preview Error"
 msgstr "Προεπισκόπηση Σφάλματος"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Template"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:17
+#: OrchardCore.Templates\Views\Template\Create.cshtml:20
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Create Template"
 msgstr "Δημιουργία Προτύπου"
 
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:24
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "Name"
-msgstr "Όνομα"
-
-#. <span class="hint">@T["The name of the template."]</span>
+#. <button type="submit" name="submit" class="btn btn-sm btn-primary save">@T["Save"]</button>
 #: OrchardCore.Templates\Views\Template\Create.cshtml:27
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "The name of the template."
-msgstr "Το όνομα του προτύπου."
-
-#. <label asp-for="Description">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:31
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "Description"
-msgstr "Περιγραφή"
-
-#. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:33
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "The description of the template."
-msgstr "Η περιγραφή του προτύπου."
-
-#. <label asp-for="Content">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:37
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "Content"
-msgstr "Περιεχόμενο"
-
-#. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:40
-msgctxt "OrchardCore.Templates.Views.Template.Create"
-msgid "The Liquid template."
-msgstr "Το πρότυπο Liquid."
-
-#. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:45
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Save"
 msgstr "Αποθήκευση"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:47
+#: OrchardCore.Templates\Views\Template\Create.cshtml:29
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Toggle Dropdown"
 msgstr "Εναλλαγή πτυσσόμενου μενού"
 
 #. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:50
+#: OrchardCore.Templates\Views\Template\Create.cshtml:32
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "and continue"
 msgstr "και συνεχίσε"
 
-#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:56
+#. <a class="btn btn-sm btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:38
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <a class="btn btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:61
+#. <a class="btn btn-sm btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:43
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Preview"
 msgstr "Προεπισκόπηση"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:51
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "Name"
+msgstr "Όνομα"
+
+#. <span class="hint">@T["The name of the template."]</span>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:54
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "The name of the template."
+msgstr "Το όνομα του προτύπου."
+
+#. <label asp-for="Description">@T["Description"]</label>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:58
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. <span class="hint">@T["The description of the template."]</span>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:60
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "The description of the template."
+msgstr "Η περιγραφή του προτύπου."
+
+#. <label asp-for="Content">@T["Content"]</label>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:64
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#. <span class="hint">@T["The Liquid template."]</span>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:67
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "The Liquid template."
+msgstr "Το πρότυπο Liquid."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Template"])</h1></zone>
 #: OrchardCore.Templates\Views\Template\Edit.cshtml:22
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Edit Admin Template"
-msgstr ""
+msgstr "Επεξεργασία Προτύπου Διαχειριστή"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Template"])</h1></zone>
 #: OrchardCore.Templates\Views\Template\Edit.cshtml:26
@@ -287,71 +315,71 @@ msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Edit Template"
 msgstr "Επεξεργασία Προτύπου"
 
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:36
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "Name"
-msgstr "Όνομα"
-
-#. <span class="hint">@T["The name of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:39
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "The name of the template."
-msgstr "Το όνομα του προτύπου."
-
-#. <label asp-for="Description">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:43
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "Description"
-msgstr "Περιγραφή"
-
-#. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:45
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "The description of the template."
-msgstr "Η περιγραφή του προτύπου."
-
-#. <label asp-for="Content">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:49
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "Content"
-msgstr "Περιεχόμενο"
-
-#. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:51
-msgctxt "OrchardCore.Templates.Views.Template.Edit"
-msgid "The Liquid template."
-msgstr "Το πρότυπο Liquid."
-
-#. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:56
+#. <button type="submit" name="submit" class="btn btn-sm btn-primary save">@T["Save"]</button>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:34
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Save"
 msgstr "Αποθήκευση"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:58
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:36
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Toggle Dropdown"
 msgstr "Εναλλαγή Dropdown"
 
 #. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:61
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:39
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "and continue"
 msgstr "και συνεχίσε"
 
-#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:67
+#. <a class="btn btn-sm btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:45
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#. <a class="btn btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:72
+#. <a class="btn btn-sm btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:50
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Preview"
 msgstr "Προεπισκόπηση"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:59
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "Name"
+msgstr "Όνομα"
+
+#. <span class="hint">@T["The name of the template."]</span>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:62
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "The name of the template."
+msgstr "Το όνομα του προτύπου."
+
+#. <label asp-for="Description">@T["Description"]</label>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:66
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. <span class="hint">@T["The description of the template."]</span>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:68
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "The description of the template."
+msgstr "Η περιγραφή του προτύπου."
+
+#. <label asp-for="Content">@T["Content"]</label>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:72
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#. <span class="hint">@T["The Liquid template."]</span>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:74
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "The Liquid template."
+msgstr "Το πρότυπο Liquid."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Admin Templates"])</h1></zone>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:10
@@ -369,7 +397,7 @@ msgstr "Πρότυπα"
 #: OrchardCore.Templates\Views\Template\Index.cshtml:29
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #. <a asp-route-action="Create" asp-route-admintemplates="@Model.Options.AdminTemplates" asp-route-returnUrl="@FullRequestPath" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Template"]</a>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:32
@@ -381,7 +409,7 @@ msgstr "Προσθήκη Προτύπου"
 #: OrchardCore.Templates\Views\Template\Index.cshtml:45
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Select All"
-msgstr ""
+msgstr "Επιλογή Όλων"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Templates.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:46
@@ -409,19 +437,19 @@ msgstr[1] " / {0} αντικείμενα συνολικά"
 #: OrchardCore.Templates\Views\Template\Index.cshtml:53
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Actions"
-msgstr ""
+msgstr "Ενέργειες"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:58
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Μαζική Ενέργεια"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:58
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Είστε βέβαιος(α) ότι θέλεις να {0} αυτό(ά) τα στοιχεία;"
 
 #. <a asp-action="Edit" asp-route-name="@entry.Name" asp-route-admintemplates="@Model.Options.AdminTemplates" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:74
@@ -445,7 +473,7 @@ msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Δεν υπ�
 #: OrchardCore.Templates\Views\Template\Index.cshtml:91
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "See documentation"
-msgstr ""
+msgstr "Δείτε την τεκμηρίωση"
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
@@ -453,5 +481,5 @@ msgstr ""
 #: OrchardCore.Templates\Views\Template\Index.cshtml:151
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "selected"
-msgstr ""
+msgstr "επιλεγμένα"
 

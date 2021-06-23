@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2021-01-04 09:38\n"
+"PO-Revision-Date: 2021-06-01 09:30\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Facebook\AdminMenu.cs:27
@@ -77,7 +77,7 @@ msgid "The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}
 msgstr "Блок FaceBook содержит некорректное выражение Liquid. Подробности: {0}"
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:52
+#: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:41
 msgctxt "OrchardCore.Facebook.Widgets.Settings.FacebookPluginPartSettingsDisplayDriver"
 msgid "The Body doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Блок содержит некорректное выражение Liquid. Подробности: {0}"
@@ -160,74 +160,80 @@ msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "See documentation"
 msgstr "Смотреть документацию"
 
+#. <p class="alert alert-danger">@T["An error occurred while decrypting a setting. Please apply and save."]</p>
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
+msgid "An error occurred while decrypting a setting. Please apply and save."
+msgstr ""
+
 #. <h3>@T["Facebook Integration"]</h3>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:9
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Facebook Integration"
 msgstr "Интеграция с Facebook"
 
 #. <label>@T["Application Identifier"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:12
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Application Identifier"
 msgstr "Идентификатор приложения"
 
 #. <span class="hint">@T["The Application ID found on the Facebook developer portal parameters."]</span>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:15
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "The Application ID found on the Facebook developer portal parameters."
 msgstr "Идентификатор приложения найден в параметрах портала разработчика Facebook."
 
 #. <label>@T["Secret Key"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:19
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Secret Key"
 msgstr "Секретный ключ"
 
 #. <span class="hint">@T["The Application secret key found on the Facebook developer portal parameters."]</span>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:22
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:27
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "The Application secret key found on the Facebook developer portal parameters."
 msgstr "Секретный ключ приложения найден в параметрах портала разработчика Facebook."
 
 #. <label>@T["Javascript SDK Version"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:27
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Javascript SDK Version"
 msgstr "Версия SDK Javascript"
 
 #. <label>@T["Javascript Sdk js"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:30
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Javascript Sdk js"
 msgstr "Javascript Sdk js"
 
 #. <span class="hint">@T["Determines which versions of the Graph API and any API dialogs or plugins are invoked. Default is v3.2"]</span>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:35
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:40
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Determines which versions of the Graph API and any API dialogs or plugins are invoked. Default is v3.2"
 msgstr "Определяет, какие версии Graph API и API диалоговых окон или плагинов вызываются. По умолчанию v3.2"
 
 #. <span class="hint">@T["Determines which sdk js file to load. Default is sdk.js but you can change it as needed. Eg. to render the chat plugin use sdk/xfbml.customerchat.js and <a target=\"_blank\" href=\"https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin#steps\">follow instructions</a>"]</span>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:41
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:46
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Determines which sdk js file to load. Default is sdk.js but you can change it as needed. Eg. to render the chat plugin use sdk/xfbml.customerchat.js and <a target=\"_blank\" href=\"https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin#steps\">follow instructions</a>"
 msgstr "Определяет, какой файл js SDK загружать. По умолчанию это sdk.js, но вы можете изменить его при необходимости. Например, для обработки плагина чата используется sdk/xfbml.customerchat.js и <a target=\"_blank\" href=\"https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin#steps\">следуйте инструкциям</a>"
 
 #. <label class="form-check-label">@T["Init on every page"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:47
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:52
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Init on every page"
 msgstr "Инициализировать на каждой странице"
 
 #. <label>@T["Parameters for the FB.init() call"]</label>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:54
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:59
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Parameters for the FB.init() call"
 msgstr "Параметры вызова FB.init()"
 
 #. <span class="hint">@T["AppId and Version are filled automatically. Check the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/javascript/reference/FB.init/v3.2\">reference doc for the <code>FB.init</code></a> function for more info"]</span>
-#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:57
+#: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:62
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "AppId and Version are filled automatically. Check the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/javascript/reference/FB.init/v3.2\">reference doc for the <code>FB.init</code></a> function for more info"
 msgstr "AppId и Version заполняются автоматически. Проверьте <a target=\"_blank\" href=\"https://developers.facebook.com/docs/javascript/reference/FB.init/v3.2\">документацию функции <code>FB.init</code></a> для получения дополнительной информации"
@@ -243,4 +249,34 @@ msgstr "Facebook"
 msgctxt "OrchardCore.Facebook.Views.NavigationItemText-facebookApp.Id"
 msgid "Facebook App"
 msgstr "Приложение Facebook"
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Edit"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <span class="hint">@T["Adds Facebook Login settings to the plan."]</span>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Adds Facebook Login settings to the plan."
+msgstr ""
+
+#. <h4 class="card-title">@T["Facebook Login Settings"]</h4>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <p>@T["Exports the Facebook Login settings."]</p>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Exports the Facebook Login settings."
+msgstr ""
 

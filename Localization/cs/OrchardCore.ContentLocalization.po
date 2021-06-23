@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2021-01-04 09:45\n"
+"PO-Revision-Date: 2021-06-20 18:50\n"
 
 #. .Add(S["Configuration"], localization => localization
 #: OrchardCore.ContentLocalization\AdminMenu.cs:28
@@ -24,10 +24,24 @@ msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Settings"
 msgstr "Nastavení"
 
+#. .Add(S["Localization"], localization => localization
+#: OrchardCore.ContentLocalization\AdminMenu.cs:30
+msgctxt "OrchardCore.ContentLocalization.AdminMenu"
+msgid "Localization"
+msgstr ""
+
+#. .Add(S["Content Request Culture Provider"], S["Content Request Culture Provider"].PrefixPosition(), registration => registration
+#. .Add(S["Content Request Culture Provider"], S["Content Request Culture Provider"].PrefixPosition(), registration => registration
+#: OrchardCore.ContentLocalization\AdminMenu.cs:31
+#: OrchardCore.ContentLocalization\AdminMenu.cs:31
+msgctxt "OrchardCore.ContentLocalization.AdminMenu"
+msgid "Content Request Culture Provider"
+msgstr ""
+
 #. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
 #. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
-#: OrchardCore.ContentLocalization\AdminMenu.cs:30
-#: OrchardCore.ContentLocalization\AdminMenu.cs:30
+#: OrchardCore.ContentLocalization\AdminMenu.cs:37
+#: OrchardCore.ContentLocalization\AdminMenu.cs:37
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Content Culture Picker"
 msgstr "Editor jazyka obsahu"
@@ -36,25 +50,25 @@ msgstr "Editor jazyka obsahu"
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:75
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "A localization already exists for '{0}'."
-msgstr ""
+msgstr "Pro '{0}' již překlad existuje."
 
 #. _notifier.Information(H["Localized version of the content created successfully."]);
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:82
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Localized version of the content created successfully."
-msgstr ""
+msgstr "Lokalizovaná verze obsahu byla úspěšně vytvořena."
 
 #. _notifier.Warning(H["Could not create localized version of the content item."]);
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:87
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Could not create localized version of the content item."
-msgstr ""
+msgstr "Nepodařilo se vytvořit lokalizovanou verzi položky."
 
-#. new SelectListItem() { Text = S["All cultures"], Value = "" }
-#: OrchardCore.ContentLocalization\Drivers\LocalizationContentsAdminListDisplayDriver.cs:40
+#. new SelectListItem() { Text = S["All cultures"], Value = "", Selected = String.IsNullOrEmpty(m.SelectedCulture) }
+#: OrchardCore.ContentLocalization\Drivers\LocalizationContentsAdminListDisplayDriver.cs:45
 msgctxt "OrchardCore.ContentLocalization.Drivers.LocalizationContentsAdminListDisplayDriver"
 msgid "All cultures"
-msgstr ""
+msgstr "Všechny jazykové verze"
 
 #. Description = S["the localization part of the content item"];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:13
@@ -72,7 +86,7 @@ msgstr "jazyk položky k filtrování"
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:16
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the localization set of the content item to filter"
-msgstr ""
+msgstr "sada lokalizace položky obsahu, která má být filtrována"
 
 #. Description = S["Localization cultures for your content item."];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:18
@@ -122,17 +136,29 @@ msgctxt "OrchardCore.ContentLocalization.Views.ContentCulturePickerSettings.Edit
 msgid "Redirects to the homepage of the target culture if the ContentItem of the target culture does not exist."
 msgstr "Přesměruje na domovskou stránku vybrané jazykové verze, pokud obsahový předmět vybrané jazykové verze neexistuje."
 
-#. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick mr-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
-#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
-msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
-msgid "Filter by culture"
+#. <label class="custom-control-label" asp-for="SetCookie">@T["Set Cookie"]</label>
+#: OrchardCore.ContentLocalization\Views\ContentRequestCultureProviderSettings.Edit.cshtml:7
+msgctxt "OrchardCore.ContentLocalization.Views.ContentRequestCultureProviderSettings.Edit"
+msgid "Set Cookie"
+msgstr ""
+
+#. <span class="hint dashed">@T["Sets the localization cookie based on the LocalizationPart culture when accessing a page in the frontend."]</span>
+#: OrchardCore.ContentLocalization\Views\ContentRequestCultureProviderSettings.Edit.cshtml:8
+msgctxt "OrchardCore.ContentLocalization.Views.ContentRequestCultureProviderSettings.Edit"
+msgid "Sets the localization cookie based on the LocalizationPart culture when accessing a page in the frontend."
 msgstr ""
 
 #. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick mr-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
 #: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
 msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
+msgid "Filter by culture"
+msgstr "Filtrovat podle jazyka"
+
+#. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick mr-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
+#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
+msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
 msgid "Culture"
-msgstr ""
+msgstr "Jazyková verze"
 
 #. @T["Current Culture: {1} | {0}", Model.CultureInfo.Name, Model.CultureInfo.DisplayName]
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:12
@@ -169,11 +195,11 @@ msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Please save your content item before creating localizations"
 msgstr "Před vytvořením překladu prosím uložte položku"
 
-#. <span class="badge ta-badge align-text-top font-weight-normal" data-toggle="tooltip" title="@T["Culture"]"><i class="fa fa-globe text-info"></i> @Model.LocalizationPart.Culture</span>
+#. <span class="badge ta-badge font-weight-normal" data-toggle="tooltip" title="@T["Culture"]"><i class="fa fa-globe text-info"></i> @Model.LocalizationPart.Culture</span>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.SummaryAdmin.cshtml:5
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdmin"
 msgid "Culture"
-msgstr ""
+msgstr "Jazyková verze"
 
 #. <div class="btn-group" title="@T["Localizations"]">
 #. <span>@T["Localizations"]</span>
@@ -194,4 +220,10 @@ msgstr "Upravit {0}"
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdminLinks"
 msgid "Create {0}"
 msgstr "Vytvořit {0}"
+
+#. <p>@T["Filters on a content items localization culture."]</p>
+#: OrchardCore.ContentLocalization\Views\Items\ContentsAdminFilters-Culture.Thumbnail.cshtml:8
+msgctxt "OrchardCore.ContentLocalization.Views.Items.ContentsAdminFilters-Culture.Thumbnail"
+msgid "Filters on a content items localization culture."
+msgstr ""
 
