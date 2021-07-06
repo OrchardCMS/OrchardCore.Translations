@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2021-06-20 19:08\n"
+"PO-Revision-Date: 2021-07-01 09:48\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -173,7 +173,7 @@ msgid "Local login is disabled."
 msgstr "ローカルログインは無効です"
 
 #. ModelState.AddModelError(string.Empty, S["The account is locked out"]);
-#: OrchardCore.Users\Controllers\AccountController.cs:228
+#: OrchardCore.Users\Controllers\AccountController.cs:226
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "The account is locked out"
 msgstr ""
@@ -182,38 +182,38 @@ msgstr ""
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:233
-#: OrchardCore.Users\Controllers\AccountController.cs:408
-#: OrchardCore.Users\Controllers\AccountController.cs:484
-#: OrchardCore.Users\Controllers\AccountController.cs:616
+#: OrchardCore.Users\Controllers\AccountController.cs:235
+#: OrchardCore.Users\Controllers\AccountController.cs:411
+#: OrchardCore.Users\Controllers\AccountController.cs:487
+#: OrchardCore.Users\Controllers\AccountController.cs:619
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Invalid login attempt."
 msgstr "ログインは失敗しました"
 
 #. _notifier.Success(H["Your password has been changed successfully."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:271
+#: OrchardCore.Users\Controllers\AccountController.cs:274
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Your password has been changed successfully."
 msgstr ""
 
 #. ModelState.AddModelError("", S["An error occurred in external provider."]);
 #. ModelState.AddModelError("", S["An error occurred in external provider."]);
-#: OrchardCore.Users\Controllers\AccountController.cs:380
-#: OrchardCore.Users\Controllers\AccountController.cs:388
+#: OrchardCore.Users\Controllers\AccountController.cs:383
+#: OrchardCore.Users\Controllers\AccountController.cs:391
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "An error occurred in external provider."
 msgstr ""
 
 #. string message = S["Site does not allow user registration."];
-#: OrchardCore.Users\Controllers\AccountController.cs:435
+#: OrchardCore.Users\Controllers\AccountController.cs:438
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
 msgstr "このサイトではユーザーの登録はできません"
 
 #. }, S["Confirm your account"], _logger);
 #. user = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, S["Confirm your account"], _logger);
-#: OrchardCore.Users\Controllers\AccountController.cs:465
-#: OrchardCore.Users\Controllers\AccountController.cs:559
+#: OrchardCore.Users\Controllers\AccountController.cs:468
+#: OrchardCore.Users\Controllers\AccountController.cs:562
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Confirm your account"
 msgstr "アカウントを確認してください"
@@ -567,6 +567,156 @@ msgstr "新規パスワードは必須です。"
 msgctxt "OrchardCore.Users.ViewModels.ResetPasswordViewModel"
 msgid "The new password and confirmation password do not match."
 msgstr "新規パスワードと確認のパスワードが一致しません"
+
+#. options.For<UserRegistrationAuditTrailEventConfiguration>(User, S => S["User"])
+#: OrchardCore.Users\AuditTrail\Registration\UserRegistrationAuditTrailEventConfiguration.cs:13
+msgctxt "OrchardCore.Users.AuditTrail.Registration.UserRegistrationAuditTrailEventConfiguration"
+msgid "User"
+msgstr ""
+
+#. .WithEvent(Registered, S => S["Registered"], S => S["A user was successfully registered."], true);
+#: OrchardCore.Users\AuditTrail\Registration\UserRegistrationAuditTrailEventConfiguration.cs:14
+msgctxt "OrchardCore.Users.AuditTrail.Registration.UserRegistrationAuditTrailEventConfiguration"
+msgid "Registered"
+msgstr ""
+
+#. .WithEvent(Registered, S => S["Registered"], S => S["A user was successfully registered."], true);
+#: OrchardCore.Users\AuditTrail\Registration\UserRegistrationAuditTrailEventConfiguration.cs:14
+msgctxt "OrchardCore.Users.AuditTrail.Registration.UserRegistrationAuditTrailEventConfiguration"
+msgid "A user was successfully registered."
+msgstr ""
+
+#. options.For<UserResetPasswordAuditTrailEventConfiguration>(User, S => S["User"])
+#: OrchardCore.Users\AuditTrail\ResetPassword\UserResetPasswordAuditTrailEventConfiguration.cs:14
+msgctxt "OrchardCore.Users.AuditTrail.ResetPassword.UserResetPasswordAuditTrailEventConfiguration"
+msgid "User"
+msgstr ""
+
+#. .WithEvent(PasswordReset, S => S["Password reset"], S => S["A user successfully reset the password."], true)
+#: OrchardCore.Users\AuditTrail\ResetPassword\UserResetPasswordAuditTrailEventConfiguration.cs:15
+msgctxt "OrchardCore.Users.AuditTrail.ResetPassword.UserResetPasswordAuditTrailEventConfiguration"
+msgid "Password reset"
+msgstr ""
+
+#. .WithEvent(PasswordReset, S => S["Password reset"], S => S["A user successfully reset the password."], true)
+#: OrchardCore.Users\AuditTrail\ResetPassword\UserResetPasswordAuditTrailEventConfiguration.cs:15
+msgctxt "OrchardCore.Users.AuditTrail.ResetPassword.UserResetPasswordAuditTrailEventConfiguration"
+msgid "A user successfully reset the password."
+msgstr ""
+
+#. .WithEvent(PasswordRecovered, S => S["Password recovered"], S => S["A user successfully recovered the password."], true);
+#: OrchardCore.Users\AuditTrail\ResetPassword\UserResetPasswordAuditTrailEventConfiguration.cs:16
+msgctxt "OrchardCore.Users.AuditTrail.ResetPassword.UserResetPasswordAuditTrailEventConfiguration"
+msgid "Password recovered"
+msgstr ""
+
+#. .WithEvent(PasswordRecovered, S => S["Password recovered"], S => S["A user successfully recovered the password."], true);
+#: OrchardCore.Users\AuditTrail\ResetPassword\UserResetPasswordAuditTrailEventConfiguration.cs:16
+msgctxt "OrchardCore.Users.AuditTrail.ResetPassword.UserResetPasswordAuditTrailEventConfiguration"
+msgid "A user successfully recovered the password."
+msgstr ""
+
+#. options.For<UserAuditTrailEventConfiguration>(User, S => S["User"])
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:21
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "User"
+msgstr ""
+
+#. .WithEvent(LoggedIn, S => S["Logged in"], S => S["A user was successfully logged in."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:22
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Logged in"
+msgstr ""
+
+#. .WithEvent(LoggedIn, S => S["Logged in"], S => S["A user was successfully logged in."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:22
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was successfully logged in."
+msgstr ""
+
+#. .WithEvent(LogInFailed, S => S["Login failed"], S => S["An attempt to login failed."], false) // Intentionally not enabled by default.
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:23
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Login failed"
+msgstr ""
+
+#. .WithEvent(LogInFailed, S => S["Login failed"], S => S["An attempt to login failed."], false) // Intentionally not enabled by default.
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:23
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "An attempt to login failed."
+msgstr ""
+
+#. .WithEvent(LogInIsLockedOut, S => S["Login account locked"], S => S["An attempt to login failed because the user is locked out."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:24
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Login account locked"
+msgstr ""
+
+#. .WithEvent(LogInIsLockedOut, S => S["Login account locked"], S => S["An attempt to login failed because the user is locked out."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:24
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "An attempt to login failed because the user is locked out."
+msgstr ""
+
+#. .WithEvent(Enabled, S => S["Enabled"], S => S["A user was enabled."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:25
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Enabled"
+msgstr ""
+
+#. .WithEvent(Enabled, S => S["Enabled"], S => S["A user was enabled."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:25
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was enabled."
+msgstr ""
+
+#. .WithEvent(Disabled, S => S["Disabled"], S => S["A user was disabled."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:26
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Disabled"
+msgstr ""
+
+#. .WithEvent(Disabled, S => S["Disabled"], S => S["A user was disabled."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:26
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was disabled."
+msgstr ""
+
+#. .WithEvent(Created, S => S["Created"], S => S["A user was created."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:27
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Created"
+msgstr ""
+
+#. .WithEvent(Created, S => S["Created"], S => S["A user was created."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:27
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was created."
+msgstr ""
+
+#. .WithEvent(Updated, S => S["Updated"], S => S["A user was updated."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:28
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Updated"
+msgstr ""
+
+#. .WithEvent(Updated, S => S["Updated"], S => S["A user was updated."], true)
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:28
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was updated."
+msgstr ""
+
+#. .WithEvent(Deleted, S => S["Deleted"], S => S["A user was deleted."], true);
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:29
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "Deleted"
+msgstr ""
+
+#. .WithEvent(Deleted, S => S["Deleted"], S => S["A user was deleted."], true);
+#: OrchardCore.Users\AuditTrail\Services\UserAuditTrailEventConfiguration.cs:29
+msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
+msgid "A user was deleted."
+msgstr ""
 
 #. public override LocalizedString DisplayText => S["Assign User Role Task"];
 #: OrchardCore.Users\Workflows\Activities\AssignUserRoleTask.cs:31
@@ -1625,6 +1775,18 @@ msgstr "ユーザーにロールを割り当てる"
 msgctxt "OrchardCore.Users.Views.Items.AssignUserRoleTask.Fields.Thumbnail"
 msgid "Assigns a user to a role."
 msgstr "ユーザーにロールを割り当てる"
+
+#. <th class="border-top-0 w-25">@T["User Id"]</th>
+#: OrchardCore.Users\Views\Items\AuditTrailUserEventDetail.DetailAdmin.cshtml:6
+msgctxt "OrchardCore.Users.Views.Items.AuditTrailUserEventDetail.DetailAdmin"
+msgid "User Id"
+msgstr ""
+
+#. <th>@T["User Name"]</th>
+#: OrchardCore.Users\Views\Items\AuditTrailUserEventDetail.DetailAdmin.cshtml:10
+msgctxt "OrchardCore.Users.Views.Items.AuditTrailUserEventDetail.DetailAdmin"
+msgid "User Name"
+msgstr ""
 
 #. <h4><i class="fa @icon"></i>@Model.Activity.GetTitleOrDefault(() => T["Register User"])</h4>
 #: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Design.cshtml:11
