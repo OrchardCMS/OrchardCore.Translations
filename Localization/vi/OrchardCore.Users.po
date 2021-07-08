@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2021-07-01 09:59\n"
+"PO-Revision-Date: 2021-07-08 17:57\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -125,25 +125,25 @@ msgid "Exports the Change Email settings."
 msgstr ""
 
 #. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:403
+#: OrchardCore.Users\Startup.cs:419
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Registration settings"
 msgstr ""
 
 #. return new SiteSettingsPropertyDeploymentStepDriver<RegistrationSettings>(S["Registration settings"], S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:403
+#: OrchardCore.Users\Startup.cs:419
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Exports the Registration settings."
 msgstr ""
 
 #. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:467
+#: OrchardCore.Users\Startup.cs:483
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Reset Password settings"
 msgstr ""
 
 #. return new SiteSettingsPropertyDeploymentStepDriver<ResetPasswordSettings>(S["Reset Password settings"], S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:467
+#: OrchardCore.Users\Startup.cs:483
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Exports the Reset Password settings."
 msgstr ""
@@ -184,8 +184,8 @@ msgstr ""
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 #: OrchardCore.Users\Controllers\AccountController.cs:235
 #: OrchardCore.Users\Controllers\AccountController.cs:411
-#: OrchardCore.Users\Controllers\AccountController.cs:487
-#: OrchardCore.Users\Controllers\AccountController.cs:619
+#: OrchardCore.Users\Controllers\AccountController.cs:501
+#: OrchardCore.Users\Controllers\AccountController.cs:649
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Invalid login attempt."
 msgstr "Cố gắng đăng nhập không hợp lệ."
@@ -211,9 +211,9 @@ msgid "Site does not allow user registration."
 msgstr "Trang web không cho phép đăng ký người dùng."
 
 #. }, S["Confirm your account"], _logger);
-#. user = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, S["Confirm your account"], _logger);
+#. iUser = await this.RegisterUser(new RegisterViewModel() { UserName = model.UserName, Email = model.Email, Password = model.Password, ConfirmPassword = model.ConfirmPassword }, S["Confirm your account"], _logger);
 #: OrchardCore.Users\Controllers\AccountController.cs:468
-#: OrchardCore.Users\Controllers\AccountController.cs:562
+#: OrchardCore.Users\Controllers\AccountController.cs:578
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Confirm your account"
 msgstr "Xác thực tài khoản của bạn"
@@ -380,16 +380,16 @@ msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Invalid email."
 msgstr "Email không hợp lệ."
 
-#. if (await this.RegisterUser(model, S["Confirm your account"], _logger) != null)
+#. var iUser = await this.RegisterUser(model, S["Confirm your account"], _logger);
 #. await this.SendEmailConfirmationTokenAsync(user, S["Confirm your account"]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:102
-#: OrchardCore.Users\Controllers\RegistrationController.cs:151
+#: OrchardCore.Users\Controllers\RegistrationController.cs:101
+#: OrchardCore.Users\Controllers\RegistrationController.cs:171
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Confirm your account"
 msgstr "Xác nhận tài khoản của bạn"
 
 #. _notifier.Success(H["Verification email sent."]);
-#: OrchardCore.Users\Controllers\RegistrationController.cs:153
+#: OrchardCore.Users\Controllers\RegistrationController.cs:173
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Verification email sent."
 msgstr "Đã gửi email xác minh."
@@ -748,32 +748,32 @@ msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr "Đăng ký Nhiệm vụ Người dùng"
 
-#. public override LocalizedString Category => S["Content"];
+#. public override LocalizedString Category => S["User"];
 #: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:58
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
-msgid "Content"
-msgstr "Nội dung"
+msgid "User"
+msgstr ""
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr "Xong"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr "Hợp lệ"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:83
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr "Không hợp lệ"
 
 #. updater.ModelState.TryAddModelError("", S["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:148
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:155
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr "Không có dịch vụ email"
@@ -964,80 +964,86 @@ msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "The users whose email address has not been confirmed will not be able to login or reset their password."
 msgstr "Người dùng có địa chỉ email chưa được xác nhận sẽ không thể đăng nhập hoặc đặt lại mật khẩu của họ."
 
-#. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for registration page"]</label>
+#. <label class="custom-control-label" asp-for="UsersAreModerated">@T["Users must be approved before they can log in"]</label>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:45
+msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
+msgid "Users must be approved before they can log in"
+msgstr ""
+
+#. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for registration page"]</label>
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:53
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use site theme for registration page"
 msgstr "Sử dụng chủ đề website cho trang đăng ký"
 
 #. <span class="hint dashed">@T["Requires an active site theme."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:46
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:54
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Requires an active site theme."
 msgstr "Yêu cầu một chủ đề website hoạt động."
 
 #. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:50
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:58
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "External Authentication"
 msgstr "Xác thực Bên ngoài"
 
 #. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:50
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:58
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Settings when registering with external authentication providers"
 msgstr "Cài đặt khi đăng ký với nhà cung cấp xác thực bên ngoài"
 
 #. <label class="custom-control-label" asp-for="UseScriptToGenerateUsername">@T["Use a script to generate userName based on external provider claims"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:56
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use a script to generate userName based on external provider claims"
 msgstr "Sử dụng script để phát sinh userName trên yêu cầu của nhà cung cấp bên ngoài"
 
 #. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:57
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:65
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
 msgstr "Nếu được chọn, mọi IExternalLoginEventHandlers được xác định trong các mô-đun sẽ không được kích hoạt"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript()">@T["Reset Script"]</button>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:86
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:94
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Reset Script"
 msgstr "Đặt lại Script"
 
 #. <label class="custom-control-label" asp-for="NoUsernameForExternalUsers">@T["Do not ask username"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:94
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:102
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask username"
 msgstr "Không hỏi tên người dùng"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:95
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:103
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="NoEmailForExternalUsers">@T["Do not ask email address"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:102
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:110
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask email address"
 msgstr "Không hỏi địa chỉ email"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:103
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:111
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="NoPasswordForExternalUsers">@T["Do not create local password for external users"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:110
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:118
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not create local password for external users"
 msgstr "Không tạo mật khẩu cục bộ cho người dùng bên ngoài"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local password."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:111
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:119
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider, they are not required to provide a local password."
 msgstr ""
@@ -1824,6 +1830,12 @@ msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Edit"
 msgid "The message to send. Access email confirmation url with Workflow.Properties.EmailConfirmationUrl liquid property."
 msgstr "Nội dung cần gửi. Truy cập url xác nhận email với thuộc tính liquid Workflow.ProperIES.EmailConf ConfirmationUrl."
 
+#. <label asp-for="RequireModeration" class="form-check-label">@T["Users must be approved before they can log in"]</label>
+#: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Edit.cshtml:29
+msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Edit"
+msgid "Users must be approved before they can log in"
+msgstr ""
+
 #. <h4 class="card-title"><i class="fa fa-user"></i>@T["Register User"]</h4>
 #: OrchardCore.Users\Views\Items\RegisterUserTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Users.Views.Items.RegisterUserTask.Fields.Thumbnail"
@@ -2028,6 +2040,30 @@ msgctxt "OrchardCore.Users.Views.Registration.ConfirmEmail"
 msgid "Home"
 msgstr "Trang nhất"
 
+#. <h2>@T["Email confirmation sent"]</h2>
+#: OrchardCore.Users\Views\Registration\ConfirmEmailSent.cshtml:6
+msgctxt "OrchardCore.Users.Views.Registration.ConfirmEmailSent"
+msgid "Email confirmation sent"
+msgstr ""
+
+#. @T["An email has been sent to you. Please click on the link it contains in order to have access on this site."]
+#: OrchardCore.Users\Views\Registration\ConfirmEmailSent.cshtml:9
+msgctxt "OrchardCore.Users.Views.Registration.ConfirmEmailSent"
+msgid "An email has been sent to you. Please click on the link it contains in order to have access on this site."
+msgstr ""
+
+#. <a href="@returnUrl">@T["Previous Page"]</a>
+#: OrchardCore.Users\Views\Registration\ConfirmEmailSent.cshtml:14
+msgctxt "OrchardCore.Users.Views.Registration.ConfirmEmailSent"
+msgid "Previous Page"
+msgstr ""
+
+#. <a href="@Url.Content("~/")">@T["Home"]</a>
+#: OrchardCore.Users\Views\Registration\ConfirmEmailSent.cshtml:18
+msgctxt "OrchardCore.Users.Views.Registration.ConfirmEmailSent"
+msgid "Home"
+msgstr ""
+
 #. <h2>@T["Register"]</h2>
 #. <button type="submit" class="btn btn-primary">@T["Register"]</button>
 #: OrchardCore.Users\Views\Registration\Register.cshtml:7
@@ -2065,6 +2101,30 @@ msgstr "Mật khẩu"
 msgctxt "OrchardCore.Users.Views.Registration.Register"
 msgid "Confirm password"
 msgstr "Xác nhận lại mật khẩu"
+
+#. <h2>@T["User Registration Pending"]</h2>
+#: OrchardCore.Users\Views\Registration\RegistrationPending.cshtml:7
+msgctxt "OrchardCore.Users.Views.Registration.RegistrationPending"
+msgid "User Registration Pending"
+msgstr ""
+
+#. <p>@T["Your user account has been created but has to be approved before it can be used."]</p>
+#: OrchardCore.Users\Views\Registration\RegistrationPending.cshtml:9
+msgctxt "OrchardCore.Users.Views.Registration.RegistrationPending"
+msgid "Your user account has been created but has to be approved before it can be used."
+msgstr ""
+
+#. <a href="@returnUrl">@T["Previous Page"]</a>
+#: OrchardCore.Users\Views\Registration\RegistrationPending.cshtml:13
+msgctxt "OrchardCore.Users.Views.Registration.RegistrationPending"
+msgid "Previous Page"
+msgstr ""
+
+#. <a href="@Url.Content("~/")">@T["Home"]</a>
+#: OrchardCore.Users\Views\Registration\RegistrationPending.cshtml:17
+msgctxt "OrchardCore.Users.Views.Registration.RegistrationPending"
+msgid "Home"
+msgstr ""
 
 #. <h2>@T["Forgot password?"]</h2>
 #: OrchardCore.Users\Views\ResetPassword\ForgotPassword.cshtml:7
