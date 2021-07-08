@@ -10,47 +10,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2021-06-01 09:21\n"
+"PO-Revision-Date: 2021-07-08 17:47\n"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Google\AdminMenu.cs:24
+#: OrchardCore.Google\AdminMenu.cs:23
 msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
 msgid "Security"
 msgstr "Turvallisuus"
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Google\AdminMenu.cs:25
+#: OrchardCore.Google\AdminMenu.cs:24
 msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
 msgid "Authentication"
 msgstr "Autentikointi"
 
 #. .Add(S["Google"], S["Google"].PrefixPosition(), settings => settings
 #. .Add(S["Google"], S["Google"].PrefixPosition(), settings => settings
-#: OrchardCore.Google\AdminMenu.cs:26
-#: OrchardCore.Google\AdminMenu.cs:26
+#: OrchardCore.Google\AdminMenu.cs:25
+#: OrchardCore.Google\AdminMenu.cs:25
 msgctxt "OrchardCore.Google.GoogleAuthenticationAdminMenu"
 msgid "Google"
 msgstr "Google"
 
 #. builder.Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Google\AdminMenu.cs:55
+#: OrchardCore.Google\AdminMenu.cs:50
 msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
 msgid "Configuration"
 msgstr "Konfigurointi"
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Google\AdminMenu.cs:56
+#: OrchardCore.Google\AdminMenu.cs:51
 msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
 msgid "Settings"
 msgstr "Asetukset"
 
 #. .Add(S["Google Analytics"], S["Google Analytics"].PrefixPosition(), settings => settings
 #. .Add(S["Google Analytics"], S["Google Analytics"].PrefixPosition(), settings => settings
-#: OrchardCore.Google\AdminMenu.cs:57
-#: OrchardCore.Google\AdminMenu.cs:57
+#: OrchardCore.Google\AdminMenu.cs:52
+#: OrchardCore.Google\AdminMenu.cs:52
 msgctxt "OrchardCore.Google.GoogleAnalyticsAdminMenu"
 msgid "Google Analytics"
 msgstr "Google Analytics"
+
+#. builder.Add(S["Configuration"], configuration => configuration
+#: OrchardCore.Google\AdminMenu.cs:78
+msgctxt "OrchardCore.Google.GoogleTagManagerAdminMenu"
+msgid "Configuration"
+msgstr ""
+
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Google\AdminMenu.cs:79
+msgctxt "OrchardCore.Google.GoogleTagManagerAdminMenu"
+msgid "Settings"
+msgstr ""
+
+#. .Add(S["Google Tag Manager"], S["Google Tag Manager"].PrefixPosition(), settings => settings
+#. .Add(S["Google Tag Manager"], S["Google Tag Manager"].PrefixPosition(), settings => settings
+#: OrchardCore.Google\AdminMenu.cs:80
+#: OrchardCore.Google\AdminMenu.cs:80
+msgctxt "OrchardCore.Google.GoogleTagManagerAdminMenu"
+msgid "Google Tag Manager"
+msgstr ""
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<GoogleTagManagerSettings>(S["Google Tag Manager Settings"], S["Exports the Google Tag Manager settings."]);
+#: OrchardCore.Google\Startup.cs:102
+msgctxt "OrchardCore.Google.DeploymentStartup"
+msgid "Google Tag Manager Settings"
+msgstr ""
+
+#. return new SiteSettingsPropertyDeploymentStepDriver<GoogleTagManagerSettings>(S["Google Tag Manager Settings"], S["Exports the Google Tag Manager settings."]);
+#: OrchardCore.Google\Startup.cs:102
+msgctxt "OrchardCore.Google.DeploymentStartup"
+msgid "Exports the Google Tag Manager settings."
+msgstr ""
 
 #. [Required(AllowEmptyStrings = false, ErrorMessage = "ClientID key is required")]
 #: OrchardCore.Google\Authentication\ViewModels\GoogleAuthenticationSettingsViewModel.cs:7
@@ -70,32 +102,26 @@ msgctxt "OrchardCore.Google.Authentication.ViewModels.GoogleAuthenticationSettin
 msgid "Invalid path"
 msgstr "Virheellinen polku"
 
-#. @T["The current tenant will be reloaded when the settings are saved."]
-#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:5
-msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
-msgstr "Nykyinen ympäristö (tenant) ladataan uudelleen, kun asetukset on tallennettu."
-
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Google/#google-analytics" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:6
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:5
 msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
 msgid "See documentation"
 msgstr "Katso dokumentaatio"
 
 #. <h3>@T["Google Analytics Settings"]</h3>
-#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:9
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
 msgid "Google Analytics Settings"
 msgstr "Google Analytics -asetukset"
 
 #. <label asp-for="TrackingID">@T["Tracking ID"]</label>
-#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:13
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:12
 msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
 msgid "Tracking ID"
 msgstr "Seuranta ID"
 
 #. <span class="hint">@T["The tracking ID defined in your Google Analytics account."]</span>
-#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:16
+#: OrchardCore.Google\Views\GoogleAnalyticsSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Google.Views.GoogleAnalyticsSettings.Edit"
 msgid "The tracking ID defined in your Google Analytics account."
 msgstr "Seurantatunnut, mikä on määritelty Google Analytics -tiliin."
@@ -172,6 +198,30 @@ msgctxt "OrchardCore.Google.Views.GoogleAuthenticationSettings.Edit"
 msgid "Store external authentication tokens for reuse"
 msgstr "Tallenna ulkoiset autentikoinnin tokenit uudelleenkäytettäviksi"
 
+#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Google/#google-tag-manager" target="_blank">@T["See documentation"]</a>
+#: OrchardCore.Google\Views\GoogleTagManagerSettings.Edit.cshtml:5
+msgctxt "OrchardCore.Google.Views.GoogleTagManagerSettings.Edit"
+msgid "See documentation"
+msgstr ""
+
+#. <h3>@T["Google Tag Manager Settings"]</h3>
+#: OrchardCore.Google\Views\GoogleTagManagerSettings.Edit.cshtml:8
+msgctxt "OrchardCore.Google.Views.GoogleTagManagerSettings.Edit"
+msgid "Google Tag Manager Settings"
+msgstr ""
+
+#. <label asp-for="ContainerID">@T["Container ID"]</label>
+#: OrchardCore.Google\Views\GoogleTagManagerSettings.Edit.cshtml:12
+msgctxt "OrchardCore.Google.Views.GoogleTagManagerSettings.Edit"
+msgid "Container ID"
+msgstr ""
+
+#. <span class="hint">@T["The container ID defined in your Google Tag Manager account."]</span>
+#: OrchardCore.Google\Views\GoogleTagManagerSettings.Edit.cshtml:15
+msgctxt "OrchardCore.Google.Views.GoogleTagManagerSettings.Edit"
+msgid "The container ID defined in your Google Tag Manager account."
+msgstr ""
+
 #. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google"]</span>
 #: OrchardCore.Google\Views\NavigationItemText-google.Id.cshtml:1
 msgctxt "OrchardCore.Google.Views.NavigationItemText-google.Id"
@@ -183,6 +233,12 @@ msgstr "Google"
 msgctxt "OrchardCore.Google.Views.NavigationItemText-googleAnalytics.Id"
 msgid "Google Analytics"
 msgstr "Google Analytics"
+
+#. <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span><span class="title">@T["Google Tag Manager"]</span>
+#: OrchardCore.Google\Views\NavigationItemText-googleTagManager.Id.cshtml:1
+msgctxt "OrchardCore.Google.Views.NavigationItemText-googleTagManager.Id"
+msgid "Google Tag Manager"
+msgstr ""
 
 #. <h5>@T["Google Analytics Settings"]</h5>
 #: OrchardCore.Google\Views\Items\GoogleAnalyticsDeploymentStep.Edit.cshtml:3
