@@ -48,10 +48,8 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
 
     echo "Project file in '$csprojFilePath'"
     echo "Nuspec file in '$pkgSpecFilePath'"
-
-    ls .
     
-    dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath # | Out-Null
+    dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:NuspecBasePath=$env:GITHUB_WORKSPACE # | Out-Null
   
     $pkgTempFilePath = "$pkgId.$pkgExtension"
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
@@ -74,7 +72,7 @@ function createNuGetMetaPackage()
 
     echo "Project file in '$csprojFilePath'"
 
-    dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFileName -p:NuspecBasePath=$pkgSpecFilePath # | Out-Null
+    dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:NuspecBasePath=$env:GITHUB_WORKSPACE # | Out-Null
   
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
