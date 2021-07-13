@@ -32,4 +32,6 @@ jobs:
 
     - name: Pack
       shell: pwsh
-      run: .\pack.ps1
+      run: |
+        echo "nugetVersion=$(( $GITHUB_RUN_NUMBER ))" >> $GITHUB_ENV
+        .\pack.ps1

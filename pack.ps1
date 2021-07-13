@@ -44,7 +44,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
-    .\nuget pack $pkgSpecFilePath | Out-Null
+    dotnet pack $pkgSpecFilePath | Out-Null
   
     $pkgTempFilePath = "$pkgId.$pkgExtension"
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
@@ -63,7 +63,7 @@ function createNuGetMetaPackage()
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($artifactsFolderName, $pkgSpecFileName)
-    .\nuget pack $pkgSpecFilePath | Out-Null
+    dotnet pack $pkgSpecFilePath | Out-Null
   
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
