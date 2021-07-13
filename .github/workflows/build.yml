@@ -16,7 +16,7 @@ on:
 jobs:
 
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
         DOTNET_NOLOGO: true
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
@@ -31,13 +31,10 @@ jobs:
         dotnet-version: 5.0.*
 
     - name: Generate build number
-      shell: powershell
       run: |
-        echo "GH_RUN_NUMBER = $GITHUB_RUN_NUMBER"
-        echo "nugetVersion=$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+        echo "nugetVersion=$(( $GITHUB_RUN_NUMBER ))" >> $GITHUB_ENV
+        echo "nugetVersion = $nugetVersion"
 
     - name: Pack
-      shell: powershell
-      run: |
-        Start-FileDownload 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe'
-        .\pack.ps1
+      shell: pwsh
+      run: .\pack.ps1
