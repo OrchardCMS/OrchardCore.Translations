@@ -63,8 +63,11 @@ function createNuGetMetaPackage()
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($artifactsFolderName, $pkgSpecFileName)
+    $csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
+
+    echo "Project file in '$csprojFilePath'"
     
-    dotnet pack "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj" -p:NuspecFile=$pkgSpecFilePath # | Out-Null
+    dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath # | Out-Null
   
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
