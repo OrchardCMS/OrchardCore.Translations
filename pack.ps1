@@ -88,6 +88,8 @@ function buildNuGetPackageSpec($pkgName, $culture, $cultureDisplayName)
     $pkgSpecDocument.Save($pkgSpecFilePath)
 
     echo "File '$pkgSpecFilePath' built"
+
+    Get-Content -Path $pkgSpecFilePath
 }
 
 function buildNuGetMetaPackageSpec($pkgName)
