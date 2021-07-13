@@ -44,7 +44,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($pkgFolderPath, $pkgSpecFileName)
-    dotnet pack $pkgSpecFilePath | Out-Null
+    dotnet pack $pkgSpecFilePath # | Out-Null
   
     $pkgTempFilePath = "$pkgId.$pkgExtension"
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
@@ -63,7 +63,7 @@ function createNuGetMetaPackage()
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($artifactsFolderName, $pkgSpecFileName)
-    dotnet pack $pkgSpecFilePath | Out-Null
+    dotnet pack $pkgSpecFilePath # | Out-Null
   
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
     $pkgFilePath = "$pkgFolderPath.$pkgExtension"
@@ -86,6 +86,8 @@ function buildNuGetPackageSpec($pkgName, $culture, $cultureDisplayName)
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, "$pkgId.$pkgVersion")
     $pkgSpecFilePath = [IO.Path]::Combine($PWD, $pkgFolderPath, "$pkgId.$pkgSpecExtension")
     $pkgSpecDocument.Save($pkgSpecFilePath)
+
+    echo "File '$pkgSpecFilePath' built"
 }
 
 function buildNuGetMetaPackageSpec($pkgName)
