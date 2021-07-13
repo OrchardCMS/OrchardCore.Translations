@@ -30,8 +30,12 @@ jobs:
       with:
         dotnet-version: 5.0.*
 
+    - name: Generate build number
+      run: |
+        echo "GH_RUN_NUMBER = $GITHUB_RUN_NUMBER"
+        echo "nugetVersion=$(( $GITHUB_RUN_NUMBER ))" >> $GITHUB_ENV
+        echo "nugetVersion = $nugetVersion"
+
     - name: Pack
       shell: pwsh
-      run: |
-        echo "nugetVersion=$(( $GITHUB_RUN_NUMBER ))" >> $GITHUB_ENV
-        .\pack.ps1
+      run: .\pack.ps1
