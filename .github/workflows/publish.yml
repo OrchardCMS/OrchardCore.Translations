@@ -22,18 +22,17 @@ jobs:
       with:
         dotnet-version: 5.0.*
 
-    - name: Pack
-      run: .\pack.ps1
-      shell: pwsh
-
-    - name: Pack with dotnet
+    - name: Build version number
       run: |
         arrTag=(${GITHUB_REF//\// })
         VERSION="${arrTag[2]}"
         VERSION="${VERSION//v}"
         echo "$VERSION"
-        nugetVersion="$VERSION"
-        dotnet pack --output artifacts --configuration Release -p:Version=$VERSION
+        echo "nugetVersion=$(( $VERSION ))" >> $GITHUB_ENV
+        
+    - name: Pack
+      run: .\pack.ps1
+      shell: pwsh
 
     - name: Push with dotnet
-      run: dotnet nuget push artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push OrchardCore.Translations/OrchardCore.Translations/artifacts/*.nupkg -k ${{secrets.NUGET_API_KEY}} -n true -s https://nuget.cloudsmith.io/orchardcore/preview/v3/index.json --skip-duplicate

@@ -33,7 +33,6 @@ jobs:
     - name: Generate build number
       run: |
         echo "nugetVersion=$(( $GITHUB_RUN_NUMBER ))" >> $GITHUB_ENV
-        echo "nugetVersion = $nugetVersion"
 
     - name: Pack
       shell: pwsh
