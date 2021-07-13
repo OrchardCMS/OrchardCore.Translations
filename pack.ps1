@@ -48,11 +48,6 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     $pkgDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath)
 
     dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:PackageOutputPath=$pkgDestinationPath # | Out-Null
-  
-    $pkgTempFilePath = "$pkgId.$pkgExtension"
-    $pkgFilePath = "$pkgFolderPath.$pkgExtension"
-    Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
-    Remove-Item -Path $pkgFolderPath -Recurse
 }
 
 function createNuGetMetaPackage()
@@ -73,10 +68,10 @@ function createNuGetMetaPackage()
 
     dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:PackageOutputPath=$pkgDestinationPath # | Out-Null
   
-    $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
-    $pkgFilePath = "$pkgFolderPath.$pkgExtension"
-    $pkgTempFilePath = "$pkgId.$pkgExtension"
-    Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
+    # $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
+    # $pkgFilePath = "$pkgFolderPath.$pkgExtension"
+    # $pkgTempFilePath = "$pkgId.$pkgExtension"
+    # Move-Item -Path $pkgTempFilePath -Destination $pkgFilePath
 }
 
 function buildNuGetPackageSpec($pkgName, $culture, $cultureDisplayName)
