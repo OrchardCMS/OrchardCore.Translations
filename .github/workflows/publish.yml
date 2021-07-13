@@ -28,7 +28,7 @@ jobs:
         VERSION="${arrTag[2]}"
         VERSION="${VERSION//v}"
         echo "$VERSION"
-        echo "nugetVersion=$(( $VERSION ))" >> $GITHUB_ENV
+        echo "nugetVersion=$VERSION" >> $GITHUB_ENV
         
     - name: Pack
       run: .\pack.ps1
