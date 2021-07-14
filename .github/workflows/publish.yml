@@ -35,4 +35,6 @@ jobs:
       shell: pwsh
 
     - name: Push with dotnet
-      run: dotnet nuget push ./artifacts/*.nupkg -k ${{secrets.NUGET_API_KEY}} -n true -s https://nuget.cloudsmith.io/orchardcore/preview/v3/index.json --skip-duplicate
+      run: |
+        echo $(ls)
+        dotnet nuget push ./artifacts/*.nupkg -k ${{secrets.NUGET_API_KEY}} -n true -s https://nuget.cloudsmith.io/orchardcore/preview/v3/index.json --skip-duplicate
