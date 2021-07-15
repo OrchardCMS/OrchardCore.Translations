@@ -1,11 +1,13 @@
-# publishes translation packages on nuget.org
+# publishes translation packages on cloudsmith.io
 
 name: Publish
 
 on:
   push:
-    tags: 
-      - 'v*.*.*'
+    branches: [ dev, main ]
+    paths-ignore:
+    - 'doc/**'
+    - '*.md'
 
 jobs:
   build:
@@ -26,15 +28,11 @@ jobs:
 
     - name: Build version number
       run: |
-        arrTag=(${GITHUB_REF//\// })
-        VERSION="${arrTag[2]}"
-        VERSION="${VERSION//v}"
-        echo "$VERSION"
-        echo "nugetVersion=$VERSION" >> $GITHUB_ENV
+        echo "nugetVersion=1.0.1-beta-$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
         
     - name: Pack
       run: .\pack.ps1
       shell: pwsh
 
     - name: Push with dotnet
-      run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} -n true --skip-duplicate
+      run: dotnet nuget push **/*.nupkg -k ${{secrets.CLOUDSMITH_API_KEY}} -n true -s https://nuget.cloudsmith.io/orchardcore/preview/v3/index.json --skip-duplicate
