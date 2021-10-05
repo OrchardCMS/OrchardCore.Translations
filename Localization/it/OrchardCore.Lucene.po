@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2021-07-15 19:06\n"
+"PO-Revision-Date: 2021-10-05 07:07\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #. .Add(S["Search"], S["Search"].PrefixPosition(), entry => entry
@@ -94,7 +94,7 @@ msgstr "Un indice chiamato {0} non esiste."
 #: OrchardCore.Lucene\Controllers\AdminController.cs:230
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while creating the index."
-msgstr ""
+msgstr "Si è verificato un errore durante la creazione dell'indice."
 
 #. _notifier.Success(H["Index <em>{0}</em> created successfully.", model.IndexName]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:235
@@ -106,7 +106,7 @@ msgstr "Indice <em>{0}</em> creato con successo."
 #: OrchardCore.Lucene\Controllers\AdminController.cs:247
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "An error occurred while editing the index."
-msgstr ""
+msgstr "Si è verificato un errore durante la modifica dell'indice."
 
 #. _notifier.Success(H["Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>", model.IndexName]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:252
@@ -152,7 +152,7 @@ msgstr "Query non valida : {0}"
 #: OrchardCore.Lucene\Controllers\AdminController.cs:444
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Indices successfully removed."
-msgstr ""
+msgstr "Indice rimosso con successo."
 
 #. ModelState.AddModelError(nameof(LuceneIndexSettingsViewModel.IndexedContentTypes), S["At least one content type selection is required."]);
 #: OrchardCore.Lucene\Controllers\AdminController.cs:486
@@ -196,7 +196,7 @@ msgstr "Il campo indice è obbligatorio"
 #: OrchardCore.Lucene\Shapes\LuceneContentPickerShapeProvider.cs:28
 msgctxt "OrchardCore.Lucene.LuceneContentPickerShapeProvider"
 msgid "Lucene"
-msgstr ""
+msgstr "Lucene"
 
 #. <label class="custom-control-label" asp-for="ContentIndexSettings.Included">@T["Include this element in the index"]</label>
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:6
@@ -280,7 +280,7 @@ msgstr "Seleziona per far ritornare gli elementi di contenuto corrispondenti."
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:27
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Query"
-msgstr ""
+msgstr "Query"
 
 #. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:29
@@ -340,7 +340,7 @@ msgstr "Indica se le query di ricerca devono essere autorizzate ad usare <a href
 #: OrchardCore.Lucene\Views\LuceneSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Lucene.Views.LuceneSettings.Edit"
 msgid "See documentation"
-msgstr ""
+msgstr "Vedi la documentazione"
 
 #. <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
 #: OrchardCore.Lucene\Views\NavigationItemText-search.Id.cshtml:1
@@ -352,7 +352,7 @@ msgstr "Cerca"
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:10
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Lucene"
-msgstr ""
+msgstr "Lucene"
 
 #. <p class="hint">@T["Queries a Lucene index."]</p>
 #: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:11
@@ -442,13 +442,13 @@ msgstr "Opzioni indice"
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:50
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "Index latest version"
-msgstr "Ultima versione dell'indice"
+msgstr "Indicizza l'ultima versione non pubblicata"
 
 #. <span class="hint dashed">@T["Check to index draft if it exists, otherwise only the published version is indexed."]</span>
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:51
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "Check to index draft if it exists, otherwise only the published version is indexed."
-msgstr "Spunta la casella per indicizzare le bozze, altrimenti solo la versione pubblicata verrà indicizzata."
+msgstr "Spunta la casella per indicizzare l'ultima versione in bozza, altrimenti solo la versione pubblicata verrà indicizzata."
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:59
@@ -480,7 +480,7 @@ msgstr "Indici"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:20
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #. <a asp-route-action="Edit" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Index"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:23
@@ -538,7 +538,7 @@ msgstr "Sei sicuro di voler '{0}' a questi elementi?"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:69
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Query"
-msgstr ""
+msgstr "Query"
 
 #. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" data-url-af="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:70
@@ -566,7 +566,7 @@ msgstr "Si"
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:71
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #. <a asp-action="Reset" asp-route-id="@entry.Name" class="btn btn-primary btn-sm" data-title="@T["Reset Index"]" data-message="@T["This will restart the indexing of all content items. Continue?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" data-url-af="UnsafeUrl">@T["Reset"]</a>
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:70
@@ -640,7 +640,7 @@ msgstr "L'indice Lucene su cui effetuare la ricerca"
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:34
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Template"
-msgstr ""
+msgstr "Template"
 
 #. <span class="hint">@T["You can use the <a href=\"{0}\">Match All query</a> to search all documents.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Lucene", Query = matchAllQuery, IndexName = Model.IndexName }))]</span>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:36
@@ -670,7 +670,7 @@ msgstr "Un oggetto Json opzionale contenente i valori dei parametri per questa q
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:47
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Query"
-msgstr ""
+msgstr "Query"
 
 #. <p><span class="text-muted">@T["Found {0} result(s) in {1} ms", Model.Count.ToString(), Model.Elapsed.TotalMilliseconds.ToString()]</span></p>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:54
