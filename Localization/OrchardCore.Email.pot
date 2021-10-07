@@ -19,7 +19,7 @@ msgid "Email"
 msgstr ""
 
 #: OrchardCore.Email\Controllers\AdminController.cs:65
-#. _notifier.Success(H["Message sent successfully."]);
+#. await _notifier.SuccessAsync(H["Message sent successfully."]);
 msgctxt "OrchardCore.Email.Controllers.AdminController"
 msgid "Message sent successfully."
 msgstr ""
@@ -36,13 +36,13 @@ msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:94
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:106
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:94
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:106
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
@@ -313,7 +313,7 @@ msgid "Send"
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Design.cshtml:6
-#. <h4><i class="fa fa-envelope"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
+#. <h4><i class="fa fa-envelope" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
 msgid "Send Email"
 msgstr ""
@@ -367,67 +367,91 @@ msgid "The comma-separated list of recipient email addresses. With Liquid suppor
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+#. <label asp-for="CcExpression">@T["Cc"]</label>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Cc"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
+#. <span class="hint">@T["The comma-separated list of carbon copy email addresses. With Liquid support."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The comma-separated list of carbon copy email addresses. With Liquid support."
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
+#. <label asp-for="BccExpression">@T["Bcc"]</label>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Bcc"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:43
+#. <span class="hint">@T["The comma-separated list of blind copy email addresses. With Liquid support."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The comma-separated list of blind copy email addresses. With Liquid support."
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:47
 #. <label asp-for="SubjectExpression">@T["Subject"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:50
 #. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:42
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
 #. <label class="custom-control-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:43
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:57
 #. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as HTML."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message will be sent as HTML."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:50
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
 #. <label class="custom-control-label" asp-for="IsBodyText">@T["Does the Body contain plain text?"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain plain text?"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:51
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:65
 #. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as plain text."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message will be sent as plain text."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:70
 #. <label asp-for="Body">@T["Body"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:58
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:72
 #. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The body of the email message. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:62
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:76
 #. <label asp-for="Body">@T["Body Plain Text"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body Plain Text"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:78
 #. <span class="hint">@T["The plain text body of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The plain text body of the email message. With Liquid support."
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
-#. <h4 class="card-title"><i class="fa fa-envelope"></i>@T["Send Email"]</h4>
+#. <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i>@T["Send Email"]</h4>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
 msgid "Send Email"
 msgstr ""
