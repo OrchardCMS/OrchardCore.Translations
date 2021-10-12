@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
-"PO-Revision-Date: 2021-07-15 18:48\n"
+"PO-Revision-Date: 2021-10-07 22:31\n"
 
 #. await builder.AddAsync(S["Content"], NavigationConstants.AdminMenuContentPosition, async content =>
 #: OrchardCore.Contents\AdminMenu.cs:60
@@ -31,6 +31,18 @@ msgstr "Položky obsahu"
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "New"
 msgstr "Vytvoriť"
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ContentAuditTrailSettings, DeploymentStartup>(S => S["Content Audit Trail settings"], S => S["Exports the content audit trail settings."]);
+#: OrchardCore.Contents\Startup.cs:330
+msgctxt "OrchardCore.Contents.DeploymentStartup"
+msgid "Content Audit Trail settings"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<ContentAuditTrailSettings, DeploymentStartup>(S => S["Content Audit Trail settings"], S => S["Exports the content audit trail settings."]);
+#: OrchardCore.Contents\Startup.cs:330
+msgctxt "OrchardCore.Contents.DeploymentStartup"
+msgid "Exports the content audit trail settings."
+msgstr ""
 
 #. new SelectListItem() { Text = S["Latest"], Value = nameof(ContentsStatus.Latest), Selected = (options.ContentsStatus == ContentsStatus.Latest) },
 #: OrchardCore.Contents\Controllers\AdminController.cs:171
@@ -110,37 +122,37 @@ msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All content types"
 msgstr "Všetky typy obsahu"
 
-#. _notifier.Warning(H["Couldn't publish selected content."]);
+#. await _notifier.WarningAsync(H["Couldn't publish selected content."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:323
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't publish selected content."
 msgstr "Nepodarilo sa publikovať vybraný obsah."
 
-#. _notifier.Success(H["Content published successfully."]);
+#. await _notifier.SuccessAsync(H["Content published successfully."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:330
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content published successfully."
 msgstr "Obsah bol úspešne publikovaný."
 
-#. _notifier.Warning(H["Couldn't unpublish selected content."]);
+#. await _notifier.WarningAsync(H["Couldn't unpublish selected content."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:337
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't unpublish selected content."
 msgstr "Nepodarilo sa zrušiť publikovanie vybraného obsahu."
 
-#. _notifier.Success(H["Content unpublished successfully."]);
+#. await _notifier.SuccessAsync(H["Content unpublished successfully."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:344
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content unpublished successfully."
 msgstr "Obsah bol odpublikovaný."
 
-#. _notifier.Warning(H["Couldn't remove selected content."]);
+#. await _notifier.WarningAsync(H["Couldn't remove selected content."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:351
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't remove selected content."
 msgstr "Nepodarilo sa odstrániť vybraný obsah."
 
-#. _notifier.Success(H["Content removed successfully."]);
+#. await _notifier.SuccessAsync(H["Content removed successfully."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:358
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content removed successfully."
@@ -178,13 +190,13 @@ msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Your {0} has been published."
 msgstr "Položka {0} bola vypublikovaná."
 
-#. _notifier.Warning(H["Could not clone the content item."]);
+#. await _notifier.WarningAsync(H["Could not clone the content item."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:620
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Could not clone the content item."
 msgstr "Nepodarilo sa zduplikovať položku."
 
-#. _notifier.Information(H["Successfully cloned. The clone was saved as a draft."]);
+#. await _notifier.InformationAsync(H["Successfully cloned. The clone was saved as a draft."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:624
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Successfully cloned. The clone was saved as a draft."
@@ -214,25 +226,25 @@ msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been removed."
 msgstr "Položka {0} bola odstránená."
 
-#. _notifier.Success(H["That content has been published."]);
+#. await _notifier.SuccessAsync(H["That content has been published."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:702
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That content has been published."
 msgstr "Položka bola publikovaná."
 
-#. _notifier.Success(H["That {0} has been published.", typeDefinition.DisplayName]);
+#. await _notifier.SuccessAsync(H["That {0} has been published.", typeDefinition.DisplayName]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:706
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been published."
 msgstr "Položka {0} bola publikovaná."
 
-#. _notifier.Success(H["The content has been unpublished."]);
+#. await _notifier.SuccessAsync(H["The content has been unpublished."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:732
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The content has been unpublished."
 msgstr "Položke bola odpublikovaná."
 
-#. _notifier.Success(H["The {0} has been unpublished.", typeDefinition.DisplayName]);
+#. await _notifier.SuccessAsync(H["The {0} has been unpublished.", typeDefinition.DisplayName]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:736
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The {0} has been unpublished."
@@ -262,101 +274,101 @@ msgctxt "OrchardCore.Contents.Settings.FullTextAspectSettingsDisplayDriver"
 msgid "Full-text doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Full-text neobsahuje platný Liquid výraz. Detaily: {0}"
 
-#. _notifier.Warning(H["'{0}' was not restored, the version is not valid.", contentItem.DisplayText]);
+#. await _notifier.WarningAsync(H["'{0}' was not restored, the version is not valid.", contentItem.DisplayText]);
 #: OrchardCore.Contents\AuditTrail\Controllers\AuditTrailContentController.cs:116
 msgctxt "OrchardCore.Contents.AuditTrail.Controllers.AuditTrailContentController"
 msgid "'{0}' was not restored, the version is not valid."
 msgstr ""
 
-#. _notifier.Success(H["'{0}' has been restored.", contentItem.DisplayText]);
+#. await _notifier.SuccessAsync(H["'{0}' has been restored.", contentItem.DisplayText]);
 #: OrchardCore.Contents\AuditTrail\Controllers\AuditTrailContentController.cs:125
 msgctxt "OrchardCore.Contents.AuditTrail.Controllers.AuditTrailContentController"
 msgid "'{0}' has been restored."
-msgstr ""
+msgstr "'{0}\" bol obnovený."
 
 #. options.For<ContentAuditTrailEventConfiguration>(Content, S => S["Content"])
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:19
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Content"
-msgstr ""
+msgstr "Obsah"
 
 #. .WithEvent(Created, S => S["Created"], S => S["A content item was created."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:20
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Created"
-msgstr ""
+msgstr "Vytvorené"
 
 #. .WithEvent(Created, S => S["Created"], S => S["A content item was created."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:20
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was created."
-msgstr ""
+msgstr "Položka obsahu bola vytvorená."
 
 #. .WithEvent(Saved, S => S["Saved"], S => S["A content item was saved."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:21
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Saved"
-msgstr ""
+msgstr "Uložená"
 
 #. .WithEvent(Saved, S => S["Saved"], S => S["A content item was saved."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:21
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was saved."
-msgstr ""
+msgstr "Položka obsahu bola uložená."
 
 #. .WithEvent(Published, S => S["Published"], S => S["A content item was published."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:22
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Published"
-msgstr ""
+msgstr "Publikované"
 
 #. .WithEvent(Published, S => S["Published"], S => S["A content item was published."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:22
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was published."
-msgstr ""
+msgstr "Položka obsahu bola publikovaná."
 
 #. .WithEvent(Unpublished, S => S["Unpublished"], S => S["A content item was unpublished."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:23
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Unpublished"
-msgstr ""
+msgstr "Odpublikované"
 
 #. .WithEvent(Unpublished, S => S["Unpublished"], S => S["A content item was unpublished."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:23
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was unpublished."
-msgstr ""
+msgstr "Položka obsahu bola odpublikovaná."
 
 #. .WithEvent(Removed, S => S["Removed"], S => S["A content item was deleted."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:24
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Removed"
-msgstr ""
+msgstr "Odstránená"
 
 #. .WithEvent(Removed, S => S["Removed"], S => S["A content item was deleted."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:24
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was deleted."
-msgstr ""
+msgstr "Položka obsahu bola odstránená."
 
 #. .WithEvent(Cloned, S => S["Cloned"], S => S["A content item was cloned."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:25
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Cloned"
-msgstr ""
+msgstr "Klonované"
 
 #. .WithEvent(Cloned, S => S["Cloned"], S => S["A content item was cloned."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:25
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was cloned."
-msgstr ""
+msgstr "Položka obsahu bola klonovaná."
 
 #. .WithEvent(Restored, S => S["Restored"], S => S["A content item was restored to a previous version."], true);
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:26
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Restored"
-msgstr ""
+msgstr "Obnovená"
 
 #. .WithEvent(Restored, S => S["Restored"], S => S["A content item was restored to a previous version."], true);
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:26
@@ -364,16 +376,16 @@ msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfigur
 msgid "A content item was restored to a previous version."
 msgstr ""
 
-#. _notifier.Success(H["Content added successfully to the deployment plan."]);
-#. _notifier.Success(H["Content added successfully to the deployment plan."]);
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:82
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:129
+#. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
+#. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:83
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:130
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.AddToDeploymentPlanController"
 msgid "Content added successfully to the deployment plan."
 msgstr "Obsah bol pridaný do plánu nasadenia."
 
-#. _notifier.Warning(H["Couldn't add selected content to deployment plan."]);
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:119
+#. await _notifier.WarningAsync(H["Couldn't add selected content to deployment plan."]);
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:120
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.AddToDeploymentPlanController"
 msgid "Couldn't add selected content to deployment plan."
 msgstr "Nepodarilo sa pridať vybraný obsah do plánu nasadenia."
@@ -412,14 +424,14 @@ msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportC
 msgid "Export Target Settings"
 msgstr "Nastavenia cieľa exportu"
 
-#. return new SiteSettingsPropertyDeploymentStepDriver<ExportContentToDeploymentTargetSettings>(S["Export Content To Deployment Target settings"], S["Exports the Export Content To Deployment Target settings."]);
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:36
+#. services.AddSiteSettingsPropertyDeploymentStep<ExportContentToDeploymentTargetSettings, ExportContentToDeploymentTargetStartup>(S => S["Export Content To Deployment Target settings"], S => S["Exports the Export Content To Deployment Target settings."]);
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:31
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetStartup"
 msgid "Export Content To Deployment Target settings"
 msgstr "Nastavenia cieľa exportu obsahu"
 
-#. return new SiteSettingsPropertyDeploymentStepDriver<ExportContentToDeploymentTargetSettings>(S["Export Content To Deployment Target settings"], S["Exports the Export Content To Deployment Target settings."]);
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:36
+#. services.AddSiteSettingsPropertyDeploymentStep<ExportContentToDeploymentTargetSettings, ExportContentToDeploymentTargetStartup>(S => S["Export Content To Deployment Target settings"], S => S["Exports the Export Content To Deployment Target settings."]);
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:31
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetStartup"
 msgid "Exports the Export Content To Deployment Target settings."
 msgstr "Export obsahu do cieľa nasadenia."
@@ -530,7 +542,7 @@ msgstr "Zmazané"
 #: OrchardCore.Contents\Workflows\Activities\DeleteContentTask.cs:27
 msgctxt "OrchardCore.Contents.Workflows.Activities.DeleteContentTask"
 msgid "Noop"
-msgstr ""
+msgstr "Noop"
 
 #. public override LocalizedString DisplayText => S["Publish Content Task"];
 #: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:21
@@ -554,7 +566,7 @@ msgstr "Publikované"
 #: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:27
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Noop"
-msgstr ""
+msgstr "Noop"
 
 #. public override LocalizedString DisplayText => S["Retrieve Content Task"];
 #: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:22
@@ -596,7 +608,7 @@ msgstr "Odpublikované"
 #: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:27
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Noop"
-msgstr ""
+msgstr "Noop"
 
 #. public override LocalizedString Category => S["Content"];
 #: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:41
@@ -632,7 +644,7 @@ msgstr "Zlyhalo"
 #: OrchardCore.Contents\Views\AuditTrailPart.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.AuditTrailPart.Edit"
 msgid "Comment"
-msgstr ""
+msgstr "Komentár"
 
 #. <span class="hint">@T["Optionally provide a comment about this change for the audit trail."]</span>
 #: OrchardCore.Contents\Views\AuditTrailPart.Edit.cshtml:7
@@ -644,13 +656,13 @@ msgstr ""
 #: OrchardCore.Contents\Views\AuditTrailPart.Option.cshtml:1
 msgctxt "OrchardCore.Contents.Views.AuditTrailPart.Option"
 msgid "Standard"
-msgstr ""
+msgstr "Štandard"
 
 #. <label class="custom-control-label" asp-for="ShowCommentInput">@T["Show comment"]</label>
 #: OrchardCore.Contents\Views\AuditTrailPartSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Contents.Views.AuditTrailPartSettings.Edit"
 msgid "Show comment"
-msgstr ""
+msgstr "Zobraziť komentár"
 
 #. <span class="hint dashed">@T["Whether the audit trail comment is shown while editing."]</span>
 #: OrchardCore.Contents\Views\AuditTrailPartSettings.Edit.cshtml:8
@@ -710,7 +722,7 @@ msgstr "Zaškrtnite pre povolenie zmeny vlastníka položky. Pre zmenu vlastník
 #: OrchardCore.Contents\Views\Content.Edit.cshtml:34
 msgctxt "OrchardCore.Contents.Views.Content.Edit"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #. <button type="submit" name="submit.Publish" class="btn btn-success publish" value="submit.Publish">@T["Publish"]</button>
 #. <button class="btn btn-success publish" type="submit" name="submit.Publish" value="submit.Publish">@T["Publish"]</button>
@@ -752,7 +764,7 @@ msgctxt "OrchardCore.Contents.Views.Content.SaveDraftButton"
 msgid "and continue"
 msgstr "a pokračovať"
 
-#. <span class="badge ta-badge font-weight-normal"><i class="far fa-file-alt text-secondary"></i> <a href="@(FullRequestPath)&Options.SelectedContentType=@contentItem.ContentType" data-toggle="tooltip" title="@T["Content type"]">@contentItem.ContentType</a></span>
+#. <span class="badge ta-badge font-weight-normal"><i class="far fa-file-alt text-secondary" aria-hidden="true"></i> <a href="@(FullRequestPath)&Options.SelectedContentType=@contentItem.ContentType" data-toggle="tooltip" title="@T["Content type"]">@contentItem.ContentType</a></span>
 #: OrchardCore.Contents\Views\Content.SummaryAdmin.cshtml:34
 msgctxt "OrchardCore.Contents.Views.Content.SummaryAdmin"
 msgid "Content type"
@@ -858,7 +870,7 @@ msgctxt "OrchardCore.Contents.Views.ContentsAdminListFilters"
 msgid "Sort"
 msgstr "Zoradiť"
 
-#. <i class="fa fa-filter" title="@T["Filters"]"></i>
+#. <i class="fa fa-filter" title="@T["Filters"]" aria-hidden="true"></i>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:10
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Filters"
@@ -888,7 +900,7 @@ msgstr "Moje"
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:47
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Filter syntax"
-msgstr ""
+msgstr "Syntax filtra"
 
 #. <label asp-for="SearchText" class="sr-only">@T["Search"]</label>
 #. <input asp-for="SearchText" class="form-control" placeholder="@T["Search"]" inputmode="search" type="search"
@@ -902,13 +914,13 @@ msgstr "Vyhľadávanie"
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:34
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Available Filters"
-msgstr ""
+msgstr "Dostupné filtre"
 
 #. <span class="hint">@T["Default"]</span>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:51
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Default"
-msgstr ""
+msgstr "Predvolená"
 
 #. <span class="hint dashed">@T["may be entered with or without the term name"]</span>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:52
@@ -974,7 +986,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:92
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Current filter"
-msgstr ""
+msgstr "Aktuálny filter"
 
 #. <span class="hint dashed">@T["including all implied groups and operators"]</span>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:97
@@ -992,7 +1004,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:107
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Close"
-msgstr ""
+msgstr "Zavrieť"
 
 #. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Contents\Views\ContentsAdminListSummary.cshtml:6
@@ -1376,19 +1388,19 @@ msgstr "Exportuje všetky položky obsahu v systéme."
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "View"
-msgstr ""
+msgstr "Pohľad"
 
 #. data-title="@T["Restore to Version"]"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:17
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Restore to Version"
-msgstr ""
+msgstr "Obnoviť verziu"
 
 #. data-message="@T["Are you sure you want to restore to version {0}?", versionNumber]"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:18
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Are you sure you want to restore to version {0}?"
-msgstr ""
+msgstr "Naozaj chcete obnoviť verziu {0} položky?"
 
 #. data-ok-text="@T["Yes"]"
 #. data-ok-text="@T["Yes"]"
@@ -1396,7 +1408,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:34
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Yes"
-msgstr ""
+msgstr "Áno"
 
 #. data-cancel-text="@T["No"]"
 #. data-cancel-text="@T["No"]"
@@ -1404,7 +1416,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:35
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #. @T["Restore"]
 #. @T["Restore"]
@@ -1412,24 +1424,24 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:37
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Restore"
-msgstr ""
+msgstr "Obnoviť"
 
 #. data-title="@T["Restore content item"]"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:32
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Restore content item"
-msgstr ""
+msgstr "Obnoviť položku obsahu"
 
 #. data-message="@T["Are you sure you want to restore this content item?"]"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:33
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Are you sure you want to restore this content item?"
-msgstr ""
+msgstr "Naozaj chcete položku obnoviť?"
 
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventData.SummaryAdmin.cshtml:0
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventData.SummaryAdmin"
 msgid "Version {0}"
-msgstr ""
+msgstr "Verzia {0}"
 
 #. @T["The {0} {1} was restored as {2}",
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventData.SummaryAdmin.cshtml:18
@@ -1459,7 +1471,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:22
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Content type"
-msgstr ""
+msgstr "Typ obsahu"
 
 #. <th>@T["Display text"]</th>
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:26
@@ -1471,7 +1483,7 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:37
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Version"
-msgstr ""
+msgstr "Verzia"
 
 #. <td>@T["Version {0}", versionNumber]</td>
 #. @T["Version {0}", versionNumber]
@@ -1479,13 +1491,13 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:49
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Version {0}"
-msgstr ""
+msgstr "Verzia {0}"
 
 #. <th>@T["Comment"]</th>
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:55
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Comment"
-msgstr ""
+msgstr "Komentár"
 
 #. <div id="diffapp" data-split="@T["Split"]" data-unified="@T["Unified"]" data-old="@Model.Previous" data-new="@Model.Current" data-old-time="@oldTime" data-old-text="@oldText" data-new-time="@newTime" data-new-text="@newText"></div>
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDiff.DetailAdmin.cshtml:22
@@ -1509,19 +1521,19 @@ msgstr ""
 #: OrchardCore.Contents\Views\Items\AuditTrailContentsAction_SummaryAdmin.cshtml:3
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentsAction_SummaryAdmin"
 msgid "Audit Trail"
-msgstr ""
+msgstr "Audit"
 
 #. <label asp-for="AllowedContentTypes">@T["Allowed content types"]</label>
 #: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "Allowed content types"
-msgstr ""
+msgstr "Povolené typy obsahu"
 
 #. <label class="custom-control-label" for="select-all">@T["Select all"]</label>
 #: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:9
 msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "Select all"
-msgstr ""
+msgstr "Vybrať všetko"
 
 #. <span class="hint">@T["The types of content whose events are recorded."]</span>
 #: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:15
@@ -1529,7 +1541,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "The types of content whose events are recorded."
 msgstr ""
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Created"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Created"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Design"
 msgid "Content Created"
@@ -1553,7 +1565,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Created"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Created"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Thumbnail"
 msgid "Content Created"
@@ -1565,7 +1577,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Thumbnail"
 msgid "Content is created."
 msgstr "Obsah je vytvorený."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Deleted"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Deleted"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Design"
 msgid "Content Deleted"
@@ -1589,7 +1601,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Deleted"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Deleted"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Thumbnail"
 msgid "Content Deleted"
@@ -1655,7 +1667,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Thumbnail
 msgid "Exports all the content items for the specified content types."
 msgstr "Exportuje všetky položky pre vybrané typy obsahu."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Draft Saved"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Draft Saved"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Design"
 msgid "Content Draft Saved"
@@ -1679,7 +1691,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Draft Saved"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Draft Saved"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Thumbnail"
 msgid "Content Draft Saved"
@@ -1727,7 +1739,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Thumb
 msgid "Exports a specified content item."
 msgstr "Exportuje vybranú položku obsahu."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Published"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Published"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentPublishedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentPublishedEvent.Fields.Design"
 msgid "Content Published"
@@ -1751,7 +1763,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentPublishedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Published"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Published"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentPublishedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentPublishedEvent.Fields.Thumbnail"
 msgid "Content Published"
@@ -2117,7 +2129,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentTypesSitemapSource.Thumbnail"
 msgid "Add sitemap entries for each one of the selected content types."
 msgstr "Pridajte položky sitemap pre každý z vybraných typov obsahu."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Unpublished"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Unpublished"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentUnpublishedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentUnpublishedEvent.Fields.Design"
 msgid "Content Unpublished"
@@ -2141,7 +2153,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentUnpublishedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Unpublished"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Unpublished"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentUnpublishedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentUnpublishedEvent.Fields.Thumbnail"
 msgid "Content Unpublished"
@@ -2153,7 +2165,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentUnpublishedEvent.Fields.Thumbna
 msgid "Content is unpublished."
 msgstr "Obsah je odpublikovaný."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Updated"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Updated"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentUpdatedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentUpdatedEvent.Fields.Design"
 msgid "Content Updated"
@@ -2177,7 +2189,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentUpdatedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Updated"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Updated"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentUpdatedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentUpdatedEvent.Fields.Thumbnail"
 msgid "Content Updated"
@@ -2189,7 +2201,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentUpdatedEvent.Fields.Thumbnail"
 msgid "Content is updated."
 msgstr "Obsah je aktualizovaný."
 
-#. <h4><i class="fa fa-bolt"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Versioned"])</h4>
+#. <h4><i class="fa fa-bolt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Content Versioned"])</h4>
 #: OrchardCore.Contents\Views\Items\ContentVersionedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentVersionedEvent.Fields.Design"
 msgid "Content Versioned"
@@ -2213,7 +2225,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentVersionedEvent.Fields.Edit"
 msgid "Select any content types to filter on."
 msgstr "Vyberte typ obsahu pre filtrovanie."
 
-#. <h4 class="card-title"><i class="fa fa-bolt"></i>@T["Content Versioned"]</h4>
+#. <h4 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i>@T["Content Versioned"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentVersionedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentVersionedEvent.Fields.Thumbnail"
 msgid "Content Versioned"
@@ -2225,7 +2237,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentVersionedEvent.Fields.Thumbnail
 msgid "Content is versioned."
 msgstr "Obsah je verzionovaný."
 
-#. <h4><i class="fa fa-file-text-o"></i>@Model.Activity.GetTitleOrDefault(() => T["Create Content"])</h4>
+#. <h4><i class="fa fa-file-text-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Create Content"])</h4>
 #: OrchardCore.Contents\Views\Items\CreateContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Design"
 msgid "Create Content"
@@ -2267,7 +2279,7 @@ msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Edit"
 msgid "Optionally provide values for the content parts, fields and their properties in JSON format. With Liquid support."
 msgstr "Voliteľne zadajte hodnoty pre bloky obsahu, polia a ich vlastnosti vo formáte JSON. Podporuje Liquid."
 
-#. <h4 class="card-title"><i class="fa fa-file-text-o"></i>@T["Create Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Create Content"]</h4>
 #: OrchardCore.Contents\Views\Items\CreateContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Thumbnail"
 msgid "Create Content"
@@ -2279,7 +2291,7 @@ msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Thumbnail"
 msgid "Create a content item."
 msgstr "Vytvoriť položku obsahu."
 
-#. <h4><i class="fa fa-trash"></i>@Model.Activity.GetTitleOrDefault(() => T["Delete Content"])</h4>
+#. <h4><i class="fa fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Delete Content"])</h4>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Design"
 msgid "Delete Content"
@@ -2309,7 +2321,7 @@ msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the content item (or its 'ContentItemId') to be deleted. For example: input(\"ContentItem\"). If no expression is specified, the workflow's \"ContentItem\" input variable or \"ContentItem\" property will be used."
 msgstr "Zadajte výraz v jazyku JavaScript, ktorý sa vyhodnotí pre položku obsahu (alebo jej „ContentItemId“), ktorú chcete odstrániť. Napríklad: input(\"ContentItem\"). Ak nie je zadaný žiadny výraz, použije sa vstupná premenná alebo vlastnosť \"ContentItem\" pracovného toku."
 
-#. <h4 class="card-title"><i class="fa fa-trash"></i>@T["Delete Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-trash" aria-hidden="true"></i>@T["Delete Content"]</h4>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Thumbnail"
 msgid "Delete Content"
@@ -2471,7 +2483,7 @@ msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTargetSetting
 msgid "Deployment Plan"
 msgstr "Plán nasadenia"
 
-#. <h4><i class="fa fa-cloud-upload"></i>@Model.Activity.GetTitleOrDefault(() => T["Publish Content"])</h4>
+#. <h4><i class="fa fa-cloud-upload" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Publish Content"])</h4>
 #: OrchardCore.Contents\Views\Items\PublishContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.PublishContentTask.Fields.Design"
 msgid "Publish Content"
@@ -2501,7 +2513,7 @@ msgctxt "OrchardCore.Contents.Views.Items.PublishContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the content item (or its 'ContentItemId') to be published. For example: input(\"ContentItem\"). If no expression is specified, the workflow's \"ContentItem\" input variable or \"ContentItem\" property will be used."
 msgstr "Zadajte výraz v jazyku JavaScript, ktorý sa vyhodnotí pre položku obsahu (alebo jej „ContentItemId“), ktorú chcete publikovať. Napríklad: input(\"ContentItem\"). Ak nie je zadaný žiadny výraz, použije sa vstupná premenná alebo vlastnosť \"ContentItem\" pracovného toku."
 
-#. <h4 class="card-title"><i class="fa fa-cloud-upload"></i>@T["Publish Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-cloud-upload" aria-hidden="true"></i>@T["Publish Content"]</h4>
 #: OrchardCore.Contents\Views\Items\PublishContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.PublishContentTask.Fields.Thumbnail"
 msgid "Publish Content"
@@ -2513,7 +2525,7 @@ msgctxt "OrchardCore.Contents.Views.Items.PublishContentTask.Fields.Thumbnail"
 msgid "Publish a content item."
 msgstr "Publikovať položku obsahu."
 
-#. <h4><i class="fa fa-search"></i>@Model.Activity.GetTitleOrDefault(() => T["Retrieve Content"])</h4>
+#. <h4><i class="fa fa-search" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Retrieve Content"])</h4>
 #: OrchardCore.Contents\Views\Items\RetrieveContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.RetrieveContentTask.Fields.Design"
 msgid "Retrieve Content"
@@ -2543,7 +2555,7 @@ msgctxt "OrchardCore.Contents.Views.Items.RetrieveContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the Content Item's ID (ContentItemId) to be retrieved. For example: correlationId()."
 msgstr "Zadajte výraz v jazyku JavaScript, ktorý sa vyhodnotí na základe ID položky obsahu (ContentItemId), ktoré sa má načítať. Napríklad: correlationId()."
 
-#. <h4 class="card-title"><i class="fa fa-search"></i>@T["Retrieve Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-search" aria-hidden="true"></i>@T["Retrieve Content"]</h4>
 #: OrchardCore.Contents\Views\Items\RetrieveContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.RetrieveContentTask.Fields.Thumbnail"
 msgid "Retrieve Content"
@@ -2555,7 +2567,7 @@ msgctxt "OrchardCore.Contents.Views.Items.RetrieveContentTask.Fields.Thumbnail"
 msgid "Retrieve a content item."
 msgstr "Načítať položku obsahu."
 
-#. <h4><i class="fa fa-cloud-download"></i>@Model.Activity.GetTitleOrDefault(() => T["Unpublish Content"])</h4>
+#. <h4><i class="fa fa-cloud-download" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Unpublish Content"])</h4>
 #: OrchardCore.Contents\Views\Items\UnpublishContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Design"
 msgid "Unpublish Content"
@@ -2585,7 +2597,7 @@ msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the content item (or its 'ContentItemId') to be unpublished. For example: input(\"ContentItem\"). If no expression is specified, the workflow's \"ContentItem\" input variable or \"ContentItem\" property will be used."
 msgstr "Zadajte výraz v jazyku JavaScript, ktorý sa vyhodnotí pre položku obsahu (alebo jej „ContentItemId“), ktorú chcete odpublikovať. Napríklad: input(\"ContentItem\"). Ak nie je zadaný žiadny výraz, použije sa vstupná premenná alebo vlastnosť \"ContentItem\" pracovného toku."
 
-#. <h4 class="card-title"><i class="fa fa-cloud-download"></i>@T["Unpublish Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-cloud-download" aria-hidden="true"></i>@T["Unpublish Content"]</h4>
 #: OrchardCore.Contents\Views\Items\UnpublishContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Thumbnail"
 msgid "Unpublish Content"
@@ -2597,7 +2609,7 @@ msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Thumbnail"
 msgid "Unpublish a content item."
 msgstr "Odpublikovanie položky obsahu."
 
-#. <h4><i class="fa fa-pencil-square-o"></i>@Model.Activity.GetTitleOrDefault(() => T["Update Content"])</h4>
+#. <h4><i class="fa fa-pencil-square-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Update Content"])</h4>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Design"
 msgid "Update Content"
@@ -2651,7 +2663,7 @@ msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Check if you want the content item to be published when being updated. Leave unchecked to create a draft version."
 msgstr "Zaškrtnite ak chcete položku pri upravení publikovať. Ponechajte odškrtnuté pre vytvorenie konceptu."
 
-#. <h4 class="card-title"><i class="fa fa-pencil-square-o"></i>@T["Update Content"]</h4>
+#. <h4 class="card-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>@T["Update Content"]</h4>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Thumbnail"
 msgid "Update Content"

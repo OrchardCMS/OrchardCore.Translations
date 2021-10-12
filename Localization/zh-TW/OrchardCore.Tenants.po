@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2021-07-15 19:23\n"
+"PO-Revision-Date: 2021-10-07 23:02\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Tenants\AdminMenu.cs:34
@@ -18,201 +18,289 @@ msgctxt "OrchardCore.Tenants.AdminMenu"
 msgid "Configuration"
 msgstr "配置"
 
-#. .Add(S["Tenants"], "am-" + S["Tenants"], deployment => deployment
-#. .Add(S["Tenants"], "am-" + S["Tenants"], deployment => deployment
+#. .Add(S["Tenants"], S["Tenants"].PrefixPosition(), tenant => tenant
+#. .Add(S["Tenants"], S["Tenants"].PrefixPosition(), tenant => tenant
 #: OrchardCore.Tenants\AdminMenu.cs:36
 #: OrchardCore.Tenants\AdminMenu.cs:36
 msgctxt "OrchardCore.Tenants.AdminMenu"
 msgid "Tenants"
 msgstr "租户"
 
+#. .Add(S["Configuration"], configuration => configuration
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:34
+msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
+msgid "Configuration"
+msgstr ""
+
+#. .Add(S["Tenant Feature Profiles"], S["Tenant Feature Profiles"].PrefixPosition(), featureProfiles => featureProfiles
+#. .Add(S["Tenant Feature Profiles"], S["Tenant Feature Profiles"].PrefixPosition(), featureProfiles => featureProfiles
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:36
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:36
+msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
+msgid "Tenant Feature Profiles"
+msgstr ""
+
 #. new SelectListItem() { Text = S["All states"], Value = nameof(TenantsFilter.All) },
-#: OrchardCore.Tenants\Controllers\AdminController.cs:167
+#: OrchardCore.Tenants\Controllers\AdminController.cs:171
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "All states"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Running"], Value = nameof(TenantsFilter.Running) },
-#: OrchardCore.Tenants\Controllers\AdminController.cs:168
+#: OrchardCore.Tenants\Controllers\AdminController.cs:172
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Running"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Disabled"], Value = nameof(TenantsFilter.Disabled) },
-#: OrchardCore.Tenants\Controllers\AdminController.cs:169
+#: OrchardCore.Tenants\Controllers\AdminController.cs:173
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Disabled"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Uninitialized"], Value = nameof(TenantsFilter.Uninitialized) }
-#: OrchardCore.Tenants\Controllers\AdminController.cs:170
+#: OrchardCore.Tenants\Controllers\AdminController.cs:174
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Uninitialized"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Name"], Value = nameof(TenantsOrder.Name) },
-#: OrchardCore.Tenants\Controllers\AdminController.cs:174
+#: OrchardCore.Tenants\Controllers\AdminController.cs:178
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Name"
 msgstr ""
 
 #. new SelectListItem() { Text = S["State"], Value = nameof(TenantsOrder.State) }
-#: OrchardCore.Tenants\Controllers\AdminController.cs:175
+#: OrchardCore.Tenants\Controllers\AdminController.cs:179
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "State"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Disable"], Value = nameof(TenantsBulkAction.Disable) },
-#: OrchardCore.Tenants\Controllers\AdminController.cs:179
+#: OrchardCore.Tenants\Controllers\AdminController.cs:183
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Disable"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Enable"], Value = nameof(TenantsBulkAction.Enable) }
-#: OrchardCore.Tenants\Controllers\AdminController.cs:180
+#: OrchardCore.Tenants\Controllers\AdminController.cs:184
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Enable"
 msgstr ""
 
-#. _notifier.Warning(H["You cannot disable the default tenant."]);
-#. _notifier.Error(H["You cannot disable the default tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:230
-#: OrchardCore.Tenants\Controllers\AdminController.cs:489
+#. await _notifier.WarningAsync(H["You cannot disable the default tenant."]);
+#. await _notifier.ErrorAsync(H["You cannot disable the default tenant."]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:234
+#: OrchardCore.Tenants\Controllers\AdminController.cs:517
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You cannot disable the default tenant."
 msgstr "您不能禁用默认租户。"
 
-#. _notifier.Warning(H["The tenant '{0}' is already disabled.", shellSettings.Name]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:234
+#. await _notifier.WarningAsync(H["The tenant '{0}' is already disabled.", shellSettings.Name]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:238
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant '{0}' is already disabled."
 msgstr "租户 \"{0}\" 已被禁用。"
 
-#. _notifier.Warning(H["The tenant '{0}' is already enabled.", shellSettings.Name]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:247
+#. await _notifier.WarningAsync(H["The tenant '{0}' is already enabled.", shellSettings.Name]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:251
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant '{0}' is already enabled."
 msgstr "租户 '{0}' 已经启用。"
 
-#. _notifier.Error(H["You can only disable an Enabled tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:495
+#. featureProfiles.Insert(0, new SelectListItem(S["None"], String.Empty, currentFeatureProfile == String.Empty));
+#. featureProfiles.Insert(0, new SelectListItem(S["None"], String.Empty, currentFeatureProfile == String.Empty));
+#: OrchardCore.Tenants\Controllers\AdminController.cs:294
+#: OrchardCore.Tenants\Controllers\AdminController.cs:390
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "None"
+msgstr ""
+
+#. await _notifier.ErrorAsync(H["You can only disable an Enabled tenant."]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:523
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only disable an Enabled tenant."
 msgstr "您只能禁用启用的租户。"
 
-#. _notifier.Error(H["You can only enable a Disabled tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:529
+#. await _notifier.ErrorAsync(H["You can only enable a Disabled tenant."]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:557
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only enable a Disabled tenant."
 msgstr "您只能启用一个禁用租户。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.ConnectionString), S["The connection string is mandatory for this provider."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:577
+#: OrchardCore.Tenants\Controllers\AdminController.cs:605
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The connection string is mandatory for this provider."
 msgstr "此提供程序必须使用连接字符串。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.Name), S["The tenant name is mandatory."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:582
+#: OrchardCore.Tenants\Controllers\AdminController.cs:610
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant name is mandatory."
 msgstr "租户名称是必需的。"
 
+#. ModelState.AddModelError(nameof(EditTenantViewModel.FeatureProfile), S["The feature profile does not exist.", model.FeatureProfile]);
+#: OrchardCore.Tenants\Controllers\AdminController.cs:618
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "The feature profile does not exist."
+msgstr ""
+
 #. ModelState.AddModelError(nameof(EditTenantViewModel.Name), S["A tenant with the same name already exists.", model.Name]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:589
+#: OrchardCore.Tenants\Controllers\AdminController.cs:626
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "A tenant with the same name already exists."
 msgstr "具有相同名称的租户已存在。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.Name), S["Invalid tenant name. Must contain characters only and no spaces."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:594
+#: OrchardCore.Tenants\Controllers\AdminController.cs:631
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
 msgstr "无效的租户名称。必须只包含字符, 并且不包含空格。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:599
+#: OrchardCore.Tenants\Controllers\AdminController.cs:636
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "Host and url prefix can not be empty at the same time."
 msgstr "主机和 url 前缀不能同时为空。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.RequestUrlPrefix), S["A tenant with the same host and prefix already exists.", model.Name]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:605
+#: OrchardCore.Tenants\Controllers\AdminController.cs:642
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "A tenant with the same host and prefix already exists."
 msgstr "具有相同主机和前缀的租户已存在。"
 
 #. ModelState.AddModelError(nameof(EditTenantViewModel.RequestUrlPrefix), S["The url prefix can not contain more than one segment."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:612
+#: OrchardCore.Tenants\Controllers\AdminController.cs:649
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The url prefix can not contain more than one segment."
 msgstr "Url 前缀不能包含多个段。"
 
 #. ModelState.AddModelError(nameof(CreateApiViewModel.Name), S["Invalid tenant name. Must contain characters only and no spaces."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:87
+#: OrchardCore.Tenants\Controllers\ApiController.cs:90
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
 msgstr "无效的租户名称。必须只包含字符, 并且不包含空格。"
 
+#. ModelState.AddModelError(nameof(CreateApiViewModel.FeatureProfile), S["The feature profile does not exist.", model.FeatureProfile]);
+#: OrchardCore.Tenants\Controllers\ApiController.cs:113
+msgctxt "OrchardCore.Tenants.Controllers.ApiController"
+msgid "The feature profile does not exist."
+msgstr ""
+
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:106
+#: OrchardCore.Tenants\Controllers\ApiController.cs:118
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Host and url prefix can not be empty at the same time."
 msgstr "主机和 url 前缀不能同时为空。"
 
 #. ModelState.AddModelError(nameof(CreateApiViewModel.RequestUrlPrefix), S["The url prefix can not contain more than one segment."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:113
+#: OrchardCore.Tenants\Controllers\ApiController.cs:125
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The url prefix can not contain more than one segment."
 msgstr "Url 前缀不能包含多个段。"
 
 #. ModelState.AddModelError(nameof(model.UserName), S["User name '{0}' is invalid, can only contain letters or digits.", model.UserName]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:156
+#: OrchardCore.Tenants\Controllers\ApiController.cs:168
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "User name '{0}' is invalid, can only contain letters or digits."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(model.Email), S["The email is invalid."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:162
+#: OrchardCore.Tenants\Controllers\ApiController.cs:174
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The email is invalid."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(SetupApiViewModel.Name), S["Tenant not found: '{0}'", model.Name]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:172
+#: OrchardCore.Tenants\Controllers\ApiController.cs:184
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Tenant not found: '{0}'"
 msgstr "未找到租户: \"{0}\""
 
 #. return BadRequest(S["The tenant can't be setup."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:182
+#: OrchardCore.Tenants\Controllers\ApiController.cs:194
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
 msgstr "无法设置租户。"
 
 #. return BadRequest(S["The database provider is not defined."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:196
+#: OrchardCore.Tenants\Controllers\ApiController.cs:208
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The database provider is not defined."
 msgstr "未定义数据库提供程序。"
 
 #. return BadRequest(S["The connection string is required for this database provider."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:215
+#: OrchardCore.Tenants\Controllers\ApiController.cs:227
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The connection string is required for this database provider."
 msgstr "此数据库提供程序需要连接字符串。"
 
 #. return BadRequest(S["Either 'Recipe' or 'RecipeName' is required."]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:231
+#: OrchardCore.Tenants\Controllers\ApiController.cs:243
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Either 'Recipe' or 'RecipeName' is required."
 msgstr "\"食谱\" 或 \"食谱名称\" 是必需的。"
 
 #. return BadRequest(S["Recipe '{0}' not found.", recipeName]);
-#: OrchardCore.Tenants\Controllers\ApiController.cs:257
+#: OrchardCore.Tenants\Controllers\ApiController.cs:269
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Recipe '{0}' not found."
 msgstr "找不到配方 '{0}'."
+
+#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:90
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "Delete"
+msgstr ""
+
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.Name), S["The name is mandatory."]);
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.Name), S["The name is mandatory."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:129
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:227
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "The name is mandatory."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.Name), S["A profile with the same name already exists."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:137
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "A profile with the same name already exists."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.FeatureRules), S["The feature rules are mandatory."]);
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.FeatureRules), S["The feature rules are mandatory."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:143
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:237
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "The feature rules are mandatory."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.FeatureRules), S["Invalid json supplied."]);
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.FeatureRules), S["Invalid json supplied."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:153
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:247
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "Invalid json supplied."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(FeatureProfileViewModel.Name), S["A feature profile with the same name already exists."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:232
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "A feature profile with the same name already exists."
+msgstr ""
+
+#. await _notifier.SuccessAsync(H["Feature profile deleted successfully."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:294
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "Feature profile deleted successfully."
+msgstr ""
+
+#. await _notifier.SuccessAsync(H["Feature profiles successfully removed."]);
+#: OrchardCore.Tenants\Controllers\FeatureProfilesController.cs:321
+msgctxt "OrchardCore.Tenants.Controllers.FeatureProfilesController"
+msgid "Feature profiles successfully removed."
+msgstr ""
 
 #. public override LocalizedString Category => S["Tenant"];
 #: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:29
@@ -227,13 +315,13 @@ msgid "Create Tenant Task"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:83
+#: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:89
 msgctxt "OrchardCore.Tenants.Workflows.Activities.CreateTenantTask"
 msgid "Done"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:83
+#: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:89
 msgctxt "OrchardCore.Tenants.Workflows.Activities.CreateTenantTask"
 msgid "Failed"
 msgstr ""
@@ -438,14 +526,26 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Connection string"
 msgstr "连接字符串"
 
+#. @T["Feature profile"]
+#: OrchardCore.Tenants\Views\Admin\Create.cshtml:97
+msgctxt "OrchardCore.Tenants.Views.Admin.Create"
+msgid "Feature profile"
+msgstr ""
+
+#. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
+#: OrchardCore.Tenants\Views\Admin\Create.cshtml:98
+msgctxt "OrchardCore.Tenants.Views.Admin.Create"
+msgid "Optionally specify which feature profile should be applied to this tenant."
+msgstr ""
+
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Tenants\Views\Admin\Create.cshtml:95
+#: OrchardCore.Tenants\Views\Admin\Create.cshtml:108
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Create"
 msgstr "创建"
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Tenants\Views\Admin\Create.cshtml:96
+#: OrchardCore.Tenants\Views\Admin\Create.cshtml:109
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Cancel"
 msgstr "取消"
@@ -560,14 +660,26 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Connection string"
 msgstr "连接字符串"
 
+#. @T["Feature profile"]
+#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:100
+msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
+msgid "Feature profile"
+msgstr ""
+
+#. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
+#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:101
+msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
+msgid "Optionally specify which feature profile should be applied to this tenant."
+msgstr ""
+
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:98
+#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:111
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Save"
 msgstr "保存"
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:99
+#: OrchardCore.Tenants\Views\Admin\Edit.cshtml:112
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Cancel"
 msgstr "取消"
@@ -658,31 +770,31 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Sort"
 msgstr ""
 
-#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-cog text-secondary"></i> @T["Uninitialized"]</span>
+#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-cog text-secondary" aria-hidden="true"></i> @T["Uninitialized"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:131
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Uninitialized"
 msgstr "未初始化的数据"
 
-#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-hourglass-start text-info"></i> @T["Initializing"]</span>
+#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-hourglass-start text-info" aria-hidden="true"></i> @T["Initializing"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:134
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Initializing"
 msgstr "初始化中"
 
-#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-check text-success"></i> @T["Running"]</span>
+#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-check text-success" aria-hidden="true"></i> @T["Running"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:137
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Running"
 msgstr "运行中"
 
-#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-remove text-danger"></i> @T["Disabled"]</span>
+#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-remove text-danger" aria-hidden="true"></i> @T["Disabled"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:140
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Disabled"
 msgstr "禁用"
 
-#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-exclamation-triangle text-warning"></i> @T["Invalid"]</span>
+#. <span class="badge ta-badge font-weight-normal"><i class="fa fa-exclamation-triangle text-warning" aria-hidden="true"></i> @T["Invalid"]</span>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:143
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Invalid"
@@ -764,7 +876,203 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "selected"
 msgstr ""
 
-#. <h4><i class="fa fa-file-text-o"></i>@Model.Activity.GetTitleOrDefault(() => T["Create Tenant"])</h4>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Feature Profile"])</h1></zone>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:8
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Create Feature Profile"
+msgstr ""
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:15
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Name"
+msgstr ""
+
+#. <span class="hint">@T["The name of the feature profile."]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:18
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "The name of the feature profile."
+msgstr ""
+
+#. <label asp-for="FeatureRules">@T["Rules"]</label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:23
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Rules"
+msgstr ""
+
+#. <span class="hint">@T["The feature rules."]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:29
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "The feature rules."
+msgstr ""
+
+#. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:36
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Save"
+msgstr ""
+
+#. <span class="sr-only">@T["Toggle Dropdown"]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:38
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Toggle Dropdown"
+msgstr ""
+
+#. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:41
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "and continue"
+msgstr ""
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:45
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Cancel"
+msgstr ""
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Feature Profile"])</h1></zone>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:8
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Edit Feature Profile"
+msgstr ""
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:18
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Name"
+msgstr ""
+
+#. <span class="hint">@T["The name of the feature profile."]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:21
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "The name of the feature profile."
+msgstr ""
+
+#. <label asp-for="FeatureRules">@T["Rules"]</label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:26
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Rules"
+msgstr ""
+
+#. <span class="hint">@T["The feature rules."]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:32
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "The feature rules."
+msgstr ""
+
+#. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:38
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Save"
+msgstr ""
+
+#. <span class="sr-only">@T["Toggle Dropdown"]</span>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:40
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Toggle Dropdown"
+msgstr ""
+
+#. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:43
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "and continue"
+msgstr ""
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:47
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Cancel"
+msgstr ""
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Feature Profiles"])</h1></zone>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:8
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Feature Profiles"
+msgstr ""
+
+#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:21
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Search"
+msgstr ""
+
+#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Feature Profile"]</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:24
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Add Feature Profile"
+msgstr ""
+
+#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:37
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Select All"
+msgstr ""
+
+#. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "1 item"
+msgid_plural "{0} items"
+msgstr[0] ""
+
+#. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Items {0} to {1}"
+msgstr ""
+
+#. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid " / {0} item in total"
+msgid_plural " / {0} items in total"
+msgstr[0] ""
+
+#. @T["Actions"]
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:45
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Actions"
+msgstr ""
+
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:50
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Bulk Action"
+msgstr ""
+
+#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:50
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Are you sure you want to {0} these items?"
+msgstr ""
+
+#. <a asp-action="Edit" asp-route-name="@entry.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:66
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Edit"
+msgstr ""
+
+#. <a asp-action="Delete" asp-route-name="@entry.Name" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:67
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Delete"
+msgstr ""
+
+#. @T["<strong>Nothing here!</strong> There are no feature profiles for the moment."]
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:78
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "<strong>Nothing here!</strong> There are no feature profiles for the moment."
+msgstr ""
+
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:129
+#: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:140
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "selected"
+msgstr ""
+
+#. <h4><i class="fa fa-file-text-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Create Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Design"
 msgid "Create Tenant"
@@ -842,7 +1150,13 @@ msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "Recipe"
 msgstr ""
 
-#. <h4 class="card-title"><i class="fa fa-file-text-o"></i>@T["Create Tenant"]</h4>
+#. <label asp-for="FeatureProfileExpression">@T["Feature Profile"] <span asp-validation-for="FeatureProfileExpression"></span></label>
+#: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:49
+msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
+msgid "Feature Profile"
+msgstr ""
+
+#. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Create Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Thumbnail"
 msgid "Create Tenant"
@@ -854,7 +1168,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Thumbnail"
 msgid "Create a tenant."
 msgstr ""
 
-#. <h4><i class="fa fa-trash"></i>@Model.Activity.GetTitleOrDefault(() => T["Disable Tenant"])</h4>
+#. <h4><i class="fa fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Disable Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Design"
 msgid "Disable Tenant"
@@ -872,7 +1186,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Edit"
 msgid "Select the name of the tenant to disable."
 msgstr ""
 
-#. <h4 class="card-title"><i class="fa fa-trash"></i>@T["Disable Tenant"]</h4>
+#. <h4 class="card-title"><i class="fa fa-trash" aria-hidden="true"></i>@T["Disable Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Thumbnail"
 msgid "Disable Tenant"
@@ -884,7 +1198,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Thumbnail"
 msgid "Disable a tenant."
 msgstr ""
 
-#. <h4><i class="fa fa-trash"></i>@Model.Activity.GetTitleOrDefault(() => T["Enable Tenant"])</h4>
+#. <h4><i class="fa fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Enable Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Design"
 msgid "Enable Tenant"
@@ -902,7 +1216,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Edit"
 msgid "Select the name of the tenant to enable."
 msgstr ""
 
-#. <h4 class="card-title"><i class="fa fa-file-text-o"></i>@T["Enable Tenant"]</h4>
+#. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Enable Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Thumbnail"
 msgid "Enable Tenant"
@@ -914,7 +1228,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Thumbnail"
 msgid "Enable a tenant."
 msgstr ""
 
-#. <h4><i class="fa fa-file-text-o"></i>@Model.Activity.GetTitleOrDefault(() => T["Setup Tenant"])</h4>
+#. <h4><i class="fa fa-file-text-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Setup Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Design"
 msgid "Setup Tenant"
@@ -980,7 +1294,7 @@ msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
 msgid "Recipe"
 msgstr ""
 
-#. <h4 class="card-title"><i class="fa fa-file-text-o"></i>@T["Setup Tenant"]</h4>
+#. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Setup Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Thumbnail"
 msgid "Setup Tenant"
