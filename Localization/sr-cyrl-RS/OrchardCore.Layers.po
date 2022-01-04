@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Cyrillic\n"
 "Language: sr_cyrl_RS\n"
-"PO-Revision-Date: 2021-10-07 22:50\n"
+"PO-Revision-Date: 2021-12-23 13:33\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -40,26 +40,32 @@ msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Widgets"
 msgstr ""
 
+#. await _notifier.WarningAsync(H["The Widget content item with id {0} has no matching {1} content type definition.", widget.ContentItem.ContentItemId, widget.ContentItem.ContentType]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:120
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The Widget content item with id {0} has no matching {1} content type definition."
+msgstr ""
+
 #. await _notifier.SuccessAsync(H["Layer deleted successfully."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:259
+#: OrchardCore.Layers\Controllers\AdminController.cs:276
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:263
+#: OrchardCore.Layers\Controllers\AdminController.cs:280
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer couldn't be deleted: you must remove any associated widgets first."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:339
+#: OrchardCore.Layers\Controllers\AdminController.cs:356
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:343
+#: OrchardCore.Layers\Controllers\AdminController.cs:360
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
 msgstr ""
@@ -221,49 +227,61 @@ msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widge
 msgstr ""
 
 #. @T["Add Widget"]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:79
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:81
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add Widget"
 msgstr ""
 
+#. <span>@T["No widgets found."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:102
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "No widgets found."
+msgstr ""
+
+#. <span>@T["No layers found."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:107
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "No layers found."
+msgstr ""
+
 #. <h3>@T["Layers"]</h3>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:105
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:116
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
 msgstr ""
 
 #. @T["Select a layer to reveal its associated widgets."]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:108
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:119
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
 msgstr ""
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Layers/#rules" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:109
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:120
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "See documentation"
 msgstr ""
 
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:124
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:135
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit"
 msgstr ""
 
 #. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:125
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:136
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Delete"
 msgstr ""
 
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:138
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:149
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr ""
 
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:141
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:152
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr ""

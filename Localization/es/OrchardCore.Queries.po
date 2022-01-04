@@ -10,13 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-10-07 22:44\n"
+"PO-Revision-Date: 2021-12-23 13:40\n"
 
 #. builder.Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:24
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
@@ -30,37 +30,37 @@ msgstr "Consultas"
 #: OrchardCore.Queries\AdminMenu.cs:27
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "All queries"
-msgstr ""
+msgstr "Todas las consultas"
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
 #: OrchardCore.Queries\Controllers\AdminController.cs:105
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #. await _notifier.SuccessAsync(H["Query created successfully."]);
 #: OrchardCore.Queries\Controllers\AdminController.cs:164
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query created successfully."
-msgstr ""
+msgstr "Consulta creada con éxito."
 
 #. await _notifier.SuccessAsync(H["Query updated successfully."]);
 #: OrchardCore.Queries\Controllers\AdminController.cs:220
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query updated successfully."
-msgstr ""
+msgstr "Consulta actualizada correctamente."
 
 #. await _notifier.SuccessAsync(H["Query deleted successfully."]);
 #: OrchardCore.Queries\Controllers\AdminController.cs:247
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query deleted successfully."
-msgstr ""
+msgstr "Consulta eliminada correctamente."
 
 #. await _notifier.SuccessAsync(H["Queries successfully removed."]);
 #: OrchardCore.Queries\Controllers\AdminController.cs:274
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Queries successfully removed."
-msgstr ""
+msgstr "Consultas eliminadas con éxito."
 
 #. updater.ModelState.AddModelError(nameof(model.Name), S["Name is required"]);
 #: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:69
@@ -72,7 +72,7 @@ msgstr "Se requiere nombre"
 #: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:73
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Invalid schema JSON supplied."
-msgstr ""
+msgstr "Esquema no válido JSON suministrado."
 
 #. updater.ModelState.AddModelError(nameof(model.Name), S["Name contains illegal characters"]);
 #: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:78
@@ -90,7 +90,7 @@ msgstr "Ya existe una consulta con el mismo nombre"
 #: OrchardCore.Queries\Sql\AdminMenu.cs:25
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
@@ -98,7 +98,7 @@ msgstr ""
 #: OrchardCore.Queries\Sql\AdminMenu.cs:26
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Queries"
-msgstr ""
+msgstr "Consultas"
 
 #. .Add(S["Run SQL Query"], S["Run SQL Query"].PrefixPosition(), sql => sql
 #. .Add(S["Run SQL Query"], S["Run SQL Query"].PrefixPosition(), sql => sql
@@ -106,13 +106,13 @@ msgstr ""
 #: OrchardCore.Queries\Sql\AdminMenu.cs:27
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Run SQL Query"
-msgstr ""
+msgstr "Ejecutar consulta SQL"
 
 #. ModelState.AddModelError("", S["An error occurred while executing the SQL query: {0}", e.Message]);
 #: OrchardCore.Queries\Sql\Controllers\AdminController.cs:100
 msgctxt "OrchardCore.Queries.Sql.Controllers.AdminController"
 msgid "An error occurred while executing the SQL query: {0}"
-msgstr ""
+msgstr "Se ha producido un error al ejecutar la consulta SQL: {0}"
 
 #. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
 #: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:60
@@ -124,13 +124,13 @@ msgstr "El campo de consulta es obligatorio"
 #: OrchardCore.Queries\Views\NavigationItemText-search.Id.cshtml:1
 msgctxt "OrchardCore.Queries.Views.NavigationItemText-search.Id"
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #. <h4>@T["SQL"]</h4>
 #: OrchardCore.Queries\Views\Query-Sql.Link.cshtml:5
 msgctxt "OrchardCore.Queries.Views.Query-Sql.Link"
 msgid "SQL"
-msgstr ""
+msgstr "SQL"
 
 #. <p class="hint">@T["Queries the SQL database."]</p>
 #: OrchardCore.Queries\Views\Query-Sql.Link.cshtml:6
@@ -186,11 +186,17 @@ msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
 msgid "Schema"
 msgstr "Esquema"
 
-#. <span class="hint">@T["The schema the api will use to return results."]</span>
+#. <span class="hint">@T["The schema the GraphQL API will use to return results."] <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Queries/#graphql" target="_blank">@T["See documentation"]</a></span>
 #: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:14
 msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
-msgid "The schema the api will use to return results."
-msgstr "El esquema que la api utilizará para devolver resultados."
+msgid "The schema the GraphQL API will use to return results."
+msgstr ""
+
+#. <span class="hint">@T["The schema the GraphQL API will use to return results."] <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Queries/#graphql" target="_blank">@T["See documentation"]</a></span>
+#: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:14
+msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
+msgid "See documentation"
+msgstr ""
 
 #. <h1>@T["If you see this message you need to create a custom shape template for {0}", "Query-" + Model.Name + ".Link"]</h1>
 #: OrchardCore.Queries\Views\Query.Link.cshtml:1
@@ -274,47 +280,47 @@ msgstr "Agregar Consulta"
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:36
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Select All"
-msgstr ""
+msgstr "Selecciona todo"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:37
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "1 item"
 msgid_plural "{0} items"
-msgstr[0] ""
+msgstr[0] "1 elemento"
 msgstr[1] ""
 
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:37
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Elementos {0} a {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:37
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
+msgstr[0] " / {0} elemento en total"
 msgstr[1] ""
 
 #. @T["Actions"]
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:44
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:49
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Acción masiva"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:49
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres {0} estos artículos?"
 
 #. @T["<strong>Nothing here!</strong> There are no queries for the moment."]
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:71

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2021-10-07 22:50\n"
+"PO-Revision-Date: 2021-12-23 13:32\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -38,28 +38,34 @@ msgstr "Ζώνες"
 #: OrchardCore.Layers\AdminMenu.cs:33
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Widgets"
+msgstr "Widgets"
+
+#. await _notifier.WarningAsync(H["The Widget content item with id {0} has no matching {1} content type definition.", widget.ContentItem.ContentItemId, widget.ContentItem.ContentType]);
+#: OrchardCore.Layers\Controllers\AdminController.cs:120
+msgctxt "OrchardCore.Layers.Controllers.AdminController"
+msgid "The Widget content item with id {0} has no matching {1} content type definition."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Layer deleted successfully."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:259
+#: OrchardCore.Layers\Controllers\AdminController.cs:276
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
 msgstr "Το επίπεδο διαγράφηκε επιτυχώς."
 
 #. await _notifier.ErrorAsync(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:263
+#: OrchardCore.Layers\Controllers\AdminController.cs:280
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer couldn't be deleted: you must remove any associated widgets first."
 msgstr "Το επίπεδο δεν ήταν δυνατό να διαγραφεί: πρέπει πρώτα να αφαιρέσετε τυχόν σχετιζόμενα widget."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:339
+#: OrchardCore.Layers\Controllers\AdminController.cs:356
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
 msgstr "Το όνομα του επιπέδου είναι απαραίτητο."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:343
+#: OrchardCore.Layers\Controllers\AdminController.cs:360
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
 msgstr "Το όνομα του επιπέδου υπάρχει ήδη."
@@ -68,25 +74,25 @@ msgstr "Το όνομα του επιπέδου υπάρχει ήδη."
 #: OrchardCore.Layers\Controllers\LayerRuleController.cs:134
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition added successfully."
-msgstr ""
+msgstr "Η συνθήκη προστέθηκε με επιτυχία."
 
 #. await _notifier.SuccessAsync(H["Condition updated successfully."]);
 #: OrchardCore.Layers\Controllers\LayerRuleController.cs:203
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition updated successfully."
-msgstr ""
+msgstr "Η συνθήκη ενημερώθηκε με επιτυχία."
 
 #. await _notifier.ErrorAsync(H["The condition has validation errors."]);
 #: OrchardCore.Layers\Controllers\LayerRuleController.cs:207
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "The condition has validation errors."
-msgstr ""
+msgstr "Η συνθήκη έχει σφάλματα επικύρωσης."
 
 #. await _notifier.SuccessAsync(H["Condition deleted successfully."]);
 #: OrchardCore.Layers\Controllers\LayerRuleController.cs:241
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition deleted successfully."
-msgstr ""
+msgstr "Η συνθήκη διαγράφηκε με επιτυχία."
 
 #. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Zone", S["Zone is missing"]);
 #: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:77
@@ -98,7 +104,7 @@ msgstr "Η ζώνη λείπει"
 #: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:82
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Layer is missing"
-msgstr ""
+msgstr "Το επίπεδο λείπει"
 
 #. Description = S["Site layers define the rules and zone placement for widgets."],
 #: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:30
@@ -188,7 +194,7 @@ msgstr "Περιγραφή"
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:31
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Error updating rule order"
-msgstr ""
+msgstr "Σφάλμα ενημέρωσης σειράς κανόνα"
 
 #. <input class="button mt-3" type="submit" value="@T["Save"]" />
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:35
@@ -221,49 +227,61 @@ msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widge
 msgstr "Παρακαλώ <a href=\"{0}\"> καθόρισε τις διαθέσιμες ζώνες </a> πριν προσθέσεις Widgets"
 
 #. @T["Add Widget"]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:79
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:81
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add Widget"
 msgstr "Προσθήκη Widget"
 
+#. <span>@T["No widgets found."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:102
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "No widgets found."
+msgstr ""
+
+#. <span>@T["No layers found."]</span>
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:107
+msgctxt "OrchardCore.Layers.Views.Admin.Index"
+msgid "No layers found."
+msgstr ""
+
 #. <h3>@T["Layers"]</h3>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:105
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:116
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
 msgstr "Επίπεδα"
 
 #. @T["Select a layer to reveal its associated widgets."]
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:108
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:119
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
 msgstr "Επιλέξτε ένα επίπεδο για να αποκαλύφθουν τα σχετιζόμενα widget."
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Layers/#rules" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:109
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:120
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "See documentation"
-msgstr ""
+msgstr "Δείτε την τεκμηρίωση"
 
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })">@T["Edit"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:124
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:135
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
 #. <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Admin", new { area = "OrchardCore.Layers", name = layer.Name })" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:125
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:136
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Delete"
 msgstr "Διαγραφή"
 
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">create a layer</a> before adding Widgets", Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })]</p>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:138
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:149
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr "<a href=\"{0}\"> Δημιούργησε ένα επίπεδο </a> πριν προσθέσεις Widgets"
 
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:141
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:152
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr "Προσθήκη"
@@ -302,29 +320,29 @@ msgstr "Εξαγωγή όλων των επιπέδων."
 #: OrchardCore.Layers\Views\LayerRule\Create.cshtml:3
 msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
 msgid "Create Rule"
-msgstr ""
+msgstr "Δημιουργία Κανόνα"
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
 #: OrchardCore.Layers\Views\LayerRule\Create.cshtml:14
 msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
 msgid "Create"
-msgstr ""
+msgstr "Δημιουργία"
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-controller="Admin" asp-route-name="@Model.Name">@T["Cancel"]</a>
 #: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
 msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
 msgid "Cancel"
-msgstr ""
+msgstr "Άκυρο"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Rule"])</h1></zone>
 #: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:3
 msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
 msgid "Edit Rule"
-msgstr ""
+msgstr "Επεξεργασία Κανόνα"
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:13
 msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
