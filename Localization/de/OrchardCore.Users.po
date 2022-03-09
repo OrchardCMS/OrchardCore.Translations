@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-01-05 14:06\n"
+"PO-Revision-Date: 2022-03-05 10:48\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -101,49 +101,49 @@ msgid "User Reset password"
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:302
+#: OrchardCore.Users\Startup.cs:310
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Login settings"
 msgstr "Anmeldeeinstellungen"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:302
+#: OrchardCore.Users\Startup.cs:310
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Exports the Login settings."
 msgstr "Exportiert die Anmeldeeinstellungen."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:347
+#: OrchardCore.Users\Startup.cs:355
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Change Email settings"
 msgstr "E-Mail-Einstellungen ändern"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:347
+#: OrchardCore.Users\Startup.cs:355
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Exports the Change Email settings."
 msgstr "Exportiert die Änderungs-E-Mail-Einstellungen."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:400
+#: OrchardCore.Users\Startup.cs:408
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Registration settings"
 msgstr "Registrierungseinstellungen"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:400
+#: OrchardCore.Users\Startup.cs:408
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Exports the Registration settings."
 msgstr "Exportiert die Registrierungseinstellungen."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:458
+#: OrchardCore.Users\Startup.cs:466
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Reset Password settings"
 msgstr "Passworteinstellungen zurücksetzen"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:458
+#: OrchardCore.Users\Startup.cs:466
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Exports the Reset Password settings."
 msgstr "Exportiert die Einstellungen zum Zurücksetzen des Passworts."
@@ -773,7 +773,7 @@ msgid "Invalid"
 msgstr "Ungültig"
 
 #. updater.ModelState.TryAddModelError("", S["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:155
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:154
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr "Kein E-Mail-Dienst verfügbar"
@@ -942,116 +942,131 @@ msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Configure users registration."
 msgstr "Benutzerregistrierung konfigurieren."
 
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:0
+msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
+msgid "NoRegistration"
+msgstr ""
+
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:0
+msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
+msgid "AllowRegistration"
+msgstr ""
+
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:0
+msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
+msgid "AllowOnlyExternalUsers"
+msgstr ""
+
 #. <li>@T["when NoRegistration is selected, no new users can register"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:24
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when NoRegistration is selected, no new users can register"
 msgstr "wenn NoRegistration ausgewählt ist, können sich keine neuen Benutzer registrieren"
 
 #. <li>@T["when AllowRegistration is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:25
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:34
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when AllowRegistration is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"
 msgstr "wenn AllowRegistration ausgewählt ist, wird ein Link angezeigt, der es den Benutzern ermöglicht, sich auf der Website zu registrieren. Wenn es externe Anbieter gibt, kann sich der Benutzer nach einmaliger Authentifizierung registrieren"
 
 #. <li>@T["when AllowOnlyExternalUsers is selected, only users authenticated with external providers can register on the site"]</li>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:26
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when AllowOnlyExternalUsers is selected, only users authenticated with external providers can register on the site"
 msgstr "wenn AllowOnlyExternalUsers ausgewählt ist, können sich nur Benutzer, die sich bei externen Anbietern angemeldet haben, auf der Website registrieren"
 
 #. <label class="custom-control-label" asp-for="UsersMustValidateEmail">@T["Users must verify their email address"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:35
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:44
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Users must verify their email address"
 msgstr "Benutzer müssen ihre E-Mail-Adresse bestätigen"
 
 #. <div class="alert alert-warning collapse" id="warnEmailValidation">@T["The users whose email address has not been confirmed will not be able to login or reset their password."]</div>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:39
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:48
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "The users whose email address has not been confirmed will not be able to login or reset their password."
 msgstr "Die Benutzer, deren E-Mail-Adresse nicht bestätigt wurde, können sich nicht einloggen oder ihr Passwort zurücksetzen."
 
 #. <label class="custom-control-label" asp-for="UsersAreModerated">@T["Users must be approved before they can log in"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:45
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:54
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Users must be approved before they can log in"
 msgstr ""
 
 #. <label class="custom-control-label" asp-for="UseSiteTheme">@T["Use site theme for registration page"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:53
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:62
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use site theme for registration page"
 msgstr "Website-Design für Registrieren-Seite verwenden"
 
 #. <span class="hint dashed">@T["Requires an active site theme."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:54
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:63
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Requires an active site theme."
 msgstr "Erfordert ein aktives Seitenthema."
 
 #. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:58
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:67
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "External Authentication"
 msgstr "Externe Authentifizierung"
 
 #. <h5 class="form-group">@T["External Authentication"]<span class="hint dashed">@T["Settings when registering with external authentication providers"]</span></h5>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:58
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:67
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Settings when registering with external authentication providers"
 msgstr "Einstellungen für die Registrierung über externen Authentifizierungsanbieter"
 
 #. <label class="custom-control-label" asp-for="UseScriptToGenerateUsername">@T["Use a script to generate userName based on external provider claims"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:64
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:73
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use a script to generate userName based on external provider claims"
 msgstr "Verwenden Sie ein Skript, um den Benutzernamen basierend auf externen Anbieteransprüchen zu generieren"
 
 #. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:65
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:74
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
 msgstr "Wenn ausgewählt, werden alle in Modulen definierte IExternalLoginEventHandlers nicht ausgelöst"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript()">@T["Reset Script"]</button>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:94
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:103
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Reset Script"
 msgstr "Skript zurücksetzen"
 
 #. <label class="custom-control-label" asp-for="NoUsernameForExternalUsers">@T["Do not ask username"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:102
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:111
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask username"
 msgstr "Nicht nach Benutzername fragen"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:103
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:112
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider, they are not required to provide a local username. You can customize how it works by providing an IExternalLoginEventHandler or writing a script."
 msgstr "Wenn sich ein neuer Benutzer mit einem externen Anbieter anmeldet, ist er nicht verpflichtet, einen lokalen Benutzernamen anzugeben. Sie können die Funktionsweise anpassen, indem Sie einen IExternalLoginEventHandler bereitstellen oder ein Skript schreiben."
 
 #. <label class="custom-control-label" asp-for="NoEmailForExternalUsers">@T["Do not ask email address"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:110
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:119
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not ask email address"
 msgstr "Nicht nach der E-Mail-Adresse fragen"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:111
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:120
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider and the email claim is defined, they are not required to provide a local email address."
 msgstr "Wenn sich ein neuer Benutzer mit einem externen Anbieter anmeldet und der E-Mail-Anspruch definiert ist, ist er nicht verpflichtet, eine lokale E-Mail-Adresse anzugeben."
 
 #. <label class="custom-control-label" asp-for="NoPasswordForExternalUsers">@T["Do not create local password for external users"]</label>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:118
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:127
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Do not create local password for external users"
 msgstr "Kein lokales Kennwort für externe Benutzer erstellen"
 
 #. <span class="hint dashed">@T["When a new user logs in with an external provider, they are not required to provide a local password."]</span>
-#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:119
+#: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:128
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "When a new user logs in with an external provider, they are not required to provide a local password."
 msgstr "Wenn sich ein neuer Benutzer mit einem externen Anbieter anmeldet, ist er nicht verpflichtet, ein lokales Passwort anzugeben."

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2022-01-05 14:08\n"
+"PO-Revision-Date: 2022-03-05 10:49\n"
 
 #. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 #: OrchardCore.Workflows\AdminMenu.cs:24
@@ -549,8 +549,8 @@ msgctxt "OrchardCore.Workflows.Views.ActivityMetadata.Edit"
 msgid "Optionally provide a custom title for this activity."
 msgstr "Παρέχετε προαιρετικά έναν προσαρμοσμένο τίτλο για αυτήν τη δραστηριότητα."
 
-#. <button class="btn btn-warning" type="submit" name="submit.Save" value="user-task.@action">@T[action] @T["and Save"]</button>
-#. <button type="submit" name="submit.Save" class="dropdown-item" value="user-task.@action">@T[action] @T["and Save"]</button>
+#. <button class="btn btn-warning" type="submit" name="submit.Save" value="user-task.@action">@T[Html.Encode(action)] @T["and Save"]</button>
+#. <button type="submit" name="submit.Save" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Save"]</button>
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:11
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:30
 msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
@@ -563,8 +563,8 @@ msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
 msgid "Toggle Dropdown"
 msgstr "Εναλλαγή Αναπτυσσόμενου Μενού"
 
-#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[action] @T["and Publish"]</button>
-#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[action] @T["and Publish"]</button>
+#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Publish"]</button>
+#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Publish"]</button>
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:16
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:31
 msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
@@ -1412,7 +1412,7 @@ msgid "Script"
 msgstr ""
 
 #. <span class="hint">@T["The script to execute. Make sure to call `setOutcome` with any of the specified available outcomes at least once."]</span>
-#: OrchardCore.Workflows\Views\Items\ScriptTask.Fields.Edit.cshtml:15
+#: OrchardCore.Workflows\Views\Items\ScriptTask.Fields.Edit.cshtml:16
 msgctxt "OrchardCore.Workflows.Views.Items.ScriptTask.Fields.Edit"
 msgid "The script to execute. Make sure to call `setOutcome` with any of the specified available outcomes at least once."
 msgstr "Το script για εκτέλεση. Βεβαιωθείτε ότι έχετε καλέσει το `setOutcome` με κάποια από τα ορισμένα διαθέσιμα αποτελέσματα τουλάχιστον μία φορά."
@@ -1597,13 +1597,13 @@ msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Request any user action of <em>{0}</em>"
 msgstr "Ζητήστε οποιαδήποτε ενέργεια χρήστη από <em>{0}</em>"
 
-#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? new LocalizedHtmlString("RequiredRoles", string.Join(", ", Model.Activity.Roles)) : T["Any"]]</span>
+#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? Html.Raw(Html.Encode(string.Join(", ", Model.Activity.Roles))) : T["Any"]]</span>
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Design.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Any"
 msgstr "Οποιαδήποτε"
 
-#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? new LocalizedHtmlString("RequiredRoles", string.Join(", ", Model.Activity.Roles)) : T["Any"]]</span>
+#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? Html.Raw(Html.Encode(string.Join(", ", Model.Activity.Roles))) : T["Any"]]</span>
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Design.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Required roles: <em>{0}</em>"

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-01-05 14:08\n"
+"PO-Revision-Date: 2022-03-05 10:47\n"
 
 #. builder.Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
 #: OrchardCore.Workflows\AdminMenu.cs:24
@@ -268,7 +268,7 @@ msgstr "Hecho"
 #: OrchardCore.Workflows\Activities\WhileLoopTask.cs:23
 msgctxt "OrchardCore.Workflows.Activities.WhileLoopTask"
 msgid "While Loop Task"
-msgstr ""
+msgstr "En bucle de tareas"
 
 #. public override LocalizedString Category => S["Control Flow"];
 #: OrchardCore.Workflows\Activities\WhileLoopTask.cs:25
@@ -322,7 +322,7 @@ msgstr "Todos"
 #: OrchardCore.Workflows\Controllers\WorkflowController.cs:147
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
 msgid "Faulted"
-msgstr ""
+msgstr "Fallado"
 
 #. new SelectListItem() { Text = S["Finished"], Value = nameof(WorkflowFilter.Finished) }
 #: OrchardCore.Workflows\Controllers\WorkflowController.cs:148
@@ -360,19 +360,19 @@ msgstr "El flujo de trabajo {0} ha sido eliminado."
 #: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:464
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow has been saved."
-msgstr ""
+msgstr "El flujo de trabajo ha sido guardado."
 
 #. await _notifier.SuccessAsync(H["Workflow {0} deleted", workflowType.Name]);
 #: OrchardCore.Workflows\Controllers\WorkflowTypeController.cs:485
 msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
 msgid "Workflow {0} deleted"
-msgstr ""
+msgstr "Flujo de trabajo {0} eliminado"
 
 #. public override LocalizedString DisplayText => S["Timer Event"];
 #: OrchardCore.Workflows\Timers\TimerEvent.cs:26
 msgctxt "OrchardCore.Workflows.Timers.TimerEvent"
 msgid "Timer Event"
-msgstr ""
+msgstr "Evento Temporizador"
 
 #. public override LocalizedString Category => S["Background"];
 #: OrchardCore.Workflows\Timers\TimerEvent.cs:28
@@ -396,7 +396,7 @@ msgstr "Tarea de redirección Http"
 #: OrchardCore.Workflows\Http\Activities\HttpRedirectTask.cs:35
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRedirectTask"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. return Outcomes(S["Done"]);
 #: OrchardCore.Workflows\Http\Activities\HttpRedirectTask.cs:51
@@ -414,7 +414,7 @@ msgstr "Evento de Solicitud Http"
 #: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:29
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestEvent"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. return Outcomes(S["Done"]);
 #: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:66
@@ -432,7 +432,7 @@ msgstr "Evento Filtro de Solicitud Http"
 #: OrchardCore.Workflows\Http\Activities\HttpRequestFilterEvent.cs:29
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestFilterEvent"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. return Outcomes(S["Matched"]);
 #: OrchardCore.Workflows\Http\Activities\HttpRequestFilterEvent.cs:86
@@ -450,7 +450,7 @@ msgstr "Tarea de solicitud Http"
 #: OrchardCore.Workflows\Http\Activities\HttpRequestTask.cs:106
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestTask"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. outcomes.Add(new Outcome("UnhandledHttpStatus", S["Unhandled Http Status"]));
 #: OrchardCore.Workflows\Http\Activities\HttpRequestTask.cs:159
@@ -468,7 +468,7 @@ msgstr "Tarea de Respuesta Http"
 #: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:40
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpResponseTask"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. return Outcomes(S["Done"]);
 #: OrchardCore.Workflows\Http\Activities\HttpResponseTask.cs:68
@@ -486,7 +486,7 @@ msgstr "Evento de señal"
 #: OrchardCore.Workflows\Http\Activities\SignalEvent.cs:27
 msgctxt "OrchardCore.Workflows.Http.Activities.SignalEvent"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #. return Outcomes(S["Done"]);
 #: OrchardCore.Workflows\Http\Activities\SignalEvent.cs:43
@@ -510,7 +510,7 @@ msgstr "Contenido"
 #: OrchardCore.Workflows\UserTasks\Drivers\UserTaskEventContentDriver.cs:72
 msgctxt "OrchardCore.Workflows.UserTasks.Drivers.UserTaskEventContentDriver"
 msgid "Not authorized to trigger '{0}'."
-msgstr ""
+msgstr "No autorizado a activar '{0}'."
 
 #. <a class="btn btn-outline-secondary activity-start-action" href="#" data-toggle="button" title="@T["Startup task"]"><i class="fa fa-power-off" aria-hidden="true"></i></a>
 #: OrchardCore.Workflows\Views\Activity.Design.cshtml:27
@@ -548,27 +548,27 @@ msgctxt "OrchardCore.Workflows.Views.ActivityMetadata.Edit"
 msgid "Optionally provide a custom title for this activity."
 msgstr "Opcionalmente, proporciona un título personalizado para esta actividad."
 
-#. <button class="btn btn-warning" type="submit" name="submit.Save" value="user-task.@action">@T[action] @T["and Save"]</button>
-#. <button type="submit" name="submit.Save" class="dropdown-item" value="user-task.@action">@T[action] @T["and Save"]</button>
+#. <button class="btn btn-warning" type="submit" name="submit.Save" value="user-task.@action">@T[Html.Encode(action)] @T["and Save"]</button>
+#. <button type="submit" name="submit.Save" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Save"]</button>
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:11
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:30
 msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
 msgid "and Save"
-msgstr ""
+msgstr "y Guardar"
 
 #. <span class="sr-only">@T["Toggle Dropdown"]</span>
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:13
 msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
 msgid "Toggle Dropdown"
-msgstr ""
+msgstr "Desplegar"
 
-#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[action] @T["and Publish"]</button>
-#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[action] @T["and Publish"]</button>
+#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Publish"]</button>
+#. <button type="submit" name="submit.Publish" class="dropdown-item" value="user-task.@action">@T[Html.Encode(action)] @T["and Publish"]</button>
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:16
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:31
 msgctxt "OrchardCore.Workflows.Views.Content.UserTaskButton"
 msgid "and Publish"
-msgstr ""
+msgstr "y Publicar"
 
 #. @T["User Actions"]
 #: OrchardCore.Workflows\Views\Content.UserTaskButton.cshtml:25
@@ -640,31 +640,31 @@ msgstr "Agregar todos los tipos de Flujos de Trabajo"
 #: OrchardCore.Workflows\Views\Items\AllWorkflowTypeDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Workflows.Views.Items.AllWorkflowTypeDeploymentStep.Fields.Thumbnail"
 msgid "All Workflows"
-msgstr ""
+msgstr "Todos los flujos de trabajo"
 
 #. <p>@T["Exports all the Workflows of the system."]</p>
 #: OrchardCore.Workflows\Views\Items\AllWorkflowTypeDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Workflows.Views.Items.AllWorkflowTypeDeploymentStep.Fields.Thumbnail"
 msgid "Exports all the Workflows of the system."
-msgstr ""
+msgstr "Exporta todos los flujos de trabajo del sistema."
 
 #. <h4><i class="fa fa-@className" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Commit Transaction"])</h4>
 #: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Design.cshtml:7
 msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Design"
 msgid "Commit Transaction"
-msgstr ""
+msgstr "Confirmar transacción"
 
 #. <h4 class="card-title"><i class="fa fa-info-circle" aria-hidden="true"></i>@T["Commit Transaction"]</h4>
 #: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Thumbnail"
 msgid "Commit Transaction"
-msgstr ""
+msgstr "Confirmar transacción"
 
 #. <p>@T["Commit the current transaction."]</p>
 #: OrchardCore.Workflows\Views\Items\CommitTransactionTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Workflows.Views.Items.CommitTransactionTask.Fields.Thumbnail"
 msgid "Commit the current transaction."
-msgstr ""
+msgstr "Confirmar la transacción actual."
 
 #. <h4><i class="fa fa-link" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Correlate"])</h4>
 #: OrchardCore.Workflows\Views\Items\CorrelateTask.Fields.Design.cshtml:4
@@ -682,7 +682,7 @@ msgstr "Valor"
 #: OrchardCore.Workflows\Views\Items\CorrelateTask.Fields.Edit.cshtml:9
 msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
 msgid "The value to correlate workflow instances with. With Javascript support."
-msgstr ""
+msgstr "El valor a correlacionar instancias de flujo de trabajo. Con soporte Javascript."
 
 #. <h4 class="card-title"><i class="fa fa-link" aria-hidden="true"></i>@T["Correlate"]</h4>
 #: OrchardCore.Workflows\Views\Items\CorrelateTask.Fields.Thumbnail.cshtml:1
@@ -958,7 +958,7 @@ msgstr "Desmarcar esta opción si la solicitud viene de un servicio que invoca e
 #: OrchardCore.Workflows\Views\Items\HttpRequestEvent.Fields.Edit.cshtml:41
 msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
 msgid "Token Life Span"
-msgstr ""
+msgstr "Vida de Token"
 
 #. <span class="hint"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> @T["Hit the <b>Regenerate</b> button after changing this value."]</span>
 #: OrchardCore.Workflows\Views\Items\HttpRequestEvent.Fields.Edit.cshtml:42
@@ -1060,13 +1060,13 @@ msgstr "Petición HTTP"
 #: OrchardCore.Workflows\Views\Items\HttpRequestTask.Fields.Design.cshtml:6
 msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestTask.Fields.Design"
 msgid "<em>{0} {1}</em>"
-msgstr ""
+msgstr "<em>{0} {1}</em>"
 
 #. <label asp-for="Url">@T["URL"]</label>
 #: OrchardCore.Workflows\Views\Items\HttpRequestTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestTask.Fields.Edit"
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #. <span class="hint">@T["The URL to send the request to. Supports Liquid syntax."]</span>
 #: OrchardCore.Workflows\Views\Items\HttpRequestTask.Fields.Edit.cshtml:8
@@ -1294,7 +1294,7 @@ msgstr "Unir la ejecución del flujo de trabajo bifurcado de nuevo en una única
 #: OrchardCore.Workflows\Views\Items\LogTask.Fields.Design.cshtml:25
 msgctxt "OrchardCore.Workflows.Views.Items.LogTask.Fields.Design"
 msgid "Log"
-msgstr ""
+msgstr "Log"
 
 #. <label asp-for="LogLevel">@T["Log Level"]</label>
 #: OrchardCore.Workflows\Views\Items\LogTask.Fields.Edit.cshtml:6
@@ -1324,7 +1324,7 @@ msgstr "El texto para el log. Con soporte Liquid."
 #: OrchardCore.Workflows\Views\Items\LogTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Workflows.Views.Items.LogTask.Fields.Thumbnail"
 msgid "Log"
-msgstr ""
+msgstr "Log"
 
 #. <p>@T["Write a log entry."]</p>
 #: OrchardCore.Workflows\Views\Items\LogTask.Fields.Thumbnail.cshtml:2
@@ -1411,7 +1411,7 @@ msgid "Script"
 msgstr "Secuencia de comandos"
 
 #. <span class="hint">@T["The script to execute. Make sure to call `setOutcome` with any of the specified available outcomes at least once."]</span>
-#: OrchardCore.Workflows\Views\Items\ScriptTask.Fields.Edit.cshtml:15
+#: OrchardCore.Workflows\Views\Items\ScriptTask.Fields.Edit.cshtml:16
 msgctxt "OrchardCore.Workflows.Views.Items.ScriptTask.Fields.Edit"
 msgid "The script to execute. Make sure to call `setOutcome` with any of the specified available outcomes at least once."
 msgstr "La Secuencia de comandos a ejecutar. Asegúrese de llamar a `setOutcome` con cualquiera de los resultados disponibles especificados al menos una vez."
@@ -1558,7 +1558,7 @@ msgstr "Temporizador"
 #: OrchardCore.Workflows\Views\Items\TimerEvent.Fields.Design.cshtml:7
 msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Design"
 msgid "<em>{0}</em>"
-msgstr ""
+msgstr "<em>{0}</em>"
 
 #. <label asp-for="CronExpression">@T["CRON Expression"]</label>
 #: OrchardCore.Workflows\Views\Items\TimerEvent.Fields.Edit.cshtml:5
@@ -1596,13 +1596,13 @@ msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Request any user action of <em>{0}</em>"
 msgstr "Solicitar cualquier acción de usuario de <em>{0}</em>"
 
-#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? new LocalizedHtmlString("RequiredRoles", string.Join(", ", Model.Activity.Roles)) : T["Any"]]</span>
+#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? Html.Raw(Html.Encode(string.Join(", ", Model.Activity.Roles))) : T["Any"]]</span>
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Design.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Any"
 msgstr "Cualquiera"
 
-#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? new LocalizedHtmlString("RequiredRoles", string.Join(", ", Model.Activity.Roles)) : T["Any"]]</span>
+#. <span>@T["Required roles: <em>{0}</em>", Model.Activity.Roles.Any() ? Html.Raw(Html.Encode(string.Join(", ", Model.Activity.Roles))) : T["Any"]]</span>
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Design.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Design"
 msgid "Required roles: <em>{0}</em>"
@@ -1630,7 +1630,7 @@ msgstr "Introduzca uno o más nombres de acción separados por comas."
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Edit.cshtml:12
 msgctxt "OrchardCore.Workflows.Views.Items.UserTaskEvent.Fields.Edit"
 msgid "Roles"
-msgstr ""
+msgstr "Roles"
 
 #. <span class="hint">@T["Select the roles that are allowed to perform the specified actions. If no roles are selected, then any role is allowed."]</span>
 #: OrchardCore.Workflows\Views\Items\UserTaskEvent.Fields.Edit.cshtml:15
@@ -1696,7 +1696,7 @@ msgstr "Flujos de trabajo"
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:13
 msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
 msgid "Instances"
-msgstr ""
+msgstr "Instancias"
 
 #. <a class="nav-link" id="state-tab" data-toggle="pill" href="#state" role="tab" aria-controls="state">@T["State"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:24
@@ -1744,7 +1744,7 @@ msgstr "Regresar"
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:94
 msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
 msgid "Are you sure you want to delete this workflow instance?"
-msgstr ""
+msgstr "¿Está seguro que desea eliminar esta instancia de flujo de trabajo?"
 
 #. <a class="btn btn-danger" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl" asp-action="Delete" asp-route-id="@Model.Workflow.Id">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Details.cshtml:94
@@ -1756,7 +1756,7 @@ msgstr "Eliminar"
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "{0} Instances"
-msgstr ""
+msgstr "{0} instancias"
 
 #. <li class="breadcrumb-item"><a asp-action="Index" asp-controller="WorkflowType">@T["Workflows"]</a></li>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:16
@@ -1768,7 +1768,7 @@ msgstr "Flujos de trabajo"
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:18
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Instances"
-msgstr ""
+msgstr "Instancias"
 
 #. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:37
@@ -1788,21 +1788,21 @@ msgstr[1] ""
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:38
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Elementos {0} a {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Workflows.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:38
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
+msgstr[0] " {0} elemento(s) en total"
 msgstr[1] ""
 
 #. @T["Actions"]
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:45
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:50
@@ -1832,19 +1832,19 @@ msgstr "Estado"
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:59
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Sort by"
-msgstr ""
+msgstr "Ordenar por"
 
 #. <select asp-for="Options.OrderBy" asp-items="@Model.Options.WorkflowsSorts" class="selectpicker show-tick" data-header="@T["Sort by"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Sort"]" data-style="btn-sm"></select>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:59
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Sort"
-msgstr ""
+msgstr "Ordenar"
 
 #. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:95
 msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
 msgid "Are you sure you want to delete this workflow instance?"
-msgstr ""
+msgstr "¿Está seguro que desea eliminar esta instancia de flujo de trabajo?"
 
 #. <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" data-message="@T["Are you sure you want to delete this workflow instance?"]" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 #: OrchardCore.Workflows\Views\Workflow\Index.cshtml:95
@@ -1882,19 +1882,19 @@ msgstr "seleccionado"
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:3
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Copy Workflow"
-msgstr ""
+msgstr "Copiar flujo de trabajo"
 
 #. <a class="nav-link active" id="properties-tab" data-toggle="tab" href="#properties" role="tab" aria-controls="site" aria-selected="true">@T["Properties"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:10
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Properties"
-msgstr ""
+msgstr "Propiedades"
 
 #. <a class="nav-link" id="advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="resources">@T["Advanced"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:13
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Advanced"
-msgstr ""
+msgstr "Avanzado"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:20
@@ -1906,7 +1906,7 @@ msgstr "Nombre"
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:23
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "The name of the workflow."
-msgstr ""
+msgstr "El nombre del flujo de trabajo."
 
 #. <label class="custom-control-label" asp-for="IsEnabled">@T["Enabled"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:29
@@ -1948,37 +1948,37 @@ msgstr "Marque para eliminar automáticamente los flujos de trabajo que se han c
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:50
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Invalid lock timeout value in the advanced tab"
-msgstr ""
+msgstr "Valor de tiempo de bloqueo no válido en la pestaña avanzada"
 
 #. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:51
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Invalid lock expiration value in the advanced tab"
-msgstr ""
+msgstr "Valor de expiración de bloqueo no válido en la pestaña avanzada"
 
 #. <label asp-for="LockTimeout">@T["Lock timeout (ms)"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:56
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Lock timeout (ms)"
-msgstr ""
+msgstr "Tiempo de bloqueo (ms)"
 
 #. <span class="hint">@T["The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:58
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "El tiempo de espera en milisegundos para adquirir un bloqueo antes de reanudar una instancia de flujo de trabajo de este tipo atómicamente. Déjalo a cero para no usar ningún bloqueo."
 
 #. <label asp-for="LockExpiration">@T["Lock expiration (ms)"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:62
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "Lock expiration (ms)"
-msgstr ""
+msgstr "Expiración de bloqueo (ms)"
 
 #. <span class="hint">@T["The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:64
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
 msgid "The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "La expiración en milisegundos del bloqueo adquirido antes de reanudar una instancia de flujo de trabajo de este tipo atómicamente. Déjalo a cero para no usar ningún bloqueo."
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Workflows\Views\WorkflowType\Duplicate.cshtml:70
@@ -2032,7 +2032,7 @@ msgstr "Propiedades"
 #: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:26
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
 msgid "Instances"
-msgstr ""
+msgstr "Instancias"
 
 #. <div class="workflow-canvas" data-workflow-type="@Model.WorkflowTypeJson" data-workflow-delete-activity-prompt="@T["Are you sure you want to delete this activity?"]" data-workflow-local-id="@Model.LocalId" data-workflow-load-local-state="@Model.LoadLocalState.ToString().ToLower()">
 #: OrchardCore.Workflows\Views\WorkflowType\Edit.cshtml:37
@@ -2072,19 +2072,19 @@ msgstr "Filtro"
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:3
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Edit Workflow"
-msgstr ""
+msgstr "Editar flujo de trabajo"
 
 #. <a class="nav-link active" id="properties-tab" data-toggle="tab" href="#properties" role="tab" aria-controls="site" aria-selected="true">@T["Properties"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:11
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Properties"
-msgstr ""
+msgstr "Propiedades"
 
 #. <a class="nav-link" id="advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="resources">@T["Advanced"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:14
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Advanced"
-msgstr ""
+msgstr "Avanzado"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:21
@@ -2096,7 +2096,7 @@ msgstr "Nombre"
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:24
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "The name of the workflow."
-msgstr ""
+msgstr "El nombre del flujo de trabajo."
 
 #. <label class="custom-control-label" asp-for="IsEnabled">@T["Enabled"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:30
@@ -2138,37 +2138,37 @@ msgstr "Compruebe eliminar automáticamente los flujos de trabajo que se han com
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:51
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Invalid lock timeout value in the advanced tab"
-msgstr ""
+msgstr "Valor de tiempo de bloqueo no válido en la pestaña avanzada"
 
 #. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:52
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Invalid lock expiration value in the advanced tab"
-msgstr ""
+msgstr "Valor de expiración de bloqueo no válido en la pestaña avanzada"
 
 #. <label asp-for="LockTimeout">@T["Lock timeout (ms)"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:57
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Lock timeout (ms)"
-msgstr ""
+msgstr "Tiempo de bloqueo (ms)"
 
 #. <span class="hint">@T["The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:59
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "The timeout in milliseconds to acquire a lock before resuming a given workflow instance of this type atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "El tiempo de espera en milisegundos para adquirir un bloqueo antes de reanudar una instancia de flujo de trabajo de este tipo atómicamente. Déjalo a cero para no usar ningún bloqueo."
 
 #. <label asp-for="LockExpiration">@T["Lock expiration (ms)"]</label>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:63
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "Lock expiration (ms)"
-msgstr ""
+msgstr "Expiración de bloqueo (ms)"
 
 #. <span class="hint">@T["The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:65
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
 msgid "The expiration in milliseconds of the lock acquired before resuming a workflow instance of this type atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "La expiración en milisegundos del bloqueo adquirido antes de reanudar una instancia de flujo de trabajo de este tipo atómicamente. Déjalo a cero para no usar ningún bloqueo."
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Workflows\Views\WorkflowType\EditProperties.cshtml:71
@@ -2198,7 +2198,7 @@ msgstr "Buscar"
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:25
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Create Workflow"
-msgstr ""
+msgstr "Crear flujo de trabajo"
 
 #. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:38
@@ -2218,33 +2218,33 @@ msgstr[1] ""
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:39
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Elementos {0} a {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.WorkflowTypes.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:39
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
+msgstr[0] " {0} elemento(s) en total"
 msgstr[1] ""
 
 #. @T["Actions"]
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:46
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:51
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Acción masiva"
 
 #. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:51
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres {0} estos elementos?"
 
 #. <a asp-action="Edit" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:64
@@ -2288,7 +2288,7 @@ msgstr[1] "{0} instancias"
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:94
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "<strong>Nothing here!</strong> There are no workflows for the moment."
-msgstr ""
+msgstr "<strong>Nada aquí!</strong> No hay flujos de trabajo por el momento."
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
@@ -2296,11 +2296,11 @@ msgstr ""
 #: OrchardCore.Workflows\Views\WorkflowType\Index.cshtml:159
 msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
 msgid "selected"
-msgstr ""
+msgstr "seleccionado"
 
 #. <option value="">@T["-"]</option>
 #: OrchardCore.Workflows\Views\Shared\Components\SelectWorkflowType\Default.cshtml:4
 msgctxt "OrchardCore.Workflows.Views.Shared.Components.SelectWorkflowType.Default"
 msgid "-"
-msgstr ""
+msgstr "-"
 
