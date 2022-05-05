@@ -185,7 +185,7 @@ msgid "Lucene"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:6
-#. <label class="custom-control-label" asp-for="ContentIndexSettings.Included">@T["Include this element in the index"]</label>
+#. <label class="form-check-label" asp-for="ContentIndexSettings.Included">@T["Include this element in the index"]</label>
 msgctxt "OrchardCore.Lucene.Views.ContentIndexSettings.Edit"
 msgid "Include this element in the index"
 msgstr ""
@@ -197,7 +197,7 @@ msgid "Check to include the value of this element in the index."
 msgstr ""
 
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:13
-#. <label class="custom-control-label" asp-for="ContentIndexSettings.Stored">@T["Stored"]</label>
+#. <label class="form-check-label" asp-for="ContentIndexSettings.Stored">@T["Stored"]</label>
 msgctxt "OrchardCore.Lucene.Views.ContentIndexSettings.Edit"
 msgid "Stored"
 msgstr ""
@@ -209,7 +209,7 @@ msgid "Check to be able to retrieve the value from the index."
 msgstr ""
 
 #: OrchardCore.Lucene\Views\ContentIndexSettings.Edit.cshtml:19
-#. <label class="custom-control-label" asp-for="ContentIndexSettings.Analyzed">@T["Analyzed"]</label>
+#. <label class="form-check-label" asp-for="ContentIndexSettings.Analyzed">@T["Analyzed"]</label>
 msgctxt "OrchardCore.Lucene.Views.ContentIndexSettings.Edit"
 msgid "Analyzed"
 msgstr ""
@@ -251,7 +251,7 @@ msgid "The lucene index to search on"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:21
-#. <label class="custom-control-label" asp-for="ReturnContentItems">@T["Return Content Items"]</label>
+#. <label class="form-check-label" asp-for="ReturnContentItems">@T["Return Content Items"]</label>
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Return Content Items"
 msgstr ""
@@ -317,7 +317,7 @@ msgid "A comma separated list of fields to use for search pages. The default val
 msgstr ""
 
 #: OrchardCore.Lucene\Views\LuceneSettings.Edit.cshtml:33
-#. <label class="custom-control-label" asp-for="AllowLuceneQueriesInSearch">@T["Allow Lucene queries in search forms"]</label>
+#. <label class="form-check-label" asp-for="AllowLuceneQueriesInSearch">@T["Allow Lucene queries in search forms"]</label>
 msgctxt "OrchardCore.Lucene.Views.LuceneSettings.Edit"
 msgid "Allow Lucene queries in search forms"
 msgstr ""
@@ -340,19 +340,19 @@ msgctxt "OrchardCore.Lucene.Views.NavigationItemText-search.Id"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:10
+#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:11
 #. <h4>@T["Lucene"]</h4>
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Lucene"
 msgstr ""
 
-#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:11
+#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:12
 #. <p class="hint">@T["Queries a Lucene index."]</p>
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Queries a Lucene index."
 msgstr ""
 
-#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:14
+#: OrchardCore.Lucene\Views\Query-Lucene.Link.cshtml:15
 #. <a disabled="@disabled" class="btn btn-primary btn-sm" asp-route-action="Create" asp-route-controller="Admin" asp-route-id="@Model.Name" asp-area="OrchardCore.Queries">@T["Add"]</a>
 msgctxt "OrchardCore.Lucene.Views.Query-Lucene.Link"
 msgid "Add"
@@ -364,7 +364,7 @@ msgctxt "OrchardCore.Lucene.Views.Search-Form"
 msgid "Enter your search term(s)"
 msgstr ""
 
-#: OrchardCore.Lucene\Views\Search-Form.cshtml:8
+#: OrchardCore.Lucene\Views\Search-Form.cshtml:7
 #. <button type="submit" class="btn btn-primary btn-sm">@T["Search"]</button>
 msgctxt "OrchardCore.Lucene.Views.Search-Form"
 msgid "Search"
@@ -431,7 +431,7 @@ msgid "Index options"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Edit.cshtml:50
-#. <label class="custom-control-label" asp-for="IndexLatest">@T["Index latest version"]</label>
+#. <label class="form-check-label" asp-for="IndexLatest">@T["Index latest version"]</label>
 msgctxt "OrchardCore.Lucene.Views.Admin.Edit"
 msgid "Index latest version"
 msgstr ""
@@ -475,13 +475,13 @@ msgid "Search"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:23
-#. <a asp-route-action="Edit" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Index"]</a>
+#. <a asp-route-action="Edit" class="btn btn-sm btn-secondary float-end create" role="button">@T["Add Index"]</a>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Add Index"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:36
-#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Select All"
 msgstr ""
@@ -513,13 +513,13 @@ msgid "Actions"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:49
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Bulk Action"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Admin\Index.cshtml:49
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.Lucene.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
@@ -699,13 +699,13 @@ msgid "Search Indexes"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:15
-#. <span class="badge badge-success">@T["All"]</span>
+#. <span class="badge bg-success">@T["All"]</span>
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "All"
 msgstr ""
 
 #: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Summary.cshtml:26
-#. <span class="badge badge-warning">@T["No index selected."]</span>
+#. <span class="badge bg-warning">@T["No index selected."]</span>
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Summary"
 msgid "No index selected."
 msgstr ""
