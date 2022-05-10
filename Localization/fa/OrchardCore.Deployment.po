@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2021-10-07 22:37\n"
+"PO-Revision-Date: 2022-05-05 18:50\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Deployment\AdminMenu.cs:25
@@ -248,28 +248,28 @@ msgstr "مراحل موجود"
 
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:69
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:69
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:67
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:67
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Filter"
 msgstr ""
 
-#. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#. <button type="button" class="btn btn-secondary" data-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:84
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:120
+#. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
+#. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:82
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:117
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Cancel"
 msgstr "انصراف"
 
 #. <h5 class="modal-title" id="available-targets-title">@T["Available Targets"]</h5>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:94
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:92
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Targets"
 msgstr "اهداف موجود"
 
 #. <a class="btn btn-primary btn-sm" href="@Url.RouteUrl(routeWithId)" data-url-af="UnsafeUrl">@T["Select"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:112
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:109
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Select"
 msgstr "انتخاب"
@@ -310,13 +310,13 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Search"
 msgstr "جستجو"
 
-#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-right create" role="button">@T["Add Deployment Plan"]</a>
+#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-end create" role="button">@T["Add Deployment Plan"]</a>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:23
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Add Deployment Plan"
 msgstr "افزودن برنامه استقرار"
 
-#. <label class="custom-control-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:36
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Select All"
@@ -350,13 +350,13 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Actions"
 msgstr ""
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:49
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Bulk Action"
 msgstr ""
 
-#. <a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a>
+#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 #: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:49
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Are you sure you want to {0} these items?"
@@ -394,8 +394,14 @@ msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import Deployment Package"
 msgstr "واردکردن پکیج استقرار"
 
-#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
+#. <label for="file" class="form-label">@T["Select a file"]</label>
 #: OrchardCore.Deployment\Views\Import\Index.cshtml:8
+msgctxt "OrchardCore.Deployment.Views.Import.Index"
+msgid "Select a file"
+msgstr ""
+
+#. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
+#: OrchardCore.Deployment\Views\Import\Index.cshtml:11
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import"
 msgstr "واردکردن"
@@ -490,13 +496,13 @@ msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.
 msgid "Deployment Plans"
 msgstr "برنامه‌های استقرار"
 
-#. <span class="badge badge-success">@T["All"]</span>
+#. <span class="badge bg-success">@T["All"]</span>
 #: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Summary.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Summary"
 msgid "All"
 msgstr "همه"
 
-#. <span class="badge badge-warning">@T["No deployment plan selected."]</span>
+#. <span class="badge bg-warning">@T["No deployment plan selected."]</span>
 #: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Summary.cshtml:26
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Summary"
 msgid "No deployment plan selected."
@@ -658,7 +664,7 @@ msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit
 msgid "The recipe tags (comma separated values)."
 msgstr ""
 
-#. <label class="custom-control-label" asp-for="IsSetupRecipe">@T["Setup recipe"]</label>
+#. <label class="form-check-label" asp-for="IsSetupRecipe">@T["Setup recipe"]</label>
 #: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:72
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Setup recipe"
