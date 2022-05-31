@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2022-05-31 18:43\n"
+"PO-Revision-Date: 2022-05-31 19:59\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Tenants\AdminMenu.cs:34
@@ -38,7 +38,7 @@ msgstr "Konfigurointi"
 #: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:36
 msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
 msgid "Tenant Feature Profiles"
-msgstr ""
+msgstr "Asiakkaiden ominaisuusprofiilit"
 
 #. S["All"],
 #: OrchardCore.Tenants\Controllers\AdminController.cs:187
@@ -100,7 +100,7 @@ msgstr "Ota käyttöön"
 #: OrchardCore.Tenants\Controllers\AdminController.cs:535
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You cannot disable the default tenant."
-msgstr ""
+msgstr "Et voi poistaa oletusasiakasta käytöstä."
 
 #. await _notifier.WarningAsync(H["The tenant '{0}' is already disabled.", shellSettings.Name]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:260
@@ -118,13 +118,13 @@ msgstr "Asiakas '{0}' on jo käytössä."
 #: OrchardCore.Tenants\Controllers\AdminController.cs:541
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only disable an Enabled tenant."
-msgstr ""
+msgstr "Voit poistaa käytöstä vain käytössä olevan asiakkaan."
 
 #. await _notifier.ErrorAsync(H["You can only enable a Disabled tenant."]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:575
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only enable a Disabled tenant."
-msgstr ""
+msgstr "Voit ottaa käyttöön vain käytöstä poistetun asiakkaan."
 
 #. featureProfiles.Insert(0, new SelectListItem(S["None"], String.Empty, currentFeatureProfile == String.Empty));
 #: OrchardCore.Tenants\Controllers\AdminController.cs:644
@@ -154,19 +154,19 @@ msgstr "Asiakasta ei löydy: '{0}'"
 #: OrchardCore.Tenants\Controllers\ApiController.cs:173
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
-msgstr ""
+msgstr "Asiakasta ei voi määrittää."
 
 #. return BadRequest(S["The database provider is not defined."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:187
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The database provider is not defined."
-msgstr ""
+msgstr "Tietokantayhteyksien tarjoajaa ei ole määritetty."
 
 #. return BadRequest(S["The connection string is required for this database provider."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:206
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The connection string is required for this database provider."
-msgstr ""
+msgstr "Yhteysmerkkijono vaaditaan tätä tietokantayhteyksien tarjoajaa varten."
 
 #. return BadRequest(S["Either 'Recipe' or 'RecipeName' is required."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:222
@@ -238,7 +238,7 @@ msgstr "Ominaisuuden profiilit poistettu onnistuneesti."
 #: OrchardCore.Tenants\Services\TenantValidator.cs:45
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The connection string is mandatory for this provider."
-msgstr ""
+msgstr "Yhteysmerkkijono on pakollinen tälle tietokantayhteyksien tarjoajalle."
 
 #. errors.Add(new ModelError(nameof(model.Name), S["The tenant name is mandatory."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:50
@@ -448,7 +448,7 @@ msgstr "Url-etuliite"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:34
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardcore.net/site1\""
-msgstr ""
+msgstr "(Valinnainen) Esimerkki: Jos etuliite on \"site1\", asiakkaan URL-osoitteen etuliite on \"https://orchardcore.net/site1\"."
 
 #. <label asp-for="RequestUrlHost">@T["Hostname"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:38
@@ -466,7 +466,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:42
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "You may define multiple domains using the comma (,) as a separator. Use the '*.' prefix to map all subdomains."
-msgstr ""
+msgstr "Voit määrittää useita verkkotunnuksia käyttämällä erotinmerkkinä pilkkua (,). Käytä '*.' -etuliitettä kaikkien aliverkkotunnusten kartoittamiseen."
 
 #. @T["Recipe"]
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:46
@@ -504,7 +504,7 @@ msgstr "Ei mitään"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:76
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The connection string to your database instance. e.g., {0}"
-msgstr ""
+msgstr "Yhteysmerkkijono tietokantaan, esim. {0}"
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:82
@@ -522,7 +522,7 @@ msgstr "Yhteysmerkkijono"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:102
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Feature profile"
-msgstr ""
+msgstr "Ominaisuusprofiili"
 
 #. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:103
@@ -612,7 +612,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:41
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "You may define multiple domains using the comma (,) as a separator. Use the '*.' prefix to map all subdomains."
-msgstr ""
+msgstr "Voit määrittää useita verkkotunnuksia käyttämällä erotinmerkkinä pilkkua (,). Käytä '*.' -etuliitettä kaikkien aliverkkotunnusten kartoittamiseen."
 
 #. @T["Recipe"]
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:47
@@ -638,7 +638,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:73
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "What type of database to use?"
-msgstr ""
+msgstr "Käytettävän tietokannan tyyppi?"
 
 #. <option value="" data-connection-string="false">@T["None"]</option>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:75
@@ -650,7 +650,7 @@ msgstr "Ei mitään"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:78
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "The connection string to your database instance. e.g., {0}"
-msgstr ""
+msgstr "Yhteysmerkkijono tietokantaan, esim. {0}"
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:84
@@ -668,7 +668,7 @@ msgstr "Yhteysmerkkijono"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:106
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Feature profile"
-msgstr ""
+msgstr "Ominaisuusprofiili"
 
 #. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:107
@@ -704,7 +704,7 @@ msgstr "Etsi"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:63
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Add Tenant"
-msgstr ""
+msgstr "Lisää asiakas"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:74
@@ -750,13 +750,13 @@ msgstr "Massatoiminnot"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:87
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Oletko varma, että haluat {0} nämä kohteet?"
 
 #. <select asp-for="Options.Category" asp-items="@Model.Options.TenantsCategories" class="selectpicker show-tick me-2" data-header="@T["Filter by category"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Category"]" data-style="btn-sm"></select>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:94
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Filter by category"
-msgstr ""
+msgstr "Suodata kategorian mukaan"
 
 #. <select asp-for="Options.Category" asp-items="@Model.Options.TenantsCategories" class="selectpicker show-tick me-2" data-header="@T["Filter by category"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Category"]" data-style="btn-sm"></select>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:94
@@ -842,7 +842,7 @@ msgstr "Poista käytöstä"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:157
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Are you sure you want to disable this tenant?"
-msgstr ""
+msgstr "Haluatko varmasti poistaa tämän asiakkaan käytöstä?"
 
 #. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:157
@@ -884,7 +884,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:190
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
-msgstr ""
+msgstr "<strong>Ei mitään näytettävää!</strong> Hakusi ei tuottanut tuloksia."
 
 #. selectedItems.text($(":checkbox[name='tenantNames']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
@@ -898,7 +898,7 @@ msgstr "valittu"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
 msgid "Create Feature Profile"
-msgstr ""
+msgstr "Luo ominaisuusprofiili"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:15
@@ -910,7 +910,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:18
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
 msgid "The name of the feature profile."
-msgstr ""
+msgstr "Ominaisuusprofiilin nimi."
 
 #. <label asp-for="FeatureRules">@T["Rules"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:23
@@ -952,7 +952,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
 msgid "Edit Feature Profile"
-msgstr ""
+msgstr "Muokkaa ominaisuusprofiilia"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:18
@@ -964,7 +964,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:21
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
 msgid "The name of the feature profile."
-msgstr ""
+msgstr "Ominaisuusprofiilin nimi."
 
 #. <label asp-for="FeatureRules">@T["Rules"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:26
@@ -1006,7 +1006,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Feature Profiles"
-msgstr ""
+msgstr "Ominaisuusprofiilit"
 
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:21
@@ -1018,7 +1018,7 @@ msgstr "Hae"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:24
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Add Feature Profile"
-msgstr ""
+msgstr "Lisää ominaisuusprofiili"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:37
@@ -1031,22 +1031,22 @@ msgstr "Valitse kaikki"
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "1 item"
 msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 kohde"
+msgstr[1] "{0} kohdetta"
 
 #. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Kohteet {0} - {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " / {0} kohdetta yhteensä"
+msgstr[1] " / {0} kohdetta yhteensä"
 
 #. @T["Actions"]
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:45
