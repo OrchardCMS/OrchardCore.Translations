@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Croatian\n"
 "Language: hr_HR\n"
-"PO-Revision-Date: 2022-05-05 18:54\n"
+"PO-Revision-Date: 2022-10-11 20:10\n"
 
 #. await _notifier.WarningAsync(H["The Widget content item with id {0} has no matching {1} content type definition.", widget.ContentItem.ContentItemId, widget.ContentItem.ContentType]);
-#: OrchardCore.Flows\Drivers\FlowPartDisplayDriver.cs:74
+#: OrchardCore.Flows\Drivers\FlowPartDisplayDriver.cs:73
 msgctxt "OrchardCore.Flows.Drivers.FlowPartDisplayDriver"
 msgid "The Widget content item with id {0} has no matching {1} content type definition."
 msgstr ""
 
 #. await _notifier.WarningAsync(H["Publishing this content item may erase created content. Fix any content type issues beforehand."]);
-#: OrchardCore.Flows\Drivers\FlowPartDisplayDriver.cs:87
+#: OrchardCore.Flows\Drivers\FlowPartDisplayDriver.cs:86
 msgctxt "OrchardCore.Flows.Drivers.FlowPartDisplayDriver"
 msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
 msgstr ""
@@ -36,14 +36,32 @@ msgctxt "OrchardCore.Flows.GraphQL.FlowPartQueryObjectType"
 msgid "A FlowPart allows to add content items directly within another content item"
 msgstr ""
 
-#. context.Updater.ModelState.AddModelError(nameof(model.ContainedContentTypes), S["At least one content type must be selected."]);
-#: OrchardCore.Flows\Settings\BagPartSettingsDisplayDriver.cs:51
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Source), S["Content type source must be set with a valid value."]);
+#: OrchardCore.Flows\Settings\BagPartSettingsDisplayDriver.cs:63
+msgctxt "OrchardCore.Flows.Settings.BagPartSettingsDisplayDriver"
+msgid "Content type source must be set with a valid value."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Stereotypes), S["Please provide a Stereotype."]);
+#: OrchardCore.Flows\Settings\BagPartSettingsDisplayDriver.cs:74
+msgctxt "OrchardCore.Flows.Settings.BagPartSettingsDisplayDriver"
+msgid "Please provide a Stereotype."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContainedContentTypes), S["At least one content type must be selected."]);
+#: OrchardCore.Flows\Settings\BagPartSettingsDisplayDriver.cs:91
 msgctxt "OrchardCore.Flows.Settings.BagPartSettingsDisplayDriver"
 msgid "At least one content type must be selected."
 msgstr ""
 
+#. href="javascript:;">@T["Add {0}", type.DisplayName]</a>
+#: OrchardCore.Flows\Views\BagPart.Edit.cshtml:69
+msgctxt "OrchardCore.Flows.Views.BagPart.Edit"
+msgid "Add {0}"
+msgstr ""
+
 #. @T["Add Item"]
-#: OrchardCore.Flows\Views\BagPart.Edit.cshtml:61
+#: OrchardCore.Flows\Views\BagPart.Edit.cshtml:75
 msgctxt "OrchardCore.Flows.Views.BagPart.Edit"
 msgid "Add Item"
 msgstr ""
@@ -54,44 +72,76 @@ msgctxt "OrchardCore.Flows.Views.BagPart.Option"
 msgid "Standard"
 msgstr ""
 
+#. <label asp-for="Source">@T["Contained Content Types"]</label>
 #. <label asp-for="ContainedContentTypes">@T["Contained Content Types"]</label>
-#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:4
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:5
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:23
 msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
 msgid "Contained Content Types"
 msgstr ""
 
+#. @T["Content Types"]
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:10
+msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
+msgid "Content Types"
+msgstr ""
+
+#. @T["Stereotype"] <span class="hint">@T["All content types of these Stereotypes"]</span>
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:16
+msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
+msgid "Stereotype"
+msgstr ""
+
+#. @T["Stereotype"] <span class="hint">@T["All content types of these Stereotypes"]</span>
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:16
+msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
+msgid "All content types of these Stereotypes"
+msgstr ""
+
 #. <span class="hint">@T["The content types that this bag can contain, e.g. Slide for a Slide Show."]</span>
-#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:5
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
 msgid "The content types that this bag can contain, e.g. Slide for a Slide Show."
 msgstr ""
 
+#. <label asp-for="Stereotypes">@T["Stereotypes"]</label>
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:30
+msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
+msgid "Stereotypes"
+msgstr ""
+
+#. <span class="hint">@T["The Stereotypes of the content types that this bag can contain. You may define multiple Stereotypes using the comma (,) as a separator"]</span>
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:32
+msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
+msgid "The Stereotypes of the content types that this bag can contain. You may define multiple Stereotypes using the comma (,) as a separator"
+msgstr ""
+
 #. <label asp-for="DisplayType">@T["Display Type"]</label>
-#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:11
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:37
 msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
 msgid "Display Type"
 msgstr ""
 
 #. <span class="hint">@T["The display type to use when rendering the content items. Default is Summary."]</span>
-#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:14
+#: OrchardCore.Flows\Views\BagPartSettings.Edit.cshtml:40
 msgctxt "OrchardCore.Flows.Views.BagPartSettings.Edit"
 msgid "The display type to use when rendering the content items. Default is Summary."
 msgstr ""
 
 #. @T["{0} <span class=\"hint dashed\">{1}</span>", contentItem.DisplayText, contentType]
-#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:18
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:24
 msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
 msgid "{0} <span class=\"hint dashed\">{1}</span>"
 msgstr ""
 
 #. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:23
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:29
 msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
 msgid "Delete"
 msgstr ""
 
 #. <button type="button" class="btn btn-danger widget-delete" data-title="@T["Delete"]" data-message="@T["Are you sure you want to remove this item?"]"><i class="fa fa-trash" aria-hidden="true"></i></button>
-#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:23
+#: OrchardCore.Flows\Views\ContentCard-BagPart.Edit.cshtml:29
 msgctxt "OrchardCore.Flows.Views.ContentCard-BagPart.Edit"
 msgid "Are you sure you want to remove this item?"
 msgstr ""
