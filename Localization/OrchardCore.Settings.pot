@@ -16,14 +16,26 @@ msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr ""
 
-#: OrchardCore.Settings\Controllers\AdminController.cs:86
+#: OrchardCore.Settings\Controllers\AdminController.cs:89
 #. await _notifier.SuccessAsync(H["Site settings updated successfully."]);
 msgctxt "OrchardCore.Settings.Controllers.AdminController"
 msgid "Site settings updated successfully."
 msgstr ""
 
-#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:70
-#. context.Updater.ModelState.AddModelError(Prefix, nameof(site.BaseUrl), S["The Base url must be a fully qualified URL."]);
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:67
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize), S["The page size must be greater than zero."]);
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The page size must be greater than zero."
+msgstr ""
+
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:72
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize), S["The page size must be less than or equal to {0}.", site.MaxPageSize]);
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The page size must be less than or equal to {0}."
+msgstr ""
+
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:78
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.BaseUrl), S["The Base url must be a fully qualified URL."]);
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The Base url must be a fully qualified URL."
 msgstr ""

@@ -212,7 +212,7 @@ msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The \"{0}\" part settings have been saved."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Editors\ContentTypeSettingsDisplayDriver.cs:52
+#: OrchardCore.ContentTypes\Editors\ContentTypeSettingsDisplayDriver.cs:55
 #. context.Updater.ModelState.AddModelError(nameof(ContentTypeSettingsViewModel.Stereotype), S["The stereotype should be alphanumeric."]);
 msgctxt "OrchardCore.ContentTypes.Editors.ContentTypeSettingsDisplayDriver"
 msgid "The stereotype should be alphanumeric."
@@ -314,73 +314,85 @@ msgctxt "OrchardCore.ContentTypes.Views.ContentType.Edit"
 msgid "Name of the type as it will be displayed on screens."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:6
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:5
+#. <label asp-for="Description">@T["Description"]</label>
+msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
+msgid "Description"
+msgstr ""
+
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:8
+#. <span class="hint">@T["(Optional) Description of the content type"]</span>
+msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
+msgid "(Optional) Description of the content type"
+msgstr ""
+
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:14
 #. <label class="form-check-label" asp-for="Creatable">@T["Creatable"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Creatable"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:7
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:15
 #. <span class="hint dashed">@T["Determines if an instance of this content type can be created through the UI."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Determines if an instance of this content type can be created through the UI."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:14
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:22
 #. <label class="form-check-label" asp-for="Listable">@T["Listable"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Listable"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:15
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:23
 #. <span class="hint dashed">@T["Determines if an instance of this content type can be listed through the UI."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Determines if an instance of this content type can be listed through the UI."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:22
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:30
 #. <label class="form-check-label" asp-for="Draftable">@T["Draftable"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Draftable"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:23
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:31
 #. <span class="hint dashed">@T["Determines if this content type supports draft versions."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Determines if this content type supports draft versions."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:30
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:38
 #. <label class="form-check-label" asp-for="Versionable">@T["Versionable"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Versionable"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:31
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:39
 #. <span class="hint dashed">@T["Determines if this content type supports versioning."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Determines if this content type supports versioning."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:38
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:46
 #. <label class="form-check-label" asp-for="Securable">@T["Securable"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Securable"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:39
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:47
 #. <span class="hint dashed">@T["Determines if this content type can have custom permissions."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Determines if this content type can have custom permissions."
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:45
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:53
 #. <label asp-for="Stereotype">@T["Stereotype"]</label>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Stereotype"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:48
+#: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:56
 #. <span class="hint">@T["(Optional) The stereotype of the content type. e.g., Widget, MenuItem, ..."]</span>
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "(Optional) The stereotype of the content type. e.g., Widget, MenuItem, ..."
@@ -864,19 +876,19 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.List"
 msgid "Content Types"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:9
+#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:11
 #. <input id="search-box" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.ContentTypes.Views.Admin.List"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:11
-#. <a asp-route-action="Create" id="btnCreate" class="btn btn-sm btn-secondary d-inline-flex float-end create" role="button">@T["Create new type"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:15
+#. <a asp-route-action="Create" id="btnCreate" class="btn btn-secondary create" role="button">@T["Create new type"]</a>
 msgctxt "OrchardCore.ContentTypes.Views.Admin.List"
 msgid "Create new type"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:24
+#: OrchardCore.ContentTypes\Views\Admin\List.cshtml:30
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.ContentTypes.Views.Admin.List"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
@@ -888,19 +900,19 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "Content Parts"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:9
+#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:11
 #. <input id="search-box" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:11
-#. <a asp-route-action="CreatePart" id="btnCreate" class="btn btn-sm btn-secondary d-inline-flex float-end create" role="button">@T["Create new part"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:15
+#. <a asp-route-action="CreatePart" id="btnCreate" class="btn btn-secondary create" role="button">@T["Create new part"]</a>
 msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "Create new part"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:24
+#: OrchardCore.ContentTypes\Views\Admin\ListParts.cshtml:30
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
@@ -1050,19 +1062,25 @@ msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditPartViewMode
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:11
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:10
+#. <span class="badge rounded-pill ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Technical Name"]"><i class="fas fa-file-alt text-danger" aria-hidden="true"></i> @Model.Name</span>
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
+msgid "Technical Name"
+msgstr ""
+
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:20
 #. <a id="btn-create-@Model.Name" asp-route-area="OrchardCore.Contents" asp-route-action="Create" asp-route-id="@Model.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-success btn-sm">@T["Create New {0}", Model.DisplayName]</a>
 msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
 msgid "Create New {0}"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:13
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:22
 #. <a role="btn-list-@Model.Name" asp-route-action="List" asp-route-area="OrchardCore.Contents" asp-route-contentTypeId="@Model.Name" class="btn btn-secondary btn-sm">@T["List Items"]</a>
 msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
 msgid "List Items"
 msgstr ""
 
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:14
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:23
 #. <a role="btn-edit-@Model.Name" asp-route-action="Edit" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
 msgid "Edit"

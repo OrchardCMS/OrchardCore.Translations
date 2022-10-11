@@ -18,6 +18,12 @@ msgctxt "OrchardCore.Cors.AdminMenu"
 msgid "CORS"
 msgstr ""
 
+#: OrchardCore.Cors\Controllers\AdminController.cs:127
+#. await _notifier.SuccessAsync(H["The CORS settings have updated successfully."]);
+msgctxt "OrchardCore.Cors.Controllers.AdminController"
+msgid "The CORS settings have updated successfully."
+msgstr ""
+
 #: OrchardCore.Cors\Views\NavigationItemText-cors.Id.cshtml:1
 #. <span class="icon"><i class="fa fa-share-alt" aria-hidden="true"></i></span><span class="title">@T["CORS"]</span>
 msgctxt "OrchardCore.Cors.Views.NavigationItemText-cors.Id"
@@ -31,111 +37,117 @@ msgid "CORS Settings"
 msgstr ""
 
 #: OrchardCore.Cors\Views\Admin\Index.cshtml:22
+#. <p class="alert alert-warning">@T["The current tenant will be reloaded when the CORS is executed."]</p>
+msgctxt "OrchardCore.Cors.Views.Admin.Index"
+msgid "The current tenant will be reloaded when the CORS is executed."
+msgstr ""
+
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:23
 #. <div class="alert alert-info">@T["CORS stands for Cross-Origin Resource Sharing. More information can be found here:"] <a target="_blank" href="https://docs.microsoft.com/en-us/aspnet/core/security/cors">https://docs.microsoft.com/en-us/aspnet/core/security/cors</a></div>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "CORS stands for Cross-Origin Resource Sharing. More information can be found here:"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:32
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:34
 #. <input id="search-box" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:35
-#. <button class="btn btn-sm btn-secondary" type="button" v-on:click="newPolicy">@T["Add a policy"]</button>
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:38
+#. <button class="btn btn-secondary" type="button" v-on:click="newPolicy">@T["Add a policy"]</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Add a policy"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:45
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:48
 #. <span v-if="policy.IsDefaultPolicy" class="badge ta-badge">@T["Default Policy"]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Default Policy"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:46
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:49
 #. <button class="btn btn-primary btn-sm" type="button" v-on:click="editPolicy(policy)">@T["Edit"]</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:47
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:50
 #. <button class="delete btn btn-danger btn-sm" type="button" v-on:click="deletePolicy(policy, $event)">@T["Delete"]</button>
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:167
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:165
 #. <button type="button" class="btn btn-danger btn-sm" v-on:click="deleteOption(option)">@T["Delete"]</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:53
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:56
 #. @T["<strong>Nothing here!</strong> There are no CORS policies for the moment."]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> There are no CORS policies for the moment."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:59
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:62
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:69
-#. @T["Details"]
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:71
+#. <h5 class="card-title">@T["Details"]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Details"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:70
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:72
 #. <span class="hint dashed">@T["Provide policy details."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Provide policy details."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:73
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:75
 #. <label>@T["Policy name"]</label>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Policy name"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:75
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:77
 #. <span class="hint">@T["The name of the policy."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "The name of the policy."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:79
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:81
 #. <label class="form-check-label" for="set-default-policy">@T["Set as default policy"]</label>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Set as default policy"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:86
-#. @T["Credentials"]
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:87
+#. <h5 class="card-title">@T["Credentials"]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Credentials"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:87
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:88
 #. <span class="hint dashed">@T["Configure the credentials behavior."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Configure the credentials behavior."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:92
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:93
 #. <label class="form-check-label" for="allow-credentials">@T["Allow credentials"]</label>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allow credentials"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:93
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:94
 #. <span class="hint dashed">@T["Allows credentials to be transported in requests. This setting is not allowed in combination with Allow Any Origin."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allows credentials to be transported in requests. This setting is not allowed in combination with Allow Any Origin."
 msgstr ""
 
 #: OrchardCore.Cors\Views\Admin\Index.cshtml:100
-#. @T["Origins"]
+#. <h5 class="card-title">@T["Origins"]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Origins"
 msgstr ""
@@ -170,91 +182,91 @@ msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allowed origins"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:117
-#. @T["Headers"]
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:116
+#. <h5 class="card-title">@T["Headers"]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Headers"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:118
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:117
 #. <span class="hint dashed">@T["Allow certain or all headers to be used by the external client."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allow certain or all headers to be used by the external client."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:124
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:123
 #. <label class="form-check-label" for="allowed-headers">@T["Allow any header"]</label>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allow any header"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:125
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:124
 #. <span class="hint dashed">@T["Allows requests with any header. This will bypass any headers that are configured below."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allows requests with any header. This will bypass any headers that are configured below."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:127
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:126
 #. <options-list v-bind:options="policy.AllowedHeaders" optionType="@T["Header"]" title="@T["Allowed headers"]" subTitle="" />
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Header"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:127
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:126
 #. <options-list v-bind:options="policy.AllowedHeaders" optionType="@T["Header"]" title="@T["Allowed headers"]" subTitle="" />
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allowed headers"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:134
-#. @T["Methods"]
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:132
+#. <h5 class="card-title">@T["Methods"]
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Methods"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:135
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:133
 #. <span class="hint dashed">@T["Configure the methods behavior (POST, PUT, DELETE, GET, etc)."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Configure the methods behavior (POST, PUT, DELETE, GET, etc)."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:141
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:139
 #. <label class="form-check-label" for="allowed-methods">@T["Allow any method"]</label>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allow any method"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:142
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:140
 #. <span class="hint dashed">@T["Allows requests with any method. This will bypass any methods that are configured below."]</span>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allows requests with any method. This will bypass any methods that are configured below."
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:144
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:142
 #. <options-list v-bind:options="policy.AllowedMethods" optionType="@T["Method"]" title="@T["Allowed methods"]" subTitle="" />
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Method"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:144
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:142
 #. <options-list v-bind:options="policy.AllowedMethods" optionType="@T["Method"]" title="@T["Allowed methods"]" subTitle="" />
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Allowed methods"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:149
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:147
 #. <button type="button" class="btn btn-primary" v-on:click="$emit('ok', policy, $event)">@T["Save"]</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:150
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:148
 #. <button type="button" class="btn btn-secondary" v-on:click="$emit('back')">@T["Cancel"]</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Cors\Views\Admin\Index.cshtml:161
+#: OrchardCore.Cors\Views\Admin\Index.cshtml:159
 #. <button class="btn btn-primary btn-sm" type="button" v-on:click="addOption(newOption)">@T["Add"] {{ optionType }}</button>
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Add"

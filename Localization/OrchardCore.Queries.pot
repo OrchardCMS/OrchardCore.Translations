@@ -18,34 +18,52 @@ msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "All queries"
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:105
+#: OrchardCore.Queries\Controllers\AdminController.cs:104
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:164
+#: OrchardCore.Queries\Controllers\AdminController.cs:163
 #. await _notifier.SuccessAsync(H["Query created successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query created successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:220
+#: OrchardCore.Queries\Controllers\AdminController.cs:219
 #. await _notifier.SuccessAsync(H["Query updated successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query updated successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:247
+#: OrchardCore.Queries\Controllers\AdminController.cs:246
 #. await _notifier.SuccessAsync(H["Query deleted successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query deleted successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:274
+#: OrchardCore.Queries\Controllers\AdminController.cs:273
 #. await _notifier.SuccessAsync(H["Queries successfully removed."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Queries successfully removed."
+msgstr ""
+
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:56
+#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryName), S["Your Query is not returning content items."]);
+msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
+msgid "Your Query is not returning content items."
+msgstr ""
+
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:66
+#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Make sure it is a valid JSON object. Example: { key : 'value' }"]);
+msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
+msgid "Make sure it is a valid JSON object. Example: { key : 'value' }"
+msgstr ""
+
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:71
+#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Something is wrong with your JSON."]);
+msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
+msgid "Something is wrong with your JSON."
 msgstr ""
 
 #: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:69
@@ -172,13 +190,13 @@ msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
 msgid "Schema"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:14
+#: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:15
 #. <span class="hint">@T["The schema the GraphQL API will use to return results."] <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Queries/#graphql" target="_blank">@T["See documentation"]</a></span>
 msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
 msgid "The schema the GraphQL API will use to return results."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:14
+#: OrchardCore.Queries\Views\Query.Fields.Edit.cshtml:15
 #. <span class="hint">@T["The schema the GraphQL API will use to return results."] <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Queries/#graphql" target="_blank">@T["See documentation"]</a></span>
 msgctxt "OrchardCore.Queries.Views.Query.Fields.Edit"
 msgid "See documentation"
@@ -250,161 +268,161 @@ msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Queries"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:20
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:21
 #. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:23
-#. <button type="button" class="btn btn-sm btn-secondary float-end create" role="button" data-bs-toggle="modal" data-bs-target="#modalAddQuery">@T["Add Query"]</button>
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:25
+#. <button type="button" class="btn btn-secondary create" role="button" data-bs-toggle="modal" data-bs-target="#modalAddQuery">@T["Add Query"]</button>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Add Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:36
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:38
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Select All"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:37
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "1 item"
 msgid_plural "{0} items"
 msgstr[0] ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:37
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Items {0} to {1}"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:37
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
 msgstr[0] ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:44
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:46
 #. @T["Actions"]
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Actions"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:49
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:51
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Bulk Action"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:49
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:51
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:71
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:73
 #. @T["<strong>Nothing here!</strong> There are no queries for the moment."]
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> There are no queries for the moment."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:85
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:87
 #. <h5 class="modal-title" id="available-query-types-title">@T["Available Query Types"]</h5>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Available Query Types"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:91
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:93
 #. <p class="p-3 mb-2 bg-warning text-white">@T["You need to enable a feature which provides a query source."] <a asp-action="Features" asp-controller="Admin" asp-area="OrchardCore.Features">@T["Go to Features"]</a></p>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "You need to enable a feature which provides a query source."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:91
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:93
 #. <p class="p-3 mb-2 bg-warning text-white">@T["You need to enable a feature which provides a query source."] <a asp-action="Features" asp-controller="Admin" asp-area="OrchardCore.Features">@T["Go to Features"]</a></p>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Go to Features"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:107
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:109
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:153
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:157
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#: OrchardCore.Queries\Views\Admin\Index.cshtml:164
+#: OrchardCore.Queries\Views\Admin\Index.cshtml:168
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "selected"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:15
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:14
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["SQL Query"])</h1></zone>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "SQL Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:24
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:23
 #. <label asp-for="DecodedQuery">@T["Template"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Template"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:26
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:25
 #. <span class="hint">@T["You can <a href=\"{0}\">click here</a> to query all content items.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Queries", Query = matchAllQuery }))]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "You can <a href=\"{0}\">click here</a> to query all content items."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:27
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:26
 #. <span class="hint">@T["The SQL query uses standard SQL92 syntax and is converted based on the actual database. Tables will be prefixed automatically."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "The SQL query uses standard SQL92 syntax and is converted based on the actual database. Tables will be prefixed automatically."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:33
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:32
 #. <label asp-for="Parameters">@T["Parameters"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Parameters"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:35
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:34
 #. <span class="hint">@T["An optional Json object containing the parameter values for this query."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "An optional Json object containing the parameter values for this query."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:43
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:42
 #. <button type="submit" class="btn btn-primary">@T["Query"]</button>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:53
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:52
 #. <label asp-for="RawSql">@T["Final SQL Query"]</label>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Final SQL Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:55
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:54
 #. <span class="hint">@T["The query as it will be executed by the SQL database."]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "The query as it will be executed by the SQL database."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:59
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:58
 #. <a href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Queries", id = "Sql", query = Model.DecodedQuery })" class="btn btn-success">@T["Create"]</a>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Create"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Admin\Query.cshtml:67
+#: OrchardCore.Queries\Views\Admin\Query.cshtml:66
 #. <span class="text-muted">@T["Query executed in {0} ms", Model.Elapsed.TotalMilliseconds]</span>
 msgctxt "OrchardCore.Queries.Views.Admin.Query"
 msgid "Query executed in {0} ms"
@@ -438,5 +456,79 @@ msgstr ""
 #. <p>@T["Exports every query."]</p>
 msgctxt "OrchardCore.Queries.Views.Items.AllQueriesDeploymentStep.Thumbnail"
 msgid "Exports every query."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:10
+#. <h5>@T["Queried Content Items"]</h5>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Queried Content Items"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:11
+#. <span class="hint">@T["The name of the Query which will be used to fetch content items."]</span>
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:33
+#. <div class="hint">@T["The name of the Query which will be used to fetch content items."]</div>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "The name of the Query which will be used to fetch content items."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:16
+#. <label class="form-check-label" asp-for="ExportAsSetupRecipe">@T["Export As Setup recipe"]</label>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Export As Setup recipe"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:17
+#. <span class="hint">@T["Check if the data should be exported as a Setup recipe."]</span>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Check if the data should be exported as a Setup recipe."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:19
+#. <div class="alert alert-warning">@T["If checked, you will have to manually declare variables for content item references like Content Picker Fields, Taxonomy Fields, Tags Fields, and List item IDs and replace them where needed in the recipe. Any reference to these content items will be lost."]</div>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "If checked, you will have to manually declare variables for content item references like Content Picker Fields, Taxonomy Fields, Tags Fields, and List item IDs and replace them where needed in the recipe. Any reference to these content items will be lost."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:24
+#. <label asp-for="QueryName">@T["Query"]</label>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Query"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:35
+#. <div class="alert alert-warning">@T["Note: The Query must be configured to return Documents."]</div>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Note: The Query must be configured to return Documents."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:39
+#. <label asp-for="QueryParameters">@T["Parameters"]</label>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "Parameters"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:42
+#. <div class="hint">@T["An optional JSON object containing the parameter values for this query."]</div>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
+msgid "An optional JSON object containing the parameter values for this query."
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Summary.cshtml:5
+#. <h5>@T["Content Items fetched by a Query"]</h5>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Summary"
+msgid "Content Items fetched by a Query"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Thumbnail.cshtml:5
+#. <h4 class="card-title">@T["Queried Content Items"]</h4>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Thumbnail"
+msgid "Queried Content Items"
+msgstr ""
+
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Thumbnail.cshtml:6
+#. <p>@T["Exports all content items fetched by a Query."]</p>
+msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Thumbnail"
+msgid "Exports all content items fetched by a Query."
 msgstr ""
 
