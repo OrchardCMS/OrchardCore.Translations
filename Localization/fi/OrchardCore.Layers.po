@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2022-05-05 18:58\n"
+"PO-Revision-Date: 2022-10-03 10:08\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -38,19 +38,19 @@ msgstr "Alueet"
 #: OrchardCore.Layers\AdminMenu.cs:33
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Widgets"
-msgstr "Komponentit"
+msgstr "Käyttöliittymäalueet"
 
 #. await _notifier.WarningAsync(H["The Widget content item with id {0} has no matching {1} content type definition.", widget.ContentItem.ContentItemId, widget.ContentItem.ContentType]);
 #: OrchardCore.Layers\Controllers\AdminController.cs:120
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The Widget content item with id {0} has no matching {1} content type definition."
-msgstr ""
+msgstr "Komponentin sisältökohteella {0} ei ole vastaavaa {1} tyyppimäärittelyä."
 
 #. await _notifier.SuccessAsync(H["Layer deleted successfully."]);
 #: OrchardCore.Layers\Controllers\AdminController.cs:276
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
-msgstr "Kerros poistettiin onnistuneesti."
+msgstr "Taso poistettiin onnistuneesti."
 
 #. await _notifier.ErrorAsync(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
 #: OrchardCore.Layers\Controllers\AdminController.cs:280
@@ -62,13 +62,13 @@ msgstr "Tasoa ei voitu poistaa. Sinun täytyy poistaa ensin kaikki siihen liitty
 #: OrchardCore.Layers\Controllers\AdminController.cs:356
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
-msgstr "Kerroksen nimi on pakollinen."
+msgstr "Tason nimi on pakollinen."
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
 #: OrchardCore.Layers\Controllers\AdminController.cs:360
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
-msgstr "Kerroksen nimi on jo käytössä."
+msgstr "Tason nimi on jo käytössä."
 
 #. await _notifier.SuccessAsync(H["Condition added successfully."]);
 #: OrchardCore.Layers\Controllers\LayerRuleController.cs:134
@@ -104,13 +104,13 @@ msgstr "Alue puutuu"
 #: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:82
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Layer is missing"
-msgstr "Alue puutuu"
+msgstr "Taso puuttuu"
 
 #. Description = S["Site layers define the rules and zone placement for widgets."],
 #: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:30
 msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
 msgid "Site layers define the rules and zone placement for widgets."
-msgstr "Sivuston kerrokset määrittelevät säännöt ja sijoittelun komponenteille."
+msgstr "Sivuston tasot määrittelevät säännöt ja sijoittelun komponenteille."
 
 #. <label asp-for="Title">@T["Title"]</label>
 #: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:4
@@ -134,25 +134,25 @@ msgstr "Jos valittu, otsikko näytetään komponentin yhteydessä."
 #: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:18
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "The layer the widget should be associated with."
-msgstr "Kerros, johon komponentti tulisi liittää."
+msgstr "Taso, johon komponentti tulisi liittää."
 
 #. <label asp-for="Zones">@T["Available zones for Layers"]</label>
 #: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
 msgid "Available zones for Layers"
-msgstr "Kerrokselle saatavilla olevat alueet"
+msgstr "Tasojen käytettävissä olevat alueet"
 
 #. @T["A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render.",
 #: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
 msgid "A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render."
-msgstr "Pilkulla erotettu luettelo arvoista, jotka edustavat <a href=\"{0}\">komponentit</a>. Huomaa, että sinun täytyy renderoidä nämä vyöhykkeet ulkoasumallissa, koska niitä ei automaattisesti renderoidä."
+msgstr "Pilkuilla eroteltu luettelo arvoista, jotka edustavat <a href=\"{0}\">komponenttien</a> käytettävissä olevia alueita. Huomaa, että sinun on renderöitävä nämä alueet käyttöliittymässä, sillä ne eivät renderöidy automaattisesti."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Layer"])</h1></zone>
 #: OrchardCore.Layers\Views\Admin\Create.cshtml:3
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create Layer"
-msgstr "Luo kerros"
+msgstr "Luo taso"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Layers\Views\Admin\Create.cshtml:7
@@ -176,7 +176,7 @@ msgstr "Luo"
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:14
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Edit Layer - {0}"
-msgstr "Muokkaa kerrosta - {0}"
+msgstr "Muokkaa tasoa - {0}"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:18
@@ -206,7 +206,7 @@ msgstr "Tallenna"
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:15
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit Widgets and Layers"
-msgstr "Muokkaa komponentteja ja kerroksia"
+msgstr "Muokkaa komponentteja ja tasoja"
 
 #. @T["Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."]
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:20
@@ -236,25 +236,25 @@ msgstr "Lisää komponentti"
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:100
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "No widgets found."
-msgstr ""
+msgstr "Komponentteja ei löytynyt."
 
 #. <span>@T["No layers found."]</span>
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:105
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "No layers found."
-msgstr ""
+msgstr "Tasoja ei löytynyt."
 
 #. <h3>@T["Layers"]</h3>
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:114
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Layers"
-msgstr "Kerrokset"
+msgstr "Tasot"
 
 #. @T["Select a layer to reveal its associated widgets."]
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:117
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Select a layer to reveal its associated widgets."
-msgstr "Valitse kerros nähdäksesi siihen liittyvät komponentit."
+msgstr "Valitse taso nähdäksesi siihen liittyvät komponentit."
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Layers/#rules" target="_blank">@T["See documentation"]</a>
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:118
@@ -278,7 +278,7 @@ msgstr "Poista"
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:147
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
-msgstr "Muista <a href=\"{0}\">luo alue</a> ennen komponenttien lisäämistä"
+msgstr "Muista <a href=\"{0}\">luoda taso</a> ennen komponenttien lisäämistä"
 
 #. <a class="button btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
 #: OrchardCore.Layers\Views\Admin\Index.cshtml:150
@@ -290,13 +290,13 @@ msgstr "Lisää"
 #: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:3
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Edit"
 msgid "All Layers"
-msgstr "Kaikki kerrokset"
+msgstr "Kaikki tasot"
 
 #. <h5>@T["All Layers"]</h5>
 #: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:3
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
 msgid "All Layers"
-msgstr "Kaikki kerrokset"
+msgstr "Kaikki tasot"
 
 #. <span class="hint">@T["Adds all layers to the plan."]</span>
 #: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:5
@@ -308,13 +308,13 @@ msgstr "Lisää kerroksen suunnitelmaan."
 #: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
 msgid "All Layers"
-msgstr "Kaikki kerrokset"
+msgstr "Kaikki tasot"
 
 #. <p>@T["Exports all layers."]</p>
 #: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
 msgid "Exports all layers."
-msgstr "Vie kaikki kerrokset."
+msgstr "Vie kaikki tasot."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Rule"])</h1></zone>
 #: OrchardCore.Layers\Views\LayerRule\Create.cshtml:3

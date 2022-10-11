@@ -10,13 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2022-05-06 16:15\n"
+"PO-Revision-Date: 2022-06-01 03:20\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Tenants\AdminMenu.cs:34
 msgctxt "OrchardCore.Tenants.AdminMenu"
 msgid "Configuration"
-msgstr "Kokoonapano"
+msgstr "Konfigurointi"
 
 #. .Add(S["Tenants"], S["Tenants"].PrefixPosition(), tenant => tenant
 #. .Add(S["Tenants"], S["Tenants"].PrefixPosition(), tenant => tenant
@@ -24,7 +24,7 @@ msgstr "Kokoonapano"
 #: OrchardCore.Tenants\AdminMenu.cs:36
 msgctxt "OrchardCore.Tenants.AdminMenu"
 msgid "Tenants"
-msgstr "Tilit"
+msgstr "Asiakkaat"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:34
@@ -38,7 +38,7 @@ msgstr "Konfigurointi"
 #: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:36
 msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
 msgid "Tenant Feature Profiles"
-msgstr ""
+msgstr "Asiakkaiden ominaisuusprofiilit"
 
 #. S["All"],
 #: OrchardCore.Tenants\Controllers\AdminController.cs:187
@@ -100,31 +100,31 @@ msgstr "Ota käyttöön"
 #: OrchardCore.Tenants\Controllers\AdminController.cs:535
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You cannot disable the default tenant."
-msgstr ""
+msgstr "Et voi poistaa oletusasiakasta käytöstä."
 
 #. await _notifier.WarningAsync(H["The tenant '{0}' is already disabled.", shellSettings.Name]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:260
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant '{0}' is already disabled."
-msgstr ""
+msgstr "Asiakas '{0}' on jo poistettu käytöstä."
 
 #. await _notifier.WarningAsync(H["The tenant '{0}' is already enabled.", shellSettings.Name]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:273
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant '{0}' is already enabled."
-msgstr ""
+msgstr "Asiakas '{0}' on jo käytössä."
 
 #. await _notifier.ErrorAsync(H["You can only disable an Enabled tenant."]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:541
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only disable an Enabled tenant."
-msgstr ""
+msgstr "Voit poistaa käytöstä vain käytössä olevan asiakkaan."
 
 #. await _notifier.ErrorAsync(H["You can only enable a Disabled tenant."]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:575
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only enable a Disabled tenant."
-msgstr ""
+msgstr "Voit ottaa käyttöön vain käytöstä poistetun asiakkaan."
 
 #. featureProfiles.Insert(0, new SelectListItem(S["None"], String.Empty, currentFeatureProfile == String.Empty));
 #: OrchardCore.Tenants\Controllers\AdminController.cs:644
@@ -148,25 +148,25 @@ msgstr "Sähköpostiosoite on virheellinen."
 #: OrchardCore.Tenants\Controllers\ApiController.cs:163
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "Tenant not found: '{0}'"
-msgstr ""
+msgstr "Asiakasta ei löydy: '{0}'"
 
 #. return BadRequest(S["The tenant can't be setup."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:173
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The tenant can't be setup."
-msgstr ""
+msgstr "Asiakasta ei voi määrittää."
 
 #. return BadRequest(S["The database provider is not defined."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:187
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The database provider is not defined."
-msgstr ""
+msgstr "Tietokantayhteyksien tarjoajaa ei ole määritetty."
 
 #. return BadRequest(S["The connection string is required for this database provider."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:206
 msgctxt "OrchardCore.Tenants.Controllers.ApiController"
 msgid "The connection string is required for this database provider."
-msgstr ""
+msgstr "Yhteysmerkkijono vaaditaan tätä tietokantayhteyksien tarjoajaa varten."
 
 #. return BadRequest(S["Either 'Recipe' or 'RecipeName' is required."]);
 #: OrchardCore.Tenants\Controllers\ApiController.cs:222
@@ -238,13 +238,13 @@ msgstr "Ominaisuuden profiilit poistettu onnistuneesti."
 #: OrchardCore.Tenants\Services\TenantValidator.cs:45
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The connection string is mandatory for this provider."
-msgstr ""
+msgstr "Yhteysmerkkijono on pakollinen tälle tietokantayhteyksien tarjoajalle."
 
 #. errors.Add(new ModelError(nameof(model.Name), S["The tenant name is mandatory."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:50
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The tenant name is mandatory."
-msgstr ""
+msgstr "Asiakkaan nimi on pakollinen."
 
 #. errors.Add(new ModelError(nameof(model.FeatureProfile), S["The feature profile does not exist."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:58
@@ -256,31 +256,31 @@ msgstr "Ominaisuuden profiilia ei ole olemassa."
 #: OrchardCore.Tenants\Services\TenantValidator.cs:64
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "Invalid tenant name. Must contain characters only and no spaces."
-msgstr ""
+msgstr "Virheellinen asiakkaan nimi. Nimi saa sisältää ainoastaan kirjaimia sekä numeroja."
 
 #. errors.Add(new ModelError(nameof(model.RequestUrlPrefix), S["Host and url prefix can not be empty at the same time."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:69
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "Host and url prefix can not be empty at the same time."
-msgstr ""
+msgstr "Isäntänimi ja URL-etuliite eivät voi olla tyhjiä samaan aikaan."
 
 #. errors.Add(new ModelError(nameof(model.RequestUrlPrefix), S["The url prefix can not contain more than one segment."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:76
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The url prefix can not contain more than one segment."
-msgstr ""
+msgstr "URL-etuliite voi sisältää vain yhden segmentin."
 
 #. errors.Add(new ModelError(nameof(model.Name), S["A tenant with the same name already exists."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:84
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "A tenant with the same name already exists."
-msgstr ""
+msgstr "Samanniminen asiakas on jo olemassa."
 
 #. errors.Add(new ModelError(nameof(model.RequestUrlPrefix), S["A tenant with the same host and prefix already exists."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:91
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "A tenant with the same host and prefix already exists."
-msgstr ""
+msgstr "Asiakas, jolla on sama isäntänimi ja URL-etuliite, on jo olemassa."
 
 #. public override LocalizedString Category => S["Tenant"];
 #: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:29
@@ -292,7 +292,7 @@ msgstr "Tili"
 #: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:31
 msgctxt "OrchardCore.Tenants.Workflows.Activities.CreateTenantTask"
 msgid "Create Tenant Task"
-msgstr ""
+msgstr "Luo asiakas -tehtävä"
 
 #. return Outcomes(S["Done"], S["Failed"]);
 #: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:89
@@ -310,13 +310,13 @@ msgstr "Epäonnistui"
 #: OrchardCore.Tenants\Workflows\Activities\DisableTenantTask.cs:22
 msgctxt "OrchardCore.Tenants.Workflows.Activities.DisableTenantTask"
 msgid "Tenant"
-msgstr ""
+msgstr "Asiakas"
 
 #. public override LocalizedString DisplayText => S["Disable Tenant Task"];
 #: OrchardCore.Tenants\Workflows\Activities\DisableTenantTask.cs:24
 msgctxt "OrchardCore.Tenants.Workflows.Activities.DisableTenantTask"
 msgid "Disable Tenant Task"
-msgstr ""
+msgstr "Poista asiakas käytöstä -tehtävä"
 
 #. return Outcomes(S["Disabled"], S["Failed"]);
 #: OrchardCore.Tenants\Workflows\Activities\DisableTenantTask.cs:28
@@ -334,13 +334,13 @@ msgstr "Epäonnistui"
 #: OrchardCore.Tenants\Workflows\Activities\EnableTenantTask.cs:23
 msgctxt "OrchardCore.Tenants.Workflows.Activities.EnableTenantTask"
 msgid "Tenant"
-msgstr "Tili"
+msgstr "Asiakas"
 
 #. public override LocalizedString DisplayText => S["Enable Tenant Task"];
 #: OrchardCore.Tenants\Workflows\Activities\EnableTenantTask.cs:25
 msgctxt "OrchardCore.Tenants.Workflows.Activities.EnableTenantTask"
 msgid "Enable Tenant Task"
-msgstr ""
+msgstr "Ota asiakas käyttöön -tehtävä"
 
 #. return Outcomes(S["Enabled"], S["Failed"]);
 #: OrchardCore.Tenants\Workflows\Activities\EnableTenantTask.cs:29
@@ -358,13 +358,13 @@ msgstr "Epäonnistui"
 #: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:53
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Tenant"
-msgstr "Tili"
+msgstr "Asiakas"
 
 #. public override LocalizedString DisplayText => S["Setup Tenant Task"];
 #: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:55
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Setup Tenant Task"
-msgstr ""
+msgstr "Asiakkaan käyttöönotto -tehtävä"
 
 #. return Outcomes(S["Done"], S["Failed"]);
 #: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:107
@@ -376,13 +376,13 @@ msgstr "Valmis"
 #: OrchardCore.Tenants\Workflows\Activities\SetupTenantTask.cs:107
 msgctxt "OrchardCore.Tenants.Workflows.Activities.SetupTenantTask"
 msgid "Failed"
-msgstr "Epäonnistui"
+msgstr "Epäonnistunut"
 
 #. public override LocalizedString Category => S["Tenant"];
 #: OrchardCore.Tenants\Workflows\Activities\TenantActivity.cs:35
 msgctxt "OrchardCore.Tenants.Workflows.Activities.TenantActivity"
 msgid "Tenant"
-msgstr "Tili"
+msgstr "Asiakas"
 
 #. return Outcomes(S["Done"]);
 #: OrchardCore.Tenants\Workflows\Activities\TenantActivity.cs:39
@@ -400,7 +400,7 @@ msgstr "Suunnittelu"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Create Tenant"
-msgstr ""
+msgstr "Luo asiakas"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:10
@@ -412,7 +412,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:13
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The name of the tenant."
-msgstr ""
+msgstr "Asiakkaan nimi."
 
 #. <label asp-for="Category">@T["Category"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:16
@@ -424,7 +424,7 @@ msgstr "Kategoria"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:18
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The category of the tenant."
-msgstr ""
+msgstr "Asiakkaan kategoria."
 
 #. <label asp-for="Description">@T["Description"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:23
@@ -436,25 +436,25 @@ msgstr "Kuvaus"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:26
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The description of the tenant."
-msgstr ""
+msgstr "Asiakkaan kuvaus."
 
 #. <label asp-for="RequestUrlPrefix">@T["Url Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:31
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Url Prefix"
-msgstr "Url-etuliite"
+msgstr "URL-etuliite"
 
 #. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardcore.net/site1\""]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:34
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"https://orchardcore.net/site1\""
-msgstr ""
+msgstr "(Valinnainen) Esimerkki: Jos etuliite on \"site1\", asiakkaan URL-osoitteen etuliite on \"https://orchardcore.net/site1\"."
 
 #. <label asp-for="RequestUrlHost">@T["Hostname"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:38
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Hostname"
-msgstr ""
+msgstr "Isäntänimi"
 
 #. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant site URL is \"https://orchardcore.net/\""]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:41
@@ -466,7 +466,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:42
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "You may define multiple domains using the comma (,) as a separator. Use the '*.' prefix to map all subdomains."
-msgstr ""
+msgstr "Voit määrittää useita verkkotunnuksia käyttämällä erotinmerkkinä pilkkua (,). Käytä '*.' -etuliitettä kaikkien aliverkkotunnusten kartoittamiseen."
 
 #. @T["Recipe"]
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:46
@@ -504,7 +504,7 @@ msgstr "Ei mitään"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:76
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The connection string to your database instance. e.g., {0}"
-msgstr ""
+msgstr "Yhteysmerkkijono tietokantaan, esim. {0}"
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:82
@@ -522,7 +522,7 @@ msgstr "Yhteysmerkkijono"
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:102
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Feature profile"
-msgstr ""
+msgstr "Ominaisuusprofiili"
 
 #. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:103
@@ -546,7 +546,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Edit Tenant"
-msgstr ""
+msgstr "Muokkaa asiakasta"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:10
@@ -558,7 +558,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:13
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "The name of the tenant."
-msgstr ""
+msgstr "Asiakkaan nimi."
 
 #. <label asp-for="Category">@T["Category"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:17
@@ -570,7 +570,7 @@ msgstr "Kategoria"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:19
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "The category of the tenant."
-msgstr ""
+msgstr "Asiakkaan kategoria."
 
 #. <label asp-for="Description">@T["Description"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:23
@@ -582,25 +582,25 @@ msgstr "Kuvaus"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:26
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "The description of the tenant."
-msgstr ""
+msgstr "Asiakkaan kuvaus."
 
 #. <label asp-for="RequestUrlPrefix">@T["Url Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:30
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Url Prefix"
-msgstr "Url-etuliite"
+msgstr "URL-etuliite"
 
 #. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardcore.net/site1\""]</span>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:33
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "(Optional) Example: If prefix is \"site1\", the tenant URL is \"https://orchardcore.net/site1\""
-msgstr ""
+msgstr "(Valinnainen) Esimerkki: Jos URL-etuliite on \"site1\", asiakkaan URL-osoite on \"https://orchardcore.net/site1\""
 
 #. <label asp-for="RequestUrlHost">@T["Hostname"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:37
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Hostname"
-msgstr ""
+msgstr "Isäntänimi"
 
 #. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant URL is \"https://orchardcore.net/\""]</span>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:40
@@ -612,7 +612,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:41
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "You may define multiple domains using the comma (,) as a separator. Use the '*.' prefix to map all subdomains."
-msgstr ""
+msgstr "Voit määrittää useita verkkotunnuksia käyttämällä erotinmerkkinä pilkkua (,). Käytä '*.' -etuliitettä kaikkien aliverkkotunnusten kartoittamiseen."
 
 #. @T["Recipe"]
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:47
@@ -638,7 +638,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:73
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "What type of database to use?"
-msgstr ""
+msgstr "Käytettävän tietokannan tyyppi?"
 
 #. <option value="" data-connection-string="false">@T["None"]</option>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:75
@@ -650,13 +650,13 @@ msgstr "Ei mitään"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:78
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "The connection string to your database instance. e.g., {0}"
-msgstr ""
+msgstr "Yhteysmerkkijono tietokantaan, esim. {0}"
 
 #. <label asp-for="TablePrefix">@T["Table Prefix"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:84
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Table Prefix"
-msgstr ""
+msgstr "Tietokantataulujen etuliite"
 
 #. <label asp-for="ConnectionString">@T["Connection string"]</label>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:94
@@ -668,7 +668,7 @@ msgstr "Yhteysmerkkijono"
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:106
 msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
 msgid "Feature profile"
-msgstr ""
+msgstr "Ominaisuusprofiili"
 
 #. <span class="text-muted form-text small">@T["Optionally specify which feature profile should be applied to this tenant."]</span>
 #: OrchardCore.Tenants\Views\Admin\Edit.cshtml:107
@@ -692,7 +692,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:48
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Tenants"
-msgstr "Tilit"
+msgstr "Asiakkaat"
 
 #. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:60
@@ -704,7 +704,7 @@ msgstr "Etsi"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:63
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Add Tenant"
-msgstr ""
+msgstr "Lisää asiakas"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:74
@@ -731,8 +731,8 @@ msgstr "Kohteet {0} - {1}"
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] " /{0} kohdetta yhteensä"
-msgstr[1] " /{0} kohdetta yhteensä"
+msgstr[0] " / {0} kohde yhteensä"
+msgstr[1] " / {0} kohdetta yhteensä"
 
 #. @T["Actions"]
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:82
@@ -750,13 +750,13 @@ msgstr "Massatoiminnot"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:87
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Oletko varma, että haluat {0} nämä kohteet?"
 
 #. <select asp-for="Options.Category" asp-items="@Model.Options.TenantsCategories" class="selectpicker show-tick me-2" data-header="@T["Filter by category"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Category"]" data-style="btn-sm"></select>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:94
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Filter by category"
-msgstr ""
+msgstr "Suodata kategorian mukaan"
 
 #. <select asp-for="Options.Category" asp-items="@Model.Options.TenantsCategories" class="selectpicker show-tick me-2" data-header="@T["Filter by category"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Category"]" data-style="btn-sm"></select>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:94
@@ -842,7 +842,7 @@ msgstr "Poista käytöstä"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:157
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Are you sure you want to disable this tenant?"
-msgstr ""
+msgstr "Haluatko varmasti poistaa tämän asiakkaan käytöstä?"
 
 #. <a asp-action="Disable" asp-route-id="@entry.Name" class="btn btn-danger btn-sm disable" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Disable"]" data-message="@T["Are you sure you want to disable this tenant?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Disable"]</a>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:157
@@ -866,7 +866,7 @@ msgstr "Ota käyttöön"
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:165
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "Setup"
-msgstr "Konfigurointi"
+msgstr "Alusta"
 
 #. <a asp-action="Reload" asp-route-id="@entry.Name" class="btn btn-secondary btn-sm reload" data-url-af="UnsafeUrl">@T["Reload"]</a>
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:167
@@ -884,7 +884,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Admin\Index.cshtml:190
 msgctxt "OrchardCore.Tenants.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
-msgstr ""
+msgstr "<strong>Ei mitään näytettävää!</strong> Hakusi ei tuottanut tuloksia."
 
 #. selectedItems.text($(":checkbox[name='tenantNames']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
@@ -898,7 +898,7 @@ msgstr "valittu"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
 msgid "Create Feature Profile"
-msgstr ""
+msgstr "Luo ominaisuusprofiili"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:15
@@ -910,7 +910,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:18
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
 msgid "The name of the feature profile."
-msgstr ""
+msgstr "Ominaisuusprofiilin nimi."
 
 #. <label asp-for="FeatureRules">@T["Rules"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Create.cshtml:23
@@ -952,7 +952,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
 msgid "Edit Feature Profile"
-msgstr ""
+msgstr "Muokkaa ominaisuusprofiilia"
 
 #. <label asp-for="Name">@T["Name"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:18
@@ -964,7 +964,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:21
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
 msgid "The name of the feature profile."
-msgstr ""
+msgstr "Ominaisuusprofiilin nimi."
 
 #. <label asp-for="FeatureRules">@T["Rules"]</label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Edit.cshtml:26
@@ -1006,7 +1006,7 @@ msgstr "Peruuta"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:8
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Feature Profiles"
-msgstr ""
+msgstr "Ominaisuusprofiilit"
 
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:21
@@ -1018,7 +1018,7 @@ msgstr "Hae"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:24
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Add Feature Profile"
-msgstr ""
+msgstr "Lisää ominaisuusprofiili"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:37
@@ -1031,22 +1031,22 @@ msgstr "Valitse kaikki"
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "1 item"
 msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 kohde"
+msgstr[1] "{0} kohdetta"
 
 #. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Items {0} to {1}"
-msgstr ""
+msgstr "Kohteet {0} - {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.FeatureProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:38
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " / {0} kohdetta yhteensä"
+msgstr[1] " / {0} kohdetta yhteensä"
 
 #. @T["Actions"]
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:45
@@ -1058,13 +1058,13 @@ msgstr "Toiminnot"
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:50
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Massatoiminto"
 
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:50
 msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
 msgid "Are you sure you want to {0} these items?"
-msgstr ""
+msgstr "Oletko varma, että haluat {0} nämä kohteet?"
 
 #. <a asp-action="Edit" asp-route-name="@entry.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Tenants\Views\FeatureProfiles\Index.cshtml:66
@@ -1102,37 +1102,37 @@ msgstr "valittu"
 #: OrchardCore.Tenants\Views\Items\AllFeatureProfilesDeploymentStep.Edit.cshtml:3
 msgctxt "OrchardCore.Tenants.Views.Items.AllFeatureProfilesDeploymentStep.Edit"
 msgid "All Feature Profiles"
-msgstr ""
+msgstr "Kaikki ominaisuusprofiilit"
 
 #. <h5>@T["All Feature Profiles"]</h5>
 #: OrchardCore.Tenants\Views\Items\AllFeatureProfilesDeploymentStep.Summary.cshtml:3
 msgctxt "OrchardCore.Tenants.Views.Items.AllFeatureProfilesDeploymentStep.Summary"
 msgid "All Feature Profiles"
-msgstr ""
+msgstr "Kaikki ominaisuusprofiilit"
 
 #. <span class="hint">@T["Adds all feature profiles to the plan."]</span>
 #: OrchardCore.Tenants\Views\Items\AllFeatureProfilesDeploymentStep.Summary.cshtml:5
 msgctxt "OrchardCore.Tenants.Views.Items.AllFeatureProfilesDeploymentStep.Summary"
 msgid "Adds all feature profiles to the plan."
-msgstr ""
+msgstr "Lisää kaikki ominaisuusprofiilit suunnitelmaan."
 
 #. <h4 class="card-title">@T["All Feature Profiles"]</h4>
 #: OrchardCore.Tenants\Views\Items\AllFeatureProfilesDeploymentStep.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Tenants.Views.Items.AllFeatureProfilesDeploymentStep.Thumbnail"
 msgid "All Feature Profiles"
-msgstr ""
+msgstr "Kaikki ominaisuusprofiilit"
 
 #. <p>@T["Exports all feature profiles."]</p>
 #: OrchardCore.Tenants\Views\Items\AllFeatureProfilesDeploymentStep.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.AllFeatureProfilesDeploymentStep.Thumbnail"
 msgid "Exports all feature profiles."
-msgstr ""
+msgstr "Vie kaikki ominaisuusprofiilit."
 
 #. <h4><i class="fa fa-file-text-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Create Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Design"
 msgid "Create Tenant"
-msgstr ""
+msgstr "Luo asiakas"
 
 #. <label asp-for="TenantNameExpression">@T["Name"] <span asp-validation-for="TenantNameExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:5
@@ -1144,7 +1144,7 @@ msgstr "Nimi"
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:7
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "Select the name of the tenant to create."
-msgstr ""
+msgstr "Valitse luotavan asiakkaan nimi."
 
 #. <label asp-for="DescriptionExpression">@T["Description"] <span asp-validation-for="DescriptionExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:11
@@ -1156,13 +1156,13 @@ msgstr "Kuvaus"
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "(Optional) the description of the tenant to create."
-msgstr ""
+msgstr "(Valinnainen) luotavan asiakkaan kuvaus."
 
 #. <label asp-for="RequestUrlPrefixExpression">@T["Url Prefix"] <span asp-validation-for="RequestUrlPrefixExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:17
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "Url Prefix"
-msgstr ""
+msgstr "URL-etuliite"
 
 #. <span class="hint">@T["(Optional) Example: If prefix is \"site1\", the tenant URL prefix is \"http://orchardproject.net/site1\""]</span>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:19
@@ -1174,7 +1174,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:23
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "Host name"
-msgstr ""
+msgstr "Isäntänimi"
 
 #. <span class="hint">@T["Example: If host is \"orchardproject.net\", the tenant site URL is \"http://orchardproject.net/\". With Liquid support."]</span>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:25
@@ -1186,7 +1186,7 @@ msgstr ""
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:29
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "What type of database to use?"
-msgstr ""
+msgstr "Käytettävän tietokannan tyyppi?"
 
 #. <label asp-for="TablePrefixExpression">@T["Table Prefix"] <span asp-validation-for="TablePrefixExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:34
@@ -1210,97 +1210,97 @@ msgstr "Resepti"
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Edit.cshtml:49
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
 msgid "Feature Profile"
-msgstr ""
+msgstr "Ominaisuusprofiili"
 
 #. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Create Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Thumbnail"
 msgid "Create Tenant"
-msgstr ""
+msgstr "Luo asiakas"
 
 #. <p>@T["Create a tenant."]</p>
 #: OrchardCore.Tenants\Views\Items\CreateTenantTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Thumbnail"
 msgid "Create a tenant."
-msgstr ""
+msgstr "Luo asiakas."
 
 #. <h4><i class="fa fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Disable Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Design"
 msgid "Disable Tenant"
-msgstr ""
+msgstr "Poista asiakas käytöstä"
 
 #. <label asp-for="TenantNameExpression">@T["Tenant name"] <span asp-validation-for="TenantNameExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Edit"
 msgid "Tenant name"
-msgstr ""
+msgstr "Asiakkaan nimi"
 
 #. <span class="hint">@T["Select the name of the tenant to disable."]</span>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Edit.cshtml:7
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Edit"
 msgid "Select the name of the tenant to disable."
-msgstr ""
+msgstr "Valitse käytöstä poistettavan asiakkaan nimi."
 
 #. <h4 class="card-title"><i class="fa fa-trash" aria-hidden="true"></i>@T["Disable Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Thumbnail"
 msgid "Disable Tenant"
-msgstr ""
+msgstr "Poista asiakas käytöstä"
 
 #. <p>@T["Disable a tenant."]</p>
 #: OrchardCore.Tenants\Views\Items\DisableTenantTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Tenants.Views.Items.DisableTenantTask.Fields.Thumbnail"
 msgid "Disable a tenant."
-msgstr ""
+msgstr "Poista asiakas käytöstä."
 
 #. <h4><i class="fa fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Enable Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Design"
 msgid "Enable Tenant"
-msgstr ""
+msgstr "Ota asiakas käyttöön"
 
 #. <label asp-for="TenantNameExpression">@T["Tenant name"] <span asp-validation-for="TenantNameExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Edit"
 msgid "Tenant name"
-msgstr ""
+msgstr "Asiakkaan nimi"
 
 #. <span class="hint">@T["Select the name of the tenant to enable."]</span>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Edit.cshtml:7
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Edit"
 msgid "Select the name of the tenant to enable."
-msgstr ""
+msgstr "Valitse käyttöön otettavan asiakkaan nimi."
 
 #. <h4 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i>@T["Enable Tenant"]</h4>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Thumbnail"
 msgid "Enable Tenant"
-msgstr ""
+msgstr "Ota asiakas käyttöön"
 
 #. <p>@T["Enable a tenant."]</p>
 #: OrchardCore.Tenants\Views\Items\EnableTenantTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Tenants.Views.Items.EnableTenantTask.Fields.Thumbnail"
 msgid "Enable a tenant."
-msgstr ""
+msgstr "Ota asiakas käyttöön."
 
 #. <h4><i class="fa fa-file-text-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Setup Tenant"])</h4>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Design"
 msgid "Setup Tenant"
-msgstr ""
+msgstr "Alusta asiakas"
 
 #. <label asp-for="TenantNameExpression">@T["Tenant name"] <span asp-validation-for="TenantNameExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
 msgid "Tenant name"
-msgstr ""
+msgstr "Asiakkaan nimi"
 
 #. <span class="hint">@T["Select the name of tenant to setup."]</span>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Edit.cshtml:7
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
 msgid "Select the name of tenant to setup."
-msgstr ""
+msgstr "Valitse alustettavan asiakkaan nimi."
 
 #. <label asp-for="SiteNameExpression">@T["Site name"] <span asp-validation-for="SiteNameExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Edit.cshtml:11
@@ -1312,7 +1312,7 @@ msgstr "Sivuston nimi"
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Edit.cshtml:16
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
 msgid "Admin user name"
-msgstr ""
+msgstr "Ylläpitäjän käyttäjänimi"
 
 #. <label asp-for="AdminEmailExpression">@T["Admin email"] <span asp-validation-for="AdminEmailExpression"></span></label>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Edit.cshtml:21
@@ -1354,11 +1354,11 @@ msgstr "Resepti"
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Thumbnail"
 msgid "Setup Tenant"
-msgstr ""
+msgstr "Alusta asiakas"
 
 #. <p>@T["Setup a tenant."]</p>
 #: OrchardCore.Tenants\Views\Items\SetupTenantTask.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Thumbnail"
 msgid "Setup a tenant."
-msgstr ""
+msgstr "Alusta asiakas."
 
