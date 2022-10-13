@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2022-05-05 19:03\n"
+"PO-Revision-Date: 2022-10-11 20:18\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -79,7 +79,7 @@ msgid "Media Cache"
 msgstr "Προσωρινή μνήμη Πολυμέσων"
 
 #. error = S["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
-#. return StatusCode(StatusCodes.Status400BadRequest, S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
+#. return BadRequest(S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
 #: OrchardCore.Media\Controllers\AdminController.cs:172
 #: OrchardCore.Media\Controllers\AdminController.cs:283
 msgctxt "OrchardCore.Media.Controllers.AdminController"
@@ -98,32 +98,32 @@ msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr "Δεν είναι δυνατή η διαγραφή διαδρομής επειδή δεν είναι κατάλογος"
 
-#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot move media because a file already exists with the same name"]);
+#. return BadRequest(S["Cannot move media because a file already exists with the same name"]);
 #: OrchardCore.Media\Controllers\AdminController.cs:288
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η μετακίνηση του πολυμέσου επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
 
 #. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:364
+#: OrchardCore.Media\Controllers\AdminController.cs:366
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr "Σφάλμα κατά τη μετακίνηση αρχείων. Ίσως υπάρχουν ήδη στον φάκελο προορισμού; Αρχεία σε σφάλμα: {0}"
 
-#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because the folder name contains invalid characters"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:386
+#. return BadRequest(S["Cannot create folder because the folder name contains invalid characters"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:388
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because the folder name contains invalid characters"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή το όνομα του φακέλου περιέχει μη έγκυρους χαρακτήρες"
 
-#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:400
+#. return BadRequest(S["Cannot create folder because a folder already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:402
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένας φάκελος υπάρχει ήδη με το ίδιο όνομα"
 
-#. return StatusCode(StatusCodes.Status400BadRequest, S["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:406
+#. return BadRequest(S["Cannot create folder because a file already exists with the same name"]);
+#: OrchardCore.Media\Controllers\AdminController.cs:408
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
@@ -147,33 +147,33 @@ msgid "Asset cache purged."
 msgstr "Αποκατάσταση του πόρου της προσωρινής μνήμης."
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:91
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:89
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Delete"
 msgstr "Διαγραφή"
 
 #. ModelState.AddModelError(nameof(MediaProfileViewModel.Name), S["The name is mandatory."]);
 #. ModelState.AddModelError(nameof(MediaProfileViewModel.Name), S["The name is mandatory."]);
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:132
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:236
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:130
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:234
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "The name is mandatory."
 msgstr "Το όνομα είναι υποχρεωτικό."
 
 #. ModelState.AddModelError(nameof(MediaProfileViewModel.Name), S["A profile with the same name already exists."]);
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:140
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:138
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "A profile with the same name already exists."
 msgstr "Ένα προφίλ με το ίδιο όνομα υπάρχει ήδη."
 
 #. await _notifier.SuccessAsync(H["Media profile deleted successfully."]);
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:289
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:287
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Media profile deleted successfully."
 msgstr "Το προφίλ πολυμέσων διαγράφηκε με επιτυχία."
 
 #. await _notifier.SuccessAsync(H["Media profiles successfully removed."]);
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:316
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:314
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Media profiles successfully removed."
 msgstr "Τα προφίλ πολυμέσων καταργήθηκαν με επιτυχία."
@@ -181,143 +181,149 @@ msgstr "Τα προφίλ πολυμέσων καταργήθηκαν με επ�
 #. model.AvailableWidths.Add(new SelectListItem() { Text = S["Default"], Value = "0" });
 #. model.AvailableHeights.Add(new SelectListItem() { Text = S["Default"], Value = "0" });
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Default"], Value = ((int)Format.Undefined).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:328
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:329
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:347
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:326
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:327
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:345
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Default"
 msgstr "Προεπιλογή"
 
 #. model.AvailableWidths.Add(new SelectListItem() { Text = S["Custom Size"], Value = "-1" });
 #. model.AvailableHeights.Add(new SelectListItem() { Text = S["Custom Size"], Value = "-1" });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:334
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:335
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:332
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:333
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Custom Size"
 msgstr "Προσαρμογή Μεγέθους"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Default (Max)"], Value = ((int)ResizeMode.Undefined).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:338
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:336
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Default (Max)"
 msgstr "Προεπιλογή (Μέγ.)"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Max"], Value = ((int)ResizeMode.Max).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:339
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:337
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Max"
 msgstr "Μέγιστο"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Crop"], Value = ((int)ResizeMode.Crop).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:340
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:338
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Crop"
 msgstr "Περικοπή"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Pad"], Value = ((int)ResizeMode.Pad).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:341
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:339
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Pad"
 msgstr ""
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["BoxPad"], Value = ((int)ResizeMode.BoxPad).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:342
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:340
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "BoxPad"
 msgstr ""
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Min"], Value = ((int)ResizeMode.Min).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:343
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:341
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Min"
 msgstr "Ελάχιστο"
 
 #. model.AvailableResizeModes.Add(new SelectListItem() { Text = S["Stretch"], Value = ((int)ResizeMode.Stretch).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:344
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:342
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Stretch"
 msgstr "Τέντωμα"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Bmp"], Value = ((int)Format.Bmp).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:348
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:346
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Bmp"
 msgstr "Bmp"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Gif"], Value = ((int)Format.Gif).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:349
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:347
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Gif"
 msgstr "Gif"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Jpg"], Value = ((int)Format.Jpg).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:350
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:348
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Jpg"
 msgstr "Jpg"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Png"], Value = ((int)Format.Png).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:351
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:349
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Png"
 msgstr "Png"
 
 #. model.AvailableFormats.Add(new SelectListItem() { Text = S["Tga"], Value = ((int)Format.Tga).ToString() });
-#: OrchardCore.Media\Controllers\MediaProfilesController.cs:352
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:350
 msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "Tga"
 msgstr "Tga"
 
+#. model.AvailableFormats.Add(new SelectListItem() { Text = S["WebP"], Value = ((int)Format.WebP).ToString() });
+#: OrchardCore.Media\Controllers\MediaProfilesController.cs:351
+msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
+msgid "WebP"
+msgstr ""
+
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:119
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:132
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: There was an error handling the files."
 msgstr "{0}: Υπήρξε σφάλμα κατά την επεξεργασία των αρχείων."
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: A media is required.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:130
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:143
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: A media is required."
 msgstr "{0}: Κάποιο πολυμέσα πρέπει να συμπληρωθεί."
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: Selecting multiple media is forbidden.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:135
+#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:148
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr "{0}: Η επιλογή πολλαπλών πολυμέσων είναι απαγορευμένη."
 
 #. Description = S["Media assets are items that are part of your media library."],
-#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:30
+#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:31
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media assets are items that are part of your media library."
 msgstr "Οι πόροι πολυμέσων είναι στοιχεία που αποτελούν μέρος της βιβλιοθήκης πολυμέσων σας."
 
 #. Description = S["Media asset path."]
-#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:36
+#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:37
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Media asset path."
 msgstr "Διαδρομή των πόρων των πολυμέσων."
 
 #. Description = S["Whether to get the assets from just the top directory or from all sub-directories as well."]
-#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:41
+#: OrchardCore.Media\GraphQL\MediaAssetQuery.cs:42
 msgctxt "OrchardCore.Media.GraphQL.MediaAssetQuery"
 msgid "Whether to get the assets from just the top directory or from all sub-directories as well."
 msgstr "Είτε να πάρετε τους πόρους από τον ακριβώς από πάνω κατάλογο ή από όλους τους υπο-καταλόγους."
 
 #. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fas fa-compress-alt" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:25
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:27
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Small Thumbs"
 msgstr " Μικρές Μινιατούρες"
 
 #. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fas fa-expand-alt" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:26
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:28
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Large Thumbs"
 msgstr " Μεγάλες Μινιατούρες"
 
 #. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:37
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:39
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
@@ -335,37 +341,37 @@ msgid "Standard"
 msgstr "Καθιερωμένο"
 
 #. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fas fa-compress-alt" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:25
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:27
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Small Thumbs"
 msgstr " Μικρές Μινιατούρες"
 
 #. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fas fa-expand-alt" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:26
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:28
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Large Thumbs"
 msgstr " Μεγάλες Μινιατούρες"
 
 #. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:34
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:36
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:49
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:51
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Select Media"
 msgstr "Επιλογή Πολυμέσων"
 
 #. <button type="button" class="btn btn-primary mediaFieldSelectButton">@T["OK"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:54
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:56
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "OK"
 msgstr "Εντάξει"
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:55
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:57
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"
@@ -382,7 +388,7 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Required"
 msgstr "Απαιτείται"
 
-#. <span class="hint">— @T["Whether a media is required."]</span>
+#. <span class="hint dashed">@T["Whether a media is required."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Whether a media is required."
@@ -394,7 +400,7 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Multiple"
 msgstr "Πολλαπλά"
 
-#. <span class="hint">— @T["Whether multiple media can be selected."]</span>
+#. <span class="hint dashed">@T["Whether multiple media can be selected."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Whether multiple media can be selected."
@@ -406,7 +412,7 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Allow media text"
 msgstr "Να επιτρέπεται το κείμενο πολυμέσων"
 
-#. <span class="hint">— @T["Whether media text editing is allowed."]</span>
+#. <span class="hint dashed">@T["Whether media text editing is allowed."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Whether media text editing is allowed."
@@ -418,7 +424,7 @@ msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Allow anchors"
 msgstr "Επιτρέψτε αγκυρώσεις"
 
-#. <span class="hint">— @T["Whether selecting an anchor point for resizing is allowed."]</span>
+#. <span class="hint dashed">@T["Whether selecting an anchor point for resizing is allowed."]</span>
 #: OrchardCore.Media\Views\MediaFieldSettings.Edit.cshtml:28
 msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
 msgid "Whether selecting an anchor point for resizing is allowed."
@@ -608,132 +614,138 @@ msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "View"
 msgstr "Προβολή"
 
-#. <input type="hidden" id="t-uploads" value="@T["Uploads"]" />
+#. <input type="hidden" id="t-error" value="@T["This file exceeds the maximum upload size"]" />
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:133
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "This file exceeds the maximum upload size"
+msgstr ""
+
+#. <input type="hidden" id="t-uploads" value="@T["Uploads"]" />
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:136
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Uploads"
 msgstr "Μεταφορτώσεις"
 
 #. <input type="hidden" id="t-errors" value="@T["Errors"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:134
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:137
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Errors"
 msgstr "Σφάλματα"
 
 #. <input type="hidden" id="t-clear-errors" value="@T["Clear Errors"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:135
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:138
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Clear Errors"
 msgstr "Καθαρισμός σφαλμάτων"
 
 #. <input type="hidden" id="t-image-header" value="@T["Image"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:138
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Image"
 msgstr "Εικόνα"
 
 #. <input type="hidden" id="t-name-header" value="@T["Name"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:139
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Name"
 msgstr "Όνομα"
 
 #. <input type="hidden" id="t-lastModify-header" value="@T["Last modification"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last modification"
 msgstr "Τελευταία τροποποίηση"
 
 #. <input type="hidden" id="t-size-header" value="@T["Size"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:144
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Size"
 msgstr "Μέγεθος"
 
 #. <input type="hidden" id="t-type-header" value="@T["Type"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Type"
 msgstr "Τύπος"
 
 #. <input type="hidden" id="t-pager-first-button" value="@T["First"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "First"
 msgstr "Πρώτο"
 
 #. <input type="hidden" id="t-pager-previous-button" value="@T["Previous"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:146
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Previous"
 msgstr "Προηγούμενο"
 
 #. <input type="hidden" id="t-pager-next-button" value="@T["Next"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:150
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Next"
 msgstr "Επόμενο"
 
 #. <input type="hidden" id="t-pager-last-button" value="@T["Last"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:151
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last"
 msgstr "Τελευταίο"
 
 #. <input type="hidden" id="t-pager-page-size-label" value="@T["Page Size"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page Size"
 msgstr "Μέγεθος Σελίδας"
 
 #. <input type="hidden" id="t-pager-page-label" value="@T["Page:"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:150
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:153
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page:"
 msgstr "Σελίδα:"
 
 #. <input type="hidden" id="t-pager-total-label" value="@T["Total items:"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:151
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:154
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Total items:"
 msgstr "Συνολικά αντικείμενα:"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Create Folder"]</h5>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:157
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:160
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Create Folder"
 msgstr "Δημιουργία φακέλου"
 
 #. <label for="input" class="form-control-label" id="input-label">@T["Folder name"]</label>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:162
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:165
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Folder name"
 msgstr "Όνομα φακέλου"
 
 #. <button type="button" class="btn btn-primary" id="modalFooterOk">@T["Ok"]</button>
 #. <button type="button" class="btn btn-primary" id="renameMediaModalFooterOk">@T["Ok"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:168
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:191
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:171
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:194
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Ok"
 msgstr "Οκ"
 
 #. <button type="button" class="btn btn-light" data-bs-dismiss="modal">@T["Cancel"]</button>
 #. <button type="button" class="btn btn-light" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:169
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:192
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:172
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:195
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Cancel"
 msgstr "Άκυρο"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Rename Item"]</h5>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:179
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:182
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Rename Item"
 msgstr "Μετονομασία αντικειμένου"
 
 #. <label for="input" class="form-control-label" id="input-label">@T["New Name"]</label>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:184
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:187
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "New Name"
 msgstr "Νέο Όνομα"
@@ -1242,25 +1254,25 @@ msgid "Media Profiles"
 msgstr "Προφίλ Πολυμέσων"
 
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:21
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:22
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-end create" role="button">@T["Add Profile"]</a>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:24
+#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add Profile"]</a>
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:26
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Add Profile"
 msgstr "Προσθήκη Προφίλ"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:37
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:39
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Select All"
 msgstr "Επιλογή Όλων"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "1 item"
 msgid_plural "{0} items"
@@ -1268,13 +1280,13 @@ msgstr[0] "1 αντικείμενο"
 msgstr[1] "{0} αντικείμενα"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Items {0} to {1}"
 msgstr "Αντικειμένα {0} έως {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:38
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
@@ -1282,45 +1294,45 @@ msgstr[0] " / {0} αντικείμενο συνολικά"
 msgstr[1] " / {0} αντικείμενα συνολικά"
 
 #. @T["Actions"]
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:45
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:47
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Actions"
 msgstr "Ενέργειες"
 
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:50
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:52
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Bulk Action"
 msgstr "Μαζική Ενέργεια"
 
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:50
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:52
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Are you sure you want to {0} these items?"
 msgstr "Είστε βέβαιοι ότι θέλετε να {0} αυτά τα στοιχεία;"
 
 #. <a asp-action="Edit" asp-route-name="@entry.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:66
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:68
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
 #. <a asp-action="Delete" asp-route-name="@entry.Name" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:67
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:69
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Delete"
 msgstr "Διαγραφή"
 
 #. @T["<strong>Nothing here!</strong> There are no media profiles for the moment."]
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:82
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:84
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "<strong>Nothing here!</strong> There are no media profiles for the moment."
 msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Δεν υπάρχουν προφίλ πολυμέσων προς το παρόν."
 
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:131
-#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:142
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:135
+#: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:146
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "selected"
 msgstr "επιλεγμένο"
