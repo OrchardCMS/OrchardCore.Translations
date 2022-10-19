@@ -47,7 +47,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     $csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
     $pkgDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath)
 
-    $icon = [IO.Path]::Combine($pkgFolderPath, "icon.png")
+    $icon = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath, "icon.png")
     echo "Copying '$env:GITHUB_WORKSPACE/.github/workflows/nuget-icon.png to  $icon ..."
     Copy-Item -Path "$env:GITHUB_WORKSPACE/.github/workflows/nuget-icon.png" -Destination $icon
 
