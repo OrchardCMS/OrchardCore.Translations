@@ -16,6 +16,9 @@ $pkgPropsExtension = "props"
 $pkgBuildFolderName = "buildTransitive"
 $pkgSpecTemplate = "_template.$pkgSpecExtension"
 $pkgPropsTemplate = "_template.$pkgPropsExtension"
+$pkgIconFile = "icon.png"
+$csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
+$iconSrcPath = "$env:GITHUB_WORKSPACE/.github/workflows/nuget-icon.png"
 
 function createNuGetPackage([string]$pkgName, [string]$culture, [string]$cultureDisplayName)
 {
@@ -44,8 +47,11 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath, $pkgSpecFileName)
-    $csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
     $pkgDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath)
+
+    $iconDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath, $pkgIconFile)
+    echo "Copying $iconSrcPath to $iconDestinationPath ..."
+    Copy-Item -Path $iconSrcPath -Destination $iconDestinationPath
 
     dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:PackageOutputPath=$pkgDestinationPath # | Out-Null
 }
@@ -61,11 +67,14 @@ function createNuGetMetaPackage()
     
     $pkgSpecFileName = "$pkgName.$pkgSpecExtension"
     $pkgSpecFilePath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $artifactsFolderName, $pkgSpecFileName)
-    $csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
     $pkgDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $pkgFolderPath)
     $pkgFolderPath = [IO.Path]::Combine($artifactsFolderName, $pkgId)
 
     echo "Project file in '$csprojFilePath'"
+
+    $iconDestinationPath = [IO.Path]::Combine($env:GITHUB_WORKSPACE, $artifactsFolderName, $pkgIconFile)
+    echo "Copying '$iconSrcPath to  $iconDestinationPath ..."
+    Copy-Item -Path $iconSrcPath -Destination $iconDestinationPath
 
     dotnet pack $csprojFilePath -p:NuspecFile=$pkgSpecFilePath -p:PackageOutputPath=$pkgDestinationPath # | Out-Null
 }
