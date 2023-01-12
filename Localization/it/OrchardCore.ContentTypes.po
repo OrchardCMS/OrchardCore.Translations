@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2022-10-11 20:02\n"
+"PO-Revision-Date: 2023-01-10 16:58\n"
 
 #. builder.Add(S["Content"], content => content
 #: OrchardCore.ContentTypes\AdminMenu.cs:28
@@ -49,9 +49,9 @@ msgstr "Parti di Contenuto"
 #. ModelState.AddModelError("DisplayName", S["The Display Name can't be empty."]);
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:101
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:354
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:627
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:752
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:921
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:643
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:769
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:938
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The Display Name can't be empty."
 msgstr "Il nome visualizzato non può essere vuoto."
@@ -69,7 +69,7 @@ msgstr "Un tipo con lo stesso nome visualizzato esiste già."
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:111
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:379
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:464
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:637
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:653
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The Technical Name can't be empty."
 msgstr "Il nome tecnico non può essere vuoto."
@@ -81,7 +81,7 @@ msgstr "Il nome tecnico non può essere vuoto."
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:116
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:364
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:474
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:647
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:663
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The Technical Name must start with a letter."
 msgstr "Il nome tecnico deve iniziare con una lettera."
@@ -93,7 +93,7 @@ msgstr "Il nome tecnico deve iniziare con una lettera."
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:121
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:369
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:479
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:652
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:668
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The Technical Name contains invalid characters."
 msgstr "Il nome tecnico contiene dei caratteri non validi."
@@ -145,7 +145,7 @@ msgstr "La parte di contenuto \"{0}\" è stata aggiunta."
 #. ModelState.AddModelError("DisplayName", S["A part with the same Display Name already exists."]);
 #. ModelState.AddModelError("DisplayName", S["A part with the same Display Name already exists."]);
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:359
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:926
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:943
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "A part with the same Display Name already exists."
 msgstr "Una parte con lo stesso nome visualizzato esiste già."
@@ -182,46 +182,52 @@ msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The settings of \"{0}\" have been saved."
 msgstr "Le impostazioni di \"{0}\" sono state salvate."
 
+#. await _notifier.WarningAsync(H["There are no fields."]);
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:592
+msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
+msgid "There are no fields."
+msgstr "Non ci sono campi."
+
 #. ModelState.AddModelError("DisplayName", S["A field with the same Display Name already exists."]);
 #. ModelState.AddModelError("DisplayName", S["A field with the same Display Name already exists."]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:632
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:757
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:648
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:774
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "A field with the same Display Name already exists."
 msgstr "Un campo con lo stesso nome visualizzato esiste già."
 
 #. ModelState.AddModelError("Name", S["A field with the same Technical Name already exists."]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:642
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:658
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "A field with the same Technical Name already exists."
 msgstr "Un campo con lo stesso nome tecnico esiste già."
 
 #. await _notifier.SuccessAsync(H["The field \"{0}\" has been added.", viewModel.DisplayName]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:668
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:684
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The field \"{0}\" has been added."
 msgstr "Il campo \"{0}\" è stato aggiunto."
 
 #. await _notifier.InformationAsync(H["Display name changed to {0}.", viewModel.DisplayName]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:770
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:787
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "Display name changed to {0}."
 msgstr "Nome visualizzato cambiato in {0}."
 
 #. await _notifier.SuccessAsync(H["The \"{0}\" field settings have been saved.", field.DisplayName()]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:789
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:806
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The \"{0}\" field settings have been saved."
 msgstr "Le impostazioni del campo \"{0}\" sono state salvate."
 
 #. await _notifier.SuccessAsync(H["The \"{0}\" field has been removed.", field.DisplayName()]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:833
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:850
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The \"{0}\" field has been removed."
 msgstr "Il campo \"{0}\" è stato rimosso."
 
 #. await _notifier.SuccessAsync(H["The \"{0}\" part settings have been saved.", part.DisplayName()]);
-#: OrchardCore.ContentTypes\Controllers\AdminController.cs:952
+#: OrchardCore.ContentTypes\Controllers\AdminController.cs:969
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "The \"{0}\" part settings have been saved."
 msgstr "Le impostazioni per la parte \"{0}\" sono state salvate."
@@ -332,13 +338,13 @@ msgstr "Nome del tipo che verrà visualizzato a schermo."
 #: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:5
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #. <span class="hint">@T["(Optional) Description of the content type"]</span>
 #: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:8
 msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "(Optional) Description of the content type"
-msgstr ""
+msgstr "(facoltativo) Descrizione del tipo di contenuto"
 
 #. <label class="form-check-label" asp-for="Creatable">@T["Creatable"]</label>
 #: OrchardCore.ContentTypes\Views\ContentTypeSettings.Edit.cshtml:14
@@ -643,87 +649,87 @@ msgid "Create"
 msgstr "Crea"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Content Type - {0}", Model.TypeDefinition.DisplayName])</h1></zone>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:25
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:34
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Edit Content Type - {0}"
 msgstr "Modifica Tipo di Contenuto - {0}"
 
 #. <h3>@T["Fields"]</h3>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:42
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:53
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Fields"
 msgstr "Campi"
 
-#. <a asp-route-action="EditField" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@field.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#. <a asp-route-action="EditTypePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@part.Name" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:52
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:93
+#. <a asp-route-action="EditField" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@fieldDefintion.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
+#. <a asp-route-action="EditTypePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@partDefinition.Name" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:63
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:109
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Edit"
 msgstr "Modifica"
 
-#. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#. <a asp-route-action="RemovePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@part.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:53
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:94
+#. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@fieldDefintion.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+#. <a asp-route-action="RemovePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@partDefinition.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:65
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:110
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Remove"
 msgstr "Elimina"
 
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fas fa-tv text-info" aria-hidden="true"></i> @field.DisplayMode()</span>
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fas fa-tv text-info" aria-hidden="true"></i> @part.DisplayMode()</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:59
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:104
+#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fas fa-tv text-info" aria-hidden="true"></i> @fieldDefintion.DisplayMode()</span>
+#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fas fa-tv text-info" aria-hidden="true"></i> @partDefinition.DisplayMode()</span>
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:71
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:120
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Display mode"
 msgstr "Modalità di visualizzazione"
 
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa fa-edit text-info" aria-hidden="true"></i> @field.Editor()</span>
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa fa-edit text-info" aria-hidden="true"></i> @part.Editor()</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:63
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:108
+#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa fa-edit text-info" aria-hidden="true"></i> @fieldDefintion.Editor()</span>
+#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa fa-edit text-info" aria-hidden="true"></i> @partDefinition.Editor()</span>
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:75
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:124
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Editor"
 msgstr "Editor"
 
 #. <a asp-route-action="AddFieldTo" asp-route-id="@Model.TypeDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:73
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:87
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Field"
 msgstr "Aggiungi campo"
 
 #. <h3>@T["Parts"]</h3>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:76
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:92
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Parts"
 msgstr "Parti"
 
 #. <span class="hint dashed">@T["Contains the fields for the current type"]</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:99
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:115
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Contains the fields for the current type"
 msgstr "Contiene le informazioni dei campi per il tipo di contenuto"
 
 #. <a asp-route-action="AddPartsTo" asp-route-id="@Model.TypeDefinition.Name" class="btn btn-info btn-sm" role="button">@T["Add Parts"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:118
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:134
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Parts"
 msgstr "Aggiungi parti"
 
 #. <a asp-route-action="AddReusablePartTo" asp-route-id="@Model.TypeDefinition.Name" class="btn btn-info btn-sm" role="button">@T["Add Named Part"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:119
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:135
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Named Part"
 msgstr "Aggiungi parte con nome"
 
 #. <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:123
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:139
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Save"
 msgstr "Salva"
 
 #. <button class="btn btn-danger delete" type="submit" name="submit.Delete" value="Delete" data-url-af="RemoveUrl">@T["Delete"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:124
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:140
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Delete"
 msgstr "Elimina"
@@ -783,43 +789,43 @@ msgid "Cancel"
 msgstr "Annulla"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Content Part - {0}", Model.DisplayName])</h1></zone>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:12
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:17
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Edit Content Part - {0}"
 msgstr "Modifica parte del contenuto - {0}"
 
 #. <h3>@T["Fields"]</h3>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:27
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:34
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Fields"
 msgstr "Campi"
 
 #. <a asp-route-action="EditField" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:37
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:46
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Edit"
 msgstr "Modifica"
 
 #. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:38
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:48
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Remove"
 msgstr "Elimina"
 
 #. <a asp-route-action="AddFieldTo" asp-route-id="@Model.PartDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:49
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:61
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Add Field"
 msgstr "Aggiungi campo"
 
 #. <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:53
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:66
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Save"
 msgstr "Salva"
 
 #. <button class="btn btn-danger delete" type="submit" name="submit.Delete" value="Delete" data-url-af="RemoveUrl">@T["Delete"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:54
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:67
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Delete"
 msgstr "Elimina"
@@ -1080,7 +1086,7 @@ msgstr "Modifica"
 #: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:10
 msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
 msgid "Technical Name"
-msgstr ""
+msgstr "Nome tecnico"
 
 #. <a id="btn-create-@Model.Name" asp-route-area="OrchardCore.Contents" asp-route-action="Create" asp-route-id="@Model.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-success btn-sm">@T["Create New {0}", Model.DisplayName]</a>
 #: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:20
@@ -1092,7 +1098,7 @@ msgstr "Aggiungi {0}"
 #: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:22
 msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
 msgid "List Items"
-msgstr "Elenca elementi"
+msgstr "Mostra contenuti"
 
 #. <a role="btn-edit-@Model.Name" asp-route-action="Edit" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:23
