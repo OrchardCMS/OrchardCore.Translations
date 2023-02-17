@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Norwegian Bokmal\n"
 "Language: nb_NO\n"
-"PO-Revision-Date: 2022-11-03 17:23\n"
+"PO-Revision-Date: 2023-02-17 16:41\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Facebook\AdminMenu.cs:27
@@ -52,6 +52,12 @@ msgctxt "OrchardCore.Facebook.AdminMenuLogin"
 msgid "Facebook"
 msgstr ""
 
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Facebook\Login\ViewModels\FacebookLoginSettingsViewModel.cs:7
+msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
+msgid "Invalid path"
+msgstr "Ugyldig sti"
+
 #. results.Add(new ValidationResult(S["The AppId is required."], new[]
 #: OrchardCore.Facebook\Services\FacebookService.cs:55
 msgctxt "OrchardCore.Facebook.Services.FacebookService"
@@ -64,12 +70,6 @@ msgctxt "OrchardCore.Facebook.Services.FacebookService"
 msgid "The App Secret is required."
 msgstr "API Secret er obligatorisk."
 
-#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
-#: OrchardCore.Facebook\Login\ViewModels\FacebookLoginSettingsViewModel.cs:7
-msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
-msgid "Invalid path"
-msgstr "Ugyldig sti"
-
 #. updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 #: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:85
 msgctxt "OrchardCore.Facebook.Widgets.Drivers.FacebookPluginPartDisplayDriver"
@@ -80,6 +80,36 @@ msgstr "FaceBook hovedinneholdet har ingen gyldig Liquid uttrykk. Detaljer: {0}"
 #: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:41
 msgctxt "OrchardCore.Facebook.Widgets.Settings.FacebookPluginPartSettingsDisplayDriver"
 msgid "The Body doesn't contain a valid Liquid expression. Details: {0}"
+msgstr ""
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Edit"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <span class="hint">@T["Adds Facebook Login settings to the plan."]</span>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Adds Facebook Login settings to the plan."
+msgstr ""
+
+#. <h4 class="card-title">@T["Facebook Login Settings"]</h4>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Facebook Login Settings"
+msgstr ""
+
+#. <p>@T["Exports the Facebook Login settings."]</p>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Exports the Facebook Login settings."
 msgstr ""
 
 #. @T["The current tenant will be reloaded when the settings are saved."]
@@ -130,14 +160,14 @@ msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "<a href=\"{0}\">Facebook Integration settings</a> must be configured in order to use the Login Feature"
 msgstr ""
 
-#. <label asp-for="Liquid">@T["Body"]</label>
+#. <label asp-for="Liquid" class="@Orchard.GetLabelCssClasses()">@T["Body"]</label>
 #: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:13
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPart.Edit"
 msgid "Body"
 msgstr ""
 
 #. <span class="hint">@T["The template of the plugin, in Liquid format."]</span>
-#: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:15
+#: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:16
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPart.Edit"
 msgid "The template of the plugin, in Liquid format."
 msgstr ""
@@ -254,35 +284,5 @@ msgstr ""
 #: OrchardCore.Facebook\Views\NavigationItemText-facebookApp.Id.cshtml:1
 msgctxt "OrchardCore.Facebook.Views.NavigationItemText-facebookApp.Id"
 msgid "Facebook App"
-msgstr ""
-
-#. <h5>@T["Facebook Login Settings"]</h5>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Edit"
-msgid "Facebook Login Settings"
-msgstr ""
-
-#. <h5>@T["Facebook Login Settings"]</h5>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
-msgid "Facebook Login Settings"
-msgstr ""
-
-#. <span class="hint">@T["Adds Facebook Login settings to the plan."]</span>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:5
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
-msgid "Adds Facebook Login settings to the plan."
-msgstr ""
-
-#. <h4 class="card-title">@T["Facebook Login Settings"]</h4>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
-msgid "Facebook Login Settings"
-msgstr ""
-
-#. <p>@T["Exports the Facebook Login settings."]</p>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:4
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
-msgid "Exports the Facebook Login settings."
 msgstr ""
 
