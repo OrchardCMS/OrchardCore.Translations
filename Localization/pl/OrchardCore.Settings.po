@@ -10,22 +10,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2022-10-11 20:26\n"
+"PO-Revision-Date: 2023-02-17 17:00\n"
 
-#. builder.Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Settings\AdminMenu.cs:24
+#. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
+#: OrchardCore.Settings\AdminMenu.cs:25
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #. .Add(S["Settings"], "1", settings => settings
-#: OrchardCore.Settings\AdminMenu.cs:25
+#: OrchardCore.Settings\AdminMenu.cs:28
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Settings"
 msgstr ""
 
 #. .Add(S["General"], "1", entry => entry
-#: OrchardCore.Settings\AdminMenu.cs:26
+#: OrchardCore.Settings\AdminMenu.cs:29
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr ""
@@ -54,10 +54,28 @@ msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The Base url must be a fully qualified URL."
 msgstr ""
 
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
+#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
+msgctxt "OrchardCore.Settings.Views.Admin.Index"
+msgid "Settings"
+msgstr ""
+
+#. <span class="icon"><i class="fa fa-gear" aria-hidden="true"></i></span><span class="title">@T["Configuration"]</span>
+#: OrchardCore.Settings\Views\NavigationItemText-configuration.Id.cshtml:1
+msgctxt "OrchardCore.Settings.Views.NavigationItemText-configuration.Id"
+msgid "Configuration"
+msgstr ""
+
 #. <span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span class="title">@T["General"]</span>
 #: OrchardCore.Settings\Views\NavigationItemText-general.Id.cshtml:1
 msgctxt "OrchardCore.Settings.Views.NavigationItemText-general.Id"
 msgid "General"
+msgstr ""
+
+#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
+#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
+msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
+msgid "Delete"
 msgstr ""
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
@@ -276,12 +294,6 @@ msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Cancel"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
-#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
-msgctxt "OrchardCore.Settings.Views.Admin.Index"
-msgid "Settings"
-msgstr ""
-
 #. <h5>@T["Site Settings"]</h5>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
@@ -316,11 +328,5 @@ msgstr ""
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports the current site settings."
-msgstr ""
-
-#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
-#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
-msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
-msgid "Delete"
 msgstr ""
 
