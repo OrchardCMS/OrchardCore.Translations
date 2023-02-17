@@ -1,96 +1,102 @@
-#: OrchardCore.Title\Drivers\TitlePartDisplayDriver.cs:60
+#: Title\Drivers\TitlePartDisplayDriver.cs:60
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Title), S["A value is required for Title."]);
 msgctxt "OrchardCore.Title.Drivers.TitlePartDisplayDriver"
 msgid "A value is required for Title."
 msgstr ""
 
-#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:48
+#: Title\Handlers\TitlePartHandler.cs:75
+#. context.Fail(S["A value is required for Title."], nameof(part.Title));
+msgctxt "OrchardCore.Title.Handlers.TitlePartHandler"
+msgid "A value is required for Title."
+msgstr ""
+
+#: Title\Settings\TitlePartSettingsDisplayDriver.cs:48
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 msgctxt "OrchardCore.Title.Settings.TitlePartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePart.DisplayOption.cshtml:4
+#: Title\Views\TitlePart.DisplayOption.cshtml:4
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePart.DisplayOption"
+msgctxt "Title.Views.TitlePart.DisplayOption"
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:13
-#. <label asp-for="Title">@T["Title"]</label>
-msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+#: Title\Views\TitlePart.Edit.cshtml:13
+#. <label asp-for="Title" class="@Orchard.GetLabelCssClasses()">@T["Title"]</label>
+msgctxt "Title.Views.TitlePart.Edit"
 msgid "Title"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:21
+#: Title\Views\TitlePart.Edit.cshtml:22
 #. <span class="hint">@T["Leave empty to auto-generate the title using the pattern."]</span>
-msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+msgctxt "Title.Views.TitlePart.Edit"
 msgid "Leave empty to auto-generate the title using the pattern."
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePart.Edit.cshtml:24
+#: Title\Views\TitlePart.Edit.cshtml:25
 #. <span class="hint">@T["The title will be auto-generated using the pattern."]</span>
-msgctxt "OrchardCore.Title.Views.TitlePart.Edit"
+msgctxt "Title.Views.TitlePart.Edit"
 msgid "The title will be auto-generated using the pattern."
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePart.Option.cshtml:4
+#: Title\Views\TitlePart.Option.cshtml:4
 #. <option value="" selected="@String.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePart.Option"
+msgctxt "Title.Views.TitlePart.Option"
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:16
+#: Title\Views\TitlePartSettings.Edit.cshtml:16
 #. <label asp-for="Options">@T["Options"]</label>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Options"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:18
+#: Title\Views\TitlePartSettings.Edit.cshtml:18
 #. <option value="@TitlePartOptions.Editable" selected="@(Model.Options == TitlePartOptions.Editable)">@T["Title is editable"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Title is editable"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:19
+#: Title\Views\TitlePartSettings.Edit.cshtml:19
 #. <option value="@TitlePartOptions.EditableRequired" selected="@(Model.Options == TitlePartOptions.EditableRequired)">@T["Title is editable and required"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Title is editable and required"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:20
+#: Title\Views\TitlePartSettings.Edit.cshtml:20
 #. <option value="@TitlePartOptions.GeneratedDisabled" selected="@(Model.Options == TitlePartOptions.GeneratedDisabled)">@T["Title is generated and input is disabled"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Title is generated and input is disabled"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:21
+#: Title\Views\TitlePartSettings.Edit.cshtml:21
 #. <option value="@TitlePartOptions.GeneratedHidden" selected="@(Model.Options == TitlePartOptions.GeneratedHidden)">@T["Title is generated and input is hidden"]</option>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Title is generated and input is hidden"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:28
+#: Title\Views\TitlePartSettings.Edit.cshtml:28
 #. <label asp-for="RenderTitle" class="form-check-label">@T["Render Title"]</label>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Render Title"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:29
+#: Title\Views\TitlePartSettings.Edit.cshtml:29
 #. <span class="hint dashed">@T["Check to render the title in display views."]</span>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Check to render the title in display views."
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:35
+#: Title\Views\TitlePartSettings.Edit.cshtml:35
 #. <label asp-for="Pattern">@T["Pattern"]</label>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "Pattern"
 msgstr ""
 
-#: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:37
+#: Title\Views\TitlePartSettings.Edit.cshtml:37
 #. <span class="hint">@T["The pattern used to render the title of this content type. With Liquid support."]</span>
-msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
+msgctxt "Title.Views.TitlePartSettings.Edit"
 msgid "The pattern used to render the title of this content type. With Liquid support."
 msgstr ""
 
