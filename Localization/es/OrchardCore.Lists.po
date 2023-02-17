@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-11-03 17:19\n"
+"PO-Revision-Date: 2023-02-17 16:48\n"
 
 #. Description = S["the list part of the content item"];
 #: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:13
@@ -31,7 +31,7 @@ msgid "Represents a link to the parent content item, and the order that content 
 msgstr "Representa un enlace al elemento de contenido padre, y el orden que el contenido está representado."
 
 #. Description = S["Represents a collection of content items."];
-#: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:25
+#: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:24
 msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
 msgid "Represents a collection of content items."
 msgstr "Representa un conjunto de elementos de contenido."
@@ -66,112 +66,118 @@ msgstr "Se debe seleccionar al menos un tipo de contenido."
 #: OrchardCore.Lists\Views\ListPart.cshtml:20
 msgctxt "OrchardCore.Lists.Views.ListPart"
 msgid "The list is empty"
-msgstr "La lista está vacía"
+msgstr ""
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.Lists\Views\ListPart.DisplayOption.cshtml:4
 msgctxt "OrchardCore.Lists.Views.ListPart.DisplayOption"
 msgid "Standard"
-msgstr "Estándar"
+msgstr ""
 
 #. <a asp-action="EditTypePart" asp-controller="Admin" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.ListPart.ContentItem.ContentType" asp-route-name="ListPart">@T["Please specify at least one contained content type."]</a>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:48
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Please specify at least one contained content type."
-msgstr "Por favor, especifique al menos un tipo de contenido contenido."
+msgstr ""
 
 #. <i class="fa fa-filter" title="@T["Filters"]" aria-hidden="true"></i>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:60
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Filters"
-msgstr "Filtros"
+msgstr ""
 
 #. <a class="dropdown-item" href="?Status=Draft">@T["Only draft items"]</a>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:64
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Only draft items"
-msgstr "Sólo elementos borradores"
+msgstr ""
 
 #. <a class="dropdown-item" href="?Status=Published">@T["Only published items"]</a>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:65
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Only published items"
-msgstr "Sólo elementos publicados"
+msgstr ""
 
 #. <a class="dropdown-item" href="?Status=Owner">@T["Owned by me"]</a>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:66
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Owned by me"
-msgstr "Creado por mí"
+msgstr ""
 
 #. <input name="@nameof(ListPartFilterViewModel.DisplayText)" value="@Model.ListPartFilterViewModel.DisplayText" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:70
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "Search"
-msgstr "Search"
+msgstr ""
 
 #. <div id="update-order-error-message" class="d-none" data-message="@T["There was an error when updating the order of the items."]" />
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:102
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "There was an error when updating the order of the items."
-msgstr "Hubo un error al actualizar el orden de los elementos."
+msgstr ""
 
 #. <p class="alert alert-warning">@T["The list is empty."]</p>
 #: OrchardCore.Lists\Views\ListPartDetailAdmin.cshtml:107
 msgctxt "OrchardCore.Lists.Views.ListPartDetailAdmin"
 msgid "The list is empty."
-msgstr "La lista está vacía."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="DisableRssFeed">@T["Disable RSS feed link generation."]</label>
+#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:6
+msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
+msgid "Disable RSS feed link generation."
+msgstr ""
 
 #. <label asp-for="FeedProxyUrl">@T["Feed proxy Url"]</label>
-#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:5
+#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:10
 msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "Feed proxy Url"
-msgstr "Url de proxy de alimentación"
+msgstr ""
 
 #. <span class="hint">@T["Provide a custom public url which will be used to proxy the local rss feed."]</span>
-#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:7
-msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
-msgid "Provide a custom public url which will be used to proxy the local rss feed."
-msgstr "Proporciona una url pública personalizada que se utilizará para el proxy del rss feed local."
-
-#. <span class="hint">@T["The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>.", Url.Action("Index", "Feed", new { area = "OrchardCore.Feeds", ContentItemId = Model.ContentItem.ContentItemId }, Context.Request.Scheme)]</span>
-#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:8
-msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
-msgid "The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>."
-msgstr "El feed actual está disponible en <a href=\"{0}\" target=\"_blank\">{0}</a>."
-
-#. <label asp-for="FeedItemsCount">@T["Feed items count"]</label>
 #: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:12
 msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
+msgid "Provide a custom public url which will be used to proxy the local rss feed."
+msgstr ""
+
+#. <span class="hint">@T["The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>.", Url.Action("Index", "Feed", new { area = "OrchardCore.Feeds", ContentItemId = Model.ContentItem.ContentItemId }, Context.Request.Scheme)]</span>
+#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:13
+msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
+msgid "The current feed is available at <a href=\"{0}\" target=\"_blank\">{0}</a>."
+msgstr ""
+
+#. <label asp-for="FeedItemsCount">@T["Feed items count"]</label>
+#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:17
+msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "Feed items count"
-msgstr "Número de elementos de alimentación"
+msgstr ""
 
 #. <span class="hint">@T["The number of elements to display in the feed."]</span>
-#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:14
+#: OrchardCore.Lists\Views\ListPartFeed.Edit.cshtml:19
 msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "The number of elements to display in the feed."
-msgstr "El número de elementos que se muestran en el feed."
+msgstr ""
 
 #. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List Items"]</a>
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:13
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:14
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "List Items"
 msgstr ""
 
 #. @T["Edit {0}", Model.ContainerContentTypeDefinition?.DisplayName]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:19
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:20
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Edit {0}"
 msgstr ""
 
 #. @T["Create {0}", contentTypeDefinition.DisplayName]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:33
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:31
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Create {0}"
 msgstr ""
 
 #. @T["New"]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:40
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:38
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "New"
 msgstr ""
@@ -180,37 +186,37 @@ msgstr ""
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Page Size"
-msgstr "Tamaño de página"
+msgstr ""
 
 #. <span class="hint">@T["The number of items to display per page."]</span>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "The number of items to display per page."
-msgstr "El número de elementos a mostrar por página."
+msgstr ""
 
 #. <label class="form-check-label" asp-for="EnableOrdering">@T["Enable Ordering"]</label>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Enable Ordering"
-msgstr "Activar ordenación"
+msgstr ""
 
 #. <span class="hint dashed">@T["Check this option to enable manual ordering of items."]</span>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Check this option to enable manual ordering of items."
-msgstr "Marque esta opción para habilitar el pedido manual de artículos."
+msgstr ""
 
 #. <label asp-for="ContainedContentTypes">@T["Contained Content Types"]</label>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Contained Content Types"
-msgstr "Tipos de contenido incluídos"
+msgstr ""
 
 #. <span class="hint">@T["The content types that this list can contain, e.g. Blog Post for a Blog."]</span>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "The content types that this list can contain, e.g. Blog Post for a Blog."
-msgstr "Los tipos de contenido que esta lista puede incluir, por ejemplo, Blog Post para un Blog."
+msgstr ""
 
 #. <label class="form-check-label" asp-for="ShowHeader">@T["Show container's header"]</label>
 #: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:27
@@ -228,19 +234,19 @@ msgstr ""
 #: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:3
 msgctxt "OrchardCore.Lists.Views.ListPartSummaryAdmin"
 msgid "List Items"
-msgstr "Listar artículos"
+msgstr ""
 
 #. <h5>@T["Lists"]</h5>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:8
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Lists"
-msgstr "Listas"
+msgstr ""
 
 #. <label asp-for="IconForContentItems">@T["Icon for the content items"]</label>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:18
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon for the content items"
-msgstr "Icono para los elementos de contenido"
+msgstr ""
 
 #. @T["Icon"]
 #. @T["Icon"]
@@ -248,41 +254,41 @@ msgstr "Icono para los elementos de contenido"
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:72
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon"
-msgstr "Icono"
+msgstr ""
 
 #. @T["Add parent menu item"]
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:51
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Add parent menu item"
-msgstr "Añadir elemento de menú padre"
+msgstr ""
 
 #. <label asp-for="IconForParentLink">@T["Icon for the parent menu item"]</label>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:58
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon for the parent menu item"
-msgstr "Icono para el elemento del menú padre"
+msgstr ""
 
 #. <h5 class="modal-title">@T["Pick an icon"]</h5>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:95
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Pick an icon"
-msgstr "Seleccione un icono"
+msgstr ""
 
 #. <span class="text-muted dashed">@T["Lists"]</span>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:11
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeSummary"
 msgid "Lists"
-msgstr "Listas"
+msgstr ""
 
 #. <h4 class="card-title">@T["Lists"]</h4>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeThumbnail.cshtml:3
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeThumbnail"
 msgid "Lists"
-msgstr "Listas"
+msgstr ""
 
 #. <p>@T["Adds links for list content items"]</p>
 #: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeThumbnail.cshtml:4
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeThumbnail"
 msgid "Adds links for list content items"
-msgstr "Añade enlaces para los elementos de contenido de la lista"
+msgstr ""
 
