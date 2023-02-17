@@ -1,30 +1,30 @@
-#: OrchardCore.Setup\Controllers\SetupController.cs:99
+#: OrchardCore.Setup\Controllers\SetupController.cs:105
 #. ModelState.AddModelError(nameof(model.Password), S["The password is required."]);
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password is required."
 msgstr ""
 
-#: OrchardCore.Setup\Controllers\SetupController.cs:104
+#: OrchardCore.Setup\Controllers\SetupController.cs:110
 #. ModelState.AddModelError(nameof(model.PasswordConfirmation), S["The password confirmation doesn't match the password."]);
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password confirmation doesn't match the password."
 msgstr ""
 
-#: OrchardCore.Setup\Controllers\SetupController.cs:113
+#: OrchardCore.Setup\Controllers\SetupController.cs:119
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:118
+#: OrchardCore.Setup\Controllers\SetupController.cs:124
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "Invalid recipe."
 msgstr ""
 
-#: OrchardCore.Setup\Controllers\SetupController.cs:124
+#: OrchardCore.Setup\Controllers\SetupController.cs:130
 #. ModelState.AddModelError(nameof(model.Email), S["The email is invalid."]);
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The email is invalid."
 msgstr ""
 
-#: OrchardCore.Setup\Controllers\SetupController.cs:129
+#: OrchardCore.Setup\Controllers\SetupController.cs:135
 #. ModelState.AddModelError(nameof(model.UserName), S["User name '{0}' is invalid, can only contain letters or digits.", model.UserName]);
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "User name '{0}' is invalid, can only contain letters or digits."
@@ -168,9 +168,9 @@ msgid "What type of database to use?"
 msgstr ""
 
 #: OrchardCore.Setup\Views\Setup\Index.cshtml:171
-#. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString" data-table-prefix="@provider.HasTablePrefix" data-connection-string-sample="@T["The connection string to your database instance. e.g., {0}", provider.SampleConnectionString]">@provider.Name</option>
+#. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString" data-table-prefix="@provider.HasTablePrefix" data-connection-string-sample="@T["The connection string to your database instance, e.g. {0}.", provider.SampleConnectionString]">@provider.Name</option>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
-msgid "The connection string to your database instance. e.g., {0}"
+msgid "The connection string to your database instance, e.g. {0}."
 msgstr ""
 
 #: OrchardCore.Setup\Views\Setup\Index.cshtml:175
@@ -203,55 +203,73 @@ msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Show/hide connection string"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:199
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:200
+#. <label asp-for="Schema">@T["Table Schema"]</label>
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "Table Schema"
+msgstr ""
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:203
+#. <div class="text-muted form-text small">@T["When left blank, the default value on the server will be used."] @T["For example, '{0}' for SQL Server.", "dbo"]</div>
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "When left blank, the default value on the server will be used."
+msgstr ""
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:203
+#. <div class="text-muted form-text small">@T["When left blank, the default value on the server will be used."] @T["For example, '{0}' for SQL Server.", "dbo"]</div>
+msgctxt "OrchardCore.Setup.Views.Setup.Index"
+msgid "For example, '{0}' for SQL Server."
+msgstr ""
+
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:208
 #. <legend>@T["Super User"]</legend>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Super User"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:200
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:209
 #. <span class="text-muted form-text small">@T["The super user has all the rights. It should be used only during Setup and for disaster recovery."]</span>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The super user has all the rights. It should be used only during Setup and for disaster recovery."
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:203
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:212
 #. <label asp-for="UserName">@T["User name"]</label>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "User name"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:208
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:217
 #. <label for="Email">@T["Email"]</label>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Email"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:210
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:219
 #. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The email is invalid."
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:215
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:224
 #. <label asp-for="Password">@T["Password"]</label>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:217
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:226
 #. <input asp-for="Password" class="form-control" data-bs-toggle="popover" data-bs-placement="top" data-trigger="focus" data-title="@T["Password strength"]" data-bs-content="@passwordTooltip" required pattern="@passwordRegex" />
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password strength"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:225
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:234
 #. <label asp-for="PasswordConfirmation">@T["Password Confirmation"]</label>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password Confirmation"
 msgstr ""
 
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:237
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:246
 #. <button class="btn btn-primary" type="submit" id="SubmitButton">@T["Finish Setup"]</button>
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Finish Setup"
