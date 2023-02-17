@@ -10,22 +10,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2023-01-16 06:47\n"
+"PO-Revision-Date: 2023-02-17 17:00\n"
 
-#. builder.Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Settings\AdminMenu.cs:24
+#. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
+#: OrchardCore.Settings\AdminMenu.cs:25
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Configuration"
 msgstr "Cấu hình"
 
 #. .Add(S["Settings"], "1", settings => settings
-#: OrchardCore.Settings\AdminMenu.cs:25
+#: OrchardCore.Settings\AdminMenu.cs:28
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Settings"
 msgstr "Cài đặt"
 
 #. .Add(S["General"], "1", entry => entry
-#: OrchardCore.Settings\AdminMenu.cs:26
+#: OrchardCore.Settings\AdminMenu.cs:29
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr "Tổng quát"
@@ -54,149 +54,167 @@ msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The Base url must be a fully qualified URL."
 msgstr "Url cơ sở phải là một URL đủ điều kiện."
 
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
+#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
+msgctxt "OrchardCore.Settings.Views.Admin.Index"
+msgid "Settings"
+msgstr ""
+
+#. <span class="icon"><i class="fa fa-gear" aria-hidden="true"></i></span><span class="title">@T["Configuration"]</span>
+#: OrchardCore.Settings\Views\NavigationItemText-configuration.Id.cshtml:1
+msgctxt "OrchardCore.Settings.Views.NavigationItemText-configuration.Id"
+msgid "Configuration"
+msgstr ""
+
 #. <span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span class="title">@T["General"]</span>
 #: OrchardCore.Settings\Views\NavigationItemText-general.Id.cshtml:1
 msgctxt "OrchardCore.Settings.Views.NavigationItemText-general.Id"
 msgid "General"
-msgstr "Thông tin chung"
+msgstr ""
+
+#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
+#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
+msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
+msgid "Delete"
+msgstr ""
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:5
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
-msgstr "Trang web hiện tại sẽ được tải lại sau khi các cài đặt được lưu."
+msgstr ""
 
 #. <a class="nav-link active" id="site-tab" data-bs-toggle="tab" href="#site" role="tab" aria-controls="site" aria-selected="true">@T["Site"]</a>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:8
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Site"
-msgstr "Trang web"
+msgstr ""
 
 #. <a class="nav-link" id="resources-tab" data-bs-toggle="tab" href="#resources" role="tab" aria-controls="resources">@T["Resources"]</a>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:11
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Resources"
-msgstr "Nguồn tài nguyên"
+msgstr ""
 
 #. <a class="nav-link" id="cache-tab" data-bs-toggle="tab" href="#cache" role="tab" aria-controls="cache">@T["Cache"]</a>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:14
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Cache"
-msgstr "Bộ nhớ đệm"
+msgstr ""
 
 #. <label asp-for="SiteName">@T["Site name"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:20
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Site name"
-msgstr "Tên Website"
+msgstr ""
 
 #. <span class="hint">@T["The site name."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:23
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "The site name."
-msgstr "Tên của website."
+msgstr ""
 
 #. <label asp-for="PageTitleFormat">@T["Page title format"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:27
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Page title format"
-msgstr "Định dạng tiêu đề trang"
+msgstr ""
 
 #. <span class="hint">@T["The default format of page titles."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:30
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "The default format of page titles."
-msgstr "Định dạng mặc định của tiêu đề trang."
+msgstr ""
 
 #. <label asp-for="BaseUrl">@T["Base url"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:34
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Base url"
-msgstr "Url cơ sở"
+msgstr ""
 
 #. <span class="hint">@T["Enter the fully qualified base URL of the web site."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:37
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Enter the fully qualified base URL of the web site."
-msgstr "Nhập URL cơ sở đủ điều kiện của trang web."
+msgstr ""
 
 #. <label asp-for="TimeZone">@T["Default Time Zone"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:42
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Default Time Zone"
-msgstr "Múi giờ Mặc định"
+msgstr ""
 
 #. <option value="">@T["Local to server"]</option>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:44
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Local to server"
-msgstr "Cục bộ đến máy chủ"
+msgstr ""
 
 #. <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:53
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."
-msgstr "Xác định múi giờ mặc định được sử dụng khi hiển thị và chỉnh sửa ngày và giờ. DST (daylight saving time) sẽ được áp dụng tự động cho mỗi múi giờ nếu có."
+msgstr ""
 
 #. <label asp-for="PageSize">@T["Page size"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:59
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Page size"
-msgstr "Kích thước trang"
+msgstr ""
 
 #. <span class="hint">@T["The default page size."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:62
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "The default page size."
-msgstr "Mặc định kích thước trang."
+msgstr ""
 
 #. <h5>@T["Settings for scripts and stylesheets"]</h5>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:67
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Settings for scripts and stylesheets"
-msgstr "Cài đặt cho scripts và stylesheets"
+msgstr ""
 
 #. <label class="form-check-label" asp-for="@Model.AppendVersion">@T["Use resources cache busting"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:71
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Use resources cache busting"
-msgstr "Sử dụng bộ đệm tài nguyên"
+msgstr ""
 
 #. <span class="hint dashed">@T["Whether cache busting (append a version) is used for scripts and stylesheets"]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:72
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Whether cache busting (append a version) is used for scripts and stylesheets"
-msgstr "Quyết định bộ đệm (thêm phiên bản) có được sử dụng cho scripts và stylesheets"
+msgstr ""
 
 #. <label class="form-check-label" asp-for="@Model.UseCdn">@T["Use framework CDN (Content Delivery Network)"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:79
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Use framework CDN (Content Delivery Network)"
-msgstr "Sử dụng CDN (Content Delivery Network)"
+msgstr ""
 
 #. <span class="hint dashed">@T["Whether a framework CDN is used for registered scripts and stylesheets, such as jQuery, or their local version"]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:80
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Whether a framework CDN is used for registered scripts and stylesheets, such as jQuery, or their local version"
-msgstr "Quyết định CDN được sử dụng cho scripts và stylesheets"
+msgstr ""
 
 #. <label asp-for="CdnBaseUrl">@T["Site CDN (Content Delivery Network) base url"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:85
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Site CDN (Content Delivery Network) base url"
-msgstr "Url cơ sở CDN"
+msgstr ""
 
 #. <span class="hint">@T["A base CDN URL prefixed to the local scripts and stylesheets. It is disabled if the value is empty or if the Resource Debug Mode is enabled, e.g. <em>https://cdn.mysite.com</em>"]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:88
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "A base CDN URL prefixed to the local scripts and stylesheets. It is disabled if the value is empty or if the Resource Debug Mode is enabled, e.g. <em>https://cdn.mysite.com</em>"
-msgstr "Tiền tố URL CDN cơ sở cho scripts và stylesheets. Nó bị vô hiệu hóa nếu giá trị trống hoặc nếu bật chế độ esource Debug Mode, ví dụ: <em> https://cdn.mysite.com </em>"
+msgstr ""
 
 #. <label asp-for="ResourceDebugMode">@T["Resource Debug Mode"]</label>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:93
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Resource Debug Mode"
-msgstr "Chế độ Gỡ lỗi Tài nguyên"
+msgstr ""
 
 #. <option value="@ResourceDebugMode.FromConfiguration.ToString()">@T["From environment — disabled in <em>Production</em>, enabled otherwise"]</option>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:95
@@ -208,19 +226,19 @@ msgstr ""
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:96
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Enabled — use debuggable version of resources"
-msgstr "Đã kích hoạt — sử dụng phiên bản gỡ lỗi của tài nguyên"
+msgstr ""
 
 #. <option value="@ResourceDebugMode.Disabled.ToString()">@T["Disabled — use minified version of resources"]</option>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:97
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Disabled — use minified version of resources"
-msgstr "Vô hiệu hóa - sử dụng phiên bản tài nguyên rút gọn"
+msgstr ""
 
 #. <span class="hint">@T["Determines whether scripts and stylesheets load in their debuggable or minified form."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:99
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."
-msgstr "Xác định xem script và stylesheet tải trong debuggable của chúng hoặc hình thức giảm bớt."
+msgstr ""
 
 #. <h5>@T["Settings for dynamic caches"]</h5>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:104
@@ -244,7 +262,7 @@ msgstr ""
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:110
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Enabled"
-msgstr "Đã kích hoạt"
+msgstr ""
 
 #. <option value="@CacheMode.DebugEnabled.ToString()">@T["Enabled with cache debug mode"]</option>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:111
@@ -256,7 +274,7 @@ msgstr ""
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:112
 msgctxt "OrchardCore.Settings.Views.Settings.Edit"
 msgid "Disabled"
-msgstr "Đã vô hiệu"
+msgstr ""
 
 #. <span class="hint">@T["Determines whether caches are enabled or disabled."]</span>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:114
@@ -268,59 +286,47 @@ msgstr ""
 #: OrchardCore.Settings\Views\SiteSettings.SaveButton.cshtml:1
 msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Save"
-msgstr "Lưu"
+msgstr ""
 
 #. <a href="@returnUrl" class="btn btn-secondary cancel" role="button">@T["Cancel"]</a>
 #: OrchardCore.Settings\Views\SiteSettings.SaveButton.cshtml:9
 msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Cancel"
-msgstr "Bỏ qua"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
-#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
-msgctxt "OrchardCore.Settings.Views.Admin.Index"
-msgid "Settings"
-msgstr "Cài đặt"
+msgstr ""
 
 #. <h5>@T["Site Settings"]</h5>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
 msgid "Site Settings"
-msgstr "Cài đặt Website"
+msgstr ""
 
 #. <span class="hint">@T["The site settings to add as part of the plan."]</span>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:11
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
 msgid "The site settings to add as part of the plan."
-msgstr "Các thiết lập trang web để thêm như là một phần của kế hoạch."
+msgstr ""
 
 #. <h5>@T["Site Settings"]</h5>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Summary.cshtml:7
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Summary"
 msgid "Site Settings"
-msgstr "Cài đặt Website"
+msgstr ""
 
 #. <span class="badge bg-warning">@T["No settings selected."]</span>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Summary.cshtml:18
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Summary"
 msgid "No settings selected."
-msgstr "Không có cài đặt nào được chọn."
+msgstr ""
 
 #. <h4 class="card-title">@T["Site Settings"]</h4>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Site Settings"
-msgstr "Cài đặt Website"
+msgstr ""
 
 #. <p>@T["Exports the current site settings."]</p>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports the current site settings."
-msgstr "Xuất cài đặt trang hiện tại."
-
-#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
-#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
-msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
-msgid "Delete"
-msgstr "Xóa"
+msgstr ""
 
