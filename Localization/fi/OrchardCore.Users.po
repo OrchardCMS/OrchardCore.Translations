@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2023-02-18 20:26\n"
+"PO-Revision-Date: 2023-02-22 13:30\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -468,7 +468,7 @@ msgstr "Käyttäjä, jolla on sama sähköpostiosoite, on jo olemassa."
 #: OrchardCore.Users\Controllers\RegistrationController.cs:75
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Email is required."
-msgstr ""
+msgstr "Sähköpostiosoite on pakollinen."
 
 #. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
 #: OrchardCore.Users\Controllers\RegistrationController.cs:85
@@ -500,25 +500,25 @@ msgstr "Palauta salasana"
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:99
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A password is required"
-msgstr ""
+msgstr "Salasana on pakollinen"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Password), S["The password and the password confirmation fields must match."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:104
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The password and the password confirmation fields must match."
-msgstr ""
+msgstr "Salasanan ja salasanan vahvistuskenttien on vastattava toisiaan."
 
 #. await _notifier.WarningAsync(H["Cannot disable the only enabled administrator."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:124
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "Cannot disable the only enabled administrator."
-msgstr ""
+msgstr "Ainoaa ylläpitäjää ei voi poistaa käytöstä."
 
 #. await _notifier.WarningAsync(H["Cannot update your own roles."]);
 #: OrchardCore.Users\Drivers\UserRoleDisplayDriver.cs:105
 msgctxt "OrchardCore.Users.Drivers.UserRoleDisplayDriver"
 msgid "Cannot update your own roles."
-msgstr ""
+msgstr "Omia rooleja ei voi päivittää."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
 #: OrchardCore.Users\Startup.cs:309
@@ -602,13 +602,13 @@ msgstr "Uusi salasana ja vahvistussalasana eivät täsmää."
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Email is required."
-msgstr ""
+msgstr "Sähköpostiosoite on pakollinen."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:9
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Virheellinen sähköpostiosoite."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserInformationViewModel.cs:12
@@ -632,7 +632,7 @@ msgstr "Virheellinen sähköpostiosoite."
 #: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LinkExternalLoginViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Salasana on pakollinen."
 
 #. [Required(ErrorMessage = "Username is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:7
@@ -644,7 +644,7 @@ msgstr "Käyttäjätunnus on pakollinen."
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username"
-msgstr ""
+msgstr "Käyttäjätunnus"
 
 #. [Required(ErrorMessage = "Password is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:11
@@ -1238,13 +1238,13 @@ msgstr "Kirjaudu käyttäen tiliäsi {0}"
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their username"
-msgstr ""
+msgstr "Salli käyttäjän muuttaa käyttäjänimeä"
 
 #. <label class="form-check-label" asp-for="AllowChangingEmail">@T["Allow user to change their email address"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their email address"
-msgstr ""
+msgstr "Salli käyttäjän muuttaa omaa sähköpostiosoitetta"
 
 #. <label class="form-check-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:29
@@ -1310,7 +1310,7 @@ msgstr "Turvallisuus"
 #: OrchardCore.Users\Views\NavigationItemText-UserProfileSettings.Id.cshtml:1
 msgctxt "OrchardCore.Users.Views.NavigationItemText-UserProfileSettings.Id"
 msgid "User Profile Settings"
-msgstr ""
+msgstr "Käyttäjäprofiilin asetukset"
 
 #. <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span><span class="title">@T["Users"]</span>
 #: OrchardCore.Users\Views\NavigationItemText-users.Id.cshtml:1
@@ -1728,7 +1728,7 @@ msgstr "Jos et ole pyytänyt salasanan palauttamista, jätä tämä sähköposti
 #: OrchardCore.Users\Views\User.DetailAdmin.cshtml:4
 msgctxt "OrchardCore.Users.Views.User.DetailAdmin"
 msgid "View User"
-msgstr ""
+msgstr "Näytä käyttäjä"
 
 #. <a asp-action="Edit" asp-route-id="@Model.User.UserId" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Users\Views\UserButtons.cshtml:16
@@ -1740,7 +1740,7 @@ msgstr "Muokkaa"
 #: OrchardCore.Users\Views\UserButtons.cshtml:21
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "View"
-msgstr ""
+msgstr "Näytä"
 
 #. <a asp-action="EditPassword" asp-route-id="@Model.User.UserId" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
 #: OrchardCore.Users\Views\UserButtons.cshtml:26
@@ -1836,13 +1836,13 @@ msgstr "Käyttäjä on poistettu käytöstä."
 #: OrchardCore.Users\Views\UserEmail.Edit.cshtml:4
 msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "Email"
-msgstr ""
+msgstr "Sähköposti"
 
 #. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
 #: OrchardCore.Users\Views\UserEmail.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "The email is invalid."
-msgstr ""
+msgstr "Sähköpostiosoite on virheellinen."
 
 #. <h4><i class="fa fa-user-check" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
@@ -1894,67 +1894,67 @@ msgstr "Poista valinta poistaaksesi käyttäjätilin käytöstä."
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:34
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password"
-msgstr ""
+msgstr "Salasana"
 
 #. <label asp-for="PasswordConfirmation" class="sr-only">@T["Password Confirmation"]</label>
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:40
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password Confirmation"
-msgstr ""
+msgstr "Salasanan vahvistus"
 
 #. <input asp-for="PasswordConfirmation" type="password" class="form-control password-confirmation-input-field" placeholder="@T["Password confirmation"]" />
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:43
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password confirmation"
-msgstr ""
+msgstr "Salasanan vahvistus"
 
 #. @T["Generate password"]
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:55
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Generate password"
-msgstr ""
+msgstr "Luo salasana"
 
 #. <div class="btn btn-info btn-sm copy-password-button">@T["Copy password"]</div>
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:57
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Copy password"
-msgstr ""
+msgstr "Kopioi salasana"
 
 #. <h4>@T["User Info"]</h4>
 #: OrchardCore.Users\Views\UserInfo.cshtml:3
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "User Info"
-msgstr ""
+msgstr "Käyttäjätiedot"
 
 #. <dt>@T["Username"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:6
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Username"
-msgstr ""
+msgstr "Käyttäjätunnus"
 
 #. <dt>@T["Email"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:9
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Email"
-msgstr ""
+msgstr "Sähköposti"
 
 #. <dt>@T["Status"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:12
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
-msgstr ""
+msgstr "Tila"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:13
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
-msgstr ""
+msgstr "Käytössä"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:13
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
-msgstr ""
+msgstr "Pois käytöstä"
 
 #. <label asp-for="UserName">@T["User name"]</label>
 #: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:5
@@ -2028,13 +2028,13 @@ msgstr "Kirjaudu ulos"
 #: OrchardCore.Users\Views\UserName.Edit.cshtml:4
 msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "User name"
-msgstr ""
+msgstr "Käyttäjätunnus"
 
 #. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
 #: OrchardCore.Users\Views\UserName.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "The user name is required."
-msgstr ""
+msgstr "Käyttäjätunnus on pakollinen."
 
 #. <h6>@T["Roles"]</h6>
 #: OrchardCore.Users\Views\UserRoleFields.Edit.cshtml:5
@@ -2046,13 +2046,13 @@ msgstr "Roolit"
 #: OrchardCore.Users\Views\UserRoles.cshtml:10
 msgctxt "OrchardCore.Users.Views.UserRoles"
 msgid "Roles"
-msgstr ""
+msgstr "Roolit"
 
 #. <div data-bs-toggle="tooltip" title="@T["The roles this user has"]">
 #: OrchardCore.Users\Views\UserRolesMeta.cshtml:10
 msgctxt "OrchardCore.Users.Views.UserRolesMeta"
 msgid "The roles this user has"
-msgstr ""
+msgstr "Tämän käyttäjän roolit"
 
 #. <p>@T["Filters on the email address of a user."]</p>
 #: OrchardCore.Users\Views\Items\UsersAdminFilters-Email.Thumbnail.cshtml:9
