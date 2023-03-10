@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2023-02-18 20:24\n"
+"PO-Revision-Date: 2023-03-10 10:17\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -468,7 +468,7 @@ msgstr "Již existuje uživatel s tímto e-mailem."
 #: OrchardCore.Users\Controllers\RegistrationController.cs:75
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Email is required."
-msgstr ""
+msgstr "E-mail je povinný."
 
 #. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
 #: OrchardCore.Users\Controllers\RegistrationController.cs:85
@@ -500,25 +500,25 @@ msgstr "Resetujte své heslo"
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:99
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A password is required"
-msgstr ""
+msgstr "Heslo je povinné"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Password), S["The password and the password confirmation fields must match."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:104
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The password and the password confirmation fields must match."
-msgstr ""
+msgstr "Heslo a pole potvrzení hesla se musí shodovat."
 
 #. await _notifier.WarningAsync(H["Cannot disable the only enabled administrator."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:124
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "Cannot disable the only enabled administrator."
-msgstr ""
+msgstr "Nelze zakázat jediného povoleného správce."
 
 #. await _notifier.WarningAsync(H["Cannot update your own roles."]);
 #: OrchardCore.Users\Drivers\UserRoleDisplayDriver.cs:105
 msgctxt "OrchardCore.Users.Drivers.UserRoleDisplayDriver"
 msgid "Cannot update your own roles."
-msgstr ""
+msgstr "Nelze aktualizovat své vlastní role."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
 #: OrchardCore.Users\Startup.cs:309
@@ -602,13 +602,13 @@ msgstr "Nové heslo a heslo pro ověření se neshodují."
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Email is required."
-msgstr ""
+msgstr "E-mail je povinný."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:9
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Neplatný e-mail."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserInformationViewModel.cs:12
@@ -632,7 +632,7 @@ msgstr "Neplatný e-mail."
 #: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LinkExternalLoginViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Heslo je povinné."
 
 #. [Required(ErrorMessage = "Username is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:7
@@ -644,7 +644,7 @@ msgstr "Je nutné zadat uživatelské jméno."
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username"
-msgstr ""
+msgstr "Uživatelské jméno"
 
 #. [Required(ErrorMessage = "Password is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:11
@@ -886,7 +886,7 @@ msgstr "Členové role"
 #: OrchardCore.Users\Workflows\Drivers\RegisterUserTaskDisplayDriver.cs:50
 msgctxt "OrchardCore.Users.Workflows.Drivers.RegisterUserTaskDisplayDriver"
 msgid "A value is required for {0}."
-msgstr ""
+msgstr "Pole {0} je povinné."
 
 #. <h4><i class="fa fa-user" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Assign user to role"])</h4>
 #: OrchardCore.Users\Views\Items\AssignUserRoleTask.Fields.Design.cshtml:5
@@ -1238,13 +1238,13 @@ msgstr "Přihlaste se pomocí svého účtu {0}"
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their username"
-msgstr ""
+msgstr "Povolit uživateli změnit své uživatelské jméno"
 
 #. <label class="form-check-label" asp-for="AllowChangingEmail">@T["Allow user to change their email address"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their email address"
-msgstr ""
+msgstr "Povolit uživateli změnit svou e-mailovou adresu"
 
 #. <label class="form-check-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:29
@@ -1292,7 +1292,7 @@ msgstr "Použít skript pro nastavení uživatelských rolí na základě nárok
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:57
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
-msgstr ""
+msgstr "Je-li vybráno, nejsou spuštěny žádné IExternalLoginEventHandlers definované v modulech"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript(false)">@T["Reset Script"]</button>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:90
@@ -1310,7 +1310,7 @@ msgstr "Bezpečnost"
 #: OrchardCore.Users\Views\NavigationItemText-UserProfileSettings.Id.cshtml:1
 msgctxt "OrchardCore.Users.Views.NavigationItemText-UserProfileSettings.Id"
 msgid "User Profile Settings"
-msgstr ""
+msgstr "Nastavení profilu uživatele"
 
 #. <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span><span class="title">@T["Users"]</span>
 #: OrchardCore.Users\Views\NavigationItemText-users.Id.cshtml:1
