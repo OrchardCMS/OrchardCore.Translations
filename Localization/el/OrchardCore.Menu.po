@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2022-05-05 19:04\n"
+"PO-Revision-Date: 2023-02-18 19:43\n"
 
 #. builder.Add(S["Content"], design => design
 #: OrchardCore.Menu\AdminMenu.cs:33
@@ -38,7 +38,7 @@ msgstr "Το στοιχείο μενού διαγράφηκε με επιτυχ�
 #: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:109
 msgctxt "OrchardCore.Menu.Drivers.HtmlMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
-msgstr ""
+msgstr "Το {0} δεν είναι έγκυρο url."
 
 #. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
 #. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
@@ -46,7 +46,7 @@ msgstr ""
 #: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:104
 msgctxt "OrchardCore.Menu.Drivers.LinkMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
-msgstr ""
+msgstr "Το {0} δεν είναι έγκυρο url."
 
 #. await _notifier.WarningAsync(H["The menu item content item with id {0} has no matching {1} content type definition.", menuItem.ContentItem.ContentItemId, menuItem.ContentItem.ContentType]);
 #: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:52
@@ -60,14 +60,8 @@ msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
 msgstr "Η δημοσίευση αυτού του στοιχείου περιεχομένου μπορεί να διαγράψει το δημιουργημένο περιεχόμενο. Διορθώστε τυχόν προβλήματα τύπου περιεχομένου εκ των προτέρων."
 
-#. <h5>@T["Content Menu Item"]</h5>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
-msgid "Content Menu Item"
-msgstr "Στοιχείο Μενού Περιεχομένου"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:6
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
 msgid "Name"
 msgstr "Όνομα"
@@ -84,29 +78,35 @@ msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
 msgid "Links to a Content url."
 msgstr "Σύνδεσμοι προς μια διεύθυνση url περιεχομένου."
 
-#. <h5>@T["Html Menu Item"]</h5>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Html Menu Item"
-msgstr "Στοιχείο μενού Html"
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:13
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "New {0}"
+msgstr "Νέο {0}"
 
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:6
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:13
+msgctxt "OrchardCore.Menu.Views.Admin.Edit"
+msgid "Edit {0}"
+msgstr "Επεξεργασία {0}"
+
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Name"
 msgstr "Όνομα"
 
-#. <label asp-for="Url">@T["Url"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:11
+#. <label asp-for="Url" class="@Orchard.GetLabelCssClasses()">@T["Url"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:12
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
-#. <label asp-for="Html">@T["Html"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:16
+#. <label asp-for="Html" class="@Orchard.GetLabelCssClasses()">@T["Html"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:19
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Html"
-msgstr "Html"
+msgstr ""
 
 #. <h4 class="card-title">@T["Html Menu Item"]</h4>
 #: OrchardCore.Menu\Views\HtmlMenuItemPart.Thumbnail.cshtml:1
@@ -138,23 +138,17 @@ msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
 msgid "See documentation"
 msgstr "Δείτε την τεκμηρίωση"
 
-#. <h5>@T["Link Menu Item"]</h5>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Link Menu Item"
-msgstr "Συνδέσμος Στοιχείο Μενού"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:6
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Name"
 msgstr "Όνομα"
 
-#. <label asp-for="Url">@T["Url"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:11
+#. <label asp-for="Url" class="@Orchard.GetLabelCssClasses()">@T["Url"]</label>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:12
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
 #. <h4 class="card-title">@T["Link Menu Item"]</h4>
 #: OrchardCore.Menu\Views\LinkMenuItemPart.Thumbnail.cshtml:1
@@ -193,38 +187,26 @@ msgid "Add"
 msgstr "Προσθήκη"
 
 #. @T["Add Menu Item"]
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:25
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:29
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Add Menu Item"
 msgstr "Προσθήκη Στοιχείου Μενού"
 
 #. <h5 class="modal-title" id="available-menu-items-title">@T["Available Menu Items"]</h5>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:47
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:57
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Available Menu Items"
 msgstr "Διαθέσιμα Στοιχεία Μενου"
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:66
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:76
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"
 
 #. <div id="msg-leave" style="display:none" data>@T["You have reordered the navigation."]</div>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:73
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:83
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "You have reordered the navigation."
 msgstr "Έχετε αναδιατάξει την πλοήγηση."
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:13
-msgctxt "OrchardCore.Menu.Views.Admin.Create"
-msgid "New {0}"
-msgstr "Νέο {0}"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Menu.Views.Admin.Edit"
-msgid "Edit {0}"
-msgstr "Επεξεργασία {0}"
 

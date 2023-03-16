@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2023-01-12 21:10\n"
+"PO-Revision-Date: 2023-02-18 19:35\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Facebook\AdminMenu.cs:27
@@ -52,6 +52,12 @@ msgctxt "OrchardCore.Facebook.AdminMenuLogin"
 msgid "Facebook"
 msgstr "脸谱网（Facebook）"
 
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#: OrchardCore.Facebook\Login\ViewModels\FacebookLoginSettingsViewModel.cs:7
+msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
+msgid "Invalid path"
+msgstr "无效路径"
+
 #. results.Add(new ValidationResult(S["The AppId is required."], new[]
 #: OrchardCore.Facebook\Services\FacebookService.cs:55
 msgctxt "OrchardCore.Facebook.Services.FacebookService"
@@ -64,12 +70,6 @@ msgctxt "OrchardCore.Facebook.Services.FacebookService"
 msgid "The App Secret is required."
 msgstr "App Secret 是必需的。"
 
-#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
-#: OrchardCore.Facebook\Login\ViewModels\FacebookLoginSettingsViewModel.cs:7
-msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
-msgid "Invalid path"
-msgstr "无效路径"
-
 #. updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 #: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:85
 msgctxt "OrchardCore.Facebook.Widgets.Drivers.FacebookPluginPartDisplayDriver"
@@ -81,6 +81,36 @@ msgstr "Facebook正文不包含有效的 Liquid 表达式。详细信息： {0}"
 msgctxt "OrchardCore.Facebook.Widgets.Settings.FacebookPluginPartSettingsDisplayDriver"
 msgid "The Body doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Facebook正文不包含有效的 Liquid 表达式。详细信息： {0}"
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Edit"
+msgid "Facebook Login Settings"
+msgstr "Facebook 登录设置"
+
+#. <h5>@T["Facebook Login Settings"]</h5>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Facebook Login Settings"
+msgstr "Facebook 登录设置"
+
+#. <span class="hint">@T["Adds Facebook Login settings to the plan."]</span>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
+msgid "Adds Facebook Login settings to the plan."
+msgstr "将 Facebook 登录设置添加到计划中。"
+
+#. <h4 class="card-title">@T["Facebook Login Settings"]</h4>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Facebook Login Settings"
+msgstr "Facebook 登录设置"
+
+#. <p>@T["Exports the Facebook Login settings."]</p>
+#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
+msgid "Exports the Facebook Login settings."
+msgstr "导出 Facebook 登录设置。"
 
 #. @T["The current tenant will be reloaded when the settings are saved."]
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:5
@@ -130,14 +160,14 @@ msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "<a href=\"{0}\">Facebook Integration settings</a> must be configured in order to use the Login Feature"
 msgstr ""
 
-#. <label asp-for="Liquid">@T["Body"]</label>
+#. <label asp-for="Liquid" class="@Orchard.GetLabelCssClasses()">@T["Body"]</label>
 #: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:13
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPart.Edit"
 msgid "Body"
 msgstr "正文部分(Body)"
 
 #. <span class="hint">@T["The template of the plugin, in Liquid format."]</span>
-#: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:15
+#: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:16
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPart.Edit"
 msgid "The template of the plugin, in Liquid format."
 msgstr "使用 Liquid 模板语言的插件模板。"
@@ -212,7 +242,7 @@ msgstr "Javascript SDK 版本"
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:35
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Javascript Sdk js"
-msgstr "Javascript Sdk js"
+msgstr ""
 
 #. <span class="hint">@T["Determines which versions of the Graph API and any API dialogs or plugins are invoked. Default is v3.2"]</span>
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:40
@@ -248,41 +278,11 @@ msgstr "应用ID和版本自动填充。请检查 <a target=\"_blank\" href=\"ht
 #: OrchardCore.Facebook\Views\NavigationItemText-facebook.Id.cshtml:1
 msgctxt "OrchardCore.Facebook.Views.NavigationItemText-facebook.Id"
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #. <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span><span class="title">@T["Facebook App"]</span>
 #: OrchardCore.Facebook\Views\NavigationItemText-facebookApp.Id.cshtml:1
 msgctxt "OrchardCore.Facebook.Views.NavigationItemText-facebookApp.Id"
 msgid "Facebook App"
 msgstr "Facebook 应用程序"
-
-#. <h5>@T["Facebook Login Settings"]</h5>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Edit"
-msgid "Facebook Login Settings"
-msgstr "Facebook 登录设置"
-
-#. <h5>@T["Facebook Login Settings"]</h5>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
-msgid "Facebook Login Settings"
-msgstr "Facebook 登录设置"
-
-#. <span class="hint">@T["Adds Facebook Login settings to the plan."]</span>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Summary.cshtml:5
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Summary"
-msgid "Adds Facebook Login settings to the plan."
-msgstr "将 Facebook 登录设置添加到计划中。"
-
-#. <h4 class="card-title">@T["Facebook Login Settings"]</h4>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:3
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
-msgid "Facebook Login Settings"
-msgstr "Facebook 登录设置"
-
-#. <p>@T["Exports the Facebook Login settings."]</p>
-#: OrchardCore.Facebook\Views\Items\FacebookLoginDeploymentStep.Thumbnail.cshtml:4
-msgctxt "OrchardCore.Facebook.Views.Items.FacebookLoginDeploymentStep.Thumbnail"
-msgid "Exports the Facebook Login settings."
-msgstr "导出 Facebook 登录设置。"
 

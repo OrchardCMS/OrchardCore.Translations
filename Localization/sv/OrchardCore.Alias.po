@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
-"PO-Revision-Date: 2022-01-05 13:33\n"
+"PO-Revision-Date: 2023-02-18 19:26\n"
 
 #. Description = S["the alias part of the content item"];
 #: OrchardCore.Alias\GraphQL\AliasInputObjectType.cs:13
@@ -30,16 +30,16 @@ msgctxt "OrchardCore.Alias.GraphQL.AliasQueryObjectType"
 msgid "Alternative path for the content item"
 msgstr "Alternativ sökväg för innehållsobjektet"
 
-#. yield return new ValidationResult(S["Your alias is too long. The alias can only be up to {0} characters.", AliasPart.MaxAliasLength], new string[] { nameof(part.Alias) });
+#. yield return new ValidationResult(S["Your alias is too long. The alias can only be up to {0} characters. \"{1}\"", AliasPart.MaxAliasLength, part.Alias], new string[] { nameof(part.Alias) });
 #: OrchardCore.Alias\Models\AliasPartExtensions.cs:18
 msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
-msgid "Your alias is too long. The alias can only be up to {0} characters."
+msgid "Your alias is too long. The alias can only be up to {0} characters. \"{1}\""
 msgstr ""
 
-#. yield return new ValidationResult(S["Your alias is already in use."], new[] { nameof(part.Alias) });
+#. yield return new ValidationResult(S["Your alias is already in use. \"{0}\"", part.Alias], new[] { nameof(part.Alias) });
 #: OrchardCore.Alias\Models\AliasPartExtensions.cs:23
 msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
-msgid "Your alias is already in use."
+msgid "Your alias is already in use. \"{0}\""
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
@@ -48,14 +48,14 @@ msgctxt "OrchardCore.Alias.Settings.AliasPartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Mönstret innehåller inte ett giltigt Liquid-uttryck. Detaljer: {0}"
 
-#. <label asp-for="Alias">@T["Alias"] </label>
+#. <label asp-for="Alias" class="@Orchard.GetLabelCssClasses()">@T["Alias"] </label>
 #: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:11
 msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
 msgid "Alias"
 msgstr ""
 
 #. @T["The alias of the content item."]
-#: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:15
+#: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:16
 msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
 msgid "The alias of the content item."
 msgstr "Aliaset för innehållsobjektet."

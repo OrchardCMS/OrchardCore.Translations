@@ -10,22 +10,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2022-10-11 20:26\n"
+"PO-Revision-Date: 2023-03-09 08:53\n"
 
-#. builder.Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Settings\AdminMenu.cs:24
+#. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
+#: OrchardCore.Settings\AdminMenu.cs:25
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Configuration"
 msgstr "Konfigurointi"
 
 #. .Add(S["Settings"], "1", settings => settings
-#: OrchardCore.Settings\AdminMenu.cs:25
+#: OrchardCore.Settings\AdminMenu.cs:28
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Settings"
 msgstr "Asetukset"
 
 #. .Add(S["General"], "1", entry => entry
-#: OrchardCore.Settings\AdminMenu.cs:26
+#: OrchardCore.Settings\AdminMenu.cs:29
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr "Yleiset"
@@ -40,13 +40,13 @@ msgstr "Sivuston asetukset on päivitetty onnistuneesti."
 #: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:67
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be greater than zero."
-msgstr ""
+msgstr "Sivun koon on oltava suurempi kuin nolla."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize), S["The page size must be less than or equal to {0}.", site.MaxPageSize]);
 #: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:72
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be less than or equal to {0}."
-msgstr ""
+msgstr "Sivun koon on oltava pienempi tai yhtä suuri kuin {0}."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.BaseUrl), S["The Base url must be a fully qualified URL."]);
 #: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:78
@@ -54,11 +54,29 @@ msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The Base url must be a fully qualified URL."
 msgstr "Pohja-url:n on täysin pätevä URL."
 
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
+#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
+msgctxt "OrchardCore.Settings.Views.Admin.Index"
+msgid "Settings"
+msgstr "Asetukset"
+
+#. <span class="icon"><i class="fa fa-gear" aria-hidden="true"></i></span><span class="title">@T["Configuration"]</span>
+#: OrchardCore.Settings\Views\NavigationItemText-configuration.Id.cshtml:1
+msgctxt "OrchardCore.Settings.Views.NavigationItemText-configuration.Id"
+msgid "Configuration"
+msgstr "Konfigurointi"
+
 #. <span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span class="title">@T["General"]</span>
 #: OrchardCore.Settings\Views\NavigationItemText-general.Id.cshtml:1
 msgctxt "OrchardCore.Settings.Views.NavigationItemText-general.Id"
 msgid "General"
 msgstr "Yleiset"
+
+#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
+#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
+msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
+msgid "Delete"
+msgstr "Poista"
 
 #. <p class="alert alert-warning">@T["The current tenant will be reloaded when the settings are saved."]</p>
 #: OrchardCore.Settings\Views\Settings.Edit.cshtml:5
@@ -276,12 +294,6 @@ msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Cancel"
 msgstr "Peruuta"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
-#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
-msgctxt "OrchardCore.Settings.Views.Admin.Index"
-msgid "Settings"
-msgstr "Asetukset"
-
 #. <h5>@T["Site Settings"]</h5>
 #: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
@@ -317,10 +329,4 @@ msgstr "Sivuston asetukset"
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports the current site settings."
 msgstr "Vie nykyiset sivuston asetukset."
-
-#. <button type="submit" class="btn btn-link" title="@T["Delete"]">
-#: OrchardCore.Settings\Views\Shared\DisplayTemplates\RemovableCulture.cshtml:21
-msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
-msgid "Delete"
-msgstr "Poista"
 

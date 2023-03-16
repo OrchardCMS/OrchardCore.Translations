@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2023-01-12 21:17\n"
+"PO-Revision-Date: 2023-02-18 19:43\n"
 
 #. builder.Add(S["Content"], design => design
 #: OrchardCore.Menu\AdminMenu.cs:33
@@ -60,14 +60,8 @@ msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
 msgstr "发布此内容项可能会擦除已创建的内容。事先修复任何内容类型的问题。"
 
-#. <h5>@T["Content Menu Item"]</h5>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
-msgid "Content Menu Item"
-msgstr "内容菜单项"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:6
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
 msgid "Name"
 msgstr "名称"
@@ -84,29 +78,35 @@ msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
 msgid "Links to a Content url."
 msgstr "链接到内容url。"
 
-#. <h5>@T["Html Menu Item"]</h5>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Html Menu Item"
-msgstr "Html 菜单项"
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:13
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "New {0}"
+msgstr "新建 {0}"
 
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:6
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:13
+msgctxt "OrchardCore.Menu.Views.Admin.Edit"
+msgid "Edit {0}"
+msgstr "编辑 {0}"
+
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Url">@T["Url"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:11
+#. <label asp-for="Url" class="@Orchard.GetLabelCssClasses()">@T["Url"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:12
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Url"
 msgstr "网址"
 
-#. <label asp-for="Html">@T["Html"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:16
+#. <label asp-for="Html" class="@Orchard.GetLabelCssClasses()">@T["Html"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:19
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Html"
-msgstr "Html"
+msgstr ""
 
 #. <h4 class="card-title">@T["Html Menu Item"]</h4>
 #: OrchardCore.Menu\Views\HtmlMenuItemPart.Thumbnail.cshtml:1
@@ -138,20 +138,14 @@ msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
 msgid "See documentation"
 msgstr "查看文档"
 
-#. <h5>@T["Link Menu Item"]</h5>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:3
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Link Menu Item"
-msgstr "链接菜单项"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:6
+#. <label asp-for="Name" class="@Orchard.GetLabelCssClasses()">@T["Name"]</label>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:5
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Url">@T["Url"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:11
+#. <label asp-for="Url" class="@Orchard.GetLabelCssClasses()">@T["Url"]</label>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:12
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Url"
 msgstr "网址"
@@ -193,38 +187,26 @@ msgid "Add"
 msgstr "添加"
 
 #. @T["Add Menu Item"]
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:25
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:29
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Add Menu Item"
 msgstr "添加菜单项"
 
 #. <h5 class="modal-title" id="available-menu-items-title">@T["Available Menu Items"]</h5>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:47
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:57
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Available Menu Items"
 msgstr "可用的菜单项"
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:66
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:76
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Cancel"
 msgstr "取消"
 
 #. <div id="msg-leave" style="display:none" data>@T["You have reordered the navigation."]</div>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:73
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:83
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "You have reordered the navigation."
 msgstr "您已重新排序导航。"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:13
-msgctxt "OrchardCore.Menu.Views.Admin.Create"
-msgid "New {0}"
-msgstr "新建 {0}"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Menu.Views.Admin.Edit"
-msgid "Edit {0}"
-msgstr "编辑 {0}"
 

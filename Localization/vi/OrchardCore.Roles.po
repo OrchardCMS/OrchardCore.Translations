@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2023-01-10 08:25\n"
+"PO-Revision-Date: 2023-02-18 20:35\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.Roles\AdminMenu.cs:24
@@ -26,59 +26,83 @@ msgctxt "OrchardCore.Roles.AdminMenu"
 msgid "Roles"
 msgstr "Vai trò"
 
-#. ModelState.AddModelError(string.Empty, S["Invalid role name."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:100
+#. ModelState.AddModelError(String.Empty, S["Invalid role name."]);
+#: OrchardCore.Roles\Controllers\AdminController.cs:99
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Invalid role name."
 msgstr "Tên vai trò không hợp lệ."
 
-#. ModelState.AddModelError(string.Empty, S["The role is already used."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:105
+#. ModelState.AddModelError(String.Empty, S["The role is already used."]);
+#: OrchardCore.Roles\Controllers\AdminController.cs:104
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "The role is already used."
 msgstr "Vai trò đã được sử dụng."
 
 #. await _notifier.SuccessAsync(H["Role created successfully."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:115
+#: OrchardCore.Roles\Controllers\AdminController.cs:114
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role created successfully."
 msgstr "Vai trò đã được tạo thành công."
 
 #. await _notifier.SuccessAsync(H["Role deleted successfully."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:150
+#: OrchardCore.Roles\Controllers\AdminController.cs:149
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role deleted successfully."
 msgstr "Vai trò đã được xoá bỏ."
 
 #. await _notifier.ErrorAsync(H["Could not delete this role."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:156
+#: OrchardCore.Roles\Controllers\AdminController.cs:155
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Could not delete this role."
 msgstr "Không xoá được vai trò này."
 
 #. await _notifier.SuccessAsync(H["Role updated successfully."]);
-#: OrchardCore.Roles\Controllers\AdminController.cs:228
+#: OrchardCore.Roles\Controllers\AdminController.cs:224
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role updated successfully."
 msgstr "Vai trò đã được cập nhật thành công."
 
 #. var title = String.IsNullOrWhiteSpace(feature.Name) ? S["{0} Feature", feature.Id] : feature.Name;
-#: OrchardCore.Roles\Controllers\AdminController.cs:276
+#: OrchardCore.Roles\Controllers\AdminController.cs:272
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "{0} Feature"
 msgstr "tính năng {0}"
 
 #. return IdentityResult.Failed(new IdentityError { Description = S["Can't delete system roles."] });
-#: OrchardCore.Roles\Services\RoleStore.cs:89
+#: OrchardCore.Roles\Services\RoleStore.cs:96
 msgctxt "OrchardCore.Roles.Services.RoleStore"
 msgid "Can't delete system roles."
 msgstr "Không thể xoá vai trò hệ thống."
 
-#. <span class="icon"><i class="fa fa-user-lock" aria-hidden="true"></i></span><span class="title">@T["Roles"]</span>
-#: OrchardCore.Roles\Views\NavigationItemText-roles.Id.cshtml:1
-msgctxt "OrchardCore.Roles.Views.NavigationItemText-roles.Id"
-msgid "Roles"
-msgstr "Vai trò"
+#. <h5>@T["All Roles"]</h5>
+#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Edit"
+msgid "All Roles"
+msgstr "Tất cả Vai trò"
+
+#. <h5>@T["All Roles"]</h5>
+#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Summary"
+msgid "All Roles"
+msgstr "Tất cả Vai trò"
+
+#. <span class="hint">@T["Adds all roles to the plan."]</span>
+#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Summary"
+msgid "Adds all roles to the plan."
+msgstr "Thêm tất cả vai trò vào kế hoạch."
+
+#. <h4 class="card-title">@T["All Roles"]</h4>
+#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Thumbnail"
+msgid "All Roles"
+msgstr "Tất cả Vai trò"
+
+#. <p>@T["Exports every role."]</p>
+#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Thumbnail"
+msgid "Exports every role."
+msgstr "Xuất tất cả vai trò."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Role"])</h1></zone>
 #: OrchardCore.Roles\Views\Admin\Create.cshtml:4
@@ -251,33 +275,9 @@ msgctxt "OrchardCore.Roles.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr "<strong>Không có kết quả!</strong> Tìm kiếm của bạn không có kết quả."
 
-#. <h5>@T["All Roles"]</h5>
-#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Edit"
-msgid "All Roles"
-msgstr "Tất cả Vai trò"
-
-#. <h5>@T["All Roles"]</h5>
-#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Summary.cshtml:3
-msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Summary"
-msgid "All Roles"
-msgstr "Tất cả Vai trò"
-
-#. <span class="hint">@T["Adds all roles to the plan."]</span>
-#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Summary.cshtml:5
-msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Summary"
-msgid "Adds all roles to the plan."
-msgstr "Thêm tất cả vai trò vào kế hoạch."
-
-#. <h4 class="card-title">@T["All Roles"]</h4>
-#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Thumbnail.cshtml:3
-msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Thumbnail"
-msgid "All Roles"
-msgstr "Tất cả Vai trò"
-
-#. <p>@T["Exports every role."]</p>
-#: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Thumbnail.cshtml:4
-msgctxt "OrchardCore.Roles.Views.Items.AllRolesDeploymentStep.Thumbnail"
-msgid "Exports every role."
-msgstr "Xuất tất cả vai trò."
+#. <span class="icon"><i class="fa fa-user-lock" aria-hidden="true"></i></span><span class="title">@T["Roles"]</span>
+#: OrchardCore.Roles\Views\NavigationItemText-roles.Id.cshtml:1
+msgctxt "OrchardCore.Roles.Views.NavigationItemText-roles.Id"
+msgid "Roles"
+msgstr "Vai trò"
 

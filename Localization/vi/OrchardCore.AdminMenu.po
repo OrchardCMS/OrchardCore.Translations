@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2022-10-11 19:56\n"
+"PO-Revision-Date: 2023-02-18 19:26\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.AdminMenu\AdminMenu.cs:29
@@ -104,53 +104,6 @@ msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node toggled successfully."
 msgstr "Đã chuyển đổi trạng thái một mục menu quản trị."
 
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Toggle"
-msgstr "Chuyển đổi trạng thái"
-
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Disable"
-msgstr "Vô hiệu hoá"
-
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Enable"
-msgstr "Kích hoạt"
-
-#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#. class="btn btn-danger" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:33
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:52
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Delete"
-msgstr "Xoá"
-
-#. <span class="text-warning">@T["Can't show the item of type: {0}. Maybe a required module has been disabled?", menuType]</span>
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:35
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Can't show the item of type: {0}. Maybe a required module has been disabled?"
-msgstr "Không thể hiển thị mục của loại: {0}. Có lẽ một mô-đun cần thiết đã bị vô hiệu hoá?"
-
-#. class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:45
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Edit"
-msgstr "Chỉnh sửa"
-
-#. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:54
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
-msgid "Toggle Dropdown"
-msgstr "Bấm thả xuống"
-
-#. <a class="btn btn-primary btn-sm" asp-route-action="Create" asp-route-controller="Node" asp-route-type="@Model.Type" asp-route-id="@Model.ContentTreePreset.Id">@T["Add"]</a>
-#: OrchardCore.AdminMenu\Views\MenuItem.TreeThumbnail.cshtml:9
-msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeThumbnail"
-msgid "Add"
-msgstr "Thêm"
-
 #. <h5>@T["Admin Menus"]</h5>
 #: OrchardCore.AdminMenu\Views\Items\AdminMenuDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.AdminMenu.Views.Items.AdminMenuDeploymentStep.Fields.Edit"
@@ -180,6 +133,138 @@ msgstr "Menu Quản trị"
 msgctxt "OrchardCore.AdminMenu.Views.Items.AdminMenuDeploymentStep.Fields.Thumbnail"
 msgid "Exports all the admin Menus."
 msgstr "Xuất tất cả các menu quản trị."
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Admin Menu {0}", Model.Name])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:3
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
+msgid "Create Admin Menu {0}"
+msgstr "Tạo Menu Quản trị {0}"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:9
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
+msgid "Name"
+msgstr "Tên"
+
+#. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
+#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:11
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
+msgid "The name is required"
+msgstr "Tên là bắt buộc"
+
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
+#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:15
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
+msgid "Create"
+msgstr "Tạo"
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
+#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:16
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Node"])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:3
+msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
+msgid "Create Node"
+msgstr "Tạo nút"
+
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
+#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:14
+msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
+msgid "Create"
+msgstr "Tạo"
+
+#. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
+#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:19
+msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
+msgid "Cancel"
+msgstr "Bỏ qua"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Menu: {0}", Model.Name])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:4
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "Edit Admin Menu: {0}"
+msgstr "Sửa Menu Quản trị: {0}"
+
+#. <label asp-for="Name">@T["Name"]</label>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:9
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "Name"
+msgstr "Tên"
+
+#. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:11
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "The name is required"
+msgstr "Tên là bắt buộc"
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "Save"
+msgstr "Lưu"
+
+#. <a class="btn btn-primary edit-nodes" role="button" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:15
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "Edit Admin Nodes"
+msgstr "Chỉnh sửa Các nút Quản trị"
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:16
+msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Node"])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:3
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Edit Node"
+msgstr "Sửa Nút"
+
+#. <label asp-for="Priority">@T["Selection Priority"]</label>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:14
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Selection Priority"
+msgstr "Ưu tiên Lựa chọn"
+
+#. <span class="hint">@T["The priority of this link to be displayed as active instead of another one when both are pointing to the same url. The link with the highest value has the active status in the navigation."]</span>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:16
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "The priority of this link to be displayed as active instead of another one when both are pointing to the same url. The link with the highest value has the active status in the navigation."
+msgstr "Ưu tiên của liên kết này sẽ được hiển thị là hoạt động thay vì liên kết khác khi cả hai đều trỏ đến cùng một url. Liên kết có giá trị cao nhất có trạng thái hoạt động trong điều hướng."
+
+#. <label asp-for="Position">@T["Position Order"]</label>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:20
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Position Order"
+msgstr "Thứ tự Vị trí"
+
+#. <span class="hint">@T["The position order of this link in the admin menu."]</span>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:22
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "The position order of this link in the admin menu."
+msgstr "Thứ tự vị trí của liên kết này trong menu quản trị."
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:26
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Save"
+msgstr "Lưu"
+
+#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:33
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Delete"
+msgstr "Xoá"
+
+#. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
+#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:38
+msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
+msgid "Cancel"
+msgstr "Bỏ qua"
 
 #. <h5>@T["Link"]</h5>
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:12
@@ -288,168 +373,6 @@ msgstr "Liên kết Nút Quản trị"
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeThumbnail"
 msgid "Adds a link with a text and a url."
 msgstr "Thêm một liên kết với một văn bản và url."
-
-#. <h5>@T["Placeholder"]</h5>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:12
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Placeholder"
-msgstr "Giữ chỗ"
-
-#. <label asp-for="LinkText">@T["Link Text"]</label>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:15
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Link Text"
-msgstr "Văn bản Liên kết"
-
-#. <span class="hint">@T["The text of the menu item as it will be shown in the tree."]</span>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:18
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "The text of the menu item as it will be shown in the tree."
-msgstr "Phần văn bản của một mục menu sẽ được hiển thị trong cây."
-
-#. <label asp-for="IconClass">@T["Icon"]</label>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:22
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Icon"
-msgstr "Biểu tượng"
-
-#. @T["Pick"]
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:35
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Pick"
-msgstr "Chọn"
-
-#. <span class="hint">@T["Select an icon to display when this menu item is at the first level."]</span>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:48
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Select an icon to display when this menu item is at the first level."
-msgstr "Chọn một biểu tượng để hiển thị khi mục này đứng đầu."
-
-#. <h5 class="modal-title">@T["Pick an icon"]</h5>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:56
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Pick an icon"
-msgstr "Chọn biểu tượng"
-
-#. <label asp-for="SelectedPermissionNames">@T["Permissions"]</label>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:76
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Permissions"
-msgstr "Phân quyền"
-
-#. placeholder="@T["Type to search"]"
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:101
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Type to search"
-msgstr "Nhập để tìm kiếm"
-
-#. select-label="@T["Select"]"
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:108
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Select"
-msgstr "Chọn"
-
-#. deselect-label="@T["Remove"]">
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:109
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "Remove"
-msgstr "Loại bỏ"
-
-#. @T["No result found"]
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:114
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "No result found"
-msgstr "Không tìm thấy kết quả nào"
-
-#. <span class="hint">@T["The permissions required to display this menu item (optional)."]</span>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:117
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
-msgid "The permissions required to display this menu item (optional)."
-msgstr "Các quyền cần thiết để hiển thị mục menu này (tùy chọn)."
-
-#. <span>@Model.Value.LinkText <span class="text-muted dashed">@T["Placeholder"]</span></span>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeSummary.cshtml:4
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeSummary"
-msgid "Placeholder"
-msgstr "Giữ chỗ"
-
-#. <h4 class="card-title">@T["Placeholder Admin Node"]</h4>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeThumbnail.cshtml:3
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeThumbnail"
-msgid "Placeholder Admin Node"
-msgstr "Giữ chỗ Nút Quản trị"
-
-#. <p>@T["Adds a menu item that acts as a container for others."]</p>
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeThumbnail.cshtml:4
-msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeThumbnail"
-msgid "Adds a menu item that acts as a container for others."
-msgstr "Thêm một mục menu làm vùng chứa cho các mục khác."
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Admin Menu {0}", Model.Name])</h1></zone>
-#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:3
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
-msgid "Create Admin Menu {0}"
-msgstr "Tạo Menu Quản trị {0}"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:9
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
-msgid "Name"
-msgstr "Tên"
-
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
-#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:11
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
-msgid "The name is required"
-msgstr "Tên là bắt buộc"
-
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:15
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
-msgid "Create"
-msgstr "Tạo"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Menu\Create.cshtml:16
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Create"
-msgid "Cancel"
-msgstr "Hủy bỏ"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Menu: {0}", Model.Name])</h1></zone>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:4
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "Edit Admin Menu: {0}"
-msgstr "Sửa Menu Quản trị: {0}"
-
-#. <label asp-for="Name">@T["Name"]</label>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:9
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "Name"
-msgstr "Tên"
-
-#. <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:11
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "The name is required"
-msgstr "Tên là bắt buộc"
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "Save"
-msgstr "Lưu"
-
-#. <a class="btn btn-primary edit-nodes" role="button" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:15
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "Edit Admin Nodes"
-msgstr "Chỉnh sửa Các nút Quản trị"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:16
-msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
-msgid "Cancel"
-msgstr "Hủy bỏ"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Admin Menus"])</h1></zone>
 #: OrchardCore.AdminMenu\Views\Menu\List.cshtml:10
@@ -563,72 +486,6 @@ msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "selected"
 msgstr "đã chọn"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Node"])</h1></zone>
-#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:3
-msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
-msgid "Create Node"
-msgstr "Tạo nút"
-
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:14
-msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
-msgid "Create"
-msgstr "Tạo"
-
-#. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Node\Create.cshtml:19
-msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
-msgid "Cancel"
-msgstr "Bỏ qua"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Node"])</h1></zone>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:3
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Edit Node"
-msgstr "Sửa Nút"
-
-#. <label asp-for="Priority">@T["Selection Priority"]</label>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:14
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Selection Priority"
-msgstr "Ưu tiên Lựa chọn"
-
-#. <span class="hint">@T["The priority of this link to be displayed as active instead of another one when both are pointing to the same url. The link with the highest value has the active status in the navigation."]</span>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:16
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "The priority of this link to be displayed as active instead of another one when both are pointing to the same url. The link with the highest value has the active status in the navigation."
-msgstr "Ưu tiên của liên kết này sẽ được hiển thị là hoạt động thay vì liên kết khác khi cả hai đều trỏ đến cùng một url. Liên kết có giá trị cao nhất có trạng thái hoạt động trong điều hướng."
-
-#. <label asp-for="Position">@T["Position Order"]</label>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:20
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Position Order"
-msgstr "Thứ tự Vị trí"
-
-#. <span class="hint">@T["The position order of this link in the admin menu."]</span>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:22
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "The position order of this link in the admin menu."
-msgstr "Thứ tự vị trí của liên kết này trong menu quản trị."
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:26
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Save"
-msgstr "Lưu"
-
-#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:33
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Delete"
-msgstr "Xoá"
-
-#. asp-route-id="@Model.AdminMenuId">@T["Cancel"]</a>
-#: OrchardCore.AdminMenu\Views\Node\Edit.cshtml:38
-msgctxt "OrchardCore.AdminMenu.Views.Node.Edit"
-msgid "Cancel"
-msgstr "Bỏ qua"
-
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Nodes for '{0}'", Model.AdminMenu.Name])</h1></zone>
 #: OrchardCore.AdminMenu\Views\Node\List.cshtml:12
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
@@ -670,4 +527,147 @@ msgstr "Bỏ qua"
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "There was an error when moving the tree node."
 msgstr "Có lỗi khi di chuyển nút."
+
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Toggle"
+msgstr "Chuyển đổi trạng thái"
+
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Disable"
+msgstr "Vô hiệu hoá"
+
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:0
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Enable"
+msgstr "Kích hoạt"
+
+#. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#. class="btn btn-danger" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:33
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:52
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Delete"
+msgstr "Xoá"
+
+#. <span class="text-warning">@T["Can't show the item of type: {0}. Maybe a required module has been disabled?", menuType]</span>
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:35
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Can't show the item of type: {0}. Maybe a required module has been disabled?"
+msgstr "Không thể hiển thị mục của loại: {0}. Có lẽ một mô-đun cần thiết đã bị vô hiệu hoá?"
+
+#. class="btn btn-primary btn-sm">@T["Edit"]</a>
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:45
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeSummary.cshtml:54
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeSummary"
+msgid "Toggle Dropdown"
+msgstr "Bấm thả xuống"
+
+#. <a class="btn btn-primary btn-sm" asp-route-action="Create" asp-route-controller="Node" asp-route-type="@Model.Type" asp-route-id="@Model.ContentTreePreset.Id">@T["Add"]</a>
+#: OrchardCore.AdminMenu\Views\MenuItem.TreeThumbnail.cshtml:9
+msgctxt "OrchardCore.AdminMenu.Views.MenuItem.TreeThumbnail"
+msgid "Add"
+msgstr "Thêm"
+
+#. <h5>@T["Placeholder"]</h5>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:12
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Placeholder"
+msgstr "Giữ chỗ"
+
+#. <label asp-for="LinkText">@T["Link Text"]</label>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:15
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Link Text"
+msgstr "Văn bản Liên kết"
+
+#. <span class="hint">@T["The text of the menu item as it will be shown in the tree."]</span>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:18
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "The text of the menu item as it will be shown in the tree."
+msgstr "Phần văn bản của một mục menu sẽ được hiển thị trong cây."
+
+#. <label asp-for="IconClass">@T["Icon"]</label>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:22
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. @T["Pick"]
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:35
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Pick"
+msgstr "Chọn"
+
+#. <span class="hint">@T["Select an icon to display when this menu item is at the first level."]</span>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:48
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Select an icon to display when this menu item is at the first level."
+msgstr "Chọn một biểu tượng để hiển thị khi mục này đứng đầu."
+
+#. <h5 class="modal-title">@T["Pick an icon"]</h5>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:56
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Pick an icon"
+msgstr "Chọn biểu tượng"
+
+#. <label asp-for="SelectedPermissionNames">@T["Permissions"]</label>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:76
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Permissions"
+msgstr "Phân quyền"
+
+#. placeholder="@T["Type to search"]"
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:101
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Type to search"
+msgstr "Nhập để tìm kiếm"
+
+#. select-label="@T["Select"]"
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:108
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Select"
+msgstr "Chọn"
+
+#. deselect-label="@T["Remove"]">
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:109
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "Remove"
+msgstr "Loại bỏ"
+
+#. @T["No result found"]
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:114
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "No result found"
+msgstr "Không tìm thấy kết quả nào"
+
+#. <span class="hint">@T["The permissions required to display this menu item (optional)."]</span>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeEdit.cshtml:117
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
+msgid "The permissions required to display this menu item (optional)."
+msgstr "Các quyền cần thiết để hiển thị mục menu này (tùy chọn)."
+
+#. <span>@Model.Value.LinkText <span class="text-muted dashed">@T["Placeholder"]</span></span>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeSummary.cshtml:4
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeSummary"
+msgid "Placeholder"
+msgstr "Giữ chỗ"
+
+#. <h4 class="card-title">@T["Placeholder Admin Node"]</h4>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeThumbnail.cshtml:3
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeThumbnail"
+msgid "Placeholder Admin Node"
+msgstr "Giữ chỗ Nút Quản trị"
+
+#. <p>@T["Adds a menu item that acts as a container for others."]</p>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeThumbnail.cshtml:4
+msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeThumbnail"
+msgid "Adds a menu item that acts as a container for others."
+msgstr "Thêm một mục menu làm vùng chứa cho các mục khác."
 

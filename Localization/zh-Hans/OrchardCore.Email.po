@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2023-01-12 21:10\n"
+"PO-Revision-Date: 2023-02-18 19:35\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -67,6 +67,216 @@ msgstr "完成"
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "失败"
+
+#. <h4><i class="fa fa-envelope" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Design.cshtml:6
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
+msgid "Send Email"
+msgstr "发送电子邮件"
+
+#. <label asp-for="AuthorExpression">@T["From"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:5
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "From"
+msgstr "发件人"
+
+#. <span class="hint">@T["The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:8
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."
+msgstr "邮件作者的电子邮件地址，留空时将使用默认电子邮件地址。支持Liquid。"
+
+#. <label asp-for="SenderExpression">@T["Sender"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:12
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Sender"
+msgstr "发送者"
+
+#. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
+msgstr "发件人的电子邮件地址。如果与\"发件人\"电子邮件地址不相同则需要。支持Liquid"
+
+#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "ReplyTo"
+msgstr "回复"
+
+#. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
+msgstr "\"回复\"电子邮件地址。如果您想要将电子邮件回复发送到不同于\"发件人\"地址。支持Liquid"
+
+#. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Recipients"
+msgstr "收件人"
+
+#. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The comma-separated list of recipient email addresses. With Liquid support."
+msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
+
+#. <label asp-for="CcExpression">@T["Cc"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Cc"
+msgstr "抄送"
+
+#. <span class="hint">@T["The comma-separated list of carbon copy email addresses. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The comma-separated list of carbon copy email addresses. With Liquid support."
+msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
+
+#. <label asp-for="BccExpression">@T["Bcc"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Bcc"
+msgstr "密送"
+
+#. <span class="hint">@T["The comma-separated list of blind copy email addresses. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:43
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The comma-separated list of blind copy email addresses. With Liquid support."
+msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
+
+#. <label asp-for="SubjectExpression">@T["Subject"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:47
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Subject"
+msgstr "主题"
+
+#. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:50
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The subject of the email message. With Liquid support."
+msgstr "电子邮件的主题。流体支持。"
+
+#. <label class="form-check-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Does the Body contain HTML?"
+msgstr "身体是否包含 HTML？"
+
+#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as HTML."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:57
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "If checked, indicates the body of the email message will be sent as HTML."
+msgstr "如果选中此项，显示邮件正文将以 HTML格式发送。"
+
+#. <label class="form-check-label" asp-for="IsBodyText">@T["Does the Body contain plain text?"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Does the Body contain plain text?"
+msgstr "正文是否包含纯文本？"
+
+#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as plain text."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:65
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "If checked, indicates the body of the email message will be sent as plain text."
+msgstr "如果选中此项，显示邮件正文将以纯文本形式发送。"
+
+#. <label asp-for="Body">@T["Body"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:70
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Body"
+msgstr "主体"
+
+#. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:72
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The body of the email message. With Liquid support."
+msgstr "电子邮件的正文。流体支持。"
+
+#. <label asp-for="Body">@T["Body Plain Text"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:76
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Body Plain Text"
+msgstr "正文文本"
+
+#. <span class="hint">@T["The plain text body of the email message. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:78
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The plain text body of the email message. With Liquid support."
+msgstr "电子邮件消息的纯文本正文。支持Liquid"
+
+#. <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i>@T["Send Email"]</h4>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
+msgid "Send Email"
+msgstr "发送电子邮件"
+
+#. <p>@T["Send an email."]</p>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
+msgid "Send an email."
+msgstr "发送电子邮件"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:3
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Settings"
+msgstr "设置"
+
+#. <label asp-for="To">@T["To"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:10
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "To"
+msgstr "发送至"
+
+#. <label asp-for="Sender">@T["Sender"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:17
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Sender"
+msgstr "实际发件人"
+
+#. <span class="hint">@T["The sender is optional, it is useful when the email author is different than the email submitter."]</span>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:20
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "The sender is optional, it is useful when the email author is different than the email submitter."
+msgstr "实际发件人是可选的，当邮件作者与发送者不同时设置。"
+
+#. <label asp-for="Bcc">@T["Bcc"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:25
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Bcc"
+msgstr "密送"
+
+#. <label asp-for="Cc">@T["Cc"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:32
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Cc"
+msgstr "抄送"
+
+#. <label asp-for="ReplyTo">@T["Reply To"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:39
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Reply To"
+msgstr "回复到"
+
+#. <label asp-for="Subject">@T["Subject"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:46
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Subject"
+msgstr "主题"
+
+#. <label asp-for="Body">@T["Body"]</label>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:53
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Body"
+msgstr "主体"
+
+#. <button type="submit" id="emailtestsend" class="button grey">@T["Send"]</button>
+#: OrchardCore.Email\Views\Admin\Index.cshtml:59
+msgctxt "OrchardCore.Email.Views.Admin.Index"
+msgid "Send"
+msgstr "发送​​"
 
 #. <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="title">@T["Email"]</span>
 #: OrchardCore.Email\Views\NavigationItemText-email.Id.cshtml:1
@@ -295,214 +505,4 @@ msgstr "例如 <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> 将电子邮件放
 msgctxt "OrchardCore.Email.Views.SmtpSettings.TestButton"
 msgid "Test settings"
 msgstr "测试设置"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:3
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Settings"
-msgstr "设置"
-
-#. <label asp-for="To">@T["To"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:10
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "To"
-msgstr "发送至"
-
-#. <label asp-for="Sender">@T["Sender"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:17
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Sender"
-msgstr "实际发件人"
-
-#. <span class="hint">@T["The sender is optional, it is useful when the email author is different than the email submitter."]</span>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:20
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "The sender is optional, it is useful when the email author is different than the email submitter."
-msgstr "实际发件人是可选的，当邮件作者与发送者不同时设置。"
-
-#. <label asp-for="Bcc">@T["Bcc"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:25
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Bcc"
-msgstr "密送"
-
-#. <label asp-for="Cc">@T["Cc"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:32
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Cc"
-msgstr "抄送"
-
-#. <label asp-for="ReplyTo">@T["Reply To"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:39
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Reply To"
-msgstr "回复到"
-
-#. <label asp-for="Subject">@T["Subject"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:46
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Subject"
-msgstr "主题"
-
-#. <label asp-for="Body">@T["Body"]</label>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:53
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Body"
-msgstr "主体"
-
-#. <button type="submit" id="emailtestsend" class="button grey">@T["Send"]</button>
-#: OrchardCore.Email\Views\Admin\Index.cshtml:59
-msgctxt "OrchardCore.Email.Views.Admin.Index"
-msgid "Send"
-msgstr "发送​​"
-
-#. <h4><i class="fa fa-envelope" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Design.cshtml:6
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
-msgid "Send Email"
-msgstr "发送电子邮件"
-
-#. <label asp-for="AuthorExpression">@T["From"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "From"
-msgstr "发件人"
-
-#. <span class="hint">@T["The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:8
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."
-msgstr "邮件作者的电子邮件地址，留空时将使用默认电子邮件地址。支持Liquid。"
-
-#. <label asp-for="SenderExpression">@T["Sender"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:12
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Sender"
-msgstr "发送者"
-
-#. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
-msgstr "发件人的电子邮件地址。如果与\"发件人\"电子邮件地址不相同则需要。支持Liquid"
-
-#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "ReplyTo"
-msgstr "回复"
-
-#. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
-msgstr "\"回复\"电子邮件地址。如果您想要将电子邮件回复发送到不同于\"发件人\"地址。支持Liquid"
-
-#. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Recipients"
-msgstr "收件人"
-
-#. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The comma-separated list of recipient email addresses. With Liquid support."
-msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
-
-#. <label asp-for="CcExpression">@T["Cc"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Cc"
-msgstr "抄送"
-
-#. <span class="hint">@T["The comma-separated list of carbon copy email addresses. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The comma-separated list of carbon copy email addresses. With Liquid support."
-msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
-
-#. <label asp-for="BccExpression">@T["Bcc"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Bcc"
-msgstr "密送"
-
-#. <span class="hint">@T["The comma-separated list of blind copy email addresses. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:43
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The comma-separated list of blind copy email addresses. With Liquid support."
-msgstr "以逗号分隔的收件人电子邮件地址列表。支持Liquid。"
-
-#. <label asp-for="SubjectExpression">@T["Subject"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:47
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Subject"
-msgstr "主题"
-
-#. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:50
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The subject of the email message. With Liquid support."
-msgstr "电子邮件的主题。流体支持。"
-
-#. <label class="form-check-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Does the Body contain HTML?"
-msgstr "身体是否包含 HTML？"
-
-#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as HTML."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:57
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "If checked, indicates the body of the email message will be sent as HTML."
-msgstr "如果选中此项，显示邮件正文将以 HTML格式发送。"
-
-#. <label class="form-check-label" asp-for="IsBodyText">@T["Does the Body contain plain text?"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Does the Body contain plain text?"
-msgstr "正文是否包含纯文本？"
-
-#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as plain text."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:65
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "If checked, indicates the body of the email message will be sent as plain text."
-msgstr "如果选中此项，显示邮件正文将以纯文本形式发送。"
-
-#. <label asp-for="Body">@T["Body"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:70
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Body"
-msgstr "主体"
-
-#. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:72
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The body of the email message. With Liquid support."
-msgstr "电子邮件的正文。流体支持。"
-
-#. <label asp-for="Body">@T["Body Plain Text"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:76
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Body Plain Text"
-msgstr "正文文本"
-
-#. <span class="hint">@T["The plain text body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:78
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The plain text body of the email message. With Liquid support."
-msgstr "电子邮件消息的纯文本正文。支持Liquid"
-
-#. <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i>@T["Send Email"]</h4>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
-msgid "Send Email"
-msgstr "发送电子邮件"
-
-#. <p>@T["Send an email."]</p>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:2
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
-msgid "Send an email."
-msgstr "发送电子邮件"
 

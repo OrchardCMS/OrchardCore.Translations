@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Latin\n"
 "Language: sr_latn_RS\n"
-"PO-Revision-Date: 2022-10-11 20:00\n"
+"PO-Revision-Date: 2023-02-17 16:33\n"
 
 #. .Add(S["Configuration"], localization => localization
 #: OrchardCore.ContentLocalization\AdminMenu.cs:28
@@ -148,14 +148,20 @@ msgctxt "OrchardCore.ContentLocalization.Views.ContentRequestCultureProviderSett
 msgid "Sets the localization cookie based on the LocalizationPart culture when accessing a page in the frontend."
 msgstr ""
 
+#. <p>@T["Filters on a content items localization culture."]</p>
+#: OrchardCore.ContentLocalization\Views\Items\ContentsAdminFilters-Culture.Thumbnail.cshtml:8
+msgctxt "OrchardCore.ContentLocalization.Views.Items.ContentsAdminFilters-Culture.Thumbnail"
+msgid "Filters on a content items localization culture."
+msgstr ""
+
 #. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick me-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
-#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
+#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:4
 msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
 msgid "Filter by culture"
 msgstr ""
 
 #. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick me-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
-#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:5
+#: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:4
 msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
 msgid "Culture"
 msgstr ""
@@ -172,19 +178,19 @@ msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Your site does not have any cultures. Current System culture is {1} | {0}"
 msgstr ""
 
-#. <p><a asp-route-area="OrchardCore.Settings" asp-controller="Admin" asp-action="Index" asp-route-groupId = "localization">@T["Add or remove supported cultures for the site"]</a></p>
+#. <p><a asp-route-area="OrchardCore.Settings" asp-controller="Admin" asp-action="Index" asp-route-groupId="localization">@T["Add or remove supported cultures for the site"]</a></p>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:21
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Add or remove supported cultures for the site"
 msgstr ""
 
-#. <a class="list-group-item list-group-item-action" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" title=@T["Edit {0}", culture.Culture.DisplayName]><i class="fa fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
+#. <a class="list-group-item list-group-item-action" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Edit {0}", culture.Culture.DisplayName]"><i class="fa fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:32
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Edit {0}"
 msgstr ""
 
-#. <a class="list-group-item list-group-item-action" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" title=@T["Create {0}", culture.Culture.DisplayName]><i class="fa fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
+#. <a class="list-group-item list-group-item-action" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Create {0}", culture.Culture.DisplayName]"><i class="fa fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:36
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Create {0}"
@@ -219,11 +225,5 @@ msgstr ""
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.SummaryAdminLinks.cshtml:19
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdminLinks"
 msgid "Create {0}"
-msgstr ""
-
-#. <p>@T["Filters on a content items localization culture."]</p>
-#: OrchardCore.ContentLocalization\Views\Items\ContentsAdminFilters-Culture.Thumbnail.cshtml:8
-msgctxt "OrchardCore.ContentLocalization.Views.Items.ContentsAdminFilters-Culture.Thumbnail"
-msgid "Filters on a content items localization culture."
 msgstr ""
 

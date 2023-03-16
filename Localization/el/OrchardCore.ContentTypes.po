@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2022-11-03 17:22\n"
+"PO-Revision-Date: 2023-02-18 19:30\n"
 
 #. builder.Add(S["Content"], content => content
 #: OrchardCore.ContentTypes\AdminMenu.cs:28
@@ -186,7 +186,7 @@ msgstr "Οι ρυθμίσεις του \"{0}\" έχουν αποθηκευτεί
 #: OrchardCore.ContentTypes\Controllers\AdminController.cs:592
 msgctxt "OrchardCore.ContentTypes.Controllers.AdminController"
 msgid "There are no fields."
-msgstr ""
+msgstr "Δεν υπάρχουν πεδία."
 
 #. ModelState.AddModelError("DisplayName", S["A field with the same Display Name already exists."]);
 #. ModelState.AddModelError("DisplayName", S["A field with the same Display Name already exists."]);
@@ -249,6 +249,186 @@ msgstr "Το όνομα Τύπου Περιεχομένου δεν μπορεί 
 msgctxt "OrchardCore.ContentTypes.Services.ContentDefinitionService"
 msgid "Cannot add part named '{0}'. It already exists."
 msgstr "Δεν είναι δυνατή η προσθήκη τμήματος που ονομάζεται '{0}'. Υπάρχει ήδη."
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Add New Field To \"{0}\"", Model.Part.DisplayName()])</h1></zone>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:10
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Add New Field To \"{0}\""
+msgstr "Προσθήκη Νέου Πεδίου στο \"{0}\""
+
+#. <label for="DisplayName">@T["Display Name"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:16
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Display Name"
+msgstr "Εμφανιζόμενο Όνομα"
+
+#. <span class="hint">@T["Name of the field as it will be displayed in screens."]</span>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:19
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Name of the field as it will be displayed in screens."
+msgstr "Το όνομα του πεδίου όπως θα εμφανίζεται στις οθόνες."
+
+#. <label for="Name">@T["Technical Name"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:24
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Technical Name"
+msgstr "Τεχνική Ονομασία"
+
+#. <span class="hint">@T["Technical name of the field."]</span>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:27
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Technical name of the field."
+msgstr "Τεχνική ονομασία του πεδίου."
+
+#. <label for="DisplayName">@T["Field Type"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:31
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Field Type"
+msgstr "Τύπος Πεδίου"
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:46
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:49
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#. <zone Name="Title"><h1>@T["Add Parts To \"{0}\"", Model.Type.DisplayName]</h1></zone>
+#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:5
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
+msgid "Add Parts To \"{0}\""
+msgstr "Προσθήκη Τμημάτων σε \"{0}\""
+
+#. @T["Choose the Parts to add to this Content Type."]
+#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:7
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
+msgid "Choose the Parts to add to this Content Type."
+msgstr "Επιλέξτε τα τμήματα που θέλετε να προσθέσετε σε αυτόν τον Τύπο Περιεχομένου."
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:29
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-id="@Model.Type.Name">@T["Cancel"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:30
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#. <zone Name="Title"><h1>@T["Add Named Part To \"{0}\"", Model.Type.DisplayName]</h1></zone>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:5
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Add Named Part To \"{0}\""
+msgstr "Προσθήκη Ονομαστικού Τμήματος στο \"{0}\""
+
+#. <label for="DisplayName">@T["Display Name"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:14
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Display Name"
+msgstr "Εμφανιζόμενο Όνομα"
+
+#. <span class="hint">@T["Name of the reusable part as it will be displayed in screens."]</span>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:16
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Name of the reusable part as it will be displayed in screens."
+msgstr "Όνομα του τμήματος που μπορεί να επαναχρησιμοποιηθεί καθώς θα εμφανίζεται στις οθόνες."
+
+#. <label for="Name">@T["Technical Name"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:20
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Technical Name"
+msgstr "Τεχνική Ονομασία"
+
+#. <span class="hint">@T["Technical name of the reusable part."]</span>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:22
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Technical name of the reusable part."
+msgstr "Τεχνική ονομασία του τμήματος επαναχρησιμοποίησης."
+
+#. <label for="Description">@T["Description"]</label>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:26
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. <span class="hint">@T["Description of the reusable part."]</span>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:28
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Description of the reusable part."
+msgstr "Περιγραφή του τμήματος επαναχρησιμοποίησης."
+
+#. <p class="alert alert-warning">@T["There are no available named parts."]</p>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:50
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "There are no available named parts."
+msgstr "Δεν υπάρχουν διαθέσιμα ονομαζόμενα τμήματα."
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:56
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-id="@Model.Type.Name">@T["Cancel"]</a>
+#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:58
+msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#. <h5>@T["Update Content Definitions"]</h5>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
+msgid "Update Content Definitions"
+msgstr "Ενημέρωση Ορισμών Περιεχομένου"
+
+#. <label class="form-check-label" asp-for="IncludeAll">@T["Include all content types and parts definitions."]</label>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:21
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
+msgid "Include all content types and parts definitions."
+msgstr "Συμπεριλαμβάνει όλους τους τύπων περιεχομένου και τμήματα ορισμών."
+
+#. <span class="hint">@T["The content types to add as part of the plan."]</span>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:31
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
+msgid "The content types to add as part of the plan."
+msgstr "Οι τύποι περιεχομένου που πρέπει να προστεθούν ως τμήμα του σχεδίου."
+
+#. <span class="hint">@T["The content parts to add as part of the plan."]</span>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:88
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
+msgid "The content parts to add as part of the plan."
+msgstr "Τα τμήματα περιεχομένου για να προστεθούν ως μέρος του σχεδίου."
+
+#. <h5>@T["Update Content Definitions"]</h5>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Summary.cshtml:6
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Summary"
+msgid "Update Content Definitions"
+msgstr "Ενημέρωση Ορισμών Περιεχομένου"
+
+#. <span class="hint d-block">@T["Content Definitions should be placed before any content steps."]</span>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Summary.cshtml:44
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Summary"
+msgid "Content Definitions should be placed before any content steps."
+msgstr "Οι Ορισμοί Περιεχομένου πρέπει να τοποθετούνται πριν από οποιαδήποτε βήματα στο περιεχόμενο."
+
+#. <h4 class="card-title">@T["Update Content Definitions"]</h4>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Thumbnail"
+msgid "Update Content Definitions"
+msgstr "Ενημέρωση Ορισμών Περιεχομένου"
+
+#. <p>@T["Exports specified content type and part definitions for updating."]</p>
+#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Thumbnail"
+msgid "Exports specified content type and part definitions for updating."
+msgstr "Εξάγει καθορισμένο τύπο περιεχομένου και ορισμούς τμημάτων για ενημέρωση."
 
 #. <label asp-for="ContentPartDefinition.Name">@T["Technical Name"]</label>
 #: OrchardCore.ContentTypes\Views\ContentPartSettings.Edit.cshtml:5
@@ -418,176 +598,6 @@ msgctxt "OrchardCore.ContentTypes.Views.ContentTypeSettings.Edit"
 msgid "(Optional) The stereotype of the content type. e.g., Widget, MenuItem, ..."
 msgstr "(Προαιρετικό) Το στερεότυπο του τύπου περιεχομένου. π.χ. Widget, MenuItem, ..."
 
-#. <label class="form-check-label" asp-for="Settings.Collapse">@T["Collapse"]</label>
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:17
-msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
-msgid "Collapse"
-msgstr "Σύμπτυξη"
-
-#. <span class="hint">@T["NB. Setting is collapsed by default, and cannot be overwritten."]</span>
-#. <span class="hint">@T["NB. Setting is collapsed by default, and cannot be overwritten."]</span>
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:20
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:32
-msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
-msgid "NB. Setting is collapsed by default, and cannot be overwritten."
-msgstr "Σημείωση. Η ρύθμιση έχει κατάρρευσει από προεπιλογή και δεν μπορεί να αντικατασταθεί."
-
-#. <span class="hint">@T["Check to collapse fields in the GraphQL schema."]</span>
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:24
-msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
-msgid "Check to collapse fields in the GraphQL schema."
-msgstr "Επιλέξτε για να συμπτύξετε τα πεδία στο σχήμα GraphQL."
-
-#. <label class="form-check-label" asp-for="Settings.Hidden">@T["Hide"]</label>
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:29
-msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
-msgid "Hide"
-msgstr "Απόκρυψη"
-
-#. <span class="hint">@T["Check to hide type from the GraphQL schema."]</span>
-#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:36
-msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
-msgid "Check to hide type from the GraphQL schema."
-msgstr "Επιλέξτε για να αποκρύψετε τον τύπο από το σχήμα GraphQL."
-
-#. <span class="icon"><i class="fa fa-cube" aria-hidden="true"></i></span><span class="title">@T["Content Definition"]</span>
-#: OrchardCore.ContentTypes\Views\NavigationItemText-contentdefinition.Id.cshtml:1
-msgctxt "OrchardCore.ContentTypes.Views.NavigationItemText-contentdefinition.Id"
-msgid "Content Definition"
-msgstr "Ορισμός Περιεχομένου"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Add New Field To \"{0}\"", Model.Part.DisplayName()])</h1></zone>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:10
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Add New Field To \"{0}\""
-msgstr "Προσθήκη Νέου Πεδίου στο \"{0}\""
-
-#. <label for="DisplayName">@T["Display Name"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:16
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Display Name"
-msgstr "Εμφανιζόμενο Όνομα"
-
-#. <span class="hint">@T["Name of the field as it will be displayed in screens."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:19
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Name of the field as it will be displayed in screens."
-msgstr "Το όνομα του πεδίου όπως θα εμφανίζεται στις οθόνες."
-
-#. <label for="Name">@T["Technical Name"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:24
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Technical Name"
-msgstr "Τεχνική Ονομασία"
-
-#. <span class="hint">@T["Technical name of the field."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:27
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Technical name of the field."
-msgstr "Τεχνική ονομασία του πεδίου."
-
-#. <label for="DisplayName">@T["Field Type"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:31
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Field Type"
-msgstr "Τύπος Πεδίου"
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:46
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Save"
-msgstr "Αποθήκευση"
-
-#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\AddFieldTo.cshtml:49
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddFieldTo"
-msgid "Cancel"
-msgstr "Άκυρο"
-
-#. <zone Name="Title"><h1>@T["Add Parts To \"{0}\"", Model.Type.DisplayName]</h1></zone>
-#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:5
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
-msgid "Add Parts To \"{0}\""
-msgstr "Προσθήκη Τμημάτων σε \"{0}\""
-
-#. @T["Choose the Parts to add to this Content Type."]
-#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:7
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
-msgid "Choose the Parts to add to this Content Type."
-msgstr "Επιλέξτε τα τμήματα που θέλετε να προσθέσετε σε αυτόν τον Τύπο Περιεχομένου."
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:29
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
-msgid "Save"
-msgstr "Αποθήκευση"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-id="@Model.Type.Name">@T["Cancel"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\AddPartsTo.cshtml:30
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddPartsTo"
-msgid "Cancel"
-msgstr "Άκυρο"
-
-#. <zone Name="Title"><h1>@T["Add Named Part To \"{0}\"", Model.Type.DisplayName]</h1></zone>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:5
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Add Named Part To \"{0}\""
-msgstr "Προσθήκη Ονομαστικού Τμήματος στο \"{0}\""
-
-#. <label for="DisplayName">@T["Display Name"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:14
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Display Name"
-msgstr "Εμφανιζόμενο Όνομα"
-
-#. <span class="hint">@T["Name of the reusable part as it will be displayed in screens."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:16
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Name of the reusable part as it will be displayed in screens."
-msgstr "Όνομα του τμήματος που μπορεί να επαναχρησιμοποιηθεί καθώς θα εμφανίζεται στις οθόνες."
-
-#. <label for="Name">@T["Technical Name"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:20
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Technical Name"
-msgstr "Τεχνική Ονομασία"
-
-#. <span class="hint">@T["Technical name of the reusable part."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:22
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Technical name of the reusable part."
-msgstr "Τεχνική ονομασία του τμήματος επαναχρησιμοποίησης."
-
-#. <label for="Description">@T["Description"]</label>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:26
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Description"
-msgstr "Περιγραφή"
-
-#. <span class="hint">@T["Description of the reusable part."]</span>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:28
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Description of the reusable part."
-msgstr "Περιγραφή του τμήματος επαναχρησιμοποίησης."
-
-#. <p class="alert alert-warning">@T["There are no available named parts."]</p>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:50
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "There are no available named parts."
-msgstr "Δεν υπάρχουν διαθέσιμα ονομαζόμενα τμήματα."
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:56
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Save"
-msgstr "Αποθήκευση"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-id="@Model.Type.Name">@T["Cancel"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\AddReusablePartTo.cshtml:58
-msgctxt "OrchardCore.ContentTypes.Views.Admin.AddReusablePartTo"
-msgid "Cancel"
-msgstr "Άκυρο"
-
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["New Content Type"])</h1></zone>
 #: OrchardCore.ContentTypes\Views\Admin\Create.cshtml:3
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Create"
@@ -647,6 +657,48 @@ msgstr "Μη Χρησιμοποιείτε κενά ή ειδικούς χαρα�
 msgctxt "OrchardCore.ContentTypes.Views.Admin.CreatePart"
 msgid "Create"
 msgstr "Δημιουργία"
+
+#. <label asp-for="ContentTypes">@T["Content Type Definitions"]</label>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:4
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
+msgid "Content Type Definitions"
+msgstr "Ορισμοί Τύπου Περιεχομένου"
+
+#. <span class="hint">@T["A comma separated list of content type definitions to delete"]</span>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
+msgid "A comma separated list of content type definitions to delete"
+msgstr "Μια λίστα διαχωρισμένων με κόμμα ορισμών τύπου περιεχομένου για διαγραφή"
+
+#. <label asp-for="ContentParts">@T["Content Part Definitions"]</label>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:11
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
+msgid "Content Part Definitions"
+msgstr "Ορισμοί Τμήματος Περιεχομένου"
+
+#. <span class="hint">@T["A comma separated list of content part definitions to delete"]</span>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
+msgid "A comma separated list of content part definitions to delete"
+msgstr "Μια λίστα ορισμών τύπου περιεχομένου διαχωρισμένων με κόμμα για διαγραφή"
+
+#. <h5>@T["Delete Content Definitions"]</h5>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Summary.cshtml:5
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Summary"
+msgid "Delete Content Definitions"
+msgstr "Διαγραφή Ορισμών Περιεχομένου"
+
+#. <h4 class="card-title">@T["Delete Content Definitions"]</h4>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:1
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Thumbnail"
+msgid "Delete Content Definitions"
+msgstr "Διαγραφή Ορισμών Περιεχομένου"
+
+#. <p>@T["Exports specified content type and part definitions for deletion."]</p>
+#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Thumbnail"
+msgid "Exports specified content type and part definitions for deletion."
+msgstr "Εξάγει καθορισμένο τύπο περιεχομένου και ορισμούς τμημάτων για διαγραφή."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Content Type - {0}", Model.TypeDefinition.DisplayName])</h1></zone>
 #: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:34
@@ -830,6 +882,12 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Delete"
 msgstr "Διαγραφή"
 
+#. <a id="btn-edit-@Model.Name" class="btn btn-primary btn-sm" asp-route-action="EditPart" asp-route-id="@Model.Name">@T["Edit"]</a>
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditPartViewModel.cshtml:5
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditPartViewModel"
+msgid "Edit"
+msgstr "Επεξεργασία"
+
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Part - {0}", Model.DisplayName])</h1></zone>
 #: OrchardCore.ContentTypes\Views\Admin\EditTypePart.cshtml:16
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditTypePart"
@@ -890,6 +948,84 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.EditTypePart"
 msgid "Cancel"
 msgstr "Άκυρο"
 
+#. <span class="badge rounded-pill ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Technical Name"]"><i class="fas fa-file-alt text-danger" aria-hidden="true"></i> @Model.Name</span>
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:10
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
+msgid "Technical Name"
+msgstr ""
+
+#. <a id="btn-create-@Model.Name" asp-route-area="OrchardCore.Contents" asp-route-action="Create" asp-route-id="@Model.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-success btn-sm">@T["Create New {0}", Model.DisplayName]</a>
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:20
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
+msgid "Create New {0}"
+msgstr "Δημιουργία Νέου {0}"
+
+#. <a role="btn-list-@Model.Name" asp-route-action="List" asp-route-area="OrchardCore.Contents" asp-route-contentTypeId="@Model.Name" class="btn btn-secondary btn-sm">@T["List Items"]</a>
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:22
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
+msgid "List Items"
+msgstr "Λίστα Στοιχείων"
+
+#. <a role="btn-edit-@Model.Name" asp-route-action="Edit" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
+#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:23
+msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#. <label class="form-check-label" asp-for="Settings.Collapse">@T["Collapse"]</label>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:17
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "Collapse"
+msgstr "Σύμπτυξη"
+
+#. <span class="hint">@T["NB. Setting is collapsed by default, and cannot be overwritten."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:20
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "NB. Setting is collapsed by default, and cannot be overwritten."
+msgstr "Σημείωση. Η ρύθμιση έχει κατάρρευσει από προεπιλογή και δεν μπορεί να αντικατασταθεί."
+
+#. <span class="hint">@T["Check to collapse fields in the GraphQL schema."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:24
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "Check to collapse fields in the GraphQL schema."
+msgstr "Επιλέξτε για να συμπτύξετε τα πεδία στο σχήμα GraphQL."
+
+#. <label class="form-check-label" asp-for="Settings.Hidden">@T["Hide"]</label>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:29
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "Hide"
+msgstr "Απόκρυψη"
+
+#. <span class="hint">@T["Setting is hidden by default, and cannot be overwritten."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:32
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "Setting is hidden by default, and cannot be overwritten."
+msgstr ""
+
+#. <span class="hint">@T["Check to hide part from the GraphQL schema."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypePartSettings.Edit.cshtml:36
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypePartSettings.Edit"
+msgid "Check to hide part from the GraphQL schema."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="Settings.Hidden">@T["Hide"]</label>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypeSettings.Edit.cshtml:12
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypeSettings.Edit"
+msgid "Hide"
+msgstr ""
+
+#. <span class="hint">@T["Setting is hidden by default, and cannot be overwritten."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypeSettings.Edit.cshtml:15
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypeSettings.Edit"
+msgid "Setting is hidden by default, and cannot be overwritten."
+msgstr ""
+
+#. <span class="hint">@T["Check to hide type from the GraphQL schema."]</span>
+#: OrchardCore.ContentTypes\Views\GraphQLContentTypeSettings.Edit.cshtml:19
+msgctxt "OrchardCore.ContentTypes.Views.GraphQLContentTypeSettings.Edit"
+msgid "Check to hide type from the GraphQL schema."
+msgstr ""
+
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Content Types"])</h1></zone>
 #: OrchardCore.ContentTypes\Views\Admin\List.cshtml:3
 msgctxt "OrchardCore.ContentTypes.Views.Admin.List"
@@ -938,95 +1074,11 @@ msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Η αναζήτηση δεν επέστρεψε κανένα αποτέλεσμα."
 
-#. <h5>@T["Update Content Definitions"]</h5>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
-msgid "Update Content Definitions"
-msgstr "Ενημέρωση Ορισμών Περιεχομένου"
-
-#. <label class="form-check-label" asp-for="IncludeAll">@T["Include all content types and parts definitions."]</label>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:21
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
-msgid "Include all content types and parts definitions."
-msgstr "Συμπεριλαμβάνει όλους τους τύπων περιεχομένου και τμήματα ορισμών."
-
-#. <span class="hint">@T["The content types to add as part of the plan."]</span>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:31
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
-msgid "The content types to add as part of the plan."
-msgstr "Οι τύποι περιεχομένου που πρέπει να προστεθούν ως τμήμα του σχεδίου."
-
-#. <span class="hint">@T["The content parts to add as part of the plan."]</span>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Edit.cshtml:88
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Edit"
-msgid "The content parts to add as part of the plan."
-msgstr "Τα τμήματα περιεχομένου για να προστεθούν ως μέρος του σχεδίου."
-
-#. <h5>@T["Update Content Definitions"]</h5>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Summary.cshtml:6
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Summary"
-msgid "Update Content Definitions"
-msgstr "Ενημέρωση Ορισμών Περιεχομένου"
-
-#. <span class="hint d-block">@T["Content Definitions should be placed before any content steps."]</span>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Summary.cshtml:44
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Summary"
-msgid "Content Definitions should be placed before any content steps."
-msgstr "Οι Ορισμοί Περιεχομένου πρέπει να τοποθετούνται πριν από οποιαδήποτε βήματα στο περιεχόμενο."
-
-#. <h4 class="card-title">@T["Update Content Definitions"]</h4>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:1
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Thumbnail"
-msgid "Update Content Definitions"
-msgstr "Ενημέρωση Ορισμών Περιεχομένου"
-
-#. <p>@T["Exports specified content type and part definitions for updating."]</p>
-#: OrchardCore.ContentTypes\Views\Items\ContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:2
-msgctxt "OrchardCore.ContentTypes.Views.Items.ContentDefinitionDeploymentStep.Fields.Thumbnail"
-msgid "Exports specified content type and part definitions for updating."
-msgstr "Εξάγει καθορισμένο τύπο περιεχομένου και ορισμούς τμημάτων για ενημέρωση."
-
-#. <label asp-for="ContentTypes">@T["Content Type Definitions"]</label>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:4
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
-msgid "Content Type Definitions"
-msgstr "Ορισμοί Τύπου Περιεχομένου"
-
-#. <span class="hint">@T["A comma separated list of content type definitions to delete"]</span>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:7
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
-msgid "A comma separated list of content type definitions to delete"
-msgstr "Μια λίστα διαχωρισμένων με κόμμα ορισμών τύπου περιεχομένου για διαγραφή"
-
-#. <label asp-for="ContentParts">@T["Content Part Definitions"]</label>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:11
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
-msgid "Content Part Definitions"
-msgstr "Ορισμοί Τμήματος Περιεχομένου"
-
-#. <span class="hint">@T["A comma separated list of content part definitions to delete"]</span>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Edit"
-msgid "A comma separated list of content part definitions to delete"
-msgstr "Μια λίστα ορισμών τύπου περιεχομένου διαχωρισμένων με κόμμα για διαγραφή"
-
-#. <h5>@T["Delete Content Definitions"]</h5>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Summary.cshtml:5
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Summary"
-msgid "Delete Content Definitions"
-msgstr "Διαγραφή Ορισμών Περιεχομένου"
-
-#. <h4 class="card-title">@T["Delete Content Definitions"]</h4>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:1
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Thumbnail"
-msgid "Delete Content Definitions"
-msgstr "Διαγραφή Ορισμών Περιεχομένου"
-
-#. <p>@T["Exports specified content type and part definitions for deletion."]</p>
-#: OrchardCore.ContentTypes\Views\Items\DeleteContentDefinitionDeploymentStep.Fields.Thumbnail.cshtml:2
-msgctxt "OrchardCore.ContentTypes.Views.Items.DeleteContentDefinitionDeploymentStep.Fields.Thumbnail"
-msgid "Exports specified content type and part definitions for deletion."
-msgstr "Εξάγει καθορισμένο τύπο περιεχομένου και ορισμούς τμημάτων για διαγραφή."
+#. <span class="icon"><i class="fa fa-cube" aria-hidden="true"></i></span><span class="title">@T["Content Definition"]</span>
+#: OrchardCore.ContentTypes\Views\NavigationItemText-contentdefinition.Id.cshtml:1
+msgctxt "OrchardCore.ContentTypes.Views.NavigationItemText-contentdefinition.Id"
+msgid "Content Definition"
+msgstr "Ορισμός Περιεχομένου"
 
 #. <h5>@T["Replace Content Definitions"]</h5>
 #: OrchardCore.ContentTypes\Views\Items\ReplaceContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
@@ -1075,34 +1127,4 @@ msgstr "Αντικατάσταση Ορισμών Περιεχομένου"
 msgctxt "OrchardCore.ContentTypes.Views.Items.ReplaceContentDefinitionDeploymentStep.Fields.Thumbnail"
 msgid "Exports specified content type and part definitions for replacement."
 msgstr "Εξάγει καθορισμένο τύπο περιεχομένου και ορισμούς τμημάτων για αντικατάσταση."
-
-#. <a id="btn-edit-@Model.Name" class="btn btn-primary btn-sm" asp-route-action="EditPart" asp-route-id="@Model.Name">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditPartViewModel.cshtml:5
-msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditPartViewModel"
-msgid "Edit"
-msgstr "Επεξεργασία"
-
-#. <span class="badge rounded-pill ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Technical Name"]"><i class="fas fa-file-alt text-danger" aria-hidden="true"></i> @Model.Name</span>
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:10
-msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
-msgid "Technical Name"
-msgstr ""
-
-#. <a id="btn-create-@Model.Name" asp-route-area="OrchardCore.Contents" asp-route-action="Create" asp-route-id="@Model.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-success btn-sm">@T["Create New {0}", Model.DisplayName]</a>
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:20
-msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
-msgid "Create New {0}"
-msgstr "Δημιουργία Νέου {0}"
-
-#. <a role="btn-list-@Model.Name" asp-route-action="List" asp-route-area="OrchardCore.Contents" asp-route-contentTypeId="@Model.Name" class="btn btn-secondary btn-sm">@T["List Items"]</a>
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:22
-msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
-msgid "List Items"
-msgstr "Λίστα Στοιχείων"
-
-#. <a role="btn-edit-@Model.Name" asp-route-action="Edit" asp-route-area="OrchardCore.ContentTypes" asp-route-id="@Model.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Shared\DisplayTemplates\EditTypeViewModel.cshtml:23
-msgctxt "OrchardCore.ContentTypes.Views.Shared.DisplayTemplates.EditTypeViewModel"
-msgid "Edit"
-msgstr "Επεξεργασία"
 

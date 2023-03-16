@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2022-10-11 20:30\n"
+"PO-Revision-Date: 2023-02-17 17:03\n"
 
 #. builder.Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Taxonomies\AdminMenu.cs:25
@@ -30,18 +30,6 @@ msgstr ""
 #: OrchardCore.Taxonomies\AdminMenu.cs:27
 msgctxt "OrchardCore.Taxonomies.AdminMenu"
 msgid "Taxonomy Filters"
-msgstr ""
-
-#. services.AddSiteSettingsPropertyDeploymentStep<TaxonomyContentsAdminListSettings, ContentsAdminListDeploymentStartup>(S => S["Taxonomy Filters settings"], S => S["Exports the Taxonomy filters settings."]);
-#: OrchardCore.Taxonomies\Startup.cs:139
-msgctxt "OrchardCore.Taxonomies.ContentsAdminListDeploymentStartup"
-msgid "Taxonomy Filters settings"
-msgstr ""
-
-#. services.AddSiteSettingsPropertyDeploymentStep<TaxonomyContentsAdminListSettings, ContentsAdminListDeploymentStartup>(S => S["Taxonomy Filters settings"], S => S["Exports the Taxonomy filters settings."]);
-#: OrchardCore.Taxonomies\Startup.cs:139
-msgctxt "OrchardCore.Taxonomies.ContentsAdminListDeploymentStartup"
-msgid "Exports the Taxonomy filters settings."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Taxonomy item deleted successfully."]);
@@ -74,6 +62,24 @@ msgctxt "OrchardCore.Taxonomies.Drivers.TaxonomyFieldTagsDisplayDriver"
 msgid "A value is required for '{0}'"
 msgstr ""
 
+#. context.Fail(S["A value is required for '{0}'", context.ContentPartFieldDefinition.DisplayName()], nameof(field.TermContentItemIds));
+#: OrchardCore.Taxonomies\Handlers\TaxonomyFieldHandler.cs:25
+msgctxt "OrchardCore.Taxonomies.Handlers.TaxonomyFieldHandler"
+msgid "A value is required for '{0}'"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<TaxonomyContentsAdminListSettings, ContentsAdminListDeploymentStartup>(S => S["Taxonomy Filters settings"], S => S["Exports the Taxonomy filters settings."]);
+#: OrchardCore.Taxonomies\Startup.cs:139
+msgctxt "OrchardCore.Taxonomies.ContentsAdminListDeploymentStartup"
+msgid "Taxonomy Filters settings"
+msgstr ""
+
+#. services.AddSiteSettingsPropertyDeploymentStep<TaxonomyContentsAdminListSettings, ContentsAdminListDeploymentStartup>(S => S["Taxonomy Filters settings"], S => S["Exports the Taxonomy filters settings."]);
+#: OrchardCore.Taxonomies\Startup.cs:139
+msgctxt "OrchardCore.Taxonomies.ContentsAdminListDeploymentStartup"
+msgid "Exports the Taxonomy filters settings."
+msgstr ""
+
 #. @T["Edit"]
 #: OrchardCore.Taxonomies\Views\Content.TermAdmin.cshtml:27
 msgctxt "OrchardCore.Taxonomies.Views.Content.TermAdmin"
@@ -93,15 +99,27 @@ msgid "Delete"
 msgstr ""
 
 #. <select asp-for="SelectedContentItemId" asp-items="Model.Taxonomies" class="selectpicker taxonomy-selectpicker show-tick me-2" data-header="@T["Filter by {0}", Model.DisplayText]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["{0}", Model.DisplayText]" data-style="btn-sm" data-dropdown-align-right="auto">
-#: OrchardCore.Taxonomies\Views\ContentsAdminListTaxonomyFilter.cshtml:5
+#: OrchardCore.Taxonomies\Views\ContentsAdminListTaxonomyFilter.cshtml:4
 msgctxt "OrchardCore.Taxonomies.Views.ContentsAdminListTaxonomyFilter"
 msgid "Filter by {0}"
 msgstr ""
 
 #. <select asp-for="SelectedContentItemId" asp-items="Model.Taxonomies" class="selectpicker taxonomy-selectpicker show-tick me-2" data-header="@T["Filter by {0}", Model.DisplayText]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["{0}", Model.DisplayText]" data-style="btn-sm" data-dropdown-align-right="auto">
-#: OrchardCore.Taxonomies\Views\ContentsAdminListTaxonomyFilter.cshtml:5
+#: OrchardCore.Taxonomies\Views\ContentsAdminListTaxonomyFilter.cshtml:4
 msgctxt "OrchardCore.Taxonomies.Views.ContentsAdminListTaxonomyFilter"
 msgid "{0}"
+msgstr ""
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Taxonomies\Views\Admin\Create.cshtml:13
+msgctxt "OrchardCore.Taxonomies.Views.Admin.Create"
+msgid "New {0}"
+msgstr ""
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Taxonomies\Views\Admin\Edit.cshtml:13
+msgctxt "OrchardCore.Taxonomies.Views.Admin.Edit"
+msgid "Edit {0}"
 msgstr ""
 
 #. <span class="icon"><i class="fa fa-tags" aria-hidden="true"></i></span><span class="title">@T["Taxonomy Filters"]</span>
@@ -129,13 +147,13 @@ msgid "Tags"
 msgstr ""
 
 #. @T["The taxonomy could not be found. Please check the settings for this field."]
-#: OrchardCore.Taxonomies\Views\TaxonomyField-Tags.Edit.cshtml:41
+#: OrchardCore.Taxonomies\Views\TaxonomyField-Tags.Edit.cshtml:42
 msgctxt "OrchardCore.Taxonomies.Views.TaxonomyField-Tags.Edit"
 msgid "The taxonomy could not be found. Please check the settings for this field."
 msgstr ""
 
 #. <div id="@vueElementId" class="tags" data-taxonomy-content-item-id="@Model.Taxonomy.ContentItemId" data-open="@open.ToString().ToLower()" data-leaves-only="@taxonomySettings.LeavesOnly.ToString().ToLower()" data-create-tag-error-message="@T["Error creating tag"]" data-all-tag-terms="@Model.TagTermEntries" data-create-tag-url="@createTagUrl">
-#: OrchardCore.Taxonomies\Views\TaxonomyField-Tags.Edit.cshtml:46
+#: OrchardCore.Taxonomies\Views\TaxonomyField-Tags.Edit.cshtml:47
 msgctxt "OrchardCore.Taxonomies.Views.TaxonomyField-Tags.Edit"
 msgid "Error creating tag"
 msgstr ""
@@ -262,20 +280,20 @@ msgctxt "OrchardCore.Taxonomies.Views.TaxonomyFieldTagsEditorSettings.Edit"
 msgid "Whether new tags can be created inline. Note: When creating tags inline only the display text term property will be set."
 msgstr ""
 
-#. <label asp-for="TermContentType">@T["Term Content Type"]</label>
-#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:24
+#. <label asp-for="TermContentType" class="@Orchard.GetLabelCssClasses()">@T["Term Content Type"]</label>
+#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:25
 msgctxt "OrchardCore.Taxonomies.Views.TaxonomyPart.Edit"
 msgid "Term Content Type"
 msgstr ""
 
 #. @T["Add {0}", termContentType.DisplayName]
-#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:41
+#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:46
 msgctxt "OrchardCore.Taxonomies.Views.TaxonomyPart.Edit"
 msgid "Add {0}"
 msgstr ""
 
 #. <div id="msg-leave" style="display:none" data>@T["You have reordered the taxonomy."]</div>
-#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:57
+#: OrchardCore.Taxonomies\Views\TaxonomyPart.Edit.cshtml:62
 msgctxt "OrchardCore.Taxonomies.Views.TaxonomyPart.Edit"
 msgid "You have reordered the taxonomy."
 msgstr ""
@@ -290,17 +308,5 @@ msgstr ""
 #: OrchardCore.Taxonomies\Views\TermPart.cshtml:18
 msgctxt "OrchardCore.Taxonomies.Views.TermPart"
 msgid "The list is empty"
-msgstr ""
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Taxonomies\Views\Admin\Create.cshtml:13
-msgctxt "OrchardCore.Taxonomies.Views.Admin.Create"
-msgid "New {0}"
-msgstr ""
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
-#: OrchardCore.Taxonomies\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Taxonomies.Views.Admin.Edit"
-msgid "Edit {0}"
 msgstr ""
 

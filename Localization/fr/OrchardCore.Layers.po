@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2022-11-03 17:17\n"
+"PO-Revision-Date: 2023-02-18 19:39\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Layers\AdminMenu.cs:26
@@ -112,41 +112,35 @@ msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
 msgid "Site layers define the rules and zone placement for widgets."
 msgstr "Les layers du site définissent les règles et le placement pour les widgets dans les zones."
 
-#. <label asp-for="Title">@T["Title"]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:4
-msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
-msgid "Title"
-msgstr "Titre"
+#. <h5>@T["All Layers"]</h5>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Edit"
+msgid "All Layers"
+msgstr "Toutes les layers"
 
-#. <label class="form-check-label" asp-for="LayerMetadata.RenderTitle">@T["Render title"]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:12
-msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
-msgid "Render title"
-msgstr "Afficher le titre"
+#. <h5>@T["All Layers"]</h5>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
+msgid "All Layers"
+msgstr "Toutes les layers"
 
-#. <span class="hint dashed">@T["If checked, the title will be rendered with the widget."]</span>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:13
-msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
-msgid "If checked, the title will be rendered with the widget."
-msgstr "Si coché, le titre sera rendu avec le widget."
+#. <span class="hint">@T["Adds all layers to the plan."]</span>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:5
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
+msgid "Adds all layers to the plan."
+msgstr "Ajoute toutes les layers au plan."
 
-#. <label asp-for="LayerMetadata.Layer">@T["The layer the widget should be associated with."]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:18
-msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
-msgid "The layer the widget should be associated with."
-msgstr "La couche avec laquelle le widget doit être associé."
+#. <h4 class="card-title">@T["All Layers"]</h4>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:3
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
+msgid "All Layers"
+msgstr "Toutes les layers"
 
-#. <label asp-for="Zones">@T["Available zones for Layers"]</label>
-#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
-msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
-msgid "Available zones for Layers"
-msgstr "Zones disponibles pour les layers"
-
-#. @T["A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render.",
-#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:8
-msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
-msgid "A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render."
-msgstr "Une liste de valeurs séparées par des virgules, représentant les zones disponibles pour les <a href=\"{0}\">widgets</a>. Notez que vous devrez afficher ces zones dans le modèle de mise en page, car elles ne sont pas automatiquement rendues."
+#. <p>@T["Exports all layers."]</p>
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
+msgid "Exports all layers."
+msgstr "Exporte toutes les layers."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Layer"])</h1></zone>
 #: OrchardCore.Layers\Views\Admin\Create.cshtml:3
@@ -171,6 +165,24 @@ msgstr "Description"
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create"
 msgstr "Créer"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Rule"])</h1></zone>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:3
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Create Rule"
+msgstr "Créer une règle"
+
+#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:14
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Create"
+msgstr "Créer"
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-controller="Admin" asp-route-name="@Model.Name">@T["Cancel"]</a>
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
+msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
+msgid "Cancel"
+msgstr "Annuler"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1></zone>
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:14
@@ -199,6 +211,18 @@ msgstr "Erreur lors de la mise à jour de l'ordre des règles"
 #. <input class="button mt-3" type="submit" value="@T["Save"]" />
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:35
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
+msgid "Save"
+msgstr "Enregistrer"
+
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Rule"])</h1></zone>
+#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:3
+msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
+msgid "Edit Rule"
+msgstr "Éditer la règle"
+
+#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
+#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:13
+msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -286,63 +310,39 @@ msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr "Ajouter"
 
-#. <h5>@T["All Layers"]</h5>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:3
-msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Edit"
-msgid "All Layers"
-msgstr "Toutes les layers"
+#. <label asp-for="Title" class="@Orchard.GetLabelCssClasses()">@T["Title"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:5
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "Title"
+msgstr "Titre"
 
-#. <h5>@T["All Layers"]</h5>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:3
-msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
-msgid "All Layers"
-msgstr "Toutes les layers"
+#. <label class="form-check-label" asp-for="LayerMetadata.RenderTitle">@T["Render title"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:16
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "Render title"
+msgstr "Afficher le titre"
 
-#. <span class="hint">@T["Adds all layers to the plan."]</span>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Summary.cshtml:5
-msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Summary"
-msgid "Adds all layers to the plan."
-msgstr "Ajoute toutes les layers au plan."
+#. <span class="hint dashed">@T["If checked, the title will be rendered with the widget."]</span>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:17
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "If checked, the title will be rendered with the widget."
+msgstr "Si coché, le titre sera rendu avec le widget."
 
-#. <h4 class="card-title">@T["All Layers"]</h4>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:3
-msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
-msgid "All Layers"
-msgstr "Toutes les layers"
+#. <label asp-for="LayerMetadata.Layer" class="@Orchard.GetLabelCssClasses()">@T["The layer the widget should be associated with."]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:23
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "The layer the widget should be associated with."
+msgstr "La couche avec laquelle le widget doit être associé."
 
-#. <p>@T["Exports all layers."]</p>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Thumbnail.cshtml:4
-msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Thumbnail"
-msgid "Exports all layers."
-msgstr "Exporte toutes les layers."
+#. <label asp-for="Zones">@T["Available zones for Layers"]</label>
+#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
+msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
+msgid "Available zones for Layers"
+msgstr "Zones disponibles pour les layers"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Rule"])</h1></zone>
-#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:3
-msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
-msgid "Create Rule"
-msgstr "Créer une règle"
-
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:14
-msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
-msgid "Create"
-msgstr "Créer"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-controller="Admin" asp-route-name="@Model.Name">@T["Cancel"]</a>
-#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
-msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
-msgid "Cancel"
-msgstr "Annuler"
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Rule"])</h1></zone>
-#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:3
-msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
-msgid "Edit Rule"
-msgstr "Éditer la règle"
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:13
-msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
-msgid "Save"
-msgstr "Enregistrer"
+#. @T["A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render.",
+#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:8
+msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
+msgid "A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render."
+msgstr "Une liste de valeurs séparées par des virgules, représentant les zones disponibles pour les <a href=\"{0}\">widgets</a>. Notez que vous devrez afficher ces zones dans le modèle de mise en page, car elles ne sont pas automatiquement rendues."
 
