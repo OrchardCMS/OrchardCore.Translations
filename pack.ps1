@@ -20,7 +20,7 @@ $pkgIconFile = "icon.png"
 $csprojFilePath = "$env:GITHUB_WORKSPACE/.github/workflows/project.csproj"
 $iconSrcPath = "$env:GITHUB_WORKSPACE/.github/workflows/nuget-icon.png"
 
-function createNuGetPackage([string]$pkgName, [string]$culture, [string]$cultureDisplayName)
+function createNuGetPackage([string]$pkgName, [string]$culture, [string]$folder, [string]$cultureDisplayName)
 {
     echo "Copying content files .."
 
@@ -31,7 +31,7 @@ function createNuGetPackage([string]$pkgName, [string]$culture, [string]$culture
     New-Item -Path $pkgContentFolderPath -ItemType "Directory" | Out-Null
     
     $pkgCultureFolderPath = [IO.Path]::Combine($pkgContentFolderPath, $localizationFolderName, $culture)
-    $cultureFolder = [IO.Path]::Combine($localizationFolderName, $culture)
+    $cultureFolder = [IO.Path]::Combine($localizationFolderName, $folder)
     Copy-Item -Path $cultureFolder -Destination $pkgCultureFolderPath -Recurse
     
     echo "Copying '$pkgName.$pkgPropsExtension' ..."
@@ -137,6 +137,7 @@ $json = Get-Content -Raw -Path cultures.json | ConvertFrom-Json
 foreach ($culture in $json.cultures)
 {
     $cultureName = $culture.name
+    $cultureFolder = $culture.folder
     $cultureDisplayName = $culture.'display-name'
    
     if($culture.'generate-package')
@@ -147,7 +148,7 @@ foreach ($culture in $json.cultures)
         echo "Preparing a NuGet package for '$($culture.'display-name')' culture"
         echo "Creating '$pkgId.$pkgExtension' ..."
 
-        createNuGetPackage $pkgName $cultureName $cultureDisplayName
+        createNuGetPackage $pkgName $cultureName $cultureFolder $cultureDisplayName
 
         echo ""
     }
