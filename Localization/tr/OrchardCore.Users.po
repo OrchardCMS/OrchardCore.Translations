@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2023-02-18 20:33\n"
+"PO-Revision-Date: 2023-04-14 05:14\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -336,13 +336,13 @@ msgstr "Kullanıcıyı Etkinleştir"
 #: OrchardCore.Users\Controllers\AdminController.cs:146
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Disabled Users"
-msgstr "Engellenmiş Kullanıcılar"
+msgstr "Devre Dışı Kullanıcılar"
 
 #. new SelectListItem() { Text = S["Name"], Value = nameof(UsersOrder.Name), Selected = (options.Order == UsersOrder.Name) },
 #: OrchardCore.Users\Controllers\AdminController.cs:154
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Name"
-msgstr "İsim"
+msgstr "Ad"
 
 #. new SelectListItem() { Text = S["Email"], Value = nameof(UsersOrder.Email), Selected = (options.Order == UsersOrder.Email) },
 #: OrchardCore.Users\Controllers\AdminController.cs:155
@@ -366,7 +366,7 @@ msgstr "Etkinleştir"
 #: OrchardCore.Users\Controllers\AdminController.cs:164
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Disable"
-msgstr "Devredışı Bırak"
+msgstr "Devre Dışı Bırak"
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(UsersBulkAction.Delete) }
 #: OrchardCore.Users\Controllers\AdminController.cs:165
@@ -468,7 +468,7 @@ msgstr "Aynı e-postaya sahip bir kullanıcı zaten var."
 #: OrchardCore.Users\Controllers\RegistrationController.cs:75
 msgctxt "OrchardCore.Users.Controllers.RegistrationController"
 msgid "Email is required."
-msgstr ""
+msgstr "E-Posta gereklidir."
 
 #. ModelState.AddModelError("Email", S["A user with the same email already exists."]);
 #: OrchardCore.Users\Controllers\RegistrationController.cs:85
@@ -500,25 +500,25 @@ msgstr "Şifrenizi sıfırlayın"
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:99
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A password is required"
-msgstr ""
+msgstr "Şifre gereklidir"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Password), S["The password and the password confirmation fields must match."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:104
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The password and the password confirmation fields must match."
-msgstr ""
+msgstr "Şifre ve şifre doğrulama alanları eşleşmek zorundadır."
 
 #. await _notifier.WarningAsync(H["Cannot disable the only enabled administrator."]);
 #: OrchardCore.Users\Drivers\UserDisplayDriver.cs:124
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "Cannot disable the only enabled administrator."
-msgstr ""
+msgstr "Kalan tek yönetici devre dışı bırakılamaz."
 
 #. await _notifier.WarningAsync(H["Cannot update your own roles."]);
 #: OrchardCore.Users\Drivers\UserRoleDisplayDriver.cs:105
 msgctxt "OrchardCore.Users.Drivers.UserRoleDisplayDriver"
 msgid "Cannot update your own roles."
-msgstr ""
+msgstr "Kendi rollerinizi güncelleyemezsiniz."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
 #: OrchardCore.Users\Startup.cs:309
@@ -602,13 +602,13 @@ msgstr "Yeni şifre ve doğrulama şifresi eşleşmiyor."
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Email is required."
-msgstr ""
+msgstr "E-Posta gereklidir."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:9
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Invalid Email."
-msgstr ""
+msgstr "Yanlış E-Posta."
 
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserInformationViewModel.cs:12
@@ -632,19 +632,19 @@ msgstr "Geçersiz e-posta."
 #: OrchardCore.Users\ViewModels\LinkExternalLoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LinkExternalLoginViewModel"
 msgid "Password is required."
-msgstr ""
+msgstr "Şifre gereklidir."
 
 #. [Required(ErrorMessage = "Username is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:7
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username is required."
-msgstr "Kullanıcı adı gerekli."
+msgstr "Kullanıcı adı gereklidir."
 
 #. [Display(Name = "Username")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username"
-msgstr ""
+msgstr "Kullanıcı Adı"
 
 #. [Required(ErrorMessage = "Password is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:11
@@ -1238,13 +1238,13 @@ msgstr "{0} hesabınızı kullanarak giriş yapın"
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their username"
-msgstr ""
+msgstr "Kullanıcının kendi kullanıcı adını değiştirmesine izin ver"
 
 #. <label class="form-check-label" asp-for="AllowChangingEmail">@T["Allow user to change their email address"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their email address"
-msgstr ""
+msgstr "Kullanıcının kendi e-posta adresini değiştirmesine izin ver"
 
 #. <label class="form-check-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
 #: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:29
@@ -1310,7 +1310,7 @@ msgstr "Güvenlik"
 #: OrchardCore.Users\Views\NavigationItemText-UserProfileSettings.Id.cshtml:1
 msgctxt "OrchardCore.Users.Views.NavigationItemText-UserProfileSettings.Id"
 msgid "User Profile Settings"
-msgstr ""
+msgstr "Kullanıcı Profil Ayarları"
 
 #. <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span><span class="title">@T["Users"]</span>
 #: OrchardCore.Users\Views\NavigationItemText-users.Id.cshtml:1
@@ -1486,37 +1486,37 @@ msgstr "Kullanıcı kaydını yapılandırın."
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "No Registration"
-msgstr ""
+msgstr "Kayıta İzin Verme"
 
 #. <option value="@UserRegistrationType.AllowRegistration" selected="@(Model.UsersCanRegister == UserRegistrationType.AllowRegistration)">@T["Allow Registration"]</option>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Allow Registration"
-msgstr ""
+msgstr "Kayıta İzin Ver"
 
 #. <option value="@UserRegistrationType.AllowOnlyExternalUsers" selected="@(Model.UsersCanRegister == UserRegistrationType.AllowOnlyExternalUsers)">@T["Allow Only External Users"]</option>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Allow Only External Users"
-msgstr ""
+msgstr "Sadece Harici Kullanıcılara İzin Ver"
 
 #. <li>@T["when 'No Registration' is selected, no new users can register"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:23
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'No Registration' is selected, no new users can register"
-msgstr ""
+msgstr "'Kayıta İzin Verme' seçili olduğunda, hiçbir yeni kullanıcı kayıt olamaz"
 
 #. <li>@T["when 'Allow Registration' is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'Allow Registration' is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"
-msgstr ""
+msgstr "'Kayıta İzin Ver' seçili olduğunda, kullanıcıların siteye kaydolmasına izin vermek için bir bağlantı görüntülenir. Harici sağlayıcılar varsa, kimliği doğrulandıktan sonra kullanıcı kayıt olabilir"
 
 #. <li>@T["when 'Allow Only External Users' is selected, only users authenticated with external providers can register on the site"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'Allow Only External Users' is selected, only users authenticated with external providers can register on the site"
-msgstr ""
+msgstr "'Sadece Harici Kullanıcılara İzin Ver' seçili olduğunda, yalnızca harici sağlayıcılarla kimliği doğrulanmış kullanıcılar siteye kaydolabilir"
 
 #. <label class="form-check-label" asp-for="UsersMustValidateEmail">@T["Users must verify their email address"]</label>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:34
@@ -1716,7 +1716,7 @@ msgstr "Kısa süre önce birisi <b>{0}</b> için şifrenin sıfırlanmasını i
 #: OrchardCore.Users\Views\TemplateUserLostPassword.cshtml:9
 msgctxt "OrchardCore.Users.Views.TemplateUserLostPassword"
 msgid "To reset your password please click this link: <a href=\"{0}\">Reset Password</a>"
-msgstr ""
+msgstr "Şifrenizi sıfırlamak için lütfen <a href=\"{0}\">Şifreyi Sıfırlama</a> linkine tıklayınız"
 
 #. <p>@T["If you did not request a password reset please ignore this email - your password will not be changed."]</p>
 #: OrchardCore.Users\Views\TemplateUserLostPassword.cshtml:11
@@ -1728,7 +1728,7 @@ msgstr "Parola sıfırlama talebinde bulunmadıysanız lütfen bu e-postayı dik
 #: OrchardCore.Users\Views\User.DetailAdmin.cshtml:4
 msgctxt "OrchardCore.Users.Views.User.DetailAdmin"
 msgid "View User"
-msgstr ""
+msgstr "Kullanıcıyı Görüntüle"
 
 #. <a asp-action="Edit" asp-route-id="@Model.User.UserId" class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.Users\Views\UserButtons.cshtml:16
@@ -1740,7 +1740,7 @@ msgstr "Düzenle"
 #: OrchardCore.Users\Views\UserButtons.cshtml:21
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "View"
-msgstr ""
+msgstr "Görüntüle"
 
 #. <a asp-action="EditPassword" asp-route-id="@Model.User.UserId" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
 #: OrchardCore.Users\Views\UserButtons.cshtml:26
@@ -1836,13 +1836,13 @@ msgstr "Kullanıcı devre dışı."
 #: OrchardCore.Users\Views\UserEmail.Edit.cshtml:4
 msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "Email"
-msgstr ""
+msgstr "E-Posta"
 
 #. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
 #: OrchardCore.Users\Views\UserEmail.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "The email is invalid."
-msgstr ""
+msgstr "E-Posta geçersizdir."
 
 #. <h4><i class="fa fa-user-check" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
@@ -1894,67 +1894,67 @@ msgstr "Bu kullanıcı hesabını devre dışı bırakmak için işareti kaldır
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:34
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password"
-msgstr ""
+msgstr "Şifre"
 
 #. <label asp-for="PasswordConfirmation" class="sr-only">@T["Password Confirmation"]</label>
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:40
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password Confirmation"
-msgstr ""
+msgstr "Şifre Doğrulama"
 
 #. <input asp-for="PasswordConfirmation" type="password" class="form-control password-confirmation-input-field" placeholder="@T["Password confirmation"]" />
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:43
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password confirmation"
-msgstr ""
+msgstr "Şifre doğrulama"
 
 #. @T["Generate password"]
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:55
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Generate password"
-msgstr ""
+msgstr "Şifre üret"
 
 #. <div class="btn btn-info btn-sm copy-password-button">@T["Copy password"]</div>
 #: OrchardCore.Users\Views\UserFields.Edit.cshtml:57
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Copy password"
-msgstr ""
+msgstr "Şifreyi kopyala"
 
 #. <h4>@T["User Info"]</h4>
 #: OrchardCore.Users\Views\UserInfo.cshtml:3
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "User Info"
-msgstr ""
+msgstr "Kullanıcı Bilgisi"
 
 #. <dt>@T["Username"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:6
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Username"
-msgstr ""
+msgstr "Kullanıcı adı"
 
 #. <dt>@T["Email"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:9
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Email"
-msgstr ""
+msgstr "E-Posta"
 
 #. <dt>@T["Status"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:12
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:13
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
-msgstr ""
+msgstr "Etkin"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:13
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
-msgstr ""
+msgstr "Devre Dışı"
 
 #. <label asp-for="UserName">@T["User name"]</label>
 #: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:5
@@ -2028,13 +2028,13 @@ msgstr "Oturumu Kapat"
 #: OrchardCore.Users\Views\UserName.Edit.cshtml:4
 msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "User name"
-msgstr ""
+msgstr "Kullanıcı adı"
 
 #. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
 #: OrchardCore.Users\Views\UserName.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "The user name is required."
-msgstr ""
+msgstr "Kullanıcı adı gereklidir."
 
 #. <h6>@T["Roles"]</h6>
 #: OrchardCore.Users\Views\UserRoleFields.Edit.cshtml:5
@@ -2046,13 +2046,13 @@ msgstr "Roller"
 #: OrchardCore.Users\Views\UserRoles.cshtml:10
 msgctxt "OrchardCore.Users.Views.UserRoles"
 msgid "Roles"
-msgstr ""
+msgstr "Roller"
 
 #. <div data-bs-toggle="tooltip" title="@T["The roles this user has"]">
 #: OrchardCore.Users\Views\UserRolesMeta.cshtml:10
 msgctxt "OrchardCore.Users.Views.UserRolesMeta"
 msgid "The roles this user has"
-msgstr ""
+msgstr "Kullanıcının sahip olduğu roller"
 
 #. <p>@T["Filters on the email address of a user."]</p>
 #: OrchardCore.Users\Views\Items\UsersAdminFilters-Email.Thumbnail.cshtml:9
