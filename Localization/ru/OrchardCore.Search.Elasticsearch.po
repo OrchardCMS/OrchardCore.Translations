@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2023-02-25 11:20\n"
+"PO-Revision-Date: 2023-07-18 16:29\n"
 
 #. .Add(S["Search"], "7", search => search
 #: OrchardCore.Search.Elasticsearch\AdminMenu.cs:26
@@ -57,131 +57,123 @@ msgid "Elasticsearch"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Reset"], Value = nameof(ContentsBulkAction.Reset) },
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:133
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:129
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Reset"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Rebuild"], Value = nameof(ContentsBulkAction.Rebuild) },
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:134
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:130
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Rebuild"
 msgstr ""
 
 #. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:135
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:131
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Delete"
 msgstr ""
 
-#. .Select(x => new SelectListItem { Text = x.Name + " (" + x.DisplayName + ")", Value = x.Name }).Prepend(new SelectListItem { Text = S["Any culture"], Value = "any" }),
-#. .Select(x => new SelectListItem { Text = x.Name + " (" + x.DisplayName + ")", Value = x.Name }).Prepend(new SelectListItem { Text = S["Any culture"], Value = "any" });
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:178
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:217
-msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
-msgid "Any culture"
-msgstr ""
-
-#. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} already exists.", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:203
+#. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} already exists.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:199
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An index named {0} already exists."
 msgstr ""
 
-#. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} doesn't exist.", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:210
+#. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} doesn't exist.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:206
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An index named {0} doesn't exist."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["An error occurred while creating the index."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:235
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:242
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while creating the index."
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> created successfully.", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:240
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> created successfully.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:247
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> created successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["An error occurred while editing the index."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:252
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:267
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while editing the index."
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:257
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:272
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> modified successfully, <strong>please consider doing a rebuild on the index.</strong>"
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", id]);
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", _indexPrefix + item.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:279
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:482
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", _elasticIndexManager.GetFullIndexName(item.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:294
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:517
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> reset successfully."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", id]);
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", _indexPrefix + item.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:300
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:495
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", _elasticIndexManager.GetFullIndexName(item.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:327
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:530
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> rebuilt successfully."
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["Index not found on Elasticsearch server.", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:315
+#. await _notifier.SuccessAsync(H["Index not found on Elasticsearch server.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:342
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index not found on Elasticsearch server."
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", _indexPrefix + model.IndexName]);
-#. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", _indexPrefix + model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:323
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:346
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", _elasticIndexManager.GetFullIndexName(model.IndexName)]);
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:350
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:373
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> deleted successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["An error occurred while deleting the index."]);
 #. await _notifier.ErrorAsync(H["An error occurred while deleting the index."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:327
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:350
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:354
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:377
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while deleting the index."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(model.DecodedQuery), S["Invalid query : {0}", e.Message]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:438
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:473
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Invalid query : {0}"
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Indices successfully removed."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:469
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:504
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Indices successfully removed."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexedContentTypes), S["At least one content type selection is required."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:510
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:545
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "At least one content type selection is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name is required."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:515
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:550
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name contains unallowed chars."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:519
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:554
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name contains unallowed chars."
 msgstr ""
@@ -237,7 +229,7 @@ msgstr ""
 #. <span class="hint">@T["Should be all lowercase. The shell name will be automatically prepended."]<a class="ms-2 seedoc" href="https://www.elastic.co/guide/en/elasticsearch/reference/6.4/indices-create-index.html" target="_blank">@T["See documentation"].</a></span>
 #. <span class="hint dashed">@T["Check to store source data in the index."] <a class="seedoc" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-source-field.html#disable-source-field" target="_blank">@T["See documentation"]</a></span>
 #: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:16
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:58
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:62
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "See documentation"
 msgstr ""
@@ -248,76 +240,88 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Analyzer Name"
 msgstr ""
 
+#. <option value="">@T["Select an analyzer"]</option>
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:23
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
+msgid "Select an analyzer"
+msgstr ""
+
 #. <label asp-for="Culture">@T["Culture"]</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:27
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:29
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Culture"
 msgstr ""
 
+#. <option value="any">@T["Any culture"]</option>
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:31
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
+msgid "Any culture"
+msgstr ""
+
 #. <span class="hint">@T["The content culture that it will index."]</span>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:29
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:33
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "The content culture that it will index."
 msgstr ""
 
 #. <label asp-for="IndexedContentTypes">@T["Content Types"]</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:34
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:38
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Content Types"
 msgstr ""
 
 #. <span class="hint dashed">@T["The content types to index. Choose at least one."]</span>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:35
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:39
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "The content types to index. Choose at least one."
 msgstr ""
 
 #. <label asp-for="IndexLatest">@T["Index options"]</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:48
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:52
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Index options"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="IndexLatest">@T["Index latest version"]</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:51
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:55
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Index latest version"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to index draft if it exists, otherwise only the published version is indexed."]</span>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:52
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:56
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Check to index draft if it exists, otherwise only the published version is indexed."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="StoreSourceData">@T["Store source data"]</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:57
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:61
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Store source data"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to store source data in the index."] <a class="seedoc" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-source-field.html#disable-source-field" target="_blank">@T["See documentation"]</a></span>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:58
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:62
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Check to store source data in the index."
 msgstr ""
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:66
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:70
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Create"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:67
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:72
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:71
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:76
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Cancel"
 msgstr ""
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:71
+#: OrchardCore.Search.Elasticsearch\Views\Admin\Edit.cshtml:75
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Edit"
 msgid "Save"
 msgstr ""
@@ -822,7 +826,7 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Mappings"
 msgid "The Elasticsearch index mapping. For reference only."
 msgstr ""
 
-#. <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
+#. <span class="icon"><i class="fa-solid fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
 #: OrchardCore.Search.Elasticsearch\Views\NavigationItemText-Elasticsearch.Id.cshtml:1
 msgctxt "OrchardCore.Search.Elasticsearch.Views.NavigationItemText-Elasticsearch.Id"
 msgid "Search"
