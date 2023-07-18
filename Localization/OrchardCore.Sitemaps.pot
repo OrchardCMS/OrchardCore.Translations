@@ -1,5 +1,5 @@
 #: OrchardCore.Sitemaps\AdminMenu.cs:24
-#. builder.Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, cfg => cfg
+#. builder.Add(S["Configuration"], configuration => configuration
 msgctxt "OrchardCore.Sitemaps.AdminMenu"
 msgid "Configuration"
 msgstr ""
@@ -776,51 +776,57 @@ msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:74
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:73
+#. <a class="btn btn-info btn-sm" asp-action="Display" asp-route-sitemapId="@entry.SitemapId">@T["Manage Sources"]</a>
+msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
+msgid "Manage Sources"
+msgstr ""
+
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:76
 #. <a asp-action="Index" asp-controller="Sitemap" asp-area="OrchardCore.Sitemaps" asp-route-sitemapId="@entry.SitemapId" target="_blank" class="btn btn-success btn-sm">@T["View"]</a>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "View"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:76
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:78
 #. <a asp-action="Edit" asp-route-sitemapId="@entry.SitemapId" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:78
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:80
 #. <a asp-action="Delete" asp-route-sitemapId="@entry.SitemapId" class="btn btn-danger" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:80
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:82
 #. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Toggle Dropdown"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:84
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:86
 #. <a asp-action="Toggle" asp-route-sitemapId="@entry.SitemapId" class="dropdown-item btn-sm" data-url-af="UnsafeUrl">@(entry.Enabled ? T["Disable"] : T["Enable"])</a>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Disable"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:84
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:86
 #. <a asp-action="Toggle" asp-route-sitemapId="@entry.SitemapId" class="dropdown-item btn-sm" data-url-af="UnsafeUrl">@(entry.Enabled ? T["Disable"] : T["Enable"])</a>
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "Enable"
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:98
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:99
 #. @T["<strong>Nothing here!</strong> There are no sitemaps for the moment."]
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "<strong>Nothing here!</strong> There are no sitemaps for the moment."
 msgstr ""
 
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:149
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:150
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:160
+#: OrchardCore.Sitemaps\Views\Admin\List.cshtml:161
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 msgctxt "OrchardCore.Sitemaps.Views.Admin.List"
 msgid "selected"
@@ -1126,5 +1132,17 @@ msgstr ""
 #. <a class="btn btn-primary btn-sm" asp-route-action="Create" asp-route-controller="Source" asp-route-sitemapId="@Model.Sitemap.SitemapId" asp-route-sourceType="@Model.SitemapSourceType">@T["Add"]</a>
 msgctxt "OrchardCore.Sitemaps.Views.SitemapSource.Thumbnail"
 msgid "Add"
+msgstr ""
+
+#: OrchardCore.Sitemaps\Views\SitemapsRobotsSettings.Edit.cshtml:8
+#. <label class="form-check-label" asp-for="IncludeSitemaps">@T["Include all sitemaps."]</label>
+msgctxt "OrchardCore.Sitemaps.Views.SitemapsRobotsSettings.Edit"
+msgid "Include all sitemaps."
+msgstr ""
+
+#: OrchardCore.Sitemaps\Views\SitemapsRobotsSettings.Edit.cshtml:9
+#. <span class="hint dashed">@T["Check to let the system include all sitemaps."]</span>
+msgctxt "OrchardCore.Sitemaps.Views.SitemapsRobotsSettings.Edit"
+msgid "Check to let the system include all sitemaps."
 msgstr ""
 
