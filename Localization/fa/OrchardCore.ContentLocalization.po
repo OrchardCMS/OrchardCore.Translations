@@ -10,9 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2023-02-18 19:29\n"
+"PO-Revision-Date: 2023-07-20 11:46\n"
 
-#. .Add(S["Configuration"], localization => localization
+#. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.ContentLocalization\AdminMenu.cs:28
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Configuration"
@@ -28,7 +28,7 @@ msgstr "تنظیمات"
 #: OrchardCore.ContentLocalization\AdminMenu.cs:30
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Localization"
-msgstr ""
+msgstr "بومی‌سازی"
 
 #. .Add(S["Content Request Culture Provider"], S["Content Request Culture Provider"].PrefixPosition(), registration => registration
 #. .Add(S["Content Request Culture Provider"], S["Content Request Culture Provider"].PrefixPosition(), registration => registration
@@ -36,7 +36,7 @@ msgstr ""
 #: OrchardCore.ContentLocalization\AdminMenu.cs:31
 msgctxt "OrchardCore.ContentLocalization.AdminMenu"
 msgid "Content Request Culture Provider"
-msgstr ""
+msgstr "ارائه دهنده فرهنگ درخواست محتوا"
 
 #. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
 #. .Add(S["Content Culture Picker"], S["Content Culture Picker"].PrefixPosition(), registration => registration
@@ -50,25 +50,25 @@ msgstr "انتخابگر فرهنگ محتوا"
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:75
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "A localization already exists for '{0}'."
-msgstr ""
+msgstr "در حال حاضر بومی سازی برای {0} وجود دارد."
 
 #. await _notifier.InformationAsync(H["Localized version of the content created successfully."]);
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:82
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Localized version of the content created successfully."
-msgstr ""
+msgstr "نسخه بومی سازی شده محتوا با موفقیت ایجاد شد."
 
 #. await _notifier.WarningAsync(H["Could not create localized version of the content item."]);
 #: OrchardCore.ContentLocalization\Controllers\AdminController.cs:87
 msgctxt "OrchardCore.ContentLocalization.Controllers.AdminController"
 msgid "Could not create localized version of the content item."
-msgstr ""
+msgstr "ایجاد نسخه بومی‌سازی شده این آیتم محتوا میسر نیست."
 
 #. new SelectListItem() { Text = S["All cultures"], Value = "", Selected = String.IsNullOrEmpty(m.SelectedCulture) }
 #: OrchardCore.ContentLocalization\Drivers\LocalizationContentsAdminListDisplayDriver.cs:45
 msgctxt "OrchardCore.ContentLocalization.Drivers.LocalizationContentsAdminListDisplayDriver"
 msgid "All cultures"
-msgstr ""
+msgstr "همه فرهنگ ها"
 
 #. Description = S["the localization part of the content item"];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:13
@@ -86,7 +86,7 @@ msgstr "فیلتر کردن آیتم محتوا بر مبنای فرهنگ"
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationInputObjectType.cs:16
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationInputObjectType"
 msgid "the localization set of the content item to filter"
-msgstr ""
+msgstr "مجموعه محلی سازی آیتم محتوا برای فیلتر کردن"
 
 #. Description = S["Localization cultures for your content item."];
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:19
@@ -110,7 +110,7 @@ msgstr "آیتم محتوای شما بومی‌سازی شد."
 #: OrchardCore.ContentLocalization\GraphQL\LocalizationQueryObjectType.cs:26
 msgctxt "OrchardCore.ContentLocalization.GraphQL.LocalizationQueryObjectType"
 msgid "The localizations of the content item."
-msgstr ""
+msgstr "محلی سازی آیتم محتوا."
 
 #. <label class="form-check-label" asp-for="SetCookie">@T["Set Cookie"]</label>
 #: OrchardCore.ContentLocalization\Views\ContentCulturePickerSettings.Edit.cshtml:7
@@ -140,31 +140,37 @@ msgstr "در صورت عدم وجود آیتم محتوای فرهنگ مورد�
 #: OrchardCore.ContentLocalization\Views\ContentRequestCultureProviderSettings.Edit.cshtml:7
 msgctxt "OrchardCore.ContentLocalization.Views.ContentRequestCultureProviderSettings.Edit"
 msgid "Set Cookie"
-msgstr ""
+msgstr "کوکی تنظیم شود"
 
 #. <span class="hint dashed">@T["Sets the localization cookie based on the LocalizationPart culture when accessing a page in the frontend."]</span>
 #: OrchardCore.ContentLocalization\Views\ContentRequestCultureProviderSettings.Edit.cshtml:8
 msgctxt "OrchardCore.ContentLocalization.Views.ContentRequestCultureProviderSettings.Edit"
 msgid "Sets the localization cookie based on the LocalizationPart culture when accessing a page in the frontend."
-msgstr ""
+msgstr "کوکی محلی سازی را بر اساس فرهنگ LocalizationPart هنگام دسترسی به یک صفحه در قسمت جلو تنظیم می کند."
+
+#. <h4 class="card-title">@T["Culture"]</h4>
+#: OrchardCore.ContentLocalization\Views\Items\ContentsAdminFilters-Culture.Thumbnail.cshtml:6
+msgctxt "OrchardCore.ContentLocalization.Views.Items.ContentsAdminFilters-Culture.Thumbnail"
+msgid "Culture"
+msgstr "فرهنگ"
 
 #. <p>@T["Filters on a content items localization culture."]</p>
 #: OrchardCore.ContentLocalization\Views\Items\ContentsAdminFilters-Culture.Thumbnail.cshtml:8
 msgctxt "OrchardCore.ContentLocalization.Views.Items.ContentsAdminFilters-Culture.Thumbnail"
 msgid "Filters on a content items localization culture."
-msgstr ""
+msgstr "فیلترهای فرهنگ بومی سازی اقلام محتوا."
 
 #. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick me-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
 #: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:4
 msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
 msgid "Filter by culture"
-msgstr ""
+msgstr "فیلتر بر اساس فرهنگ"
 
 #. <select asp-for="SelectedCulture" asp-items="Model.Cultures" class="selectpicker culture-selectpicker show-tick me-2" data-header="@T["Filter by culture"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Culture"]" data-style="btn-sm">
 #: OrchardCore.ContentLocalization\Views\ContentsAdminList-LocalizationPartFilter.cshtml:4
 msgctxt "OrchardCore.ContentLocalization.Views.ContentsAdminList-LocalizationPartFilter"
 msgid "Culture"
-msgstr ""
+msgstr "فرهنگ"
 
 #. @T["Current Culture: {1} | {0}", Model.CultureInfo.Name, Model.CultureInfo.DisplayName]
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:12
@@ -182,15 +188,15 @@ msgstr "سایت شما از هیچ فرهنگی تبعیت نمی‌کند. ف�
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:21
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Add or remove supported cultures for the site"
-msgstr ""
+msgstr "افزودن یا حذف‌کردن فرهنگ‌هایی که در سایت پشتیبانی می‌شوند"
 
-#. <a class="list-group-item list-group-item-action" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Edit {0}", culture.Culture.DisplayName]"><i class="fa fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
+#. <a class="list-group-item list-group-item-action" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Edit {0}", culture.Culture.DisplayName]"><i class="fa-solid fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:32
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Edit {0}"
 msgstr "ویرایش {0}"
 
-#. <a class="list-group-item list-group-item-action" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Create {0}", culture.Culture.DisplayName]"><i class="fa fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
+#. <a class="list-group-item list-group-item-action" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" asp-route-returnUrl="@Context.Request.Query["returnUrl"]" title="@T["Create {0}", culture.Culture.DisplayName]"><i class="fa-solid fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.Edit.cshtml:36
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Create {0}"
@@ -201,11 +207,11 @@ msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.Edit"
 msgid "Please save your content item before creating localizations"
 msgstr "قبل از ایجاد نسخه بومی‌سازی شده، لطفا این آیتم محتوا را ذخیره کنید"
 
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Culture"]"><i class="fa fa-globe text-info" aria-hidden="true"></i> @Model.LocalizationPart.Culture</span>
+#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Culture"]"><i class="fa-solid fa-globe text-info" aria-hidden="true"></i> @Model.LocalizationPart.Culture</span>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.SummaryAdmin.cshtml:5
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdmin"
 msgid "Culture"
-msgstr ""
+msgstr "فرهنگ"
 
 #. <div class="btn-group" title="@T["Localizations"]">
 #. <span>@T["Localizations"]</span>
@@ -215,13 +221,13 @@ msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdminLink
 msgid "Localizations"
 msgstr "بومی‌سازی"
 
-#. <a class="dropdown-item btn-sm" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" data-url-af="UnsafeUrl" title=@T["Edit {0}", culture.Culture.DisplayName]><i class="fa fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
+#. <a class="dropdown-item btn-sm" asp-action="Edit" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@culture.ContentItemId" data-url-af="UnsafeUrl" title=@T["Edit {0}", culture.Culture.DisplayName]><i class="fa-solid fa-edit" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name </a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.SummaryAdminLinks.cshtml:15
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdminLinks"
 msgid "Edit {0}"
 msgstr "ویرایش {0}"
 
-#. <a class="dropdown-item btn-sm" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" title=@T["Create {0}", culture.Culture.DisplayName]><i class="fa fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
+#. <a class="dropdown-item btn-sm" data-url-af="UnsafeUrl" asp-action="Localize" asp-controller="Admin" asp-route-area="OrchardCore.ContentLocalization" asp-route-contentItemId="@Model.LocalizationPart.ContentItem.ContentItemId" asp-route-targetCulture="@culture.Culture.Name" title=@T["Create {0}", culture.Culture.DisplayName]><i class="fa-solid fa-plus" aria-hidden="true"></i> @culture.Culture.DisplayName | @culture.Culture.Name</a>
 #: OrchardCore.ContentLocalization\Views\LocalizationPart.SummaryAdminLinks.cshtml:19
 msgctxt "OrchardCore.ContentLocalization.Views.LocalizationPart.SummaryAdminLinks"
 msgid "Create {0}"

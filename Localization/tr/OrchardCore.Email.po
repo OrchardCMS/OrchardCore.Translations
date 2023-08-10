@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2023-03-02 10:14\n"
+"PO-Revision-Date: 2023-07-18 15:54\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -57,18 +57,18 @@ msgid "Messaging"
 msgstr "Mesajlaşma"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:106
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:95
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr "Bitti"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:106
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:95
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr "Başarısız"
 
-#. <h4><i class="fa fa-envelope" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
+#. <h4><i class="fa-solid fa-envelope" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Send Email"])</h4>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Design.cshtml:6
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
 msgid "Send Email"
@@ -158,7 +158,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
 msgstr "E-posta mesajının konusu. Liquid desteği ile."
 
-#. <label class="form-check-label" asp-for="IsBodyHtml">@T["Does the Body contain HTML?"]</label>
+#. <label class="form-check-label" asp-for="IsHtmlBody">@T["Does the Body contain HTML?"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Does the Body contain HTML?"
@@ -170,43 +170,19 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message will be sent as HTML."
 msgstr "E-posta mesajının gövdesinin HTML olarak gönderileceğini belirtir."
 
-#. <label class="form-check-label" asp-for="IsBodyText">@T["Does the Body contain plain text?"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Does the Body contain plain text?"
-msgstr "Gövde düz metin içeriyor mu?"
-
-#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as plain text."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:65
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "If checked, indicates the body of the email message will be sent as plain text."
-msgstr "E-posta mesajının gövdesinin düz metin olarak gönderileceğini belirtir."
-
 #. <label asp-for="Body">@T["Body"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:70
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:62
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
 msgstr "Gövde"
 
 #. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:72
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The body of the email message. With Liquid support."
 msgstr "E-posta mesajının gövdesi. Liquid desteği ile."
 
-#. <label asp-for="Body">@T["Body Plain Text"]</label>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:76
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Body Plain Text"
-msgstr "Gövde Düz Metin"
-
-#. <span class="hint">@T["The plain text body of the email message. With Liquid support."]</span>
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:78
-msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The plain text body of the email message. With Liquid support."
-msgstr "E-posta mesajının düz metin gövdesi Liquid destekli."
-
-#. <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i>@T["Send Email"]</h4>
+#. <h4 class="card-title"><i class="fa-solid fa-envelope" aria-hidden="true"></i>@T["Send Email"]</h4>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Thumbnail"
 msgid "Send Email"
@@ -278,7 +254,7 @@ msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Send"
 msgstr "Gönder"
 
-#. <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="title">@T["Email"]</span>
+#. <span class="icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span><span class="title">@T["Email"]</span>
 #: OrchardCore.Email\Views\NavigationItemText-email.Id.cshtml:1
 msgctxt "OrchardCore.Email.Views.NavigationItemText-email.Id"
 msgid "Email"
