@@ -236,7 +236,7 @@ msgctxt "OrchardCore.Users.AuditTrail.Services.UserAuditTrailEventConfiguration"
 msgid "A user was deleted."
 msgstr ""
 
-#: OrchardCore.Users\Commands\UserCommands.cs:51
+#: OrchardCore.Users\Commands\UserCommands.cs:54
 #. Context.Output.WriteLine(S["User created successfully"]);
 msgctxt "OrchardCore.Users.Commands.UserCommands"
 msgid "User created successfully"
@@ -281,7 +281,7 @@ msgid "An error occurred in external provider."
 msgstr ""
 
 #: OrchardCore.Users\Controllers\AccountController.cs:406
-#. string message = S["Site does not allow user registration."];
+#. var message = S["Site does not allow user registration."];
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
 msgstr ""
@@ -782,6 +782,12 @@ msgctxt "OrchardCore.Users.ViewModels.EditUserInformationViewModel"
 msgid "Invalid Email."
 msgstr ""
 
+#: OrchardCore.Users\ViewModels\EditUserPhoneNumberViewModel.cs:8
+#. [Phone(ErrorMessage = "Invalid Phone Number.")]
+msgctxt "OrchardCore.Users.ViewModels.EditUserPhoneNumberViewModel"
+msgid "Invalid Phone Number."
+msgstr ""
+
 #: OrchardCore.Users\ViewModels\ForgotPasswordViewModel.cs:7
 #. [Required(ErrorMessage = "Email is required.")]
 msgctxt "OrchardCore.Users.ViewModels.ForgotPasswordViewModel"
@@ -932,38 +938,38 @@ msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Failed"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:54
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:55
 #. public override LocalizedString DisplayText => S["Register User Task"];
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:57
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:58
 #. public override LocalizedString Category => S["User"];
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "User"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr ""
 
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:153
-#. updater.ModelState.TryAddModelError("", S["No email service is available"]);
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:152
+#. updater?.ModelState.TryAddModelError("", S["No email service is available"]);
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr ""
@@ -2740,19 +2746,25 @@ msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Email"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserInfo.cshtml:12
+#: OrchardCore.Users\Views\UserInfo.cshtml:14
+#. <dt>@T["Phone Number"]</dt>
+msgctxt "OrchardCore.Users.Views.UserInfo"
+msgid "Phone Number"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserInfo.cshtml:18
 #. <dt>@T["Status"]</dt>
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
@@ -2836,6 +2848,24 @@ msgstr ""
 #. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
 msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "The user name is required."
+msgstr ""
+
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:4
+#. <label asp-for="PhoneNumber">@T["Phone Number"]</label>
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Phone Number"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:11
+#. <i class="fas fa-check-circle text-success" title="@T["Verified"]"></i>
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Verified"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:15
+#. <i class="fas fa-exclamation-circle" title="@T["Unverified"]"></i>
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Unverified"
 msgstr ""
 
 #: OrchardCore.Users\Views\UserRoleFields.Edit.cshtml:5
