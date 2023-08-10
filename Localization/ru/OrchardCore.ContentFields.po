@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2023-07-18 15:46\n"
+"PO-Revision-Date: 2023-08-10 11:58\n"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.ContentItemIds), S["The {0} field is required.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:92
+#: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:108
 msgctxt "OrchardCore.ContentFields.Drivers.ContentPickerFieldDisplayDriver"
 msgid "The {0} field is required."
 msgstr "Поле {0} является обязательным."
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.ContentItemIds), S["The {0} field cannot contain multiple items.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:97
+#: OrchardCore.ContentFields\Drivers\ContentPickerFieldDisplayDriver.cs:113
 msgctxt "OrchardCore.ContentFields.Drivers.ContentPickerFieldDisplayDriver"
 msgid "The {0} field cannot contain multiple items."
 msgstr "Поле {0} не может содержать несколько элементов."
@@ -36,8 +36,8 @@ msgctxt "OrchardCore.ContentFields.Drivers.DateTimeFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr "Необходимо значение для {0}."
 
-#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Html), S["{0} doesn't contain a valid Liquid expression. Details: {1}", fieldName, string.Join(" ", errors)]);
-#: OrchardCore.ContentFields\Drivers\HtmlFieldDisplayDriver.cs:93
+#. nameof(viewModel.Html), S["{0} doesn't contain a valid Liquid expression. Details: {1}",
+#: OrchardCore.ContentFields\Drivers\HtmlFieldDisplayDriver.cs:96
 msgctxt "OrchardCore.ContentFields.Drivers.HtmlFieldDisplayDriver"
 msgid "{0} doesn't contain a valid Liquid expression. Details: {1}"
 msgstr "{0} не содержит допустимое выражение Liquid. Подробности: {1}"
@@ -123,7 +123,7 @@ msgid "Invalid number of digits for {0}, max allowed: {1}."
 msgstr "Недопустимое количество цифр для {0}, максимально допустимо: {1}."
 
 #. updater.ModelState.AddModelError(Prefix, nameof(field.Text), S["A value is required for {0}.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.ContentFields\Drivers\TextFieldDisplayDriver.cs:55
+#: OrchardCore.ContentFields\Drivers\TextFieldDisplayDriver.cs:56
 msgctxt "OrchardCore.ContentFields.Drivers.TextFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr "Необходимо значение для {0}."
@@ -304,20 +304,26 @@ msgctxt "OrchardCore.ContentFields.Handlers.YoutubeFieldHandler"
 msgid "The format of the url is invalid"
 msgstr ""
 
+#. context.Updater.ModelState.AddModelError(nameof(model.TitlePattern), S["Title Pattern does not contain a valid Liquid expression. Details: {0}", string.Join(" ", titleErrors)]);
+#: OrchardCore.ContentFields\Settings\ContentPickerFieldSettingsDriver.cs:80
+msgctxt "OrchardCore.ContentFields.Settings.ContentPickerFieldSettingsDriver"
+msgid "Title Pattern does not contain a valid Liquid expression. Details: {0}"
+msgstr ""
+
 #. updater.ModelState.AddModelError(Prefix, nameof(ContentPickerFieldSettingsViewModel.Stereotypes), S["Please provide a Stereotype."]);
-#: OrchardCore.ContentFields\Settings\ContentPickerFieldSettingsDriver.cs:72
+#: OrchardCore.ContentFields\Settings\ContentPickerFieldSettingsDriver.cs:91
 msgctxt "OrchardCore.ContentFields.Settings.ContentPickerFieldSettingsDriver"
 msgid "Please provide a Stereotype."
 msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(ContentPickerFieldSettingsViewModel.DisplayedContentTypes), S["At least one content type must be selected."]);
-#: OrchardCore.ContentFields\Settings\ContentPickerFieldSettingsDriver.cs:84
+#: OrchardCore.ContentFields\Settings\ContentPickerFieldSettingsDriver.cs:103
 msgctxt "OrchardCore.ContentFields.Settings.ContentPickerFieldSettingsDriver"
 msgid "At least one content type must be selected."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix + "." + nameof(MonacoSettingsViewModel.Options), S["The options are written in an incorrect format."]);
-#: OrchardCore.ContentFields\Settings\HtmlFieldMonacoEditorSettingsDriver.cs:48
+#: OrchardCore.ContentFields\Settings\HtmlFieldMonacoEditorSettingsDriver.cs:50
 msgctxt "OrchardCore.ContentFields.Settings.HtmlFieldMonacoEditorSettingsDriver"
 msgid "The options are written in an incorrect format."
 msgstr ""
@@ -335,7 +341,7 @@ msgid "The options are written in an incorrect format."
 msgstr "Некорректный формат написания опций."
 
 #. context.Updater.ModelState.AddModelError(Prefix + "." + nameof(MonacoSettingsViewModel.Options), S["The options are written in an incorrect format."]);
-#: OrchardCore.ContentFields\Settings\TextFieldMonacoEditorSettingsDriver.cs:47
+#: OrchardCore.ContentFields\Settings\TextFieldMonacoEditorSettingsDriver.cs:49
 msgctxt "OrchardCore.ContentFields.Settings.TextFieldMonacoEditorSettingsDriver"
 msgid "The options are written in an incorrect format."
 msgstr ""
@@ -457,90 +463,102 @@ msgid "Standard"
 msgstr "Стандартный"
 
 #. <label class="form-check-label" asp-for="Required">@T["Required"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:7
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:16
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Required"
 msgstr "Обязательное"
 
 #. <span class="hint dashed">@T["Whether to ensure at least one element is selected."]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:8
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:17
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Whether to ensure at least one element is selected."
 msgstr "Проверять выбор хотя бы одного элемента."
 
 #. <label class="form-check-label" asp-for="Multiple">@T["Allow multiple"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:15
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:24
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Allow multiple"
 msgstr "Разрешить несколько"
 
 #. <span class="hint dashed">@T["Whether to allow multiple elements to be selected."]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:16
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:25
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Whether to allow multiple elements to be selected."
 msgstr "Разрешить выбор нескольких элементов."
 
 #. <label asp-for="Source">@T["Contained Content Types"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:21
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:30
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Contained Content Types"
 msgstr ""
 
 #. @T["Display All Content Types"]
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:26
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:35
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Display All Content Types"
 msgstr "Показать все типы контента"
 
 #. @T["Content Types"]
 #. <label asp-for="DisplayedContentTypes">@T["Content Types"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:32
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:53
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:41
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:62
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Content Types"
 msgstr "Типы контента"
 
 #. @T["Stereotype"] <span class="hint">@T["All content types of these Stereotypes"]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:38
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:47
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Stereotype"
 msgstr ""
 
 #. @T["Stereotype"] <span class="hint">@T["All content types of these Stereotypes"]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:38
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:47
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "All content types of these Stereotypes"
 msgstr ""
 
 #. <label asp-for="Stereotypes">@T["Stereotypes"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:46
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:55
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Stereotypes"
 msgstr ""
 
 #. <span class="hint">@T["The Stereotypes of the content types that this field can contain. You may define multiple Stereotypes using the comma (,) as a separator"]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:48
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:57
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "The Stereotypes of the content types that this field can contain. You may define multiple Stereotypes using the comma (,) as a separator"
 msgstr ""
 
 #. <span class="hint">@T["The content types to display. Choose at least one."]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:54
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:63
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "The content types to display. Choose at least one."
 msgstr "Типы содержимого для отображения. Выберите по крайней мере один."
 
 #. <label asp-for="Hint">@T["Hint"]</label>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:60
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:69
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "Hint"
 msgstr "Подсказка"
 
 #. <span class="hint">@T["The hint text to display for this field on the editor."]</span>
-#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:63
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:72
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr "Текст подсказки для этого поля в редакторе."
+
+#. <label asp-for="TitlePattern">@T["Title Pattern"]</label>
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:77
+msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
+msgid "Title Pattern"
+msgstr ""
+
+#. <span class="hint">@T["The pattern used to render the title in content picker. With Liquid support."]</span>
+#: OrchardCore.ContentFields\Views\ContentPickerFieldSettings.Edit.cshtml:80
+msgctxt "OrchardCore.ContentFields.Views.ContentPickerFieldSettings.Edit"
+msgid "The pattern used to render the title in content picker. With Liquid support."
+msgstr ""
 
 #. <option value="Localized" selected="@(currentEditor == "Localized")">@T["Localized"]</option>
 #: OrchardCore.ContentFields\Views\DateField-Localized.Option.cshtml:4
@@ -1504,6 +1522,18 @@ msgstr "Подсказка"
 msgctxt "OrchardCore.ContentFields.Views.TextFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr "Текст подсказки для этого поля в редакторе."
+
+#. <label for="DefaultValue">@T["Default value"]</label>
+#: OrchardCore.ContentFields\Views\TextFieldSettings.Edit.cshtml:21
+msgctxt "OrchardCore.ContentFields.Views.TextFieldSettings.Edit"
+msgid "Default value"
+msgstr ""
+
+#. <span class="hint">@T["The default value. (optional)"]</span>
+#: OrchardCore.ContentFields\Views\TextFieldSettings.Edit.cshtml:24
+msgctxt "OrchardCore.ContentFields.Views.TextFieldSettings.Edit"
+msgid "The default value. (optional)"
+msgstr ""
 
 #. <option value="" selected="@String.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.ContentFields\Views\TimeField.DisplayOption.cshtml:4
