@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2023-08-15 19:54\n"
+"PO-Revision-Date: 2023-08-15 20:32\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -251,7 +251,7 @@ msgid "A user was deleted."
 msgstr "Er is een gebruiker verwijderd."
 
 #. Context.Output.WriteLine(S["User created successfully"]);
-#: OrchardCore.Users\Commands\UserCommands.cs:51
+#: OrchardCore.Users\Commands\UserCommands.cs:54
 msgctxt "OrchardCore.Users.Commands.UserCommands"
 msgid "User created successfully"
 msgstr "Gebruiker succesvol aangemaakt"
@@ -294,7 +294,7 @@ msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "An error occurred in external provider."
 msgstr "Er is een fout opgetreden in de externe provider."
 
-#. string message = S["Site does not allow user registration."];
+#. var message = S["Site does not allow user registration."];
 #: OrchardCore.Users\Controllers\AccountController.cs:406
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
@@ -790,11 +790,11 @@ msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
 msgid "Invalid Email."
 msgstr ""
 
-#. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
-#: OrchardCore.Users\ViewModels\EditUserInformationViewModel.cs:12
-msgctxt "OrchardCore.Users.ViewModels.EditUserInformationViewModel"
-msgid "Invalid Email."
-msgstr "Ongeldig e-mailadres."
+#. [Phone(ErrorMessage = "Invalid Phone Number.")]
+#: OrchardCore.Users\ViewModels\EditUserPhoneNumberViewModel.cs:8
+msgctxt "OrchardCore.Users.ViewModels.EditUserPhoneNumberViewModel"
+msgid "Invalid Phone Number."
+msgstr ""
 
 #. [Required(ErrorMessage = "Email is required.")]
 #: OrchardCore.Users\ViewModels\ForgotPasswordViewModel.cs:7
@@ -947,37 +947,37 @@ msgid "Failed"
 msgstr "Mislukt"
 
 #. public override LocalizedString DisplayText => S["Register User Task"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:54
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:55
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr "Registreer gebruikerstaak"
 
 #. public override LocalizedString Category => S["User"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:57
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:58
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "User"
 msgstr "Gebruiker"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr "Voltooid"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr "Geldig"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr "Ongeldig"
 
-#. updater.ModelState.TryAddModelError("", S["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:153
+#. updater?.ModelState.TryAddModelError("", S["No email service is available"]);
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:152
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr "Geen e-mailservice beschikbaar"
@@ -2654,12 +2654,6 @@ msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "Email"
 msgstr ""
 
-#. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Users\Views\UserEmail.Edit.cshtml:8
-msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
-msgid "The email is invalid."
-msgstr ""
-
 #. <h4><i class="fa-solid fa-user-check" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Design"
@@ -2754,47 +2748,29 @@ msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Email"
 msgstr ""
 
+#. <dt>@T["Phone Number"]</dt>
+#: OrchardCore.Users\Views\UserInfo.cshtml:14
+msgctxt "OrchardCore.Users.Views.UserInfo"
+msgid "Phone Number"
+msgstr ""
+
 #. <dt>@T["Status"]</dt>
-#: OrchardCore.Users\Views\UserInfo.cshtml:12
+#: OrchardCore.Users\Views\UserInfo.cshtml:18
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
 msgstr ""
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
 msgstr ""
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
 msgstr ""
-
-#. <label asp-for="UserName">@T["User name"]</label>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:5
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "User name"
-msgstr "Gebruikersnaam"
-
-#. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:9
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "The user name is required."
-msgstr "De gebruikersnaam is vereist."
-
-#. <label asp-for="Email">@T["Email"]</label>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:13
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "Email"
-msgstr "E-mailadres"
-
-#. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:17
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "The email is invalid."
-msgstr "Email is ongeldig, controleer."
 
 #. <h4><i class="fa-solid fa-id-card" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User LoggedIn"])</h4>
 #: OrchardCore.Users\Views\Items\UserLoggedInEvent.Fields.Design.cshtml:4
@@ -2846,10 +2822,22 @@ msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "User name"
 msgstr ""
 
-#. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
-#: OrchardCore.Users\Views\UserName.Edit.cshtml:8
-msgctxt "OrchardCore.Users.Views.UserName.Edit"
-msgid "The user name is required."
+#. <label asp-for="PhoneNumber">@T["Phone Number"]</label>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:4
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Phone Number"
+msgstr ""
+
+#. <i class="fas fa-check-circle text-success" title="@T["Verified"]"></i>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:11
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Verified"
+msgstr ""
+
+#. <i class="fas fa-exclamation-circle" title="@T["Unverified"]"></i>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:15
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Unverified"
 msgstr ""
 
 #. <h6>@T["Roles"]</h6>
@@ -2962,7 +2950,7 @@ msgctxt "OrchardCore.Users.Views.UsersAdminListBulkActions"
 msgid "Are you sure you want to {0} these items?"
 msgstr "Weet u zeker dat u wilt {0} deze items?"
 
-#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-end create" role="button">@T["Add User"]</a>
+#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add User"]</a>
 #: OrchardCore.Users\Views\UsersAdminListCreate.cshtml:7
 msgctxt "OrchardCore.Users.Views.UsersAdminListCreate"
 msgid "Add User"
