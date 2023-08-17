@@ -10,47 +10,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2023-08-15 19:37\n"
+"PO-Revision-Date: 2023-08-17 17:33\n"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:24
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:23
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Security"
 msgstr "Turvallisuus"
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:25
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:24
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Authentication"
 msgstr "Autentikointi"
 
 #. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
 #. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:26
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:25
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:25
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Microsoft"
 msgstr "Microsoft"
 
 #. builder.Add(S["Security"], security => security
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:55
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:47
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Security"
 msgstr "Turvallisuus"
 
 #. .Add(S["Authentication"], authentication => authentication
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:56
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:48
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Authentication"
 msgstr "Autentikointi"
 
-#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
-#. .Add(S["Azure Active Directory"], S["Azure Active Directory"].PrefixPosition(), client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
-#: OrchardCore.Microsoft.Authentication\AdminMenu.cs:57
+#. .Add(S["Microsoft Entra ID"], S["Microsoft Entra ID"].PrefixPosition(), client => client
+#. .Add(S["Microsoft Entra ID"], S["Microsoft Entra ID"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:49
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:49
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
-msgid "Azure Active Directory"
-msgstr "Azure Active Directory"
+msgid "Microsoft Entra ID"
+msgstr ""
 
 #. yield return new ValidationResult(S["DisplayName is required"], new string[] { nameof(settings.DisplayName) });
 #: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:65
@@ -94,7 +94,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewMode
 msgid "Tenant Id is required"
 msgstr "TenantId on pakollinen"
 
-#. [RegularExpression(@"\/[-A-Za-z0-9&@#\/%?=~_|!:,.;][-A-Za-z0-9&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
 #: OrchardCore.Microsoft.Authentication\ViewModels\AzureADSettingsViewModel.cs:16
 msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.AzureADSettingsViewModel"
 msgid "Invalid path"
@@ -112,7 +112,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSetting
 msgid "Application Secret is required"
 msgstr "Sovelluksen salaisuus on pakollinen"
 
-#. [RegularExpression(@"\/[-A-Za-z0-9&@#\/%?=~_|!:,.;][-A-Za-z0-9&@#\/%=~_|]", ErrorMessage = "Invalid path")]
+#. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
 #: OrchardCore.Microsoft.Authentication\ViewModels\MicrosoftAccountSettingsViewModel.cs:13
 msgctxt "OrchardCore.Microsoft.Authentication.ViewModels.MicrosoftAccountSettingsViewModel"
 msgid "Invalid path"
@@ -147,84 +147,6 @@ msgstr ""
 msgctxt "OrchardCore.Microsoft.Authentication.Views.Items.AzureADDeploymentStep.Thumbnail"
 msgid "Exports the Microsoft Entra ID settings."
 msgstr ""
-
-#. @T["The current tenant will be reloaded when the settings are saved."]
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:5
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
-msgstr "Nykyinen ympäristö (tenant) ladataan uudelleen, kun asetukset on tallennettu."
-
-#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Microsoft.Authentication/#azure-active-directory" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:6
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "See documentation"
-msgstr "Katso käyttöohjeet"
-
-#. <h3>@T["Microsoft Entra ID Authentication Settings"]</h3>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:9
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Microsoft Entra ID Authentication Settings"
-msgstr ""
-
-#. <label>@T["Display Name"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:12
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Display Name"
-msgstr "Näyttönimi"
-
-#. <span class="hint">@T["The display name of the provider."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:15
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "The display name of the provider."
-msgstr "Palveluntuottajan nimi."
-
-#. <label>@T["AppId"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:19
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "AppId"
-msgstr "AppId"
-
-#. <span class="hint">@T["The Application ID found on the Microsoft Entra ID App registration parameters."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:22
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "The Application ID found on the Microsoft Entra ID App registration parameters."
-msgstr ""
-
-#. <label>@T["TenantId"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:26
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "TenantId"
-msgstr "TenantId"
-
-#. <span class="hint">@T["The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:29
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."
-msgstr ""
-
-#. <label>@T["CallbackPath"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:33
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "CallbackPath"
-msgstr "Takaisinkutsumispolku (CallbackPath)"
-
-#. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:36
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
-msgstr "Kyselypolku sovelluksen pääpolun alapolkuna, johon käyttäjäagentti palautetaan. Välisovellus käsittelee pyynnön sen saapuessa."
-
-#. <label class="form-check-label" asp-for="SaveTokens">@T["Store tokens"]</label>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:42
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Store tokens"
-msgstr "Säilytä avaimet"
-
-#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
-#: OrchardCore.Microsoft.Authentication\Views\AzureADSettings.Edit.cshtml:43
-msgctxt "OrchardCore.Microsoft.Authentication.Views.AzureADSettings.Edit"
-msgid "Store external authentication tokens for reuse"
-msgstr "Tallenna ulkoiset autentikoinnin avaimet (tokenit) uudelleenkäyttöä varten"
 
 #. @T["The current tenant will be reloaded when the settings are saved."]
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:5
@@ -298,11 +220,89 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "Store external authentication tokens for reuse"
 msgstr "Tallenna ulkoiset autentikoinnin avaimet (tokenit) uudelleenkäyttöä varten"
 
-#. <span class="icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span><span class="title">@T["Azure Active Directory"]</span>
-#: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-azuread.Id.cshtml:1
-msgctxt "OrchardCore.Microsoft.Authentication.Views.NavigationItemText-azuread.Id"
-msgid "Azure Active Directory"
-msgstr "Azure Active Directory"
+#. @T["The current tenant will be reloaded when the settings are saved."]
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:5
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "The current tenant will be reloaded when the settings are saved."
+msgstr ""
+
+#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Microsoft.Authentication/#azure-active-directory" target="_blank">@T["See documentation"]</a>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:6
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "See documentation"
+msgstr ""
+
+#. <h3>@T["Microsoft Entra ID Authentication Settings"]</h3>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:9
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "Microsoft Entra ID Authentication Settings"
+msgstr ""
+
+#. <label>@T["Display Name"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:12
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "Display Name"
+msgstr ""
+
+#. <span class="hint">@T["The display name of the provider."]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:15
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "The display name of the provider."
+msgstr ""
+
+#. <label>@T["AppId"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:19
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "AppId"
+msgstr ""
+
+#. <span class="hint">@T["The Application ID found on the Microsoft Entra ID App registration parameters."]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:22
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "The Application ID found on the Microsoft Entra ID App registration parameters."
+msgstr ""
+
+#. <label>@T["TenantId"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:26
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "TenantId"
+msgstr ""
+
+#. <span class="hint">@T["The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:29
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."
+msgstr ""
+
+#. <label>@T["CallbackPath"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:33
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "CallbackPath"
+msgstr ""
+
+#. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:36
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:42
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "Store tokens"
+msgstr ""
+
+#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:43
+msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
+msgid "Store external authentication tokens for reuse"
+msgstr ""
+
+#. <span class="icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span><span class="title">@T["Microsoft Entra ID"]</span>
+#: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-microsoft-entra-id.Id.cshtml:1
+msgctxt "OrchardCore.Microsoft.Authentication.Views.NavigationItemText-microsoft-entra-id.Id"
+msgid "Microsoft Entra ID"
+msgstr ""
 
 #. <span class="icon"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span><span class="title">@T["Microsoft"]</span>
 #: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-microsoft.Id.cshtml:1
