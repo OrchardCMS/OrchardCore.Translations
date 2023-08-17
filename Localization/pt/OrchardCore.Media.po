@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2023-08-15 19:37\n"
+"PO-Revision-Date: 2023-08-17 17:33\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:25
@@ -80,50 +80,50 @@ msgstr ""
 
 #. error = S["This file extension is not allowed: {0}", Path.GetExtension(file.FileName)].ToString()
 #. return BadRequest(S["This file extension is not allowed: {0}", Path.GetExtension(newPath)]);
-#: OrchardCore.Media\Controllers\AdminController.cs:172
-#: OrchardCore.Media\Controllers\AdminController.cs:283
+#: OrchardCore.Media\Controllers\AdminController.cs:169
+#: OrchardCore.Media\Controllers\AdminController.cs:280
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:225
+#: OrchardCore.Media\Controllers\AdminController.cs:222
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr ""
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:231
+#: OrchardCore.Media\Controllers\AdminController.cs:228
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr ""
 
 #. return BadRequest(S["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:288
+#: OrchardCore.Media\Controllers\AdminController.cs:285
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr ""
 
-#. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:366
+#. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", String.Join(",", filesOnError)].ToString());
+#: OrchardCore.Media\Controllers\AdminController.cs:363
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr ""
 
 #. return BadRequest(S["Cannot create folder because the folder name contains invalid characters"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:388
+#: OrchardCore.Media\Controllers\AdminController.cs:385
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because the folder name contains invalid characters"
 msgstr ""
 
 #. return BadRequest(S["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:402
+#: OrchardCore.Media\Controllers\AdminController.cs:399
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr ""
 
 #. return BadRequest(S["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:408
+#: OrchardCore.Media\Controllers\AdminController.cs:405
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr ""
@@ -275,19 +275,19 @@ msgid "WebP"
 msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:132
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:132
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: There was an error handling the files."
 msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: A media is required.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:143
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:143
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: A media is required."
 msgstr ""
 
 #. updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: Selecting multiple media is forbidden.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDriver.cs:148
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:148
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr ""
@@ -720,8 +720,8 @@ msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "<strong>Nothing here!</strong> There are no media profiles for the moment."
 msgstr ""
 
-#. selectedItems.text($(":checkbox[name='itemIds']:checked").length  ' @T["selected"]');
-#. selectedItems.text(selectedItemsCount  ' @T["selected"]');
+#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
+#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:135
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:146
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
@@ -1084,10 +1084,10 @@ msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Large Thumbs"
 msgstr ""
 
-#. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', '  selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
+#. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
 #: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
-msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', '  selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
+msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
 #. <input type="hidden" id="t-error" value="@T["This file exceeds the maximum upload size"]" />
@@ -1138,10 +1138,10 @@ msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Large Thumbs"
 msgstr ""
 
-#. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', '  selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
+#. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:37
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
-msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', '  selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
+msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
