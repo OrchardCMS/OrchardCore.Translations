@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2023-07-18 16:39\n"
+"PO-Revision-Date: 2023-08-24 15:55\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -251,7 +251,7 @@ msgid "A user was deleted."
 msgstr "Un utilisateur a été désactivé."
 
 #. Context.Output.WriteLine(S["User created successfully"]);
-#: OrchardCore.Users\Commands\UserCommands.cs:51
+#: OrchardCore.Users\Commands\UserCommands.cs:54
 msgctxt "OrchardCore.Users.Commands.UserCommands"
 msgid "User created successfully"
 msgstr "Utilisateur créé avec succès"
@@ -294,7 +294,7 @@ msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "An error occurred in external provider."
 msgstr "Une erreur est survenue dans le fournisseur externe."
 
-#. string message = S["Site does not allow user registration."];
+#. var message = S["Site does not allow user registration."];
 #: OrchardCore.Users\Controllers\AccountController.cs:406
 msgctxt "OrchardCore.Users.Controllers.AccountController"
 msgid "Site does not allow user registration."
@@ -482,38 +482,38 @@ msgctxt "OrchardCore.Users.Controllers.ChangeEmailController"
 msgid "A user with the same email already exists."
 msgstr "Un utilisateur avec la même adresse email existe déjà."
 
-#. await Notifier.SuccessAsync(H["We have successfully sent an verification code to your email. Please retrieve the code from your email."]);
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:113
-msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
-msgid "We have successfully sent an verification code to your email. Please retrieve the code from your email."
-msgstr "Nous avons envoyé un code de vérification à votre email avec succès. Veuillez récupérer le code de votre email."
-
 #. await Notifier.ErrorAsync(H["We are unable to send you an email at this time. Please try again later."]);
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:117
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:113
 msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
 msgid "We are unable to send you an email at this time. Please try again later."
 msgstr "Nous ne sommes pas actuellement en mesure d'envoyer un email. Veuillez réessayer ultérieurement."
 
+#. await Notifier.SuccessAsync(H["We have successfully sent an verification code to your email. Please retrieve the code from your email."]);
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:118
+msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
+msgid "We have successfully sent an verification code to your email. Please retrieve the code from your email."
+msgstr "Nous avons envoyé un code de vérification à votre email avec succès. Veuillez récupérer le code de votre email."
+
 #. await Notifier.SuccessAsync(H["Your email has been confirmed."]);
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:147
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:145
 msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
 msgid "Your email has been confirmed."
 msgstr "Votre email a été confirmé."
 
 #. await Notifier.ErrorAsync(H["Unable to confirm your email. Please try again."]);
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:152
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:150
 msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
 msgid "Unable to confirm your email. Please try again."
 msgstr "Impossible de confirmer votre email. Veuillez réessayer."
 
 #. var errorMessage = S["The email could not be sent. Please attempt to request the code at a later time."];
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:161
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:159
 msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
 msgid "The email could not be sent. Please attempt to request the code at a later time."
 msgstr "L'email n'a pas pu être envoyé. Veuillez réessayer de demander un code ultérieurement."
 
 #. message = result.Succeeded ? S["A verification code has been sent via email. Please check your email for the code."].Value
-#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:188
+#: OrchardCore.Users\Controllers\EmailAuthenticatorController.cs:186
 msgctxt "OrchardCore.Users.Controllers.EmailAuthenticatorController"
 msgid "A verification code has been sent via email. Please check your email for the code."
 msgstr "Un code de vérification a été envoyé par email. Veuillez vérifier votre email pour le code."
@@ -550,6 +550,56 @@ msgctxt "OrchardCore.Users.Controllers.ResetPasswordController"
 msgid "Reset your password"
 msgstr "Réinitialiser votre mot de passe"
 
+#. ModelState.AddModelError(nameof(model.PhoneNumber), S["Invalid phone number used."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:116
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "Invalid phone number used."
+msgstr "Numéro de téléphone non valide utilisé."
+
+#. await Notifier.ErrorAsync(H["We are unable to send you an SMS message at this time. Please try again later."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:136
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "We are unable to send you an SMS message at this time. Please try again later."
+msgstr "Nous ne pouvons pas vous envoyer de SMS pour le moment. Veuillez réessayer plus tard."
+
+#. await Notifier.SuccessAsync(H["We have successfully sent an verification code to your phone number. Please retrieve the code from your device."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:141
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "We have successfully sent an verification code to your phone number. Please retrieve the code from your device."
+msgstr "Nous avons envoyé un code de vérification à votre numéro de téléphone. Veuillez récupérer le code de votre appareil."
+
+#. await Notifier.ErrorAsync(H["Unable to find a phone number."]);
+#. await Notifier.ErrorAsync(H["Unable to find a phone number."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:160
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:184
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "Unable to find a phone number."
+msgstr "Impossible de trouver un numéro de téléphone."
+
+#. await Notifier.SuccessAsync(H["Your phone number has been confirmed."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:196
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "Your phone number has been confirmed."
+msgstr "Votre numéro de téléphone a été confirmé."
+
+#. await Notifier.ErrorAsync(H["Invalid verification code."]);
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:201
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "Invalid verification code."
+msgstr "Code de vérification invalide."
+
+#. var errorMessage = S["The SMS message could not be sent. Please attempt to request the code at a later time."];
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:211
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "The SMS message could not be sent. Please attempt to request the code at a later time."
+msgstr "Le message SMS n'a pas pu être envoyé. Veuillez essayer de demander le code ultérieurement."
+
+#. message = result.Succeeded ? S["A verification code has been sent to your phone number. Please check your device for the code."].Value
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:236
+msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
+msgid "A verification code has been sent to your phone number. Please check your device for the code."
+msgstr "Un code de vérification a été envoyé à votre numéro de téléphone. Veuillez vérifier le code de votre appareil."
+
 #. await Notifier.ErrorAsync(H["You cannot remove the only active two-factor method."]);
 #: OrchardCore.Users\Controllers\TwoFactorAuthenticationBaseController.cs:85
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationBaseController"
@@ -567,6 +617,12 @@ msgstr "Votre authentification à deux facteurs a été désactivée."
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationBaseController"
 msgid "Unable to disable two-factor authentication."
 msgstr "Impossible de désactiver l'authentification à deux facteurs."
+
+#. await Notifier.WarningAsync(H["New recovery codes were generated."]);
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationBaseController.cs:147
+msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationBaseController"
+msgid "New recovery codes were generated."
+msgstr "De nouveaux codes de récupération ont été générés."
 
 #. await Notifier.ErrorAsync(H["Unable to find an active two-factor provider."]);
 #. await Notifier.ErrorAsync(H["Unable to find an active two-factor provider."]);
@@ -694,6 +750,14 @@ msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "Cannot disable the only enabled administrator."
 msgstr "Impossible de désactiver le seul administrateur activé."
 
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(phoneNumberModel.PhoneNumber), S["Please provide a valid phone number."]);
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(phoneNumberModel.PhoneNumber), S["Please provide a valid phone number."]);
+#: OrchardCore.Users\Drivers\UserInformationDisplayDriver.cs:111
+#: OrchardCore.Users\Drivers\UserInformationDisplayDriver.cs:140
+msgctxt "OrchardCore.Users.Drivers.UserInformationDisplayDriver"
+msgid "Please provide a valid phone number."
+msgstr "Veuillez fournir un numéro de téléphone valide."
+
 #. await _notifier.WarningAsync(H["Cannot update your own roles."]);
 #: OrchardCore.Users\Drivers\UserRoleDisplayDriver.cs:105
 msgctxt "OrchardCore.Users.Drivers.UserRoleDisplayDriver"
@@ -701,49 +765,49 @@ msgid "Cannot update your own roles."
 msgstr "Impossible de mettre à jour vos propres rôles."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:321
+#: OrchardCore.Users\Startup.cs:322
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Login settings"
 msgstr "Paramètres de connexion"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:321
+#: OrchardCore.Users\Startup.cs:322
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Exports the Login settings."
 msgstr "Exporte les paramètres de connexion."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:368
+#: OrchardCore.Users\Startup.cs:369
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Change Email settings"
 msgstr "Paramètres de changement d'email"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:368
+#: OrchardCore.Users\Startup.cs:369
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Exports the Change Email settings."
 msgstr "Exporte les paramètres de changement d'email."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:422
+#: OrchardCore.Users\Startup.cs:423
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Registration settings"
 msgstr "Paramètres d'inscription"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:422
+#: OrchardCore.Users\Startup.cs:423
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Exports the Registration settings."
 msgstr "Exporte les paramètres d'inscription."
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:482
+#: OrchardCore.Users\Startup.cs:483
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Reset Password settings"
 msgstr "Paramètres de réinitialisation du mot de passe"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:482
+#: OrchardCore.Users\Startup.cs:483
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Exports the Reset Password settings."
 msgstr "Exporte les paramètres de réinitialisation du mot de passe."
@@ -787,12 +851,6 @@ msgstr "L'email est obligatoire."
 #. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
 #: OrchardCore.Users\ViewModels\EditUserEmailViewModel.cs:9
 msgctxt "OrchardCore.Users.ViewModels.EditUserEmailViewModel"
-msgid "Invalid Email."
-msgstr "Email invalide."
-
-#. [Email.EmailAddress(ErrorMessage = "Invalid Email.")]
-#: OrchardCore.Users\ViewModels\EditUserInformationViewModel.cs:12
-msgctxt "OrchardCore.Users.ViewModels.EditUserInformationViewModel"
 msgid "Invalid Email."
 msgstr "Email invalide."
 
@@ -947,37 +1005,37 @@ msgid "Failed"
 msgstr "Echec"
 
 #. public override LocalizedString DisplayText => S["Register User Task"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:54
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:55
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Register User Task"
 msgstr "Tâche inscrire un utilisateur"
 
 #. public override LocalizedString Category => S["User"];
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:57
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:58
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "User"
 msgstr "Utilisateur"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
 msgstr "Terminé"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Valid"
 msgstr "Valide"
 
 #. return Outcomes(S["Done"], S["Valid"], S["Invalid"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:87
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:88
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Invalid"
 msgstr "Invalide"
 
-#. updater.ModelState.TryAddModelError("", S["No email service is available"]);
-#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:153
+#. updater?.ModelState.TryAddModelError("", S["No email service is available"]);
+#: OrchardCore.Users\Workflows\Activities\RegisterUserTask.cs:152
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "No email service is available"
 msgstr "Aucun service de courriel n'est disponible"
@@ -1350,7 +1408,7 @@ msgstr "Le corps de l'email pour l'envoi du code de vérification. La syntaxe Li
 #: OrchardCore.Users\Views\EmailAuthenticatorValidation.cshtml:6
 msgctxt "OrchardCore.Users.Views.EmailAuthenticatorValidation"
 msgid "Please <a href=\"#\" id=\"RequestCode\">click here</a> to receive a one-time verification code via email."
-msgstr "Veuillez <a href=\"#\" id=\"RequestCode\">cliquez ici</a> pour recevoir un code de vérification unique par email."
+msgstr "Veuillez <a href=\"#\" id=\"RequestCode\">cliquer ici</a> pour recevoir un code de vérification unique par email."
 
 #. <h2>@T["Forgot password?"]</h2>
 #: OrchardCore.Users\Views\ResetPassword\ForgotPassword.cshtml:7
@@ -1521,6 +1579,42 @@ msgstr "Pour utiliser l'email comme méthode d'authentification à deux facteurs
 msgctxt "OrchardCore.Users.Views.EmailAuthenticator.Index"
 msgid "Request Code"
 msgstr "Demande de Code"
+
+#. <li class="breadcrumb-item"><a asp-action="Index" asp-controller="TwoFactorAuthentication">@T["Two-Factor Authentication"]</a></li>
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:6
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "Two-Factor Authentication"
+msgstr "Authentification à deux facteurs"
+
+#. <li class="breadcrumb-item active" aria-current="page">@RenderTitleSegments(T["Configure SMS Authenticator"])</li>
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:7
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "Configure SMS Authenticator"
+msgstr "Configurer l'authentificateur SMS"
+
+#. @T["To utilize SMS as a two-factor authentication method, please click the 'Request Code' button below in order to confirm your Phone number."]
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:12
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "To utilize SMS as a two-factor authentication method, please click the 'Request Code' button below in order to confirm your Phone number."
+msgstr "Pour utiliser le SMS comme méthode d'authentification à deux facteurs, veuillez cliquer sur le bouton 'Demander le code' ci-dessous afin de confirmer votre numéro de téléphone."
+
+#. <label asp-for="PhoneNumber">@T["Phone Number"]</label>
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:17
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#. <span>@T["Phone number must include a country code. For example, +1 for United States."]</span>
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:21
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "Phone number must include a country code. For example, +1 for United States."
+msgstr "Le numéro de téléphone doit inclure un code de pays. Par exemple, +33 pour la France."
+
+#. <button type="submit" class="btn btn-primary">@T["Request Code"]</button>
+#: OrchardCore.Users\Views\SmsAuthenticator\Index.cshtml:24
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.Index"
+msgid "Request Code"
+msgstr "Demander un code"
 
 #. @{
 #. <div class="d-flex align-items-center">@T["Two-Factor Authentication"]</div>
@@ -1774,56 +1868,62 @@ msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Allow user to change their email address"
 msgstr "Permettre à l'utilisateur de changer son adresse email"
 
+#. <label class="form-check-label" asp-for="AllowChangingPhoneNumber">@T["Allow user to change their phone number"]</label>
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:28
+msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
+msgid "Allow user to change their phone number"
+msgstr "Permettre à l'utilisateur de modifier son numéro de téléphone"
+
 #. <label class="form-check-label" asp-for="UseSiteTheme">@T["Use site theme for login page"]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:29
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:36
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use site theme for login page"
 msgstr "Utiliser le thème du site pour la page de connexion"
 
 #. <span class="hint dashed">@T["Requires an active site theme."]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:30
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:37
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Requires an active site theme."
 msgstr "Nécessite un thème actif."
 
 #. <label class="form-check-label" asp-for="UseExternalProviderIfOnlyOneDefined">@T["Use external provider for login."]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:38
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:45
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use external provider for login."
 msgstr "Utiliser un fournisseur externe pour la connexion."
 
 #. <span class="hint dashed">@T["If only one external provider is defined, auto challenge the provider to login. You should also configure registration options"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:39
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:46
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "If only one external provider is defined, auto challenge the provider to login. You should also configure registration options"
 msgstr "Si un seul fournisseur externe est défini, challenger automatiquement le fournisseur à se connecter. Vous devriez également configurer les options d'inscription"
 
 #. <label class="form-check-label" asp-for="DisableLocalLogin">@T["Disable local password login."]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:47
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:54
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Disable local password login."
 msgstr "Désactiver la connexion avec mot de passe."
 
 #. <span class="hint dashed">@T["When selected, users are not allowed to login with username/password. Make sure there is at least one admin with linked account"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:48
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:55
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "When selected, users are not allowed to login with username/password. Make sure there is at least one admin with linked account"
 msgstr "Lorsqu'il est sélectionné, les utilisateurs ne sont pas autorisés à se connecter avec le nom d'utilisateur/mot de passe. Assurez-vous qu'il y a au moins un administrateur avec un compte lié"
 
 #. <label class="form-check-label" asp-for="UseScriptToSyncRoles">@T["Use a script to set user roles based on external provider claims"]</label>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:56
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:63
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Use a script to set user roles based on external provider claims"
 msgstr "Utiliser un script pour définir les rôles utilisateur en fonction des claims du fournisseur externe"
 
 #. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:57
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
 msgstr "Si sélectionné, les IExternalLoginEventHandlers définis dans les modules ne sont pas déclenchés"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript(false)">@T["Reset Script"]</button>
-#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:90
+#: OrchardCore.Users\Views\LoginSettings.Edit.cshtml:97
 msgctxt "OrchardCore.Users.Views.LoginSettings.Edit"
 msgid "Reset Script"
 msgstr "Script Reset"
@@ -1972,7 +2072,7 @@ msgstr "Créer un nouveau compte."
 #: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:11
 msgctxt "OrchardCore.Users.Views.Account.RegisterExternalLogin"
 msgid "You've successfully authenticated with <strong>{0}</strong>. Please fill the form below and click the Register button to complete the registration."
-msgstr "Vous vous êtes authentifié avec succès avec <strong>{0}</strong>. Veuillez remplir le formulaire ci-dessous et cliquez sur le bouton S'inscrire pour terminer l'inscription."
+msgstr "Vous vous êtes authentifié avec succès avec <strong>{0}</strong>. Veuillez remplir le formulaire ci-dessous et cliquer sur le bouton S'inscrire pour terminer l'inscription."
 
 #. <label asp-for="UserName" class="col-md-3 control-label">@T["Username"]</label>
 #: OrchardCore.Users\Views\Account\RegisterExternalLogin.cshtml:19
@@ -2402,6 +2502,30 @@ msgctxt "OrchardCore.Users.Views.TwoFactorAuthentication.ShowRecoveryCodes"
 msgid "Any of the following codes can be used to login."
 msgstr "Chacun des codes suivants peut être utilisé pour se connecter."
 
+#. <legend>@T["SMS Authenticator Settings"]</legend>
+#: OrchardCore.Users\Views\SmsAuthenticatorLoginSettings.Edit.cshtml:5
+msgctxt "OrchardCore.Users.Views.SmsAuthenticatorLoginSettings.Edit"
+msgid "SMS Authenticator Settings"
+msgstr "Paramètres de l'authentificateur SMS"
+
+#. <label class="form-check-label" asp-for="Body">@T["Message Body"]</label>
+#: OrchardCore.Users\Views\SmsAuthenticatorLoginSettings.Edit.cshtml:9
+msgctxt "OrchardCore.Users.Views.SmsAuthenticatorLoginSettings.Edit"
+msgid "Message Body"
+msgstr "Corps du message"
+
+#. <span class="hint dashed">@T["The body to the message for sending the verification code. Liquid syntax is supported."]</span>
+#: OrchardCore.Users\Views\SmsAuthenticatorLoginSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Users.Views.SmsAuthenticatorLoginSettings.Edit"
+msgid "The body to the message for sending the verification code. Liquid syntax is supported."
+msgstr "Le corps du message pour l'envoi du code de vérification. La syntaxe Liquid est prise en charge."
+
+#. <h5 class="text-center mb-3">@T["Please <a href=\"#\" id=\"RequestCode\">click here</a> to receive a one-time verification code via SMS."]</h5>
+#: OrchardCore.Users\Views\SmsAuthenticatorValidation.cshtml:6
+msgctxt "OrchardCore.Users.Views.SmsAuthenticatorValidation"
+msgid "Please <a href=\"#\" id=\"RequestCode\">click here</a> to receive a one-time verification code via SMS."
+msgstr "Veuillez <a href=\"#\" id=\"RequestCode\">cliquer ici</a> pour recevoir un code de vérification unique par SMS."
+
 #. @T["Dear {0},", Model.User.UserName]
 #: OrchardCore.Users\Views\TemplateUserConfirmEmail.cshtml:8
 msgctxt "OrchardCore.Users.Views.TemplateUserConfirmEmail"
@@ -2412,7 +2536,7 @@ msgstr "Cher(ère) {0},"
 #: OrchardCore.Users\Views\TemplateUserConfirmEmail.cshtml:11
 msgctxt "OrchardCore.Users.Views.TemplateUserConfirmEmail"
 msgid "Please <a href=\"{0}\">click here</a> to confirm your account."
-msgstr "Veuillez <a href=\"{0}\">cliquez ici</a> pour confirmer votre compte."
+msgstr "Veuillez <a href=\"{0}\">cliquer ici</a> pour confirmer votre compte."
 
 #. <p>@T["Thank you"]</p>
 #: OrchardCore.Users\Views\TemplateUserConfirmEmail.cshtml:13
@@ -2534,6 +2658,36 @@ msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Email.Content"
 msgid "Use your email to receive one-time codes."
 msgstr "Utilisez votre email pour recevoir des codes uniques."
 
+#. <a asp-action="Index" asp-controller="SmsAuthenticator" class="btn btn-sm btn-primary me-1">@T["Verify Phone Number"]</a>
+#: OrchardCore.Users\Views\Items\TwoFactorMethod.Phone.Actions.cshtml:8
+msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Actions"
+msgid "Verify Phone Number"
+msgstr "Vérifier le numéro de téléphone"
+
+#. <div class="btn btn-sm btn-success disabled me-1">@T["Verified"]</div>
+#: OrchardCore.Users\Views\Items\TwoFactorMethod.Phone.Actions.cshtml:12
+msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Actions"
+msgid "Verified"
+msgstr "Vérifié"
+
+#. <a asp-action="Index" asp-controller="SmsAuthenticator" class="btn btn-sm btn-primary me-1">@T["Edit"]</a>
+#: OrchardCore.Users\Views\Items\TwoFactorMethod.Phone.Actions.cshtml:16
+msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Actions"
+msgid "Edit"
+msgstr "Modifier"
+
+#. <h4>@T["SMS authentication"]</h4>
+#: OrchardCore.Users\Views\Items\TwoFactorMethod.Phone.Content.cshtml:1
+msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Content"
+msgid "SMS authentication"
+msgstr "Authentification par SMS"
+
+#. @T["Use your phone number to receive one-time codes."]
+#: OrchardCore.Users\Views\Items\TwoFactorMethod.Phone.Content.cshtml:3
+msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Content"
+msgid "Use your phone number to receive one-time codes."
+msgstr "Utilisez votre numéro de téléphone pour recevoir des codes uniques."
+
 #. <a class="dropdown-item" asp-route-area="OrchardCore.Users" asp-controller="TwoFactorAuthentication" asp-action="Index"><i class="fa-solid fa-shield-halved fa-fw" aria-hidden="true"></i> @T["Security"]</a>
 #: OrchardCore.Users\Views\TwoFactorUserMenuItem.cshtml:2
 msgctxt "OrchardCore.Users.Views.TwoFactorUserMenuItem"
@@ -2654,12 +2808,6 @@ msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
 msgid "Email"
 msgstr "Email"
 
-#. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Users\Views\UserEmail.Edit.cshtml:8
-msgctxt "OrchardCore.Users.Views.UserEmail.Edit"
-msgid "The email is invalid."
-msgstr "L’email est invalide."
-
 #. <h4><i class="fa-solid fa-user-check" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User Enabled"])</h4>
 #: OrchardCore.Users\Views\Items\UserEnabledEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Design"
@@ -2754,47 +2902,29 @@ msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Email"
 msgstr "Email"
 
+#. <dt>@T["Phone Number"]</dt>
+#: OrchardCore.Users\Views\UserInfo.cshtml:14
+msgctxt "OrchardCore.Users.Views.UserInfo"
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
 #. <dt>@T["Status"]</dt>
-#: OrchardCore.Users\Views\UserInfo.cshtml:12
+#: OrchardCore.Users\Views\UserInfo.cshtml:18
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
 msgstr "Statut"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
 msgstr "Activé"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
-#: OrchardCore.Users\Views\UserInfo.cshtml:13
+#: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
 msgstr "Désactivé"
-
-#. <label asp-for="UserName">@T["User name"]</label>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:5
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "User name"
-msgstr "Nom d’utilisateur"
-
-#. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:9
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "The user name is required."
-msgstr "Le nom d'utilisateur est requis."
-
-#. <label asp-for="Email">@T["Email"]</label>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:13
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "Email"
-msgstr "Email"
-
-#. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Users\Views\UserInformationFields.Edit.cshtml:17
-msgctxt "OrchardCore.Users.Views.UserInformationFields.Edit"
-msgid "The email is invalid."
-msgstr "L’email est invalide."
 
 #. <h4><i class="fa-solid fa-id-card" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User LoggedIn"])</h4>
 #: OrchardCore.Users\Views\Items\UserLoggedInEvent.Fields.Design.cshtml:4
@@ -2846,11 +2976,29 @@ msgctxt "OrchardCore.Users.Views.UserName.Edit"
 msgid "User name"
 msgstr "Nom d’utilisateur"
 
-#. <span asp-validation-for="UserName" class="text-danger">@T["The user name is required."]</span>
-#: OrchardCore.Users\Views\UserName.Edit.cshtml:8
-msgctxt "OrchardCore.Users.Views.UserName.Edit"
-msgid "The user name is required."
-msgstr "Le nom d'utilisateur est requis."
+#. <label asp-for="PhoneNumber">@T["Phone Number"]</label>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:4
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#. <i class="fas fa-check-circle text-success" title="@T["Verified"]"></i>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:11
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Verified"
+msgstr "Vérifié"
+
+#. <i class="fas fa-exclamation-circle" title="@T["Unverified"]"></i>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:15
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Unverified"
+msgstr "Non vérifié"
+
+#. <span>@T["Phone number must include a country code. For example, +1 for United States."]</span>
+#: OrchardCore.Users\Views\UserPhoneNumber.Edit.cshtml:19
+msgctxt "OrchardCore.Users.Views.UserPhoneNumber.Edit"
+msgid "Phone number must include a country code. For example, +1 for United States."
+msgstr "Le numéro de téléphone doit inclure un code de pays. Par exemple, +33 pour la France."
 
 #. <h6>@T["Roles"]</h6>
 #: OrchardCore.Users\Views\UserRoleFields.Edit.cshtml:5
@@ -2962,7 +3110,7 @@ msgctxt "OrchardCore.Users.Views.UsersAdminListBulkActions"
 msgid "Are you sure you want to {0} these items?"
 msgstr "Êtes-vous sûr de vouloir {0} ces éléments ?"
 
-#. <a asp-route-action="Create" class="btn btn-sm btn-secondary float-end create" role="button">@T["Add User"]</a>
+#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add User"]</a>
 #: OrchardCore.Users\Views\UsersAdminListCreate.cshtml:7
 msgctxt "OrchardCore.Users.Views.UsersAdminListCreate"
 msgid "Add User"
@@ -3209,6 +3357,48 @@ msgstr "Utilisateur mis à jour"
 msgctxt "OrchardCore.Users.Views.Items.UserUpdatedEvent.Fields.Thumbnail"
 msgid "User is updated."
 msgstr "L'utilisateur est mis à jour."
+
+#. <li class="breadcrumb-item"><a asp-action="Index" asp-controller="TwoFactorAuthentication">@T["Two-Factor Authentication"]</a></li>
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:6
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Two-Factor Authentication"
+msgstr "Authentification à deux facteurs"
+
+#. <li class="breadcrumb-item"><a asp-action="Index" asp-controller="SmsAuthenticator">@T["Configure SMS Authenticator"]</a></li>
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:7
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Configure SMS Authenticator"
+msgstr "Configurer l'authentificateur SMS"
+
+#. <li class="breadcrumb-item active" aria-current="page">@RenderTitleSegments(T["SMS Code Validation"])</li>
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:8
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "SMS Code Validation"
+msgstr "Validation du code SMS"
+
+#. @T["Please check your phone for a verification code and provide it below."]
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:13
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Please check your phone for a verification code and provide it below."
+msgstr "Veuillez vérifier votre téléphone pour obtenir un code de vérification et le fournir ci-dessous."
+
+#. <input asp-for="Code" class="form-control" autocomplete="off" placeholder="@T["Please enter the code"]" />
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:21
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Please enter the code"
+msgstr "Veuillez saisir le code"
+
+#. <label asp-for="Code" class="control-label form-label">@T["Verification code"]</label>
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:22
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Verification code"
+msgstr "Code de vérification"
+
+#. <button type="submit" class="btn btn-lg btn-primary">@T["Verify"]</button>
+#: OrchardCore.Users\Views\SmsAuthenticator\ValidateCode.cshtml:25
+msgctxt "OrchardCore.Users.Views.SmsAuthenticator.ValidateCode"
+msgid "Verify"
+msgstr "Vérifier"
 
 #. <h4><i class="fa-solid fa-user" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate User"])</h4>
 #: OrchardCore.Users\Views\Items\ValidateUserTask.Fields.Design.cshtml:7
