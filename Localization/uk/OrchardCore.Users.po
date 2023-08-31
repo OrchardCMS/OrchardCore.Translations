@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2023-08-24 15:55\n"
+"PO-Revision-Date: 2023-08-31 19:42\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -765,49 +765,49 @@ msgid "Cannot update your own roles."
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:322
+#: OrchardCore.Users\Startup.cs:325
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Login settings"
 msgstr "Параметри входу"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<LoginSettings, LoginDeploymentStartup>(S => S["Login settings"], S => S["Exports the Login settings."]);
-#: OrchardCore.Users\Startup.cs:322
+#: OrchardCore.Users\Startup.cs:325
 msgctxt "OrchardCore.Users.LoginDeploymentStartup"
 msgid "Exports the Login settings."
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:369
+#: OrchardCore.Users\Startup.cs:372
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Change Email settings"
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ChangeEmailDeploymentStartup, ChangeEmailDeploymentStartup>(S => S["Change Email settings"], S => S["Exports the Change Email settings."]);
-#: OrchardCore.Users\Startup.cs:369
+#: OrchardCore.Users\Startup.cs:372
 msgctxt "OrchardCore.Users.ChangeEmailDeploymentStartup"
 msgid "Exports the Change Email settings."
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:423
+#: OrchardCore.Users\Startup.cs:426
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Registration settings"
 msgstr "Налаштування реєстрації"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<RegistrationSettings, RegistrationDeploymentStartup>(S => S["Registration settings"], S => S["Exports the Registration settings."]);
-#: OrchardCore.Users\Startup.cs:423
+#: OrchardCore.Users\Startup.cs:426
 msgctxt "OrchardCore.Users.RegistrationDeploymentStartup"
 msgid "Exports the Registration settings."
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:483
+#: OrchardCore.Users\Startup.cs:486
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Reset Password settings"
 msgstr "Скинути налаштування паролів"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ResetPasswordSettings, ResetPasswordDeploymentStartup>(S => S["Reset Password settings"], S => S["Exports the Reset Password settings."]);
-#: OrchardCore.Users\Startup.cs:483
+#: OrchardCore.Users\Startup.cs:486
 msgctxt "OrchardCore.Users.ResetPasswordDeploymentStartup"
 msgid "Exports the Reset Password settings."
 msgstr ""
@@ -2688,12 +2688,6 @@ msgctxt "OrchardCore.Users.Views.Items.TwoFactorMethod.Phone.Content"
 msgid "Use your phone number to receive one-time codes."
 msgstr ""
 
-#. <a class="dropdown-item" asp-route-area="OrchardCore.Users" asp-controller="TwoFactorAuthentication" asp-action="Index"><i class="fa-solid fa-shield-halved fa-fw" aria-hidden="true"></i> @T["Security"]</a>
-#: OrchardCore.Users\Views\TwoFactorUserMenuItem.cshtml:2
-msgctxt "OrchardCore.Users.Views.TwoFactorUserMenuItem"
-msgid "Security"
-msgstr ""
-
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["View User"])</h1></zone>
 #: OrchardCore.Users\Views\User.DetailAdmin.cshtml:4
 msgctxt "OrchardCore.Users.Views.User.DetailAdmin"
@@ -2944,31 +2938,67 @@ msgctxt "OrchardCore.Users.Views.Items.UserLoggedInEvent.Fields.Thumbnail"
 msgid "User Logged in."
 msgstr ""
 
-#. <li><h6 class="dropdown-header">@T["Signed in as"]<span class="ms-1 font-weight-bold">@User.Identity.Name</span></h6></li>
-#: OrchardCore.Users\Views\UserMenu.cshtml:15
+#. <span>@T["Users"]</span>
+#: OrchardCore.Users\Views\UserMenu.cshtml:13
 msgctxt "OrchardCore.Users.Views.UserMenu"
+msgid "Users"
+msgstr ""
+
+#. <i class="fa-solid fa-sign-in-alt fa-fw" aria-hidden="true"></i> @T["Log in"]
+#: OrchardCore.Users\Views\UserMenu.cshtml:27
+msgctxt "OrchardCore.Users.Views.UserMenu"
+msgid "Log in"
+msgstr ""
+
+#. <i class="fa-solid fa-envelope fa-fw" aria-hidden="true"></i> @T["Change Email"]
+#: OrchardCore.Users\Views\UserMenuItems-ChangeEmail.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-ChangeEmail"
+msgid "Change Email"
+msgstr ""
+
+#. <i class="fa fa-desktop fa-fw" aria-hidden="true"></i> @T["Dashboard"]
+#: OrchardCore.Users\Views\UserMenuItems-Dashboard.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-Dashboard"
+msgid "Dashboard"
+msgstr ""
+
+#. <i class="fa-solid fa-user-lock fa-fw" aria-hidden="true"></i> @T["External Logins"]
+#: OrchardCore.Users\Views\UserMenuItems-ExternalLogins.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-ExternalLogins"
+msgid "External Logins"
+msgstr ""
+
+#. <i class="far fa-address-card" aria-hidden="true"></i> @T["Profile"]
+#. <i class="far fa-address-card" aria-hidden="true"></i> @T["Profile"]
+#: OrchardCore.Users\Views\UserMenuItems-Profile.cshtml:9
+#: OrchardCore.Users\Views\UserMenuItems-Profile.cshtml:17
+msgctxt "OrchardCore.Users.Views.UserMenuItems-Profile"
+msgid "Profile"
+msgstr ""
+
+#. @T["Signed in as"]<span class="ms-1 font-weight-bold">@User.Identity.Name</span>
+#: OrchardCore.Users\Views\UserMenuItems-SignedUser.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-SignedUser"
 msgid "Signed in as"
 msgstr ""
 
-#. <li><a class="dropdown-item" asp-area="OrchardCore.Users" asp-action="Edit" asp-controller="Admin" asp-route-returnUrl="@FullRequestPath"><span><i class="far fa-address-card" aria-hidden="true"></i></span>&nbsp;<span> @T["Profile"]</span></a></li>
-#. <li><a class="dropdown-item" asp-area="OrchardCore.Users" asp-action="Display" asp-controller="Admin" asp-route-id="@User.FindFirstValue(ClaimTypes.NameIdentifier)" asp-route-returnUrl="@FullRequestPath"><span><i class="far fa-address-card" aria-hidden="true"></i></span>&nbsp;<span> @T["Profile"]</span></a></li>
-#: OrchardCore.Users\Views\UserMenu.cshtml:19
-#: OrchardCore.Users\Views\UserMenu.cshtml:23
-msgctxt "OrchardCore.Users.Views.UserMenu"
-msgid "Profile"
-msgstr "Профіль"
-
-#. <li><a class="dropdown-item" asp-area="OrchardCore.Users" asp-controller="Account" asp-action="ChangePassword" asp-route-returnUrl="@FullRequestPath"><span><i class="fa-solid fa-key" aria-hidden="true"></i></span>&nbsp;<span> @T["Change password"]</span></a></li>
-#: OrchardCore.Users\Views\UserMenu.cshtml:25
-msgctxt "OrchardCore.Users.Views.UserMenu"
+#. <i class="fa-solid fa-key" aria-hidden="true"></i> @T["Change password"]
+#: OrchardCore.Users\Views\UserMenuItems-SignOut.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-SignOut"
 msgid "Change password"
-msgstr "Змінити пароль"
+msgstr ""
 
-#. <li><button type="submit" class="dropdown-item"><span><i class="fa-solid fa-sign-out-alt" aria-hidden="true"></i></span>&nbsp;<span> @T["Log off"]</span></button></li>
-#: OrchardCore.Users\Views\UserMenu.cshtml:29
-msgctxt "OrchardCore.Users.Views.UserMenu"
+#. <i class="fa-solid fa-sign-out-alt" aria-hidden="true"></i> @T["Log off"]
+#: OrchardCore.Users\Views\UserMenuItems-SignOut.cshtml:9
+msgctxt "OrchardCore.Users.Views.UserMenuItems-SignOut"
 msgid "Log off"
-msgstr "Вийти"
+msgstr ""
+
+#. <i class="fa-solid fa-shield-halved fa-fw" aria-hidden="true"></i> @T["Security"]
+#: OrchardCore.Users\Views\UserMenuItems-TwoFactor.cshtml:3
+msgctxt "OrchardCore.Users.Views.UserMenuItems-TwoFactor"
+msgid "Security"
+msgstr ""
 
 #. <label asp-for="UserName">@T["User name"]</label>
 #: OrchardCore.Users\Views\UserName.Edit.cshtml:4
