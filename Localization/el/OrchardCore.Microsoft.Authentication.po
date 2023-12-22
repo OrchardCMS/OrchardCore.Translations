@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2023-08-17 17:33\n"
+"PO-Revision-Date: 2023-12-22 16:29\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:23
@@ -172,7 +172,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "Microsoft Account Authentication Settings"
 msgstr "Ρυθμίσεις Ελέγχου Ταυτότητας Λογαριασμού της Microsoft"
 
-#. <label>@T["AppId"]</label>
+#. <label asp-for="AppId" class="form-label">@T["AppId"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "AppId"
@@ -184,7 +184,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "The Application ID found on the Microsoft developer portal parameters."
 msgstr "Το ID της εφαρμογής εντοπίστηκε στις παραμέτρους της Microsoft developer portal."
 
-#. <label>@T["Secret Key"]</label>
+#. <label asp-for="AppSecret" class="form-label">@T["Secret Key"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "Secret Key"
@@ -196,7 +196,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edi
 msgid "The Application secret key found on the Microsoft developer portal parameters."
 msgstr "Το κρυπτογραφημένο κλειδί της εφαρμογής βρίσκεται στις παραμέτρους της Microsoft developer portal."
 
-#. <label>@T["CallbackPath"]</label>
+#. <label asp-for="CallbackPath" class="form-label">@T["CallbackPath"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:31
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
 msgid "CallbackPath"
@@ -224,13 +224,13 @@ msgstr "Αποθηκεύστε εξωτερικά σύμβολα (tokens) αυθ
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:5
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
-msgstr ""
+msgstr "Ο τρέχων ενοικιαστής θα φορτωθεί ξανά όταν αποθηκευτούν οι ρυθμίσεις."
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Microsoft.Authentication/#azure-active-directory" target="_blank">@T["See documentation"]</a>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "See documentation"
-msgstr ""
+msgstr "Δείτε την τεκμηρίωση"
 
 #. <h3>@T["Microsoft Entra ID Authentication Settings"]</h3>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:9
@@ -238,19 +238,19 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edi
 msgid "Microsoft Entra ID Authentication Settings"
 msgstr ""
 
-#. <label>@T["Display Name"]</label>
+#. <label asp-for="DisplayName" class="form-label">@T["Display Name"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:12
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "Display Name"
-msgstr ""
+msgstr "Εμφανιζόμενο Όνομα"
 
 #. <span class="hint">@T["The display name of the provider."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "The display name of the provider."
-msgstr ""
+msgstr "Το εμφανιζόμενο όνομα του παρόχου."
 
-#. <label>@T["AppId"]</label>
+#. <label asp-for="AppId" class="form-label">@T["AppId"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "AppId"
@@ -262,7 +262,7 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edi
 msgid "The Application ID found on the Microsoft Entra ID App registration parameters."
 msgstr ""
 
-#. <label>@T["TenantId"]</label>
+#. <label asp-for="TenantId" class="form-label">@T["TenantId"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:26
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "TenantId"
@@ -274,11 +274,11 @@ msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edi
 msgid "The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."
 msgstr ""
 
-#. <label>@T["CallbackPath"]</label>
+#. <label asp-for="CallbackPath" class="form-label">@T["CallbackPath"]</label>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:33
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
 msgid "CallbackPath"
-msgstr ""
+msgstr "CallbackPath"
 
 #. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:36
@@ -308,5 +308,5 @@ msgstr ""
 #: OrchardCore.Microsoft.Authentication\Views\NavigationItemText-microsoft.Id.cshtml:1
 msgctxt "OrchardCore.Microsoft.Authentication.Views.NavigationItemText-microsoft.Id"
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
