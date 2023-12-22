@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2023-08-17 17:33\n"
+"PO-Revision-Date: 2023-12-22 16:31\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.Roles\AdminMenu.cs:24
@@ -26,13 +26,13 @@ msgctxt "OrchardCore.Roles.AdminMenu"
 msgid "Roles"
 msgstr "Rollen"
 
-#. ModelState.AddModelError(String.Empty, S["Invalid role name."]);
+#. ModelState.AddModelError(string.Empty, S["Invalid role name."]);
 #: OrchardCore.Roles\Controllers\AdminController.cs:99
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Invalid role name."
 msgstr "Ungültiger Rollenname."
 
-#. ModelState.AddModelError(String.Empty, S["The role is already used."]);
+#. ModelState.AddModelError(string.Empty, S["The role is already used."]);
 #: OrchardCore.Roles\Controllers\AdminController.cs:104
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "The role is already used."
@@ -62,7 +62,7 @@ msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "Role updated successfully."
 msgstr "Rolle erfolgreich aktualisiert."
 
-#. var title = String.IsNullOrWhiteSpace(feature.Name) ? S["{0} Feature", feature.Id] : feature.Name;
+#. var title = string.IsNullOrWhiteSpace(feature.Name) ? S["{0} Feature", feature.Id] : feature.Name;
 #: OrchardCore.Roles\Controllers\AdminController.cs:272
 msgctxt "OrchardCore.Roles.Controllers.AdminController"
 msgid "{0} Feature"
@@ -73,6 +73,54 @@ msgstr "{0} Funktion"
 msgctxt "OrchardCore.Roles.Services.RoleStore"
 msgid "Can't delete system roles."
 msgstr "Systemrollen können nicht gelöscht werden."
+
+#. public override LocalizedString DisplayText => S["Get Users by Role Task"];
+#: OrchardCore.Roles\Views\Workflows\Activities\GetUsersByRoleTask.cs:29
+msgctxt "OrchardCore.Roles.Workflows.Activities.GetUsersByRoleTask"
+msgid "Get Users by Role Task"
+msgstr ""
+
+#. public override LocalizedString Category => S["User"];
+#: OrchardCore.Roles\Views\Workflows\Activities\GetUsersByRoleTask.cs:31
+msgctxt "OrchardCore.Roles.Workflows.Activities.GetUsersByRoleTask"
+msgid "User"
+msgstr ""
+
+#. => Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Roles\Views\Workflows\Activities\GetUsersByRoleTask.cs:46
+msgctxt "OrchardCore.Roles.Workflows.Activities.GetUsersByRoleTask"
+msgid "Done"
+msgstr ""
+
+#. => Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Roles\Views\Workflows\Activities\GetUsersByRoleTask.cs:46
+msgctxt "OrchardCore.Roles.Workflows.Activities.GetUsersByRoleTask"
+msgid "Failed"
+msgstr ""
+
+#. public override LocalizedString DisplayText => S["Unassign User Role Task"];
+#: OrchardCore.Roles\Views\Workflows\Activities\UnassignUserRoleTask.cs:31
+msgctxt "OrchardCore.Roles.Workflows.Activities.UnassignUserRoleTask"
+msgid "Unassign User Role Task"
+msgstr ""
+
+#. public override LocalizedString Category => S["User"];
+#: OrchardCore.Roles\Views\Workflows\Activities\UnassignUserRoleTask.cs:33
+msgctxt "OrchardCore.Roles.Workflows.Activities.UnassignUserRoleTask"
+msgid "User"
+msgstr ""
+
+#. => Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Roles\Views\Workflows\Activities\UnassignUserRoleTask.cs:48
+msgctxt "OrchardCore.Roles.Workflows.Activities.UnassignUserRoleTask"
+msgid "Done"
+msgstr ""
+
+#. => Outcomes(S["Done"], S["Failed"]);
+#: OrchardCore.Roles\Views\Workflows\Activities\UnassignUserRoleTask.cs:48
+msgctxt "OrchardCore.Roles.Workflows.Activities.UnassignUserRoleTask"
+msgid "Failed"
+msgstr ""
 
 #. <h5>@T["All Roles"]</h5>
 #: OrchardCore.Roles\Views\Items\AllRolesDeploymentStep.Edit.cshtml:3
@@ -110,13 +158,13 @@ msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "Create Role"
 msgstr "Rolle erstellen"
 
-#. <label asp-for="RoleName">@T["Role name"]</label>
+#. <label asp-for="RoleName" class="form-label">@T["Role name"]</label>
 #: OrchardCore.Roles\Views\Admin\Create.cshtml:9
 msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "Role name"
 msgstr "Rollenname"
 
-#. <label asp-for="RoleDescription">@T["Role description"]</label>
+#. <label asp-for="RoleDescription" class="form-label">@T["Role description"]</label>
 #: OrchardCore.Roles\Views\Admin\Create.cshtml:15
 msgctxt "OrchardCore.Roles.Views.Admin.Create"
 msgid "Role description"
@@ -152,7 +200,7 @@ msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Edit Role Detail"
 msgstr "Rollendetail bearbeiten"
 
-#. <label asp-for="RoleDescription">@T["Role description"]</label>
+#. <label asp-for="RoleDescription" class="form-label">@T["Role description"]</label>
 #: OrchardCore.Roles\Views\Admin\Edit.cshtml:20
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Role description"
@@ -198,13 +246,13 @@ msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Permission"
 msgstr "Berechtigung"
 
-#. <span class="badge bg-danger" data-bs-toggle="tooltip" data-html="true" title="@T["This permission could allow a user to elevate their other permissions. Grant it with extreme consideration."]">@T["Security Critical"]</span>
+#. <span class="badge text-bg-danger" data-bs-toggle="tooltip" data-html="true" title="@T["This permission could allow a user to elevate their other permissions. Grant it with extreme consideration."]">@T["Security Critical"]</span>
 #: OrchardCore.Roles\Views\Admin\Edit.cshtml:63
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "This permission could allow a user to elevate their other permissions. Grant it with extreme consideration."
 msgstr "Diese Berechtigung könnte es einem Benutzer erlauben, seine anderen Berechtigungen zu erhöhen. Nur nach reichlicher Überlegung erteilen."
 
-#. <span class="badge bg-danger" data-bs-toggle="tooltip" data-html="true" title="@T["This permission could allow a user to elevate their other permissions. Grant it with extreme consideration."]">@T["Security Critical"]</span>
+#. <span class="badge text-bg-danger" data-bs-toggle="tooltip" data-html="true" title="@T["This permission could allow a user to elevate their other permissions. Grant it with extreme consideration."]">@T["Security Critical"]</span>
 #: OrchardCore.Roles\Views\Admin\Edit.cshtml:63
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Security Critical"
@@ -221,6 +269,54 @@ msgstr "Speichern"
 msgctxt "OrchardCore.Roles.Views.Admin.Edit"
 msgid "Cancel"
 msgstr "Abbrechen"
+
+#. <i class="fa-solid fa-user" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Get users in roles"])
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Design.cshtml:10
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Design"
+msgid "Get users in roles"
+msgstr ""
+
+#. <em>@T["Get users in roles {0} to {1}", string.Join(',', Model.Activity.Roles), Model.Activity.OutputKeyName]</em>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Design.cshtml:13
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Design"
+msgid "Get users in roles {0} to {1}"
+msgstr ""
+
+#. <label asp-for="OutputKeyName" class="form-label">@T["Output Key Name"]</label>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Edit.cshtml:6
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Edit"
+msgid "Output Key Name"
+msgstr ""
+
+#. <span class="hint">@T["The designated key name for storing the users' list in the workflow output. This key enables later access to the list within the workflow.With Liquid support."]</span>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Edit"
+msgid "The designated key name for storing the users' list in the workflow output. This key enables later access to the list within the workflow.With Liquid support."
+msgstr ""
+
+#. <label asp-for="Roles" class="form-label">@T["Roles"]</label>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Edit"
+msgid "Roles"
+msgstr ""
+
+#. <span class="hint">@T["Choose the roles used to identify users during list generation."]</span>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Edit.cshtml:16
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Edit"
+msgid "Choose the roles used to identify users during list generation."
+msgstr ""
+
+#. <i class="fa-solid fa-user" aria-hidden="true"></i>@T["Get users in roles"]
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Thumbnail"
+msgid "Get users in roles"
+msgstr ""
+
+#. <p>@T["Get users in roles."]</p>
+#: OrchardCore.Roles\Views\Items\GetUsersByRoleTask.Fields.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Roles.Views.Items.GetUsersByRoleTask.Fields.Thumbnail"
+msgid "Get users in roles."
+msgstr ""
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Roles"])</h1></zone>
 #: OrchardCore.Roles\Views\Admin\Index.cshtml:5
@@ -274,4 +370,52 @@ msgstr "<strong>Nichts hier!</strong> Deine Suche hat keine Ergebnisse zurückge
 msgctxt "OrchardCore.Roles.Views.NavigationItemText-roles.Id"
 msgid "Roles"
 msgstr "Rollen"
+
+#. <i class="fa-solid fa-user" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Unassign user from roles"])
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Design.cshtml:10
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Design"
+msgid "Unassign user from roles"
+msgstr ""
+
+#. <em>@T["Unassign {0} from roles {1}", Model.Activity.UserName, string.Join(",", Model.Activity.Roles)]</em>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Design.cshtml:13
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Design"
+msgid "Unassign {0} from roles {1}"
+msgstr ""
+
+#. <label asp-for="UserName" class="form-label">@T["UserName"]</label>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Edit.cshtml:6
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Edit"
+msgid "UserName"
+msgstr ""
+
+#. <span class="hint">@T["The User to update. With Liquid support."]</span>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Edit.cshtml:9
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Edit"
+msgid "The User to update. With Liquid support."
+msgstr ""
+
+#. <label asp-for="Roles" class="form-label">@T["Roles"]</label>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Edit"
+msgid "Roles"
+msgstr ""
+
+#. <span class="hint">@T["The Roles to remove."]</span>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Edit.cshtml:16
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Edit"
+msgid "The Roles to remove."
+msgstr ""
+
+#. <i class="fa-solid fa-user" aria-hidden="true"></i>@T["Unassign user from roles"]
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Thumbnail"
+msgid "Unassign user from roles"
+msgstr ""
+
+#. <p>@T["Unassign a user from roles."]</p>
+#: OrchardCore.Roles\Views\Items\UnassignUserRoleTask.Fields.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Roles.Views.Items.UnassignUserRoleTask.Fields.Thumbnail"
+msgid "Unassign a user from roles."
+msgstr ""
 
