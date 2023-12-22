@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2023-08-17 17:46\n"
+"PO-Revision-Date: 2023-12-22 16:31\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Shortcodes\AdminMenu.cs:25
@@ -64,8 +64,8 @@ msgctxt "OrchardCore.Shortcodes.Controllers.AdminController"
 msgid "The template content is mandatory."
 msgstr "Şablon içeriği zorunludur."
 
-#. ModelState.AddModelError(nameof(ShortcodeTemplateViewModel.Content), S["The template doesn't contain a valid Liquid expression. Details: {0}", String.Join(" ", errors)]);
-#. ModelState.AddModelError(nameof(ShortcodeTemplateViewModel.Content), S["The template doesn't contain a valid Liquid expression. Details: {0}", String.Join(" ", errors)]);
+#. ModelState.AddModelError(nameof(ShortcodeTemplateViewModel.Content), S["The template doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
+#. ModelState.AddModelError(nameof(ShortcodeTemplateViewModel.Content), S["The template doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 #: OrchardCore.Shortcodes\Controllers\AdminController.cs:155
 #: OrchardCore.Shortcodes\Controllers\AdminController.cs:252
 msgctxt "OrchardCore.Shortcodes.Controllers.AdminController"
@@ -73,13 +73,13 @@ msgid "The template doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Şablon geçerli bir Liquid ifadesi içermiyor. Ayrıntılar: {0}"
 
 #. await _notifier.SuccessAsync(H["Shortcode template deleted successfully."]);
-#: OrchardCore.Shortcodes\Controllers\AdminController.cs:302
+#: OrchardCore.Shortcodes\Controllers\AdminController.cs:306
 msgctxt "OrchardCore.Shortcodes.Controllers.AdminController"
 msgid "Shortcode template deleted successfully."
 msgstr "Kısa kod şablonu başarıyla silindi."
 
 #. await _notifier.SuccessAsync(H["Shortcode templates successfully removed."]);
-#: OrchardCore.Shortcodes\Controllers\AdminController.cs:329
+#: OrchardCore.Shortcodes\Controllers\AdminController.cs:333
 msgctxt "OrchardCore.Shortcodes.Controllers.AdminController"
 msgid "Shortcode templates successfully removed."
 msgstr "Kısa kod şablonları başarıyla kaldırıldı."
@@ -120,7 +120,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Create Shortcode"
 msgstr "Kısa Kod Oluştur"
 
-#. <label asp-for="Name">@T["Name"]</label>
+#. <label asp-for="Name" class="form-label">@T["Name"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:44
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Name"
@@ -132,7 +132,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "The name of the shortcode."
 msgstr "Kısa kodun adı."
 
-#. <label asp-for="Hint">@T["Hint"]</label>
+#. <label asp-for="Hint" class="form-label">@T["Hint"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:51
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Hint"
@@ -144,7 +144,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "The hint for the shortcode."
 msgstr "Kısa kod için ipucu."
 
-#. <label asp-for="Usage">@T["Usage"]</label>
+#. <label asp-for="Usage" class="form-label">@T["Usage"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:57
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Usage"
@@ -156,7 +156,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Example usage of the shortcode."
 msgstr "Kısa kodun örnek kullanımı."
 
-#. <label asp-for="SelectedCategories">@T["Categories"]</label>
+#. <label asp-for="SelectedCategories" class="form-label">@T["Categories"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:64
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Categories"
@@ -200,7 +200,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "The categories for this shortcode."
 msgstr "Bu kısa kod için kategoriler."
 
-#. <label asp-for="DefaultValue">@T["Default Shortcode Value"]</label>
+#. <label asp-for="DefaultValue" class="form-label">@T["Default Shortcode Value"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:90
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Default Shortcode Value"
@@ -212,7 +212,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "The default value of the shortcode when selected. Defaults to [name]."
 msgstr "Seçildiğinde kısa kodun varsayılan değeri. Varsayılan olarak [isim]'dir."
 
-#. <label asp-for="Content">@T["Content"]</label>
+#. <label asp-for="Content" class="form-label">@T["Content"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Create.cshtml:107
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Create"
 msgid "Content"
@@ -254,7 +254,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Edit Shortcode"
 msgstr "Kısa Kodu Düzenle"
 
-#. <label asp-for="Name">@T["Name"]</label>
+#. <label asp-for="Name" class="form-label">@T["Name"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:48
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Name"
@@ -266,7 +266,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "The name of the shortcode."
 msgstr "Kısa kodun adı."
 
-#. <label asp-for="Hint">@T["Hint"]</label>
+#. <label asp-for="Hint" class="form-label">@T["Hint"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:54
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Hint"
@@ -278,7 +278,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "The hint for the shortcode."
 msgstr "Kısa kod için ipucu."
 
-#. <label asp-for="Usage">@T["Usage"]</label>
+#. <label asp-for="Usage" class="form-label">@T["Usage"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:60
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Usage"
@@ -290,7 +290,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Example usage of the shortcode."
 msgstr "Kısa kodun örnek kullanımı."
 
-#. <label asp-for="SelectedCategories">@T["Categories"]</label>
+#. <label asp-for="SelectedCategories" class="form-label">@T["Categories"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:67
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Categories"
@@ -334,7 +334,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "The categories for this shortcode."
 msgstr "Bu kısa kod için kategoriler."
 
-#. <label asp-for="DefaultValue">@T["Default Shortcode Value"]</label>
+#. <label asp-for="DefaultValue" class="form-label">@T["Default Shortcode Value"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:93
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Default Shortcode Value"
@@ -346,7 +346,7 @@ msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "The default value of the shortcode when selected. Defaults to [name]."
 msgstr "Seçildiğinde kısa kodun varsayılan değeri. Varsayılan olarak [isim]."
 
-#. <label asp-for="Content">@T["Content"]</label>
+#. <label asp-for="Content" class="form-label">@T["Content"]</label>
 #: OrchardCore.Shortcodes\Views\Admin\Edit.cshtml:116
 msgctxt "OrchardCore.Shortcodes.Views.Admin.Edit"
 msgid "Content"
