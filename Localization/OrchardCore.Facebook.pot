@@ -77,13 +77,13 @@ msgid "The App Secret is required."
 msgstr ""
 
 #: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:85
-#. updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", String.Join(" ", errors)]);
+#. updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 msgctxt "OrchardCore.Facebook.Widgets.Drivers.FacebookPluginPartDisplayDriver"
 msgid "The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}"
 msgstr ""
 
 #: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:42
-#. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The Body doesn't contain a valid Liquid expression. Details: {0}", String.Join(" ", errors)]);
+#. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 msgctxt "OrchardCore.Facebook.Widgets.Settings.FacebookPluginPartSettingsDisplayDriver"
 msgid "The Body doesn't contain a valid Liquid expression. Details: {0}"
 msgstr ""
@@ -137,7 +137,7 @@ msgid "Login Settings"
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:12
-#. <label>@T["CallbackPath"]</label>
+#. <label asp-for="CallbackPath" class="form-label">@T["CallbackPath"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "CallbackPath"
 msgstr ""
@@ -149,7 +149,7 @@ msgid "The request path within the application's base path where the user-agent 
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:21
-#. <label class="form-check-label" asp-for="SaveTokens">@T["Store tokens"]</label>
+#. <label class="form-check-label" class="form-label" asp-for="SaveTokens">@T["Store tokens"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "Store tokens"
 msgstr ""
@@ -167,7 +167,7 @@ msgid "<a href=\"{0}\">Meta Integration settings</a> must be configured in order
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:6
-#. <label>@T["Pixel Identifier"]</label>
+#. <label asp-for="PixelId" class="form-label">@T["Pixel Identifier"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
 msgid "Pixel Identifier"
 msgstr ""
@@ -179,7 +179,7 @@ msgid "The Pixel ID found on the Meta Data Sources portal."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:13
-#. <label asp-for="Liquid" class="@Orchard.GetLabelCssClasses()">@T["Body"]</label>
+#. <label asp-for="Liquid" class="@Orchard.GetLabelClasses()">@T["Body"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPart.Edit"
 msgid "Body"
 msgstr ""
@@ -191,7 +191,7 @@ msgid "The template of the plugin, in Liquid format."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookPluginPartSettings.Edit.cshtml:13
-#. <label asp-for="Liquid">@T["Body"]</label>
+#. <label asp-for="Liquid" class="form-label">@T["Body"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookPluginPartSettings.Edit"
 msgid "Body"
 msgstr ""
@@ -227,7 +227,7 @@ msgid "Meta Integration"
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:17
-#. <label>@T["Application Identifier"]</label>
+#. <label asp-for="AppId" class="form-label">@T["Application Identifier"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Application Identifier"
 msgstr ""
@@ -239,7 +239,7 @@ msgid "The Application ID found on the Meta developer portal parameters."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:24
-#. <label>@T["Secret Key"]</label>
+#. <label asp-for="AppSecret" class="form-label">@T["Secret Key"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Secret Key"
 msgstr ""
@@ -251,13 +251,13 @@ msgid "The Application secret key found on the Meta developer portal parameters.
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:32
-#. <label>@T["Javascript SDK Version"]</label>
+#. <label asp-for="Version" class="form-label">@T["Javascript SDK Version"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Javascript SDK Version"
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:35
-#. <label>@T["Javascript Sdk js"]</label>
+#. <label asp-for="SdkJs" class="form-label">@T["Javascript Sdk js"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Javascript Sdk js"
 msgstr ""
@@ -281,7 +281,7 @@ msgid "Init on every page"
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:59
-#. <label>@T["Parameters for the FB.init() call"]</label>
+#. <label asp-for="FBInitParams" class="form-label">@T["Parameters for the FB.init() call"]</label>
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "Parameters for the FB.init() call"
 msgstr ""

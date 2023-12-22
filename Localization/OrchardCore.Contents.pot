@@ -321,14 +321,14 @@ msgid "The {0} has been unpublished."
 msgstr ""
 
 #: OrchardCore.Contents\Controllers\AdminController.cs:713
-#. items.Add(new SelectListItem(S["All content types"], String.Empty));
+#. items.Add(new SelectListItem(S["All content types"], string.Empty));
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All content types"
 msgstr ""
 
-#: OrchardCore.Contents\Controllers\ApiController.cs:133
+#: OrchardCore.Contents\Controllers\ApiController.cs:132
 #. Title = S["One or more validation errors occurred."],
-#: OrchardCore.Contents\Controllers\ApiController.cs:163
+#: OrchardCore.Contents\Controllers\ApiController.cs:162
 #. Title = S["One or more validation errors occurred."],
 msgctxt "OrchardCore.Contents.Controllers.ApiController"
 msgid "One or more validation errors occurred."
@@ -424,13 +424,13 @@ msgctxt "OrchardCore.Contents.DeploymentStartup"
 msgid "Exports the content audit trail settings."
 msgstr ""
 
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:36
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:40
 #. public override LocalizedString Category => S["Content"];
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:49
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:53
 #. return Outcomes(S["Done"]);
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Done"
@@ -876,7 +876,7 @@ msgid "Audit Trail"
 msgstr ""
 
 #: OrchardCore.Contents\Views\AuditTrailPart.Edit.cshtml:6
-#. <label asp-for="Comment" class="@Orchard.GetLabelCssClasses()">@T["Comment"]</label>
+#. <label asp-for="Comment" class="@Orchard.GetLabelClasses()">@T["Comment"]</label>
 msgctxt "OrchardCore.Contents.Views.AuditTrailPart.Edit"
 msgid "Comment"
 msgstr ""
@@ -906,7 +906,7 @@ msgid "Whether the audit trail comment is shown while editing."
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPart-Date.Edit.cshtml:6
-#. <label asp-for="LocalDateTime" class="@Orchard.GetLabelCssClasses()">@T["Created"]</label>
+#. <label asp-for="LocalDateTime" class="@Orchard.GetLabelClasses()">@T["Created"]</label>
 msgctxt "OrchardCore.Contents.Views.CommonPart-Date.Edit"
 msgid "Created"
 msgstr ""
@@ -918,7 +918,7 @@ msgid "The date when the content item was created or first published."
 msgstr ""
 
 #: OrchardCore.Contents\Views\CommonPart-Owner.Edit.cshtml:6
-#. <label asp-for="OwnerName" class="@Orchard.GetLabelCssClasses()">@T["Owner"]</label>
+#. <label asp-for="OwnerName" class="@Orchard.GetLabelClasses()">@T["Owner"]</label>
 msgctxt "OrchardCore.Contents.Views.CommonPart-Owner.Edit"
 msgid "Owner"
 msgstr ""
@@ -954,13 +954,13 @@ msgid "Check to be able to edit the owner of the content item. The <code>EditCon
 msgstr ""
 
 #: OrchardCore.Contents\Views\Content.Edit.cshtml:35
-#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
+#. <a class="btn btn-secondary cancel mb-1" role="button" href="@returnUrl">@T["Cancel"]</a>
 msgctxt "OrchardCore.Contents.Views.Content.Edit"
 msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Content.PublishButton.cshtml:7
-#. <button type="submit" name="submit.Publish" class="btn btn-success publish" value="submit.Publish">@T["Publish"]</button>
+#. <button type="submit" name="submit.Publish" class="btn btn-success publish mb-1" value="submit.Publish">@T["Publish"]</button>
 #: OrchardCore.Contents\Views\Content.PublishButton.cshtml:12
 #. <button class="btn btn-success publish" type="submit" name="submit.Publish" value="submit.Publish">@T["Publish"]</button>
 msgctxt "OrchardCore.Contents.Views.Content.PublishButton"
@@ -980,7 +980,7 @@ msgid "and continue"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Content.SaveDraftButton.cshtml:7
-#. <button class="primaryAction btn btn-primary draft" type="submit" name="submit.Save" value="submit.Save">@T["Save Draft"]</button>
+#. <button class="primaryAction btn btn-primary draft mb-1" type="submit" name="submit.Save" value="submit.Save">@T["Save Draft"]</button>
 #: OrchardCore.Contents\Views\Content.SaveDraftButton.cshtml:12
 #. <button class="btn btn-primary draft" type="submit" name="submit.Save" value="submit.Save">@T["Save Draft"]</button>
 msgctxt "OrchardCore.Contents.Views.Content.SaveDraftButton"
@@ -1014,7 +1014,7 @@ msgid "Actions"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:6
-#. <label asp-for="AllowedContentTypes">@T["Allowed content types"]</label>
+#. <label asp-for="AllowedContentTypes" class="form-label">@T["Allowed content types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "Allowed content types"
 msgstr ""
@@ -1044,7 +1044,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -1080,7 +1080,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -1140,7 +1140,7 @@ msgid "Content"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Summary.cshtml:21
-#. <span class="badge bg-warning">@T["Nothing here!"]</span>
+#. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Summary"
 msgid "Nothing here!"
 msgstr ""
@@ -1170,7 +1170,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -1194,7 +1194,7 @@ msgid "Content Draft is saved."
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Edit.cshtml:3
-#. <label asp-for="ContentItemId">@T["Content Item Id"]</label>
+#. <label asp-for="ContentItemId" class="form-label">@T["Content Item Id"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Edit"
 msgid "Content Item Id"
 msgstr ""
@@ -1212,7 +1212,7 @@ msgid "Content Item"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Summary.cshtml:19
-#. <span class="badge bg-warning">@T["Nothing here!"]</span>
+#. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Summary"
 msgid "Nothing here!"
 msgstr ""
@@ -1242,7 +1242,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentPublishedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentPublishedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -1720,7 +1720,7 @@ msgid "Show All Content Types"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesAdminNode.Fields.TreeEdit.cshtml:27
-#. <label asp-for="IconClass">@T["Default Icon"]</label>
+#. <label asp-for="IconClass" class="form-label">@T["Default Icon"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesAdminNode.Fields.TreeEdit"
 msgid "Default Icon"
 msgstr ""
@@ -1762,13 +1762,13 @@ msgid "Pick an icon"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesAdminNode.Fields.TreeSummary.cshtml:26
-#. <span class="badge bg-success">@T["Show all Content Types"]</span>
+#. <span class="badge text-bg-success">@T["Show all Content Types"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesAdminNode.Fields.TreeSummary"
 msgid "Show all Content Types"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesAdminNode.Fields.TreeSummary.cshtml:39
-#. <span class="badge bg-warning">@T["Nothing here!"]</span>
+#. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesAdminNode.Fields.TreeSummary"
 msgid "Nothing here!"
 msgstr ""
@@ -1818,11 +1818,11 @@ msgid "Limit the amount of content items to provide from this source. Note: Only
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:26
-#. <label asp-for="ChangeFrequency">@T["Change Frequency"] </label>
+#. <label asp-for="ChangeFrequency" class="form-label">@T["Change Frequency"] </label>
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:77
-#. <label asp-for="ContentTypes[i].ChangeFrequency">@T["Change Frequency"] </label>
+#. <label asp-for="ContentTypes[i].ChangeFrequency" class="form-label">@T["Change Frequency"] </label>
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:135
-#. <label asp-for="LimitedContentTypes[i].ChangeFrequency">@T["Change Frequency"] </label>
+#. <label asp-for="LimitedContentTypes[i].ChangeFrequency" class="form-label">@T["Change Frequency"] </label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesSitemapSource.Edit"
 msgid "Change Frequency"
 msgstr ""
@@ -1834,11 +1834,11 @@ msgid "The default frequency with which these content types are likely to change
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:31
-#. <label asp-for="Priority">@T["Priority"] </label>
+#. <label asp-for="Priority" class="form-label">@T["Priority"] </label>
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:84
-#. <label asp-for="ContentTypes[i].Priority">@T["Priority"] </label>
+#. <label asp-for="ContentTypes[i].Priority" class="form-label">@T["Priority"] </label>
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.Edit.cshtml:142
-#. <label asp-for="LimitedContentTypes[i].Priority">@T["Priority"] </label>
+#. <label asp-for="LimitedContentTypes[i].Priority" class="form-label">@T["Priority"] </label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesSitemapSource.Edit"
 msgid "Priority"
 msgstr ""
@@ -2012,7 +2012,7 @@ msgid "All"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentTypesSitemapSource.SummaryAdmin.cshtml:36
-#. <span class="badge bg-warning">@T["Nothing here!"]</span>
+#. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 msgctxt "OrchardCore.Contents.Views.Items.ContentTypesSitemapSource.SummaryAdmin"
 msgid "Nothing here!"
 msgstr ""
@@ -2048,7 +2048,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentUnpublishedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentUnpublishedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -2084,7 +2084,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentUpdatedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentUpdatedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -2120,7 +2120,7 @@ msgid "Any content type"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ContentVersionedEvent.Fields.Edit.cshtml:5
-#. <label asp-for="SelectedContentTypeNames">@T["Content Types"]</label>
+#. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ContentVersionedEvent.Fields.Edit"
 msgid "Content Types"
 msgstr ""
@@ -2156,7 +2156,7 @@ msgid "Create Content"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\CreateContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="ContentType">@T["Content Type"]</label>
+#. <label asp-for="ContentType" class="form-label">@T["Content Type"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Edit"
 msgid "Content Type"
 msgstr ""
@@ -2180,7 +2180,7 @@ msgid "Check if you want the content item to be published when being created. Le
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\CreateContentTask.Fields.Edit.cshtml:20
-#. <label asp-for="ContentProperties">@T["Content Properties"]</label>
+#. <label asp-for="ContentProperties" class="form-label">@T["Content Properties"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Edit"
 msgid "Content Properties"
 msgstr ""
@@ -2222,7 +2222,7 @@ msgid "Delete content using expression: <em>{0}</em>"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="Expression">@T["Expression"]</label>
+#. <label asp-for="Expression" class="form-label">@T["Expression"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Edit"
 msgid "Expression"
 msgstr ""
@@ -2270,37 +2270,37 @@ msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:15
-#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" asp-route-latest="true" class="dropdown-item btn btn-primary btn-sm">@T["View Draft as JSON"]</a>
+#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" asp-route-latest="true" class="dropdown-item">@T["View Draft as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "View Draft as JSON"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:16
-#. <a id="@exportDraftId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-latest="@Boolean.TrueString" class="dropdown-item btn btn-primary btn-sm" data-url-af="UnsafeUrl">@T["Download Draft as JSON"]</a>
+#. <a id="@exportDraftId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-latest="@bool.TrueString" class="dropdown-item" data-url-af="UnsafeUrl">@T["Download Draft as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "Download Draft as JSON"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:22
-#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item btn btn-primary btn-sm">@T["View Published as JSON"]</a>
+#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item">@T["View Published as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "View Published as JSON"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:23
-#. <a id="@exportPublishedId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item btn btn-primary btn-sm" data-url-af="UnsafeUrl">@T["Download Published as JSON"]</a>
+#. <a id="@exportPublishedId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item" data-url-af="UnsafeUrl">@T["Download Published as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "Download Published as JSON"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:28
-#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item btn btn-primary btn-sm">@T["View as JSON"]</a>
+#. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item">@T["View as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "View as JSON"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:29
-#. <a id="@exportId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item btn btn-primary btn-sm" data-url-af="UnsafeUrl">@T["Download as JSON"]</a>
+#. <a id="@exportId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item" data-url-af="UnsafeUrl">@T["Download as JSON"]</a>
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "Download as JSON"
 msgstr ""
@@ -2330,7 +2330,7 @@ msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin.cshtml:13
-#. <button class="dropdown-item btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalExportContentToDeploymentTargetActionTarget" data-content-item-id="@contentItem.ContentItemId" data-latest=@Boolean.TrueString>@T["Export Draft to Deployment Target"]</button>
+#. <button class="dropdown-item btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalExportContentToDeploymentTargetActionTarget" data-content-item-id="@contentItem.ContentItemId" data-latest=@bool.TrueString>@T["Export Draft to Deployment Target"]</button>
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin"
 msgid "Export Draft to Deployment Target"
 msgstr ""
@@ -2420,7 +2420,7 @@ msgid "No export content to deployment target plans found. Create a deployment p
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTargetSettings.Edit.cshtml:18
-#. <label asp-for="ExportContentToDeploymentTargetPlanId">@T["Deployment Plan"]</label>
+#. <label asp-for="ExportContentToDeploymentTargetPlanId" class="form-label">@T["Deployment Plan"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTargetSettings.Edit"
 msgid "Deployment Plan"
 msgstr ""
@@ -2495,8 +2495,8 @@ msgctxt "OrchardCore.Contents.Views.NavigationItemText-content.Id"
 msgid "Content"
 msgstr ""
 
-#: OrchardCore.Contents\Views\NavigationItemText-new.Id.cshtml:1
-#. <span class="icon"><i class="far fa-plus-square" aria-hidden="true"></i></span><span class="title">@T["New"]</span>
+#: OrchardCore.Contents\Views\NavigationItemText-new.Id.cshtml:4
+#. <span class="title">@T["New"]</span>
 msgctxt "OrchardCore.Contents.Views.NavigationItemText-new.Id"
 msgid "New"
 msgstr ""
@@ -2520,7 +2520,7 @@ msgid "Publish content using expression: <em>{0}</em>"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\PublishContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="Expression">@T["Expression"]</label>
+#. <label asp-for="Expression" class="form-label">@T["Expression"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.PublishContentTask.Fields.Edit"
 msgid "Expression"
 msgstr ""
@@ -2562,7 +2562,7 @@ msgid "Retrieve content using expression: <em>{0}</em>"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\RetrieveContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="ContentItemId">@T["Content Item ID"]</label>
+#. <label asp-for="ContentItemId" class="form-label">@T["Content Item ID"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.RetrieveContentTask.Fields.Edit"
 msgid "Content Item ID"
 msgstr ""
@@ -2604,7 +2604,7 @@ msgid "Unpublish content using expression: <em>{0}</em>"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\UnpublishContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="Expression">@T["Expression"]</label>
+#. <label asp-for="Expression" class="form-label">@T["Expression"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Edit"
 msgid "Expression"
 msgstr ""
@@ -2646,7 +2646,7 @@ msgid "Update content using expression: <em>{0}</em>"
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:5
-#. <label asp-for="ContentItemIdExpression">@T["Content Item ID"]</label>
+#. <label asp-for="ContentItemIdExpression" class="form-label">@T["Content Item ID"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Content Item ID"
 msgstr ""
@@ -2658,7 +2658,7 @@ msgid "Enter a JavaScript expression that evaluates to the Content Item's ID (Co
 msgstr ""
 
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:12
-#. <label asp-for="ContentProperties">@T["Content Properties"]</label>
+#. <label asp-for="ContentProperties" class="form-label">@T["Content Properties"]</label>
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Content Properties"
 msgstr ""
