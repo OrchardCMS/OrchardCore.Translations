@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Cyrillic\n"
 "Language: sr_cyrl_RS\n"
-"PO-Revision-Date: 2023-07-18 15:54\n"
+"PO-Revision-Date: 2023-12-22 16:18\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Email\AdminMenu.cs:24
@@ -45,25 +45,25 @@ msgid "Invalid Email."
 msgstr ""
 
 #. public override LocalizedString DisplayText => S["Email Task"];
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:34
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:32
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Email Task"
 msgstr ""
 
 #. public override LocalizedString Category => S["Messaging"];
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:35
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:34
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:95
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:94
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:95
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:94
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
 msgstr ""
@@ -74,7 +74,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
 msgid "Send Email"
 msgstr ""
 
-#. <label asp-for="AuthorExpression">@T["From"]</label>
+#. <label asp-for="AuthorExpression" class="form-label">@T["From"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "From"
@@ -86,7 +86,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."
 msgstr ""
 
-#. <label asp-for="SenderExpression">@T["Sender"]</label>
+#. <label asp-for="SenderExpression" class="form-label">@T["Sender"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:12
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Sender"
@@ -98,7 +98,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
 msgstr ""
 
-#. <label asp-for="SenderExpression">@T["ReplyTo"]</label>
+#. <label asp-for="SenderExpression" class="form-label">@T["ReplyTo"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "ReplyTo"
@@ -110,7 +110,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
 msgstr ""
 
-#. <label asp-for="RecipientsExpression">@T["Recipients"]</label>
+#. <label asp-for="RecipientsExpression" class="form-label">@T["Recipients"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Recipients"
@@ -122,7 +122,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of recipient email addresses. With Liquid support."
 msgstr ""
 
-#. <label asp-for="CcExpression">@T["Cc"]</label>
+#. <label asp-for="CcExpression" class="form-label">@T["Cc"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Cc"
@@ -134,7 +134,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of carbon copy email addresses. With Liquid support."
 msgstr ""
 
-#. <label asp-for="BccExpression">@T["Bcc"]</label>
+#. <label asp-for="BccExpression" class="form-label">@T["Bcc"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Bcc"
@@ -146,7 +146,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of blind copy email addresses. With Liquid support."
 msgstr ""
 
-#. <label asp-for="SubjectExpression">@T["Subject"]</label>
+#. <label asp-for="SubjectExpression" class="form-label">@T["Subject"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:47
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
@@ -170,7 +170,7 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "If checked, indicates the body of the email message will be sent as HTML."
 msgstr ""
 
-#. <label asp-for="Body">@T["Body"]</label>
+#. <label asp-for="Body" class="form-label">@T["Body"]</label>
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:62
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Body"
@@ -200,13 +200,13 @@ msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Settings"
 msgstr ""
 
-#. <label asp-for="To">@T["To"]</label>
+#. <label asp-for="To" class="form-label">@T["To"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:10
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "To"
 msgstr ""
 
-#. <label asp-for="Sender">@T["Sender"]</label>
+#. <label asp-for="Sender" class="form-label">@T["Sender"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:17
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Sender"
@@ -218,37 +218,37 @@ msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "The sender is optional, it is useful when the email author is different than the email submitter."
 msgstr ""
 
-#. <label asp-for="Bcc">@T["Bcc"]</label>
+#. <label asp-for="Bcc" class="form-label">@T["Bcc"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:25
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Bcc"
 msgstr ""
 
-#. <label asp-for="Cc">@T["Cc"]</label>
+#. <label asp-for="Cc" class="form-label">@T["Cc"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:32
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Cc"
 msgstr ""
 
-#. <label asp-for="ReplyTo">@T["Reply To"]</label>
+#. <label asp-for="ReplyTo" class="form-label">@T["Reply To"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Reply To"
 msgstr ""
 
-#. <label asp-for="Subject">@T["Subject"]</label>
+#. <label asp-for="Subject" class="form-label">@T["Subject"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:46
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Subject"
 msgstr ""
 
-#. <label asp-for="Body">@T["Body"]</label>
+#. <label asp-for="Body" class="form-label">@T["Body"]</label>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:53
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Body"
 msgstr ""
 
-#. <button type="submit" id="emailtestsend" class="button grey">@T["Send"]</button>
+#. <button type="submit" id="emailtestsend" class="btn btn-primary">@T["Send"]</button>
 #: OrchardCore.Email\Views\Admin\Index.cshtml:59
 msgctxt "OrchardCore.Email.Views.Admin.Index"
 msgid "Send"
@@ -266,7 +266,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The current tenant will be reloaded when the settings are saved."
 msgstr ""
 
-#. <label asp-for="DefaultSender">@T["Sender email address"]</label>
+#. <label asp-for="DefaultSender" class="form-label">@T["Sender email address"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:7
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Sender email address"
@@ -278,7 +278,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The default email address to use as a sender, unless the email sender is set."
 msgstr ""
 
-#. <label asp-for="DeliveryMethod">@T["Delivery method"]</label>
+#. <label asp-for="DeliveryMethod" class="form-label">@T["Delivery method"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Delivery method"
@@ -308,7 +308,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Network delivery options"
 msgstr ""
 
-#. <label asp-for="Host">@T["Host name"]</label>
+#. <label asp-for="Host" class="form-label">@T["Host name"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:38
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Host name"
@@ -320,7 +320,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The SMTP server domain, e.g. <i>smtp.mailprovider.com</i>."
 msgstr ""
 
-#. <label asp-for="Port">@T["Port number"]</label>
+#. <label asp-for="Port" class="form-label">@T["Port number"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:48
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Port number"
@@ -332,7 +332,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The SMTP server port, usually 25."
 msgstr ""
 
-#. <label asp-for="ProxyHost">@T["Proxy host name"]</label>
+#. <label asp-for="ProxyHost" class="form-label">@T["Proxy host name"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:61
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Proxy host name"
@@ -344,7 +344,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The proxy server is optional."
 msgstr ""
 
-#. <label asp-for="ProxyPort">@T["Proxy port number"]</label>
+#. <label asp-for="ProxyPort" class="form-label">@T["Proxy port number"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:71
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Proxy port number"
@@ -356,7 +356,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The proxy port is optional."
 msgstr ""
 
-#. <label asp-for="EncryptionMethod">@T["Encryption method to use"]</label>
+#. <label asp-for="EncryptionMethod" class="form-label">@T["Encryption method to use"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:81
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Encryption method to use"
@@ -434,7 +434,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "When this option is selected, the application pool or host-process identity is used to authenticate with the mail server."
 msgstr ""
 
-#. <label asp-for="UserName">@T["User name"]</label>
+#. <label asp-for="UserName" class="form-label">@T["User name"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:120
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "User name"
@@ -446,7 +446,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "The username for authentication."
 msgstr ""
 
-#. <label asp-for="Password">@T["Password"]</label>
+#. <label asp-for="Password" class="form-label">@T["Password"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:127
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Password"
@@ -464,7 +464,7 @@ msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Specified pickup directory delivery options"
 msgstr ""
 
-#. <label asp-for="PickupDirectoryLocation">@T["Pickup directory location"]</label>
+#. <label asp-for="PickupDirectoryLocation" class="form-label">@T["Pickup directory location"]</label>
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:144
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "Pickup directory location"
@@ -474,6 +474,18 @@ msgstr ""
 #: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:147
 msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
 msgid "E.g. <i>C:\\Path\\To\\This\\Site\\PickedUpEmail</i> to place emails in a <i>PickedUpEmail</i> directory on the C drive."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="IgnoreInvalidSslCertificate">@T["Ignore Invalid SSL Certificate"]</label>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:157
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Ignore Invalid SSL Certificate"
+msgstr ""
+
+#. <span class="hint dashed">@T["Ignores SSL certificate check if it's invalid."]</span>
+#: OrchardCore.Email\Views\SmtpSettings.Edit.cshtml:158
+msgctxt "OrchardCore.Email.Views.SmtpSettings.Edit"
+msgid "Ignores SSL certificate check if it's invalid."
 msgstr ""
 
 #. <a href="@Url.Action("Index", "Admin", new { area = "OrchardCore.Email" })" class="btn btn-secondary">@T["Test settings"]</a>
