@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2024-05-23 01:30\n"
+"PO-Revision-Date: 2024-06-13 05:54\n"
 
 #. builder.Add(S["Security"], NavigationConstants.AdminMenuSecurityPosition, security => security
 #: OrchardCore.Users\AdminMenu.cs:27
@@ -876,7 +876,7 @@ msgstr "ユーザー名は必須です。"
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:8
 msgctxt "OrchardCore.Users.ViewModels.LoginViewModel"
 msgid "Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #. [Required(ErrorMessage = "Password is required.")]
 #: OrchardCore.Users\ViewModels\LoginViewModel.cs:11
@@ -2264,37 +2264,37 @@ msgstr "ユーザー登録を構成します。"
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "No Registration"
-msgstr ""
+msgstr "登録不可"
 
 #. <option value="@UserRegistrationType.AllowRegistration" selected="@(Model.UsersCanRegister == UserRegistrationType.AllowRegistration)">@T["Allow Registration"]</option>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Allow Registration"
-msgstr ""
+msgstr "登録を許可"
 
 #. <option value="@UserRegistrationType.AllowOnlyExternalUsers" selected="@(Model.UsersCanRegister == UserRegistrationType.AllowOnlyExternalUsers)">@T["Allow Only External Users"]</option>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Allow Only External Users"
-msgstr ""
+msgstr "外部ユーザーのみ許可"
 
 #. <li>@T["when 'No Registration' is selected, no new users can register"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:23
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'No Registration' is selected, no new users can register"
-msgstr ""
+msgstr "'登録不可' が選択された場合、新規ユーザーは登録できません。"
 
 #. <li>@T["when 'Allow Registration' is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'Allow Registration' is selected, a link is displayed to allow the users to register on the site. If there are external providers, once authenticated the user can register"
-msgstr ""
+msgstr "'登録を許可' を選択すると、ユーザーはサイトに登録するためのリンクが表示されます。外部プロバイダーがある場合、一度認証されると、ユーザーは登録することができます。"
 
 #. <li>@T["when 'Allow Only External Users' is selected, only users authenticated with external providers can register on the site"]</li>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "when 'Allow Only External Users' is selected, only users authenticated with external providers can register on the site"
-msgstr ""
+msgstr "'外部ユーザーのみ許可' を選択した場合、外部プロバイダで認証されたユーザーのみがサイトに登録できます。"
 
 #. <label class="form-check-label" asp-for="UsersMustValidateEmail">@T["Users must verify their email address"]</label>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:34
@@ -2336,19 +2336,19 @@ msgstr "外部認証"
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:57
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Settings when registering with external authentication providers"
-msgstr ""
+msgstr "外部認証プロバイダに登録する際の設定"
 
 #. <label class="form-check-label" asp-for="UseScriptToGenerateUsername">@T["Use a script to generate userName based on external provider claims"]</label>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:63
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "Use a script to generate userName based on external provider claims"
-msgstr ""
+msgstr "外部プロバイダの要求に基づいてユーザー名を生成するためにスクリプトを使用します"
 
 #. <span class="hint dashed">@T["If selected, any IExternalLoginEventHandlers defined in modules are not triggered"]</span>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:64
 msgctxt "OrchardCore.Users.Views.RegistrationSettings.Edit"
 msgid "If selected, any IExternalLoginEventHandlers defined in modules are not triggered"
-msgstr ""
+msgstr "選択された場合、モジュールで定義された IExternalLoginEventHandler はトリガーされません。"
 
 #. <button type="button" class="btn btn-secondary mb-2" onclick="resetScript()">@T["Reset Script"]</button>
 #: OrchardCore.Users\Views\RegistrationSettings.Edit.cshtml:93
@@ -2530,7 +2530,7 @@ msgstr "ユーザーがパスワードをリセットできることを許可す
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Users.Views.ResetPasswordSettings.Edit"
 msgid "An email will be sent to the user's email address with a reset link."
-msgstr ""
+msgstr "リセットリンク付きのメールがユーザーのメールアドレスに送信されます。"
 
 #. <label class="form-check-label" asp-for="UseSiteTheme">@T["Use site theme for password reset page"]</label>
 #: OrchardCore.Users\Views\ResetPasswordSettings.Edit.cshtml:15
@@ -2776,7 +2776,7 @@ msgstr "編集"
 #: OrchardCore.Users\Views\UserButtons.cshtml:21
 msgctxt "OrchardCore.Users.Views.UserButtons"
 msgid "View"
-msgstr ""
+msgstr "表示"
 
 #. <a asp-action="EditPassword" asp-route-id="@Model.User.UserId" class="btn btn-secondary btn-sm">@T["Edit Password"]</a>
 #: OrchardCore.Users\Views\UserButtons.cshtml:26
@@ -2954,13 +2954,13 @@ msgstr "パスワードをコピー"
 #: OrchardCore.Users\Views\UserInfo.cshtml:3
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "User Info"
-msgstr ""
+msgstr "ユーザー情報"
 
 #. <dt>@T["Username"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:6
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #. <dt>@T["Email"]</dt>
 #: OrchardCore.Users\Views\UserInfo.cshtml:9
@@ -2978,19 +2978,19 @@ msgstr "電話番号"
 #: OrchardCore.Users\Views\UserInfo.cshtml:18
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Enabled"
-msgstr ""
+msgstr "有効"
 
 #. <dd>@(Model.User.IsEnabled ? T["Enabled"] : T["Disabled"])</dd>
 #: OrchardCore.Users\Views\UserInfo.cshtml:19
 msgctxt "OrchardCore.Users.Views.UserInfo"
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #. <h4><i class="fa-solid fa-id-card" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["User LoggedIn"])</h4>
 #: OrchardCore.Users\Views\Items\UserLoggedInEvent.Fields.Design.cshtml:4
@@ -3222,37 +3222,37 @@ msgstr "ユーザーを追加"
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:5
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Filter by role"
-msgstr ""
+msgstr "ロールで絞り込む"
 
 #. <select asp-for="SelectedRole" asp-items="Model.UserRoleFilters" class="selectpicker userroles-selectpicker show-tick me-2" data-header="@T["Filter by role"]" data-live-search="true" data-selected-text-format="static" data-width="fit" title="@T["Role"]" data-style="btn-sm" data-dropdown-align-right="auto"></select>
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:5
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Role"
-msgstr ""
+msgstr "ロール"
 
 #. <select asp-for="Filter" asp-items="@Model.UserFilters" class="selectpicker userstatuses-selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-selected-text-format="static" data-width="fit" data-dropdown-align-right="auto" title="@T["Show"]" data-style="btn-sm"></select>
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:6
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Filter by status"
-msgstr ""
+msgstr "状態で絞り込む"
 
 #. <select asp-for="Filter" asp-items="@Model.UserFilters" class="selectpicker userstatuses-selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-selected-text-format="static" data-width="fit" data-dropdown-align-right="auto" title="@T["Show"]" data-style="btn-sm"></select>
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:6
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Show"
-msgstr ""
+msgstr "表示"
 
 #. <select asp-for="Order" asp-items="@Model.UserSorts" class="selectpicker usersorts-selectpicker show-tick" data-header="@T["Sort by"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Sort"]" data-style="btn-sm"></select>
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:7
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Sort by"
-msgstr ""
+msgstr "ソート順"
 
 #. <select asp-for="Order" asp-items="@Model.UserSorts" class="selectpicker usersorts-selectpicker show-tick" data-header="@T["Sort by"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Sort"]" data-style="btn-sm"></select>
 #: OrchardCore.Users\Views\UsersAdminListFilters.cshtml:7
 msgctxt "OrchardCore.Users.Views.UsersAdminListFilters"
 msgid "Sort"
-msgstr ""
+msgstr "ソート"
 
 #. <i class="fa-solid fa-filter" title="@T["Filters"]" aria-hidden="true"></i>
 #: OrchardCore.Users\Views\UsersAdminListSearch.cshtml:19
@@ -3264,13 +3264,13 @@ msgstr ""
 #: OrchardCore.Users\Views\UsersAdminListSearch.cshtml:22
 msgctxt "OrchardCore.Users.Views.UsersAdminListSearch"
 msgid "Only enabled users"
-msgstr ""
+msgstr "有効なユーザーのみ"
 
 #. <li><a class="dropdown-item" href="?q=status:Disabled">@T["Only disabled users"]</a></li>
 #: OrchardCore.Users\Views\UsersAdminListSearch.cshtml:23
 msgctxt "OrchardCore.Users.Views.UsersAdminListSearch"
 msgid "Only disabled users"
-msgstr ""
+msgstr "有効なユーザーのみ"
 
 #. <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalUserIndexOptionsFilterSyntax">@T["Filter syntax"]</a></li>
 #. <h4>@T["Filter syntax"]</h4>
