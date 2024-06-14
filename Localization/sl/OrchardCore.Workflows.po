@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: sl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Slovenian\n"
 "Language: sl_SI\n"
-"PO-Revision-Date: 2023-12-22 16:31\n"
+"PO-Revision-Date: 2024-04-25 20:14\n"
 
 #. public override LocalizedString DisplayText => S["Commit Transaction Task"];
 #: OrchardCore.Workflows\Activities\CommitTransactionTask.cs:27
@@ -431,7 +431,7 @@ msgid "HTTP"
 msgstr ""
 
 #. => Outcomes(S["Done"]);
-#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:95
+#: OrchardCore.Workflows\Http\Activities\HttpRequestEvent.cs:92
 msgctxt "OrchardCore.Workflows.Http.Activities.HttpRequestEvent"
 msgid "Done"
 msgstr ""
@@ -1394,16 +1394,16 @@ msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
 msgid "Number of days to expire the token. 0 for the token to never expire"
 msgstr ""
 
-#. <label asp-for="FormLocationKey" class="form-label">@T["Form Location"]</label>
+#. <label asp-for="FormLocationKey" class="form-label">@T["Form Location Key"]</label>
 #: OrchardCore.Workflows\Views\Items\HttpRequestEvent.Fields.Edit.cshtml:44
 msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
-msgid "Form Location"
+msgid "Form Location Key"
 msgstr ""
 
-#. <span class="hint">@T["This key serves to differentiate the current form's location. Leave blank if the workflow handles a single form event."]</span>
+#. <span class="hint">@T["This key name is used to store and then retrieve the current form's location. Leave blank if the workflow doesn't handle any form or a single one."]</span>
 #: OrchardCore.Workflows\Views\Items\HttpRequestEvent.Fields.Edit.cshtml:47
 msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
-msgid "This key serves to differentiate the current form's location. Leave blank if the workflow handles a single form event."
+msgid "This key name is used to store and then retrieve the current form's location. Leave blank if the workflow doesn't handle any form or a single one."
 msgstr ""
 
 #. <h4 class="card-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i>@T["HTTP Request"]</h4>
