@@ -10,10 +10,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2023-12-22 16:08\n"
+"PO-Revision-Date: 2024-08-24 19:59\n"
 
-#. updater.ModelState.AddModelError(Prefix, nameof(model.Path), S["Your permalink is already in use."]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplayDriver.cs:125
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Path), S["Your permalink is already in use."]);
+#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplayDriver.cs:127
 msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplayDriver"
 msgid "Your permalink is already in use."
 msgstr "Votre permalien est déjà utilisé."
@@ -43,31 +43,31 @@ msgid "The permalinks for your content item."
 msgstr "Les permaliens pour votre élément de contenu."
 
 #. context.Fail(S["Your permalink is already in use."], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:132
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:130
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is already in use."
 msgstr "Votre permalien est déjà utilisé."
 
 #. yield return new ValidationResult(S["Your permalink can't be set to the homepage, please use the homepage option instead."], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:15
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:12
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
 msgstr "Votre permalien ne peut pas être défini sur la page d'accueil, veuillez utiliser l'option de page d'accueil à la place."
 
 #. yield return new ValidationResult(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:21
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:18
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
 msgstr "Veuillez n’utiliser aucun des caractères suivants dans votre permalien : {0}. Aucun espace ou barre oblique n’est autorisé (Veuillez utiliser des tirets ou des traits de soulignement à la place)."
 
 #. yield return new ValidationResult(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePart.MaxPathLength], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:26
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:23
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr "Votre permalien est trop long. Le permalien ne peut être que de {0} caractères maximum."
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Autoroute\Settings\AutoroutePartSettingsDisplayDriver.cs:59
+#: OrchardCore.Autoroute\Settings\AutoroutePartSettingsDisplayDriver.cs:60
 msgctxt "OrchardCore.Autoroute.Settings.AutoroutePartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Le modèle ne contient pas d'expression Liquid valide. Détails : {0}"
@@ -84,7 +84,7 @@ msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to disable autoroute for this content item."
 msgstr "Cochez cette case pour désactiver l'autoroute pour cet élément de contenu."
 
-#. <label asp-for="Path" class="@Orchard.GetLabelClasses()">@T["Permalink"]</label>
+#. <label asp-for="Path" class="@Orchard.GetLabelClasses(inputRequired: true)">@T["Permalink"]</label>
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:31
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Permalink"
