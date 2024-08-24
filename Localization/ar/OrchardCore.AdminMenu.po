@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
-"PO-Revision-Date: 2023-12-22 16:06\n"
+"PO-Revision-Date: 2024-08-24 19:59\n"
 
-#. builder.Add(S["Configuration"], configuration => configuration
+#. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.AdminMenu\AdminMenu.cs:29
 msgctxt "OrchardCore.AdminMenu.AdminMenu"
 msgid "Configuration"
 msgstr "الإعدادات"
 
-#. .Add(S["Admin Menus"], S["Admin Menus"].PrefixPosition(), admt => admt
-#. .Add(S["Admin Menus"], S["Admin Menus"].PrefixPosition(), admt => admt
+#. .Add(S["Admin Menus"], S["Admin Menus"].PrefixPosition(), adminMenu => adminMenu
+#. .Add(S["Admin Menus"], S["Admin Menus"].PrefixPosition(), adminMenu => adminMenu
 #: OrchardCore.AdminMenu\AdminMenu.cs:30
 #: OrchardCore.AdminMenu\AdminMenu.cs:30
 msgctxt "OrchardCore.AdminMenu.AdminMenu"
@@ -27,79 +27,79 @@ msgid "Admin Menus"
 msgstr "قوائم المدير"
 
 #. await _notifier.ErrorAsync(H["Error when retrieving the list of admin menus."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:87
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:86
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Error when retrieving the list of admin menus."
 msgstr "حدث خطأ اثناء إسترداد قوائم المدير."
 
-#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) },
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:105
+#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:108
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Delete"
 msgstr "حذف"
 
 #. await _notifier.SuccessAsync(H["Admin menu updated successfully."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:198
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:200
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Admin menu updated successfully."
 msgstr "تم تحديث قائمة المدير بنجاح."
 
 #. await _notifier.ErrorAsync(H["Can't find the admin menu."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:219
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:221
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Can't find the admin menu."
 msgstr "لا يمكن العثور على القائمة المدير."
 
 #. await _notifier.SuccessAsync(H["Admin menu deleted successfully."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:227
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:229
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Admin menu deleted successfully."
 msgstr "تم حذف قائمة المدير بنجاح."
 
 #. await _notifier.ErrorAsync(H["Can't delete the admin menu."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:231
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:233
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Can't delete the admin menu."
 msgstr "لا يمكن حذف قائمة المدير."
 
 #. await _notifier.SuccessAsync(H["Admin menus successfully removed."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:260
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:262
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Admin menus successfully removed."
 msgstr "تمت إزالة قوائم المدير بنجاح."
 
 #. await _notifier.SuccessAsync(H["Admin menu toggled successfully."]);
-#: OrchardCore.AdminMenu\Controllers\MenuController.cs:290
+#: OrchardCore.AdminMenu\Controllers\MenuController.cs:292
 msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Admin menu toggled successfully."
 msgstr "تم تبديل قائمة المدير ننجاح."
 
 #. await _notifier.SuccessAsync(H["Admin node added successfully."]);
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:150
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:147
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node added successfully."
 msgstr "تم إضافة عقدة المدير بنجاح."
 
 #. await _notifier.SuccessAsync(H["Admin node updated successfully."]);
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:230
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:227
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node updated successfully."
 msgstr "تم تحديث عقدة المدير بنجاح."
 
 #. await _notifier.ErrorAsync(H["The admin node has validation errors."]);
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:234
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:231
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "The admin node has validation errors."
 msgstr "عقدة المدير تحتوي على أخطا تحقق."
 
 #. await _notifier.SuccessAsync(H["Admin node deleted successfully."]);
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:271
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:268
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node deleted successfully."
 msgstr "تم حذف عقدة المدير بنجاح."
 
 #. await _notifier.SuccessAsync(H["Admin node toggled successfully."]);
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:303
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:300
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node toggled successfully."
 msgstr "تم تبديل حالة عقدة المدير بنجاح."
@@ -284,62 +284,98 @@ msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "The url of the link. A link will be shown only if it or one of their children have a url. The url will be relative to the root of the admin site"
 msgstr "عنوان الرابط. الرابط سيظهر في حال إذا كان الرابط أو أحد ابناءه يمتلك عنوان. العنوان سيكون نسبي إلى جذر موقع المدير"
 
-#. <label asp-for="IconClass" class="form-label">@T["Icon"]</label>
+#. <label asp-for="Target" class="form-label">@T["Target"]</label>
 #: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:28
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "Target"
+msgstr ""
+
+#. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (this is default)."]</option>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:31
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "Opens the linked document in the same frame as it was clicked (this is default)."
+msgstr ""
+
+#. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:32
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "Opens the linked document in a new window or tab."
+msgstr ""
+
+#. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:33
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "Opens the linked document in the parent frame."
+msgstr ""
+
+#. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:34
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "Opens the linked document in the full body of the window."
+msgstr ""
+
+#. <span class="hint">@T["The target attribute of the A tag, see more:"] <a class="seedoc" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target">target</a></span>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:36
+msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
+msgid "The target attribute of the A tag, see more:"
+msgstr ""
+
+#. <label asp-for="IconClass" class="form-label">@T["Icon"]</label>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:40
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Icon"
 msgstr "أيقونة"
 
 #. @T["Pick"]
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:41
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:53
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Pick"
 msgstr "اختر"
 
 #. <span class="hint">@T["Select an icon to display when this link is a first level menu item."]</span>
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:55
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:67
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Select an icon to display when this link is a first level menu item."
 msgstr "حدد أيقونة لعرضها عندما يكون الرابط عنصر قائمة في المستوى الأول."
 
 #. <h5 class="modal-title">@T["Pick an icon"]</h5>
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:63
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:75
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Pick an icon"
 msgstr "اختر أيقونة"
 
 #. <label asp-for="SelectedPermissionNames" class="form-label">@T["Permissions"]</label>
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:83
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:95
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Permissions"
 msgstr "الأذونات"
 
 #. placeholder="@T["Type to search"]"
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:108
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:120
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Type to search"
 msgstr "أكتب للبحث"
 
 #. select-label="@T["Select"]"
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:115
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:127
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Select"
 msgstr "أختر"
 
 #. deselect-label="@T["Remove"]">
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:116
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:128
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "Remove"
 msgstr "إزالة"
 
 #. @T["No result found"]
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:121
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:133
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "No result found"
 msgstr "لا توجد نتائج"
 
 #. <span class="hint">@T["The permissions required to display this menu item (optional)."]</span>
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:124
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeEdit.cshtml:136
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "The permissions required to display this menu item (optional)."
 msgstr "الأذونات المطلوبة لعرض عنصر القائمة (اختياري)."
