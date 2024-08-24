@@ -10,32 +10,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2023-12-22 16:24\n"
+"PO-Revision-Date: 2024-08-24 20:31\n"
 
 #. .Add(S["Design"], design => design
-#: OrchardCore.Layers\AdminMenu.cs:26
+#: OrchardCore.Layers\AdminMenu.cs:31
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Design"
 msgstr ""
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Layers\AdminMenu.cs:27
+#: OrchardCore.Layers\AdminMenu.cs:32
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Settings"
 msgstr "Instellingen"
 
 #. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
 #. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
-#: OrchardCore.Layers\AdminMenu.cs:28
-#: OrchardCore.Layers\AdminMenu.cs:28
+#: OrchardCore.Layers\AdminMenu.cs:33
+#: OrchardCore.Layers\AdminMenu.cs:33
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Zones"
 msgstr ""
 
 #. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
 #. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
-#: OrchardCore.Layers\AdminMenu.cs:33
-#: OrchardCore.Layers\AdminMenu.cs:33
+#: OrchardCore.Layers\AdminMenu.cs:39
+#: OrchardCore.Layers\AdminMenu.cs:39
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Widgets"
 msgstr ""
@@ -47,69 +47,81 @@ msgid "The Widget content item with id {0} has no matching {1} content type defi
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Layer deleted successfully."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:276
+#: OrchardCore.Layers\Controllers\AdminController.cs:265
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "Layer deleted successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["The layer couldn't be deleted: you must remove any associated widgets first."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:280
+#: OrchardCore.Layers\Controllers\AdminController.cs:269
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer couldn't be deleted: you must remove any associated widgets first."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name is required."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:356
+#: OrchardCore.Layers\Controllers\AdminController.cs:345
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(LayerEditViewModel.Name), S["The layer name already exists."]);
-#: OrchardCore.Layers\Controllers\AdminController.cs:360
+#: OrchardCore.Layers\Controllers\AdminController.cs:349
 msgctxt "OrchardCore.Layers.Controllers.AdminController"
 msgid "The layer name already exists."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Condition added successfully."]);
-#: OrchardCore.Layers\Controllers\LayerRuleController.cs:130
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:125
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition added successfully."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Condition updated successfully."]);
-#: OrchardCore.Layers\Controllers\LayerRuleController.cs:199
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:194
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition updated successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["The condition has validation errors."]);
-#: OrchardCore.Layers\Controllers\LayerRuleController.cs:203
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:198
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "The condition has validation errors."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Condition deleted successfully."]);
-#: OrchardCore.Layers\Controllers\LayerRuleController.cs:237
+#: OrchardCore.Layers\Controllers\LayerRuleController.cs:232
 msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition deleted successfully."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Zone", S["Zone is missing"]);
-#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:77
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:75
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Zone is missing"
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Layer", S["Layer is missing"]);
-#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:82
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:80
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Layer is missing"
 msgstr ""
 
 #. Description = S["Site layers define the rules and zone placement for widgets."],
-#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:42
+#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:39
 msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
 msgid "Site layers define the rules and zone placement for widgets."
+msgstr ""
+
+#. context.Errors.Add(S["The layer '{0}' is required.", layer.Name]);
+#: OrchardCore.Layers\Recipes\LayerStep.cs:80
+msgctxt "OrchardCore.Layers.Recipes.LayerStep"
+msgid "The layer '{0}' is required."
+msgstr ""
+
+#. context.Errors.Add(S["No changes have been made. The following types of conditions cannot be added: {0}. Please ensure that the related features are enabled to add these types of conditions.", string.Join(", ", unknownTypes)]);
+#: OrchardCore.Layers\Recipes\LayerStep.cs:118
+msgctxt "OrchardCore.Layers.Recipes.LayerStep"
+msgid "No changes have been made. The following types of conditions cannot be added: {0}. Please ensure that the related features are enabled to add these types of conditions."
 msgstr ""
 
 #. <h5>@T["All Layers"]</h5>
