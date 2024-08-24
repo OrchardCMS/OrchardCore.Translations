@@ -1,34 +1,30 @@
-#: OrchardCore.Email.Core\Services\SmtpService.cs:57
-#. return SmtpResult.Failed(S["SMTP settings must be configured before an email can be sent."]);
-msgctxt "OrchardCore.Email.Services.SmtpService"
-msgid "SMTP settings must be configured before an email can be sent."
+#: OrchardCore.Email.Core\Services\DefaultEmailService.cs:35
+#. return EmailResult.FailedResult(S["Email settings must be configured before an Email message can be sent."]);
+msgctxt "OrchardCore.Email.Core.Services.DefaultEmailService"
+msgid "Email settings must be configured before an Email message can be sent."
 msgstr ""
 
-#: OrchardCore.Email.Core\Services\SmtpService.cs:85
-#. return SmtpResult.Failed(S["The mail message should have at least one of these headers: To, Cc or Bcc."]);
-msgctxt "OrchardCore.Email.Services.SmtpService"
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:22
+#. .Select(address => S["Invalid email address for the sender: '{0}'.", address]);
+msgctxt "OrchardCore.Email.Core.Services.EmailMessageValidator"
+msgid "Invalid email address for the sender: '{0}'."
+msgstr ""
+
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:30
+#. .Select(address => S["Invalid email address for the recipient: '{0}'.", address]);
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:36
+#. .Select(address => S["Invalid email address for the recipient: '{0}'.", address]);
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:42
+#. .Select(address => S["Invalid email address for the recipient: '{0}'.", address]);
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:48
+#. .Select(address => S["Invalid email address for the recipient: '{0}'.", address]);
+msgctxt "OrchardCore.Email.Core.Services.EmailMessageValidator"
+msgid "Invalid email address for the recipient: '{0}'."
+msgstr ""
+
+#: OrchardCore.Email.Core\Services\EmailMessageValidator.cs:54
+#. AddError(context, string.Empty, [S["The mail message should have at least one of these headers: To, Cc or Bcc."]]);
+msgctxt "OrchardCore.Email.Core.Services.EmailMessageValidator"
 msgid "The mail message should have at least one of these headers: To, Cc or Bcc."
-msgstr ""
-
-#: OrchardCore.Email.Core\Services\SmtpService.cs:104
-#. result = SmtpResult.Failed(S["An error occurred while sending an email: '{0}'", ex.Message]);
-msgctxt "OrchardCore.Email.Services.SmtpService"
-msgid "An error occurred while sending an email: '{0}'"
-msgstr ""
-
-#: OrchardCore.Email.Core\Services\SmtpService.cs:129
-#. errors.Add(S["Invalid email address: '{0}'", submitterAddress]);
-#: OrchardCore.Email.Core\Services\SmtpService.cs:143
-#. errors.Add(S["Invalid email address: '{0}'", address]);
-#: OrchardCore.Email.Core\Services\SmtpService.cs:158
-#. errors.Add(S["Invalid email address: '{0}'", address]);
-#: OrchardCore.Email.Core\Services\SmtpService.cs:173
-#. errors.Add(S["Invalid email address: '{0}'", address]);
-#: OrchardCore.Email.Core\Services\SmtpService.cs:188
-#. errors.Add(S["Invalid email address: '{0}'", address]);
-#: OrchardCore.Email.Core\Services\SmtpService.cs:210
-#. errors.Add(S["Invalid email address: '{0}'", address]);
-msgctxt "OrchardCore.Email.Services.SmtpService"
-msgid "Invalid email address: '{0}'"
 msgstr ""
 

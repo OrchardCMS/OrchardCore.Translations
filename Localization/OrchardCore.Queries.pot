@@ -1,125 +1,143 @@
-#: OrchardCore.Queries\AdminMenu.cs:24
-#. builder.Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
+#: OrchardCore.Queries\AdminMenu.cs:23
+#. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Search"
 msgstr ""
 
 #: OrchardCore.Queries\AdminMenu.cs:26
-#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
 #: OrchardCore.Queries\AdminMenu.cs:26
-#. .Add(S["Queries"], S["Queries"].PrefixPosition(), contentItems => contentItems
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Queries"
 msgstr ""
 
 #: OrchardCore.Queries\AdminMenu.cs:27
-#. .Add(S["All queries"], "1", queries => queries
+#. .Add(S["All queries"], "1", allQueries => allQueries
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "All queries"
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:104
-#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
+#: OrchardCore.Queries\Controllers\AdminController.cs:102
+#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:163
+#: OrchardCore.Queries\Controllers\AdminController.cs:162
 #. await _notifier.SuccessAsync(H["Query created successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query created successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:219
+#: OrchardCore.Queries\Controllers\AdminController.cs:224
 #. await _notifier.SuccessAsync(H["Query updated successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query updated successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:246
+#: OrchardCore.Queries\Controllers\AdminController.cs:248
 #. await _notifier.SuccessAsync(H["Query deleted successfully."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Query deleted successfully."
 msgstr ""
 
-#: OrchardCore.Queries\Controllers\AdminController.cs:273
+#: OrchardCore.Queries\Controllers\AdminController.cs:271
 #. await _notifier.SuccessAsync(H["Queries successfully removed."]);
 msgctxt "OrchardCore.Queries.Controllers.AdminController"
 msgid "Queries successfully removed."
 msgstr ""
 
-#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:56
-#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryName), S["Your Query is not returning content items."]);
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:57
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(step.QueryName), S["Your Query is not returning content items."]);
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Your Query is not returning content items."
 msgstr ""
 
-#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:66
-#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Make sure it is a valid JSON object. Example: { key : 'value' }"]);
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:67
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Make sure it is a valid JSON object. Example: { key : 'value' }"]);
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Make sure it is a valid JSON object. Example: { key : 'value' }"
 msgstr ""
 
-#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:71
-#. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Something is wrong with your JSON."]);
+#: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:72
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters), S["Something is wrong with your JSON."]);
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Something is wrong with your JSON."
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:69
-#. updater.ModelState.AddModelError(nameof(model.Name), S["Name is required"]);
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:73
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Name), S["Name is required"]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Name is required"
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:73
-#. updater.ModelState.AddModelError(nameof(model.Schema), S["Invalid schema JSON supplied."]);
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:78
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Schema), S["Invalid schema JSON supplied."]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Invalid schema JSON supplied."
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:78
-#. updater.ModelState.AddModelError(nameof(model.Name), S["Name contains illegal characters"]);
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:83
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Name), S["Name contains illegal characters"]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "Name contains illegal characters"
 msgstr ""
 
-#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:86
-#. updater.ModelState.AddModelError(nameof(model.Name), S["A query with the same name already exists"]);
+#: OrchardCore.Queries\Drivers\QueryDisplayDriver.cs:91
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Name), S["A query with the same name already exists"]);
 msgctxt "OrchardCore.Queries.Drivers.QueryDisplayDriver"
 msgid "A query with the same name already exists"
 msgstr ""
 
-#: OrchardCore.Queries\Sql\AdminMenu.cs:25
+#: OrchardCore.Queries\Recipes\QueryStep.cs:48
+#. context.Errors.Add(S["Query name is missing or empty. The query will not be imported."]);
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid "Query name is missing or empty. The query will not be imported."
+msgstr ""
+
+#: OrchardCore.Queries\Recipes\QueryStep.cs:57
+#. context.Errors.Add(S["Could not find query source value. The query '{0}' will not be imported.", name]);
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid "Could not find query source value. The query '{0}' will not be imported."
+msgstr ""
+
+#: OrchardCore.Queries\Recipes\QueryStep.cs:70
+#. context.Errors.Add(S["Could not find query source: '{0}'. The query '{1}' will not be imported.", sourceName, name]);
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid "Could not find query source: '{0}'. The query '{1}' will not be imported."
+msgstr ""
+
+#: OrchardCore.Queries\Sql\AdminMenu.cs:23
 #. .Add(S["Search"], search => search
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Queries\Sql\AdminMenu.cs:26
+#: OrchardCore.Queries\Sql\AdminMenu.cs:24
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
-#: OrchardCore.Queries\Sql\AdminMenu.cs:26
+#: OrchardCore.Queries\Sql\AdminMenu.cs:24
 #. .Add(S["Queries"], S["Queries"].PrefixPosition(), queries => queries
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Queries"
 msgstr ""
 
-#: OrchardCore.Queries\Sql\AdminMenu.cs:27
+#: OrchardCore.Queries\Sql\AdminMenu.cs:25
 #. .Add(S["Run SQL Query"], S["Run SQL Query"].PrefixPosition(), sql => sql
-#: OrchardCore.Queries\Sql\AdminMenu.cs:27
+#: OrchardCore.Queries\Sql\AdminMenu.cs:25
 #. .Add(S["Run SQL Query"], S["Run SQL Query"].PrefixPosition(), sql => sql
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Run SQL Query"
 msgstr ""
 
-#: OrchardCore.Queries\Sql\Controllers\AdminController.cs:97
+#: OrchardCore.Queries\Sql\Controllers\AdminController.cs:96
 #. ModelState.AddModelError("", S["An error occurred while executing the SQL query: {0}", e.Message]);
 msgctxt "OrchardCore.Queries.Sql.Controllers.AdminController"
 msgid "An error occurred while executing the SQL query: {0}"
 msgstr ""
 
-#: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:60
-#. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
+#: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:75
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Query), S["The query field is required"]);
 msgctxt "OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver"
 msgid "The query field is required"
 msgstr ""
@@ -266,8 +284,8 @@ msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "selected"
 msgstr ""
 
-#: OrchardCore.Queries\Views\NavigationItemText-search.Id.cshtml:1
-#. <span class="icon"><i class="fa-solid fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
+#: OrchardCore.Queries\Views\NavigationItemText-search.Id.cshtml:4
+#. <span class="title">@T["Search"]</span>
 msgctxt "OrchardCore.Queries.Views.NavigationItemText-search.Id"
 msgid "Search"
 msgstr ""
@@ -416,57 +434,57 @@ msgctxt "OrchardCore.Queries.Views.Query.Link"
 msgid "If you see this message you need to create a custom shape template for {0}"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:10
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:9
 #. <h5>@T["Queried Content Items"]</h5>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Queried Content Items"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:11
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:10
 #. <span class="hint">@T["The name of the Query which will be used to fetch content items."]</span>
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:33
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:32
 #. <div class="hint">@T["The name of the Query which will be used to fetch content items."]</div>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "The name of the Query which will be used to fetch content items."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:16
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:15
 #. <label class="form-check-label" asp-for="ExportAsSetupRecipe">@T["Export As Setup recipe"]</label>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Export As Setup recipe"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:17
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:16
 #. <span class="hint">@T["Check if the data should be exported as a Setup recipe."]</span>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Check if the data should be exported as a Setup recipe."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:19
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:18
 #. <div class="alert alert-warning">@T["If checked, you will have to manually declare variables for content item references like Content Picker Fields, Taxonomy Fields, Tags Fields, and List item IDs and replace them where needed in the recipe. Any reference to these content items will be lost."]</div>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "If checked, you will have to manually declare variables for content item references like Content Picker Fields, Taxonomy Fields, Tags Fields, and List item IDs and replace them where needed in the recipe. Any reference to these content items will be lost."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:24
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:23
 #. <label asp-for="QueryName" class="form-label">@T["Query"]</label>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Query"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:35
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:34
 #. <div class="alert alert-warning">@T["Note: The Query must be configured to return Documents."]</div>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Note: The Query must be configured to return Documents."
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:39
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:38
 #. <label asp-for="QueryParameters" class="form-label">@T["Parameters"]</label>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Parameters"
 msgstr ""
 
-#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:42
+#: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:41
 #. <div class="hint">@T["An optional JSON object containing the parameter values for this query."]</div>
 msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "An optional JSON object containing the parameter values for this query."
@@ -490,7 +508,7 @@ msgctxt "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.
 msgid "Exports all content items fetched by a Query."
 msgstr ""
 
-#: OrchardCore.Queries\Views\SqlQuery.Buttons.SummaryAdmin.cshtml:11
+#: OrchardCore.Queries\Views\SqlQuery.Buttons.SummaryAdmin.cshtml:16
 #. class="btn btn-success btn-sm">@T["Run"]</a>
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Buttons.SummaryAdmin"
 msgid "Run"

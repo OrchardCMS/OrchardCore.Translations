@@ -1,68 +1,68 @@
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:23
-#. builder.Add(S["Security"], security => security
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:30
+#. .Add(S["Security"], security => security
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:24
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:31
 #. .Add(S["Authentication"], authentication => authentication
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Authentication"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:25
-#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:25
-#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), client => client
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:32
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), microsoft => microsoft
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:32
+#. .Add(S["Microsoft"], S["Microsoft"].PrefixPosition(), microsoft => microsoft
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuMicrosoftAccount"
 msgid "Microsoft"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:47
-#. builder.Add(S["Security"], security => security
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:66
+#. .Add(S["Security"], security => security
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:48
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:67
 #. .Add(S["Authentication"], authentication => authentication
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Authentication"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:49
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:68
 #. .Add(S["Microsoft Entra ID"], S["Microsoft Entra ID"].PrefixPosition(), client => client
-#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:49
+#: OrchardCore.Microsoft.Authentication\AdminMenuMicrosoftAccount.cs:68
 #. .Add(S["Microsoft Entra ID"], S["Microsoft Entra ID"].PrefixPosition(), client => client
 msgctxt "OrchardCore.Microsoft.Authentication.AdminMenuAAD"
 msgid "Microsoft Entra ID"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:65
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:53
 #. yield return new ValidationResult(S["DisplayName is required"], new string[] { nameof(settings.DisplayName) });
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "DisplayName is required"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:70
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:58
 #. yield return new ValidationResult(S["AppId is required"], new string[] { nameof(settings.AppId) });
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "AppId is required"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:75
+#: OrchardCore.Microsoft.Authentication\Services\AzureADService.cs:63
 #. yield return new ValidationResult(S["TenantId is required"], new string[] { nameof(settings.TenantId) });
 msgctxt "OrchardCore.Microsoft.Authentication.Services.AzureADService"
 msgid "TenantId is required"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:64
+#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:52
 #. yield return new ValidationResult(S["AppId is required"], new string[] { nameof(settings.AppId) });
 msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppId is required"
 msgstr ""
 
-#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:69
+#: OrchardCore.Microsoft.Authentication\Services\MicrosoftAccountService.cs:57
 #. yield return new ValidationResult(S["AppSecret is required"], new string[] { nameof(settings.AppSecret) });
 msgctxt "OrchardCore.Microsoft.Authentication.Services.MicrosoftAccountService"
 msgid "AppSecret is required"
@@ -135,9 +135,9 @@ msgid "Exports the Microsoft Entra ID settings."
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:5
-#. @T["The current tenant will be reloaded when the settings are saved."]
+#. @T["The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."]
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftAccountSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
+msgid "The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftAccountSettings.Edit.cshtml:6
@@ -207,9 +207,9 @@ msgid "Store external authentication tokens for reuse"
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:5
-#. @T["The current tenant will be reloaded when the settings are saved."]
+#. @T["The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."]
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
+msgid "The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:6
@@ -255,9 +255,9 @@ msgid "TenantId"
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:29
-#. <span class="hint">@T["The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."]</span>
+#. <span class="hint">@T["The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters. For multi-tenant App registrations, use 'common' or 'organizations'."]</span>
 msgctxt "OrchardCore.Microsoft.Authentication.Views.MicrosoftEntraIDSettings.Edit"
-msgid "The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters."
+msgid "The Tenant (Directory) ID found on the Microsoft Entra ID App registration parameters. For multi-tenant App registrations, use 'common' or 'organizations'."
 msgstr ""
 
 #: OrchardCore.Microsoft.Authentication\Views\MicrosoftEntraIDSettings.Edit.cshtml:33

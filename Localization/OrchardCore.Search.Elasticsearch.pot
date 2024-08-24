@@ -1,177 +1,171 @@
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:26
-#. .Add(S["Search"], "7", search => search
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:18
+#. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:28
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:21
 #. .Add(S["Indexing"], S["Indexing"].PrefixPosition(), import => import
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:28
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:21
 #. .Add(S["Indexing"], S["Indexing"].PrefixPosition(), import => import
 msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
 msgid "Indexing"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:29
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:22
 #. .Add(S["Elasticsearch Indices"], S["Elasticsearch Indices"].PrefixPosition(), indexes => indexes
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:29
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:22
 #. .Add(S["Elasticsearch Indices"], S["Elasticsearch Indices"].PrefixPosition(), indexes => indexes
 msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
 msgid "Elasticsearch Indices"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:33
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:30
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), import => import
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:30
+#. .Add(S["Queries"], S["Queries"].PrefixPosition(), import => import
+msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
+msgid "Queries"
+msgstr ""
+
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:31
 #. .Add(S["Run Elasticsearch Query"], S["Run Elasticsearch Query"].PrefixPosition(), queries => queries
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:33
+#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:31
 #. .Add(S["Run Elasticsearch Query"], S["Run Elasticsearch Query"].PrefixPosition(), queries => queries
 msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
 msgid "Run Elasticsearch Query"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:37
-#. .Add(S["Settings"], settings => settings
-msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
-msgid "Settings"
-msgstr ""
-
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:38
-#. .Add(S["Elasticsearch"], S["Elasticsearch"].PrefixPosition(), entry => entry
-#: OrchardCore.Search.Elasticsearch\AdminMenu.cs:38
-#. .Add(S["Elasticsearch"], S["Elasticsearch"].PrefixPosition(), entry => entry
-msgctxt "OrchardCore.Search.Elasticsearch.AdminMenu"
-msgid "Elasticsearch"
-msgstr ""
-
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:139
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:151
 #. new SelectListItem(S["Reset"], nameof(ContentsBulkAction.Reset)),
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Reset"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:140
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:152
 #. new SelectListItem(S["Rebuild"], nameof(ContentsBulkAction.Rebuild)),
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Rebuild"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:141
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:153
 #. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:206
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:228
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} already exists.", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An index named {0} already exists."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:213
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:235
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["An index named {0} doesn't exist.", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An index named {0} doesn't exist."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:245
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:267
 #. await _notifier.ErrorAsync(H["An error occurred while creating the index."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while creating the index."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:253
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:275
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> created successfully.", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> created successfully."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:273
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:295
 #. await _notifier.ErrorAsync(H["An error occurred while editing the index."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while editing the index."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:281
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:303
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> modified successfully, <strong>please consider rebuilding the index.</strong>", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> modified successfully, <strong>please consider rebuilding the index.</strong>"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:303
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:330
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", id]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:523
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:582
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", item.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> reset successfully."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:336
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:368
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", id]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:536
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:596
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", item.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> rebuilt successfully."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:351
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:388
 #. await _notifier.SuccessAsync(H["Index not found on Elasticsearch server.", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index not found on Elasticsearch server."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:359
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:396
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", model.IndexName]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:382
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:424
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> deleted successfully.", model.IndexName]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> deleted successfully."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:363
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:400
 #. await _notifier.ErrorAsync(H["An error occurred while deleting the index."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:386
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:428
 #. await _notifier.ErrorAsync(H["An error occurred while deleting the index."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "An error occurred while deleting the index."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:479
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:533
 #. ModelState.AddModelError(nameof(model.DecodedQuery), S["Invalid query : {0}", e.Message]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Invalid query : {0}"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:510
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:569
 #. await _notifier.SuccessAsync(H["Indices successfully removed."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Indices successfully removed."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:551
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:611
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexedContentTypes), S["At least one content type is required."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "At least one content type is required."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:556
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:616
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name is required."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name is required."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:560
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:620
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name contains forbidden characters."]);
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name contains forbidden characters."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticQueryDisplayDriver.cs:65
-#. updater.ModelState.AddModelError(nameof(model.Template), S["The query field is required"]);
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticQueryDisplayDriver.cs:79
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Query), S["The query field is required"]);
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticQueryDisplayDriver"
 msgid "The query field is required"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticQueryDisplayDriver.cs:70
-#. updater.ModelState.AddModelError(nameof(model.Index), S["The index field is required"]);
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticQueryDisplayDriver.cs:84
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Index), S["The index field is required"]);
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticQueryDisplayDriver"
 msgid "The index field is required"
 msgstr ""
@@ -194,19 +188,19 @@ msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticSettingsDisplayDriver"
 msgid "Custom Query"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:94
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:93
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultQuery), S["Please provide the default query."]);
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticSettingsDisplayDriver"
 msgid "Please provide the default query."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:98
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:97
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultQuery), S["The provided query is not formatted correctly."]);
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticSettingsDisplayDriver"
 msgid "The provided query is not formatted correctly."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:112
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticSettingsDisplayDriver.cs:109
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultQuery), S["Invalid query provided."]);
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticSettingsDisplayDriver"
 msgid "Invalid query provided."
@@ -349,9 +343,9 @@ msgid "Save"
 msgstr ""
 
 #: OrchardCore.Search.Elasticsearch\Views\ElasticContentIndexSettings.Edit.cshtml:3
-#. <h4>Elasticsearch @T["Index settings"]</h4>
+#. <h4>@T["Elasticsearch Index settings"]</h4>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticContentIndexSettings.Edit"
-msgid "Index settings"
+msgid "Elasticsearch Index settings"
 msgstr ""
 
 #: OrchardCore.Search.Elasticsearch\Views\ElasticContentIndexSettings.Edit.cshtml:8
@@ -510,7 +504,7 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.Items.ElasticIndexResetDeploymen
 msgid "Reset all or specified Elasticsearch indices."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticQuery.Buttons.SummaryAdmin.cshtml:12
+#: OrchardCore.Search.Elasticsearch\Views\ElasticQuery.Buttons.SummaryAdmin.cshtml:15
 #. class="btn btn-success btn-sm">@T["Run"]</a>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticQuery.Buttons.SummaryAdmin"
 msgid "Run"
@@ -558,49 +552,55 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticQuery.SummaryAdmin"
 msgid "Elasticsearch query"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:8
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:11
+#. @T["Elasticsearch is not configured. Update the appsettings file with Azure Search AI service information."]
+msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
+msgid "Elasticsearch is not configured. Update the appsettings file with Azure Search AI service information."
+msgstr ""
+
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:19
 #. <div class="alert alert-warning">@T["No indices exist! Please create at least one index to configure Elasticsearch service."]</div>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "No indices exist! Please create at least one index to configure Elasticsearch service."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:14
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:25
 #. <label asp-for="SearchIndex" class="form-label">@T["Default search index"]</label>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "Default search index"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:22
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:33
 #. <span class="hint">@T["The default index to use for the search page."]</span>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "The default index to use for the search page."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:26
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:37
 #. <label asp-for="SearchType" class="form-label">@T["Default search type"]</label>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "Default search type"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:32
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:43
 #. <label asp-for="DefaultQuery" class="form-label">@T["Default query"]</label>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "Default query"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:35
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:46
 #. <span class="hint">@T["Create a custom Elasticsearch query to be utilized for each search request. Liquid is supported, so use <code>{0}</code> template as a substitute for the user-provided search term.", "{{ term }}"]</span>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "Create a custom Elasticsearch query to be utilized for each search request. Liquid is supported, so use <code>{0}</code> template as a substitute for the user-provided search term."
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:39
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:50
 #. <label asp-for="SearchFields" class="form-label">@T["Default searched fields"]</label>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "Default searched fields"
 msgstr ""
 
-#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:42
+#: OrchardCore.Search.Elasticsearch\Views\ElasticSettings.Edit.cshtml:53
 #. <span class="hint">@T["A comma separated list of fields to use for search pages. The default value is <code>{0}</code>.", IndexingConstants.FullTextKey]</span>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.ElasticSettings.Edit"
 msgid "A comma separated list of fields to use for search pages. The default value is <code>{0}</code>."
@@ -846,6 +846,18 @@ msgstr ""
 #. <span class="icon"><i class="fa-solid fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>
 msgctxt "OrchardCore.Search.Elasticsearch.Views.NavigationItemText-Elasticsearch.Id"
 msgid "Search"
+msgstr ""
+
+#: OrchardCore.Search.Elasticsearch\Views\NavigationItemText-search.Id.cshtml:4
+#. <span class="title">@T["Search"]</span>
+msgctxt "OrchardCore.Search.Elasticsearch.Views.NavigationItemText-search.Id"
+msgid "Search"
+msgstr ""
+
+#: OrchardCore.Search.Elasticsearch\Views\Admin\NotConfigured.cshtml:2
+#. @T["Elasticsearch has not been configured yet."]
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.NotConfigured"
+msgid "Elasticsearch has not been configured yet."
 msgstr ""
 
 #: OrchardCore.Search.Elasticsearch\Views\Query-Elasticsearch.Link.cshtml:10

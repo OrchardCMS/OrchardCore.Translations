@@ -1,58 +1,58 @@
-#: OrchardCore.Facebook\AdminMenu.cs:26
+#: OrchardCore.Facebook\AdminMenu.cs:30
 #. .Add(S["Configuration"], configuration => configuration
 msgctxt "OrchardCore.Facebook.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:27
+#: OrchardCore.Facebook\AdminMenu.cs:31
 #. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Facebook.AdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:28
-#. .Add(S["Meta App"], S["Meta App"].PrefixPosition(), facebook => facebook
-#: OrchardCore.Facebook\AdminMenu.cs:28
-#. .Add(S["Meta App"], S["Meta App"].PrefixPosition(), facebook => facebook
+#: OrchardCore.Facebook\AdminMenu.cs:32
+#. .Add(S["Meta App"], S["Meta App"].PrefixPosition(), metaApp => metaApp
+#: OrchardCore.Facebook\AdminMenu.cs:32
+#. .Add(S["Meta App"], S["Meta App"].PrefixPosition(), metaApp => metaApp
 msgctxt "OrchardCore.Facebook.AdminMenu"
 msgid "Meta App"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:60
+#: OrchardCore.Facebook\AdminMenu.cs:70
 #. .Add(S["Security"], security => security
 msgctxt "OrchardCore.Facebook.AdminMenuLogin"
 msgid "Security"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:61
+#: OrchardCore.Facebook\AdminMenu.cs:71
 #. .Add(S["Authentication"], authentication => authentication
 msgctxt "OrchardCore.Facebook.AdminMenuLogin"
 msgid "Authentication"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:62
-#. .Add(S["Meta"], S["Meta"].PrefixPosition(), settings => settings
-#: OrchardCore.Facebook\AdminMenu.cs:62
-#. .Add(S["Meta"], S["Meta"].PrefixPosition(), settings => settings
+#: OrchardCore.Facebook\AdminMenu.cs:72
+#. .Add(S["Meta"], S["Meta"].PrefixPosition(), meta => meta
+#: OrchardCore.Facebook\AdminMenu.cs:72
+#. .Add(S["Meta"], S["Meta"].PrefixPosition(), meta => meta
 msgctxt "OrchardCore.Facebook.AdminMenuLogin"
 msgid "Meta"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:94
+#: OrchardCore.Facebook\AdminMenu.cs:110
 #. .Add(S["Configuration"], configuration => configuration
 msgctxt "OrchardCore.Facebook.AdminMenuPixel"
 msgid "Configuration"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:95
+#: OrchardCore.Facebook\AdminMenu.cs:111
 #. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Facebook.AdminMenuPixel"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Facebook\AdminMenu.cs:96
+#: OrchardCore.Facebook\AdminMenu.cs:112
 #. .Add(S["Meta Pixel"], S["Meta Pixel"].PrefixPosition(), pixel => pixel
-#: OrchardCore.Facebook\AdminMenu.cs:96
+#: OrchardCore.Facebook\AdminMenu.cs:112
 #. .Add(S["Meta Pixel"], S["Meta Pixel"].PrefixPosition(), pixel => pixel
 msgctxt "OrchardCore.Facebook.AdminMenuPixel"
 msgid "Meta Pixel"
@@ -64,25 +64,25 @@ msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
 msgid "Invalid path"
 msgstr ""
 
-#: OrchardCore.Facebook\Services\FacebookService.cs:55
+#: OrchardCore.Facebook\Services\FacebookService.cs:43
 #. results.Add(new ValidationResult(S["The AppId is required."], new[]
 msgctxt "OrchardCore.Facebook.Services.FacebookService"
 msgid "The AppId is required."
 msgstr ""
 
-#: OrchardCore.Facebook\Services\FacebookService.cs:63
+#: OrchardCore.Facebook\Services\FacebookService.cs:51
 #. results.Add(new ValidationResult(S["The App Secret is required."], new[]
 msgctxt "OrchardCore.Facebook.Services.FacebookService"
 msgid "The App Secret is required."
 msgstr ""
 
-#: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:85
-#. updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
+#: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:78
+#. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 msgctxt "OrchardCore.Facebook.Widgets.Drivers.FacebookPluginPartDisplayDriver"
 msgid "The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}"
 msgstr ""
 
-#: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:42
+#: OrchardCore.Facebook\Widgets\Settings\FacebookPluginPartSettingsDisplayDriver.cs:41
 #. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 msgctxt "OrchardCore.Facebook.Widgets.Settings.FacebookPluginPartSettingsDisplayDriver"
 msgid "The Body doesn't contain a valid Liquid expression. Details: {0}"
@@ -119,9 +119,9 @@ msgid "Exports the Facebook Login settings."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:5
-#. @T["The current tenant will be reloaded when the settings are saved."]
+#. @T["The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."]
 msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
+msgid "The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:6
@@ -161,7 +161,7 @@ msgid "Store external authentication tokens for reuse"
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookLoginSettings.Edit.cshtml:27
-#. <span class="hint">@T["<a href=\"{0}\">Meta Integration settings</a> must be configured in order to use the Login Feature",@Url.RouteUrl(new { area = "OrchardCore.Settings", controller = "Admin", groupId = OrchardCore.Facebook.FacebookConstants.Features.Core })]</span>
+#. <span class="hint">@T["<a href=\"{0}\">Meta Integration settings</a> must be configured in order to use the Login Feature", @Url.RouteUrl(new { area = "OrchardCore.Settings", controller = "Admin", groupId = OrchardCore.Facebook.FacebookConstants.Features.Core })]</span>
 msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "<a href=\"{0}\">Meta Integration settings</a> must be configured in order to use the Login Feature"
 msgstr ""
@@ -203,9 +203,9 @@ msgid "The default template of the plugin, in Liquid format."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:5
-#. @T["The current tenant will be reloaded when the settings are saved."]
+#. @T["The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."]
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
-msgid "The current tenant will be reloaded when the settings are saved."
+msgid "The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."
 msgstr ""
 
 #: OrchardCore.Facebook\Views\FacebookSettings.Edit.cshtml:6

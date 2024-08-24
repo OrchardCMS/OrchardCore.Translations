@@ -1,136 +1,172 @@
-#: OrchardCore.Users.Core\Services\UserService.cs:54
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:18
+#. Description = S["Represents a user."];
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "Represents a user."
+msgstr ""
+
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:20
+#. Field(u => u.UserId).Description(S["The id of the user."]);
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The id of the user."
+msgstr ""
+
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:21
+#. Field(u => u.UserName).Description(S["The name of the user."]);
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The name of the user."
+msgstr ""
+
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:22
+#. Field(u => u.Email, nullable: true).Description(S["The email of the user."]);
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The email of the user."
+msgstr ""
+
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:23
+#. Field(u => u.PhoneNumber, nullable: true).Description(S["The phone number of the user."]);
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The phone number of the user."
+msgstr ""
+
+#: OrchardCore.Users.Core\GraphQL\UserType.cs:33
+#. .Description(S["Custom user settings of {0}.", contentItemType.Name])
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "Custom user settings of {0}."
+msgstr ""
+
+#: OrchardCore.Users.Core\Services\UserService.cs:51
 #. reportError(string.Empty, S["Local login is disabled."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Local login is disabled."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:60
-#. reportError("UserName", S["A user name is required."]);
+#: OrchardCore.Users.Core\Services\UserService.cs:57
+#. reportError("Username", S["A user name is required."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A user name is required."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:66
+#: OrchardCore.Users.Core\Services\UserService.cs:63
 #. reportError("Password", S["A password is required."]);
 #: OrchardCore.Users.Core\Services\UserService.cs:195
-#. reportError("Password", S["A password is required."]);
+#. reportError(nameof(ResetPasswordForm.NewPassword), S["A password is required."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A password is required."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:73
+#: OrchardCore.Users.Core\Services\UserService.cs:70
 #. reportError(string.Empty, S["The specified username/password couple is invalid."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:96
+#: OrchardCore.Users.Core\Services\UserService.cs:93
 #. reportError(string.Empty, S["The specified username/password couple is invalid."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The specified username/password couple is invalid."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:81
+#: OrchardCore.Users.Core\Services\UserService.cs:78
 #. reportError(string.Empty, S["The user is locked out."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The user is locked out."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:86
+#: OrchardCore.Users.Core\Services\UserService.cs:83
 #. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:102
+#: OrchardCore.Users.Core\Services\UserService.cs:99
 #. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The specified user is not allowed to sign in."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:91
+#: OrchardCore.Users.Core\Services\UserService.cs:88
 #. reportError(string.Empty, S["The specified user is not allowed to sign in using password authentication."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The specified user is not allowed to sign in using password authentication."
 msgstr ""
 
 #: OrchardCore.Users.Core\Services\UserService.cs:189
-#. reportError("UserName", S["A email address is required."]);
+#. reportError(nameof(ResetPasswordForm.UsernameOrEmail), S["A username or email address is required."]);
 msgctxt "OrchardCore.Users.Services.UserService"
-msgid "A email address is required."
+msgid "A username or email address is required."
 msgstr ""
 
 #: OrchardCore.Users.Core\Services\UserService.cs:201
-#. reportError("Token", S["A token is required."]);
+#. reportError(nameof(ResetPasswordForm.ResetToken), S["A token is required."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A token is required."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:257
+#: OrchardCore.Users.Core\Services\UserService.cs:267
 #. reportError("Password", S["Passwords must have at least one digit character ('0'-'9')."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must have at least one digit character ('0'-'9')."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:260
+#: OrchardCore.Users.Core\Services\UserService.cs:270
 #. reportError("Password", S["Passwords must have at least one lowercase character ('a'-'z')."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must have at least one lowercase character ('a'-'z')."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:263
+#: OrchardCore.Users.Core\Services\UserService.cs:273
 #. reportError("Password", S["Passwords must have at least one uppercase character ('A'-'Z')."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must have at least one uppercase character ('A'-'Z')."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:266
+#: OrchardCore.Users.Core\Services\UserService.cs:276
 #. reportError("Password", S["Passwords must have at least one non letter or digit character."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must have at least one non letter or digit character."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:269
-#. reportError("Password", S["Passwords must be at least {0} characters.", _identityOptions.Value.Password.RequiredLength]);
+#: OrchardCore.Users.Core\Services\UserService.cs:279
+#. reportError("Password", S["Passwords must be at least {0} characters.", _identityOptions.Password.RequiredLength]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must be at least {0} characters."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:272
-#. reportError("Password", S["Passwords must contain at least {0} unique characters.", _identityOptions.Value.Password.RequiredUniqueChars]);
+#: OrchardCore.Users.Core\Services\UserService.cs:282
+#. reportError("Password", S["Passwords must contain at least {0} unique characters.", _identityOptions.Password.RequiredUniqueChars]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Passwords must contain at least {0} unique characters."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:277
+#: OrchardCore.Users.Core\Services\UserService.cs:287
 #. reportError("CurrentPassword", S["Incorrect password."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Incorrect password."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:282
+#: OrchardCore.Users.Core\Services\UserService.cs:292
 #. reportError("UserName", S["User name '{0}' is invalid, can only contain letters or digits.", user.UserName]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "User name '{0}' is invalid, can only contain letters or digits."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:285
+#: OrchardCore.Users.Core\Services\UserService.cs:295
 #. reportError("UserName", S["User name '{0}' is already used.", user.UserName]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "User name '{0}' is already used."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:290
+#: OrchardCore.Users.Core\Services\UserService.cs:300
 #. reportError("Email", S["Email '{0}' is already used.", user.Email]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is already used."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:293
+#: OrchardCore.Users.Core\Services\UserService.cs:303
 #. reportError("Email", S["Email '{0}' is invalid.", user.Email]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is invalid."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:296
+#: OrchardCore.Users.Core\Services\UserService.cs:306
 #. reportError(string.Empty, S["The reset token is invalid. Please request a new token."]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The reset token is invalid. Please request a new token."
 msgstr ""
 
-#: OrchardCore.Users.Core\Services\UserService.cs:299
+#: OrchardCore.Users.Core\Services\UserService.cs:309
 #. reportError(string.Empty, S["Unexpected error: '{0}'.", error.Code]);
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Unexpected error: '{0}'."
