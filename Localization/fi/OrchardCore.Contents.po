@@ -10,24 +10,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
-"PO-Revision-Date: 2024-01-30 11:47\n"
+"PO-Revision-Date: 2024-08-24 20:22\n"
 
 #. await builder.AddAsync(S["Content"], NavigationConstants.AdminMenuContentPosition, async content =>
-#: OrchardCore.Contents\AdminMenu.cs:60
+#: OrchardCore.Contents\AdminMenu.cs:70
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "Content"
 msgstr "Sisältö"
 
 #. await content.AddAsync(S["Content Items"], S["Content Items"].PrefixPosition(), async contentItems =>
 #. await content.AddAsync(S["Content Items"], S["Content Items"].PrefixPosition(), async contentItems =>
-#: OrchardCore.Contents\AdminMenu.cs:63
-#: OrchardCore.Contents\AdminMenu.cs:63
+#: OrchardCore.Contents\AdminMenu.cs:73
+#: OrchardCore.Contents\AdminMenu.cs:73
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "Content Items"
 msgstr "Sisältökohteet"
 
 #. await builder.AddAsync(S["New"], "-1", async newMenu =>
-#: OrchardCore.Contents\AdminMenu.cs:79
+#: OrchardCore.Contents\AdminMenu.cs:93
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "New"
 msgstr "Uusi"
@@ -134,288 +134,280 @@ msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfigur
 msgid "A content item was restored to a previous version."
 msgstr "Sisällön kohde palautettiin edelliseen versioon."
 
-#. new SelectListItem(S["Latest"], nameof(ContentsStatus.Latest), options.ContentsStatus == ContentsStatus.Latest),
-#: OrchardCore.Contents\Controllers\AdminController.cs:158
+#. new SelectListItem(S["Latest"], nameof(ContentsStatus.Latest)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:140
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Latest"
 msgstr "Viimeisimmät"
 
-#. new SelectListItem(S["Published"], nameof(ContentsStatus.Published), options.ContentsStatus == ContentsStatus.Published),
-#: OrchardCore.Contents\Controllers\AdminController.cs:159
+#. new SelectListItem(S["Published"], nameof(ContentsStatus.Published)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:141
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Published"
 msgstr "Julkaistu"
 
-#. new SelectListItem(S["Unpublished"], nameof(ContentsStatus.Draft), options.ContentsStatus == ContentsStatus.Draft),
-#: OrchardCore.Contents\Controllers\AdminController.cs:160
+#. new SelectListItem(S["Unpublished"], nameof(ContentsStatus.Draft)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:142
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Unpublished"
 msgstr "Julkaisematon"
 
-#. new SelectListItem(S["All versions"], nameof(ContentsStatus.AllVersions), options.ContentsStatus == ContentsStatus.AllVersions),
-#: OrchardCore.Contents\Controllers\AdminController.cs:161
+#. new SelectListItem(S["All versions"], nameof(ContentsStatus.AllVersions)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:143
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All versions"
 msgstr "Kaikki versiot"
 
-#. options.ContentStatuses.Insert(1, new SelectListItem() { Text = S["Owned by me"], Value = nameof(ContentsStatus.Owner) });
-#: OrchardCore.Contents\Controllers\AdminController.cs:166
+#. options.ContentStatuses.Insert(1, new SelectListItem(S["Owned by me"], nameof(ContentsStatus.Owner)));
+#: OrchardCore.Contents\Controllers\AdminController.cs:148
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Owned by me"
 msgstr "Minun omistamani"
 
-#. new SelectListItem(S["Recently created"], nameof(ContentsOrder.Created), options.OrderBy == ContentsOrder.Created),
-#: OrchardCore.Contents\Controllers\AdminController.cs:171
+#. new SelectListItem(S["Recently created"], nameof(ContentsOrder.Created)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:153
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Recently created"
 msgstr "Äskettäin luodut"
 
-#. new SelectListItem(S["Recently modified"], nameof(ContentsOrder.Modified),options.OrderBy == ContentsOrder.Modified ),
-#: OrchardCore.Contents\Controllers\AdminController.cs:172
+#. new SelectListItem(S["Recently modified"], nameof(ContentsOrder.Modified)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:154
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Recently modified"
 msgstr "Äskettäin muokatut"
 
-#. new SelectListItem(S["Recently published"], nameof(ContentsOrder.Published), options.OrderBy == ContentsOrder.Published),
-#: OrchardCore.Contents\Controllers\AdminController.cs:173
+#. new SelectListItem(S["Recently published"], nameof(ContentsOrder.Published)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:155
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Recently published"
 msgstr "Äskettäin julkaistut"
 
-#. new SelectListItem(S["Title"], nameof(ContentsOrder.Title), options.OrderBy == ContentsOrder.Title),
-#: OrchardCore.Contents\Controllers\AdminController.cs:174
+#. new SelectListItem(S["Title"], nameof(ContentsOrder.Title)),
+#: OrchardCore.Contents\Controllers\AdminController.cs:156
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Title"
 msgstr "Otsikko"
 
 #. new SelectListItem(S["Publish Now"], nameof(ContentsBulkAction.PublishNow)),
-#: OrchardCore.Contents\Controllers\AdminController.cs:179
+#: OrchardCore.Contents\Controllers\AdminController.cs:161
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Publish Now"
 msgstr "Julkaise nyt"
 
 #. new SelectListItem(S["Unpublish"], nameof(ContentsBulkAction.Unpublish)),
-#: OrchardCore.Contents\Controllers\AdminController.cs:180
+#: OrchardCore.Contents\Controllers\AdminController.cs:162
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Unpublish"
 msgstr "Lopeta julkaisu"
 
 #. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
-#: OrchardCore.Contents\Controllers\AdminController.cs:181
+#: OrchardCore.Contents\Controllers\AdminController.cs:163
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Delete"
 msgstr "Poista"
 
 #. await _notifier.WarningAsync(H["Couldn't publish selected content."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:273
+#: OrchardCore.Contents\Controllers\AdminController.cs:269
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't publish selected content."
 msgstr "Valittua sisältöä ei voitu julkaista."
 
 #. await _notifier.SuccessAsync(H["Content published successfully."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:280
+#: OrchardCore.Contents\Controllers\AdminController.cs:276
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content published successfully."
 msgstr "Julkaisu onnistui."
 
 #. await _notifier.WarningAsync(H["Couldn't unpublish selected content."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:287
+#: OrchardCore.Contents\Controllers\AdminController.cs:283
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't unpublish selected content."
 msgstr "Valitun sisällön julkaisua ei voitu lopettaa."
 
 #. await _notifier.SuccessAsync(H["Content unpublished successfully."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:294
+#: OrchardCore.Contents\Controllers\AdminController.cs:290
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content unpublished successfully."
 msgstr "Sisällön julkaisu on lopetettu onnistuneesti."
 
 #. await _notifier.WarningAsync(H["Couldn't remove selected content."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:301
+#: OrchardCore.Contents\Controllers\AdminController.cs:297
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Couldn't remove selected content."
 msgstr "Valittua sisältöä ei voitu poistaa."
 
 #. await _notifier.SuccessAsync(H["Content removed successfully."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:308
+#: OrchardCore.Contents\Controllers\AdminController.cs:304
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Content removed successfully."
 msgstr "Sisältö on poistettu onnistuneesti."
 
 #. ? H["Your content draft has been saved."]
 #. ? H["Your content draft has been saved."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:349
-#: OrchardCore.Contents\Controllers\AdminController.cs:432
+#: OrchardCore.Contents\Controllers\AdminController.cs:350
+#: OrchardCore.Contents\Controllers\AdminController.cs:443
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Your content draft has been saved."
 msgstr "Sisältöluonnos on tallennettu."
 
 #. : H["Your {0} draft has been saved.", typeDefinition.DisplayName]);
 #. : H["Your {0} draft has been saved.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:350
-#: OrchardCore.Contents\Controllers\AdminController.cs:433
+#: OrchardCore.Contents\Controllers\AdminController.cs:351
+#: OrchardCore.Contents\Controllers\AdminController.cs:444
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Your {0} draft has been saved."
 msgstr "Luonnos \"{0}\" on tallennettu."
 
 #. ? H["Your content has been published."]
 #. ? H["Your content has been published."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:377
-#: OrchardCore.Contents\Controllers\AdminController.cs:462
+#: OrchardCore.Contents\Controllers\AdminController.cs:382
+#: OrchardCore.Contents\Controllers\AdminController.cs:477
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Your content has been published."
 msgstr "Sisältö on julkaistu."
 
 #. : H["Your {0} has been published.", typeDefinition.DisplayName]);
 #. : H["Your {0} has been published.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:378
-#: OrchardCore.Contents\Controllers\AdminController.cs:463
+#: OrchardCore.Contents\Controllers\AdminController.cs:383
+#: OrchardCore.Contents\Controllers\AdminController.cs:478
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Your {0} has been published."
 msgstr "\"{0}\" on julkaistu."
 
 #. await _notifier.WarningAsync(H["Could not clone the content item."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:488
+#: OrchardCore.Contents\Controllers\AdminController.cs:504
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Could not clone the content item."
 msgstr "Sisältökohdetta ei voitu kloonata."
 
 #. await _notifier.InformationAsync(H["Successfully cloned. The clone was saved as a draft."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:492
+#: OrchardCore.Contents\Controllers\AdminController.cs:510
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Successfully cloned. The clone was saved as a draft."
 msgstr "Onnistuneesti kloonattu. Klooni on tallennettu luonnoksena."
 
 #. ? H["The draft has been removed."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:519
+#: OrchardCore.Contents\Controllers\AdminController.cs:540
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The draft has been removed."
 msgstr "Luonnos on poistettu."
 
 #. : H["The {0} draft has been removed.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:520
+#: OrchardCore.Contents\Controllers\AdminController.cs:541
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The {0} draft has been removed."
 msgstr "Luonnos \"{0}\" on poistettu."
 
 #. ? H["That content has been removed."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:543
+#: OrchardCore.Contents\Controllers\AdminController.cs:567
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That content has been removed."
 msgstr "Sisältö on poistettu."
 
 #. : H["That {0} has been removed.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:544
+#: OrchardCore.Contents\Controllers\AdminController.cs:568
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been removed."
 msgstr "\"{0}\" on poistettu."
 
 #. await _notifier.SuccessAsync(H["That content has been published."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:570
+#: OrchardCore.Contents\Controllers\AdminController.cs:597
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That content has been published."
 msgstr "Sisältö on julkaistu."
 
 #. await _notifier.SuccessAsync(H["That {0} has been published.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:574
+#: OrchardCore.Contents\Controllers\AdminController.cs:601
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been published."
 msgstr "\"{0}\" on julkaistu."
 
 #. await _notifier.SuccessAsync(H["The content has been unpublished."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:600
+#: OrchardCore.Contents\Controllers\AdminController.cs:630
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The content has been unpublished."
 msgstr "Julkaisematon sisältö."
 
 #. await _notifier.SuccessAsync(H["The {0} has been unpublished.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:604
+#: OrchardCore.Contents\Controllers\AdminController.cs:634
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The {0} has been unpublished."
 msgstr "Kohteen \"{0}\" julkaisu on lopetettu."
 
 #. items.Add(new SelectListItem(S["All content types"], string.Empty));
-#: OrchardCore.Contents\Controllers\AdminController.cs:713
+#: OrchardCore.Contents\Controllers\AdminController.cs:765
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All content types"
 msgstr "Kaikki sisältötyypit"
 
-#. Title = S["One or more validation errors occurred."],
-#. Title = S["One or more validation errors occurred."],
-#: OrchardCore.Contents\Controllers\ApiController.cs:132
-#: OrchardCore.Contents\Controllers\ApiController.cs:162
-msgctxt "OrchardCore.Contents.Controllers.ApiController"
-msgid "One or more validation errors occurred."
-msgstr "Yksi tai useampi validointivirhe on tapahtunut."
-
 #. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
 #. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:90
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:137
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:88
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:135
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.AddToDeploymentPlanController"
 msgid "Content added successfully to the deployment plan."
 msgstr "Sisältö on lisätty onnistuneesti käyttöönottosuunnitelmaan."
 
 #. await _notifier.WarningAsync(H["Couldn't add selected content to deployment plan."]);
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:127
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\AddToDeploymentPlanController.cs:125
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.AddToDeploymentPlanController"
 msgid "Couldn't add selected content to deployment plan."
 msgstr "Valittua sisältöä ei voitu lisätä käyttöönottosuunnitelmaan."
 
-#. updater.ModelState.AddModelError(Prefix, nameof(step.ContentItemId), S["Your content item does not exist."]);
-#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\ContentItemDeploymentStepDriver.cs:50
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(step.ContentItemId), S["Your content item does not exist."]);
+#: OrchardCore.Contents\Deployment\AddToDeploymentPlan\ContentItemDeploymentStepDriver.cs:49
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.ContentItemDeploymentStepDriver"
 msgid "Your content item does not exist."
 msgstr "Sisältökohdetta ei ole olemassa."
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:25
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:30
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Configuration"
 msgstr "Konfigurointi"
 
 #. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
 #. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:26
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:26
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:31
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:31
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Import/Export"
 msgstr "Tuo/Vie"
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:27
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:32
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Settings"
 msgstr "Asetukset"
 
-#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), deployment => deployment
-#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), deployment => deployment
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
+#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), targetSettings => targetSettings
+#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), targetSettings => targetSettings
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:33
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:33
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Export Target Settings"
 msgstr "Vie kohdeasetukset"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ExportContentToDeploymentTargetSettings, ExportContentToDeploymentTargetStartup>(S => S["Export Content To Deployment Target settings"], S => S["Exports the Export Content To Deployment Target settings."]);
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:31
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:29
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetStartup"
 msgid "Export Content To Deployment Target settings"
 msgstr "Vie sisällön käyttöönottoasetukset kohteeseen"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ExportContentToDeploymentTargetSettings, ExportContentToDeploymentTargetStartup>(S => S["Export Content To Deployment Target settings"], S => S["Exports the Export Content To Deployment Target settings."]);
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:31
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetStartup.cs:29
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetStartup"
 msgid "Exports the Export Content To Deployment Target settings."
 msgstr "Vie sisällön käyttöönoton vientiasetukset kohteeseen."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.OwnerName), S["A value is required for Owner."]);
-#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:82
+#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:81
 msgctxt "OrchardCore.Contents.Drivers.OwnerEditorDriver"
 msgid "A value is required for Owner."
 msgstr "Omistaja on pakollinen."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.OwnerName), S["Invalid username provided for Owner."]);
-#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:90
+#: OrchardCore.Contents\Drivers\OwnerEditorDriver.cs:89
 msgctxt "OrchardCore.Contents.Drivers.OwnerEditorDriver"
 msgid "Invalid username provided for Owner."
 msgstr "Omistajalle annettu käyttäjänimi ei kelpaa."
@@ -427,97 +419,97 @@ msgid "Full-text doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Tekstieditori ei sisällä kelvollista Liquid-lauseketta. Tarkemmat tiedot: {0}"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ContentAuditTrailSettings, DeploymentStartup>(S => S["Content Audit Trail settings"], S => S["Exports the content audit trail settings."]);
-#: OrchardCore.Contents\Startup.cs:328
+#: OrchardCore.Contents\Startup.cs:250
 msgctxt "OrchardCore.Contents.DeploymentStartup"
 msgid "Content Audit Trail settings"
 msgstr "Versiohistorian asetukset"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ContentAuditTrailSettings, DeploymentStartup>(S => S["Content Audit Trail settings"], S => S["Exports the content audit trail settings."]);
-#: OrchardCore.Contents\Startup.cs:328
+#: OrchardCore.Contents\Startup.cs:250
 msgctxt "OrchardCore.Contents.DeploymentStartup"
 msgid "Exports the content audit trail settings."
 msgstr "Vie versiohistorian asetukset."
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:40
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:38
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Content"
 msgstr "Sisältö"
 
 #. return Outcomes(S["Done"]);
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:53
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:51
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Done"
 msgstr "Valmis"
 
 #. public override LocalizedString DisplayText => S["Content Created Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentCreatedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentCreatedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentCreatedEvent"
 msgid "Content Created Event"
 msgstr "Sisältötapahtuma luotu"
 
 #. public override LocalizedString DisplayText => S["Content Deleted Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentDeletedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentDeletedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentDeletedEvent"
 msgid "Content Deleted Event"
 msgstr "Sisältötapahtuma poistettu"
 
 #. public override LocalizedString DisplayText => S["Content Save Draft Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentDraftSavedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentDraftSavedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentDraftSavedEvent"
 msgid "Content Save Draft Event"
 msgstr "Luonnoksen sisällön tallentamistapahtuma"
 
 #. public override LocalizedString DisplayText => S["Content Published Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentPublishedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentPublishedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentPublishedEvent"
 msgid "Content Published Event"
 msgstr "Sisältötapahtuma julkaistu"
 
 #. public override LocalizedString DisplayText => S["Content Unpublished Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentUnpublishedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentUnpublishedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentUnpublishedEvent"
 msgid "Content Unpublished Event"
 msgstr "Sisältötapahtuman julkaisu poistettu"
 
 #. public override LocalizedString DisplayText => S["Content Updated Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentUpdatedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentUpdatedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentUpdatedEvent"
 msgid "Content Updated Event"
 msgstr "Sisältötapahtuma päivitetty"
 
 #. public override LocalizedString DisplayText => S["Content Versioned Event"];
-#: OrchardCore.Contents\Workflows\Activities\ContentVersionedEvent.cs:15
+#: OrchardCore.Contents\Workflows\Activities\ContentVersionedEvent.cs:18
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentVersionedEvent"
 msgid "Content Versioned Event"
 msgstr "Sisältötapahtuma versiotu"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:36
+#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:33
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Content"
 msgstr "Sisältö"
 
 #. public override LocalizedString DisplayText => S["Create Content Task"];
-#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:38
+#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:35
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Create Content Task"
 msgstr "Luo sisältötehtävä"
 
-#. get => GetProperty(() => new WorkflowExpression<string>(JsonConvert.SerializeObject(new { DisplayText = S["Enter a title"].Value }, Formatting.Indented)));
-#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:54
+#. get => GetProperty(() => new WorkflowExpression<string>(JConvert.SerializeObject(new { DisplayText = S["Enter a title"].Value }, JOptions.Indented)));
+#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:51
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Enter a title"
 msgstr "Anna otsikko"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:65
+#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:62
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Done"
 msgstr "Valmis"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:65
+#: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:62
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Failed"
 msgstr "Epäonnistui"
@@ -547,97 +539,97 @@ msgid "Noop"
 msgstr "Ei tehdä mitään"
 
 #. public override LocalizedString DisplayText => S["Publish Content Task"];
-#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:21
+#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:22
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Publish Content Task"
 msgstr "Julkaise sisältötehtävä"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:23
+#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:24
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Content"
 msgstr "Sisältö"
 
 #. return Outcomes(S["Published"], S["Noop"]);
-#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:27
+#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:28
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Published"
 msgstr "Julkaistu"
 
 #. return Outcomes(S["Published"], S["Noop"]);
-#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:27
+#: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:28
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Noop"
 msgstr "Ei tehdä mitään"
 
 #. public override LocalizedString DisplayText => S["Retrieve Content Task"];
-#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:22
+#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:23
 msgctxt "OrchardCore.Contents.Workflows.Activities.RetrieveContentTask"
 msgid "Retrieve Content Task"
 msgstr "Nouda sisältötehtävä"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:24
+#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:25
 msgctxt "OrchardCore.Contents.Workflows.Activities.RetrieveContentTask"
 msgid "Content"
 msgstr "Sisältö"
 
 #. return Outcomes(S["Retrieved"]);
-#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:28
+#: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:29
 msgctxt "OrchardCore.Contents.Workflows.Activities.RetrieveContentTask"
 msgid "Retrieved"
 msgstr "Noudettu"
 
 #. public override LocalizedString DisplayText => S["Unpublish Content Task"];
-#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:21
+#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:22
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Unpublish Content Task"
 msgstr "Poista sisältötehtävän julkaisu"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:23
+#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:24
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Content"
 msgstr "Sisältö"
 
 #. return Outcomes(S["Unpublished"], S["Noop"]);
-#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:27
+#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:28
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Unpublished"
 msgstr "Julkaisematon"
 
 #. return Outcomes(S["Unpublished"], S["Noop"]);
-#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:27
+#: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:28
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Noop"
 msgstr "Ei tehdä mitään"
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:41
+#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:39
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Content"
 msgstr "Sisältö"
 
 #. public override LocalizedString DisplayText => S["Update Content Task"];
-#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:43
+#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:41
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Update Content Task"
 msgstr "Päivitä sisältötehtävä"
 
-#. get => GetProperty(() => new WorkflowExpression<string>(JsonConvert.SerializeObject(new { DisplayText = S["Enter a title"].Value }, Formatting.Indented)));
+#. new WorkflowExpression<string>(JConvert.SerializeObject(new { DisplayText = S["Enter a title"].Value })));
 #: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:59
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Enter a title"
 msgstr "Anna otsikko"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:65
+#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:67
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Done"
 msgstr "Valmis"
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:65
+#: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:67
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Failed"
 msgstr "Virhe"
@@ -1033,14 +1025,8 @@ msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "Allowed content types"
 msgstr "Sallitut sisältötyypit"
 
-#. <label class="form-check-label" for="select-all">@T["Select all"]</label>
-#: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:9
-msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
-msgid "Select all"
-msgstr "Valitse kaikki"
-
 #. <span class="hint">@T["The types of content whose events are recorded."]</span>
-#: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:15
+#: OrchardCore.Contents\Views\Items\ContentAuditTrailSettings.Edit.cshtml:9
 msgctxt "OrchardCore.Contents.Views.Items.ContentAuditTrailSettings.Edit"
 msgid "The types of content whose events are recorded."
 msgstr "Sisältötyypit, joiden tapahtumat on kirjataan."
@@ -1573,7 +1559,7 @@ msgctxt "OrchardCore.Contents.Views.ContentsAdminListSummary"
 msgid "Select All"
 msgstr "Valitse kaikki"
 
-#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Contents\Views\ContentsAdminListSummary.cshtml:7
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSummary"
 msgid "1 item"
@@ -1581,19 +1567,19 @@ msgid_plural "{0} items"
 msgstr[0] "Yksi kohde"
 msgstr[1] "{0} kohdetta"
 
-#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Contents\Views\ContentsAdminListSummary.cshtml:7
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSummary"
 msgid "Items {0} to {1}"
 msgstr "Kohteet {0} – {1}"
 
-#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural((int)Model.ContentItemsCount, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", (int)Model.StartIndex, (int)Model.EndIndex]">@T.Plural((int)Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Contents\Views\ContentsAdminListSummary.cshtml:7
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSummary"
-msgid " / {0} item in total"
+msgid " / 1 item in total"
 msgid_plural " / {0} items in total"
-msgstr[0] " / {0} kohde yhteensä"
-msgstr[1] " / {0} kohdetta yhteensä"
+msgstr[0] ""
+msgstr[1] ""
 
 #. <a asp-action="Publish" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" data-url-af="UnsafeUrl" class="dropdown-item btn-sm">@T["Publish Draft"]</a>
 #: OrchardCore.Contents\Views\ContentsButtonActions_SummaryAdmin.cshtml:19
@@ -2219,6 +2205,12 @@ msgctxt "OrchardCore.Contents.Views.Items.CreateContentTask.Fields.Thumbnail"
 msgid "Create a content item."
 msgstr "Luo sisältökohde."
 
+#. <label class="form-check-label" for="@(Model.HtmlName)-select-all">@T["Select all"]</label>
+#: OrchardCore.Contents\Views\Shared\Components\SelectContentTypes\Default.cshtml:8
+msgctxt "OrchardCore.Contents.Views.Shared.Components.SelectContentTypes.Default"
+msgid "Select all"
+msgstr ""
+
 #. <h4><i class="fa-solid fa-trash" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Delete Content"])</h4>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Design"
@@ -2643,7 +2635,7 @@ msgctxt "OrchardCore.Contents.Views.Items.UnpublishContentTask.Fields.Thumbnail"
 msgid "Unpublish a content item."
 msgstr "Lopeta sisältönimikkeen julkaiseminen."
 
-#. <h4><i class="fa-solid fa-pencil-square-o" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Update Content"])</h4>
+#. <h4><i class="fa-solid fa-square-pen" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Update Content"])</h4>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Design"
 msgid "Update Content"
@@ -2697,7 +2689,7 @@ msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Check if you want the content item to be published when being updated. Leave unchecked to create a draft version."
 msgstr "Valitse, jos haluat, että sisältö julkaistaan samalla kun se päivitetään. Jätä valitsematta, jos haluat päivityksen tuottavan luonnoksen."
 
-#. <h4 class="card-title"><i class="fa-solid fa-pencil-square-o" aria-hidden="true"></i>@T["Update Content"]</h4>
+#. <h4 class="card-title"><i class="fa-solid fa-square-pen" aria-hidden="true"></i>@T["Update Content"]</h4>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Thumbnail"
 msgid "Update Content"
