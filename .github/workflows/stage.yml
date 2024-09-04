@@ -23,7 +23,7 @@ jobs:
 
     - name: Build version number
       run: |
-        echo "nugetVersion=1.0.1-beta-$(( $GITHUB_RUN_NUMBER + 20000 ))" >> $GITHUB_ENV
+        echo "nugetVersion=2.0.0-preview-$(( $GITHUB_RUN_NUMBER + 20000 ))" >> $GITHUB_ENV
         
     - name: Pack
       run: .\pack.ps1
