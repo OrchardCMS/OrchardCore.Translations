@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2024-08-24 20:39\n"
+"PO-Revision-Date: 2024-09-04 19:19\n"
 
 #. .Add(S["Multi-Tenancy"], "after", tenancy => tenancy
 #: OrchardCore.Tenants\AdminMenu.cs:33
@@ -83,7 +83,7 @@ msgstr "Abilita"
 #. await _notifier.WarningAsync(H["You cannot disable the default tenant."]);
 #. await _notifier.ErrorAsync(H["You cannot disable the default tenant."]);
 #: OrchardCore.Tenants\Controllers\AdminController.cs:261
-#: OrchardCore.Tenants\Controllers\AdminController.cs:536
+#: OrchardCore.Tenants\Controllers\AdminController.cs:550
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You cannot disable the default tenant."
 msgstr "Non puoi disattivare il tenant di default."
@@ -101,31 +101,31 @@ msgid "The tenant '{0}' is already enabled."
 msgstr "Il tenant '{0}' è già abilitato."
 
 #. await _notifier.ErrorAsync(H["You can only disable a Running tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:542
+#: OrchardCore.Tenants\Controllers\AdminController.cs:556
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only disable a Running tenant."
 msgstr "Puoi solo disabilitare un tenant in esecuzione."
 
 #. await _notifier.ErrorAsync(H["You can only enable a Disabled tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:571
+#: OrchardCore.Tenants\Controllers\AdminController.cs:585
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only enable a Disabled tenant."
 msgstr "Puoi abilitare solo un tenant disabilitato."
 
 #. await _notifier.ErrorAsync(H["You can only remove a 'Disabled' or 'Uninitialized' tenant."]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:629
+#: OrchardCore.Tenants\Controllers\AdminController.cs:643
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "You can only remove a 'Disabled' or 'Uninitialized' tenant."
 msgstr "Puoi rimuovere solo un tenant 'Disabilitato' o 'Non inizializzato'."
 
 #. await _notifier.ErrorAsync(H["An error occurred while removing the tenant '{0}'. {1}", id, context.ErrorMessage]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:636
+#: OrchardCore.Tenants\Controllers\AdminController.cs:650
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "An error occurred while removing the tenant '{0}'. {1}"
 msgstr "Si é verificato un errore nel tentativo di rimuovere il tenant '{0}'. {1}"
 
 #. await _notifier.SuccessAsync(H["The tenant '{0}' was removed, see the log file for more info.", shellSettings.Name]);
-#: OrchardCore.Tenants\Controllers\AdminController.cs:645
+#: OrchardCore.Tenants\Controllers\AdminController.cs:659
 msgctxt "OrchardCore.Tenants.Controllers.AdminController"
 msgid "The tenant '{0}' was removed, see the log file for more info."
 msgstr "Il tenant '{0}' è stato rimosso, vedere il file di log per ulteriori informazioni."
@@ -239,15 +239,15 @@ msgid "Recipe '{0}' not found."
 msgstr ""
 
 #. .Add(S["Multi-Tenancy"], tenancy => tenancy
-#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:33
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:35
 msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
 msgid "Multi-Tenancy"
 msgstr "Multi-Tenancy"
 
 #. .Add(S["Feature Profiles"], S["Feature Profiles"].PrefixPosition(), featureProfiles => featureProfiles
 #. .Add(S["Feature Profiles"], S["Feature Profiles"].PrefixPosition(), featureProfiles => featureProfiles
-#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:35
-#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:35
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:37
+#: OrchardCore.Tenants\FeatureProfilesAdminMenu.cs:37
 msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
 msgid "Feature Profiles"
 msgstr "Profilo delle funzionalità"
@@ -624,14 +624,20 @@ msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "The name of the tenant."
 msgstr "Il nome del tenant."
 
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
+#. <button class="btn btn-primary create" type="submit" name="action" value="create">@T["Create"]</button>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:24
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Create"
 msgstr "Crea"
 
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
+#. <button class="btn btn-primary" type="submit" name="action" value="createAndSetup">@T["Create & Setup"]</button>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:25
+msgctxt "OrchardCore.Tenants.Views.Admin.Create"
+msgid "Create & Setup"
+msgstr ""
+
+#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
+#: OrchardCore.Tenants\Views\Admin\Create.cshtml:26
 msgctxt "OrchardCore.Tenants.Views.Admin.Create"
 msgid "Cancel"
 msgstr "Annulla"
