@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2024-08-24 20:34\n"
+"PO-Revision-Date: 2024-09-04 19:15\n"
 
 #. builder.Add(S["Security"], security => security
 #: OrchardCore.OpenId\AdminMenu.cs:36
@@ -112,10 +112,18 @@ msgstr ""
 
 #. ModelState.AddModelError(nameof(model.Name), S["The name is already taken by another scope."]);
 #. ModelState.AddModelError(nameof(model.Name), S["The name is already taken by another scope."]);
-#: OrchardCore.OpenId\Controllers\ScopeController.cs:118
-#: OrchardCore.OpenId\Controllers\ScopeController.cs:215
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:103
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:197
 msgctxt "OrchardCore.OpenId.Controllers.ScopeController"
 msgid "The name is already taken by another scope."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(model.Resources), S["The resources field cannot contain the value: {0}.", OpenIdConstants.Prefixes.Tenant + _shellSettings.Name]);
+#. ModelState.AddModelError(nameof(model.Resources), S["The resources field cannot contain the value: {0}.", OpenIdConstants.Prefixes.Tenant + _shellSettings.Name]);
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:124
+#: OrchardCore.OpenId\Controllers\ScopeController.cs:221
+msgctxt "OrchardCore.OpenId.Controllers.ScopeController"
+msgid "The resources field cannot contain the value: {0}."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["OpenID server configuration successfully updated."]);
@@ -134,6 +142,54 @@ msgstr ""
 #: OrchardCore.OpenId\Drivers\OpenIdClientSettingsDisplayDriver.cs:170
 msgctxt "OrchardCore.OpenId.Drivers.OpenIdClientSettingsDisplayDriver"
 msgid "The parameters are written in an incorrect format."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Tenant), S["tenant is a required value"]);
+#: OrchardCore.OpenId\Drivers\OpenIdValidationSettingsDisplayDriver.cs:75
+msgctxt "OrchardCore.OpenId.Drivers.OpenIdValidationSettingsDisplayDriver"
+msgid "tenant is a required value"
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Tenant), S["Invalid tenant value."]);
+#: OrchardCore.OpenId\Drivers\OpenIdValidationSettingsDisplayDriver.cs:79
+msgctxt "OrchardCore.OpenId.Drivers.OpenIdValidationSettingsDisplayDriver"
+msgid "Invalid tenant value."
+msgstr ""
+
+#. DisplayName = S["Profile"],
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:26
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Profile"
+msgstr ""
+
+#. Description = S["Requests access to the user's default profile information."]
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:28
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Requests access to the user's default profile information."
+msgstr ""
+
+#. DisplayName = S["Email"],
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:38
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Email"
+msgstr ""
+
+#. Description = S["Requests access to the user's email address. This scope provides the email and email_verified claims, which indicate the user's email address and whether it has been verified."]
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:40
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Requests access to the user's email address. This scope provides the email and email_verified claims, which indicate the user's email address and whether it has been verified."
+msgstr ""
+
+#. DisplayName = S["Phone"],
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:50
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Phone"
+msgstr ""
+
+#. Description = S["Requests access to the user's phone number. This scope includes the phone_number and phone_number_verified claims, which provide the user's phone number and indicate whether it has been verified."]
+#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:52
+msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
+msgid "Requests access to the user's phone number. This scope includes the phone_number and phone_number_verified claims, which provide the user's phone number and indicate whether it has been verified."
 msgstr ""
 
 #. results.Add(new ValidationResult(S["The authority cannot be null or empty."], new[]
@@ -661,55 +717,49 @@ msgid "Cancel"
 msgstr ""
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create a new scope"])</h1></zone>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:4
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:5
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Create a new scope"
 msgstr ""
 
 #. <label asp-for="DisplayName" class="form-label">@T["Display Name"]</label>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:10
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:11
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Display Name"
 msgstr ""
 
 #. <label asp-for="Name" class="form-label">@T["Name"]</label>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:16
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:17
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Name"
 msgstr ""
 
 #. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:22
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:23
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Description"
 msgstr ""
 
-#. <h6>@T["Tenants"]</h6>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:28
-msgctxt "OrchardCore.OpenId.Views.Scope.Create"
-msgid "Tenants"
-msgstr ""
-
-#. <span class="hint">@T["Note: the server tenant is always included in the access token audiences, even if no scope is requested."]</span>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:37
-msgctxt "OrchardCore.OpenId.Views.Scope.Create"
-msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
-msgstr ""
-
 #. <label asp-for="Resources" class="form-label">@T["Additional resources (API audiences)"]</label>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:41
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:29
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Additional resources (API audiences)"
 msgstr ""
 
+#. <span class="hint">@T["A space-separated list of values is required. To utilize another active tenant as a resource, specify it using the format <code>{0}{{tenant_name}}</code>.", OpenIdConstants.Prefixes.Tenant]</span>
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:31
+msgctxt "OrchardCore.OpenId.Views.Scope.Create"
+msgid "A space-separated list of values is required. To utilize another active tenant as a resource, specify it using the format <code>{0}{{tenant_name}}</code>."
+msgstr ""
+
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:47
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:36
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Save"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.OpenId\Views\Scope\Create.cshtml:48
+#: OrchardCore.OpenId\Views\Scope\Create.cshtml:37
 msgctxt "OrchardCore.OpenId.Views.Scope.Create"
 msgid "Cancel"
 msgstr ""
@@ -991,55 +1041,49 @@ msgid "Cancel"
 msgstr ""
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit a scope"])</h1></zone>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:4
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:5
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Edit a scope"
 msgstr ""
 
 #. <label asp-for="DisplayName" class="form-label">@T["Display Name"]</label>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:10
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:11
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Display Name"
 msgstr ""
 
 #. <label asp-for="Name" class="form-label">@T["Name"]</label>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:16
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:17
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Name"
 msgstr ""
 
 #. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:22
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:23
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Description"
 msgstr ""
 
-#. <h6>@T["Tenants"]</h6>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:28
-msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
-msgid "Tenants"
-msgstr ""
-
-#. <span class="hint">@T["Note: the server tenant is always included in the access token audiences, even if no scope is requested."]</span>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:37
-msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
-msgid "Note: the server tenant is always included in the access token audiences, even if no scope is requested."
-msgstr ""
-
 #. <label asp-for="Resources" class="form-label">@T["Additional resources (API audiences)"]</label>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:41
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:29
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Additional resources (API audiences)"
 msgstr ""
 
+#. <span class="hint">@T["A space-separated list of values is required. To utilize another active tenant as a resource, specify it using the format <code>{0}{{tenant_name}}</code>.", OpenIdConstants.Prefixes.Tenant]</span>
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:31
+msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
+msgid "A space-separated list of values is required. To utilize another active tenant as a resource, specify it using the format <code>{0}{{tenant_name}}</code>."
+msgstr ""
+
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:47
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:36
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Save"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:48
+#: OrchardCore.OpenId\Views\Scope\Edit.cshtml:37
 msgctxt "OrchardCore.OpenId.Views.Scope.Edit"
 msgid "Cancel"
 msgstr ""
@@ -1062,14 +1106,20 @@ msgctxt "OrchardCore.OpenId.Views.Application.Index"
 msgid "New application"
 msgstr ""
 
+#. @T["There are no applications at the moment."]
+#: OrchardCore.OpenId\Views\Application\Index.cshtml:17
+msgctxt "OrchardCore.OpenId.Views.Application.Index"
+msgid "There are no applications at the moment."
+msgstr ""
+
 #. <a asp-action="Edit" asp-route-id="@entry.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.OpenId\Views\Application\Index.cshtml:22
+#: OrchardCore.OpenId\Views\Application\Index.cshtml:30
 msgctxt "OrchardCore.OpenId.Views.Application.Index"
 msgid "Edit"
 msgstr ""
 
 #. <a class="delete btn btn-danger btn-sm" asp-route-id="@entry.Id" role="button" asp-action="Delete" data-url-af="UnsafeUrl RemoveUrl">@T["Delete"]</a>
-#: OrchardCore.OpenId\Views\Application\Index.cshtml:23
+#: OrchardCore.OpenId\Views\Application\Index.cshtml:31
 msgctxt "OrchardCore.OpenId.Views.Application.Index"
 msgid "Delete"
 msgstr ""
@@ -1086,14 +1136,20 @@ msgctxt "OrchardCore.OpenId.Views.Scope.Index"
 msgid "New scope"
 msgstr ""
 
+#. @T["There are no scopes at the moment."]
+#: OrchardCore.OpenId\Views\Scope\Index.cshtml:17
+msgctxt "OrchardCore.OpenId.Views.Scope.Index"
+msgid "There are no scopes at the moment."
+msgstr ""
+
 #. <a asp-action="Edit" asp-route-id="@entry.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.OpenId\Views\Scope\Index.cshtml:22
+#: OrchardCore.OpenId\Views\Scope\Index.cshtml:30
 msgctxt "OrchardCore.OpenId.Views.Scope.Index"
 msgid "Edit"
 msgstr ""
 
 #. <a class="delete btn btn-danger btn-sm" asp-route-id="@entry.Id" role="button" asp-action="Delete" data-url-af="UnsafeUrl RemoveUrl">@T["Delete"]</a>
-#: OrchardCore.OpenId\Views\Scope\Index.cshtml:23
+#: OrchardCore.OpenId\Views\Scope\Index.cshtml:31
 msgctxt "OrchardCore.OpenId.Views.Scope.Index"
 msgid "Delete"
 msgstr ""
@@ -1789,49 +1845,49 @@ msgid "Authorization server tenant"
 msgstr ""
 
 #. <label asp-for="Authority" class="form-label">@T["Authority"]</label>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:23
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:17
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Authority"
 msgstr ""
 
 #. <span class="hint">@T["The address of the remote OpenID Connect server. Using a HTTPS address is strongly recommended."]</span>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:26
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:20
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "The address of the remote OpenID Connect server. Using a HTTPS address is strongly recommended."
 msgstr ""
 
 #. <label asp-for="MetadataAddress" class="form-label">@T["OpenID Connect Metadata Address"]</label>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:30
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:24
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "OpenID Connect Metadata Address"
 msgstr ""
 
 #. <span class="hint">@T["The well-formed URI of the OpenID Connect Metadata Address endpoint. This is only for advanced scenarios when metadata is not available from the standard authority endpoint. It cannot be used when using a Tenant and using a HTTPS address is strongly recommended."]</span>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:33
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:27
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "The well-formed URI of the OpenID Connect Metadata Address endpoint. This is only for advanced scenarios when metadata is not available from the standard authority endpoint. It cannot be used when using a Tenant and using a HTTPS address is strongly recommended."
 msgstr ""
 
 #. <label asp-for="Audience" class="form-label">@T["Audience"]</label>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:37
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:31
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Audience"
 msgstr ""
 
 #. <span class="hint">@T["The unique name associated with this tenant. If none is provided, the tenant name is automatically used as the default audience."]</span>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:40
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:34
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "The unique name associated with this tenant. If none is provided, the tenant name is automatically used as the default audience."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="DisableTokenTypeValidation">@T["Disable token type validation"]</label>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:46
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:40
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Disable token type validation"
 msgstr ""
 
 #. <span class="hint dashed">@T["Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."]</span>
-#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:47
+#: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:41
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."
 msgstr ""
