@@ -10,32 +10,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2023-12-22 16:15\n"
+"PO-Revision-Date: 2024-08-24 20:14\n"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:25
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:23
 msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
 msgid "Configuration"
 msgstr "Конфігурація"
 
 #. .Add(S["Import/Export"], import => import
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:26
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:24
 msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
 msgid "Import/Export"
 msgstr "Імпорт/Експорт"
 
 #. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
 #. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:27
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:27
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:25
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:25
 msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
 msgid "Remote Instances"
 msgstr "Віддалені інстанції"
 
 #. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
 #. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:32
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:32
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:30
+#: OrchardCore.Deployment.Remote\AdminMenu.cs:30
 msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
 msgid "Remote Clients"
 msgstr "Віддалені клієнти"
@@ -52,110 +52,122 @@ msgctxt "OrchardCore.Deployment.Remote.Controllers.ExportRemoteInstanceControlle
 msgid "An error occurred while sending the deployment to the remote instance: \"{0} ({1})\""
 msgstr "Виникла помилка при відправці розгортання до віддаленої інстанції: \"{0} ({1})\""
 
-#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:93
+#. await _notifier.ErrorAsync(H["The deployment plan failed with the following errors: {0}", string.Join(' ', e.StepResult.Errors)]);
+#: OrchardCore.Deployment.Remote\Controllers\ImportRemoteInstanceController.cs:92
+msgctxt "OrchardCore.Deployment.Remote.Controllers.ImportRemoteInstanceController"
+msgid "The deployment plan failed with the following errors: {0}"
+msgstr ""
+
+#. await _notifier.ErrorAsync(H["Unexpected error occurred while executing a deployment plan."]);
+#: OrchardCore.Deployment.Remote\Controllers\ImportRemoteInstanceController.cs:98
+msgctxt "OrchardCore.Deployment.Remote.Controllers.ImportRemoteInstanceController"
+msgid "Unexpected error occurred while executing a deployment plan."
+msgstr ""
+
+#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:96
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Delete"
 msgstr "Видалити"
 
 #. await _notifier.SuccessAsync(H["Remote client created successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:137
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:139
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote client created successfully."
 msgstr "Віддалений клієнт створений успішно."
 
 #. await _notifier.SuccessAsync(H["Remote client updated successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:193
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:195
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote client updated successfully."
 msgstr "Віддалений клієнт оновлений успішно."
 
 #. await _notifier.SuccessAsync(H["Remote client deleted successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:219
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:221
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote client deleted successfully."
 msgstr "Віддалений клієнт успішно видалений."
 
 #. await _notifier.SuccessAsync(H["Remote clients successfully removed."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:247
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:249
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote clients successfully removed."
 msgstr "Віддалені клієнти успішно вилучені."
 
 #. ModelState.AddModelError(nameof(EditRemoteClientViewModel.ClientName), S["The client name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:261
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:263
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "The client name is mandatory."
 msgstr "Ім'я клієнта є обов'язковим."
 
 #. ModelState.AddModelError(nameof(EditRemoteClientViewModel.ApiKey), S["The api key is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:266
+#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:268
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "The api key is mandatory."
 msgstr "Ключ API є обов'язковим."
 
-#. new SelectListItem() { Text = S["Delete"], Value = nameof(ContentsBulkAction.Remove) }
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:86
+#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:89
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Delete"
 msgstr "Видалити"
 
 #. await _notifier.SuccessAsync(H["Remote instance created successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:130
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:132
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instance created successfully."
 msgstr "Віддалена інстанція успішно створена."
 
 #. await _notifier.SuccessAsync(H["Remote instance updated successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:188
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:190
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instance updated successfully."
 msgstr "Віддалена інстанція успішно оновлена."
 
 #. await _notifier.SuccessAsync(H["Remote instance deleted successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:214
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:216
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instance deleted successfully."
 msgstr "Віддалена інстанція успішно видалена."
 
 #. await _notifier.SuccessAsync(H["Remote instances successfully removed."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:242
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:244
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instances successfully removed."
 msgstr "Віддалені інстанції успішно вилучені."
 
 #. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Name), S["The name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:256
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:258
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The name is mandatory."
 msgstr "Назва обов'язкова."
 
 #. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.ClientName), S["The client name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:261
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:263
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The client name is mandatory."
 msgstr "Ім'я клієнта є обов'язковим."
 
 #. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.ApiKey), S["The api key is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:266
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:268
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The api key is mandatory."
 msgstr "Ключ API є обов'язковим."
 
 #. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Url), S["The url is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:271
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:273
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The url is mandatory."
 msgstr "URL-адреса обов'язкова."
 
 #. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Url), S["The url is invalid."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:277
+#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:279
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The url is invalid."
 msgstr "Неприпустима URL-адреса."
 
 #. description: S["Sends the deployment plan to a remote instance."],
-#: OrchardCore.Deployment.Remote\Services\RemoteInstanceDeploymentTargetProvider.cs:30
+#: OrchardCore.Deployment.Remote\Services\RemoteInstanceDeploymentTargetProvider.cs:27
 msgctxt "OrchardCore.Deployment.RemoteInstanceDeploymentTargetProvider"
 msgid "Sends the deployment plan to a remote instance."
 msgstr "Надсилає план розгортання до віддаленої інстанції."

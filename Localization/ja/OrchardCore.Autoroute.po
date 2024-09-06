@@ -10,10 +10,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2023-12-22 16:09\n"
+"PO-Revision-Date: 2024-08-24 20:06\n"
 
-#. updater.ModelState.AddModelError(Prefix, nameof(model.Path), S["Your permalink is already in use."]);
-#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplayDriver.cs:125
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Path), S["Your permalink is already in use."]);
+#: OrchardCore.Autoroute\Drivers\AutoroutePartDisplayDriver.cs:127
 msgctxt "OrchardCore.Autoroute.Drivers.AutoroutePartDisplayDriver"
 msgid "Your permalink is already in use."
 msgstr ""
@@ -22,52 +22,52 @@ msgstr ""
 #: OrchardCore.Autoroute\GraphQL\AutorouteInputObjectType.cs:13
 msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteInputObjectType"
 msgid "the custom URL part of the content item"
-msgstr "コンテンツの項目のカスタム URL部分"
+msgstr "コンテンツ項目のカスタム URL部分"
 
 #. AddScalarFilterFields<StringGraphType>("path", S["the path of the content item to filter"]);
 #: OrchardCore.Autoroute\GraphQL\AutorouteInputObjectType.cs:15
 msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteInputObjectType"
 msgid "the path of the content item to filter"
-msgstr "コンテンツの項目をフィルタするためのパス"
+msgstr "コンテンツ項目をフィルタするためのパス"
 
 #. Description = S["Custom URLs (permalinks) for your content item."];
 #: OrchardCore.Autoroute\GraphQL\AutorouteQueryObjectType.cs:12
 msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteQueryObjectType"
 msgid "Custom URLs (permalinks) for your content item."
-msgstr "コンテンツの項目のカスタムURL(パーマリンク)"
+msgstr "コンテンツ項目のカスタムURL(パーマリンク)"
 
 #. Field(x => x.Path).Description(S["The permalinks for your content item."]);
 #: OrchardCore.Autoroute\GraphQL\AutorouteQueryObjectType.cs:14
 msgctxt "OrchardCore.Autoroute.GraphQL.AutorouteQueryObjectType"
 msgid "The permalinks for your content item."
-msgstr "コンテンツの項目のパーマリンク"
+msgstr "コンテンツ項目のパーマリンク"
 
 #. context.Fail(S["Your permalink is already in use."], nameof(part.Path));
-#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:132
+#: OrchardCore.Autoroute\Handlers\AutoroutePartHandler.cs:130
 msgctxt "OrchardCore.Autoroute.Handlers.AutoroutePartHandler"
 msgid "Your permalink is already in use."
 msgstr "そのパーマリンクはすでに使用されています"
 
 #. yield return new ValidationResult(S["Your permalink can't be set to the homepage, please use the homepage option instead."], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:15
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:12
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Your permalink can't be set to the homepage, please use the homepage option instead."
 msgstr ""
 
 #. yield return new ValidationResult(S["Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead).", invalidCharactersForMessage], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:21
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:18
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Please do not use any of the following characters in your permalink: {0}. No spaces, or consecutive slashes, are allowed (please use dashes or underscores instead)."
 msgstr ""
 
 #. yield return new ValidationResult(S["Your permalink is too long. The permalink can only be up to {0} characters.", AutoroutePart.MaxPathLength], new[] { nameof(autoroute.Path) });
-#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:26
+#: OrchardCore.Autoroute\Models\AutoroutePartExtensions.cs:23
 msgctxt "OrchardCore.Autoroute.Models.AutoroutePartExtensions"
 msgid "Your permalink is too long. The permalink can only be up to {0} characters."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Autoroute\Settings\AutoroutePartSettingsDisplayDriver.cs:59
+#: OrchardCore.Autoroute\Settings\AutoroutePartSettingsDisplayDriver.cs:60
 msgctxt "OrchardCore.Autoroute.Settings.AutoroutePartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "バターンは正しいリキッド式を含んでいません。詳細: {0}"
@@ -82,9 +82,9 @@ msgstr "無効"
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:23
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Check to disable autoroute for this content item."
-msgstr "チェックするとこのコンテンツ項目の自動url生成処理を無効にします"
+msgstr "チェックするとこのコンテンツ項目の自動URL生成処理を無効にします"
 
-#. <label asp-for="Path" class="@Orchard.GetLabelClasses()">@T["Permalink"]</label>
+#. <label asp-for="Path" class="@Orchard.GetLabelClasses(inputRequired: true)">@T["Permalink"]</label>
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:31
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "Permalink"
@@ -100,13 +100,13 @@ msgstr "コンテンツの項目の url。入力しない場合は自動生成�
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:51
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "The url of the content item. It will be automatically generated."
-msgstr "コンテンツの項目のurl。自動生成されます。"
+msgstr "コンテンツ項目のURL。自動生成されます。"
 
 #. <div class="alert alert-info">@T["This content item is the current homepage"]</div>
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:61
 msgctxt "OrchardCore.Autoroute.Views.AutoroutePart.Edit"
 msgid "This content item is the current homepage"
-msgstr "このコンテンツの項目は現在のホームページです"
+msgstr "このコンテンツ項目は現在のホームページです"
 
 #. <label class="form-check-label" asp-for="SetHomepage">@T["Set as homepage"]</label>
 #: OrchardCore.Autoroute\Views\AutoroutePart.Edit.cshtml:71

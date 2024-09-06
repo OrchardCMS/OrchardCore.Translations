@@ -10,90 +10,140 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Croatian\n"
 "Language: hr_HR\n"
-"PO-Revision-Date: 2023-12-22 16:30\n"
+"PO-Revision-Date: 2024-08-24 20:49\n"
 
 #. public override LocalizedString DisplayText => S["SMS Task"];
-#: OrchardCore.Sms\Activities\SmsTask.cs:32
+#: OrchardCore.Sms\Activities\SmsTask.cs:26
 msgctxt "OrchardCore.Sms.Activities.SmsTask"
 msgid "SMS Task"
 msgstr ""
 
 #. public override LocalizedString Category => S["Messaging"];
-#: OrchardCore.Sms\Activities\SmsTask.cs:34
+#: OrchardCore.Sms\Activities\SmsTask.cs:28
 msgctxt "OrchardCore.Sms.Activities.SmsTask"
 msgid "Messaging"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Sms\Activities\SmsTask.cs:50
+#: OrchardCore.Sms\Activities\SmsTask.cs:44
 msgctxt "OrchardCore.Sms.Activities.SmsTask"
 msgid "Done"
 msgstr ""
 
 #. return Outcomes(S["Done"], S["Failed"]);
-#: OrchardCore.Sms\Activities\SmsTask.cs:50
+#: OrchardCore.Sms\Activities\SmsTask.cs:44
 msgctxt "OrchardCore.Sms.Activities.SmsTask"
 msgid "Failed"
 msgstr ""
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Sms\AdminMenu.cs:25
+#: OrchardCore.Sms\AdminMenu.cs:32
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Sms\AdminMenu.cs:26
+#: OrchardCore.Sms\AdminMenu.cs:33
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "Settings"
 msgstr ""
 
 #. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
 #. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
-#: OrchardCore.Sms\AdminMenu.cs:27
-#: OrchardCore.Sms\AdminMenu.cs:27
+#: OrchardCore.Sms\AdminMenu.cs:34
+#: OrchardCore.Sms\AdminMenu.cs:34
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "SMS"
 msgstr ""
 
-#. updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Phone number requires a value."]);
+#. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
+#. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
+#: OrchardCore.Sms\AdminMenu.cs:41
+#: OrchardCore.Sms\AdminMenu.cs:41
+msgctxt "OrchardCore.Sms.AdminMenu"
+msgid "SMS Test"
+msgstr ""
+
+#. ModelState.AddModelError(nameof(model.Provider), S["Please select a valid provider."]);
+#: OrchardCore.Sms\Controllers\AdminController.cs:72
+msgctxt "OrchardCore.Sms.Controllers.AdminController"
+msgid "Please select a valid provider."
+msgstr ""
+
+#. ModelState.AddModelError(nameof(model.PhoneNumber), S["Please provide a valid phone number."]);
+#: OrchardCore.Sms\Controllers\AdminController.cs:76
+msgctxt "OrchardCore.Sms.Controllers.AdminController"
+msgid "Please provide a valid phone number."
+msgstr ""
+
+#. Body = S["This is a test SMS message."]
+#: OrchardCore.Sms\Controllers\AdminController.cs:83
+msgctxt "OrchardCore.Sms.Controllers.AdminController"
+msgid "This is a test SMS message."
+msgstr ""
+
+#. await _notifier.SuccessAsync(H["The test SMS message has been successfully sent."]);
+#: OrchardCore.Sms\Controllers\AdminController.cs:88
+msgctxt "OrchardCore.Sms.Controllers.AdminController"
+msgid "The test SMS message has been successfully sent."
+msgstr ""
+
+#. await _notifier.ErrorAsync(H["The test SMS message failed to send."]);
+#: OrchardCore.Sms\Controllers\AdminController.cs:94
+msgctxt "OrchardCore.Sms.Controllers.AdminController"
+msgid "The test SMS message failed to send."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultProvider), S["You must select a default provider."]);
+#: OrchardCore.Sms\Drivers\SmsSettingsDisplayDriver.cs:73
+msgctxt "OrchardCore.Sms.Drivers.SmsSettingsDisplayDriver"
+msgid "You must select a default provider."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Phone number requires a value."]);
 #: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:46
 msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
 msgid "Phone number requires a value."
 msgstr ""
 
-#. updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Invalid phone number used."]);
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Invalid phone number used."]);
 #: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:50
 msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
 msgid "Invalid phone number used."
 msgstr ""
 
-#. updater.ModelState.AddModelError(Prefix, nameof(viewModel.Body), S["Message Body requires a value."]);
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Body), S["Message Body requires a value."]);
 #: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:55
 msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
 msgid "Message Body requires a value."
 msgstr ""
 
+#. await _notifier.WarningAsync(H["You have successfully disabled the default SMS provider. The SMS service is now disable and will remain disabled until you designate a new default provider."]);
+#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:89
+msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
+msgid "You have successfully disabled the default SMS provider. The SMS service is now disable and will remain disabled until you designate a new default provider."
+msgstr ""
+
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PhoneNumber), S["Phone number requires a value."]);
-#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:75
+#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:104
 msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
 msgid "Phone number requires a value."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PhoneNumber), S["Please provide a valid phone number."]);
-#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:79
+#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:108
 msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
 msgid "Please provide a valid phone number."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.AccountSID), S["Account SID requires a value."]);
-#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:84
+#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:113
 msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
 msgid "Account SID requires a value."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.AuthToken), S["Auth Token required a value."]);
-#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:89
+#: OrchardCore.Sms\Drivers\TwilioSettingsDisplayDriver.cs:118
 msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
 msgid "Auth Token required a value."
 msgstr ""
@@ -158,38 +208,80 @@ msgctxt "OrchardCore.Sms.Views.Items.SmsTask.Fields.Thumbnail"
 msgid "Send an SMS message."
 msgstr ""
 
+#. @T["No SMS providers are available. Enable at least one SMS provider feature."]
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:9
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "No SMS providers are available. Enable at least one SMS provider feature."
+msgstr ""
+
+#. <label asp-for="Provider" class="@Orchard.GetLabelClasses()">@T["Provider"]</label>
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:18
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "Provider"
+msgstr ""
+
+#. <option value="">@T["Select a provider"]</option>
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:21
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "Select a provider"
+msgstr ""
+
+#. <label asp-for="PhoneNumber" class="@Orchard.GetLabelClasses()">@T["Phone Number"]</label>
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:27
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "Phone Number"
+msgstr ""
+
+#. <span>@T["Phone number must include a country code. For example, +1 for United States."]</span>
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:30
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "Phone number must include a country code. For example, +1 for United States."
+msgstr ""
+
+#. <button type="submit" class="btn btn-primary">@T["Send"]</button>
+#: OrchardCore.Sms\Views\Admin\Test.cshtml:36
+msgctxt "OrchardCore.Sms.Views.Admin.Test"
+msgid "Send"
+msgstr ""
+
+#. <label class="form-check-label" asp-for="IsEnabled">@T["Enable Twilio Provider"]</label>
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:10
+msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
+msgid "Enable Twilio Provider"
+msgstr ""
+
 #. <h4>@T["Twilio Account Info"]</h4>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:8
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Twilio Account Info"
 msgstr ""
 
 #. <label asp-for="PhoneNumber" class="form-label">@T["Phone Number"]</label>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:10
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:18
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Phone Number"
 msgstr ""
 
 #. <span class="hint">@T["Phone number must include a country code. For example, +1 for United States."]</span>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:13
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:21
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Phone number must include a country code. For example, +1 for United States."
 msgstr ""
 
 #. <label asp-for="AccountSID" class="form-label">@T["Account SID"]</label>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:17
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Account SID"
 msgstr ""
 
 #. <label asp-for="AuthToken" class="form-label">@T["Auth Token"]</label>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:23
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:31
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Auth Token"
 msgstr ""
 
 #. <span class="hint">@T["Auth token was securely saved. Enter a new value if you wish to replace the existing secret."]</span>
-#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:28
+#: OrchardCore.Sms\Views\TwilioSettings.Edit.cshtml:36
 msgctxt "OrchardCore.Sms.Views.TwilioSettings.Edit"
 msgid "Auth token was securely saved. Enter a new value if you wish to replace the existing secret."
 msgstr ""

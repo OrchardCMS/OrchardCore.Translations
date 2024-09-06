@@ -10,54 +10,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2023-12-22 16:29\n"
+"PO-Revision-Date: 2024-08-24 20:18\n"
 
-#. builder.Add(S["Content"], design => design
-#: OrchardCore.Menu\AdminMenu.cs:33
+#. .Add(S["Content"], design => design
+#: OrchardCore.Menu\AdminMenu.cs:32
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Content"
 msgstr ""
 
 #. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
 #. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
-#: OrchardCore.Menu\AdminMenu.cs:34
-#: OrchardCore.Menu\AdminMenu.cs:34
+#: OrchardCore.Menu\AdminMenu.cs:33
+#: OrchardCore.Menu\AdminMenu.cs:33
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Menus"
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Menu item deleted successfully."]);
-#: OrchardCore.Menu\Controllers\AdminController.cs:283
+#: OrchardCore.Menu\Controllers\AdminController.cs:279
 msgctxt "OrchardCore.Menu.Controllers.AdminController"
 msgid "Menu item deleted successfully."
 msgstr ""
 
-#. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
+#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
+#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
 #: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:101
 #: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:109
 msgctxt "OrchardCore.Menu.Drivers.HtmlMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr ""
 
-#. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#. updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:96
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:104
+#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
+#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
+#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:91
+#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:99
 msgctxt "OrchardCore.Menu.Drivers.LinkMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr ""
 
 #. await _notifier.WarningAsync(H["The menu item content item with id {0} has no matching {1} content type definition.", menuItem.ContentItem.ContentItemId, menuItem.ContentItem.ContentType]);
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:52
+#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:53
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "The menu item content item with id {0} has no matching {1} content type definition."
 msgstr ""
 
 #. await _notifier.WarningAsync(H["Publishing this content item may erase created content. Fix any content type issues beforehand."]);
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:59
+#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:60
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
+msgstr ""
+
+#. [new StereotypeDescription { Stereotype = "MenuItem", DisplayName = S["Menu Item"] }]);
+#: OrchardCore.Menu\Services\MenuItemStereotypesProvider.cs:18
+msgctxt "OrchardCore.Menu.Services.MenuItemStereotypesProvider"
+msgid "Menu Item"
 msgstr ""
 
 #. <label asp-for="Name" class="@Orchard.GetLabelClasses()">@T["Name"]</label>
@@ -102,8 +108,44 @@ msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Url"
 msgstr ""
 
-#. <label asp-for="Html" class="@Orchard.GetLabelClasses()">@T["Html"]</label>
+#. <label asp-for="Target" class="@Orchard.GetLabelClasses()">@T["Target"]</label>
 #: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:19
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Target"
+msgstr ""
+
+#. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (this is default)."]</option>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:23
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the same frame as it was clicked (this is default)."
+msgstr ""
+
+#. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:24
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in a new window or tab."
+msgstr ""
+
+#. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:25
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the parent frame."
+msgstr ""
+
+#. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:26
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the full body of the window."
+msgstr ""
+
+#. <span class="hint">@T["The target attribute of the A tag, see more:"] <a class="seedoc" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target">target</a></span>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:28
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "The target attribute of the A tag, see more:"
+msgstr ""
+
+#. <label asp-for="Html" class="@Orchard.GetLabelClasses()">@T["Html"]</label>
+#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:33
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Html"
 msgstr ""
@@ -150,6 +192,42 @@ msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Url"
 msgstr ""
 
+#. <label asp-for="Target" class="@Orchard.GetLabelClasses()">@T["Target"]</label>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:19
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Target"
+msgstr ""
+
+#. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (this is default)."]</option>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:23
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in the same frame as it was clicked (this is default)."
+msgstr ""
+
+#. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:24
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in a new window or tab."
+msgstr ""
+
+#. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:25
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in the parent frame."
+msgstr ""
+
+#. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:26
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in the full body of the window."
+msgstr ""
+
+#. <span class="hint">@T["The target attribute of the A tag, see more:"] <a class="seedoc" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target">target</a></span>
+#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:28
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "The target attribute of the A tag, see more:"
+msgstr ""
+
 #. <h4 class="card-title">@T["Link Menu Item"]</h4>
 #: OrchardCore.Menu\Views\LinkMenuItemPart.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Thumbnail"
@@ -163,19 +241,19 @@ msgid "Links to a custom url."
 msgstr ""
 
 #. @T["Edit"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:38
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:35
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Edit"
 msgstr ""
 
 #. @T["Add"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:41
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:38
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Add"
 msgstr ""
 
 #. @T["Delete"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:50
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:47
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Delete"
 msgstr ""
