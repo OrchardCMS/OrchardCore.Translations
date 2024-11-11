@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2024-09-09 17:08\n"
+"PO-Revision-Date: 2024-11-10 17:24\n"
 
 #. .Add(S["Security"], security => security
 #: OrchardCore.OpenId\AdminMenu.cs:32
@@ -155,42 +155,6 @@ msgstr "tenant est une valeur requise"
 msgctxt "OrchardCore.OpenId.Drivers.OpenIdValidationSettingsDisplayDriver"
 msgid "Invalid tenant value."
 msgstr "Valeur du tenant invalide."
-
-#. DisplayName = S["Profile"],
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:26
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Profile"
-msgstr "Profil"
-
-#. Description = S["Requests access to the user's default profile information."]
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:28
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Requests access to the user's default profile information."
-msgstr "Demande l'accès aux informations de profil par défaut de l'utilisateur."
-
-#. DisplayName = S["Email"],
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:38
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Email"
-msgstr "Email"
-
-#. Description = S["Requests access to the user's email address. This scope provides the email and email_verified claims, which indicate the user's email address and whether it has been verified."]
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:40
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Requests access to the user's email address. This scope provides the email and email_verified claims, which indicate the user's email address and whether it has been verified."
-msgstr "Demande l'accès à l'adresse email de l'utilisateur. Ce scope fournit les claims email et email_verified, qui indiquent l'adresse email de l'utilisateur et si elle a été vérifiée."
-
-#. DisplayName = S["Phone"],
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:50
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Phone"
-msgstr "Téléphone"
-
-#. Description = S["Requests access to the user's phone number. This scope includes the phone_number and phone_number_verified claims, which provide the user's phone number and indicate whether it has been verified."]
-#: OrchardCore.OpenId\Migrations\DefaultScopesMigration.cs:52
-msgctxt "OrchardCore.OpenId.Migrations.DefaultScopesMigration"
-msgid "Requests access to the user's phone number. This scope includes the phone_number and phone_number_verified claims, which provide the user's phone number and indicate whether it has been verified."
-msgstr "Demande l'accès au numéro de téléphone de l'utilisateur. Ce scope comprend les claims phone_number et phone_number_verified, qui fournissent le numéro de téléphone de l'utilisateur et indiquent si elle a été vérifiée."
 
 #. results.Add(new ValidationResult(S["The authority cannot be null or empty."], new[]
 #: OrchardCore.OpenId\Services\OpenIdClientService.cs:51
@@ -421,27 +385,27 @@ msgid "{0} is not well-formed"
 msgstr "{0} n'est pas bien formé"
 
 #. [Required(ErrorMessage = "Authority is required")]
-#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:12
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:13
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
 msgid "Authority is required"
 msgstr "L'autorité est requise"
 
 #. [Required(ErrorMessage = "ClientId is required")]
-#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:15
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:16
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
 msgid "ClientId is required"
 msgstr "Le ClientID est requis"
 
 #. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
 #. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
-#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:20
-#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:26
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:24
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:30
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
 msgid "Invalid path"
 msgstr "Chemin invalide"
 
 #. [Url(ErrorMessage = "Invalid SignedOut redirect url")]
-#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:23
+#: OrchardCore.OpenId\ViewModels\OpenIdClientSettingsViewModel.cs:27
 msgctxt "OrchardCore.OpenId.ViewModels.OpenIdClientSettingsViewModel"
 msgid "Invalid SignedOut redirect url"
 msgstr "Url de redirection de déconnexion invalide"
@@ -540,28 +504,18 @@ msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Authorization Code Flow"
 msgstr "Autoriser le flux Authorization Code"
 
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.3">https://tools.ietf.org/html/rfc6749#section-1.3.3</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.4">https://tools.ietf.org/html/rfc6749#section-1.3.4</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens">http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens</a></span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth"]</span>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:57
-#: OrchardCore.OpenId\Views\Application\Create.cshtml:66
-#: OrchardCore.OpenId\Views\Application\Create.cshtml:75
-#: OrchardCore.OpenId\Views\Application\Create.cshtml:84
-#: OrchardCore.OpenId\Views\Application\Create.cshtml:93
-#: OrchardCore.OpenId\Views\Application\Create.cshtml:102
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
-msgid "More info:"
-msgstr "Plus d'infos :"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Authorization Code Flow."
 
-#. <div id="AllowAuthorizationCodeFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'code', client_id, client_secret,  scope ('openid, profile, roles)')</div>
-#. <div id="AllowImplicitFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'id_token token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</div>
-#. <div id="AllowHybridFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'code id_token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</div>
-#. <div id="AllowPasswordFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'password', client_id, client_secret, username, password,  scope ('openid, profile, roles)')</div>
-#. <div id="AllowClientCredentialsFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'client_credentials', client_id, client_secret,  scope ('openid, profile, roles')</div>
-#. <div id="AllowRefreshTokenFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'refresh_token', client_id, client_secret, refresh_token</div>
+#. <div id="AllowAuthorizationCodeFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'code', client_id, client_secret,  scope ('openid, profile, roles)')</code></div>
+#. <div id="AllowImplicitFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'id_token token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowHybridFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>rant_type = 'code id_token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowPasswordFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'password', client_id, client_secret, username, password,  scope ('openid, profile, roles)')</code></div>
+#. <div id="AllowClientCredentialsFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'client_credentials', client_id, client_secret,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowRefreshTokenFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'refresh_token', client_id, client_secret, refresh_token</code></div>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:59
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:68
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:77
@@ -578,11 +532,23 @@ msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Implicit Flow"
 msgstr "Autoriser Implicit Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:66
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Implicit Flow."
+
 #. <label class="form-check-label" asp-for="AllowHybridFlow">@T["Allow Hybrid Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:74
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Hybrid Flow"
 msgstr "Autoriser le flux hybride"
+
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:75
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Hybrid Flow."
 
 #. <label class="form-check-label" asp-for="AllowPasswordFlow">@T["Allow Password Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:83
@@ -590,17 +556,35 @@ msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Password Flow"
 msgstr "Autoriser le Password Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.3"]</span>
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:84
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Password Flow."
+
 #. <label class="form-check-label" asp-for="AllowClientCredentialsFlow">@T["Allow Client Credentials Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:92
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Client Credentials Flow"
 msgstr "Autoriser le Client Credentials Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.4"]</span>
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:93
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Client Credentials Flow."
+
 #. <label class="form-check-label" asp-for="AllowRefreshTokenFlow">@T["Allow Refresh Token Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:101
 msgctxt "OrchardCore.OpenId.Views.Application.Create"
 msgid "Allow Refresh Token Flow"
 msgstr "Autoriser le Refresh Token Flow"
+
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens"]</span>
+#: OrchardCore.OpenId\Views\Application\Create.cshtml:102
+msgctxt "OrchardCore.OpenId.Views.Application.Create"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Refresh Token Flow."
 
 #. <label asp-for="RedirectUris" class="form-label">@T["Redirect Uris"]</label>
 #: OrchardCore.OpenId\Views\Application\Create.cshtml:110
@@ -864,28 +848,18 @@ msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Authorization Code Flow"
 msgstr "Autoriser le flux Authorization Code"
 
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.3">https://tools.ietf.org/html/rfc6749#section-1.3.3</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.4">https://tools.ietf.org/html/rfc6749#section-1.3.4</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens">http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens</a></span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth"]</span>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:69
-#: OrchardCore.OpenId\Views\Application\Edit.cshtml:78
-#: OrchardCore.OpenId\Views\Application\Edit.cshtml:87
-#: OrchardCore.OpenId\Views\Application\Edit.cshtml:96
-#: OrchardCore.OpenId\Views\Application\Edit.cshtml:105
-#: OrchardCore.OpenId\Views\Application\Edit.cshtml:114
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
-msgid "More info:"
-msgstr "Plus d'infos :"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Authorization Code Flow."
 
-#. <div id="AllowAuthorizationCodeFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'code', client_id, client_secret,  scope ('openid, profile, roles)')</div>
-#. <div id="AllowImplicitFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'id_token token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</div>
-#. <div id="AllowHybridFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'code id_token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</div>
-#. <div id="AllowPasswordFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'password', client_id, client_secret, username, password,  scope ('openid, profile, roles)')</div>
-#. <div id="AllowClientCredentialsFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'client_credentials', client_id, client_secret,  scope ('openid, profile, roles')</div>
-#. <div id="AllowRefreshTokenFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] grant_type = 'refresh_token', client_id, client_secret, refresh_token</div>
+#. <div id="AllowAuthorizationCodeFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'code', client_id, client_secret,  scope ('openid, profile, roles)')</code></div>
+#. <div id="AllowImplicitFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'id_token token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowHybridFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>rant_type = 'code id_token', client_id, client_secret, redirect_uri ='', nonce,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowPasswordFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'password', client_id, client_secret, username, password,  scope ('openid, profile, roles)')</code></div>
+#. <div id="AllowClientCredentialsFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'client_credentials', client_id, client_secret,  scope ('openid, profile, roles')</code></div>
+#. <div id="AllowRefreshTokenFlowRecommendedHint" class="hint collapse">@T["Recommended Parameters:"] <code>grant_type = 'refresh_token', client_id, client_secret, refresh_token</code></div>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:71
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:80
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:89
@@ -902,11 +876,23 @@ msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Implicit Flow"
 msgstr "Autoriser Implicit Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:78
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Implicit Flow."
+
 #. <label class="form-check-label" asp-for="AllowHybridFlow">@T["Allow Hybrid Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:86
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Hybrid Flow"
 msgstr "Autoriser le flux hybride"
+
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:87
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Hybrid Flow."
 
 #. <label class="form-check-label" asp-for="AllowPasswordFlow">@T["Allow Password Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:95
@@ -914,17 +900,35 @@ msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Password Flow"
 msgstr "Autoriser le Password Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.3"]</span>
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:96
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Password Flow."
+
 #. <label class="form-check-label" asp-for="AllowClientCredentialsFlow">@T["Allow Client Credentials Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:104
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Client Credentials Flow"
 msgstr "Autoriser le Client Credentials Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.4"]</span>
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:105
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Client Credentials Flow."
+
 #. <label class="form-check-label" asp-for="AllowRefreshTokenFlow">@T["Allow Refresh Token Flow"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:113
 msgctxt "OrchardCore.OpenId.Views.Application.Edit"
 msgid "Allow Refresh Token Flow"
 msgstr "Autoriser le Refresh Token Flow"
+
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens"]</span>
+#: OrchardCore.OpenId\Views\Application\Edit.cshtml:114
+msgctxt "OrchardCore.OpenId.Views.Application.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Refresh Token Flow."
 
 #. <label asp-for="RedirectUris" class="form-label">@T["Redirect Uris"]</label>
 #: OrchardCore.OpenId\Views\Application\Edit.cshtml:122
@@ -1154,11 +1158,11 @@ msgctxt "OrchardCore.OpenId.Views.Scope.Index"
 msgid "Delete"
 msgstr "Supprimer"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Configure OpenID server settings"])</h1></zone>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Configure OpenID Connect server settings"])</h1></zone>
 #: OrchardCore.OpenId\Views\ServerConfiguration\Index.cshtml:3
 msgctxt "OrchardCore.OpenId.Views.ServerConfiguration.Index"
-msgid "Configure OpenID server settings"
-msgstr "Configurer les paramètres du serveur OpenID"
+msgid "Configure OpenID Connect server settings"
+msgstr "Configurer les paramètres du serveur OpenID Connect"
 
 #. <button class="btn btn-primary" type="submit">@T["Update the server settings and reload the tenant"]</button>
 #: OrchardCore.OpenId\Views\ServerConfiguration\Index.cshtml:10
@@ -1166,11 +1170,11 @@ msgctxt "OrchardCore.OpenId.Views.ServerConfiguration.Index"
 msgid "Update the server settings and reload the tenant"
 msgstr "Mettre à jour les paramètres du serveur et recharger le locataire"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Configure OpenID validation settings"])</h1></zone>
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Configure OpenID Connect validation settings"])</h1></zone>
 #: OrchardCore.OpenId\Views\ValidationConfiguration\Index.cshtml:3
 msgctxt "OrchardCore.OpenId.Views.ValidationConfiguration.Index"
-msgid "Configure OpenID validation settings"
-msgstr "Configurer les paramètres de validation OpenID"
+msgid "Configure OpenID Connect validation settings"
+msgstr "Configurer les paramètres de validation OpenID Connect"
 
 #. <button class="btn btn-primary" type="submit">@T["Update the server settings and reload the tenant"]</button>
 #: OrchardCore.OpenId\Views\ValidationConfiguration\Index.cshtml:10
@@ -1190,217 +1194,217 @@ msgctxt "OrchardCore.OpenId.Views.Access.Logout"
 msgid "Are you sure you want to log out?"
 msgstr "Êtes-vous sûr de vouloir vous déconnecter ?"
 
-#. <span class="icon"><i class="fa-brands fa-openid" aria-hidden="true"></i></span><span class="title">@T["OpenID Connect"]</span>
-#: OrchardCore.OpenId\Views\NavigationItemText-openid.Id.cshtml:1
+#. <span class="title">@T["OpenID Connect"]</span>
+#: OrchardCore.OpenId\Views\NavigationItemText-openid.Id.cshtml:4
 msgctxt "OrchardCore.OpenId.Views.NavigationItemText-openid.Id"
 msgid "OpenID Connect"
 msgstr "OpenID Connect"
 
 #. <label asp-for="DisplayName" class="form-label">@T["Display Name"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:13
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:14
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Display Name"
 msgstr "Nom d'affichage"
 
-#. <span class="hint">@T["Display name of the IdP"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:16
+#. <span class="hint">@T["User-Friendly Display Name of the identity provider"]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:17
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Display name of the IdP"
-msgstr "Nom d'affichage de l'IdP"
+msgid "User-Friendly Display Name of the identity provider"
+msgstr "Nom d'affichage utilisateur du fournisseur d'identité"
 
 #. <label asp-for="Authority" class="form-label">@T["Authority"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:20
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:21
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Authority"
 msgstr "Autorité"
 
-#. <span class="hint">@T["Authority to use when making OpenIdConnect calls"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:23
+#. <span class="hint">@T["Authority URL for OpenID Connect Requests"]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:24
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Authority to use when making OpenIdConnect calls"
-msgstr "Autorité à utiliser lors des appels OpenIdConnect"
+msgid "Authority URL for OpenID Connect Requests"
+msgstr "URL de l'autorité pour les requêtes OpenID Connect"
 
 #. <label asp-for="ClientId" class="form-label">@T["ClientId"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:27
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:28
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "ClientId"
 msgstr "RéfClient"
 
-#. <span class="hint">@T["the 'client_id'"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:30
+#. <span class="hint">@T["The '{0}' assigned by the identity provider.", "client_id"]</span>
+#. <span class="hint">@T["The '{0}' assigned by the identity provider.", "client_secret"]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:31
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:118
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "the 'client_id'"
-msgstr "le 'client_id'"
+msgid "The '{0}' assigned by the identity provider."
+msgstr "Le '{0}' assigné par le fournisseur d'identité."
 
 #. <label asp-for="CallbackPath" class="form-label">@T["CallbackPath"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:34
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:35
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "CallbackPath"
 msgstr "Chemin de Callback"
 
-#. <span class="hint">@T["The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:37
+#. <span class="hint">@T["The request path, relative to the application's base path, where the user-agent will be redirected. The middleware will handle this request upon arrival."]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:38
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "The request path within the application's base path where the user-agent will be returned. The middleware will process this request when it arrives."
-msgstr "Le chemin de la requête dans le chemin de base de l'application où l'utilisateur-agent sera retourné. Le middleware va traiter cette requête lorsqu'elle arrive."
+msgid "The request path, relative to the application's base path, where the user-agent will be redirected. The middleware will handle this request upon arrival."
+msgstr "Le chemin de la requête, relatif au chemin de base de l'application, où l'agent utilisateur sera redirigé. Le middleware traitera cette requête à l'arrivée."
 
 #. <label asp-for="SignedOutCallbackPath" class="form-label">@T["SignedOut CallbackPath"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:41
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:42
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "SignedOut CallbackPath"
 msgstr "Chemin de Callback SignedOut"
 
-#. <span class="hint">@T["The request path within the application's base path where the user agent will be returned after sign out from the identity provider."]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:44
-msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "The request path within the application's base path where the user agent will be returned after sign out from the identity provider."
-msgstr "Le chemin de la requête dans le chemin de base de l'application où l'agent utilisateur sera retourné après s'être déconnecté du fournisseur d'identité."
-
-#. <a class="hint" href="http://openid.net/specs/openid-connect-session-1_0.html#RedirectionAfterLogout" target="_blank">@T["See post_logout_redirect_uri from "]http://openid.net/specs/openid-connect-session-1_0.html#RedirectionAfterLogout</a>
+#. <span class="hint">@T["The request path within the application's base path where the user-agent will be redirected after signing out from the identity provider."]</span>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:45
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "See post_logout_redirect_uri from "
-msgstr "Voir post_logout_redirect_uri de "
+msgid "The request path within the application's base path where the user-agent will be redirected after signing out from the identity provider."
+msgstr "Le chemin de la requête dans le chemin de base de l'application où l'agent utilisateur sera redirigé après déconnexion du fournisseur d'identité."
+
+#. @T["For more information about 'post_logout_redirect_uri', visit: <a href=\"{0}\" target=\"_blank\">", "https://openid.net/specs/openid-connect-rpinitiated-1_0.html#RedirectionAfterLogout"]</a>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:47
+msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
+msgid "For more information about 'post_logout_redirect_uri', visit: <a href=\"{0}\" target=\"_blank\">"
+msgstr "Pour plus d'informations sur 'post_logout_redirect_uri', visitez : <a href=\"{0}\" target=\"_blank\">"
 
 #. <label asp-for="SignedOutRedirectUri" class="form-label">@T["SignedOut Redirect Uri"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:49
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:52
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "SignedOut Redirect Uri"
 msgstr "Uri de redirection SignedOut"
 
-#. <span class="hint">@T["The uri where the user agent will be redirected to after application is signed out from the identity provider. The redirect will happen after the SignedOutCallbackPath is invoked."]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:52
+#. <span class="hint">@T["The URI to which the user-agent will be redirected after the application signs out from the identity provider. This redirect occurs following the invocation of the SignedOutCallbackPath."]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:55
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "The uri where the user agent will be redirected to after application is signed out from the identity provider. The redirect will happen after the SignedOutCallbackPath is invoked."
-msgstr "L'uri vers laquelle l'agent utilisateur sera redirigé une fois que l'application sera déconnectée du fournisseur d'identité. La redirection aura lieu après l'invocation du SignedOutCallbackPath."
+msgid "The URI to which the user-agent will be redirected after the application signs out from the identity provider. This redirect occurs following the invocation of the SignedOutCallbackPath."
+msgstr "L'URI vers laquelle l'agent utilisateur sera redirigé après que l'application se soit déconnectée du fournisseur d'identité. Cette redirection se produit après l'invocation du chemin SignedOutCallbackPath."
 
 #. <label asp-for="Scopes" class="form-label">@T["Scopes"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:56
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:59
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Scopes"
 msgstr "Portées"
 
-#. <span class="hint">@T["extra scopes except openid and profile"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:59
+#. <span class="hint">@T["Request additional scopes beyond '{0}' and '{1}'.", OpenIddictConstants.Scopes.OpenId, OpenIddictConstants.Scopes.Profile]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:62
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "extra scopes except openid and profile"
-msgstr "autres portées exceptées openid et profile"
+msgid "Request additional scopes beyond '{0}' and '{1}'."
+msgstr "Demander des scopes supplémentaires au-delà de '{0}' et '{1}'."
 
-#. <label class="form-check-label" asp-for="StoreExternalTokens">@T["Store tokens"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:65
+#. <label class="form-check-label" asp-for="StoreExternalTokens">@T["Store tokens?"]</label>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:68
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Store tokens"
-msgstr "Stocker les jetons"
+msgid "Store tokens?"
+msgstr "Enregistrer les tokens ?"
 
-#. <span class="hint dashed">@T["Store external authentication tokens for reuse"]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:66
+#. <span class="hint dashed">@T["Store external authentication tokens for future use."]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:69
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Store external authentication tokens for reuse"
-msgstr "Stocker les jetons d'authentification externes pour les réutiliser"
+msgid "Store external authentication tokens for future use."
+msgstr "Stocker les tokens d'authentification externes pour une utilisation future."
 
 #. <h3>@T["Code Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:70
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:74
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Code Authentication Flow"
 msgstr "Flux d'authentication Code"
 
-#. <h5 class="mb-3"><a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></h5>
-#. <h5 class="mb-3"><a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#HybridAuthRequest</a></h5>
-#. <a class="hint" href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthRequest" target="_blank">@T["see: "]http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthRequest</a>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:71
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:81
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:118
+#. <p>@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth"]</p>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:75
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "see: "
-msgstr "voir: "
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Authorization Code Flow."
 
 #. <label class="form-check-label" asp-for="UseCodeFlow">@T["Use 'code' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:75
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:80
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Use 'code' response type"
 msgstr "Utiliser le type de réponse 'code'"
 
-#. <span class="hint dashed"><a href="http://openid.net/specs/openid-connect-core-1_0.html#codeExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#codeExample</a></span>
-#. <span class="hint dashed"><a href="http://openid.net/specs/openid-connect-core-1_0.html#code-id_tokenExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#code-id_tokenExample</a></span>
-#. <span class="hint dashed"><a href="http://openid.net/specs/openid-connect-core-1_0.html#code-id_token-tokenExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#code-id_token-tokenExample</a></span>
-#. <a href="http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample</a>
-#. <a href="http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample</a>
-#. <a href="http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample" target="_blank">@T["example:"] http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample</a>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:76
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:87
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:95
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:104
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:126
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:136
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#codeExample"]</span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#code-id_tokenExample"]</span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#code-id_token-tokenExample"]</span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#code-tokenExample"]</span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#id_tokenExample"]</span>
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for an example.", "http://openid.net/specs/openid-connect-core-1_0.html#id_token-tokenExample"]</span>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:81
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:94
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:102
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:110
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:130
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:138
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "example:"
-msgstr "exemple :"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for an example."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour un exemple."
 
 #. <h3>@T["Hybrid Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:80
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:87
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Hybrid Authentication Flow"
 msgstr "Flux d'authentification Hybride"
 
-#. <label class="form-check-label" asp-for="UseCodeIdTokenFlow">@T["Use 'code id_token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:86
+#. <p>@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth"]</p>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:88
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Use 'code id_token' response type"
-msgstr "Utilisez le type de réponse 'code id_token'"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Hybrid Flow."
 
-#. <label class="form-check-label" asp-for="UseCodeIdTokenTokenFlow">@T["Use 'code id_token token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:94
+#. <label class="form-check-label" asp-for="UseCodeIdTokenFlow">@T["Use <code>{0}</code> response type", "code id_token"]</label>
+#. <label class="form-check-label" asp-for="UseCodeIdTokenTokenFlow">@T["Use <code>{0}</code> response type", "code id_token token"]</label>
+#. <label class="form-check-label" asp-for="UseCodeTokenFlow">@T["Use <code>{0}</code> response type", "code token"]</label>
+#. <label class="form-check-label" asp-for="UseIdTokenFlow">@T["Use <code>{0}</code> response type", "id_token"]</label>
+#. <label class="form-check-label" asp-for="UseIdTokenTokenFlow">@T["Use <code>{0}</code> response type", "id_token token"]</label>
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:93
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:101
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:109
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:129
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:137
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Use 'code id_token token' response type"
-msgstr "Utilisez le type de réponse 'code id_token'"
-
-#. <label class="form-check-label" asp-for="UseCodeTokenFlow">@T["Use 'code token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:102
-msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Use 'code token' response type"
-msgstr "Utiliser le type de réponse 'code token'"
+msgid "Use <code>{0}</code> response type"
+msgstr "Utiliser le type de réponse <code>{0}</code>"
 
 #. <label asp-for="ClientSecret" class="form-label">@T["Client Secret"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:110
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:115
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Client Secret"
 msgstr "Client Secret"
 
-#. <span class="hint">@T["set client secret."]</span>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:113
+#. <input asp-for="ClientSecret" class="form-control" type="password" autocomplete="new-password" placeholder="@(Model.HasClientSecret ? T["A client secret is securely stored. Provide a new one to replace it."]: T["Set a client secret for your new account."])" />
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:116
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "set client secret."
-msgstr "définir le client secret."
+msgid "A client secret is securely stored. Provide a new one to replace it."
+msgstr "Un secret client est stocké de manière sécurisée. Fournissez-en un nouveau pour le remplacer."
+
+#. <input asp-for="ClientSecret" class="form-control" type="password" autocomplete="new-password" placeholder="@(Model.HasClientSecret ? T["A client secret is securely stored. Provide a new one to replace it."]: T["Set a client secret for your new account."])" />
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:116
+msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
+msgid "Set a client secret for your new account."
+msgstr "Définir un client secret pour votre nouveau compte."
 
 #. <h3>@T["Implicit Authentication Flow"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:116
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:123
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Implicit Authentication Flow"
 msgstr "Flux d'authentification Implicite"
 
-#. <label class="form-check-label" asp-for="UseIdTokenFlow">@T["Use 'id_token' response type"]</label>
+#. <p>@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth"]</p>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:124
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Use 'id_token' response type"
-msgstr "Utiliser le type de réponse 'id_token'"
-
-#. <label class="form-check-label" asp-for="UseIdTokenTokenFlow">@T["Use 'id_token token' response type"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:134
-msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Use 'id_token token' response type"
-msgstr "Utiliser le type de réponse 'id_token token'"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Implicit Flow."
 
 #. <label asp-for="ResponseMode" class="form-label">@T["Response Mode"]</label>
-#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:142
+#: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:143
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Response Mode"
 msgstr "Mode de réponse"
 
-#. <span class="hint">@T["Configure Response Mode see: http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"]</span>
+#. <span class="hint">@T["Configure Response Mode. Click <a href=\"{0}\" target=\"_blank\">here</a> for more info.", "http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"]</span>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:149
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Configure Response Mode see: http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"
-msgstr "Configurer le mode de réponse, voir : http://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthResponse"
+msgid "Configure Response Mode. Click <a href=\"{0}\" target=\"_blank\">here</a> for more info."
+msgstr "Configurer le Response Mode. Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations."
 
 #. <th scope="col">@T["Parameter Name"]</th>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:156
@@ -1464,10 +1468,10 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
 msgid "Advanced Parameters"
 msgstr "Paramètres avancés"
 
-#. <div class="hint">@T["Advanced parameters that can be sent with the authorize request."]</div>
+#. <div class="hint">@T["Advanced parameters that can be sent with the authorization request."]</div>
 #: OrchardCore.OpenId\Views\OpenIdClientSettings.Edit.cshtml:218
 msgctxt "OrchardCore.OpenId.Views.OpenIdClientSettings.Edit"
-msgid "Advanced parameters that can be sent with the authorize request."
+msgid "Advanced parameters that can be sent with the authorization request."
 msgstr "Paramètres avancés qui peuvent être envoyés avec la demande d'autorisation."
 
 #. <h5>@T["OpenID Server Settings"]</h5>
@@ -1501,165 +1505,185 @@ msgid "Exports the OpenID Server settings."
 msgstr "Exporte les paramètres OpenID Server."
 
 #. <h3>@T["Endpoints"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:6
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:7
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Endpoints"
 msgstr "Points de terminaison"
 
 #. <label class="form-check-label" asp-for="EnableTokenEndpoint">@T["Enable Token Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:11
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:12
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Token Endpoint"
 msgstr "Activer le Token Endpoint"
 
-#. <span class="hint dashed">@T["Enables action"] /connect/token</span>
-#. <span class="hint dashed">@T["Enables action"] /connect/authorize</span>
-#. <span class="hint dashed">@T["Enables action"] /connect/logout</span>
-#. <span class="hint dashed">@T["Enables action"] /connect/userinfo</span>
-#. <span class="hint dashed">@T["Enables action"] /connect/introspect</span>
-#. <span class="hint dashed">@T["Enables action"] /connect/revoke</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:12
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:20
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:28
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:36
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:44
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:52
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/token</code>
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/authorize</code>
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/logout</code>
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/userinfo</code>
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/introspect</code>
+#. <span class="hint dashed">@T["Enables the endpoint:"]</span> <code>/connect/revoke</code>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:13
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:21
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:29
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:37
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:45
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:53
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Enables action"
-msgstr "Active l'action"
+msgid "Enables the endpoint:"
+msgstr "Active le point de terminaison:"
 
 #. <label class="form-check-label" asp-for="EnableAuthorizationEndpoint">@T["Enable Authorization Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:19
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:20
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Authorization Endpoint"
 msgstr "Activer le point de terminaison Authorization"
 
 #. <label class="form-check-label" asp-for="EnableLogoutEndpoint">@T["Enable Logout Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:27
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:28
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Logout Endpoint"
 msgstr "Activer le point de terminaison Logout"
 
 #. <label class="form-check-label" asp-for="EnableUserInfoEndpoint">@T["Enable User Info Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:35
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:36
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable User Info Endpoint"
 msgstr "Activer le point de terminaison User"
 
 #. <label class="form-check-label" asp-for="EnableIntrospectionEndpoint">@T["Enable Introspection Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:43
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:44
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Introspection Endpoint"
 msgstr "Activer le point de terminaison d'introspection"
 
 #. <label class="form-check-label" asp-for="EnableRevocationEndpoint">@T["Enable Revocation Endpoint"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:51
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:52
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Enable Revocation Endpoint"
 msgstr "Activer le point de terminaison de révocation"
 
 #. <h3>@T["Flows"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:56
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:59
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Flows"
 msgstr "Flux"
 
 #. <label class="form-check-label" asp-for="AllowAuthorizationCodeFlow">@T["Allow Authorization Code Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:61
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:64
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Authorization Code Flow"
 msgstr "Autoriser le flux Authorization Code"
 
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth">http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.3">https://tools.ietf.org/html/rfc6749#section-1.3.3</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens">http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens</a></span>
-#. <span class="hint dashed">@T["More info:"] <a href="https://tools.ietf.org/html/rfc6749#section-1.3.4">https://tools.ietf.org/html/rfc6749#section-1.3.4</a></span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:62
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:70
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:78
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:86
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:94
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:102
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:65
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "More info:"
-msgstr "Plus d'infos :"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Authorization Code Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Authorization Code Flow."
 
 #. <label class="form-check-label" asp-for="AllowImplicitFlow">@T["Allow Implicit Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:69
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:72
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Implicit Flow"
 msgstr "Autoriser Implicit Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:73
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Implicit Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Implicit Flow."
+
 #. <label class="form-check-label" asp-for="AllowHybridFlow">@T["Allow Hybrid Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:77
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:80
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Hybrid Flow"
 msgstr "Autoriser le flux hybride"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:81
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Hybrid Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Hybrid Flow."
+
 #. <label class="form-check-label" asp-for="AllowPasswordFlow">@T["Allow Password Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:85
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:88
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Password Flow"
 msgstr "Autoriser le Password Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.3"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:89
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Password Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Password Flow."
+
 #. <label class="form-check-label" asp-for="AllowRefreshTokenFlow">@T["Allow Refresh Token Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:93
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:96
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Refresh Token Flow"
 msgstr "Autoriser le Refresh Token Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow.", "http://openid.net/specs/openid-connect-core-1_0.html#RefreshTokens"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:97
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Refresh Token Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Refresh Token Flow."
+
 #. <label class="form-check-label" asp-for="AllowClientCredentialsFlow">@T["Allow Client Credentials Flow"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:101
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:104
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Allow Client Credentials Flow"
 msgstr "Autoriser le Client Credentials Flow"
 
+#. <span class="hint dashed">@T["Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow.", "https://tools.ietf.org/html/rfc6749#section-1.3.4"]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:105
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "Click <a href=\"{0}\" target=\"_blank\">here</a> for more information about the Client Credentials Flow."
+msgstr "Cliquez sur <a href=\"{0}\" target=\"_blank\">ici</a> pour plus d'informations sur le Client Credentials Flow."
+
 #. <h3>@T["Proof Key for Code Exchange"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:106
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:111
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Proof Key for Code Exchange"
 msgstr "Proof Key pour Code Exchange"
 
 #. <label class="form-check-label" asp-for="RequireProofKeyForCodeExchange">@T["Require Proof Key for Code Exchange"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:110
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:115
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Require Proof Key for Code Exchange"
 msgstr "Exiger une Proof Key pour Code Exchange"
 
-#. @T["Global setting that applies PKCE to all registered clients whether or not the 'Require PKCE' option is set on the individual client application."]
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:113
+#. @T["A global setting that enforces PKCE for all registered clients, regardless of whether the 'Require PKCE' option is enabled for individual client applications."]
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:118
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Global setting that applies PKCE to all registered clients whether or not the 'Require PKCE' option is set on the individual client application."
-msgstr "Réglage global qui applique PKCE à tous les clients enregistrés, que l'option « Require PKCE » soit définie sur l'application client individuelle."
+msgid "A global setting that enforces PKCE for all registered clients, regardless of whether the 'Require PKCE' option is enabled for individual client applications."
+msgstr "Un paramètre global qui applique PKCE pour tous les clients enregistrés, que l'option « Require PKCE » soit activée pour les applications clientes individuelles."
 
-#. <h3>@T["Advanced options"]</h3>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:117
+#. <h3>@T["Advanced Options"]</h3>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:124
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "Advanced options"
+msgid "Advanced Options"
 msgstr "Options avancées"
 
-#. <p class="alert alert-info">@T["These options are all optional and are for advanced users only."]</p>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:119
+#. <p class="mb-0">@T["The following options are optional and intended for advanced use only."]</p>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:127
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "These options are all optional and are for advanced users only."
-msgstr "Ces options sont toutes facultatives et sont uniquement destinées aux utilisateurs avancés."
+msgid "The following options are optional and intended for advanced use only."
+msgstr "Les options suivantes sont facultatives et destinées uniquement à un usage avancé."
 
 #. <label asp-for="Authority" class="form-label">@T["Authority"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:122
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:131
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Authority"
 msgstr "Autorité"
 
-#. <span class="hint">@T["The base URL of the identity server (this site). If none is provided, a default value based on the site host is automatically computed."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:125
+#. <span class="hint">@T["The base URL of the identity server (this site). If not provided, a default value will be automatically generated based on the site host."]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:134
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "The base URL of the identity server (this site). If none is provided, a default value based on the site host is automatically computed."
-msgstr "L'URL de base du serveur d'identité (ce site). Si aucune n'est fournie, une valeur par défaut basée sur l'hôte du site est automatiquement calculée."
+msgid "The base URL of the identity server (this site). If not provided, a default value will be automatically generated based on the site host."
+msgstr "L'URL de base du serveur d'identité (ce site). Si non fourni, une valeur par défaut sera générée automatiquement en fonction de l'hôte du site."
 
 #. <label asp-for="EncryptionCertificateStoreLocation" class="form-label">@T["Encryption Certificate Store Location"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:129
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:138
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Encryption Certificate Store Location"
 msgstr "Emplacement du magasin de certificats de cryptage"
@@ -1670,143 +1694,153 @@ msgstr "Emplacement du magasin de certificats de cryptage"
 #. <option value="">@T["None"]</option>
 #. <option value="">@T["None"]</option>
 #. <option value="">@T["None"]</option>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:131
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:145
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:161
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:195
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:209
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:225
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:140
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:154
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:170
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:204
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:218
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:234
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "None"
 msgstr "Aucun"
 
 #. <span class="hint">@T["Select the encryption certificate location."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:139
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:148
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the encryption certificate location."
 msgstr "Sélectionnez l'emplacement du certificat de chiffrement."
 
 #. <label asp-for="EncryptionCertificateStoreName" class="form-label">@T["Encryption Certificate Store Name"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:143
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:152
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Encryption Certificate Store Name"
 msgstr "Nom du magasin de certificats de cryptage"
 
 #. <span class="hint">@T["Select the encryption certificate store."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:153
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:162
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the encryption certificate store."
 msgstr "Sélectionnez le magasin d'encryptage de certificats."
 
 #. <label asp-for="EncryptionCertificateThumbprint" class="form-label">@T["Encryption Certificate"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:159
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:168
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Encryption Certificate"
 msgstr "Certificat d'encryptage"
 
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:0
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:0
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "No Friendly Name"
+msgstr "Pas de nom convivial"
+
 #. <span class="hint">@T["Select the encryption certificate."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:184
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:193
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the encryption certificate."
 msgstr "Sélectionnez le certificat d'encryptage."
 
-#. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["You need to add a certificate to your server for setting up OpenID Connect module."]</div>
-#. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["You need to add a certificate to your server for setting up OpenID Connect module."]</div>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:188
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:252
+#. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["A certificate must be added to your server to set up the OpenID Connect module."]</div>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:197
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "You need to add a certificate to your server for setting up OpenID Connect module."
-msgstr "Vous devez ajouter un certificat à votre serveur pour configurer le module OpenID Connect."
+msgid "A certificate must be added to your server to set up the OpenID Connect module."
+msgstr "Un certificat doit être ajouté à votre serveur pour configurer le module OpenID Connect."
 
 #. <label asp-for="SigningCertificateStoreLocation" class="form-label">@T["Signing Certificate Store Location"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:193
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:202
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Signing Certificate Store Location"
 msgstr "Signature de l'emplacement du magasin de certificats"
 
 #. <span class="hint">@T["Select the signing certificate location."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:203
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:212
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the signing certificate location."
 msgstr "Sélectionnez l'emplacement du certificat de signature."
 
 #. <label asp-for="SigningCertificateStoreName" class="form-label">@T["Signing Certificate Store Name"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:207
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:216
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Signing Certificate Store Name"
 msgstr "Nom du magasin de certificats de signature"
 
 #. <span class="hint">@T["Select the signing certificate store."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:217
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:226
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the signing certificate store."
 msgstr "Sélectionnez le magasin de signature de certificats."
 
 #. <label asp-for="SigningCertificateThumbprint" class="form-label">@T["Signing Certificate"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:223
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:232
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Signing Certificate"
 msgstr "Certificat de signature"
 
 #. <span class="hint">@T["Select the signing certificate."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:248
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:257
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Select the signing certificate."
 msgstr "Sélectionnez le certificat de signature."
 
+#. <div class="alert alert-warning" asp-validation-for="CertificateThumbprint">@T["You need to add a certificate to your server for setting up OpenID Connect module."]</div>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:261
+msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
+msgid "You need to add a certificate to your server for setting up OpenID Connect module."
+msgstr "Vous devez ajouter un certificat à votre serveur pour configurer le module OpenID Connect."
+
 #. <label class="form-check-label" asp-for="DisableRollingRefreshTokens">@T["Disable Rolling Refresh Tokens"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:259
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:268
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Disable Rolling Refresh Tokens"
 msgstr "Désactiver les jetons de Rolling Refresh"
 
 #. <span class="hint dashed">@T["When this option is enabled, refresh tokens are not marked as redeemed and can be reused until they expire."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:260
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:269
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "When this option is enabled, refresh tokens are not marked as redeemed and can be reused until they expire."
 msgstr "Lorsque cette option est activée, les jetons d'actualisation ne sont pas marqués comme redeemed et peuvent être réutilisés jusqu'à leur expiration."
 
 #. <label asp-for="AccessTokenFormat" class="form-label">@T["Token Format"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:265
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:274
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Token Format"
 msgstr "Format du jeton"
 
 #. @T["ASP.NET Core Data Protection"]
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:268
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:277
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "ASP.NET Core Data Protection"
 msgstr "Protection des données ASP.NET Core"
 
 #. @T["JSON Web Token (JWT)"]
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:271
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:280
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "JSON Web Token (JWT)"
 msgstr "Jeton Web JSON (JWT)"
 
 #. <label class="form-check-label" asp-for="DisableAccessTokenEncryption">@T["Disable Access Token Encryption (only for JWT tokens)"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:280
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:289
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Disable Access Token Encryption (only for JWT tokens)"
 msgstr "Désactiver le chiffrement des jetons d'accès (uniquement pour les jetons JWT)"
 
-#. <span class="hint dashed">@T["When this option is enabled, the JWT access token tokens are not encrypted."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:281
+#. <span class="hint dashed">@T["When enabled, JWT access tokens are not encrypted."]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:290
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "When this option is enabled, the JWT access token tokens are not encrypted."
-msgstr "Lorsque cette option est activée, les jetons d'accès JWT ne sont pas chiffrés."
+msgid "When enabled, JWT access tokens are not encrypted."
+msgstr "Lorsqu'il est activé, les tokens d'accès JWT ne sont pas chiffrés."
 
 #. <label class="form-check-label" asp-for="UseReferenceAccessTokens">@T["Use Reference Access Tokens"]</label>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:288
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:297
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
 msgid "Use Reference Access Tokens"
 msgstr "Utiliser les jetons d'accès de référence"
 
-#. <span class="hint dashed">@T["When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."]</span>
-#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:289
+#. <span class="hint dashed">@T["When enabled, access tokens are stored in the database, and fixed-size tokens are returned to the client. This can be useful for handling a large number of claims. Note: This option cannot be enabled if other tenants are configured to use this server."]</span>
+#: OrchardCore.OpenId\Views\OpenIdServerSettings.Edit.cshtml:298
 msgctxt "OrchardCore.OpenId.Views.OpenIdServerSettings.Edit"
-msgid "When this option is enabled, the access token are stored in the database and fixed size tokens are returned to the client, which can be useful when storing a very large number of claims. Important: this option cannot be currently enabled when other tenants are configured to use this server."
-msgstr "Lorsque cette option est activée, le jeton d'accès est stocké dans la base de données et les jetons de taille fixe sont retournés au client, qui peuvent être utiles pour stocker un très grand nombre de claims. Important : cette option ne peut pas être activée lorsque d'autres locataires sont configurés pour utiliser ce serveur."
+msgid "When enabled, access tokens are stored in the database, and fixed-size tokens are returned to the client. This can be useful for handling a large number of claims. Note: This option cannot be enabled if other tenants are configured to use this server."
+msgstr "Lorsque cette option est activée, les jetons d'accès sont stockés dans la base de données et les jetons de taille fixe sont retournés au client. Cela peut être utile pour traiter un grand nombre de claims. Note : Cette option ne peut pas être activée si d'autres locataires sont configurés pour utiliser ce serveur."
 
 #. <h5>@T["OpenID Validation Settings"]</h5>
 #: OrchardCore.OpenId\Views\Items\OpenIdValidationDeploymentStep.Edit.cshtml:3
@@ -1850,11 +1884,11 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Authority"
 msgstr "Autorité"
 
-#. <span class="hint">@T["The address of the remote OpenID Connect server. Using a HTTPS address is strongly recommended."]</span>
+#. <span class="hint">@T["The URL of the remote OpenID Connect server. Using HTTPS is highly recommended for security."]</span>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:20
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
-msgid "The address of the remote OpenID Connect server. Using a HTTPS address is strongly recommended."
-msgstr "L'adresse du serveur OpenID Connect distant. L'utilisation d'une adresse HTTPS est fortement recommandée."
+msgid "The URL of the remote OpenID Connect server. Using HTTPS is highly recommended for security."
+msgstr "L'URL du serveur distant OpenID Connect. L'utilisation de HTTPS est fortement recommandée pour la sécurité."
 
 #. <label asp-for="MetadataAddress" class="form-label">@T["OpenID Connect Metadata Address"]</label>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:24
@@ -1862,11 +1896,11 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "OpenID Connect Metadata Address"
 msgstr "Adresse de métadonnées OpenID Connect"
 
-#. <span class="hint">@T["The well-formed URI of the OpenID Connect Metadata Address endpoint. This is only for advanced scenarios when metadata is not available from the standard authority endpoint. It cannot be used when using a Tenant and using a HTTPS address is strongly recommended."]</span>
+#. <span class="hint">@T["The well-formed URI for the OpenID Connect Metadata Address endpoint. This is intended for advanced scenarios where metadata is not available from the standard authority endpoint. Note: This option cannot be used with a Tenant configuration, and HTTPS is strongly recommended."]</span>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:27
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
-msgid "The well-formed URI of the OpenID Connect Metadata Address endpoint. This is only for advanced scenarios when metadata is not available from the standard authority endpoint. It cannot be used when using a Tenant and using a HTTPS address is strongly recommended."
-msgstr "La well-formed URI du point de terminaison d'adresse de métadonnées OpenID Connect. Ceci est uniquement pour les scénarios avancés lorsque les métadonnées ne sont pas disponibles à partir du point de terminaison de l'autorité standard. Il ne peut pas être utilisé lors de l'utilisation d'un tenant et l'utilisation d'une adresse HTTPS est fortement recommandée."
+msgid "The well-formed URI for the OpenID Connect Metadata Address endpoint. This is intended for advanced scenarios where metadata is not available from the standard authority endpoint. Note: This option cannot be used with a Tenant configuration, and HTTPS is strongly recommended."
+msgstr "La well-formed URI pour le point de terminaison d'adresse de métadonnées OpenID Connect. Ceci est destiné aux scénarios avancés où les métadonnées ne sont pas disponibles à partir du point de terminaison de l'autorité standard. Note: Cette option ne peut pas être utilisée avec une configuration de locataire, et HTTPS est fortement recommandé."
 
 #. <label asp-for="Audience" class="form-label">@T["Audience"]</label>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:31
@@ -1874,11 +1908,11 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Audience"
 msgstr "Audience"
 
-#. <span class="hint">@T["The unique name associated with this tenant. If none is provided, the tenant name is automatically used as the default audience."]</span>
+#. <span class="hint">@T["The unique name associated with this tenant. If not specified, the tenant name will be used as the default audience."]</span>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:34
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
-msgid "The unique name associated with this tenant. If none is provided, the tenant name is automatically used as the default audience."
-msgstr "Le nom unique associé à ce locataire. Si aucun n'est fourni, le nom du locataire est automatiquement utilisé comme audience par défaut."
+msgid "The unique name associated with this tenant. If not specified, the tenant name will be used as the default audience."
+msgstr "Le nom unique associé à ce tenant. S'il n'est pas spécifié, le nom du tenant sera utilisé comme l'audience par défaut."
 
 #. <label class="form-check-label" asp-for="DisableTokenTypeValidation">@T["Disable token type validation"]</label>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:40
@@ -1886,9 +1920,9 @@ msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
 msgid "Disable token type validation"
 msgstr "Désactiver la validation du type de jeton"
 
-#. <span class="hint dashed">@T["Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."]</span>
+#. <span class="hint dashed">@T["Token type validation can be disabled to accept JWT tokens from servers that do not support the '{0}' type header.", "at+jwt"]</span>
 #: OrchardCore.OpenId\Views\OpenIdValidationSettings.Edit.cshtml:41
 msgctxt "OrchardCore.OpenId.Views.OpenIdValidationSettings.Edit"
-msgid "Token type validation can be disabled to accept JWT tokens issued by servers that don't support the 'at+jwt' type header."
-msgstr "La validation du type de jeton peut être désactivée pour accepter les jetons JWT émis par les serveurs qui ne prennent pas en charge l'en-tête de type 'at+jwt'."
+msgid "Token type validation can be disabled to accept JWT tokens from servers that do not support the '{0}' type header."
+msgstr "La validation du type de token peut être désactivée pour accepter les tokens JWT des serveurs qui ne prennent pas en charge l'en-tête de type '{0}'."
 

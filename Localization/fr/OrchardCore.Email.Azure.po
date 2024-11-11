@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2024-08-24 20:49\n"
+"PO-Revision-Date: 2024-11-10 16:53\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultSender), S["The Default Sender is a required field."]);
 #: OrchardCore.Email.Azure\Drivers\AzureEmailSettingsDisplayDriver.cs:99
@@ -30,11 +30,11 @@ msgctxt "OrchardCore.Azure.Email.Drivers.AzureEmailSettingsDisplayDriver"
 msgid "Connection string is required."
 msgstr "La chaîne de connexion est requise."
 
-#. public override LocalizedString DisplayName => S["Azure Communication Service"];
+#. => S["Azure Communication Services"];
 #: OrchardCore.Email.Azure\Services\AzureEmailProvider.cs:21
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProvider"
-msgid "Azure Communication Service"
-msgstr "Service de communication Azure"
+msgid "Azure Communication Services"
+msgstr "Services de communication Azure"
 
 #. return EmailResult.FailedResult(S["The Azure Email Provider is disabled."]);
 #: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:106
@@ -43,30 +43,54 @@ msgid "The Azure Email Provider is disabled."
 msgstr "Le fournisseur de messagerie Azure est désactivé."
 
 #. return EmailResult.FailedResult(nameof(message.From), S["Invalid email address for the sender: '{0}'.", senderAddress]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:119
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:124
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "Invalid email address for the sender: '{0}'."
 msgstr "Adresse email invalide pour l'expéditeur : '{0}'."
 
 #. return EmailResult.FailedResult(string.Empty, S["An error occurred while sending an email."]);
 #. return EmailResult.FailedResult(string.Empty, S["An error occurred while sending an email."]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:143
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:150
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:147
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:154
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "An error occurred while sending an email."
 msgstr "Une erreur s'est produite lors de l'envoi de l'email."
 
+#. errors[nameof(recipients.To)].Add(S["Invalid email address for the 'To' recipient: '{0}'.", toRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:171
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'To' recipient: '{0}'."
+msgstr "Adresse email invalide pour le destinataire : '{0}'."
+
+#. errors[nameof(recipients.Cc)].Add(S["Invalid email address for the 'CC' recipient: '{0}'.", ccRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:184
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'CC' recipient: '{0}'."
+msgstr "Adresse email invalide pour le destinataire 'CC' : '{0}'."
+
+#. errors[nameof(recipients.Bcc)].Add(S["Invalid email address for the 'BCC' recipient: '{0}'.", bccRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:197
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'BCC' recipient: '{0}'."
+msgstr "Adresse email invalide pour le destinataire 'BCC' : '{0}'."
+
+#. errors[nameof(emailMessage.ReplyTo)].Add(S["Invalid email address to reply to: '{0}'.", replyTo]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:224
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address to reply to: '{0}'."
+msgstr "Adresse e-mail invalide pour répondre à : '{0}'."
+
 #. errors[nameof(message.Attachments)].Add(S["Unable to attach the file named '{0}' since its type is not supported.", attachment.Filename]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:216
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:248
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "Unable to attach the file named '{0}' since its type is not supported."
 msgstr "Impossible de joindre le fichier nommé '{0}' car son type n'est pas pris en charge."
 
-#. public override LocalizedString DisplayName => S["Default Azure Communication Service"];
+#. => S["Default Azure Communication Services"];
 #: OrchardCore.Email.Azure\Services\DefaultAzureEmailProvider.cs:21
 msgctxt "OrchardCore.Email.Azure.Services.DefaultAzureEmailProvider"
-msgid "Default Azure Communication Service"
-msgstr "Service de communication Azure par défaut"
+msgid "Default Azure Communication Services"
+msgstr "Services de communication Azure par défaut"
 
 #. <label class="form-check-label" asp-for="IsEnabled">@T["Enable Azure Provider"]</label>
 #: OrchardCore.Email.Azure\Views\AzureEmailSettings.Edit.cshtml:9

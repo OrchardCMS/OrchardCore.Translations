@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2024-08-24 20:46\n"
+"PO-Revision-Date: 2024-11-10 15:04\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Search.Elasticsearch\AdminMenu.cs:18
@@ -107,7 +107,7 @@ msgstr ""
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", id]);
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> reset successfully.", item.IndexName]);
 #: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:330
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:582
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:585
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> reset successfully."
 msgstr ""
@@ -115,7 +115,7 @@ msgstr ""
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", id]);
 #. await _notifier.SuccessAsync(H["Index <em>{0}</em> rebuilt successfully.", item.IndexName]);
 #: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:368
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:596
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:599
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Index <em>{0}</em> rebuilt successfully."
 msgstr ""
@@ -143,31 +143,31 @@ msgid "An error occurred while deleting the index."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(model.DecodedQuery), S["Invalid query : {0}", e.Message]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:533
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:536
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Invalid query : {0}"
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Indices successfully removed."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:569
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:572
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "Indices successfully removed."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexedContentTypes), S["At least one content type is required."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:611
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:614
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "At least one content type is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name is required."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:616
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:619
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name is required."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(ElasticIndexSettingsViewModel.IndexName), S["The index name contains forbidden characters."]);
-#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:620
+#: OrchardCore.Search.Elasticsearch\Controllers\AdminController.cs:623
 msgctxt "OrchardCore.Search.Elasticsearch.AdminController"
 msgid "The index name contains forbidden characters."
 msgstr ""
@@ -742,10 +742,10 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Index"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
-#. <a asp-action="Mappings" asp-route-IndexName="@entry.Name" class="btn btn-primary btn-sm">@T["Mappings"]</a>
+#. <a asp-action="IndexInfo" asp-route-IndexName="@entry.Name" class="btn btn-primary btn-sm">@T["Index Info"]</a>
 #: OrchardCore.Search.Elasticsearch\Views\Admin\Index.cshtml:72
 msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Index"
-msgid "Mappings"
+msgid "Index Info"
 msgstr ""
 
 #. <a asp-action="Query" asp-route-IndexName="@entry.Name" class="btn btn-success btn-sm">@T["Query"]</a>
@@ -844,22 +844,22 @@ msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Index"
 msgid "selected"
 msgstr ""
 
-#. <h2>@T["Elasticsearch index mappings"]</h2>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Mappings.cshtml:3
-msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Mappings"
-msgid "Elasticsearch index mappings"
+#. <h2>@T["Elasticsearch index information"]</h2>
+#: OrchardCore.Search.Elasticsearch\Views\Admin\IndexInfo.cshtml:3
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.IndexInfo"
+msgid "Elasticsearch index information"
 msgstr ""
 
-#. <label asp-for="Mappings" class="form-label">@T["Mappings for: "]@Model.IndexName</label>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Mappings.cshtml:8
-msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Mappings"
-msgid "Mappings for: "
+#. <label asp-for="IndexInfo" class="form-label">@T["Info for: "]@Model.IndexName</label>
+#: OrchardCore.Search.Elasticsearch\Views\Admin\IndexInfo.cshtml:8
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.IndexInfo"
+msgid "Info for: "
 msgstr ""
 
-#. <span class="hint">@T["The Elasticsearch index mapping. For reference only."]</span>
-#: OrchardCore.Search.Elasticsearch\Views\Admin\Mappings.cshtml:13
-msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.Mappings"
-msgid "The Elasticsearch index mapping. For reference only."
+#. <span class="hint">@T["The Elasticsearch index information. For reference only."]</span>
+#: OrchardCore.Search.Elasticsearch\Views\Admin\IndexInfo.cshtml:13
+msgctxt "OrchardCore.Search.Elasticsearch.Views.Admin.IndexInfo"
+msgid "The Elasticsearch index information. For reference only."
 msgstr ""
 
 #. <span class="icon"><i class="fa-solid fa-search" aria-hidden="true"></i></span><span class="title">@T["Search"]</span>

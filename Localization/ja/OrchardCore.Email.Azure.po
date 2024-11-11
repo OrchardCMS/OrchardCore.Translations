@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2024-08-24 20:50\n"
+"PO-Revision-Date: 2024-11-10 15:08\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultSender), S["The Default Sender is a required field."]);
 #: OrchardCore.Email.Azure\Drivers\AzureEmailSettingsDisplayDriver.cs:99
@@ -30,10 +30,10 @@ msgctxt "OrchardCore.Azure.Email.Drivers.AzureEmailSettingsDisplayDriver"
 msgid "Connection string is required."
 msgstr ""
 
-#. public override LocalizedString DisplayName => S["Azure Communication Service"];
+#. => S["Azure Communication Services"];
 #: OrchardCore.Email.Azure\Services\AzureEmailProvider.cs:21
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProvider"
-msgid "Azure Communication Service"
+msgid "Azure Communication Services"
 msgstr ""
 
 #. return EmailResult.FailedResult(S["The Azure Email Provider is disabled."]);
@@ -43,29 +43,53 @@ msgid "The Azure Email Provider is disabled."
 msgstr ""
 
 #. return EmailResult.FailedResult(nameof(message.From), S["Invalid email address for the sender: '{0}'.", senderAddress]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:119
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:124
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "Invalid email address for the sender: '{0}'."
 msgstr ""
 
 #. return EmailResult.FailedResult(string.Empty, S["An error occurred while sending an email."]);
 #. return EmailResult.FailedResult(string.Empty, S["An error occurred while sending an email."]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:143
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:150
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:147
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:154
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "An error occurred while sending an email."
 msgstr ""
 
+#. errors[nameof(recipients.To)].Add(S["Invalid email address for the 'To' recipient: '{0}'.", toRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:171
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'To' recipient: '{0}'."
+msgstr ""
+
+#. errors[nameof(recipients.Cc)].Add(S["Invalid email address for the 'CC' recipient: '{0}'.", ccRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:184
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'CC' recipient: '{0}'."
+msgstr ""
+
+#. errors[nameof(recipients.Bcc)].Add(S["Invalid email address for the 'BCC' recipient: '{0}'.", bccRecipient]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:197
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address for the 'BCC' recipient: '{0}'."
+msgstr ""
+
+#. errors[nameof(emailMessage.ReplyTo)].Add(S["Invalid email address to reply to: '{0}'.", replyTo]);
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:224
+msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
+msgid "Invalid email address to reply to: '{0}'."
+msgstr ""
+
 #. errors[nameof(message.Attachments)].Add(S["Unable to attach the file named '{0}' since its type is not supported.", attachment.Filename]);
-#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:216
+#: OrchardCore.Email.Azure\Services\AzureEmailProviderBase.cs:248
 msgctxt "OrchardCore.Email.Azure.Services.AzureEmailProviderBase"
 msgid "Unable to attach the file named '{0}' since its type is not supported."
 msgstr ""
 
-#. public override LocalizedString DisplayName => S["Default Azure Communication Service"];
+#. => S["Default Azure Communication Services"];
 #: OrchardCore.Email.Azure\Services\DefaultAzureEmailProvider.cs:21
 msgctxt "OrchardCore.Email.Azure.Services.DefaultAzureEmailProvider"
-msgid "Default Azure Communication Service"
+msgid "Default Azure Communication Services"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="IsEnabled">@T["Enable Azure Provider"]</label>
