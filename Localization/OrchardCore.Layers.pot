@@ -1,26 +1,38 @@
-#: OrchardCore.Layers\AdminMenu.cs:26
+#: OrchardCore.Layers\AdminMenu.cs:28
+#. .Add(S["Design"], design => design
+#: OrchardCore.Layers\AdminMenu.cs:47
 #. .Add(S["Design"], design => design
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Design"
 msgstr ""
 
-#: OrchardCore.Layers\AdminMenu.cs:27
+#: OrchardCore.Layers\AdminMenu.cs:29
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Layers\AdminMenu.cs:54
 #. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Layers\AdminMenu.cs:28
+#: OrchardCore.Layers\AdminMenu.cs:30
 #. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
-#: OrchardCore.Layers\AdminMenu.cs:28
+#: OrchardCore.Layers\AdminMenu.cs:30
+#. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
+#: OrchardCore.Layers\AdminMenu.cs:55
+#. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
+#: OrchardCore.Layers\AdminMenu.cs:55
 #. .Add(S["Zones"], S["Zones"].PrefixPosition(), zones => zones
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Zones"
 msgstr ""
 
-#: OrchardCore.Layers\AdminMenu.cs:34
+#: OrchardCore.Layers\AdminMenu.cs:36
 #. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
-#: OrchardCore.Layers\AdminMenu.cs:34
+#: OrchardCore.Layers\AdminMenu.cs:36
+#. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
+#: OrchardCore.Layers\AdminMenu.cs:48
+#. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
+#: OrchardCore.Layers\AdminMenu.cs:48
 #. .Add(S["Widgets"], S["Widgets"].PrefixPosition(), widgets => widgets
 msgctxt "OrchardCore.Layers.AdminMenu"
 msgid "Widgets"
@@ -80,19 +92,79 @@ msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition deleted successfully."
 msgstr ""
 
-#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:75
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:77
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Title), S["Title is required field."]);
+msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
+msgid "Title is required field."
+msgstr ""
+
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:82
 #. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Zone", S["Zone is missing"]);
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
 msgid "Zone is missing"
 msgstr ""
 
-#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:80
-#. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Layer", S["Layer is missing"]);
+#: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:87
+#. context.Updater.ModelState.AddModelError(Prefix, "LayerMetadata.Layer", S["Layer is missing field."]);
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
-msgid "Layer is missing"
+msgid "Layer is missing field."
 msgstr ""
 
-#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:39
+#: OrchardCore.Layers\GraphQL\LayerQueryObjectType.cs:23
+#. .Description(S["The name of the layer."]);
+msgctxt "OrchardCore.Layers.GraphQL.LayerQueryObjectType"
+msgid "The name of the layer."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerQueryObjectType.cs:26
+#. .Description(S["The rule that activates the layer."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerQueryObjectType"
+msgid "The rule that activates the layer."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerQueryObjectType.cs:30
+#. .Description(S["The description of the layer."]);
+msgctxt "OrchardCore.Layers.GraphQL.LayerQueryObjectType"
+msgid "The description of the layer."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerQueryObjectType.cs:33
+#. .Description(S["The widgets for this layer."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerQueryObjectType"
+msgid "The widgets for this layer."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerQueryObjectType.cs:34
+#. .Argument<PublicationStatusGraphType>("status", S["publication status of the widgets"])
+msgctxt "OrchardCore.Layers.GraphQL.LayerQueryObjectType"
+msgid "publication status of the widgets"
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerWidgetQueryObjectType.cs:16
+#. .Description(S["The name of the widget's zone."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerWidgetQueryObjectType"
+msgid "The name of the widget's zone."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerWidgetQueryObjectType.cs:20
+#. .Description(S["The position of the widget in the zone."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerWidgetQueryObjectType"
+msgid "The position of the widget in the zone."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerWidgetQueryObjectType.cs:24
+#. .Description(S["Whether to render the widget's title."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerWidgetQueryObjectType"
+msgid "Whether to render the widget's title."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\LayerWidgetQueryObjectType.cs:28
+#. .Description(S["A widget on this layer."])
+msgctxt "OrchardCore.Layers.GraphQL.LayerWidgetQueryObjectType"
+msgid "A widget on this layer."
+msgstr ""
+
+#: OrchardCore.Layers\GraphQL\SiteLayersQuery.cs:41
 #. Description = S["Site layers define the rules and zone placement for widgets."],
 msgctxt "OrchardCore.Layers.GraphQL.SiteLayersQuery"
 msgid "Site layers define the rules and zone placement for widgets."
@@ -224,25 +296,25 @@ msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:13
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:15
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Widgets and Layers"])</h1></zone>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Edit Widgets and Layers"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:17
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:19
 #. @T["Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."]
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Widget successfully moved. <a href=\"javascript:console.log('submit');$('#undo-form').submit();\"><strong>Undo</strong></a>."
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:26
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:28
 #. <h3>@T["Zones"]</h3>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Zones"
 msgstr ""
 
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:30
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:32
 #. <p class="alert alert-warning">@T["Please <a href=\"{0}\">define the available zones</a> before adding Widgets", Url.Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = LayerSiteSettingsDisplayDriver.GroupId })]</p>
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Please <a href=\"{0}\">define the available zones</a> before adding Widgets"
@@ -327,9 +399,21 @@ msgid "If checked, the title will be rendered with the widget."
 msgstr ""
 
 #: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:23
-#. <label asp-for="LayerMetadata.Layer" class="@Orchard.GetLabelClasses()">@T["The layer the widget should be associated with."]</label>
+#. <label asp-for="LayerMetadata.Layer" class="@Orchard.GetLabelClasses()">@T["The layer"]</label>
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
-msgid "The layer the widget should be associated with."
+msgid "The layer"
+msgstr ""
+
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:26
+#. <option value="">@T["Select a layer"]</option>
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "Select a layer"
+msgstr ""
+
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:33
+#. <span class="hint">@T["The layer controls the visibility of this widget."]</span>
+msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
+msgid "The layer controls the visibility of this widget."
 msgstr ""
 
 #: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
