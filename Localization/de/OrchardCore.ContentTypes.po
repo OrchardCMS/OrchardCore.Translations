@@ -10,37 +10,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2024-11-10 14:35\n"
+"PO-Revision-Date: 2025-01-29 15:15\n"
 
 #. .Add(S["Content"], content => content
-#: OrchardCore.ContentTypes\AdminMenu.cs:22
+#: OrchardCore.ContentTypes\AdminMenu.cs:24
 msgctxt "OrchardCore.ContentTypes.AdminMenu"
 msgid "Content"
 msgstr "Inhalt"
 
 #. .Add(S["Content Definition"], S["Content Definition"].PrefixPosition("9"), contentDefinition => contentDefinition
 #. .Add(S["Content Definition"], S["Content Definition"].PrefixPosition("9"), contentDefinition => contentDefinition
-#: OrchardCore.ContentTypes\AdminMenu.cs:23
-#: OrchardCore.ContentTypes\AdminMenu.cs:23
+#. .Add(S["Content Definition"], S["Content Definition"].PrefixPosition(), contentDefinition => contentDefinition
+#. .Add(S["Content Definition"], S["Content Definition"].PrefixPosition(), contentDefinition => contentDefinition
+#: OrchardCore.ContentTypes\AdminMenu.cs:25
+#: OrchardCore.ContentTypes\AdminMenu.cs:25
+#: OrchardCore.ContentTypes\AdminMenu.cs:42
+#: OrchardCore.ContentTypes\AdminMenu.cs:42
 msgctxt "OrchardCore.ContentTypes.AdminMenu"
 msgid "Content Definition"
 msgstr "Inhaltsdefinition"
 
 #. .Add(S["Content Types"], S["Content Types"].PrefixPosition("1"), contentTypes => contentTypes
 #. .Add(S["Content Types"], S["Content Types"].PrefixPosition("1"), contentTypes => contentTypes
-#: OrchardCore.ContentTypes\AdminMenu.cs:24
-#: OrchardCore.ContentTypes\AdminMenu.cs:24
+#. .Add(S["Content Types"], S["Content Types"].PrefixPosition("1"), contentTypes => contentTypes
+#. .Add(S["Content Types"], S["Content Types"].PrefixPosition("1"), contentTypes => contentTypes
+#: OrchardCore.ContentTypes\AdminMenu.cs:26
+#: OrchardCore.ContentTypes\AdminMenu.cs:26
+#: OrchardCore.ContentTypes\AdminMenu.cs:43
+#: OrchardCore.ContentTypes\AdminMenu.cs:43
 msgctxt "OrchardCore.ContentTypes.AdminMenu"
 msgid "Content Types"
 msgstr "Inhaltstypen"
 
 #. .Add(S["Content Parts"], S["Content Parts"].PrefixPosition("2"), contentParts => contentParts
 #. .Add(S["Content Parts"], S["Content Parts"].PrefixPosition("2"), contentParts => contentParts
-#: OrchardCore.ContentTypes\AdminMenu.cs:29
-#: OrchardCore.ContentTypes\AdminMenu.cs:29
+#. .Add(S["Content Parts"], S["Content Parts"].PrefixPosition("2"), contentParts => contentParts
+#. .Add(S["Content Parts"], S["Content Parts"].PrefixPosition("2"), contentParts => contentParts
+#: OrchardCore.ContentTypes\AdminMenu.cs:31
+#: OrchardCore.ContentTypes\AdminMenu.cs:31
+#: OrchardCore.ContentTypes\AdminMenu.cs:48
+#: OrchardCore.ContentTypes\AdminMenu.cs:48
 msgctxt "OrchardCore.ContentTypes.AdminMenu"
 msgid "Content Parts"
 msgstr "Inhaltsteile"
+
+#. .Add(S["Design"], content => content
+#: OrchardCore.ContentTypes\AdminMenu.cs:41
+msgctxt "OrchardCore.ContentTypes.AdminMenu"
+msgid "Design"
+msgstr ""
 
 #. ModelState.AddModelError("DisplayName", S["The Display Name can't be empty."]);
 #. ModelState.AddModelError("DisplayName", S["The Display Name can't be empty."]);
@@ -727,73 +745,97 @@ msgstr "Felder"
 #. <a asp-route-action="EditField" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@fieldDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
 #. <a asp-route-action="EditTypePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@partDefinition.Name" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
 #: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:87
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:138
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:146
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@fieldDefinition.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#. <a asp-route-action="RemovePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@partDefinition.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+#. <div class="d-inline" data-bs-toggle="tooltip" data-bs-title="@T["System-defined fields are integral components of the system and cannot be removed."]">
 #: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:91
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:141
+msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
+msgid "System-defined fields are integral components of the system and cannot be removed."
+msgstr ""
+
+#. @T["Remove"]
+#. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@fieldDefinition.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+#. @T["Remove"]
+#. <a asp-route-action="RemovePart" asp-route-id="@Model.TypeDefinition.Name" asp-route-name="@partDefinition.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+#. @T["Remove"]
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:93
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:99
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:151
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:157
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:193
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Remove"
 msgstr "Löschen"
 
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fa-solid fa-tv text-info" aria-hidden="true"></i> @fieldDefinition.DisplayMode()</span>
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Display mode"]"><i class="fa-solid fa-tv text-info" aria-hidden="true"></i> @partDefinition.DisplayMode()</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:98
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:152
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:106
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:168
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Display mode"
 msgstr ""
 
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa-solid fa-edit text-info" aria-hidden="true"></i> @fieldDefinition.Editor()</span>
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Editor"]"><i class="fa-solid fa-edit text-info" aria-hidden="true"></i> @partDefinition.Editor()</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:102
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:156
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:110
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:172
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Editor"
 msgstr ""
 
 #. <a asp-route-action="AddFieldTo" asp-route-id="@Model.TypeDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:114
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:122
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Field"
 msgstr "Feld Hinzufügen"
 
 #. <h3>@T["Parts"]</h3>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:119
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:127
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Parts"
 msgstr "Teile"
 
+#. <div class="d-inline" data-bs-toggle="tooltip" data-bs-title="@T["System-defined parts are integral components of the system and cannot be removed."]">
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:149
+msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
+msgid "System-defined parts are integral components of the system and cannot be removed."
+msgstr ""
+
 #. <span class="hint dashed">@T["Contains the fields for the current type"]</span>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:147
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:163
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Contains the fields for the current type"
 msgstr "Enthält die Felder für den aktuellen Typ"
 
 #. <a asp-route-action="AddPartsTo" asp-route-id="@Model.TypeDefinition.Name" class="btn btn-info btn-sm" role="button">@T["Add Parts"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:166
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:182
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Parts"
 msgstr "Teile hinzufügen"
 
 #. <a asp-route-action="AddReusablePartTo" asp-route-id="@Model.TypeDefinition.Name" class="btn btn-info btn-sm" role="button">@T["Add Named Part"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:167
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:183
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Add Named Part"
 msgstr "Benannten Teil hinzufügen"
 
 #. <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:171
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:187
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Save"
 msgstr "Speichern"
 
+#. <div class="d-inline" data-bs-toggle="tooltip" data-bs-title="@T["System-defined types are integral components of the system and cannot be removed."]">
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:191
+msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
+msgid "System-defined types are integral components of the system and cannot be removed."
+msgstr ""
+
 #. <button class="btn btn-danger delete" type="submit" name="submit.Delete" value="Delete" data-url-af="RemoveUrl">@T["Delete"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:175
+#: OrchardCore.ContentTypes\Views\Admin\Edit.cshtml:199
 msgctxt "OrchardCore.ContentTypes.Views.Admin.Edit"
 msgid "Delete"
 msgstr "Löschen"
@@ -865,31 +907,39 @@ msgid "Fields"
 msgstr "Felder"
 
 #. <a asp-route-action="EditField" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:46
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:48
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Edit"
 msgstr "Bearbeiten"
 
+#. <div class="d-inline" data-bs-toggle="tooltip" data-bs-title="@T["System-defined fields are integral components of the system and cannot be removed."]">
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:52
+msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
+msgid "System-defined fields are integral components of the system and cannot be removed."
+msgstr ""
+
+#. @T["Remove"]
 #. <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Remove"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:48
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:54
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:60
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Remove"
 msgstr "Entfernen"
 
 #. <a asp-route-action="AddFieldTo" asp-route-id="@Model.PartDefinition.Name" asp-route-returnUrl="@FullRequestPath" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:61
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:74
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Add Field"
 msgstr "Feld hinzufügen"
 
 #. <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:66
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:79
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Save"
 msgstr "Speichern"
 
 #. <button class="btn btn-danger delete" type="submit" name="submit.Delete" value="Delete" data-url-af="RemoveUrl">@T["Delete"]</button>
-#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:67
+#: OrchardCore.ContentTypes\Views\Admin\EditPart.cshtml:80
 msgctxt "OrchardCore.ContentTypes.Views.Admin.EditPart"
 msgid "Delete"
 msgstr "Löschen"
@@ -1097,12 +1147,6 @@ msgstr "Neuen Part erstellen"
 msgctxt "OrchardCore.ContentTypes.Views.Admin.ListParts"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr "<strong>Nichts hier!</strong> Deine Suche hat keine Ergebnisse zurückgegeben."
-
-#. <span class="icon"><i class="fa-solid fa-cube" aria-hidden="true"></i></span><span class="title">@T["Content Definition"]</span>
-#: OrchardCore.ContentTypes\Views\NavigationItemText-contentdefinition.Id.cshtml:1
-msgctxt "OrchardCore.ContentTypes.Views.NavigationItemText-contentdefinition.Id"
-msgid "Content Definition"
-msgstr "Inhaltsdefinition"
 
 #. <h5>@T["Replace Content Definitions"]</h5>
 #: OrchardCore.ContentTypes\Views\Items\ReplaceContentDefinitionDeploymentStep.Fields.Edit.cshtml:14
