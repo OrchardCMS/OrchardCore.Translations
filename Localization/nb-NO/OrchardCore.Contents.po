@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Norwegian Bokmal\n"
 "Language: nb_NO\n"
-"PO-Revision-Date: 2024-11-10 14:36\n"
+"PO-Revision-Date: 2025-01-29 15:17\n"
 
 #. await builder.AddAsync(S["Content"], NavigationConstants.AdminMenuContentPosition, async content =>
 #: OrchardCore.Contents\AdminMenu.cs:65
@@ -18,9 +18,7 @@ msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "Content"
 msgstr ""
 
-#. await content.AddAsync(S["Content Items"], S["Content Items"].PrefixPosition(), async contentItems =>
-#. await content.AddAsync(S["Content Items"], S["Content Items"].PrefixPosition(), async contentItems =>
-#: OrchardCore.Contents\AdminMenu.cs:68
+#. await content.AddAsync(S["Content Items"], "before", async contentItems =>
 #: OrchardCore.Contents\AdminMenu.cs:68
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "Content Items"
@@ -287,55 +285,55 @@ msgid "Successfully cloned. The clone was saved as a draft."
 msgstr ""
 
 #. ? H["The draft has been removed."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:540
+#: OrchardCore.Contents\Controllers\AdminController.cs:538
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The draft has been removed."
 msgstr ""
 
 #. : H["The {0} draft has been removed.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:541
+#: OrchardCore.Contents\Controllers\AdminController.cs:539
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The {0} draft has been removed."
 msgstr ""
 
 #. ? H["That content has been removed."]
-#: OrchardCore.Contents\Controllers\AdminController.cs:567
+#: OrchardCore.Contents\Controllers\AdminController.cs:564
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That content has been removed."
 msgstr ""
 
 #. : H["That {0} has been removed.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:568
+#: OrchardCore.Contents\Controllers\AdminController.cs:565
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been removed."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["That content has been published."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:597
+#: OrchardCore.Contents\Controllers\AdminController.cs:594
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That content has been published."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["That {0} has been published.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:601
+#: OrchardCore.Contents\Controllers\AdminController.cs:598
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "That {0} has been published."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["The content has been unpublished."]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:630
+#: OrchardCore.Contents\Controllers\AdminController.cs:627
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The content has been unpublished."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["The {0} has been unpublished.", typeDefinition.DisplayName]);
-#: OrchardCore.Contents\Controllers\AdminController.cs:634
+#: OrchardCore.Contents\Controllers\AdminController.cs:631
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The {0} has been unpublished."
 msgstr ""
 
 #. items.Add(new SelectListItem(S["All content types"], string.Empty));
-#: OrchardCore.Contents\Controllers\AdminController.cs:765
+#: OrchardCore.Contents\Controllers\AdminController.cs:762
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All content types"
 msgstr ""
@@ -363,31 +361,41 @@ msgid "Your content item does not exist."
 msgstr ""
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:25
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:27
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Configuration"
 msgstr ""
 
 #. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
 #. .Add(S["Import/Export"], S["Import/Export"].PrefixPosition(), import => import
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:26
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:26
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Import/Export"
 msgstr ""
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:27
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:29
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:43
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
 msgid "Settings"
 msgstr ""
 
-#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), targetSettings => targetSettings
-#. .Add(S["Export Target Settings"], S["Export Target Settings"].PrefixPosition(), targetSettings => targetSettings
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
-#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
+#. .Add(S["Export target"], S["Export target"].PrefixPosition(), targetSettings => targetSettings
+#. .Add(S["Export target"], S["Export target"].PrefixPosition(), targetSettings => targetSettings
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:30
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:30
 msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
-msgid "Export Target Settings"
+msgid "Export target"
+msgstr ""
+
+#. .Add(S["Deployment Targets"], S["Deployment Targets"].PrefixPosition(), targetSettings => targetSettings
+#. .Add(S["Deployment Targets"], S["Deployment Targets"].PrefixPosition(), targetSettings => targetSettings
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:44
+#: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:44
+msgctxt "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget.ExportContentToDeploymentTargetAdminMenu"
+msgid "Deployment Targets"
 msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<ExportContentToDeploymentTargetSettings, ExportContentToDeploymentTargetStartup>(S => S["Export Content To Deployment Target settings"], S => S["Exports the Export Content To Deployment Target settings."]);
@@ -433,13 +441,13 @@ msgid "Exports the content audit trail settings."
 msgstr ""
 
 #. public override LocalizedString Category => S["Content"];
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:38
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:39
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Content"
 msgstr ""
 
 #. return Outcomes(S["Done"]);
-#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:51
+#: OrchardCore.Contents\Workflows\Activities\ContentActivity.cs:52
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentActivity"
 msgid "Done"
 msgstr ""
@@ -821,40 +829,46 @@ msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventData.SummaryAdmi
 msgid "{0} of the {1} {2} was {3}"
 msgstr ""
 
+#. <h2 class="h3">@T["Content Item Info"]</h2>
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:15
+msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
+msgid "Content Item Info"
+msgstr ""
+
 #. <th class="border-top-0 w-25">@T["Content Item Id"]</th>
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:18
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:20
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Content Item Id"
 msgstr ""
 
 #. <th>@T["Content type"]</th>
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:22
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:24
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Content type"
 msgstr ""
 
 #. <th>@T["Display text"]</th>
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:26
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:28
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Display text"
 msgstr ""
 
 #. <th>@T["Version"]</th>
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:37
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:39
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Version"
 msgstr ""
 
 #. <td>@T["Version {0}", versionNumber]</td>
 #. @T["Version {0}", versionNumber]
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:40
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:49
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:42
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:51
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Version {0}"
 msgstr ""
 
 #. <th>@T["Comment"]</th>
-#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:55
+#: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:57
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Comment"
 msgstr ""
@@ -2497,18 +2511,6 @@ msgstr ""
 #: OrchardCore.Contents\Views\Admin\List.cshtml:0
 msgctxt "OrchardCore.Contents.Views.Admin.List"
 msgid "Manage {0} Content"
-msgstr ""
-
-#. <span class="icon"><i class="fa-solid fa-edit" aria-hidden="true"></i></span><span class="title">@T["Content"]</span>
-#: OrchardCore.Contents\Views\NavigationItemText-content.Id.cshtml:1
-msgctxt "OrchardCore.Contents.Views.NavigationItemText-content.Id"
-msgid "Content"
-msgstr ""
-
-#. <span class="title">@T["New"]</span>
-#: OrchardCore.Contents\Views\NavigationItemText-new.Id.cshtml:4
-msgctxt "OrchardCore.Contents.Views.NavigationItemText-new.Id"
-msgid "New"
 msgstr ""
 
 #. <h4><i class="fa-solid fa-cloud-upload" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Publish Content"])</h4>
