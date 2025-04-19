@@ -58,19 +58,19 @@ msgctxt "OrchardCore.Email.AdminMenu"
 msgid "Communication"
 msgstr ""
 
-#: OrchardCore.Email\Controllers\AdminController.cs:83
+#: OrchardCore.Email\Controllers\AdminController.cs:82
 #. await _notifier.SuccessAsync(H["Message sent successfully."]);
 msgctxt "OrchardCore.Email.Controllers.AdminController"
 msgid "Message sent successfully."
 msgstr ""
 
-#: OrchardCore.Email\Controllers\AdminController.cs:98
+#: OrchardCore.Email\Controllers\AdminController.cs:97
 #. ModelState.AddModelError(string.Empty, S["The selected provider is invalid or no longer enabled."]);
 msgctxt "OrchardCore.Email.Controllers.AdminController"
 msgid "The selected provider is invalid or no longer enabled."
 msgstr ""
 
-#: OrchardCore.Email\Controllers\AdminController.cs:102
+#: OrchardCore.Email\Controllers\AdminController.cs:101
 #. ModelState.AddModelError(string.Empty, S["Unable to send the message using the selected provider."]);
 msgctxt "OrchardCore.Email.Controllers.AdminController"
 msgid "Unable to send the message using the selected provider."
@@ -94,13 +94,13 @@ msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Messaging"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:91
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:131
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Done"
 msgstr ""
 
-#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:91
+#: OrchardCore.Email\Workflows\Activities\EmailTask.cs:131
 #. return Outcomes(S["Done"], S["Failed"]);
 msgctxt "OrchardCore.Email.Workflows.Activities.EmailTask"
 msgid "Failed"
@@ -124,112 +124,142 @@ msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Design"
 msgid "Send Email"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:5
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:6
 #. <label asp-for="AuthorExpression" class="form-label">@T["From"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "From"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:8
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:9
 #. <span class="hint">@T["The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The author's email address that defines who the email is from. Leave blank to use the configured email address. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:12
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:13
 #. <label asp-for="SenderExpression" class="form-label">@T["Sender"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Sender"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:15
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:16
 #. <span class="hint">@T["The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The sender's email address. Required if not the same than the \"From\" email address. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:19
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:20
 #. <label asp-for="SenderExpression" class="form-label">@T["ReplyTo"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "ReplyTo"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:22
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:23
 #. <span class="hint">@T["The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The \"reply to\" email address. Required if you want email replies be sent to a different address than the \"From\" address. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:26
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:27
 #. <label asp-for="RecipientsExpression" class="form-label">@T["Recipients"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Recipients"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:29
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:30
 #. <span class="hint">@T["The comma-separated list of recipient email addresses. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of recipient email addresses. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:33
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:34
 #. <label asp-for="CcExpression" class="form-label">@T["Cc"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Cc"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:36
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:37
 #. <span class="hint">@T["The comma-separated list of carbon copy email addresses. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of carbon copy email addresses. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:40
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:41
 #. <label asp-for="BccExpression" class="form-label">@T["Bcc"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Bcc"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:43
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:44
 #. <span class="hint">@T["The comma-separated list of blind copy email addresses. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The comma-separated list of blind copy email addresses. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:47
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:48
 #. <label asp-for="SubjectExpression" class="form-label">@T["Subject"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "Subject"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:50
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:51
 #. <span class="hint">@T["The subject of the email message. With Liquid support."]</span>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
 msgid "The subject of the email message. With Liquid support."
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:56
-#. <label class="form-check-label" asp-for="IsHtmlBody">@T["Does the Body contain HTML?"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:55
+#. <label>@T["Format"]</label>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Does the Body contain HTML?"
+msgid "Format"
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:57
-#. <span class="hint dashed">@T["If checked, indicates the body of the email message will be sent as HTML."]</span>
+#. <option selected="@(Model.BodyFormat == MailMessageBodyFormat.All)" value="@MailMessageBodyFormat.All">@T["All"]</option>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "If checked, indicates the body of the email message will be sent as HTML."
+msgid "All"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:62
-#. <label asp-for="Body" class="form-label">@T["Body"]</label>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:58
+#. <option selected="@(Model.BodyFormat == MailMessageBodyFormat.Text)" value="@MailMessageBodyFormat.Text">@T["Text"]</option>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "Body"
+msgid "Text"
 msgstr ""
 
-#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:64
-#. <span class="hint">@T["The body of the email message. With Liquid support."]</span>
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:59
+#. <option selected="@(Model.BodyFormat == MailMessageBodyFormat.Html)" value="@MailMessageBodyFormat.Html">@T["Html"]</option>
 msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
-msgid "The body of the email message. With Liquid support."
+msgid "Html"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:61
+#. <span class="hint">@T["The format of the email message."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The format of the email message."
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:65
+#. <label asp-for="TextBody">@T["Text Body"]</label>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "Text Body"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:67
+#. <span class="hint">@T["The plain text body of the email message. With Liquid support."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The plain text body of the email message. With Liquid support."
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:71
+#. <label asp-for="HtmlBody">@T["HTML Body"]</label>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "HTML Body"
+msgstr ""
+
+#: OrchardCore.Email\Views\Items\EmailTask.Fields.Edit.cshtml:73
+#. <span class="hint">@T["The HTML body of the email message. With Liquid support."]</span>
+msgctxt "OrchardCore.Email.Views.Items.EmailTask.Fields.Edit"
+msgid "The HTML body of the email message. With Liquid support."
 msgstr ""
 
 #: OrchardCore.Email\Views\Items\EmailTask.Fields.Thumbnail.cshtml:1

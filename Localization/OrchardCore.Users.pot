@@ -297,9 +297,9 @@ msgid "Email"
 msgstr ""
 
 #: OrchardCore.Users\Controllers\AdminController.cs:147
-#. new SelectListItem() { Text = S["Approve"], Value = nameof(UsersBulkAction.Approve) },
+#. new SelectListItem() { Text = S["Confirm email"], Value = nameof(UsersBulkAction.ConfirmEmail) },
 msgctxt "OrchardCore.Users.Controllers.AdminController"
-msgid "Approve"
+msgid "Confirm email"
 msgstr ""
 
 #: OrchardCore.Users\Controllers\AdminController.cs:148
@@ -332,67 +332,75 @@ msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Authenticated (no roles)"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:249
-#. await _notifier.SuccessAsync(H["User {0} successfully approved.", user.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:248
+#. await _notifier.SuccessAsync(H["The email for {0} has been successfully confirmed.", user.UserName]);
+#: OrchardCore.Users\Controllers\AdminController.cs:455
+#. await _notifier.SuccessAsync(H["The email for {0} has been successfully confirmed.", user.UserName]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
-msgid "User {0} successfully approved."
+msgid "The email for {0} has been successfully confirmed."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:256
+#: OrchardCore.Users\Controllers\AdminController.cs:255
 #. await _notifier.SuccessAsync(H["User {0} successfully deleted.", user.UserName]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully deleted."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:264
+#: OrchardCore.Users\Controllers\AdminController.cs:263
 #. await _notifier.SuccessAsync(H["User {0} successfully disabled.", user.UserName]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully disabled."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:272
+#: OrchardCore.Users\Controllers\AdminController.cs:271
 #. await _notifier.SuccessAsync(H["User {0} successfully enabled.", user.UserName]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User {0} successfully enabled."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:323
+#: OrchardCore.Users\Controllers\AdminController.cs:322
 #. await _notifier.SuccessAsync(H["User created successfully."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User created successfully."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:409
+#: OrchardCore.Users\Controllers\AdminController.cs:408
 #. await _notifier.SuccessAsync(H["User updated successfully."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User updated successfully."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:458
+#: OrchardCore.Users\Controllers\AdminController.cs:459
+#. await _notifier.WarningAsync(H["The email for {0} is already confirmed.", user.UserName]);
+msgctxt "OrchardCore.Users.Controllers.AdminController"
+msgid "The email for {0} is already confirmed."
+msgstr ""
+
+#: OrchardCore.Users\Controllers\AdminController.cs:482
 #. await _notifier.SuccessAsync(H["User deleted successfully."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User deleted successfully."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:464
+#: OrchardCore.Users\Controllers\AdminController.cs:488
 #. await _notifier.ErrorAsync(H["Could not delete the user."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Could not delete the user."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:511
+#: OrchardCore.Users\Controllers\AdminController.cs:535
 #. await _notifier.SuccessAsync(H["Password updated correctly."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Password updated correctly."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:538
+#: OrchardCore.Users\Controllers\AdminController.cs:562
 #. await _notifier.SuccessAsync(H["User unlocked successfully."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "User unlocked successfully."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\AdminController.cs:544
+#: OrchardCore.Users\Controllers\AdminController.cs:568
 #. await _notifier.ErrorAsync(H["Could not unlock the user."]);
 msgctxt "OrchardCore.Users.Controllers.AdminController"
 msgid "Could not unlock the user."
@@ -434,107 +442,107 @@ msgctxt "OrchardCore.Users.Controllers.EmailConfirmationController"
 msgid "Verification email sent."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:103
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:99
 #. ModelState.AddModelError(string.Empty, S["An error occurred in external provider."]);
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:114
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:110
 #. ModelState.AddModelError(string.Empty, S["An error occurred in external provider."]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "An error occurred in external provider."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:151
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:147
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:263
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:259
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:388
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:384
 #. ModelState.AddModelError(string.Empty, S["Invalid login attempt."]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Invalid login attempt."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:190
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:186
 #. await _notifier.ErrorAsync(H["New registrations are disabled for this site."]);
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:285
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:281
 #. await _notifier.ErrorAsync(H["New registrations are disabled for this site."]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "New registrations are disabled for this site."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:227
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:223
 #. await _notifier.ErrorAsync(H["Unable to create internal account and link it to the external user."]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Unable to create internal account and link it to the external user."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:536
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:532
 #. ModelState.AddModelError(nameof(model.Password), S["Password is required!"]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Password is required!"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:540
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:536
 #. ModelState.AddModelError(nameof(model.ConfirmPassword), S["Confirm Password do not match"]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Confirm Password do not match"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:572
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:568
 #. ModelState.AddModelError(nameof(model.UserName), S["Username is required!"]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Username is required!"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:585
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:581
 #. ModelState.AddModelError(nameof(model.Email), S["Email is required!"]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Email is required!"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:589
+#: OrchardCore.Users\Controllers\ExternalAuthenticationsController.cs:585
 #. ModelState.AddModelError(nameof(model.Email), S["Invalid Email."]);
 msgctxt "OrchardCore.Users.Controllers.ExternalAuthenticationsController"
 msgid "Invalid Email."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\ResetPasswordController.cs:107
+#: OrchardCore.Users\Controllers\ResetPasswordController.cs:100
 #. ModelState.AddModelError(string.Empty, S["Before you can reset your password, you need to verify your email address."]);
 msgctxt "OrchardCore.Users.Controllers.ResetPasswordController"
 msgid "Before you can reset your password, you need to verify your email address."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:114
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:107
 #. ModelState.AddModelError(nameof(model.PhoneNumber), S["Invalid phone number used."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "Invalid phone number used."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:128
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:121
 #. await Notifier.ErrorAsync(H["We are unable to send you an SMS message at this time. Please try again later."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "We are unable to send you an SMS message at this time. Please try again later."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:133
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:126
 #. await Notifier.SuccessAsync(H["We have successfully sent an verification code to your phone number. Please retrieve the code from your device."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "We have successfully sent an verification code to your phone number. Please retrieve the code from your device."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:152
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:145
 #. await Notifier.ErrorAsync(H["Unable to find a phone number."]);
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:176
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:169
 #. await Notifier.ErrorAsync(H["Unable to find a phone number."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "Unable to find a phone number."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:188
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:181
 #. await Notifier.SuccessAsync(H["Your phone number has been confirmed."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "Your phone number has been confirmed."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:193
+#: OrchardCore.Users\Controllers\SmsAuthenticatorController.cs:186
 #. await Notifier.ErrorAsync(H["Invalid verification code."]);
 msgctxt "OrchardCore.Users.Controllers.SmsAuthenticatorController"
 msgid "Invalid verification code."
@@ -564,97 +572,97 @@ msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationBaseController"
 msgid "New recovery codes were generated."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:81
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:75
 #. await Notifier.ErrorAsync(H["Unable to find an active two-factor provider."]);
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:118
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:112
 #. await Notifier.ErrorAsync(H["Unable to find an active two-factor provider."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Unable to find an active two-factor provider."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:141
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:135
 #. ModelState.AddModelError(string.Empty, S["The account is locked out."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "The account is locked out."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:147
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:141
 #. ModelState.AddModelError(string.Empty, S["Invalid verification code."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Invalid verification code."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:203
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:197
 #. ModelState.AddModelError(string.Empty, S["The account is locked out"]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "The account is locked out"
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:210
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:204
 #. ModelState.AddModelError(string.Empty, S["Invalid recovery code entered."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Invalid recovery code entered."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:258
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:252
 #. await Notifier.SuccessAsync(H["Preferences were updated successfully."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Preferences were updated successfully."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:263
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:257
 #. await Notifier.ErrorAsync(H["Unable to update preferences."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Unable to update preferences."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:281
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:275
 #. await Notifier.SuccessAsync(H["The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:297
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:291
 #. await Notifier.ErrorAsync(H["Cannot generate recovery codes for user because they do not have 2FA enabled."]);
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:317
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:311
 #. await Notifier.ErrorAsync(H["Cannot generate recovery codes for user because they do not have 2FA enabled."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Cannot generate recovery codes for user because they do not have 2FA enabled."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:326
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:320
 #. await Notifier.SuccessAsync(H["You have generated new recovery codes."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "You have generated new recovery codes."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:367
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:361
 #. await Notifier.ErrorAsync(H["To enable two-factor authentication, enable at least one two-factor method."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "To enable two-factor authentication, enable at least one two-factor method."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:374
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:368
 #. await Notifier.SuccessAsync(H["Two-factor authentication has been enabled."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Two-factor authentication has been enabled."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:389
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:383
 #. await Notifier.WarningAsync(H["Two-factor authentication cannot be disabled for the current user."]);
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:409
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:403
 #. await Notifier.WarningAsync(H["Two-factor authentication cannot be disabled for the current user."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Two-factor authentication cannot be disabled for the current user."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:417
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:411
 #. await Notifier.ErrorAsync(H["Unexpected error occurred disabling two-factor authentication."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Unexpected error occurred disabling two-factor authentication."
 msgstr ""
 
-#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:421
+#: OrchardCore.Users\Controllers\TwoFactorAuthenticationController.cs:415
 #. await Notifier.WarningAsync(H["Two-factor authentication has been disabled."]);
 msgctxt "OrchardCore.Users.Controllers.TwoFactorAuthenticationController"
 msgid "Two-factor authentication has been disabled."
@@ -684,19 +692,19 @@ msgctxt "OrchardCore.Users.Drivers.TwoFactorLoginSettingsDisplayDriver"
 msgid "Number of Recovery Codes to Generate should be grater than 0."
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:96
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:95
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Password), S["A password is required"]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "A password is required"
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:101
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:100
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Password), S["The password and the password confirmation fields must match."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "The password and the password confirmation fields must match."
 msgstr ""
 
-#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:121
+#: OrchardCore.Users\Drivers\UserDisplayDriver.cs:120
 #. await _notifier.WarningAsync(H["Cannot disable the only enabled administrator."]);
 msgctxt "OrchardCore.Users.Drivers.UserDisplayDriver"
 msgid "Cannot disable the only enabled administrator."
@@ -2753,6 +2761,20 @@ msgid "Unlock"
 msgstr ""
 
 #: OrchardCore.Users\Views\UserActionsMenu.cshtml:30
+#. <a asp-action="ConfirmEmail" asp-route-id="@Model.User.UserId" class="dropdown-item" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Confirm email"]" data-message="@T["Are you sure you want to confirm the email for this user?"]">@T["Confirm email"]</a>
+#: OrchardCore.Users\Views\UserActionsMenu.cshtml:30
+#. <a asp-action="ConfirmEmail" asp-route-id="@Model.User.UserId" class="dropdown-item" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Confirm email"]" data-message="@T["Are you sure you want to confirm the email for this user?"]">@T["Confirm email"]</a>
+msgctxt "OrchardCore.Users.Views.UserActionsMenu"
+msgid "Confirm email"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserActionsMenu.cshtml:30
+#. <a asp-action="ConfirmEmail" asp-route-id="@Model.User.UserId" class="dropdown-item" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Confirm email"]" data-message="@T["Are you sure you want to confirm the email for this user?"]">@T["Confirm email"]</a>
+msgctxt "OrchardCore.Users.Views.UserActionsMenu"
+msgid "Are you sure you want to confirm the email for this user?"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserActionsMenu.cshtml:37
 #. <a asp-action="Delete" asp-route-id="@Model.User.UserId" class="dropdown-item text-danger" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.Users.Views.UserActionsMenu"
 msgid "Delete"
@@ -2878,59 +2900,65 @@ msgctxt "OrchardCore.Users.Views.Items.UserEnabledEvent.Fields.Thumbnail"
 msgid "User is enabled."
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.cshtml:6
+#: OrchardCore.Users\Views\UserFields.cshtml:10
+#. <span class="badge text-bg-warning ms-2" title="@T["The email address '{0}' has not been confirmed.", Model.User.Email]">
+msgctxt "OrchardCore.Users.Views.UserFields"
+msgid "The email address '{0}' has not been confirmed."
+msgstr ""
+
+#: OrchardCore.Users\Views\UserFields.cshtml:11
+#. <i class="fa-solid fa-envelope-open" aria-hidden="true"></i> @T["Unconfirmed"]
+msgctxt "OrchardCore.Users.Views.UserFields"
+msgid "Unconfirmed"
+msgstr ""
+
+#: OrchardCore.Users\Views\UserFields.cshtml:16
 #. <span class="badge text-bg-danger ms-2" title="@T["Disabled"]">
-#: OrchardCore.Users\Views\UserFields.cshtml:7
+#: OrchardCore.Users\Views\UserFields.cshtml:17
 #. <i class="fa-solid fa-user-alt-slash" aria-hidden="true"></i> @T["Disabled"]
 msgctxt "OrchardCore.Users.Views.UserFields"
 msgid "Disabled"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:16
-#. <label class="form-check-label" asp-for="EmailConfirmed">@T["Email confirmed"]</label>
-msgctxt "OrchardCore.Users.Views.UserFields.Edit"
-msgid "Email confirmed"
-msgstr ""
-
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:24
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:13
 #. <label asp-for="IsEnabled" class="form-check-label cursor-pointer">@T["Is enabled?"]</label>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Is enabled?"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:25
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:14
 #. <span class="hint dashed">@T["Uncheck to disable this user account."]</span>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Uncheck to disable this user account."
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:33
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:22
 #. <label asp-for="Password" class="form-label">@T["Password"]</label>
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:36
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:25
 #. <input asp-for="Password" type="password" class="form-control password-input-field" placeholder="@T["Password"]" autocomplete="new-password" />
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:42
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:31
 #. <label asp-for="PasswordConfirmation" class="sr-only">@T["Password Confirmation"]</label>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password Confirmation"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:45
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:34
 #. <input asp-for="PasswordConfirmation" type="password" class="form-control password-confirmation-input-field" autocomplete="new-password" placeholder="@T["Password confirmation"]" />
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Password confirmation"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:57
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:46
 #. @T["Generate password"]
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Generate password"
 msgstr ""
 
-#: OrchardCore.Users\Views\UserFields.Edit.cshtml:59
+#: OrchardCore.Users\Views\UserFields.Edit.cshtml:48
 #. <div class="btn btn-info btn-sm copy-password-button">@T["Copy password"]</div>
 msgctxt "OrchardCore.Users.Views.UserFields.Edit"
 msgid "Copy password"
