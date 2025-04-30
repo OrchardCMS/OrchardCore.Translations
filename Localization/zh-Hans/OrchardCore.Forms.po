@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2024-09-23 09:57\n"
+"PO-Revision-Date: 2025-04-19 14:05\n"
 
 #. public override LocalizedString DisplayText => S["Http Redirect To Form Location Task"];
 #: OrchardCore.Forms\Activities\HttpRedirectToFormLocationTask.cs:24
@@ -37,16 +37,28 @@ msgid "Failed"
 msgstr "失败"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Name), S["A value is required for Name."]);
-#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:36
+#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:37
 msgctxt "OrchardCore.Forms.Drivers.FormInputElementPartDisplayDriver"
 msgid "A value is required for Name."
 msgstr "名称需要一个值。"
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Name), S["A Name contains invalid characters."]);
+#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:45
+msgctxt "OrchardCore.Forms.Drivers.FormInputElementPartDisplayDriver"
+msgid "A Name contains invalid characters."
+msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix + '.' + nameof(SelectPartEditViewModel.Options), S["The options are written in an incorrect format."]);
 #: OrchardCore.Forms\Drivers\SelectPartDisplayDriver.cs:50
 msgctxt "OrchardCore.Forms.Drivers.SelectPartDisplayDriver"
 msgid "The options are written in an incorrect format."
 msgstr "选项格式错误。"
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Rows), S["The Rows field should be greater than or equal 1."]);
+#: OrchardCore.Forms\Drivers\TextAreaPartDisplayDriver.cs:47
+msgctxt "OrchardCore.Forms.Drivers.TextAreaPartDisplayDriver"
+msgid "The Rows field should be greater than or equal 1."
+msgstr ""
 
 #. public override LocalizedString DisplayText => S["Add Model Validation Error Task"];
 #: OrchardCore.Forms\Workflows\Activities\AddModelValidationErrorTask.cs:23
@@ -354,17 +366,17 @@ msgctxt "OrchardCore.Forms.Views.Items.FormElementValidationPart.Fields.Edit"
 msgid "The type of validation to create for this field."
 msgstr "要为此字段创建的验证类型。"
 
-#. <label asp-for="Name" class="@Orchard.GetLabelClasses()">@T["Name"]</label>
+#. <label asp-for="Name" class="@Orchard.GetLabelClasses()">@T["HTML Name"]</label>
 #: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:6
 msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
-msgid "Name"
-msgstr "名称"
+msgid "HTML Name"
+msgstr ""
 
-#. <span class="hint">@T["The name to render on this form element."]</span>
+#. <span class="hint">@T["The valid characters for the HTML input name attribute are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), period (.), and square brackets ([ ])."]</span>
 #: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:9
 msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
-msgid "The name to render on this form element."
-msgstr "要在此表单元素上呈现的名称。"
+msgid "The valid characters for the HTML input name attribute are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), period (.), and square brackets ([ ])."
+msgstr ""
 
 #. <label asp-for="Action" class="@Orchard.GetLabelClasses()">@T["Action"]</label>
 #: OrchardCore.Forms\Views\Items\FormPart.Fields.Edit.cshtml:6
@@ -777,6 +789,18 @@ msgstr "默认值"
 msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
 msgid "The default value for this textarea."
 msgstr "文本区域字段的默认值"
+
+#. <label asp-for="Rows" class="@Orchard.GetLabelClasses()">@T["Rows"]</label>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "Rows"
+msgstr ""
+
+#. <span class="hint">@T["The number of rows to use for this textarea."]</span>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:25
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "The number of rows to use for this textarea."
+msgstr ""
 
 #. <h4><i class="fa-solid fa-shield-alt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate Antiforgery Token"])</h4>
 #: OrchardCore.Forms\Views\Items\ValidateAntiforgeryTokenTask.Fields.Design.cshtml:4
