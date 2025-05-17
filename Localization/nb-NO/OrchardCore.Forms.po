@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Norwegian Bokmal\n"
 "Language: nb_NO\n"
-"PO-Revision-Date: 2024-08-24 20:29\n"
+"PO-Revision-Date: 2025-04-19 14:05\n"
 
 #. public override LocalizedString DisplayText => S["Http Redirect To Form Location Task"];
 #: OrchardCore.Forms\Activities\HttpRedirectToFormLocationTask.cs:24
@@ -37,15 +37,27 @@ msgid "Failed"
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Name), S["A value is required for Name."]);
-#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:36
+#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:37
 msgctxt "OrchardCore.Forms.Drivers.FormInputElementPartDisplayDriver"
 msgid "A value is required for Name."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Name), S["A Name contains invalid characters."]);
+#: OrchardCore.Forms\Drivers\FormInputElementPartDisplayDriver.cs:45
+msgctxt "OrchardCore.Forms.Drivers.FormInputElementPartDisplayDriver"
+msgid "A Name contains invalid characters."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix + '.' + nameof(SelectPartEditViewModel.Options), S["The options are written in an incorrect format."]);
 #: OrchardCore.Forms\Drivers\SelectPartDisplayDriver.cs:50
 msgctxt "OrchardCore.Forms.Drivers.SelectPartDisplayDriver"
 msgid "The options are written in an incorrect format."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Rows), S["The Rows field should be greater than or equal 1."]);
+#: OrchardCore.Forms\Drivers\TextAreaPartDisplayDriver.cs:47
+msgctxt "OrchardCore.Forms.Drivers.TextAreaPartDisplayDriver"
+msgid "The Rows field should be greater than or equal 1."
 msgstr ""
 
 #. public override LocalizedString DisplayText => S["Add Model Validation Error Task"];
@@ -354,16 +366,16 @@ msgctxt "OrchardCore.Forms.Views.Items.FormElementValidationPart.Fields.Edit"
 msgid "The type of validation to create for this field."
 msgstr ""
 
-#. <label asp-for="Name" class="@Orchard.GetLabelClasses()">@T["Name"]</label>
+#. <label asp-for="Name" class="@Orchard.GetLabelClasses()">@T["HTML Name"]</label>
 #: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:6
 msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
-msgid "Name"
+msgid "HTML Name"
 msgstr ""
 
-#. <span class="hint">@T["The name to render on this form element."]</span>
+#. <span class="hint">@T["The valid characters for the HTML input name attribute are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), period (.), and square brackets ([ ])."]</span>
 #: OrchardCore.Forms\Views\Items\FormInputElementPart.Fields.Edit.cshtml:9
 msgctxt "OrchardCore.Forms.Views.Items.FormInputElementPart.Fields.Edit"
-msgid "The name to render on this form element."
+msgid "The valid characters for the HTML input name attribute are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), period (.), and square brackets ([ ])."
 msgstr ""
 
 #. <label asp-for="Action" class="@Orchard.GetLabelClasses()">@T["Action"]</label>
@@ -776,6 +788,18 @@ msgstr ""
 #: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:17
 msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
 msgid "The default value for this textarea."
+msgstr ""
+
+#. <label asp-for="Rows" class="@Orchard.GetLabelClasses()">@T["Rows"]</label>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "Rows"
+msgstr ""
+
+#. <span class="hint">@T["The number of rows to use for this textarea."]</span>
+#: OrchardCore.Forms\Views\Items\TextAreaPart.Fields.Edit.cshtml:25
+msgctxt "OrchardCore.Forms.Views.Items.TextAreaPart.Fields.Edit"
+msgid "The number of rows to use for this textarea."
 msgstr ""
 
 #. <h4><i class="fa-solid fa-shield-alt" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Validate Antiforgery Token"])</h4>
