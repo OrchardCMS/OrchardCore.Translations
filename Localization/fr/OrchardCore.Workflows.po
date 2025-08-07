@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2024-09-09 17:16\n"
+"PO-Revision-Date: 2025-08-07 17:40\n"
 
 #. public override LocalizedString DisplayText => S["Commit Transaction Task"];
 #: OrchardCore.Workflows\Activities\CommitTransactionTask.cs:25
@@ -283,10 +283,20 @@ msgid "Done"
 msgstr "Terminé"
 
 #. .Add(S["Workflows"], NavigationConstants.AdminMenuWorkflowsPosition, workflow => workflow
-#: OrchardCore.Workflows\AdminMenu.cs:18
+#. .Add(S["Workflows"], S["Workflows"].PrefixPosition(), workflow => workflow
+#. .Add(S["Workflows"], S["Workflows"].PrefixPosition(), workflow => workflow
+#: OrchardCore.Workflows\AdminMenu.cs:20
+#: OrchardCore.Workflows\AdminMenu.cs:33
+#: OrchardCore.Workflows\AdminMenu.cs:33
 msgctxt "OrchardCore.Workflows.AdminMenu"
 msgid "Workflows"
 msgstr "Workflows"
+
+#. .Add(S["Tools"], tools => tools
+#: OrchardCore.Workflows\AdminMenu.cs:32
+msgctxt "OrchardCore.Workflows.AdminMenu"
+msgid "Tools"
+msgstr "Outils"
 
 #. await _notifier.SuccessAsync(H["Activity added successfully."]);
 #: OrchardCore.Workflows\Controllers\ActivityController.cs:112
@@ -515,39 +525,45 @@ msgid "Done"
 msgstr "Terminé"
 
 #. public override LocalizedString DisplayText => S["Timer Event"];
-#: OrchardCore.Workflows\Timers\TimerEvent.cs:24
+#: OrchardCore.Workflows\Timers\TimerEvent.cs:31
 msgctxt "OrchardCore.Workflows.Timers.TimerEvent"
 msgid "Timer Event"
 msgstr "Événement Timer"
 
 #. public override LocalizedString Category => S["Background"];
-#: OrchardCore.Workflows\Timers\TimerEvent.cs:26
+#: OrchardCore.Workflows\Timers\TimerEvent.cs:33
 msgctxt "OrchardCore.Workflows.Timers.TimerEvent"
 msgid "Background"
 msgstr "Arrière-plan"
 
 #. return Outcomes(S["Done"]);
-#: OrchardCore.Workflows\Timers\TimerEvent.cs:47
+#: OrchardCore.Workflows\Timers\TimerEvent.cs:60
 msgctxt "OrchardCore.Workflows.Timers.TimerEvent"
 msgid "Done"
 msgstr "Terminé"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Workflows\Trimming\AdminMenu.cs:26
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:28
 msgctxt "OrchardCore.Workflows.Trimming.AdminMenu"
 msgid "Configuration"
 msgstr "Configuration"
 
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Workflows\Trimming\AdminMenu.cs:27
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:29
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:42
 msgctxt "OrchardCore.Workflows.Trimming.AdminMenu"
 msgid "Settings"
 msgstr "Paramètres"
 
 #. .Add(S["Workflow Trimming"], S["Workflow Trimming"], trimming => trimming
 #. .Add(S["Workflow Trimming"], S["Workflow Trimming"], trimming => trimming
-#: OrchardCore.Workflows\Trimming\AdminMenu.cs:28
-#: OrchardCore.Workflows\Trimming\AdminMenu.cs:28
+#. .Add(S["Workflow Trimming"], S["Workflow Trimming"].PrefixPosition(), trimming => trimming
+#. .Add(S["Workflow Trimming"], S["Workflow Trimming"].PrefixPosition(), trimming => trimming
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:30
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:30
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:43
+#: OrchardCore.Workflows\Trimming\AdminMenu.cs:43
 msgctxt "OrchardCore.Workflows.Trimming.AdminMenu"
 msgid "Workflow Trimming"
 msgstr "Trimming du workflow"
@@ -2096,12 +2112,6 @@ msgctxt "OrchardCore.Workflows.Views.Items.MissingActivity.Fields.Design"
 msgid "<em>{0}</em> is no longer available."
 msgstr "<em>{0}</em> n'est plus disponible."
 
-#. <span class="icon"><i class="fa-solid fa-sitemap fa-rotate-270" aria-hidden="true"></i></span><span class="title">@T["Workflows"]</span>
-#: OrchardCore.Workflows\Views\NavigationItemText-workflows.Id.cshtml:1
-msgctxt "OrchardCore.Workflows.Views.NavigationItemText-workflows.Id"
-msgid "Workflows"
-msgstr "Workflows"
-
 #. <h4><i class="fa-solid fa-@className" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["{0} Notification", Model.Activity.NotificationType])</h4>
 #: OrchardCore.Workflows\Views\Items\NotifyTask.Fields.Design.cshtml:20
 msgctxt "OrchardCore.Workflows.Views.Items.NotifyTask.Fields.Design"
@@ -2329,6 +2339,18 @@ msgstr "Expression CRON"
 msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Edit"
 msgid "The CRON expression."
 msgstr "L'expression CRON."
+
+#. <label asp-for="UseLocalTime" class="form-check-label">@T["Use site time zone"]</label>
+#: OrchardCore.Workflows\Views\Items\TimerEvent.Fields.Edit.cshtml:13
+msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Edit"
+msgid "Use site time zone"
+msgstr "Utiliser le fuseau horaire du site"
+
+#. <span class="hint dashed">@T["The CRON expression uses UTC by default. Check this box to use the site's time zone instead."]</span>
+#: OrchardCore.Workflows\Views\Items\TimerEvent.Fields.Edit.cshtml:14
+msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Edit"
+msgid "The CRON expression uses UTC by default. Check this box to use the site's time zone instead."
+msgstr "L'expression CRON utilise l'UTC par défaut. Cocher cette case pour utiliser le fuseau horaire du site à la place."
 
 #. <h4 class="card-title"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>@T["Timer"]</h4>
 #: OrchardCore.Workflows\Views\Items\TimerEvent.Fields.Thumbnail.cshtml:1
@@ -2576,51 +2598,60 @@ msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "The last time the background trimming task was run."
 msgstr "La dernière fois que la tâche de trimming a été exécutée."
 
-#. @T["Idle"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:39
+#. <label asp-for="Statuses" class="control-label">@T["Statuses"]</label>
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:35
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Statuses"
+msgstr "Statuts"
+
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Idle"
 msgstr "Inactif"
 
-#. @T["Starting"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:49
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Starting"
 msgstr "Démarrage"
 
-#. @T["Resuming"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:59
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Resuming"
 msgstr "Reprise en cours"
 
-#. @T["Executing"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:69
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Executing"
 msgstr "Exécution en cours"
 
-#. @T["Halted"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:79
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Halted"
 msgstr "Stoppé"
 
-#. @T["Finished"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:89
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Finished"
 msgstr "Terminé"
 
-#. @T["Faulted"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:99
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Faulted"
 msgstr "En échec"
 
-#. @T["Aborted"]
-#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:109
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
 msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
 msgid "Aborted"
 msgstr "Abandonné"
+
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:0
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Status: {0}"
+msgstr "Statut: {0}"
+
+#. <span class="hint">@T["Workflows with the selected statuses will be trimmed."]</span>
+#: OrchardCore.Workflows\Views\WorkflowTrimming.Fields.Edit.cshtml:63
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Workflows with the selected statuses will be trimmed."
+msgstr "Les flux de travail avec les statuts sélectionnés seront supprimés."
 
