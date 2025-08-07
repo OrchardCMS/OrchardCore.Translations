@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2025-01-29 15:30\n"
+"PO-Revision-Date: 2025-08-07 17:31\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Media.Azure\AdminMenu.cs:20
@@ -61,15 +61,27 @@ msgid "Failed to remove the Azure Media ImageSharp Image Cache Container '{0}'."
 msgstr ""
 
 #. context.ErrorMessage = S["Unable to remove the Azure Media Storage Container '{0}'.", _options.ContainerName];
-#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:73
+#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:75
 msgctxt "OrchardCore.Media.Azure.Services.MediaBlobContainerTenantEvents"
 msgid "Unable to remove the Azure Media Storage Container '{0}'."
 msgstr ""
 
 #. context.ErrorMessage = S["Failed to remove the Azure Media Storage Container '{0}'.", _options.ContainerName];
-#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:79
+#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:82
 msgctxt "OrchardCore.Media.Azure.Services.MediaBlobContainerTenantEvents"
 msgid "Failed to remove the Azure Media Storage Container '{0}'."
+msgstr ""
+
+#. context.ErrorMessage = S["File removal process failed on file {ItemName}.", blobItem.Name];
+#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:101
+msgctxt "OrchardCore.Media.Azure.Services.MediaBlobContainerTenantEvents"
+msgid "File removal process failed on file {ItemName}."
+msgstr ""
+
+#. context.ErrorMessage = S["Error during Azure Media Storage blob item removal."];
+#: OrchardCore.Media.Azure\Services\MediaBlobContainerTenantEvents.cs:112
+msgctxt "OrchardCore.Media.Azure.Services.MediaBlobContainerTenantEvents"
+msgid "Error during Azure Media Storage blob item removal."
 msgstr ""
 
 #. <h1>@RenderTitleSegments(T["Azure Blob storage options"])</h1>
@@ -128,5 +140,29 @@ msgstr ""
 #: OrchardCore.Media.Azure\Views\Admin\Options.cshtml:43
 msgctxt "OrchardCore.Media.Azure.Views.Admin.Options"
 msgid "Whether a blob container is created on startup if it does not exist."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="RemoveContainer">@T["Remove Container"]</label>
+#: OrchardCore.Media.Azure\Views\Admin\Options.cshtml:50
+msgctxt "OrchardCore.Media.Azure.Views.Admin.Options"
+msgid "Remove Container"
+msgstr ""
+
+#. <span class="hint">@T["Whether a blob container is removed on tenant deletion if it exists."]</span>
+#: OrchardCore.Media.Azure\Views\Admin\Options.cshtml:51
+msgctxt "OrchardCore.Media.Azure.Views.Admin.Options"
+msgid "Whether a blob container is removed on tenant deletion if it exists."
+msgstr ""
+
+#. <label class="form-check-label" asp-for="RemoveFilesFromBasePath">@T["Remove Files From Base Path"]</label>
+#: OrchardCore.Media.Azure\Views\Admin\Options.cshtml:58
+msgctxt "OrchardCore.Media.Azure.Views.Admin.Options"
+msgid "Remove Files From Base Path"
+msgstr ""
+
+#. <span class="hint">@T["Whether only the media files under the base path are removed on tenant deletion."]</span>
+#: OrchardCore.Media.Azure\Views\Admin\Options.cshtml:59
+msgctxt "OrchardCore.Media.Azure.Views.Admin.Options"
+msgid "Whether only the media files under the base path are removed on tenant deletion."
 msgstr ""
 
