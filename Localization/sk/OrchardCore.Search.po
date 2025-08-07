@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
-"PO-Revision-Date: 2025-04-19 14:30\n"
+"PO-Revision-Date: 2025-08-07 17:40\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #. .Add(S["Search"], S["Search"].PrefixPosition(), search => search
@@ -40,10 +40,16 @@ msgctxt "OrchardCore.Search.AdminMenu"
 msgid "Site Search"
 msgstr ""
 
-#. await _notifier.WarningAsync(H["No search provider feature is enabled."]);
-#: OrchardCore.Search\Controllers\SearchController.cs:63
+#. await _notifier.WarningAsync(H["No default search index has been configured."]);
+#: OrchardCore.Search\Controllers\SearchController.cs:83
 msgctxt "OrchardCore.Search.SearchController"
-msgid "No search provider feature is enabled."
+msgid "No default search index has been configured."
+msgstr ""
+
+#. await _notifier.WarningAsync(H["No search service provider found for {0} provider.", indexProfile.ProviderName]);
+#: OrchardCore.Search\Controllers\SearchController.cs:107
+msgctxt "OrchardCore.Search.SearchController"
+msgid "No search service provider found for {0} provider."
 msgstr ""
 
 #: OrchardCore.Search\Views\Search-Form.cshtml:0
@@ -93,34 +99,40 @@ msgctxt "OrchardCore.Search.Views.SearchFormPart.Edit"
 msgid "Leave it empty to use the default index."
 msgstr ""
 
-#. <label asp-for="ProviderName" class="form-label">@T["Default search provider"]</label>
+#. <label asp-for="DefaultIndexProfileName" class="form-label">@T["Default search index"]</label>
 #: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "Default search provider"
+msgid "Default search index"
 msgstr ""
 
-#. <span class="hint">@T["The default search provider to use for the search page."]</span>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:9
+#. <option value="">@T["Select a default index"]</option>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "The default search provider to use for the search page."
+msgid "Select a default index"
+msgstr ""
+
+#. <span class="hint">@T["The default index to use for the search page."]</span>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
+msgid "The default index to use for the search page."
 msgstr ""
 
 #. <label asp-for="Placeholder" class="form-label">@T["Placeholder"]</label>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:13
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
 msgid "Placeholder"
 msgstr ""
 
 #. <span class="hint">@T["The placeholder text to use in the search bar."]</span>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:15
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
 msgid "The placeholder text to use in the search bar."
 msgstr ""
 
-#. <div class="alert alert-warning">@T["You need to enable at least one search provider (Lucene, Elasticsearch, or Azure AI Search)."]</div>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:20
+#. <div class="alert alert-warning">@T["No available indexes. Add at least one index to search."]</div>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:22
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "You need to enable at least one search provider (Lucene, Elasticsearch, or Azure AI Search)."
+msgid "No available indexes. Add at least one index to search."
 msgstr ""
 
 #. <h5>@T["Search Settings"]</h5>
