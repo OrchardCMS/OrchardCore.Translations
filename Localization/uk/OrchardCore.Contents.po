@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2025-09-23 07:58\n"
+"PO-Revision-Date: 2025-09-23 11:33\n"
 
 #. await builder.AddAsync(S["Content"], NavigationConstants.AdminMenuContentPosition, async content =>
 #: OrchardCore.Contents\AdminMenu.cs:65
@@ -22,7 +22,7 @@ msgstr "Контент"
 #: OrchardCore.Contents\AdminMenu.cs:68
 msgctxt "OrchardCore.Contents.AdminMenu"
 msgid "Content Items"
-msgstr "Елементи вмісту"
+msgstr "Елементи контенту"
 
 #. await builder.AddAsync(S["New"], "-1", async newMenu =>
 #: OrchardCore.Contents\AdminMenu.cs:88
@@ -58,7 +58,7 @@ msgstr "Створений"
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:20
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was created."
-msgstr "Було створено елемент вмісту."
+msgstr "Елемент контенту створено."
 
 #. .WithEvent(Saved, S => S["Saved"], S => S["A content item was saved."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:21
@@ -70,7 +70,7 @@ msgstr "Збережено"
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:21
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was saved."
-msgstr "Елемент вмісту збережено."
+msgstr "Елемент контенту збережено."
 
 #. .WithEvent(Published, S => S["Published"], S => S["A content item was published."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:22
@@ -82,19 +82,19 @@ msgstr "Опубліковано"
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:22
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was published."
-msgstr "Елемент контенту було опубліковано."
+msgstr "Елемент контенту опубліковано."
 
 #. .WithEvent(Unpublished, S => S["Unpublished"], S => S["A content item was unpublished."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:23
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Unpublished"
-msgstr "Неопубліковано"
+msgstr "Відхилено публікацію"
 
 #. .WithEvent(Unpublished, S => S["Unpublished"], S => S["A content item was unpublished."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:23
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was unpublished."
-msgstr "Публікація контенту була скасована."
+msgstr "Публікація елемента контенту була відхилена."
 
 #. .WithEvent(Removed, S => S["Removed"], S => S["A content item was deleted."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:24
@@ -106,19 +106,19 @@ msgstr "Вилучено"
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:24
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was deleted."
-msgstr "Елемент вмісту видалено."
+msgstr "Елемент контенту видалено."
 
 #. .WithEvent(Cloned, S => S["Cloned"], S => S["A content item was cloned."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:25
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "Cloned"
-msgstr "Склоновано"
+msgstr "Клоновано"
 
 #. .WithEvent(Cloned, S => S["Cloned"], S => S["A content item was cloned."], true)
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:25
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was cloned."
-msgstr "Контент був клонований."
+msgstr "Елемент контенту клоновано."
 
 #. .WithEvent(Restored, S => S["Restored"], S => S["A content item was restored to a previous version."], true);
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:26
@@ -130,7 +130,7 @@ msgstr "Відновлено"
 #: OrchardCore.Contents\AuditTrail\Services\ContentAuditTrailEventConfiguration.cs:26
 msgctxt "OrchardCore.Contents.AuditTrail.Services.ContentAuditTrailEventConfiguration"
 msgid "A content item was restored to a previous version."
-msgstr "Елемент вмісту був відновлений до попередньої версії."
+msgstr "Елемент контенту відновлено до попередньої версії."
 
 #. new SelectListItem(S["Latest"], nameof(ContentsStatus.Latest)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:143
@@ -148,7 +148,7 @@ msgstr "Опубліковано"
 #: OrchardCore.Contents\Controllers\AdminController.cs:145
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Unpublished"
-msgstr "Неопубліковані"
+msgstr "Відхилено публікацію"
 
 #. new SelectListItem(S["All versions"], nameof(ContentsStatus.AllVersions)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:146
@@ -160,13 +160,13 @@ msgstr "Всі версії"
 #: OrchardCore.Contents\Controllers\AdminController.cs:151
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Owned by me"
-msgstr "Ті, що належать мені"
+msgstr "Належать мені"
 
 #. new SelectListItem(S["Recently created"], nameof(ContentsOrder.Created)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:156
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Recently created"
-msgstr "Нещодавно створений"
+msgstr "Нещодавно створено"
 
 #. new SelectListItem(S["Recently modified"], nameof(ContentsOrder.Modified)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:157
@@ -178,7 +178,7 @@ msgstr "Нещодавно змінено"
 #: OrchardCore.Contents\Controllers\AdminController.cs:158
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Recently published"
-msgstr "Нещодавно опубліковані"
+msgstr "Нещодавно опубліковано"
 
 #. new SelectListItem(S["Title"], nameof(ContentsOrder.Title)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:159
@@ -196,7 +196,7 @@ msgstr "Опублікувати зараз"
 #: OrchardCore.Contents\Controllers\AdminController.cs:165
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "Unpublish"
-msgstr "Скасування публікації"
+msgstr "Відхилити публікацію"
 
 #. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
 #: OrchardCore.Contents\Controllers\AdminController.cs:166
@@ -326,7 +326,7 @@ msgstr "Цей {0} опубліковано."
 #: OrchardCore.Contents\Controllers\AdminController.cs:683
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "The operation was canceled."
-msgstr "Операцію було скасовано."
+msgstr "Операцію скасовано."
 
 #. await _notifier.SuccessAsync(H["The content has been unpublished."]);
 #: OrchardCore.Contents\Controllers\AdminController.cs:674
@@ -344,7 +344,7 @@ msgstr "Публікацію {0} відхилено."
 #: OrchardCore.Contents\Controllers\AdminController.cs:811
 msgctxt "OrchardCore.Contents.Controllers.AdminController"
 msgid "All content types"
-msgstr "Всі типи вмісту"
+msgstr "Всі типи контенту"
 
 #. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
 #. await _notifier.SuccessAsync(H["Content added successfully to the deployment plan."]);
@@ -366,7 +366,7 @@ msgstr "Не вдалося додати вибраний контент до п
 #: OrchardCore.Contents\Deployment\AddToDeploymentPlan\ContentItemDeploymentStepDriver.cs:49
 msgctxt "OrchardCore.Contents.Deployment.AddToDeploymentPlan.ContentItemDeploymentStepDriver"
 msgid "Your content item does not exist."
-msgstr "Ваш елемент вмісту не існує."
+msgstr "Вашого елемента контенту не існує."
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Contents\Deployment\ExportContentToDeploymentTarget\ExportContentToDeploymentTargetAdminMenu.cs:28
@@ -464,43 +464,43 @@ msgstr "Готово"
 #: OrchardCore.Contents\Workflows\Activities\ContentCreatedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentCreatedEvent"
 msgid "Content Created Event"
-msgstr "Контент створено подію"
+msgstr "Подія створення контенту"
 
 #. public override LocalizedString DisplayText => S["Content Deleted Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentDeletedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentDeletedEvent"
 msgid "Content Deleted Event"
-msgstr "Контент видаленої події"
+msgstr "Подія видалення контенту"
 
 #. public override LocalizedString DisplayText => S["Content Save Draft Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentDraftSavedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentDraftSavedEvent"
 msgid "Content Save Draft Event"
-msgstr "Контент зберегти чернетку події"
+msgstr "Подія збереження чернетки"
 
 #. public override LocalizedString DisplayText => S["Content Published Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentPublishedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentPublishedEvent"
 msgid "Content Published Event"
-msgstr "Контент опублікованої події"
+msgstr "Подія публікації контенту"
 
 #. public override LocalizedString DisplayText => S["Content Unpublished Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentUnpublishedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentUnpublishedEvent"
 msgid "Content Unpublished Event"
-msgstr "Контент не опублікованої події"
+msgstr "Подія відхилення публікації контенту"
 
 #. public override LocalizedString DisplayText => S["Content Updated Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentUpdatedEvent.cs:19
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentUpdatedEvent"
 msgid "Content Updated Event"
-msgstr "Контент оновлено подію"
+msgstr "Подія оновлення контенту"
 
 #. public override LocalizedString DisplayText => S["Content Versioned Event"];
 #: OrchardCore.Contents\Workflows\Activities\ContentVersionedEvent.cs:18
 msgctxt "OrchardCore.Contents.Workflows.Activities.ContentVersionedEvent"
 msgid "Content Versioned Event"
-msgstr "Контент версійності події"
+msgstr "Подія версіювання контенту"
 
 #. public override LocalizedString Category => S["Content"];
 #: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:33
@@ -512,13 +512,13 @@ msgstr "Контент"
 #: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:35
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Create Content Task"
-msgstr "Створити вміст завдання"
+msgstr "Завдання створити контент"
 
 #. get => GetProperty(() => new WorkflowExpression<string>(JConvert.SerializeObject(new { DisplayText = S["Enter a title"].Value }, JOptions.Indented)));
 #: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:51
 msgctxt "OrchardCore.Contents.Workflows.Activities.CreateContentTask"
 msgid "Enter a title"
-msgstr "Введіть назву"
+msgstr "Введіть заголовок"
 
 #. return Outcomes(S["Done"], S["Failed"]);
 #: OrchardCore.Contents\Workflows\Activities\CreateContentTask.cs:62
@@ -536,7 +536,7 @@ msgstr "Невдало"
 #: OrchardCore.Contents\Workflows\Activities\DeleteContentTask.cs:21
 msgctxt "OrchardCore.Contents.Workflows.Activities.DeleteContentTask"
 msgid "Delete Content Task"
-msgstr "Видалити вміст завдання"
+msgstr "Завдання видалити контент"
 
 #. public override LocalizedString Category => S["Content"];
 #: OrchardCore.Contents\Workflows\Activities\DeleteContentTask.cs:23
@@ -548,7 +548,7 @@ msgstr "Контент"
 #: OrchardCore.Contents\Workflows\Activities\DeleteContentTask.cs:27
 msgctxt "OrchardCore.Contents.Workflows.Activities.DeleteContentTask"
 msgid "Deleted"
-msgstr "Видалені"
+msgstr "Видалено"
 
 #. return Outcomes(S["Deleted"], S["Noop"]);
 #: OrchardCore.Contents\Workflows\Activities\DeleteContentTask.cs:27
@@ -560,7 +560,7 @@ msgstr "Немає операції"
 #: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:22
 msgctxt "OrchardCore.Contents.Workflows.Activities.PublishContentTask"
 msgid "Publish Content Task"
-msgstr "Опублікувати вміст завдання"
+msgstr "Завдання опублікувати контент"
 
 #. public override LocalizedString Category => S["Content"];
 #: OrchardCore.Contents\Workflows\Activities\PublishContentTask.cs:24
@@ -596,13 +596,13 @@ msgstr "Контент"
 #: OrchardCore.Contents\Workflows\Activities\RetrieveContentTask.cs:29
 msgctxt "OrchardCore.Contents.Workflows.Activities.RetrieveContentTask"
 msgid "Retrieved"
-msgstr "Повернено"
+msgstr "Отримано"
 
 #. public override LocalizedString DisplayText => S["Unpublish Content Task"];
 #: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:22
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Unpublish Content Task"
-msgstr "Скасувати публікацію вмісту завдання"
+msgstr "Завдання відхилення публікації контенту"
 
 #. public override LocalizedString Category => S["Content"];
 #: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:24
@@ -614,7 +614,7 @@ msgstr "Контент"
 #: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:28
 msgctxt "OrchardCore.Contents.Workflows.Activities.UnpublishContentTask"
 msgid "Unpublished"
-msgstr "Неопублікований"
+msgstr "Відхилено публікацію"
 
 #. return Outcomes(S["Unpublished"], S["Noop"]);
 #: OrchardCore.Contents\Workflows\Activities\UnpublishContentTask.cs:28
@@ -638,7 +638,7 @@ msgstr "Завдання оновлення контенту"
 #: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:59
 msgctxt "OrchardCore.Contents.Workflows.Activities.UpdateContentTask"
 msgid "Enter a title"
-msgstr "Введіть назву"
+msgstr "Введіть заголовок"
 
 #. return Outcomes(S["Done"], S["Failed"]);
 #: OrchardCore.Contents\Workflows\Activities\UpdateContentTask.cs:67
@@ -692,7 +692,7 @@ msgstr "Ви впевнені, що хочете додати ці елемен�
 #: OrchardCore.Contents\Views\Items\AddToDeploymentPlan-Button-ContentsBulkActions.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.AddToDeploymentPlan-Button-ContentsBulkActions"
 msgid "Add to deployment plan"
-msgstr "Додати на план розгортання"
+msgstr "Додати до плану розгортання"
 
 #. <h5 class="modal-title" id="deployment-plans-title">@T["Available Deployment Plans"]</h5>
 #: OrchardCore.Contents\Views\Items\AddToDeploymentPlan-ContentsBulkActionsDeploymentPlan.Modal.cshtml:11
@@ -716,13 +716,13 @@ msgstr "Скасувати"
 #: OrchardCore.Contents\Views\Items\AllContentDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.Contents.Views.Items.AllContentDeploymentStep.Fields.Edit"
 msgid "All Content"
-msgstr "Увесь вміст"
+msgstr "Весь контент"
 
 #. <label class="form-check-label" asp-for="ExportAsSetupRecipe">@T["Export As Setup recipe"]</label>
 #: OrchardCore.Contents\Views\Items\AllContentDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.AllContentDeploymentStep.Fields.Edit"
 msgid "Export As Setup recipe"
-msgstr "Експортувати як рецепт налаштування"
+msgstr "Експортувати як рецепт інсталяції"
 
 #. <span class="hint">@T["Check if the data should be exported as a Setup recipe."]</span>
 #: OrchardCore.Contents\Views\Items\AllContentDeploymentStep.Fields.Edit.cshtml:9
@@ -776,7 +776,7 @@ msgstr "Відновити до версії"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:18
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Are you sure you want to restore to version {0}?"
-msgstr "Ви дійсно бажаєте відновити з версії {0}?"
+msgstr "Ви дійсно бажаєте відновити до версії {0}?"
 
 #. data-ok-text="@T["Yes"]"
 #. data-ok-text="@T["Yes"]"
@@ -806,7 +806,7 @@ msgstr "Відновити"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:32
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventActions.SummaryAdmin"
 msgid "Restore content item"
-msgstr "Відновити елемент вмісту"
+msgstr "Відновити елемент контенту"
 
 #. data-message="@T["Are you sure you want to restore this content item?"]"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventActions.SummaryAdmin.cshtml:33
@@ -859,7 +859,7 @@ msgstr "Тип контенту"
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:28
 msgctxt "OrchardCore.Contents.Views.Items.AuditTrailContentEventDetail.DetailAdmin"
 msgid "Display text"
-msgstr "Показати текст"
+msgstr "Текст для показу"
 
 #. <th>@T["Version"]</th>
 #: OrchardCore.Contents\Views\Items\AuditTrailContentEventDetail.DetailAdmin.cshtml:39
@@ -963,7 +963,7 @@ msgstr "Ім'я користувача власника цього елемен�
 #: OrchardCore.Contents\Views\CommonPartSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Contents.Views.CommonPartSettings.Edit"
 msgid "Display date editor"
-msgstr "Відображати редактор дати"
+msgstr "Показувати редактор дати"
 
 #. <span class="hint dashed">@T["Check to be able to edit the creation date of the content item."]</span>
 #: OrchardCore.Contents\Views\CommonPartSettings.Edit.cshtml:7
@@ -1001,7 +1001,7 @@ msgstr "Опублікувати"
 #: OrchardCore.Contents\Views\Content.PublishButton.cshtml:14
 msgctxt "OrchardCore.Contents.Views.Content.PublishButton"
 msgid "Toggle Dropdown"
-msgstr "Переключити випадаюче меню"
+msgstr "Перемкнути розкривне меню"
 
 #. <button class="dropdown-item publish-continue" type="submit" name="submit.Publish" value="submit.PublishAndContinue">@T["and continue"]</button>
 #: OrchardCore.Contents\Views\Content.PublishButton.cshtml:17
@@ -1021,7 +1021,7 @@ msgstr "Зберегти чернетку"
 #: OrchardCore.Contents\Views\Content.SaveDraftButton.cshtml:14
 msgctxt "OrchardCore.Contents.Views.Content.SaveDraftButton"
 msgid "Toggle Dropdown"
-msgstr "Переключити випадаюче меню"
+msgstr "Перемкнути розкривне меню"
 
 #. <button class="dropdown-item draft-continue" type="submit" name="submit.Save" value="submit.SaveAndContinue">@T["and continue"]</button>
 #: OrchardCore.Contents\Views\Content.SaveDraftButton.cshtml:17
@@ -1033,7 +1033,7 @@ msgstr "та продовжити"
 #: OrchardCore.Contents\Views\Content.SummaryAdmin.cshtml:35
 msgctxt "OrchardCore.Contents.Views.Content.SummaryAdmin"
 msgid "Content type"
-msgstr "Типи контента"
+msgstr "Тип контенту"
 
 #. <div class="btn-group" title="@T["Actions"]">
 #. <span>@T["Actions"]</span>
@@ -1065,13 +1065,13 @@ msgstr "Контент створено"
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Design.cshtml:6
 msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Design"
 msgid "Any content type"
-msgstr "Всі типи вмісту"
+msgstr "Будь-який тип контенту"
 
 #. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.Items.ContentCreatedEvent.Fields.Edit"
 msgid "Content Types"
-msgstr "Типи контента"
+msgstr "Типи контенту"
 
 #. <span class="hint">@T["Select any content types to filter on."]</span>
 #: OrchardCore.Contents\Views\Items\ContentCreatedEvent.Fields.Edit.cshtml:8
@@ -1095,19 +1095,19 @@ msgstr "Контент створено."
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Design"
 msgid "Content Deleted"
-msgstr "Контент створено"
+msgstr "Контент видалено"
 
 #. <em>@(Model.ContentTypeFilter.Any() ? (object)string.Join(", ", Model.ContentTypeFilter.Select(x => x.DisplayName)) : T["Any content type"])</em>
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Design.cshtml:6
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Design"
 msgid "Any content type"
-msgstr "Будь-який тип вмісту"
+msgstr "Будь-який тип контенту"
 
 #. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeletedEvent.Fields.Edit"
 msgid "Content Types"
-msgstr "Типи контента"
+msgstr "Типи контенту"
 
 #. <span class="hint">@T["Select any content types to filter on."]</span>
 #: OrchardCore.Contents\Views\Items\ContentDeletedEvent.Fields.Edit.cshtml:8
@@ -1131,7 +1131,7 @@ msgstr "Контент видалено."
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Edit"
 msgid "Content Types"
-msgstr "Типи контента"
+msgstr "Типи контенту"
 
 #. <span class="hint">@T["The content types to add as part of the plan."]</span>
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Edit.cshtml:9
@@ -1161,19 +1161,19 @@ msgstr "Якщо відмічено, вам доведеться вручну о
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Summary.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Summary"
 msgid "Content"
-msgstr "Вміст"
+msgstr "Контент"
 
 #. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Summary.cshtml:21
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Summary"
 msgid "Nothing here!"
-msgstr "Порожньо!"
+msgstr "Тут нічого немає!"
 
 #. <h4 class="card-title">@T["Content"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Contents.Views.Items.ContentDeploymentStep.Fields.Thumbnail"
 msgid "Content"
-msgstr "Вміст"
+msgstr "Контент"
 
 #. <p>@T["Exports all the content items for the specified content types."]</p>
 #: OrchardCore.Contents\Views\Items\ContentDeploymentStep.Fields.Thumbnail.cshtml:4
@@ -1185,13 +1185,13 @@ msgstr "Експортує всі елементи контенту для вк�
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Design.cshtml:4
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Design"
 msgid "Content Draft Saved"
-msgstr "Чернетку контенту збережено"
+msgstr "Чернетку збережено"
 
 #. <em>@(Model.ContentTypeFilter.Any() ? (object)string.Join(", ", Model.ContentTypeFilter.Select(x => x.DisplayName)) : T["Any content type"])</em>
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Design.cshtml:6
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Design"
 msgid "Any content type"
-msgstr "Будь-який тип вмісту"
+msgstr "Будь-який тип контенту"
 
 #. <label asp-for="SelectedContentTypeNames" class="form-label">@T["Content Types"]</label>
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Edit.cshtml:5
@@ -1209,13 +1209,13 @@ msgstr "Виберіть якісь типи контенту для фільт�
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Thumbnail.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Thumbnail"
 msgid "Content Draft Saved"
-msgstr "Чернетку контенту збережено"
+msgstr "Чернетку збережено"
 
 #. <p>@T["Content Draft is saved."]</p>
 #: OrchardCore.Contents\Views\Items\ContentDraftSavedEvent.Fields.Thumbnail.cshtml:2
 msgctxt "OrchardCore.Contents.Views.Items.ContentDraftSavedEvent.Fields.Thumbnail"
 msgid "Content Draft is saved."
-msgstr "Чернетку контенту збережено."
+msgstr "Чернетку збережено."
 
 #. <label asp-for="ContentItemId" class="form-label">@T["Content Item Id"]</label>
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Edit.cshtml:3
@@ -1233,19 +1233,19 @@ msgstr "Вкажіть ідентифікатор елемента контен�
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Summary.cshtml:12
 msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Summary"
 msgid "Content Item"
-msgstr "Елемент вмісту"
+msgstr "Елемент контенту"
 
 #. <span class="badge text-bg-warning">@T["Nothing here!"]</span>
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Summary.cshtml:19
 msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Summary"
 msgid "Nothing here!"
-msgstr "Порожньо!"
+msgstr "Тут нічого немає!"
 
 #. <h4 class="card-title">@T["Content Item"]</h4>
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Contents.Views.Items.ContentItemDeploymentStep.Fields.Thumbnail"
 msgid "Content Item"
-msgstr "Елемент вмісту"
+msgstr "Елемент контенту"
 
 #. <p>@T["Exports a specified content item."]</p>
 #: OrchardCore.Contents\Views\Items\ContentItemDeploymentStep.Fields.Thumbnail.cshtml:4
@@ -1269,7 +1269,7 @@ msgstr "Будь-який тип контенту"
 #: OrchardCore.Contents\Views\Items\ContentPublishedEvent.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.Items.ContentPublishedEvent.Fields.Edit"
 msgid "Content Types"
-msgstr "Типи контента"
+msgstr "Типи контенту"
 
 #. <span class="hint">@T["Select any content types to filter on."]</span>
 #: OrchardCore.Contents\Views\Items\ContentPublishedEvent.Fields.Edit.cshtml:8
@@ -1409,13 +1409,13 @@ msgstr "Новий"
 #: OrchardCore.Contents\Views\ContentsAdminListFilters.cshtml:8
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListFilters"
 msgid "Filter by content type"
-msgstr "Фільтрувати за типом вмісту"
+msgstr "Фільтрувати за типом контенту"
 
 #. <select asp-for="SelectedContentType" asp-items="Model.ContentTypeOptions" class="selectpicker contenttypes-selectpicker show-tick me-2" data-header="@T["Filter by content type"]" data-selected-text-format="static" data-width="fit" data-dropdown-align-right="auto" title="@T["Content Type"]" data-style="btn-sm" data-live-search="true"></select>
 #: OrchardCore.Contents\Views\ContentsAdminListFilters.cshtml:8
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListFilters"
 msgid "Content Type"
-msgstr "Типи контента"
+msgstr "Тип контенту"
 
 #. <select asp-for="ContentsStatus" asp-items="@Model.ContentStatuses" class="selectpicker contentstatuses-selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-selected-text-format="static" data-width="fit" data-dropdown-align-right="auto" title="@T["Show"]" data-style="btn-sm"></select>
 #: OrchardCore.Contents\Views\ContentsAdminListFilters.cshtml:10
@@ -1471,7 +1471,7 @@ msgstr "Належать мені"
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:49
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Filter syntax"
-msgstr "Синтаксис фільтру"
+msgstr "Синтаксис фільтра"
 
 #. <label asp-for="SearchText" class="sr-only">@T["Search"]</label>
 #. <input asp-for="SearchText" class="form-control" placeholder="@T["Search"]" inputmode="search" type="search" autofocus />
@@ -1503,7 +1503,7 @@ msgstr "можна вводити з назвою терміна або без �
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:58
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Single"
-msgstr "Одиночний"
+msgstr "Одинарний"
 
 #. <span class="hint dashed">@T["A single value can be entered"]</span>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:59
@@ -1515,7 +1515,7 @@ msgstr "Можна ввести одне значення"
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:63
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "Multiple"
-msgstr "Множина"
+msgstr "Кілька"
 
 #. <span class="hint dashed">@T["Logical operators and groups are supported"]</span>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:64
@@ -1569,7 +1569,7 @@ msgstr "включаючи всі неявні групи та оператор�
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:103
 msgctxt "OrchardCore.Contents.Views.ContentsAdminListSearch"
 msgid "No current filter applied"
-msgstr "Не застосований поточний фільтр"
+msgstr "Поточний фільтр не застосовано"
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Close"]</button>
 #: OrchardCore.Contents\Views\ContentsAdminListSearch.cshtml:109
@@ -1605,7 +1605,7 @@ msgctxt "OrchardCore.Contents.Views.ContentsAdminListSummary"
 msgid " / 1 item in total"
 msgid_plural " / {0} items in total"
 msgstr[0] " / всього 1 елемент"
-msgstr[1] " / всього {0} елементів"
+msgstr[1] " / всього {0} елементи"
 msgstr[2] " / всього {0} елементів"
 msgstr[3] " / всього {0} елементів"
 
@@ -1627,7 +1627,7 @@ msgstr "Відхилити чернетку"
 #: OrchardCore.Contents\Views\ContentsButtonActions_SummaryAdmin.cshtml:30
 msgctxt "OrchardCore.Contents.Views.ContentsButtonActions_SummaryAdmin"
 msgid "Are you sure you want to discard this draft?"
-msgstr "Ви дійсно бажаєте скасувати цю чернетку?"
+msgstr "Ви дійсно бажаєте відхилити цю чернетку?"
 
 #. <a asp-action="DiscardDraft" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" data-url-af="UnsafeUrl RemoveUrl" data-title=@T["Discard Draft"] data-message=@T["Are you sure you want to discard this draft?"] data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" class="dropdown-item btn-sm">@T["Discard Draft"]</a>
 #. <a asp-action="Unpublish" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" data-url-af="UnsafeUrl RemoveUrl" data-title=@T["Unpublish"] data-message=@T["Are you sure you want to unpublish this item?"] data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" class="dropdown-item btn-sm">@T["Unpublish"]</a>
@@ -1651,13 +1651,13 @@ msgstr "Ні"
 #: OrchardCore.Contents\Views\ContentsButtonActions_SummaryAdmin.cshtml:35
 msgctxt "OrchardCore.Contents.Views.ContentsButtonActions_SummaryAdmin"
 msgid "Unpublish"
-msgstr "Скасувати публікацію"
+msgstr "Відхилити публікацію"
 
 #. <a asp-action="Unpublish" asp-controller="Admin" asp-route-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" data-url-af="UnsafeUrl RemoveUrl" data-title=@T["Unpublish"] data-message=@T["Are you sure you want to unpublish this item?"] data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-primary" class="dropdown-item btn-sm">@T["Unpublish"]</a>
 #: OrchardCore.Contents\Views\ContentsButtonActions_SummaryAdmin.cshtml:35
 msgctxt "OrchardCore.Contents.Views.ContentsButtonActions_SummaryAdmin"
 msgid "Are you sure you want to unpublish this item?"
-msgstr "Ви впевнені, що бажаєте скасувати публікацію цього елементу?"
+msgstr "Ви впевнені, що бажаєте відхилити публікацію цього елементу?"
 
 #. <a remove-for="@contentItem" class="dropdown-item btn-sm" asp-route-returnUrl="@FullRequestPath" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Delete"]" data-message="@T["Are you sure you want to delete this content item?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Delete"]</a>
 #. <a remove-for="@contentItem" class="dropdown-item btn-sm" asp-route-returnUrl="@FullRequestPath" data-url-af="RemoveUrl UnsafeUrl" data-title="@T["Delete"]" data-message="@T["Are you sure you want to delete this content item?"]" data-ok-text="@T["Ok"]" data-cancel-text="@T["Cancel"]">@T["Delete"]</a>
@@ -2249,25 +2249,25 @@ msgstr "Вилучити контент"
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Design.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Design"
 msgid "Delete content provided via the <em>ContentItem</em> input argument"
-msgstr ""
+msgstr "Видалити контент, наданий через вхідний аргумент <em>ContentItem</em>"
 
 #. <span>@T["Delete content using expression: <em>{0}</em>", Model.Activity.Content.Expression]</span>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Design.cshtml:12
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Design"
 msgid "Delete content using expression: <em>{0}</em>"
-msgstr ""
+msgstr "Видалити контент за допомогою виразу: <em>{0}</em>"
 
 #. <label asp-for="Expression" class="form-label">@T["Expression"]</label>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Edit"
 msgid "Expression"
-msgstr ""
+msgstr "Вираз"
 
 #. <span class="hint">@T["Enter a JavaScript expression that evaluates to the content item (or its 'ContentItemId') to be deleted. For example: input(\"ContentItem\"). If no expression is specified, the workflow's \"ContentItem\" input variable or \"ContentItem\" property will be used."]</span>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.DeleteContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the content item (or its 'ContentItemId') to be deleted. For example: input(\"ContentItem\"). If no expression is specified, the workflow's \"ContentItem\" input variable or \"ContentItem\" property will be used."
-msgstr ""
+msgstr "Введіть вираз JavaScript, який повертає елемент вмісту (або його 'ContentItemId') для видалення. Наприклад: input(\"ContentItem\"). Якщо вираз не вказано, буде використано вхідну змінну \"ContentItem\" або властивість \"ContentItem\" робочого процесу."
 
 #. <h4 class="card-title"><i class="fa-solid fa-trash" aria-hidden="true"></i>@T["Delete Content"]</h4>
 #: OrchardCore.Contents\Views\Items\DeleteContentTask.Fields.Thumbnail.cshtml:1
@@ -2285,7 +2285,7 @@ msgstr "Видалити елемент вмісту."
 #: OrchardCore.Contents\Views\AuditTrailContent\Display.cshtml:12
 msgctxt "OrchardCore.Contents.Views.AuditTrailContent.Display"
 msgid "{0} {1} - Version {2}"
-msgstr ""
+msgstr "{0} {1} - Версія {2}"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["View As JSON {0}", typeDisplayName])</h1></zone>
 #: OrchardCore.Contents\Views\Download\Display.cshtml:16
@@ -2315,25 +2315,25 @@ msgstr "Переглянути чернетки як JSON"
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:16
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "Download Draft as JSON"
-msgstr ""
+msgstr "Завантажити чернетку як JSON"
 
 #. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item">@T["View Published as JSON"]</a>
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:22
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "View Published as JSON"
-msgstr ""
+msgstr "Переглянути опубліковане як JSON"
 
 #. <a id="@exportPublishedId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item" data-url-af="UnsafeUrl">@T["Download Published as JSON"]</a>
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:23
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "Download Published as JSON"
-msgstr ""
+msgstr "Завантажити опубліковане як JSON"
 
 #. <a asp-action="Display" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" asp-route-returnUrl="@FullRequestPath" class="dropdown-item">@T["View as JSON"]</a>
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:28
 msgctxt "OrchardCore.Contents.Views.Items.Download-Button-Actions.SummaryAdmin"
 msgid "View as JSON"
-msgstr ""
+msgstr "Переглянути як JSON"
 
 #. <a id="@exportId" asp-action="Download" asp-controller="Download" asp-area="OrchardCore.Contents" asp-route-contentItemId="@contentItem.ContentItemId" class="dropdown-item" data-url-af="UnsafeUrl">@T["Download as JSON"]</a>
 #: OrchardCore.Contents\Views\Items\Download-Button-Actions.SummaryAdmin.cshtml:29
@@ -2351,7 +2351,7 @@ msgstr "Редагувати {0}"
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-ActionDeploymentTarget.Modal.cshtml:12
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-ActionDeploymentTarget.Modal"
 msgid "Available Targets"
-msgstr ""
+msgstr "Доступні цілі"
 
 #. <button type="button" class="export-to-deployment-target text-white btn btn-primary btn-sm" data-bs-dismiss="modal" data-target-url="@Url.RouteUrl(routeWithId)">@T["Select"]</button>
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-ActionDeploymentTarget.Modal.cshtml:30
@@ -2369,25 +2369,25 @@ msgstr "Скасувати"
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin.cshtml:13
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin"
 msgid "Export Draft to Deployment Target"
-msgstr ""
+msgstr "Експорт чернетки до цілі розгортання"
 
 #. <button class="dropdown-item btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalExportContentToDeploymentTargetActionTarget" data-content-item-id="@contentItem.ContentItemId">@T["Export Published to Deployment Target"]</button>
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin.cshtml:16
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin"
 msgid "Export Published to Deployment Target"
-msgstr ""
+msgstr "Експорт опублікованого до цілі розгортання"
 
 #. <button class="dropdown-item btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalExportContentToDeploymentTargetActionTarget" data-content-item-id="@contentItem.ContentItemId">@T["Export to Deployment Target"]</button>
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin.cshtml:21
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-Button-Actions.SummaryAdmin"
 msgid "Export to Deployment Target"
-msgstr ""
+msgstr "Експорт до цілі розгортання"
 
 #. <a id="exportContentToDeploymentTargetBulkActions" class="dropdown-item" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to export these items?"]">@T["Export to deployment target"]</a>
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-ContentsBulkActions.cshtml:1
 msgctxt "OrchardCore.Contents.Views.Items.ExportContentToDeploymentTarget-Button-ContentsBulkActions"
 msgid "Bulk Action"
-msgstr ""
+msgstr "Масова дія"
 
 #. <a id="exportContentToDeploymentTargetBulkActions" class="dropdown-item" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to export these items?"]">@T["Export to deployment target"]</a>
 #: OrchardCore.Contents\Views\Items\ExportContentToDeploymentTarget-Button-ContentsBulkActions.cshtml:1
@@ -2667,19 +2667,19 @@ msgstr "Оновити контент, наданий через вхідний 
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Design.cshtml:13
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Design"
 msgid "Update content using expression: <em>{0}</em>"
-msgstr ""
+msgstr "Оновити контент за допомогою виразу: <em>{0}</em>"
 
 #. <label asp-for="ContentItemIdExpression" class="form-label">@T["Content Item ID"]</label>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Content Item ID"
-msgstr ""
+msgstr "Ідентифікатор елемента контенту"
 
 #. <span class="hint">@T["Enter a JavaScript expression that evaluates to the Content Item's ID (ContentItemId) to be updated. For example: correlationId()."]</span>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Enter a JavaScript expression that evaluates to the Content Item's ID (ContentItemId) to be updated. For example: correlationId()."
-msgstr ""
+msgstr "Введіть вираз JavaScript, який повертає ідентифікатор елемента контенту (ContentItemId) для оновлення. Наприклад: correlationId()."
 
 #. <label asp-for="ContentProperties" class="form-label">@T["Content Properties"]</label>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:12
@@ -2691,7 +2691,7 @@ msgstr "Властивості вмісту"
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Optionally provide values for the content parts, fields and their properties in JSON format. With Liquid support."
-msgstr ""
+msgstr "За потреби вкажіть значення для частин контенту, полів та їх властивостей у форматі JSON. З підтримкою Liquid."
 
 #. <label class="form-check-label" asp-for="Publish">@T["Publish"]</label>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:21
@@ -2703,7 +2703,7 @@ msgstr "Опублікувати"
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Edit.cshtml:22
 msgctxt "OrchardCore.Contents.Views.Items.UpdateContentTask.Fields.Edit"
 msgid "Check if you want the content item to be published when being updated. Leave unchecked to create a draft version."
-msgstr ""
+msgstr "Відмітьте, якщо ви хочете, щоб елемент контенту було опубліковано під час оновлення. Не відмічайте, щоб створити чернетку."
 
 #. <h4 class="card-title"><i class="fa-solid fa-square-pen" aria-hidden="true"></i>@T["Update Content"]</h4>
 #: OrchardCore.Contents\Views\Items\UpdateContentTask.Fields.Thumbnail.cshtml:1
