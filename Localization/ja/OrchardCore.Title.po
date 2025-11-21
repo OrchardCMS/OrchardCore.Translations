@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2025-04-19 14:22\n"
+"PO-Revision-Date: 2025-11-21 20:58\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Title), S["A value is required for Title."]);
 #: OrchardCore.Title\Drivers\TitlePartDisplayDriver.cs:56
@@ -19,16 +19,22 @@ msgid "A value is required for Title."
 msgstr "タイトルには値が必須です。"
 
 #. context.Fail(S["A value is required for Title."], nameof(part.Title));
-#: OrchardCore.Title\Handlers\TitlePartHandler.cs:47
+#: OrchardCore.Title\Handlers\TitlePartHandler.cs:54
 msgctxt "OrchardCore.Title.Handlers.TitlePartHandler"
 msgid "A value is required for Title."
 msgstr "タイトルには値が必須です。"
 
-#. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:48
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Pattern), S["A pattern is required when using the selected behavior option."]);
+#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:53
 msgctxt "OrchardCore.Title.Settings.TitlePartSettingsDisplayDriver"
-msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
-msgstr "パターンに有効なリキッド式が含まれていません。詳細: {0}"
+msgid "A pattern is required when using the selected behavior option."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Pattern), S["The pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(' ', errors)]);
+#: OrchardCore.Title\Settings\TitlePartSettingsDisplayDriver.cs:57
+msgctxt "OrchardCore.Title.Settings.TitlePartSettingsDisplayDriver"
+msgid "The pattern doesn't contain a valid Liquid expression. Details: {0}"
+msgstr ""
 
 #. <option value="" selected="@string.IsNullOrEmpty(currentDisplayMode)">@T["Standard"]</option>
 #: OrchardCore.Title\Views\TitlePart.DisplayOption.cshtml:4
@@ -54,11 +60,11 @@ msgctxt "OrchardCore.Title.Views.TitlePart.Option"
 msgid "Standard"
 msgstr "標準"
 
-#. <label asp-for="Options" class="form-label">@T["Options"]</label>
+#. <label asp-for="Options" class="form-label">@T["Behavior option"]</label>
 #: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:16
 msgctxt "OrchardCore.Title.Views.TitlePartSettings.Edit"
-msgid "Options"
-msgstr "オプション"
+msgid "Behavior option"
+msgstr ""
 
 #. <option value="@nameof(TitlePartOptions.Editable)" selected="@(Model.Options == TitlePartOptions.Editable)">@T["Title is editable"]</option>
 #: OrchardCore.Title\Views\TitlePartSettings.Edit.cshtml:18
