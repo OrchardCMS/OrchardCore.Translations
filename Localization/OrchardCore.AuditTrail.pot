@@ -305,7 +305,7 @@ msgid "Filter syntax"
 msgstr ""
 
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSearch.cshtml:32
-#. <label asp-for="SearchText" class="sr-only">@T["Search"]</label>
+#. <label asp-for="SearchText" class="visually-hidden">@T["Search"]</label>
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSearch.cshtml:34
 #. <input asp-for="SearchText" class="form-control" placeholder="@T["Search"]" inputmode="search" type="search" autofocus />
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSearch"
@@ -469,22 +469,22 @@ msgid "Close"
 msgstr ""
 
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:5
-#. @T.Plural(Model.EventsCount, "1 item", "{0} items")
+#. @T.Plural(Model.EventsCount, "{0} item", "{0} items")
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
-msgid "1 item"
+msgid "{0} item"
 msgid_plural "{0} items"
 msgstr[0] ""
 
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:6
-#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span>
+#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span>
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
 msgid "Items {0} to {1}"
 msgstr ""
 
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:6
-#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span>
+#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span>
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
-msgid " / 1 item in total"
+msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
 msgstr[0] ""
 
@@ -545,12 +545,12 @@ msgid "Client IP address"
 msgstr ""
 
 #: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:12
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["User Name"]">
+#. <user-display-name user-name="@(Model.AuditTrailEvent.UserName)" title="@T["User Name"].Value" cache-id="user-display-name-username" display-type="SummaryAdmin" />
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailEventMeta.SummaryAdmin"
 msgid "User Name"
 msgstr ""
 
-#: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:19
+#: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:16
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Client IP Address"]">
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailEventMeta.SummaryAdmin"
 msgid "Client IP Address"
