@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2025-08-07 17:32\n"
+"PO-Revision-Date: 2025-11-21 20:45\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:20
@@ -288,26 +288,32 @@ msgctxt "OrchardCore.Media.Controllers.MediaProfilesController"
 msgid "WebP"
 msgstr ""
 
+#. S["{0}: The file {1} was not found. Reupload the file.", context.PartFieldDefinition.DisplayName(), ex.FileName]);
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:114
+msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
+msgid "{0}: The file {1} was not found. Reupload the file."
+msgstr ""
+
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: There was an error handling the files.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:106
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:131
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: There was an error handling the files."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["Media extension is not allowed. Only media with '{0}' extensions are allowed.", string.Join(", ", settings.AllowedExtensions)]);
-#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:123
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:148
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "Media extension is not allowed. Only media with '{0}' extensions are allowed."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["A value is required for {0}.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:130
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:155
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.Paths), S["{0}: Selecting multiple media is forbidden.", context.PartFieldDefinition.DisplayName()]);
-#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:135
+#: OrchardCore.Media\Drivers\MediaFieldDisplayDriver.cs:160
 msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
 msgid "{0}: Selecting multiple media is forbidden."
 msgstr "Nevyplňujte více položek pro '{0}'"
@@ -812,23 +818,23 @@ msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Select All"
 msgstr ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
-msgid "1 item"
+msgid "{0} item"
 msgid_plural "{0} items"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid "Items {0} to {1}"
 msgstr ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.MediaProfiles.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Media\Views\MediaProfiles\Index.cshtml:40
 msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
 msgid " / {0} item in total"
@@ -920,13 +926,13 @@ msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete"
 msgstr "Smazat"
 
-#. <span title="@T["Grid View"]"><i class="fa-solid fa-th-large" aria-hidden="true"></i></span>
+#. <span title="@T["Grid View"]"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:49
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Grid View"
 msgstr "Zobrazit dlaždice"
 
-#. <span title="@T["List View"]"><i class="fa-solid fa-th-list" aria-hidden="true"></i></span>
+#. <span title="@T["List View"]"><i class="fa-solid fa-list" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:52
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "List View"
@@ -1226,13 +1232,13 @@ msgctxt "OrchardCore.Media.Views.Items.MediaDeploymentStep.Fields.Thumbnail"
 msgid "Exports all or specified media."
 msgstr "Exportuje všechny nebo jen vybrané soubory."
 
-#. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-compress-alt" aria-hidden="true"></i></span>
+#. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-down-left-and-up-right-to-center" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:31
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Small Thumbs"
 msgstr ""
 
-#. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-expand-alt" aria-hidden="true"></i></span>
+#. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:32
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Large Thumbs"
@@ -1280,13 +1286,13 @@ msgctxt "OrchardCore.Media.Views.MediaField.DisplayOption"
 msgid "Standard"
 msgstr ""
 
-#. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-compress-alt" aria-hidden="true"></i></span>
+#. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-down-left-and-up-right-to-center" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:26
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Small Thumbs"
 msgstr ""
 
-#. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-expand-alt" aria-hidden="true"></i></span>
+#. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span>
 #: OrchardCore.Media\Views\MediaField.Edit.cshtml:27
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Large Thumbs"
