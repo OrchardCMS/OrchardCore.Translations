@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-08-07 17:40\n"
+"PO-Revision-Date: 2025-11-21 21:05\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Search.Elasticsearch\AdminMenu.cs:30
@@ -41,22 +41,34 @@ msgid "Invalid query: {0}"
 msgstr "Requête invalide : {0}"
 
 #. new(S["Multi-Match Query (Default)"], string.Empty),
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:64
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:71
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticsearchIndexProfileDisplayDriver"
 msgid "Multi-Match Query (Default)"
 msgstr "Requête Multi-Match (par défaut)"
 
 #. new(S["Query String Query"], ElasticsearchConstants.QueryStringSearchType),
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:65
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:72
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticsearchIndexProfileDisplayDriver"
 msgid "Query String Query"
 msgstr "Requête de chaîne de requête"
 
 #. new(S["Custom Query"], ElasticsearchConstants.CustomSearchType),
-#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:66
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:73
 msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticsearchIndexProfileDisplayDriver"
 msgid "Custom Query"
 msgstr "Requête personnalisée"
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(queryModel.DefaultQuery), S["The default query field is required when using a custom search type."]);
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:140
+msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticsearchIndexProfileDisplayDriver"
+msgid "The default query field is required when using a custom search type."
+msgstr "Le champ de requête par défaut est requis lorsque vous utilisez un type de recherche personnalisé."
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(queryModel.DefaultQuery), S["The default query field is not a valid Elasticsearch query."]);
+#: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchIndexProfileDisplayDriver.cs:154
+msgctxt "OrchardCore.Search.Elasticsearch.Drivers.ElasticsearchIndexProfileDisplayDriver"
+msgid "The default query field is not a valid Elasticsearch query."
+msgstr "Le champ de requête par défaut n'est pas une requête Elasticsearch valide."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Query), S["The query field is required"]);
 #: OrchardCore.Search.Elasticsearch\Drivers\ElasticsearchQueryDisplayDriver.cs:81
