@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2025-08-07 17:17\n"
+"PO-Revision-Date: 2025-11-21 20:30\n"
 
 #. .Add(S["Audit Trail"], NavigationConstants.AdminMenuAuditTrailPosition, configuration => configuration
 #. .Add(S["Audit Trail"], S["Audit Trail"].PrefixPosition(), auditTrail => auditTrail
@@ -318,7 +318,7 @@ msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSearch"
 msgid "Filter syntax"
 msgstr ""
 
-#. <label asp-for="SearchText" class="sr-only">@T["Search"]</label>
+#. <label asp-for="SearchText" class="visually-hidden">@T["Search"]</label>
 #. <input asp-for="SearchText" class="form-control" placeholder="@T["Search"]" inputmode="search" type="search" autofocus />
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSearch.cshtml:32
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSearch.cshtml:34
@@ -482,23 +482,23 @@ msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSearch"
 msgid "Close"
 msgstr ""
 
-#. @T.Plural(Model.EventsCount, "1 item", "{0} items")
+#. @T.Plural(Model.EventsCount, "{0} item", "{0} items")
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:5
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
-msgid "1 item"
+msgid "{0} item"
 msgid_plural "{0} items"
 msgstr[0] ""
 
-#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span>
+#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span>
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:6
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
 msgid "Items {0} to {1}"
 msgstr ""
 
-#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / 1 item in total", " / {0} items in total")</span>
+#. <span class="text-muted" title="@T["Items {0} to {1}", Model.StartIndex, Model.EndIndex]">@T.Plural(Model.TotalItemCount, " / {0} item in total", " / {0} items in total")</span>
 #: OrchardCore.AuditTrail\Views\AuditTrailAdminListSummary.cshtml:6
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailAdminListSummary"
-msgid " / 1 item in total"
+msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
 msgstr[0] ""
 
@@ -558,14 +558,14 @@ msgctxt "OrchardCore.AuditTrail.Views.AuditTrailEventDetail.DetailAdmin"
 msgid "Client IP address"
 msgstr ""
 
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["User Name"]">
+#. <user-display-name user-name="@(Model.AuditTrailEvent.UserName)" title="@T["User Name"].Value" cache-id="user-display-name-username" display-type="SummaryAdmin" />
 #: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:12
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailEventMeta.SummaryAdmin"
 msgid "User Name"
 msgstr ""
 
 #. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Client IP Address"]">
-#: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:19
+#: OrchardCore.AuditTrail\Views\AuditTrailEventMeta.SummaryAdmin.cshtml:16
 msgctxt "OrchardCore.AuditTrail.Views.AuditTrailEventMeta.SummaryAdmin"
 msgid "Client IP Address"
 msgstr ""
