@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Cyrillic\n"
 "Language: sr_cyrl_RS\n"
-"PO-Revision-Date: 2025-11-21 21:04\n"
+"PO-Revision-Date: 2026-02-17 22:55\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.DefaultSender), S["The Default Sender is a required field."]);
 #: OrchardCore.Email.Smtp\Drivers\SmtpSettingsDisplayDriver.cs:113
@@ -44,28 +44,22 @@ msgctxt "OrchardCore.Email.Smtp.Services.SmtpEmailProvider"
 msgid "Simple Mail Transfer Protocol (SMTP)"
 msgstr ""
 
-#. return EmailResult.FailedResult(S["The SMTP Email Provider is disabled."]);
-#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:42
+#. return Result.Failed(S["The SMTP Email Provider is disabled."]);
+#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:43
 msgctxt "OrchardCore.Email.Smtp.Services.SmtpEmailProviderBase"
 msgid "The SMTP Email Provider is disabled."
 msgstr ""
 
-#. return EmailResult.FailedResult(nameof(message.From), S["Invalid email address for the sender: '{0}'.", senderAddress]);
-#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:56
+#. Message = S["Invalid email address for the sender: '{0}'.", senderAddress],
+#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:63
 msgctxt "OrchardCore.Email.Smtp.Services.SmtpEmailProviderBase"
 msgid "Invalid email address for the sender: '{0}'."
 msgstr ""
 
-#. return EmailResult.FailedResult([S["An error occurred while sending an email: '{0}'", ex.Message]]);
-#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:84
+#. return Result.Failed(S["An error occurred while sending an email: '{0}'", ex.Message]);
+#: OrchardCore.Email.Smtp\Services\SmtpEmailProviderBase.cs:92
 msgctxt "OrchardCore.Email.Smtp.Services.SmtpEmailProviderBase"
 msgid "An error occurred while sending an email: '{0}'"
-msgstr ""
-
-#. return SmtpResult.Failed([S["Unable to find any SMTP providers."]]);
-#: OrchardCore.Email.Smtp\Services\SmtpService.cs:33
-msgctxt "OrchardCore.Email.Services.SmtpService"
-msgid "Unable to find any SMTP providers."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="IsEnabled">@T["Enable SMTP Provider"]</label>
