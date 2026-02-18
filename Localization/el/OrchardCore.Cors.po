@@ -10,39 +10,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2024-09-09 17:00\n"
+"PO-Revision-Date: 2026-02-17 21:07\n"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Cors\AdminMenu.cs:18
+#: OrchardCore.Cors\AdminMenu.cs:20
 msgctxt "OrchardCore.Cors.AdminMenu"
 msgid "Configuration"
 msgstr "Διαμόρφωση"
 
+#. .Add(S["Settings"], S["Settings"].PrefixPosition(), settings => settings
+#. .Add(S["Settings"], S["Settings"].PrefixPosition(), settings => settings
 #. .Add(S["Settings"], settings => settings
-#: OrchardCore.Cors\AdminMenu.cs:19
+#: OrchardCore.Cors\AdminMenu.cs:21
+#: OrchardCore.Cors\AdminMenu.cs:21
+#: OrchardCore.Cors\AdminMenu.cs:36
 msgctxt "OrchardCore.Cors.AdminMenu"
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
 #. .Add(S["CORS"], S["CORS"].PrefixPosition(), entry => entry
 #. .Add(S["CORS"], S["CORS"].PrefixPosition(), entry => entry
-#: OrchardCore.Cors\AdminMenu.cs:20
-#: OrchardCore.Cors\AdminMenu.cs:20
+#: OrchardCore.Cors\AdminMenu.cs:22
+#: OrchardCore.Cors\AdminMenu.cs:22
 msgctxt "OrchardCore.Cors.AdminMenu"
 msgid "CORS"
 msgstr "CORS"
 
+#. .Add(S["Security"], S["Security"].PrefixPosition(), security => security
+#. .Add(S["Security"], S["Security"].PrefixPosition(), security => security
+#: OrchardCore.Cors\AdminMenu.cs:37
+#: OrchardCore.Cors\AdminMenu.cs:37
+msgctxt "OrchardCore.Cors.AdminMenu"
+msgid "Security"
+msgstr ""
+
+#. .Add(S["Cross-Origin Resource Sharing"], S["Cross-Origin Resource Sharing"].PrefixPosition(), entry => entry
+#. .Add(S["Cross-Origin Resource Sharing"], S["Cross-Origin Resource Sharing"].PrefixPosition(), entry => entry
+#: OrchardCore.Cors\AdminMenu.cs:38
+#: OrchardCore.Cors\AdminMenu.cs:38
+msgctxt "OrchardCore.Cors.AdminMenu"
+msgid "Cross-Origin Resource Sharing"
+msgstr ""
+
+#. await _notifier.WarningAsync(H["Specifying AllowAnyOrigin and AllowCredentials is an insecure configuration and can result in cross-site request forgery. The CORS service returns an invalid CORS response when an app is configured with both methods.<br /><strong>Affected policies: {0} </strong><br />Refer to docs: <a href='https://learn.microsoft.com/en-us/aspnet/core/security/cors' target='_blank'>https://learn.microsoft.com/en-us/aspnet/core/security/cors</a>.", string.Join(", ", policyWarnings)]);
+#: OrchardCore.Cors\Controllers\AdminController.cs:130
+msgctxt "OrchardCore.Cors.Controllers.AdminController"
+msgid "Specifying AllowAnyOrigin and AllowCredentials is an insecure configuration and can result in cross-site request forgery. The CORS service returns an invalid CORS response when an app is configured with both methods.<br /><strong>Affected policies: {0} </strong><br />Refer to docs: <a href='https://learn.microsoft.com/en-us/aspnet/core/security/cors' target='_blank'>https://learn.microsoft.com/en-us/aspnet/core/security/cors</a>."
+msgstr ""
+
 #. await _notifier.SuccessAsync(H["The CORS settings have updated successfully."]);
-#: OrchardCore.Cors\Controllers\AdminController.cs:133
+#: OrchardCore.Cors\Controllers\AdminController.cs:144
 msgctxt "OrchardCore.Cors.Controllers.AdminController"
 msgid "The CORS settings have updated successfully."
 msgstr "Οι ρυθμίσεις CORS ενημερώθηκαν με επιτυχία."
-
-#. await _notifier.WarningAsync(H["Specifying {0} and {1} is an insecure configuration and can result in cross-site request forgery. The CORS service returns an invalid CORS response when an app is configured with both methods.<br /><strong>Affected policies: {2} </strong><br />Refer to docs:<a href='https://learn.microsoft.com/en-us/aspnet/core/security/cors' target='_blank'>https://learn.microsoft.com/en-us/aspnet/core/security/cors</a>", "AllowAnyOrigin", "AllowCredentias", string.Join(", ", policyWarnings)]);
-#: OrchardCore.Cors\Controllers\AdminController.cs:137
-msgctxt "OrchardCore.Cors.Controllers.AdminController"
-msgid "Specifying {0} and {1} is an insecure configuration and can result in cross-site request forgery. The CORS service returns an invalid CORS response when an app is configured with both methods.<br /><strong>Affected policies: {2} </strong><br />Refer to docs:<a href='https://learn.microsoft.com/en-us/aspnet/core/security/cors' target='_blank'>https://learn.microsoft.com/en-us/aspnet/core/security/cors</a>"
-msgstr ""
 
 #. <h1>@T["CORS Settings"]</h1>
 #: OrchardCore.Cors\Views\Admin\Index.cshtml:15
@@ -118,7 +138,7 @@ msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Provide policy details."
 msgstr "Δώστε λεπτομέρειες πολιτικής."
 
-#. <label>@T["Policy name"]</label>
+#. <label class="form-label">@T["Policy name"]</label>
 #: OrchardCore.Cors\Views\Admin\Index.cshtml:70
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Policy name"
@@ -307,10 +327,4 @@ msgstr "Άκυρο"
 msgctxt "OrchardCore.Cors.Views.Admin.Index"
 msgid "Add"
 msgstr "Προσθήκη"
-
-#. <span class="icon"><i class="fa-solid fa-share-alt" aria-hidden="true"></i></span><span class="title">@T["CORS"]</span>
-#: OrchardCore.Cors\Views\NavigationItemText-cors.Id.cshtml:1
-msgctxt "OrchardCore.Cors.Views.NavigationItemText-cors.Id"
-msgid "CORS"
-msgstr "CORS"
 

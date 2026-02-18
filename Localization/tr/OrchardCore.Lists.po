@@ -10,25 +10,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2024-11-10 14:45\n"
+"PO-Revision-Date: 2026-02-17 21:18\n"
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Content type field is required."]);
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:57
+msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
+msgid "Content type field is required."
+msgstr ""
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Invalid Content type provided."]);
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:61
+msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
+msgid "Invalid Content type provided."
+msgstr ""
 
 #. Description = S["the list part of the content item"];
-#: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:13
+#: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:14
 msgctxt "OrchardCore.Lists.GraphQL.ContainedInputObjectType"
 msgid "the list part of the content item"
 msgstr "içerik öğesinin liste kısmı"
 
 #. AddScalarFilterFields<IdGraphType>("listContentItemId", S["the content item id of the parent list of the content item to filter"]);
-#: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:15
+#: OrchardCore.Lists\GraphQL\ContainedInputObjectType.cs:16
 msgctxt "OrchardCore.Lists.GraphQL.ContainedInputObjectType"
 msgid "the content item id of the parent list of the content item to filter"
 msgstr "filtrelenecek içerik öğesinin üst listesinin içerik öğesi kimliği"
 
-#. Description = S["Represents a link to the parent content item, and the order that content item is represented."];
-#: OrchardCore.Lists\GraphQL\ContainedQueryObjectType.cs:12
+#. .Description(S["The parent content item of type {0}.", type.Name])
+#: OrchardCore.Lists\GraphQL\ContainedPartContentItemTypeInitializer.cs:43
+msgctxt "OrchardCore.Lists.GraphQL.ContainedPartContentItemTypeInitializer"
+msgid "The parent content item of type {0}."
+msgstr ""
+
+#. Description = S["Represents a link to the parent content item and the order in which the current content item is represented."];
+#: OrchardCore.Lists\GraphQL\ContainedQueryObjectType.cs:16
 msgctxt "OrchardCore.Lists.GraphQL.ContainedQueryObjectType"
-msgid "Represents a link to the parent content item, and the order that content item is represented."
-msgstr "Üst içerik öğesine bir bağlantıyı ve içerik öğesinin temsil edildiği sırayı temsil eder."
+msgid "Represents a link to the parent content item and the order in which the current content item is represented."
+msgstr ""
+
+#. .Description(S["the parent list content item"])
+#: OrchardCore.Lists\GraphQL\ContainedQueryObjectType.cs:21
+msgctxt "OrchardCore.Lists.GraphQL.ContainedQueryObjectType"
+msgid "the parent list content item"
+msgstr ""
+
+#. .Description(S["the content type of the list owning the current content item."]);
+#: OrchardCore.Lists\GraphQL\ContainedQueryObjectType.cs:31
+msgctxt "OrchardCore.Lists.GraphQL.ContainedQueryObjectType"
+msgid "the content type of the list owning the current content item."
+msgstr ""
+
+#. .Description(S["the order of the current content item in the list."]);
+#: OrchardCore.Lists\GraphQL\ContainedQueryObjectType.cs:34
+msgctxt "OrchardCore.Lists.GraphQL.ContainedQueryObjectType"
+msgid "the order of the current content item in the list."
+msgstr ""
 
 #. Description = S["Represents a collection of content items."];
 #: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:22
@@ -36,22 +72,40 @@ msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
 msgid "Represents a collection of content items."
 msgstr "İçerik öğeleri koleksiyonunu temsil eder."
 
+#. .Description(S["the content items"])
+#: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:25
+msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
+msgid "the content items"
+msgstr ""
+
+#. .Argument<IntGraphType>("first", S["the first n elements (10 by default)"], config => config.DefaultValue = 10)
+#: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:26
+msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
+msgid "the first n elements (10 by default)"
+msgstr ""
+
+#. .Argument<IntGraphType>("skip", S["the number of elements to skip"], config => config.DefaultValue = 0)
+#: OrchardCore.Lists\GraphQL\ListQueryObjectType.cs:27
+msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
+msgid "the number of elements to skip"
+msgstr ""
+
 #. ?? throw new Exception(S["The specified Blog Post doesn't exist anymore. Please create a new Blog Post."]);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:353
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:352
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The specified Blog Post doesn't exist anymore. Please create a new Blog Post."
 msgstr "Belirtilen Blog Gönderisi artık mevcut değil. Lütfen yeni bir Blog Yazısı oluşturun."
 
 #. throw new InvalidOperationException(S["Not authorized to delete this content"].Value);
 #. throw new InvalidOperationException(S["Not authorized to delete this content"].Value);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:410
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:477
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:409
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:476
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "Not authorized to delete this content"
 msgstr "Bu içeriği silme yetkiniz yok"
 
 #. throw new InvalidOperationException(S["The username or e-mail or password provided is incorrect."].Value);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:426
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:425
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The username or e-mail or password provided is incorrect."
 msgstr "Sağlanan kullanıcı adı veya e-posta veya şifre yanlış."
@@ -159,25 +213,25 @@ msgid "The number of elements to display in the feed."
 msgstr "Feed'de görüntülenecek öge sayısı."
 
 #. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List Items"]</a>
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:25
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:27
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "List Items"
 msgstr "Ögeleri Listele"
 
-#. @T["Edit {0}", Model.ContainerContentTypeDefinition?.DisplayName]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:31
+#. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, "Content Types"]]
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:33
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Edit {0}"
 msgstr "{0} Düzenle"
 
-#. @T["Create {0}", contentTypeDefinition.DisplayName]
+#. @T["Create {0}", D[contentTypeDefinition.DisplayName, "Content Types"]]
 #: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:42
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Create {0}"
 msgstr "{0} Oluştur"
 
 #. @T["New"]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:49
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:48
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "New"
 msgstr "Yeni"
@@ -242,40 +296,52 @@ msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Lists"
 msgstr "Listeler"
 
+#. <label asp-for="ContentType" class="form-label">@T["Content type"]</label>
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:13
+msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
+msgid "Content type"
+msgstr ""
+
+#. <option value="">@T["Select a content type"]</option>
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:15
+msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
+msgid "Select a content type"
+msgstr ""
+
 #. <label asp-for="IconForContentItems" class="form-label">@T["Icon for the content items"]</label>
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:18
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:20
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon for the content items"
 msgstr "İçerik öğeleri için simge"
 
 #. @T["Icon"]
 #. @T["Icon"]
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:32
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:72
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:34
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:74
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon"
 msgstr "İkon"
 
 #. @T["Add parent menu item"]
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:51
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:53
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Add parent menu item"
 msgstr "Üst menü öğesi ekle"
 
 #. <label asp-for="IconForParentLink" class="form-label">@T["Icon for the parent menu item"]</label>
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:58
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:60
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Icon for the parent menu item"
 msgstr "Üst menü öğesi için simge"
 
 #. <h5 class="modal-title">@T["Pick an icon"]</h5>
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:95
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeEdit.cshtml:97
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Pick an icon"
 msgstr "Bir ikon seçin"
 
 #. <span class="text-muted dashed">@T["Lists"]</span>
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:11
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:22
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeSummary"
 msgid "Lists"
 msgstr "Listeler"

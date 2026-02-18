@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2024-11-10 14:50\n"
+"PO-Revision-Date: 2025-11-21 20:50\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:18
@@ -26,10 +26,10 @@ msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "Queries"
 msgstr ""
 
-#. .Add(S["All queries"], "1", allQueries => allQueries
+#. .Add(S["All Queries"], "1", allQueries => allQueries
 #: OrchardCore.Queries\AdminMenu.cs:22
 msgctxt "OrchardCore.Queries.AdminMenu"
-msgid "All queries"
+msgid "All Queries"
 msgstr ""
 
 #. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
@@ -122,7 +122,7 @@ msgctxt "OrchardCore.Queries.Recipes.QueryStep"
 msgid "Could not find query source: '{0}'. The query '{1}' will not be imported."
 msgstr ""
 
-#. .Add(S["Search"], search => search
+#. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\Sql\AdminMenu.cs:18
 msgctxt "OrchardCore.Queries.Sql.AdminMenu"
 msgid "Search"
@@ -154,6 +154,14 @@ msgstr ""
 #: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:75
 msgctxt "OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver"
 msgid "The query field is required"
+msgstr ""
+
+#. Description = S["Represents the {0} Query : {1}", query.Source, query.Name],
+#. Description = S["Represents the {0} Query : {1}", query.Source, query.Name],
+#: OrchardCore.Queries\Sql\GraphQL\SqlQueryFieldTypeProvider.cs:160
+#: OrchardCore.Queries\Sql\GraphQL\SqlQueryFieldTypeProvider.cs:200
+msgctxt "OrchardCore.Queries.Sql.GraphQL.Queries.SqlQueryFieldTypeProvider"
+msgid "Represents the {0} Query : {1}"
 msgstr ""
 
 #. <h5>@T["All Queries"]</h5>
@@ -222,21 +230,21 @@ msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Select All"
 msgstr ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
-msgid "1 item"
+msgid "{0} item"
 msgid_plural "{0} items"
 msgstr[0] ""
 msgstr[1] ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "Items {0} to {1}"
 msgstr ""
 
-#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:39
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid " / {0} item in total"
@@ -298,12 +306,6 @@ msgstr ""
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:168
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "selected"
-msgstr ""
-
-#. <span class="title">@T["Search"]</span>
-#: OrchardCore.Queries\Views\NavigationItemText-search.Id.cshtml:4
-msgctxt "OrchardCore.Queries.Views.NavigationItemText-search.Id"
-msgid "Search"
 msgstr ""
 
 #. <h4>@T["SQL"]</h4>
