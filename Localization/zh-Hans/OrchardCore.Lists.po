@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2026-02-17 21:18\n"
+"PO-Revision-Date: 2026-04-22 13:37\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Content type field is required."]);
-#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:57
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:65
 msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
 msgid "Content type field is required."
 msgstr "内容类型字段是必需的。"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Invalid Content type provided."]);
-#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:61
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:69
 msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
 msgid "Invalid Content type provided."
 msgstr "提供了无效的内容类型。"
@@ -90,6 +90,12 @@ msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
 msgid "the number of elements to skip"
 msgstr "要跳过的内容项数"
 
+#. context.Fail(S["The content item of type '{0}' must have a valid ListContentItemId as it is contained by a list.", contentType], nameof(ContainedPart.ListContentItemId));
+#: OrchardCore.Lists\Handlers\ContainedPartHandler.cs:57
+msgctxt "OrchardCore.Lists.Handlers.ContainedPartHandler"
+msgid "The content item of type '{0}' must have a valid ListContentItemId as it is contained by a list."
+msgstr ""
+
 #. ?? throw new Exception(S["The specified Blog Post doesn't exist anymore. Please create a new Blog Post."]);
 #: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:352
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
@@ -111,7 +117,7 @@ msgid "The username or e-mail or password provided is incorrect."
 msgstr "提供的用户名或电子邮件或密码不正确。"
 
 #. context.Updater.ModelState.AddModelError(nameof(model.ContainedContentTypes), S["At least one content type must be selected."]);
-#: OrchardCore.Lists\Settings\ListPartSettingsDisplayDriver.cs:58
+#: OrchardCore.Lists\Settings\ListPartSettingsDisplayDriver.cs:59
 msgctxt "OrchardCore.Lists.Settings.ListPartSettingsDisplayDriver"
 msgid "At least one content type must be selected."
 msgstr "至少必须选择一个内容类型。"
@@ -213,25 +219,25 @@ msgid "The number of elements to display in the feed."
 msgstr "要在提要中显示的元素数。"
 
 #. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List Items"]</a>
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:27
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:29
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "List Items"
 msgstr "列表项"
 
-#. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, "Content Types"]]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:33
+#. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, DataLocalizationContext.ContentType]]
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:35
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Edit {0}"
 msgstr "编辑 {0}"
 
-#. @T["Create {0}", D[contentTypeDefinition.DisplayName, "Content Types"]]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:42
+#. @T["Create {0}", D[contentTypeDefinition.DisplayName, DataLocalizationContext.ContentType]]
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:44
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Create {0}"
 msgstr "创建 {0}"
 
 #. @T["New"]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:48
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:50
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "New"
 msgstr "新建"
@@ -283,6 +289,18 @@ msgstr "显示容器标题"
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Check this option to show a header for the owning content."
 msgstr "选中此选项以显示拥有内容的页眉。"
+
+#. <label class="form-check-label" asp-for="ShowFullPager">@T["Show full pager"]</label>
+#: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:35
+msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
+msgid "Show full pager"
+msgstr ""
+
+#. <span class="hint dashed">@T["When enabled, the list uses a full pager with numbered pages. Note: This requires an additional database query to determine the total item count."]</span>
+#: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:36
+msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
+msgid "When enabled, the list uses a full pager with numbered pages. Note: This requires an additional database query to determine the total item count."
+msgstr ""
 
 #. <a class="btn btn-sm btn-secondary" admin-for="@Model.ContentItem">@T["List Items"]</a>
 #: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:3
@@ -341,7 +359,7 @@ msgid "Pick an icon"
 msgstr "选择一个图标"
 
 #. <span class="text-muted dashed">@T["Lists"]</span>
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:22
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:23
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeSummary"
 msgid "Lists"
 msgstr "列表"
