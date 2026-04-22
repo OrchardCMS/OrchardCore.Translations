@@ -1,10 +1,10 @@
-#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:57
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:65
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Content type field is required."]);
 msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
 msgid "Content type field is required."
 msgstr ""
 
-#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:61
+#: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:69
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Invalid Content type provided."]);
 msgctxt "OrchardCore.Lists.AdminNodes.ListsAdminNodeDriver"
 msgid "Invalid Content type provided."
@@ -76,6 +76,12 @@ msgctxt "OrchardCore.Lists.GraphQL.ListQueryObjectType"
 msgid "the number of elements to skip"
 msgstr ""
 
+#: OrchardCore.Lists\Handlers\ContainedPartHandler.cs:57
+#. context.Fail(S["The content item of type '{0}' must have a valid ListContentItemId as it is contained by a list.", contentType], nameof(ContainedPart.ListContentItemId));
+msgctxt "OrchardCore.Lists.Handlers.ContainedPartHandler"
+msgid "The content item of type '{0}' must have a valid ListContentItemId as it is contained by a list."
+msgstr ""
+
 #: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:352
 #. ?? throw new Exception(S["The specified Blog Post doesn't exist anymore. Please create a new Blog Post."]);
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
@@ -96,7 +102,7 @@ msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The username or e-mail or password provided is incorrect."
 msgstr ""
 
-#: OrchardCore.Lists\Settings\ListPartSettingsDisplayDriver.cs:58
+#: OrchardCore.Lists\Settings\ListPartSettingsDisplayDriver.cs:59
 #. context.Updater.ModelState.AddModelError(nameof(model.ContainedContentTypes), S["At least one content type must be selected."]);
 msgctxt "OrchardCore.Lists.Settings.ListPartSettingsDisplayDriver"
 msgid "At least one content type must be selected."
@@ -198,25 +204,25 @@ msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "The number of elements to display in the feed."
 msgstr ""
 
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:27
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:29
 #. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List Items"]</a>
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "List Items"
 msgstr ""
 
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:33
-#. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, "Content Types"]]
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:35
+#. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, DataLocalizationContext.ContentType]]
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Edit {0}"
 msgstr ""
 
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:42
-#. @T["Create {0}", D[contentTypeDefinition.DisplayName, "Content Types"]]
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:44
+#. @T["Create {0}", D[contentTypeDefinition.DisplayName, DataLocalizationContext.ContentType]]
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Create {0}"
 msgstr ""
 
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:48
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:50
 #. @T["New"]
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "New"
@@ -268,6 +274,18 @@ msgstr ""
 #. <span class="hint dashed">@T["Check this option to show a header for the owning content."]</span>
 msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "Check this option to show a header for the owning content."
+msgstr ""
+
+#: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:35
+#. <label class="form-check-label" asp-for="ShowFullPager">@T["Show full pager"]</label>
+msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
+msgid "Show full pager"
+msgstr ""
+
+#: OrchardCore.Lists\Views\ListPartSettings.Edit.cshtml:36
+#. <span class="hint dashed">@T["When enabled, the list uses a full pager with numbered pages. Note: This requires an additional database query to determine the total item count."]</span>
+msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
+msgid "When enabled, the list uses a full pager with numbered pages. Note: This requires an additional database query to determine the total item count."
 msgstr ""
 
 #: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:3
@@ -326,7 +344,7 @@ msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeEdit"
 msgid "Pick an icon"
 msgstr ""
 
-#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:22
+#: OrchardCore.Lists\Views\Items\ListsAdminNode.Fields.TreeSummary.cshtml:23
 #. <span class="text-muted dashed">@T["Lists"]</span>
 msgctxt "OrchardCore.Lists.Views.Items.ListsAdminNode.Fields.TreeSummary"
 msgid "Lists"

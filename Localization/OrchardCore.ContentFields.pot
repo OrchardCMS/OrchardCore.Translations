@@ -22,12 +22,6 @@ msgctxt "OrchardCore.ContentFields.Drivers.DateTimeFieldDisplayDriver"
 msgid "A value is required for {0}."
 msgstr ""
 
-#: OrchardCore.ContentFields\Drivers\HtmlFieldDisplayDriver.cs:93
-#. nameof(viewModel.Html), S["{0} doesn't contain a valid Liquid expression. Details: {1}",
-msgctxt "OrchardCore.ContentFields.Drivers.HtmlFieldDisplayDriver"
-msgid "{0} doesn't contain a valid Liquid expression. Details: {1}"
-msgstr ""
-
 #: OrchardCore.ContentFields\Drivers\LinkFieldDisplayDriver.cs:100
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(field.Url), S["The url is required for {0}.", context.PartFieldDefinition.DisplayName()]);
 msgctxt "OrchardCore.ContentFields.Drivers.LinkFieldDisplayDriver"
@@ -524,7 +518,7 @@ msgctxt "OrchardCore.ContentFields.Views.BooleanFieldSettings.Edit"
 msgid "The default value this field will be initialized with when creating a new item."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.cshtml:31
+#: OrchardCore.ContentFields\Views\ContentPickerField.cshtml:32
 #. <span class="value">@T["No content items."]</span>
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField"
 msgid "No content items."
@@ -536,35 +530,35 @@ msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.DisplayOption"
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:35
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:36
 #. <span>{{ item.displayText }}</span> <span v-show="!item.hasPublished" class="text-muted small">(@T["Not published"])</span>
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:38
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:39
 #. <span>{{ item.displayText }}</span> <span v-show="!item.hasPublished" class="text-muted small">(@T["Not published"])</span>
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:58
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:59
 #. <div v-cloak><span>{{ props.option.displayText }}</span><span class="small ms-2" v-show="!props.option.hasPublished">(@T["Not published"])</span></div>
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.Edit"
 msgid "Not published"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:51
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:52
 #. label="displayText" placeholder="@(string.IsNullOrEmpty(settings.Placeholder) ? T["Type to search"] : settings.Placeholder)"
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.Edit"
 msgid "Type to search"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:56
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:57
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.Edit"
 msgid "Select"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:56
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:57
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.Edit"
 msgid "Remove"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:61
+#: OrchardCore.ContentFields\Views\ContentPickerField.Edit.cshtml:62
 #. @T["No result found"]
 msgctxt "OrchardCore.ContentFields.Views.ContentPickerField.Edit"
 msgid "No result found"
@@ -807,7 +801,7 @@ msgid "Enter the editor options, language is always set to `html` when saved."
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\HtmlFieldMonacoEditorSettings.Edit.cshtml:13
-#. <span class="hint"><a href="https://microsoft.github.io/monaco-editor/typedoc/interfaces/editor.IStandaloneEditorConstructionOptions.html" target="_blank">@T["Documentation for options"]</a></span>
+#. <span class="hint"><a href="https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor_editor_api.editor.IStandaloneEditorConstructionOptions.html" target="_blank">@T["Documentation for options"]</a></span>
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldMonacoEditorSettings.Edit"
 msgid "Documentation for options"
 msgstr ""
@@ -831,15 +825,27 @@ msgid "Sanitize Html"
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:16
-#. @T["Whether the Html is sanitized to prevent custom scripts."]
+#. @T["Whether the Html is sanitized, e.g. by removing script tags (and more)."]
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
-msgid "Whether the Html is sanitized to prevent custom scripts."
+msgid "Whether the Html is sanitized, e.g. by removing script tags (and more)."
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:17
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Sanitizer" target="_blank">@T["See documentation"]</a>
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
 msgid "See documentation"
+msgstr ""
+
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:22
+#. <label class="form-check-label" asp-for="RenderLiquid">@T["Render Liquid"]</label>
+msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
+msgid "Render Liquid"
+msgstr ""
+
+#: OrchardCore.ContentFields\Views\HtmlFieldSettings.Edit.cshtml:23
+#. <span class="hint dashed">@T["Whether Liquid markup is rendered or displayed raw. Consider using Shortcodes instead."]</span>
+msgctxt "OrchardCore.ContentFields.Views.HtmlFieldSettings.Edit"
+msgid "Whether Liquid markup is rendered or displayed raw. Consider using Shortcodes instead."
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:6
@@ -861,7 +867,7 @@ msgid "Enter the editor options"
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\HtmlFieldTrumbowygEditorSettings.Edit.cshtml:13
-#. <span class="hint"><a href="https://alex-d.github.io/Trumbowyg/documentation/#button-pane" target="_blank">@T["Documentation for options"]</a></span>
+#. <span class="hint"><a href="https://alex-d.github.io/Trumbowyg/documentation/#basic-options" target="_blank">@T["Documentation for options"]</a></span>
 msgctxt "OrchardCore.ContentFields.Views.HtmlFieldTrumbowygEditorSettings.Edit"
 msgid "Documentation for options"
 msgstr ""
@@ -872,51 +878,51 @@ msgctxt "OrchardCore.ContentFields.Views.LinkField.DisplayOption"
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:24
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:25
 #. <label asp-for="Url" class="@urlClass">@T["Url"]</label>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Url"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:40
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:41
 #. <label asp-for="Text" class="@textClass">@T["Link text"]</label>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Link text"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:54
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:55
 #. @T["Target"]
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:67
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:68
 #. @T["Target"]
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Target"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:59
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:60
 #. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (default)."]</option>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Opens the linked document in the same frame as it was clicked (default)."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:60
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:61
 #. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Opens the linked document in a new window or tab."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:61
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:62
 #. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Opens the linked document in the parent frame."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:62
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:63
 #. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "Opens the linked document in the full body of the window."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:65
+#: OrchardCore.ContentFields\Views\LinkField.Edit.cshtml:66
 #. @T["The target attribute of the anchor tag, see more:"]
 msgctxt "OrchardCore.ContentFields.Views.LinkField.Edit"
 msgid "The target attribute of the anchor tag, see more:"
@@ -1072,7 +1078,7 @@ msgctxt "OrchardCore.ContentFields.Views.LinkFieldSettings.Edit"
 msgid "The default target proposed when creating a content item."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.cshtml:32
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.cshtml:33
 #. <span class="value">@T["No content items."]</span>
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField"
 msgid "No content items."
@@ -1084,33 +1090,33 @@ msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Displ
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:35
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:36
 #. <div class="align-items-center align-self-center"><span>{{ item.displayText }}</span> <span v-show="!item.hasPublished" class="text-muted small">(@T["Not published"])</span></div>
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:54
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:55
 #. <div v-cloak><span>{{ props.option.displayText }}</span><span class="small ms-2" v-show="!props.option.hasPublished">(@T["Not published"])</span></div>
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
 msgid "Not published"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:47
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:48
 #. label="displayText" placeholder="@T["Type to search"]"
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
 msgid "Type to search"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:52
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:53
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
 msgid "Select"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:52
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:53
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
 msgid "Remove"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:57
+#: OrchardCore.ContentFields\Views\LocalizationSetContentPickerField.Edit.cshtml:58
 #. @T["No result found"]
 msgctxt "OrchardCore.ContentFields.Views.LocalizationSetContentPickerField.Edit"
 msgid "No result found"
@@ -1194,25 +1200,25 @@ msgctxt "OrchardCore.ContentFields.Views.MultiTextField-CheckboxList.Option"
 msgid "Checkbox List"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:40
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:41
 #. placeholder="@T["Type to search"]"
 msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
 msgid "Type to search"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:41
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:42
 #. select-label="@T["Select"]"
 msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
 msgid "Select"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:42
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:43
 #. deselect-label="@T["Remove"]"
 msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
 msgid "Remove"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:52
+#: OrchardCore.ContentFields\Views\MultiTextField-Picker.Edit.cshtml:53
 #. @T["No values found"]
 msgctxt "OrchardCore.ContentFields.Views.MultiTextField-Picker.Edit"
 msgid "No values found"
@@ -1353,7 +1359,7 @@ msgctxt "OrchardCore.ContentFields.Views.NumericField-Range.Option"
 msgid "Range"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\NumericField-Select.Edit.cshtml:20
+#: OrchardCore.ContentFields\Views\NumericField-Select.Edit.cshtml:21
 #. <option value="">@T["None"]</option>
 msgctxt "OrchardCore.ContentFields.Views.NumericField-Select.Edit"
 msgid "None"
@@ -1479,7 +1485,7 @@ msgctxt "OrchardCore.ContentFields.Views.TextField-CodeMirror.Option"
 msgid "Code Mirror"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\TextField-Color.Edit.cshtml:103
+#: OrchardCore.ContentFields\Views\TextField-Color.Edit.cshtml:104
 #. <input id="@(fieldId)_color_opacity" title="@T["Opacity"]" class="color_opacity" oninput="setColorField('@fieldId')" type="range" min="0" max="255" step="1" value="@alpha" @(settings.Type == FieldBehaviorType.GeneratedDisabled ? "disabled" : "")>
 msgctxt "OrchardCore.ContentFields.Views.TextField-Color.Edit"
 msgid "Opacity"
@@ -1600,7 +1606,7 @@ msgid "Enter the editor options."
 msgstr ""
 
 #: OrchardCore.ContentFields\Views\TextFieldMonacoEditorSettings.Edit.cshtml:13
-#. <span class="hint"><a href="https://microsoft.github.io/monaco-editor/typedoc/interfaces/editor.IStandaloneEditorConstructionOptions.html" target="_blank">@T["Documentation for options"]</a></span>
+#. <span class="hint"><a href="https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor_editor_api.editor.IStandaloneEditorConstructionOptions.html" target="_blank">@T["Documentation for options"]</a></span>
 msgctxt "OrchardCore.ContentFields.Views.TextFieldMonacoEditorSettings.Edit"
 msgid "Documentation for options"
 msgstr ""
@@ -1825,7 +1831,7 @@ msgctxt "OrchardCore.ContentFields.Views.TimeFieldSettings.Edit"
 msgid "The hint text to display for this field on the editor."
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField-UserNames.Display.cshtml:25
+#: OrchardCore.ContentFields\Views\UserPickerField-UserNames.Display.cshtml:26
 #. <span class="value">@T["No users."]</span>
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField-UserNames.Display"
 msgid "No users."
@@ -1837,7 +1843,7 @@ msgctxt "OrchardCore.ContentFields.Views.UserPickerField-UserNames.DisplayOption
 msgid "User Names"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.cshtml:26
+#: OrchardCore.ContentFields\Views\UserPickerField.cshtml:27
 #. <span class="value">@T["No users."]</span>
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField"
 msgid "No users."
@@ -1849,33 +1855,33 @@ msgctxt "OrchardCore.ContentFields.Views.UserPickerField.DisplayOption"
 msgid "Standard"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:32
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:33
 #. <div class="align-items-center align-self-center"><span>{{ user.displayText }}</span> <span v-show="!user.isEnabled" class="text-muted small">(@T["Not enabled"])</span></div>
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:51
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:52
 #. <div v-cloak><span>{{ props.option.displayText }}</span><span class="small ms-2" v-show="!props.option.isEnabled">(@T["Not enabled"])</span></div>
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
 msgid "Not enabled"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:44
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:45
 #. label="displayText" placeholder="@(string.IsNullOrEmpty(settings.Placeholder) ? T["Type to search"] : settings.Placeholder)"
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
 msgid "Type to search"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:49
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:50
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
 msgid "Select"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:49
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:50
 #. select-label="@T["Select"]" deselect-label="@T["Remove"]">
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
 msgid "Remove"
 msgstr ""
 
-#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:54
+#: OrchardCore.ContentFields\Views\UserPickerField.Edit.cshtml:55
 #. @T["No result found"]
 msgctxt "OrchardCore.ContentFields.Views.UserPickerField.Edit"
 msgid "No result found"

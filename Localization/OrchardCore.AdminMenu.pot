@@ -74,31 +74,31 @@ msgctxt "OrchardCore.AdminMenu.Controllers.MenuController"
 msgid "Admin menu toggled successfully."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:147
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:149
 #. await _notifier.SuccessAsync(H["Admin node added successfully."]);
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node added successfully."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:227
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:231
 #. await _notifier.SuccessAsync(H["Admin node updated successfully."]);
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node updated successfully."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:239
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:247
 #. await _notifier.ErrorAsync(H["The admin node has validation errors."]);
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "The admin node has validation errors."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:276
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:284
 #. await _notifier.SuccessAsync(H["Admin node deleted successfully."]);
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node deleted successfully."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Controllers\NodeController.cs:308
+#: OrchardCore.AdminMenu\Controllers\NodeController.cs:316
 #. await _notifier.SuccessAsync(H["Admin node toggled successfully."]);
 msgctxt "OrchardCore.AdminMenu.Controllers.NodeController"
 msgid "Admin node toggled successfully."
@@ -176,31 +176,31 @@ msgctxt "OrchardCore.AdminMenu.Views.Node.Create"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:4
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Menu: {0}", Model.Name])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:9
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Menu: {0}", localizedAdminMenuName])</h1></zone>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Edit Admin Menu: {0}"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:9
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
 #. <label asp-for="Name" class="form-label">@T["Name"]</label>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Name"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:14
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:19
 #. <button class="btn btn-success save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:15
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:20
 #. <a class="btn btn-primary edit-nodes" role="button" asp-route-controller="Node" asp-route-action="List" asp-route-id="@Model.Id">@T["Edit Admin Nodes"] </a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Edit Admin Nodes"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:16
+#: OrchardCore.AdminMenu\Views\Menu\Edit.cshtml:21
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="List">@T["Cancel"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.Edit"
 msgid "Cancel"
@@ -392,8 +392,8 @@ msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeEdit"
 msgid "The permissions required to display this menu item (optional)."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeSummary.cshtml:4
-#. <span>@Model.Value.LinkText  <code>@Model.Value.LinkUrl</code> <span class="text-muted dashed">@T["Link"]</span></span>
+#: OrchardCore.AdminMenu\Views\Items\LinkAdminNode.Fields.TreeSummary.cshtml:11
+#. <span>@localizedAdminMenuItemLinkText <code>@Model.Value.LinkUrl</code> <span class="text-muted dashed">@T["Link"]</span></span>
 msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeSummary"
 msgid "Link"
 msgstr ""
@@ -410,155 +410,155 @@ msgctxt "OrchardCore.AdminMenu.Views.Items.LinkAdminNode.Fields.TreeThumbnail"
 msgid "Adds a link with a text and a url."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:9
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:11
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Admin Menus"])</h1></zone>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Admin Menus"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:23
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:25
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:27
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:29
 #. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add Admin Menu"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Add Admin Menu"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:41
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:43
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Select All"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:42
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
 #. <label id="items" for="select-all">@T.Plural(Model.AdminMenu.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "{0} item"
 msgid_plural "{0} items"
 msgstr[0] ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:42
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
 #. <label id="items" for="select-all">@T.Plural(Model.AdminMenu.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Items {0} to {1}"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:42
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:44
 #. <label id="items" for="select-all">@T.Plural(Model.AdminMenu.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
 msgstr[0] ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:49
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:51
 #. @T["Actions"]
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Actions"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:54
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:56
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Bulk Action"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:54
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:56
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:69
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:71
 #. <a asp-controller="Node" asp-action="List" asp-route-id="@entry.AdminMenu.Id" class="btn btn-secondary btn-sm">@T["Edit Nodes"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Edit Nodes"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:70
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:72
 #. <a asp-action="Edit" asp-route-id="@entry.AdminMenu.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:72
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:74
 #. <a asp-action="Delete" asp-route-id="@entry.AdminMenu.Id" class="btn btn-danger" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Delete"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:74
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:76
 #. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Toggle Dropdown"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:78
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:80
 #. <a asp-action="Toggle" asp-route-id="@entry.AdminMenu.Id" class="dropdown-item btn-sm" data-url-af="UnsafeUrl">@(entry.AdminMenu.Enabled ? T["Disable"] : T["Enable"])</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Disable"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:78
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:80
 #. <a asp-action="Toggle" asp-route-id="@entry.AdminMenu.Id" class="dropdown-item btn-sm" data-url-af="UnsafeUrl">@(entry.AdminMenu.Enabled ? T["Disable"] : T["Enable"])</a>
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "Enable"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:91
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:93
 #. @T["<strong>Nothing here!</strong> There are no menus for the moment."]
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "<strong>Nothing here!</strong> There are no menus for the moment."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:142
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:144
 #. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:153
+#: OrchardCore.AdminMenu\Views\Menu\List.cshtml:155
 #. selectedItems.text(selectedItemsCount + ' @T["selected"]');
 msgctxt "OrchardCore.AdminMenu.Views.Menu.List"
 msgid "selected"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:12
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Nodes for '{0}'", Model.AdminMenu.Name])</h1></zone>
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:14
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Nodes for '{0}'", localizedAdminMenuName])</h1></zone>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Edit Nodes for '{0}'"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:20
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:22
 #. @T["Add Node"]
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Add Node"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:53
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:55
 #. @T["<strong>Nothing here!</strong> There are no nodes on this tree for the moment."]
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "<strong>Nothing here!</strong> There are no nodes on this tree for the moment."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:59
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:61
 #. <a class="btn btn-secondary" asp-route-controller="menu" asp-route-action="List">@T["Back"]</a>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Back"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:68
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:70
 #. <h5 class="modal-title" id="admin-tree-nodes-title">@T["Available Admin Nodes"]</h5>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Available Admin Nodes"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:82
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:84
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Node\List.cshtml:88
+#: OrchardCore.AdminMenu\Views\Node\List.cshtml:90
 #. <div id="move-error-message" class="d-none" data-message="@T["There was an error when moving the tree node."]"></div>
 msgctxt "OrchardCore.AdminMenu.Views.Node.List"
 msgid "There was an error when moving the tree node."
@@ -689,8 +689,8 @@ msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeEdit"
 msgid "The permissions required to display this menu item (optional)."
 msgstr ""
 
-#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeSummary.cshtml:4
-#. <span>@Model.Value.LinkText <span class="text-muted dashed">@T["Placeholder"]</span></span>
+#: OrchardCore.AdminMenu\Views\Items\PlaceholderAdminNode.Fields.TreeSummary.cshtml:11
+#. <span>@localizedAdminMenuItemLinkText <span class="text-muted dashed">@T["Placeholder"]</span></span>
 msgctxt "OrchardCore.AdminMenu.Views.Items.PlaceholderAdminNode.Fields.TreeSummary"
 msgid "Placeholder"
 msgstr ""
