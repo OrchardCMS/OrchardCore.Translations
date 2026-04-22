@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2026-02-17 21:20\n"
+"PO-Revision-Date: 2026-04-22 13:40\n"
 
 #. .Add(S["Content"], content => content
 #: OrchardCore.Media\AdminMenu.cs:20
@@ -94,53 +94,59 @@ msgstr ""
 
 #. error = S["This file extension is not allowed: {0}", extension].ToString(),
 #. return BadRequest(S["This file extension is not allowed: {0}", newExtension]);
-#: OrchardCore.Media\Controllers\AdminController.cs:231
-#: OrchardCore.Media\Controllers\AdminController.cs:364
+#: OrchardCore.Media\Controllers\AdminController.cs:233
+#: OrchardCore.Media\Controllers\AdminController.cs:366
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "This file extension is not allowed: {0}"
 msgstr "Αυτή η επέκταση αρχείου δεν επιτρέπεται: {0}"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete root media folder"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:301
+#: OrchardCore.Media\Controllers\AdminController.cs:303
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete root media folder"
 msgstr "Δεν είναι δυνατή η διαγραφή του αρχικού φακέλου Πολυμέσων"
 
 #. return StatusCode(StatusCodes.Status403Forbidden, S["Cannot delete path because it is not a directory"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:307
+#: OrchardCore.Media\Controllers\AdminController.cs:309
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot delete path because it is not a directory"
 msgstr "Δεν είναι δυνατή η διαγραφή διαδρομής επειδή δεν είναι κατάλογος"
 
 #. return BadRequest(S["Cannot move media because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:369
+#: OrchardCore.Media\Controllers\AdminController.cs:371
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot move media because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η μετακίνηση του πολυμέσου επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
 
 #. return BadRequest(S["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
-#: OrchardCore.Media\Controllers\AdminController.cs:450
+#: OrchardCore.Media\Controllers\AdminController.cs:452
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Error when moving files. Maybe they already exist on the target folder? Files on error: {0}"
 msgstr "Σφάλμα κατά τη μετακίνηση αρχείων. Ίσως υπάρχουν ήδη στον φάκελο προορισμού; Αρχεία σε σφάλμα: {0}"
 
 #. return BadRequest(S["Cannot create folder because the folder name contains invalid characters"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:470
+#: OrchardCore.Media\Controllers\AdminController.cs:472
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because the folder name contains invalid characters"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή το όνομα του φακέλου περιέχει μη έγκυρους χαρακτήρες"
 
 #. return BadRequest(S["Cannot create folder because a folder already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:484
+#: OrchardCore.Media\Controllers\AdminController.cs:486
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a folder already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένας φάκελος υπάρχει ήδη με το ίδιο όνομα"
 
 #. return BadRequest(S["Cannot create folder because a file already exists with the same name"]);
-#: OrchardCore.Media\Controllers\AdminController.cs:490
+#: OrchardCore.Media\Controllers\AdminController.cs:492
 msgctxt "OrchardCore.Media.Controllers.AdminController"
 msgid "Cannot create folder because a file already exists with the same name"
 msgstr "Δεν είναι δυνατή η δημιουργία φακέλου επειδή ένα αρχείο υπάρχει ήδη με το ίδιο όνομα"
+
+#. var text = bytes == null ? S["Unspecified"] : FileSizeHelpers.FormatAsBytes(bytes.Value);
+#: OrchardCore.Media\Controllers\AdminController.cs:603
+msgctxt "OrchardCore.Media.Controllers.AdminController"
+msgid "Unspecified"
+msgstr ""
 
 #. await _notifier.ErrorAsync(H["The asset cache feature is enabled, but a remote media store feature is not enabled, or not configured with appsettings.json."]);
 #: OrchardCore.Media\Controllers\MediaCacheController.cs:61
@@ -885,297 +891,303 @@ msgid "selected"
 msgstr "επιλεγμένο"
 
 #. <h3>@T["Drop your media here"]</h3>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:14
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:15
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Drop your media here"
 msgstr "Αποθέστε τα πολυμέσα εδώ"
 
 #. <p>@T["Your files will be uploaded to the current folder when you drop them here"]</p>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:15
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:16
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Your files will be uploaded to the current folder when you drop them here"
 msgstr "Τα αρχεία σας θα μεταφορτωθούν στον τρέχοντα φάκελο όταν τα αποθέσετε εδώ"
 
 #. @T["Select All"]
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:35
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:36
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Select All"
 msgstr "Επιλογή Όλων"
 
 #. @T["Select None"]
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:38
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:39
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Select None"
 msgstr "Επιλογή Κανενός"
 
 #. @T["Invert"]
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:41
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:42
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Invert"
 msgstr "Αντιστροφή"
 
 #. @T["Delete"] <span class="badge rounded-pill text-bg-theme" v-show="selectedMedias.length > 0">{{ selectedMedias.length}}</span>
 #. <input type="hidden" id="t-delete-button" value="@T["Delete"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:44
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:45
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:148
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete"
 msgstr "Διαγραφή"
 
 #. <span title="@T["Grid View"]"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:49
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:50
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Grid View"
 msgstr "Προβολή Πλέγματος"
 
 #. <span title="@T["List View"]"><i class="fa-solid fa-list" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:52
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:53
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "List View"
 msgstr "Προβολή Λίστας"
 
 #. <span title="@T["Small Thumbs"]"><i class="fa-solid fa-compress" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:57
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:58
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Small Thumbs"
 msgstr "Μικρές Μινιατούρες"
 
 #. <span title="@T["Large Thumbs"]"><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:60
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:61
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Large Thumbs"
 msgstr "Μεγάλες Μινιατούρες"
 
 #. <input type="text" id="media-filter-input" v-model="mediaFilter" class="form-control input-filter" placeholder="@T["Filter..."]" aria-label="@T["Filter..."]">
 #. <input type="text" id="media-filter-input" v-model="mediaFilter" class="form-control input-filter" placeholder="@T["Filter..."]" aria-label="@T["Filter..."]">
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:68
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:68
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:69
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:69
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Filter..."
 msgstr "Φίλτρο..."
 
 #. @T["Upload"]
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:78
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:79
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Upload"
 msgstr "Μεταφόρτωση"
 
 #. <span class="breadcrumb-item" :class="{ active: isHome }"><a id="t-mediaLibrary" :href="isHome ? null : '#'" v-on:click="selectRoot">@T["Media Library"]</a></span>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:86
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:87
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Media Library"
 msgstr "Βιβλιοθήκη Πολυμέσων"
 
+#. @T["Available Storage: <strong>{0}</strong>", "{{ permittedStorage.text }}"]
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:95
+msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
+msgid "Available Storage: <strong>{0}</strong>"
+msgstr ""
+
 #. <div class="alert-info p-2" v-show="mediaItems.length > 0 && filteredMediaItems.length < 1">@T["Nothing to show with this filter"]</div>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:109
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:113
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Nothing to show with this filter"
 msgstr "Δεν εμφανίζεται τίποτα με αυτό το φίλτρο"
 
 #. <div class="alert-info p-2" v-show="mediaItems.length < 1">@T["This folder is empty"]</div>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:110
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:114
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "This folder is empty"
 msgstr "Αυτός ο φάκελος είναι κενός"
 
 #. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:138
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete media folder"
 msgstr "Διαγράψτε το φάκελο πολυμέσα"
 
 #. <input type="hidden" id="deleteFolder" data-title="@T["Delete media folder"]" data-message="@T["Are you sure you want to delete this folder?"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:138
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:143
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete this folder?"
 msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτόν το φάκελο;"
 
 #. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:139
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:144
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Delete media"
 msgstr "Διαγραφή πολυμέσου"
 
 #. <input type="hidden" id="deleteMedia" data-title="@T["Delete media"]" data-message="@T["Are you sure you want to delete these media items?"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:139
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:144
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to delete these media items?"
 msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτά τα στοιχεία πολυμέσων;"
 
 #. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Move media"
 msgstr "Μετακίνηση πολυμέσων"
 
 #. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Are you sure you want to move the selected media to this folder?"
 msgstr "Είστε βέβαιοι ότι θέλετε να μετακινήσετε τα επιλεγμένα μέσα σε αυτόν το φάκελο;"
 
 #. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Yes"
 msgstr "Ναί"
 
 #. <input type="hidden" id="moveMedia" data-title="@T["Move media"]" data-message="@T["Are you sure you want to move the selected media to this folder?"]" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-ok-class="btn-success" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:140
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:145
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "No"
 msgstr "Όχι"
 
 #. <input type="hidden" id="sameFolderMessage" value="@T["The media is already on this folder"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:141
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:146
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "The media is already on this folder"
 msgstr "Τα πολύμέσα είναι ήδη σε αυτόν τον φάκελο"
 
 #. <input type="hidden" id="t-edit-button" value="@T["Edit"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:142
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
 #. <input type="hidden" id="t-view-button" value="@T["View"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:144
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:149
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "View"
 msgstr "Προβολή"
 
 #. <input type="hidden" id="t-error" value="@T["This file exceeds the maximum upload size"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:147
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "This file exceeds the maximum upload size"
 msgstr "Αυτό το αρχείο υπερβαίνει το μέγιστο επιτρεπόμενο μέγεθος μεταφόρτωσης"
 
 #. <input type="hidden" id="t-uploads" value="@T["Uploads"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:150
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:155
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Uploads"
 msgstr "Μεταφορτώσεις"
 
 #. <input type="hidden" id="t-errors" value="@T["Errors"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:151
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:156
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Errors"
 msgstr "Σφάλματα"
 
 #. <input type="hidden" id="t-clear-errors" value="@T["Clear Errors"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:152
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:157
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Clear Errors"
 msgstr "Καθαρισμός σφαλμάτων"
 
 #. <input type="hidden" id="t-image-header" value="@T["Image"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:155
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:160
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Image"
 msgstr "Εικόνα"
 
 #. <input type="hidden" id="t-name-header" value="@T["Name"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:156
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:161
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Name"
 msgstr "Όνομα"
 
 #. <input type="hidden" id="t-lastModify-header" value="@T["Last modification"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:157
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:162
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last modification"
 msgstr "Τελευταία τροποποίηση"
 
 #. <input type="hidden" id="t-size-header" value="@T["Size"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:158
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:163
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Size"
 msgstr "Μέγεθος"
 
 #. <input type="hidden" id="t-type-header" value="@T["Type"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:159
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:164
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Type"
 msgstr "Τύπος"
 
 #. <input type="hidden" id="t-pager-first-button" value="@T["First"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:162
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:167
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "First"
 msgstr "Πρώτο"
 
 #. <input type="hidden" id="t-pager-previous-button" value="@T["Previous"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:163
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:168
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Previous"
 msgstr "Προηγούμενο"
 
 #. <input type="hidden" id="t-pager-next-button" value="@T["Next"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:164
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:169
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Next"
 msgstr "Επόμενο"
 
 #. <input type="hidden" id="t-pager-last-button" value="@T["Last"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:165
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:170
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Last"
 msgstr "Τελευταίο"
 
 #. <input type="hidden" id="t-pager-page-size-label" value="@T["Page Size"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:166
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:171
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page Size"
 msgstr "Μέγεθος Σελίδας"
 
 #. <input type="hidden" id="t-pager-page-label" value="@T["Page:"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:167
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:172
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Page:"
 msgstr "Σελίδα:"
 
 #. <input type="hidden" id="t-pager-total-label" value="@T["Total items:"]" />
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:168
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:173
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Total items:"
 msgstr "Συνολικά αντικείμενα:"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Create Folder"]</h5>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:174
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:179
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Create Folder"
 msgstr "Δημιουργία φακέλου"
 
 #. <label for="input" class="form-label" id="input-label">@T["Folder name"]</label>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:179
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:184
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Folder name"
 msgstr "Όνομα φακέλου"
 
 #. <button type="button" class="btn btn-primary" id="modalFooterOk">@T["Ok"]</button>
 #. <button type="button" class="btn btn-primary" id="renameMediaModalFooterOk">@T["Ok"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:185
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:208
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:190
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:213
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Ok"
 msgstr "Οκ"
 
 #. <button type="button" class="btn btn-light" data-bs-dismiss="modal">@T["Cancel"]</button>
 #. <button type="button" class="btn btn-light" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:186
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:209
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:191
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:214
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Cancel"
 msgstr "Άκυρο"
 
 #. <h5 class="modal-title" id="modelTitle">@T["Rename Item"]</h5>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:196
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:201
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "Rename Item"
 msgstr "Μετονομασία αντικειμένου"
 
 #. <label for="input" class="form-label" id="input-label">@T["New Name"]</label>
-#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:201
+#: OrchardCore.Media\Views\Admin\MediaApplication.cshtml:206
 msgctxt "OrchardCore.Media.Views.Admin.MediaApplication"
 msgid "New Name"
 msgstr "Νέο Όνομα"
@@ -1229,46 +1241,46 @@ msgid "Exports all or specified media."
 msgstr "Εξάγει όλα ή συγκεκριμένα πολυμέσα."
 
 #. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-down-left-and-up-right-to-center" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:34
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:35
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Small Thumbs"
 msgstr " Μικρές Μινιατούρες"
 
 #. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:35
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:36
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid " Large Thumbs"
 msgstr " Μεγάλες Μινιατούρες"
 
-#. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.attachedFileName !== null && selectedMedia.attachedFileName !== '' ? selectedMedia.attachedFileName : selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:46
-msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
-msgid "{{{{ selectedMedia.attachedFileName !== null && selectedMedia.attachedFileName !== '' ? selectedMedia.attachedFileName : selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
-msgstr ""
-
 #. <input type="hidden" id="t-error" value="@T["This file exceeds the maximum upload size"]" />
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:58
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:59
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid "This file exceeds the maximum upload size"
 msgstr "Αυτό το αρχείο υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης"
 
 #. <input type="hidden" id="t-uploads" value="@T["Uploads"]" />
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:61
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:62
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid "Uploads"
 msgstr "Μεταφορτώσεις"
 
 #. <input type="hidden" id="t-errors" value="@T["Errors"]" />
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:62
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:63
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid "Errors"
 msgstr "Σφάλματα"
 
 #. <input type="hidden" id="t-clear-errors" value="@T["Clear Errors"]" />
-#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:63
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:64
 msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
 msgid "Clear Errors"
 msgstr "Καθαρισμός Σφαλμάτων"
+
+#. <input type="hidden" id="t-selected-media-format" value="@T["{{0}}{{1}} ({{2}} KB)"]" />
+#: OrchardCore.Media\Views\MediaField-Attached.Edit.cshtml:65
+msgctxt "OrchardCore.Media.Views.MediaField-Attached.Edit"
+msgid "{{0}}{{1}} ({{2}} KB)"
+msgstr ""
 
 #. <option value="Attached" selected="@(currentEditor == "Attached")">@T["Attached"]</option>
 #: OrchardCore.Media\Views\MediaField-Attached.Option.cshtml:4
@@ -1277,19 +1289,19 @@ msgid "Attached"
 msgstr "Επισυνάφθηκε"
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
-#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:53
+#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:54
 msgctxt "OrchardCore.Media.Views.MediaField-Gallery.Edit"
 msgid "Select Media"
 msgstr ""
 
 #. <button type="button" class="btn btn-primary mediaFieldSelectButton">@T["OK"]</button>
-#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:58
+#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:59
 msgctxt "OrchardCore.Media.Views.MediaField-Gallery.Edit"
 msgid "OK"
 msgstr ""
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:59
+#: OrchardCore.Media\Views\MediaField-Gallery.Edit.cshtml:60
 msgctxt "OrchardCore.Media.Views.MediaField-Gallery.Edit"
 msgid "Cancel"
 msgstr ""
@@ -1307,37 +1319,37 @@ msgid "Standard"
 msgstr "Καθιερωμένο"
 
 #. <span v-show="!smallThumbs" title="@T[" Small Thumbs"]"><i class="fa-solid fa-down-left-and-up-right-to-center" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:29
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:30
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Small Thumbs"
 msgstr " Μικρές Μινιατούρες"
 
 #. <span v-show="smallThumbs" title="@T[" Large Thumbs"]"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:30
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:31
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid " Large Thumbs"
 msgstr " Μεγάλες Μινιατούρες"
 
 #. <code class="text-end" v-if="selectedMedia">@T["{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"]</code>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:38
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:39
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "{{{{ selectedMedia.name }}}}{{{{ selectedMedia.mediaText === '' ? '' : ', ' + selectedMedia.mediaText }}}} ({{{{ isNaN(fileSize)? 0 : fileSize }}}} KB)"
 msgstr ""
 
 #. <h5 class="modal-title">@T["Select Media"]</h5>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:55
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:56
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Select Media"
 msgstr "Επιλογή Πολυμέσων"
 
 #. <button type="button" class="btn btn-primary mediaFieldSelectButton">@T["OK"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:60
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:61
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "OK"
 msgstr "Εντάξει"
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Media\Views\MediaField.Edit.cshtml:61
+#: OrchardCore.Media\Views\MediaField.Edit.cshtml:62
 msgctxt "OrchardCore.Media.Views.MediaField.Edit"
 msgid "Cancel"
 msgstr "Άκυρο"
@@ -1384,14 +1396,20 @@ msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
 msgid "Not Found"
 msgstr "Δεν Βρέθηκε"
 
-#. <input type="hidden" id="t-discard-warning" value="@T["It will be discarded on saving"]" />
+#. <input type="hidden" id="t-discard-warning" value="@T["File has been deleted"]" />
 #: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:10
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
-msgid "It will be discarded on saving"
-msgstr "Θα απορριφθεί κατά την αποθήκευση"
+msgid "File has been deleted"
+msgstr ""
+
+#. <input type="hidden" id="t-media-temporarily-unavailable" value="@T["Temporarily unavailable"]" />
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:11
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "Temporarily unavailable"
+msgstr ""
 
 #. <input type="hidden" id="t-no-images" value="@T["No Files"]" />
-#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:11
+#: OrchardCore.Media\Views\Shared\MediaFieldEditLocalization.cshtml:12
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
 msgid "No Files"
 msgstr "Δεν υπάρχουν αρχεία"
