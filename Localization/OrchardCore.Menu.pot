@@ -12,38 +12,44 @@ msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Menus"
 msgstr ""
 
-#: OrchardCore.Menu\Controllers\AdminController.cs:280
+#: OrchardCore.Menu\Controllers\AdminController.cs:276
 #. await _notifier.SuccessAsync(H["Menu item deleted successfully."]);
 msgctxt "OrchardCore.Menu.Controllers.AdminController"
 msgid "Menu item deleted successfully."
 msgstr ""
 
-#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:101
+#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:105
 #. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:109
+#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:113
 #. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
 msgctxt "OrchardCore.Menu.Drivers.HtmlMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr ""
 
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:91
+#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:95
 #. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:99
+#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:103
 #. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
 msgctxt "OrchardCore.Menu.Drivers.LinkMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr ""
 
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:53
+#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:57
 #. await _notifier.WarningAsync(H["The menu item content item with id {0} has no matching {1} content type definition.", menuItem.ContentItem.ContentItemId, menuItem.ContentItem.ContentType]);
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "The menu item content item with id {0} has no matching {1} content type definition."
 msgstr ""
 
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:60
+#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:64
 #. await _notifier.WarningAsync(H["Publishing this content item may erase created content. Fix any content type issues beforehand."]);
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
+msgstr ""
+
+#: OrchardCore.Menu\GraphQL\MenuItemsListQueryObjectType.cs:14
+#. .Description(S["The menu items."])
+msgctxt "OrchardCore.Menu.GraphQL.MenuItemsListQueryObjectType"
+msgid "The menu items."
 msgstr ""
 
 #: OrchardCore.Menu\Services\MenuItemStereotypesProvider.cs:18
@@ -58,6 +64,18 @@ msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
 msgid "Name"
 msgstr ""
 
+#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:14
+#. <label class="form-check-label" asp-for="CheckContentPermissions">@T["Check content permissions"]</label>
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
+msgid "Check content permissions"
+msgstr ""
+
+#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:15
+#. <span class="hint dashed">@T["When enabled, we will verify the user's permission to view content items before displaying them in the menu. This process may negatively impact performance, so it is highly recommended to cache the menu when this option is activated."]</span>
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
+msgid "When enabled, we will verify the user's permission to view content items before displaying them in the menu. This process may negatively impact performance, so it is highly recommended to cache the menu when this option is activated."
+msgstr ""
+
 #: OrchardCore.Menu\Views\ContentMenuItemPart.Thumbnail.cshtml:1
 #. <h4 class="card-title">@T["Content Menu Item"]</h4>
 msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
@@ -70,14 +88,14 @@ msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
 msgid "Links to a Content url."
 msgstr ""
 
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:13
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:17
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", localizedTypeDisplayName])</h1></zone>
 msgctxt "OrchardCore.Menu.Views.Admin.Create"
 msgid "New {0}"
 msgstr ""
 
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:13
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", typeDisplayName])</h1></zone>
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:16
+#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", localizedTypeDisplayName])</h1></zone>
 msgctxt "OrchardCore.Menu.Views.Admin.Edit"
 msgid "Edit {0}"
 msgstr ""
@@ -161,7 +179,7 @@ msgid "Whether the Html is sanitized to prevent custom scripts."
 msgstr ""
 
 #: OrchardCore.Menu\Views\HtmlMenuItemPartSettings.Edit.cshtml:9
-#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/core/Sanitizer" target="_blank">@T["See documentation"]</a>
+#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Sanitizer" target="_blank">@T["See documentation"]</a>
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
 msgid "See documentation"
 msgstr ""
@@ -250,25 +268,61 @@ msgctxt "OrchardCore.Menu.Views.MenuItem.Thumbnail"
 msgid "Add"
 msgstr ""
 
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:29
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:16
+#. <label asp-for="SelectedPermissionNames" class="@Orchard.GetLabelClasses()">@T["Permissions"]</label>
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "Permissions"
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:39
+#. placeholder="@T["Type to search"]"
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "Type to search"
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:46
+#. select-label="@T["Select"]"
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "Select"
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:47
+#. deselect-label="@T["Remove"]">
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "Remove"
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:52
+#. @T["No result found"]
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "No result found"
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:55
+#. <span class="hint">@T["The permissions required to display this menu item (optional)."]</span>
+msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
+msgid "The permissions required to display this menu item (optional)."
+msgstr ""
+
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:33
 #. @T["Add Menu Item"]
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Add Menu Item"
 msgstr ""
 
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:57
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:61
 #. <h5 class="modal-title" id="available-menu-items-title">@T["Available Menu Items"]</h5>
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Available Menu Items"
 msgstr ""
 
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:76
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:80
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:83
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:87
 #. <div id="msg-leave" style="display:none" data>@T["You have reordered the navigation."]</div>
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "You have reordered the navigation."

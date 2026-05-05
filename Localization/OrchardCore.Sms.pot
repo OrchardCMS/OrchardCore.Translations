@@ -22,77 +22,103 @@ msgctxt "OrchardCore.Sms.Activities.SmsTask"
 msgid "Failed"
 msgstr ""
 
-#: OrchardCore.Sms\AdminMenu.cs:27
+#: OrchardCore.Sms\AdminMenu.cs:29
 #. .Add(S["Configuration"], configuration => configuration
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "Configuration"
 msgstr ""
 
-#: OrchardCore.Sms\AdminMenu.cs:28
+#: OrchardCore.Sms\AdminMenu.cs:30
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Sms\AdminMenu.cs:52
 #. .Add(S["Settings"], settings => settings
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.Sms\AdminMenu.cs:29
+#: OrchardCore.Sms\AdminMenu.cs:31
 #. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
-#: OrchardCore.Sms\AdminMenu.cs:29
+#: OrchardCore.Sms\AdminMenu.cs:31
+#. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
+#: OrchardCore.Sms\AdminMenu.cs:54
+#. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
+#: OrchardCore.Sms\AdminMenu.cs:54
 #. .Add(S["SMS"], S["SMS"].PrefixPosition(), sms => sms
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "SMS"
 msgstr ""
 
-#: OrchardCore.Sms\AdminMenu.cs:36
+#: OrchardCore.Sms\AdminMenu.cs:38
 #. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
-#: OrchardCore.Sms\AdminMenu.cs:36
+#: OrchardCore.Sms\AdminMenu.cs:38
+#. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
+#: OrchardCore.Sms\AdminMenu.cs:65
+#. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
+#: OrchardCore.Sms\AdminMenu.cs:65
 #. .Add(S["SMS Test"], S["SMS Test"].PrefixPosition(), sms => sms
 msgctxt "OrchardCore.Sms.AdminMenu"
 msgid "SMS Test"
 msgstr ""
 
-#: OrchardCore.Sms\Controllers\AdminController.cs:72
+#: OrchardCore.Sms\AdminMenu.cs:53
+#. .Add(S["Communication"], S["Communication"].PrefixPosition(), communication => communication
+#: OrchardCore.Sms\AdminMenu.cs:53
+#. .Add(S["Communication"], S["Communication"].PrefixPosition(), communication => communication
+msgctxt "OrchardCore.Sms.AdminMenu"
+msgid "Communication"
+msgstr ""
+
+#: OrchardCore.Sms\AdminMenu.cs:63
+#. .Add(S["Tools"], tools => tools
+msgctxt "OrchardCore.Sms.AdminMenu"
+msgid "Tools"
+msgstr ""
+
+#: OrchardCore.Sms\AdminMenu.cs:64
+#. .Add(S["Testing"], S["Testing"].PrefixPosition(), testing => testing
+#: OrchardCore.Sms\AdminMenu.cs:64
+#. .Add(S["Testing"], S["Testing"].PrefixPosition(), testing => testing
+msgctxt "OrchardCore.Sms.AdminMenu"
+msgid "Testing"
+msgstr ""
+
+#: OrchardCore.Sms\Controllers\AdminController.cs:71
 #. ModelState.AddModelError(nameof(model.Provider), S["Please select a valid provider."]);
 msgctxt "OrchardCore.Sms.Controllers.AdminController"
 msgid "Please select a valid provider."
 msgstr ""
 
-#: OrchardCore.Sms\Controllers\AdminController.cs:76
+#: OrchardCore.Sms\Controllers\AdminController.cs:75
 #. ModelState.AddModelError(nameof(model.PhoneNumber), S["Please provide a valid phone number."]);
 msgctxt "OrchardCore.Sms.Controllers.AdminController"
 msgid "Please provide a valid phone number."
 msgstr ""
 
-#: OrchardCore.Sms\Controllers\AdminController.cs:83
-#. Body = S["This is a test SMS message."]
+#: OrchardCore.Sms\Controllers\AdminController.cs:82
+#. Body = S["This is a test SMS message."],
 msgctxt "OrchardCore.Sms.Controllers.AdminController"
 msgid "This is a test SMS message."
 msgstr ""
 
-#: OrchardCore.Sms\Controllers\AdminController.cs:88
+#: OrchardCore.Sms\Controllers\AdminController.cs:87
 #. await _notifier.SuccessAsync(H["The test SMS message has been successfully sent."]);
 msgctxt "OrchardCore.Sms.Controllers.AdminController"
 msgid "The test SMS message has been successfully sent."
 msgstr ""
 
-#: OrchardCore.Sms\Controllers\AdminController.cs:94
+#: OrchardCore.Sms\Controllers\AdminController.cs:93
 #. await _notifier.ErrorAsync(H["The test SMS message failed to send."]);
 msgctxt "OrchardCore.Sms.Controllers.AdminController"
 msgid "The test SMS message failed to send."
 msgstr ""
 
-#: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:46
+#: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:40
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Phone number requires a value."]);
 msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
 msgid "Phone number requires a value."
 msgstr ""
 
-#: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:50
-#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.PhoneNumber), S["Invalid phone number used."]);
-msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
-msgid "Invalid phone number used."
-msgstr ""
-
-#: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:55
+#: OrchardCore.Sms\Drivers\SmsTaskDisplayDriver.cs:49
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Body), S["Message Body requires a value."]);
 msgctxt "OrchardCore.Sms.Drivers.SmsTaskDisplayDriver"
 msgid "Message Body requires a value."
@@ -128,12 +154,6 @@ msgctxt "OrchardCore.Sms.Drivers.TwilioSettingsDisplayDriver"
 msgid "Auth Token required a value."
 msgstr ""
 
-#: OrchardCore.Sms\Views\NavigationItemText-sms.Id.cshtml:4
-#. <span class="title">@T["SMS"]</span>
-msgctxt "OrchardCore.Sms.Views.NavigationItemText-sms.Id"
-msgid "SMS"
-msgstr ""
-
 #: OrchardCore.Sms\Views\SmsSettings.Edit.cshtml:6
 #. <label asp-for="DefaultProvider" class="form-label">@T["Default SMS provider"]</label>
 msgctxt "OrchardCore.Sms.Views.SmsSettings.Edit"
@@ -159,9 +179,9 @@ msgid "Phone Number"
 msgstr ""
 
 #: OrchardCore.Sms\Views\Items\SmsTask.Fields.Edit.cshtml:9
-#. <span class="hint">@T["Phone number must include a country code. For example, +1 for United States."]</span>
+#. <span class="hint">@T["Phone number must include a country code. For example, +1 for United States. With Liquid support."]</span>
 msgctxt "OrchardCore.Sms.Views.Items.SmsTask.Fields.Edit"
-msgid "Phone number must include a country code. For example, +1 for United States."
+msgid "Phone number must include a country code. For example, +1 for United States. With Liquid support."
 msgstr ""
 
 #: OrchardCore.Sms\Views\Items\SmsTask.Fields.Edit.cshtml:13
