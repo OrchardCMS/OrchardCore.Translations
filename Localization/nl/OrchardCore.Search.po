@@ -10,138 +10,158 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2024-09-09 17:19\n"
+"PO-Revision-Date: 2026-04-22 14:05\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
-#: OrchardCore.Search\AdminMenu.cs:25
+#. .Add(S["Search"], S["Search"].PrefixPosition(), search => search
+#. .Add(S["Search"], S["Search"].PrefixPosition(), search => search
+#: OrchardCore.Search\AdminMenu.cs:27
+#: OrchardCore.Search\AdminMenu.cs:44
+#: OrchardCore.Search\AdminMenu.cs:44
 msgctxt "OrchardCore.Search.AdminMenu"
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #. .Add(S["Settings"], S["Settings"].PrefixPosition(), settings => settings
 #. .Add(S["Settings"], S["Settings"].PrefixPosition(), settings => settings
-#: OrchardCore.Search\AdminMenu.cs:28
-#: OrchardCore.Search\AdminMenu.cs:28
+#. .Add(S["Settings"], settings => settings
+#: OrchardCore.Search\AdminMenu.cs:30
+#: OrchardCore.Search\AdminMenu.cs:30
+#: OrchardCore.Search\AdminMenu.cs:43
 msgctxt "OrchardCore.Search.AdminMenu"
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
-#. await _notifier.WarningAsync(H["No search provider feature is enabled."]);
-#: OrchardCore.Search\Controllers\SearchController.cs:63
+#. .Add(S["Site Search"], S["Site Search"].PrefixPosition(), search => search
+#. .Add(S["Site Search"], S["Site Search"].PrefixPosition(), search => search
+#: OrchardCore.Search\AdminMenu.cs:45
+#: OrchardCore.Search\AdminMenu.cs:45
+msgctxt "OrchardCore.Search.AdminMenu"
+msgid "Site Search"
+msgstr "Zoeken in de website"
+
+#. await _notifier.WarningAsync(H["No default search index has been configured."]);
+#: OrchardCore.Search\Controllers\SearchController.cs:94
 msgctxt "OrchardCore.Search.SearchController"
-msgid "No search provider feature is enabled."
-msgstr ""
+msgid "No default search index has been configured."
+msgstr "Er is geen standaard zoekindex geconfigureerd."
 
-#. <span class="title">@T["Search"]</span>
-#: OrchardCore.Search\Views\NavigationItemText-search.Id.cshtml:4
-msgctxt "OrchardCore.Search.Views.NavigationItemText-search.Id"
-msgid "Search"
-msgstr ""
+#. await _notifier.WarningAsync(H["No search service provider found for {0} provider.", indexProfile.ProviderName]);
+#: OrchardCore.Search\Controllers\SearchController.cs:118
+msgctxt "OrchardCore.Search.SearchController"
+msgid "No search service provider found for {0} provider."
+msgstr "Geen zoekdienstaanbieder gevonden voor {0} provider."
 
 #: OrchardCore.Search\Views\Search-Form.cshtml:0
 msgctxt "OrchardCore.Search.Views.Search-Form"
 msgid "Enter your search term(s)"
-msgstr ""
+msgstr "Voer uw zoekterm(en) in"
 
 #. <button type="submit" class="btn btn-primary btn-sm">@T["Search"]</button>
-#: OrchardCore.Search\Views\Search-Form.cshtml:13
+#: OrchardCore.Search\Views\Search-Form.cshtml:16
 msgctxt "OrchardCore.Search.Views.Search-Form"
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #. <p class="alert alert-warning">@T["There are no such results."]</p>
-#: OrchardCore.Search\Views\Search-Results.cshtml:17
+#: OrchardCore.Search\Views\Search-Results.cshtml:43
 msgctxt "OrchardCore.Search.Views.Search-Results"
 msgid "There are no such results."
-msgstr ""
+msgstr "Er zijn geen resultaten."
 
 #. <button type="submit" class="btn btn-primary btn-sm">@T["Search"]</button>
 #: OrchardCore.Search\Views\SearchFormPart.cshtml:9
 msgctxt "OrchardCore.Search.Views.SearchFormPart"
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #. <label asp-for="Placeholder" class="@Orchard.GetLabelClasses()">@T["Placeholder"]</label>
 #: OrchardCore.Search\Views\SearchFormPart.Edit.cshtml:6
 msgctxt "OrchardCore.Search.Views.SearchFormPart.Edit"
 msgid "Placeholder"
-msgstr ""
+msgstr "Placeholder"
 
 #. <span class="hint">@T["The placeholder text to use in the search bar."]</span>
 #: OrchardCore.Search\Views\SearchFormPart.Edit.cshtml:9
 msgctxt "OrchardCore.Search.Views.SearchFormPart.Edit"
 msgid "The placeholder text to use in the search bar."
-msgstr ""
+msgstr "De te gebruiken placeholder tekst in de zoekbalk."
 
 #. <label asp-for="IndexName" class="@Orchard.GetLabelClasses()">@T["Index Name"]</label>
 #: OrchardCore.Search\Views\SearchFormPart.Edit.cshtml:14
 msgctxt "OrchardCore.Search.Views.SearchFormPart.Edit"
 msgid "Index Name"
-msgstr ""
+msgstr "Index naam"
 
 #. <span class="hint">@T["Leave it empty to use the default index."]</span>
 #: OrchardCore.Search\Views\SearchFormPart.Edit.cshtml:17
 msgctxt "OrchardCore.Search.Views.SearchFormPart.Edit"
 msgid "Leave it empty to use the default index."
-msgstr ""
+msgstr "Laat het leeg om de standaardindex te gebruiken."
 
-#. <label asp-for="ProviderName" class="form-label">@T["Default search provider"]</label>
+#. <label asp-for="DefaultIndexProfileName" class="form-label">@T["Default search index"]</label>
 #: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:6
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "Default search provider"
-msgstr ""
+msgid "Default search index"
+msgstr "Standaard zoekindex"
 
-#. <span class="hint">@T["The default search provider to use for the search page."]</span>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:9
+#. <option value="">@T["Select a default index"]</option>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:8
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "The default search provider to use for the search page."
-msgstr ""
+msgid "Select a default index"
+msgstr "Selecteer een standaardindex"
+
+#. <span class="hint">@T["The default index to use for the search page."]</span>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:11
+msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
+msgid "The default index to use for the search page."
+msgstr "De standaardindex om te gebruiken voor de zoekpagina."
 
 #. <label asp-for="Placeholder" class="form-label">@T["Placeholder"]</label>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:13
-msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "Placeholder"
-msgstr ""
-
-#. <span class="hint">@T["The placeholder text to use in the search bar."]</span>
 #: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "The placeholder text to use in the search bar."
-msgstr ""
+msgid "Placeholder"
+msgstr "Placeholder"
 
-#. <div class="alert alert-warning">@T["You need to enable at least one search provider (Lucene, Elasticsearch, or Azure AI Search)."]</div>
-#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:20
+#. <span class="hint">@T["The placeholder text to use in the search bar."]</span>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
-msgid "You need to enable at least one search provider (Lucene, Elasticsearch, or Azure AI Search)."
-msgstr ""
+msgid "The placeholder text to use in the search bar."
+msgstr "De te gebruiken placeholder tekst in de zoekbalk."
+
+#. <div class="alert alert-warning">@T["No available indexes. Add at least one index to search."]</div>
+#: OrchardCore.Search\Views\SearchSettings.Edit.cshtml:22
+msgctxt "OrchardCore.Search.Views.SearchSettings.Edit"
+msgid "No available indexes. Add at least one index to search."
+msgstr "Geen beschikbare indexen. Voeg ten minste één index toe om te zoeken."
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Search\Views\Items\SearchSettingsDeploymentStep.Fields.Edit.cshtml:3
 msgctxt "OrchardCore.Search.Views.Items.SearchSettingsDeploymentStep.Fields.Edit"
 msgid "Search Settings"
-msgstr ""
+msgstr "Zoek Instellingen"
 
 #. <h5>@T["Search Settings"]</h5>
 #: OrchardCore.Search\Views\Items\SearchSettingsDeploymentStep.Fields.Summary.cshtml:3
 msgctxt "OrchardCore.Search.Views.Items.SearchSettingsDeploymentStep.Fields.Summary"
 msgid "Search Settings"
-msgstr ""
+msgstr "Zoek Instellingen"
 
 #. <span class="hint">@T["Adds search settings to the plan."]</span>
 #: OrchardCore.Search\Views\Items\SearchSettingsDeploymentStep.Fields.Summary.cshtml:5
 msgctxt "OrchardCore.Search.Views.Items.SearchSettingsDeploymentStep.Fields.Summary"
 msgid "Adds search settings to the plan."
-msgstr ""
+msgstr "Voegt zoekinstellingen toe aan het abonnement."
 
 #. <h4 class="card-title">@T["Search Settings"]</h4>
 #: OrchardCore.Search\Views\Items\SearchSettingsDeploymentStep.Fields.Thumbnail.cshtml:3
 msgctxt "OrchardCore.Search.Views.Items.SearchSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Search Settings"
-msgstr ""
+msgstr "Zoek Instellingen"
 
 #. <p>@T["Exports search settings."]</p>
 #: OrchardCore.Search\Views\Items\SearchSettingsDeploymentStep.Fields.Thumbnail.cshtml:4
 msgctxt "OrchardCore.Search.Views.Items.SearchSettingsDeploymentStep.Fields.Thumbnail"
 msgid "Exports search settings."
-msgstr ""
+msgstr "Exporteert zoekinstellingen."
 

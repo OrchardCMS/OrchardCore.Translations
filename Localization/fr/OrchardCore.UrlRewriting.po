@@ -10,64 +10,74 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2024-11-10 17:24\n"
+"PO-Revision-Date: 2025-11-21 21:04\n"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.UrlRewriting\AdminMenu.cs:18
+#: OrchardCore.UrlRewriting\AdminMenu.cs:20
 msgctxt "OrchardCore.UrlRewriting.AdminMenu"
 msgid "Configuration"
 msgstr "Configuration"
 
 #. .Add(S["URL Rewriting"], S["URL Rewriting"].PrefixPosition(), rewriting => rewriting
 #. .Add(S["URL Rewriting"], S["URL Rewriting"].PrefixPosition(), rewriting => rewriting
-#: OrchardCore.UrlRewriting\AdminMenu.cs:19
-#: OrchardCore.UrlRewriting\AdminMenu.cs:19
+#. .Add(S["URL Rewriting"], S["URL Rewriting"].PrefixPosition(), rewriting => rewriting
+#. .Add(S["URL Rewriting"], S["URL Rewriting"].PrefixPosition(), rewriting => rewriting
+#: OrchardCore.UrlRewriting\AdminMenu.cs:21
+#: OrchardCore.UrlRewriting\AdminMenu.cs:21
+#: OrchardCore.UrlRewriting\AdminMenu.cs:35
+#: OrchardCore.UrlRewriting\AdminMenu.cs:35
 msgctxt "OrchardCore.UrlRewriting.AdminMenu"
 msgid "URL Rewriting"
 msgstr "Réécriture d'URL"
 
+#. .Add(S["Tools"], tools => tools
+#: OrchardCore.UrlRewriting\AdminMenu.cs:34
+msgctxt "OrchardCore.UrlRewriting.AdminMenu"
+msgid "Tools"
+msgstr "Outils"
+
 #. new SelectListItem(S["Delete"], nameof(RewriteRuleAction.Remove)),
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:91
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:85
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Delete"
 msgstr "Supprimer"
 
 #. await _notifier.ErrorAsync(H["Unable to find a rule-source that can handle the source '{Source}'.", id]);
 #. await _notifier.ErrorAsync(H["Unable to find a rule-source that can handle the source '{Source}'.", id]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:108
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:144
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:102
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:138
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Unable to find a rule-source that can handle the source '{Source}'."
 msgstr "Impossible de trouver une source de règles qui peut gérer la source '{Source}'."
 
 #. await _notifier.ErrorAsync(H["Invalid rule source."]);
 #. await _notifier.ErrorAsync(H["Invalid rule source."]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:117
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:153
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:111
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:147
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Invalid rule source."
 msgstr "Source de règle invalide."
 
 #. await _notifier.SuccessAsync(H["Rule created successfully."]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:168
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:162
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Rule created successfully."
 msgstr "Règle créée avec succès."
 
 #. await _notifier.SuccessAsync(H["Rule updated successfully."]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:230
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:224
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Rule updated successfully."
 msgstr "Règle mise à jour avec succès."
 
 #. await _notifier.SuccessAsync(H["Rule deleted successfully."]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:259
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:253
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Rule deleted successfully."
 msgstr "Règle supprimée avec succès."
 
 #. await _notifier.SuccessAsync(H["Rules removed successfully."]);
-#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:292
+#: OrchardCore.UrlRewriting\Controllers\AdminController.cs:286
 msgctxt "OrchardCore.UrlRewriting.Controllers.AdminController"
 msgid "Rules removed successfully."
 msgstr "Règles supprimées avec succès."
@@ -169,13 +179,13 @@ msgid "A valid Substitution URL Pattern is required."
 msgstr "Un modèle d'URL de substitution valide est requis."
 
 #. context.Errors.Add(S["Could not find rule source value. The rule will not be imported"]);
-#: OrchardCore.UrlRewriting\Recipes\UrlRewritingStep.cs:59
+#: OrchardCore.UrlRewriting\Recipes\UrlRewritingStep.cs:54
 msgctxt "OrchardCore.UrlRewriting.Recipes.UrlRewritingStep"
 msgid "Could not find rule source value. The rule will not be imported"
 msgstr "Impossible de trouver la valeur source de la règle. La règle ne sera pas importée"
 
 #. context.Errors.Add(S["Unable to find a rule-source that can handle the source '{Source}'.", sourceName]);
-#: OrchardCore.UrlRewriting\Recipes\UrlRewritingStep.cs:68
+#: OrchardCore.UrlRewriting\Recipes\UrlRewritingStep.cs:63
 msgctxt "OrchardCore.UrlRewriting.Recipes.UrlRewritingStep"
 msgid "Unable to find a rule-source that can handle the source '{Source}'."
 msgstr "Impossible de trouver une source de règles qui peut gérer la source '{Source}'."
@@ -240,21 +250,21 @@ msgctxt "OrchardCore.UrlRewriting.Views.Admin.Index"
 msgid "Select All"
 msgstr "Tout sélectionner"
 
-#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.UrlRewriting\Views\Admin\Index.cshtml:42
 msgctxt "OrchardCore.UrlRewriting.Views.Admin.Index"
-msgid "1 item"
+msgid "{0} item"
 msgid_plural "{0} items"
-msgstr[0] "1 élément"
+msgstr[0] "{0} élément"
 msgstr[1] "{0} éléments"
 
-#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.UrlRewriting\Views\Admin\Index.cshtml:42
 msgctxt "OrchardCore.UrlRewriting.Views.Admin.Index"
 msgid "Items {0} to {1}"
 msgstr "Éléments : {0} sur {1}"
 
-#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "1 item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
+#. <label id="items" for="select-all">@T.Plural(Model.Rules.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural(Model.Rules.Count, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.UrlRewriting\Views\Admin\Index.cshtml:42
 msgctxt "OrchardCore.UrlRewriting.Views.Admin.Index"
 msgid " / {0} item in total"
@@ -322,12 +332,6 @@ msgctxt "OrchardCore.UrlRewriting.Views.Admin.Index"
 msgid "selected"
 msgstr "sélectionné(s)"
 
-#. <span class="title">@T["URL Rewriting"]</span>
-#: OrchardCore.UrlRewriting\Views\NavigationItemText-urlrewriting.Id.cshtml:4
-msgctxt "OrchardCore.UrlRewriting.Views.NavigationItemText-urlrewriting.Id"
-msgid "URL Rewriting"
-msgstr "Réécriture d'URL"
-
 #. class="btn btn-primary btn-sm">@T["Edit"]</a>
 #: OrchardCore.UrlRewriting\Views\RewriteRule.Buttons.SummaryAdmin.cshtml:9
 msgctxt "OrchardCore.UrlRewriting.Views.RewriteRule.Buttons.SummaryAdmin"
@@ -340,7 +344,7 @@ msgctxt "OrchardCore.UrlRewriting.Views.RewriteRule.Buttons.SummaryAdmin"
 msgid "Delete"
 msgstr "Supprimer"
 
-#. <span class="badge ta-badge font-weight-normal" data-bs-toggle="tooltip" title="@T["Author"]">
+#. <user-display-name user-name="@(Model.Value.Author)" title="@T["Author"].Value" display-type="@Model.Metadata.DisplayType" cache-id="user-display-name-author" />
 #: OrchardCore.UrlRewriting\Views\RewriteRule.DefaultMeta.SummaryAdmin.cshtml:17
 msgctxt "OrchardCore.UrlRewriting.Views.RewriteRule.DefaultMeta.SummaryAdmin"
 msgid "Author"

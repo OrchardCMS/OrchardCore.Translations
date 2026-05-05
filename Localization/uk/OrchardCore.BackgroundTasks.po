@@ -10,59 +10,69 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2024-09-09 16:50\n"
+"PO-Revision-Date: 2025-11-21 20:31\n"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.BackgroundTasks\AdminMenu.cs:18
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:20
 msgctxt "OrchardCore.BackgroundTasks.AdminMenu"
 msgid "Configuration"
 msgstr "Конфігурація"
 
 #. .Add(S["Tasks"], S["Tasks"].PrefixPosition(), tasks => tasks
 #. .Add(S["Tasks"], S["Tasks"].PrefixPosition(), tasks => tasks
-#: OrchardCore.BackgroundTasks\AdminMenu.cs:19
-#: OrchardCore.BackgroundTasks\AdminMenu.cs:19
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:21
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:21
 msgctxt "OrchardCore.BackgroundTasks.AdminMenu"
 msgid "Tasks"
 msgstr "Задачі"
 
 #. .Add(S["Background Tasks"], S["Background Tasks"].PrefixPosition(), backgroundTasks => backgroundTasks
 #. .Add(S["Background Tasks"], S["Background Tasks"].PrefixPosition(), backgroundTasks => backgroundTasks
-#: OrchardCore.BackgroundTasks\AdminMenu.cs:20
-#: OrchardCore.BackgroundTasks\AdminMenu.cs:20
+#. .Add(S["Background Tasks"], S["Background Tasks"].PrefixPosition(), backgroundTasks => backgroundTasks
+#. .Add(S["Background Tasks"], S["Background Tasks"].PrefixPosition(), backgroundTasks => backgroundTasks
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:22
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:22
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:35
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:35
 msgctxt "OrchardCore.BackgroundTasks.AdminMenu"
 msgid "Background Tasks"
 msgstr "Фонові завдання"
+
+#. .Add(S["Tools"], tools => tools
+#: OrchardCore.BackgroundTasks\AdminMenu.cs:34
+msgctxt "OrchardCore.BackgroundTasks.AdminMenu"
+msgid "Tools"
+msgstr "Інструменти"
 
 #. new SelectListItem(S["Enabled"], "enabled"),
 #: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:107
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "Enabled"
-msgstr ""
+msgstr "Увімкнено"
 
 #. new SelectListItem(S["Disabled"], "disabled")
 #: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:108
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "Disabled"
-msgstr ""
+msgstr "Вимкнено"
 
 #. await _notifier.SuccessAsync(H["The task has been updated."]);
 #: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:215
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been updated."
-msgstr ""
+msgstr "Завдання оновлено."
 
 #. await _notifier.SuccessAsync(H["The task has been enabled."]);
 #: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:250
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been enabled."
-msgstr ""
+msgstr "Завдання увімкнено."
 
 #. await _notifier.SuccessAsync(H["The task has been disabled."]);
 #: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:279
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been disabled."
-msgstr ""
+msgstr "Завдання вимкнено."
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Task Settings"])</h1></zone>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:4
@@ -86,13 +96,13 @@ msgstr "Додатково"
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:23
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
 #. <label asp-for="Description" class="@Orchard.GetLabelClasses()">@T["Description"]</label>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:30
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
 #. <label asp-for="Schedule" class="@Orchard.GetLabelClasses()">@T["Schedule"]</label>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:37
@@ -100,7 +110,7 @@ msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Schedule"
 msgstr "Розклад"
 
-#. <button id="use-default-schedule" class="btn btn-outline-success">@T["Reset Schedule"]</button>
+#. <button type="button" id="use-default-schedule" class="btn btn-outline-danger">@T["Reset Schedule"]</button>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:41
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Reset Schedule"
@@ -110,43 +120,43 @@ msgstr "Скинути розклад"
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:43
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The task schedule as a cron expression."
-msgstr "Графік завдань як вираз cron."
+msgstr "Розклад завдань як вираз cron."
 
 #. <label class="form-check-label" asp-for="UsePipeline">@T["Use Tenant Pipeline"]</label>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:51
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Use Tenant Pipeline"
-msgstr ""
+msgstr "Використовувати конвеєр екземпляра"
 
 #. <span class="hint">@T["Whether or not the tenant pipeline should be built to configure endpoints and then executed to allow route urls generation in the background."]</span>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:53
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Whether or not the tenant pipeline should be built to configure endpoints and then executed to allow route urls generation in the background."
-msgstr ""
+msgstr "Чи слід створювати конвеєр екземпляра для налаштування мережевого вузла, а потім виконувати його, щоб дозволити генерацію Url-адрес маршрутів у фоновому режимі."
 
 #. <div><span asp-validation-for="LockTimeout" class="text-danger">@T["Invalid lock timeout value in the advanced tab"]</span></div>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:57
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Invalid lock timeout value in the advanced tab"
-msgstr ""
+msgstr "Некоректне значення часу очікування блокування на вкладці \"Додатково\""
 
 #. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:58
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Invalid lock expiration value in the advanced tab"
-msgstr ""
+msgstr "Некоректне значення терміну дії блокування на вкладці \"Додатково\""
 
 #. <label asp-for="LockTimeout" class="@Orchard.GetLabelClasses()">@T["Lock timeout (ms)"]</label>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:63
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Lock timeout (ms)"
-msgstr ""
+msgstr "Час очікування блокування (мс)"
 
 #. <span class="hint">@T["The timeout in milliseconds to acquire a lock before executing the task atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:66
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The timeout in milliseconds to acquire a lock before executing the task atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "Час очікування у мілісекундах для отримання блокування перед атомарним виконанням завдання. Залиште значення нульовим, щоб не використовувати блокування."
 
 #. <span class="hint">@T["Ignored if there is no distributed lock feature enabled."]</span>
 #. <span class="hint">@T["Ignored if there is no distributed lock feature enabled."]</span>
@@ -154,19 +164,19 @@ msgstr ""
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:76
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Ignored if there is no distributed lock feature enabled."
-msgstr ""
+msgstr "Ігнорується, якщо функція розподіленого блокування не ввімкнена."
 
 #. <label asp-for="LockExpiration" class="@Orchard.GetLabelClasses()">@T["Lock expiration (ms)"]</label>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:72
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Lock expiration (ms)"
-msgstr ""
+msgstr "Термін дії блокування (мс)"
 
 #. <span class="hint">@T["The expiration in milliseconds of the lock acquired before executing the task atomically. Leave it to zero to not use any locking."]</span>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:75
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The expiration in milliseconds of the lock acquired before executing the task atomically. Leave it to zero to not use any locking."
-msgstr ""
+msgstr "Термін дії блокування, отриманого перед атомарним виконанням завдання, у мілісекундах. Залиште значення нульовим, щоб не використовувати блокування."
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:83
@@ -190,21 +200,21 @@ msgstr "Фонові завдання"
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:15
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #. <select asp-for="Options.Status" asp-items="@Model.Options.Statuses" class="selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Status"]" data-style="btn-sm"></select>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:30
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Filter by status"
-msgstr ""
+msgstr "Фільтр за статусом"
 
 #. <select asp-for="Options.Status" asp-items="@Model.Options.Statuses" class="selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Status"]" data-style="btn-sm"></select>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:30
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
-#. <span class="text-primary" title="@T["Settings"]"><i class="fa-solid fa-cog" aria-hidden="true"></i></span>
+#. <span class="text-primary" title="@T["Settings"]"><i class="fa-solid fa-gear" aria-hidden="true"></i></span>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:42
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Settings"
@@ -214,23 +224,23 @@ msgstr "Налаштування"
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:46
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Edit"
-msgstr "Змінити"
+msgstr "Редагувати"
 
 #. <a asp-action="Disable" asp-route-name="@task.Name" class="btn btn-sm btn-danger" data-url-af="UnsafeUrl">@T["Disable"]</a>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:50
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Disable"
-msgstr "Відключити"
+msgstr "Вимкнути"
 
 #. <a asp-action="Enable" asp-route-name="@task.Name" class="btn btn-sm btn-success" data-url-af="UnsafeUrl">@T["Enable"]</a>
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:54
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Enable"
-msgstr "Активувати"
+msgstr "Увімкнути"
 
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 #: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:74
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
-msgstr ""
+msgstr "<strong>Тут нічого!</strong> Ваш пошук не приніс результатів."
 

@@ -10,21 +10,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
-"PO-Revision-Date: 2024-09-09 17:03\n"
+"PO-Revision-Date: 2026-04-22 13:30\n"
 
 #. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Features\AdminMenu.cs:26
+#: OrchardCore.Features\AdminMenu.cs:28
 msgctxt "OrchardCore.Features.AdminMenu"
 msgid "Configuration"
 msgstr "Παραμετροποίηση"
 
 #. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
 #. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
-#: OrchardCore.Features\AdminMenu.cs:27
-#: OrchardCore.Features\AdminMenu.cs:27
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
+#. .Add(S["Features"], S["Features"].PrefixPosition(), deployment => deployment
+#: OrchardCore.Features\AdminMenu.cs:29
+#: OrchardCore.Features\AdminMenu.cs:29
+#: OrchardCore.Features\AdminMenu.cs:41
+#: OrchardCore.Features\AdminMenu.cs:41
 msgctxt "OrchardCore.Features.AdminMenu"
 msgid "Features"
 msgstr "Χαρακτηριστικά"
+
+#. .Add(S["Tools"], tools => tools
+#: OrchardCore.Features\AdminMenu.cs:40
+msgctxt "OrchardCore.Features.AdminMenu"
+msgid "Tools"
+msgstr ""
 
 #. ModelState.AddModelError(nameof(BulkActionViewModel.FeatureIds), S["Please select one or more features."]);
 #: OrchardCore.Features\Controllers\AdminController.cs:90
@@ -109,13 +119,13 @@ msgid "Features for {0} tenant"
 msgstr "Λειτουργίες για {0} μισθωτή"
 
 #. <input id="search-box" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Features\Views\Admin\Features.cshtml:23
+#: OrchardCore.Features\Views\Admin\Features.cshtml:24
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Search"
 msgstr "Αναζήτηση"
 
 #. @T["Bulk Actions"]
-#: OrchardCore.Features\Views\Admin\Features.cshtml:29
+#: OrchardCore.Features\Views\Admin\Features.cshtml:30
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Bulk Actions"
 msgstr "Μαζικές ενέργειες"
@@ -124,10 +134,10 @@ msgstr "Μαζικές ενέργειες"
 #. <button class="btn btn-danger btn-sm" disabled>@T["Disable"]</button>
 #. <button class="btn btn-danger btn-sm" disabled>@T["Disable"]</button>
 #. <a id="btn-disable-@Html.GenerateIdFromName(featureId)" asp-action="Disable" asp-route-id="@featureId" asp-route-tenant="@Model.Name" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-url-af="UnsafeUrl RemoveUrl">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:32
-#: OrchardCore.Features\Views\Admin\Features.cshtml:135
-#: OrchardCore.Features\Views\Admin\Features.cshtml:148
-#: OrchardCore.Features\Views\Admin\Features.cshtml:165
+#: OrchardCore.Features\Views\Admin\Features.cshtml:33
+#: OrchardCore.Features\Views\Admin\Features.cshtml:159
+#: OrchardCore.Features\Views\Admin\Features.cshtml:172
+#: OrchardCore.Features\Views\Admin\Features.cshtml:189
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable"
 msgstr "Απενεργοποίηση"
@@ -135,15 +145,15 @@ msgstr "Απενεργοποίηση"
 #. <li><a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Enable)">@T["Enable"]</a></li>
 #. <button class="btn btn-primary btn-sm" disabled>@T["Enable"]</button>
 #. <a id="btn-enable-@Html.GenerateIdFromName(featureId)" asp-action="Enable" asp-route-id="@featureId" asp-route-tenant="@Model.Name" class="btn btn-primary btn-sm" data-url-af="UnsafeUrl">@T["Enable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:33
-#: OrchardCore.Features\Views\Admin\Features.cshtml:141
-#: OrchardCore.Features\Views\Admin\Features.cshtml:155
+#: OrchardCore.Features\Views\Admin\Features.cshtml:34
+#: OrchardCore.Features\Views\Admin\Features.cshtml:165
+#: OrchardCore.Features\Views\Admin\Features.cshtml:179
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Enable"
 msgstr "Εργοποίηση"
 
 #. <li><a class="dropdown-item" href="#" data-action="@nameof(FeaturesBulkAction.Toggle)">@T["Toggle"]</a></li>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:34
+#: OrchardCore.Features\Views\Admin\Features.cshtml:35
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Toggle"
 msgstr "Εναλλαγή"
@@ -154,19 +164,19 @@ msgid "Uncategorized"
 msgstr "Αταξινόμητες"
 
 #. <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@T["This feature is automatically enabled based on dependency and cannot be manually disabled."]">
-#: OrchardCore.Features\Views\Admin\Features.cshtml:134
+#: OrchardCore.Features\Views\Admin\Features.cshtml:158
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "This feature is automatically enabled based on dependency and cannot be manually disabled."
 msgstr "Αυτή η δυνατότητα ενεργοποιείται αυτόματα με βάση τις εξαρτήσεις της και δεν μπορεί να απενεργοποιηθεί με μη αυτόματο τρόπο."
 
 #. <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@T["This feature is automatically disabled based on dependency and cannot be manually enabled."]">
-#: OrchardCore.Features\Views\Admin\Features.cshtml:140
+#: OrchardCore.Features\Views\Admin\Features.cshtml:164
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "This feature is automatically disabled based on dependency and cannot be manually enabled."
 msgstr "Αυτή η δυνατότητα απενεργοποιείται αυτόματα με βάση την εξάρτηση της και δεν μπορεί να ενεργοποιηθεί με μη αυτόματο τρόπο."
 
 #. <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@T["This feature is always enabled and cannot be manually disabled."]">
-#: OrchardCore.Features\Views\Admin\Features.cshtml:147
+#: OrchardCore.Features\Views\Admin\Features.cshtml:171
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "This feature is always enabled and cannot be manually disabled."
 msgstr "Αυτή η δυνατότητα είναι πάντα ενεργοποιημένη και δεν μπορεί να απενεργοποιηθεί με μη αυτόματο τρόπο."
@@ -182,25 +192,25 @@ msgid "Disabling the {0} feature will also disable the following dependent featu
 msgstr "Η απενεργοποίηση της λειτουργίας {0} θα απενεργοποιήσει επίσης τις ακόλουθες εξαρτημένες λειτουργίες: {1} Συνέχεια;"
 
 #. <a id="btn-disable-@Html.GenerateIdFromName(featureId)" asp-action="Disable" asp-route-id="@featureId" asp-route-tenant="@Model.Name" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-url-af="UnsafeUrl RemoveUrl">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:165
+#: OrchardCore.Features\Views\Admin\Features.cshtml:189
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Disable Feature"
 msgstr "Απενεργοποίηση Χαρακτηριστικών"
 
 #. <a id="btn-disable-@Html.GenerateIdFromName(featureId)" asp-action="Disable" asp-route-id="@featureId" asp-route-tenant="@Model.Name" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-url-af="UnsafeUrl RemoveUrl">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:165
+#: OrchardCore.Features\Views\Admin\Features.cshtml:189
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "Yes"
 msgstr "Ναι"
 
 #. <a id="btn-disable-@Html.GenerateIdFromName(featureId)" asp-action="Disable" asp-route-id="@featureId" asp-route-tenant="@Model.Name" class="btn btn-danger btn-sm" data-title="@T["Disable Feature"]" data-message="@confirmationMessage" data-ok-text="@T["Yes"]" data-cancel-text="@T["No"]" data-url-af="UnsafeUrl RemoveUrl">@T["Disable"]</a>
-#: OrchardCore.Features\Views\Admin\Features.cshtml:165
+#: OrchardCore.Features\Views\Admin\Features.cshtml:189
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "No"
 msgstr "'Οχι"
 
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
-#: OrchardCore.Features\Views\Admin\Features.cshtml:177
+#: OrchardCore.Features\Views\Admin\Features.cshtml:201
 msgctxt "OrchardCore.Features.Views.Admin.Features"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
 msgstr "<strong>Δεν υπάρχει τίποτα εδώ!</strong> Η αναζήτηση δεν επέστρεψε κανένα αποτέλεσμα."
