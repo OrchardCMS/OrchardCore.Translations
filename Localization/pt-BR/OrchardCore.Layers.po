@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2026-04-22 13:36\n"
+"PO-Revision-Date: 2026-06-03 19:33\n"
 
 #. .Add(S["Design"], design => design
 #. .Add(S["Design"], design => design
@@ -106,6 +106,12 @@ msgctxt "OrchardCore.Layers.Controllers.LayerRuleController"
 msgid "Condition deleted successfully."
 msgstr ""
 
+#. Category = S["Content"];
+#: OrchardCore.Layers\Deployment\AllLayersDeploymentStep.cs:19
+msgctxt "OrchardCore.Layers.Deployment.AllLayersDeploymentStep"
+msgid "Content"
+msgstr ""
+
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.Title), S["Title is required field."]);
 #: OrchardCore.Layers\Drivers\LayerMetadataWelder.cs:75
 msgctxt "OrchardCore.Layers.Drivers.LayerMetadataWelder"
@@ -197,7 +203,7 @@ msgid "No changes have been made. The following types of conditions cannot be ad
 msgstr ""
 
 #. <h5>@T["All Layers"]</h5>
-#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:3
+#: OrchardCore.Layers\Views\Items\AllLayersDeploymentStep.Edit.cshtml:5
 msgctxt "OrchardCore.Layers.Views.Items.AllLayersDeploymentStep.Edit"
 msgid "All Layers"
 msgstr "Todas as layers"
@@ -232,20 +238,20 @@ msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create Layer"
 msgstr "Criar layer"
 
-#. <label asp-for="Name" class="form-label">@T["Name"]</label>
+#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
 #: OrchardCore.Layers\Views\Admin\Create.cshtml:7
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Name"
 msgstr "Nome"
 
-#. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.Layers\Views\Admin\Create.cshtml:13
+#. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:15
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Description"
 msgstr "Descrição"
 
 #. <input class="btn btn-primary" type="submit" value="@T["Create"]" />
-#: OrchardCore.Layers\Views\Admin\Create.cshtml:18
+#: OrchardCore.Layers\Views\Admin\Create.cshtml:22
 msgctxt "OrchardCore.Layers.Views.Admin.Create"
 msgid "Create"
 msgstr "Criar"
@@ -257,13 +263,13 @@ msgid "Create Rule"
 msgstr ""
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:14
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
 msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
 msgid "Create"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Edit" asp-route-controller="Admin" asp-route-name="@Model.Name">@T["Cancel"]</a>
-#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:15
+#: OrchardCore.Layers\Views\LayerRule\Create.cshtml:16
 msgctxt "OrchardCore.Layers.Views.LayerRule.Create"
 msgid "Cancel"
 msgstr ""
@@ -274,26 +280,26 @@ msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Edit Layer - {0}"
 msgstr "Editar layer - {0}"
 
-#. <label asp-for="Name" class="form-label">@T["Name"]</label>
+#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
 #: OrchardCore.Layers\Views\Admin\Edit.cshtml:18
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Name"
 msgstr "Nome"
 
-#. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:24
+#. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:26
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Description"
 msgstr "Descrição"
 
 #. <div class="d-none" id="ruleOrderErrorMessage" data-message="@T["Error updating rule order"]"></div>
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:31
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:35
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Error updating rule order"
 msgstr ""
 
-#. <input class="btn btn-primary mt-3" type="submit" value="@T["Save"]" />
-#: OrchardCore.Layers\Views\Admin\Edit.cshtml:35
+#. <input class="btn btn-primary" type="submit" value="@T["Save"]" />
+#: OrchardCore.Layers\Views\Admin\Edit.cshtml:41
 msgctxt "OrchardCore.Layers.Views.Admin.Edit"
 msgid "Save"
 msgstr "Salvar"
@@ -305,7 +311,7 @@ msgid "Edit Rule"
 msgstr ""
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:13
+#: OrchardCore.Layers\Views\LayerRule\Edit.cshtml:18
 msgctxt "OrchardCore.Layers.Views.LayerRule.Edit"
 msgid "Save"
 msgstr ""
@@ -389,55 +395,55 @@ msgid "Please <a href=\"{0}\">create a layer</a> before adding Widgets"
 msgstr "Por favor <a href=\"{0}\">crie uma layer</a> antes de adicionar Widgets"
 
 #. <a class="btn btn-primary btn-sm" href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Layers" })">@T["Add"]</a>
-#: OrchardCore.Layers\Views\Admin\Index.cshtml:153
+#: OrchardCore.Layers\Views\Admin\Index.cshtml:154
 msgctxt "OrchardCore.Layers.Views.Admin.Index"
 msgid "Add"
 msgstr "Adicionar"
 
-#. <label asp-for="Title" class="@Orchard.GetLabelClasses()">@T["Title"]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:5
+#. <label asp-for="Title" class="ocat-label">@T["Title"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:4
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "Title"
 msgstr "Título"
 
 #. <label class="form-check-label" asp-for="LayerMetadata.RenderTitle">@T["Render title"]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:16
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:15
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "Render title"
 msgstr "Título de renderização"
 
 #. <span class="hint dashed">@T["If checked, the title will be rendered with the widget."]</span>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:17
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:16
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "If checked, the title will be rendered with the widget."
 msgstr "Se marcado, o título será renderizado com o widget."
 
-#. <label asp-for="LayerMetadata.Layer" class="@Orchard.GetLabelClasses()">@T["The layer"]</label>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:23
+#. <label asp-for="LayerMetadata.Layer" class="ocat-label">@T["The layer"]</label>
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:22
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "The layer"
 msgstr ""
 
 #. <option value="">@T["Select a layer"]</option>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:26
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:25
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "Select a layer"
 msgstr ""
 
 #. <span class="hint">@T["The layer controls the visibility of this widget."]</span>
-#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:33
+#: OrchardCore.Layers\Views\LayerMetadata.Edit.cshtml:32
 msgctxt "OrchardCore.Layers.Views.LayerMetadata.Edit"
 msgid "The layer controls the visibility of this widget."
 msgstr ""
 
-#. <label asp-for="Zones" class="form-label">@T["Available zones for Layers"]</label>
+#. <label asp-for="Zones" class="ocat-label">@T["Available zones for Layers"]</label>
 #: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:4
 msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
 msgid "Available zones for Layers"
 msgstr "Zonas disponíveis para layers"
 
 #. @T["A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render.",
-#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:8
+#: OrchardCore.Layers\Views\LayerSettings.Edit.cshtml:9
 msgctxt "OrchardCore.Layers.Views.LayerSettings.Edit"
 msgid "A comma separated list of values, representing the available zones for <a href=\"{0}\">widgets</a>. Note that you'll need to render these zones in the layout template, as they do not automatically render."
 msgstr "Uma lista de valores separados por vírgula, representando as zonas disponíveis para <a href=\"{0}\">widgets</a>. Observe que você precisará renderizar estas zonas no template do layout, pois elas não renderizarão automaticamente."
