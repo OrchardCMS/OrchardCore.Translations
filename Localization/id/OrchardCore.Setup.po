@@ -10,39 +10,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2025-05-17 00:59\n"
+"PO-Revision-Date: 2026-06-03 19:52\n"
 
 #. ModelState.AddModelError(nameof(model.Password), S["The password is required."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:102
+#: OrchardCore.Setup\Controllers\SetupController.cs:93
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password is required."
 msgstr "Kata sandi wajib diisi."
 
 #. ModelState.AddModelError(nameof(model.PasswordConfirmation), S["The password confirmation doesn't match the password."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:107
+#: OrchardCore.Setup\Controllers\SetupController.cs:98
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The password confirmation doesn't match the password."
 msgstr "Konfirmasi kata sandi tidak cocok."
 
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
 #. ModelState.AddModelError(nameof(model.RecipeName), S["Invalid recipe."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:116
-#: OrchardCore.Setup\Controllers\SetupController.cs:121
+#: OrchardCore.Setup\Controllers\SetupController.cs:107
+#: OrchardCore.Setup\Controllers\SetupController.cs:112
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "Invalid recipe."
 msgstr "Recipe tidak valid."
 
 #. ModelState.AddModelError(nameof(model.Email), S["The email is invalid."]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:127
+#: OrchardCore.Setup\Controllers\SetupController.cs:118
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "The email is invalid."
 msgstr "Format email tidak valid."
 
 #. ModelState.AddModelError(nameof(model.UserName), S["User name '{0}' is invalid, can only contain letters or digits.", model.UserName]);
-#: OrchardCore.Setup\Controllers\SetupController.cs:132
+#: OrchardCore.Setup\Controllers\SetupController.cs:123
 msgctxt "OrchardCore.Setup.Controllers.SetupController"
 msgid "User name '{0}' is invalid, can only contain letters or digits."
 msgstr "Nama pengguna '{0}' tidak valid, hanya boleh berisi huruf atau angka."
+
+#. ModelState.AddModelError(string.Empty, S["An error occurred while running the setup. Try again in a few minutes, and if the issue persists, consult the app's operator."]);
+#: OrchardCore.Setup\Controllers\SetupController.cs:181
+msgctxt "OrchardCore.Setup.Controllers.SetupController"
+msgid "An error occurred while running the setup. Try again in a few minutes, and if the issue persists, consult the app's operator."
+msgstr ""
 
 #. <title>@T["Setup"]</title>
 #: OrchardCore.Setup\Views\_Layout.cshtml:10
@@ -170,115 +176,117 @@ msgid "Determines the default time zone used when displaying and editing dates a
 msgstr "Menentukan zona waktu default untuk tampilan dan pengaturan tanggal dan waktu."
 
 #. <label asp-for="DatabaseProvider" class="form-label">@T["What type of database to use?"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:169
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:176
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "What type of database to use?"
 msgstr "Jenis database yang digunakan?"
 
 #. <option value="@provider.Value" data-connection-string="@provider.HasConnectionString" data-table-prefix="@provider.HasTablePrefix" data-connection-string-sample="@T["The connection string to your database instance, e.g. {0}.", provider.SampleConnectionString]">@provider.Name</option>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:173
+#. <span id="connectionStringHint" class="text-muted form-text small">@(presetProvider?.HasConnectionString == true ? T["The connection string to your database instance, e.g. {0}.", presetProvider.SampleConnectionString] : "")</span>
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:180
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:204
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The connection string to your database instance, e.g. {0}."
 msgstr "Connection string ke database Anda, contoh: {0}."
 
 #. <span class="text-muted form-text small">@T["The database is used to store the site's configuration and its contents."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:177
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:184
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The database is used to store the site's configuration and its contents."
 msgstr "Database digunakan untuk menyimpan konfigurasi dan konten situs."
 
 #. <label asp-for="TablePrefix" class="form-label">@T["Table Prefix"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:181
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:189
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Table Prefix"
 msgstr "Prefiks Tabel"
 
 #. <span class="text-muted form-text small">@T["You can specify a table prefix if you intend to reuse the same database for multiple sites."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:184
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:192
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "You can specify a table prefix if you intend to reuse the same database for multiple sites."
 msgstr "Tentukan prefiks tabel jika ingin menggunakan database yang sama untuk beberapa situs."
 
 #. <label asp-for="ConnectionString" class="form-label">@T["Connection String"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:190
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:198
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Connection String"
 msgstr "Connection String"
 
 #. <button type="button" id="toggleConnectionString" class="btn btn-secondary" tabindex="-1" aria-hidden="true" title="@T["Show/hide connection string"]"><i class="icon fa fa-eye"></i></button>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:193
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:201
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Show/hide connection string"
 msgstr "Tampilkan/sembunyikan connection string"
 
 #. <label asp-for="Schema" class="form-label">@T["Table Schema"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:202
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:210
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Table Schema"
 msgstr "Skema Tabel"
 
 #. <div class="text-muted form-text small">@T["When left blank, the default value on the server will be used."] @T["For example, '{0}' for SQL Server.", "dbo"]</div>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:205
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:213
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "When left blank, the default value on the server will be used."
 msgstr "Jika kosong, nilai default server akan digunakan."
 
 #. <div class="text-muted form-text small">@T["When left blank, the default value on the server will be used."] @T["For example, '{0}' for SQL Server.", "dbo"]</div>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:205
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:213
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "For example, '{0}' for SQL Server."
 msgstr "Contoh: '{0}' untuk SQL Server."
 
 #. <legend>@T["Super User"]</legend>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:210
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:218
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Super User"
 msgstr "Pengguna Super"
 
 #. <span class="text-muted form-text small">@T["The super user has all the rights. It should be used only during Setup and for disaster recovery."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:211
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:219
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The super user has all the rights. It should be used only during Setup and for disaster recovery."
 msgstr "Pengguna super memiliki semua hak akses. Hanya gunakan selama pengaturan awal dan pemulihan bencana."
 
 #. <label asp-for="UserName" class="form-label">@T["User Name"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:214
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:222
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "User Name"
 msgstr "Nama Pengguna"
 
 #. <label asp-for="Email" class="form-label">@T["Email"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:219
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:227
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Email"
 msgstr "Email"
 
 #. <span asp-validation-for="Email" class="text-danger">@T["The email is invalid."]</span>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:221
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:229
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "The email is invalid."
 msgstr "Format email tidak valid."
 
 #. <label asp-for="Password" class="form-label">@T["Password"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:226
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:234
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password"
 msgstr "Kata Sandi"
 
 #. <input asp-for="Password" class="form-control" autocomplete="new-password" data-strength="@(passwordOptionsJSON)" data-bs-toggle="popover" data-bs-placement="top" data-trigger="focus" data-title="@T["Password strength"]" data-bs-content="@passwordTooltip" required pattern="@passwordRegex" />
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:228
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:236
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password strength"
 msgstr "Kekuatan kata sandi"
 
 #. <label asp-for="PasswordConfirmation" class="form-label">@T["Password Confirmation"]</label>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:236
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:244
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Password Confirmation"
 msgstr "Konfirmasi Kata Sandi"
 
 #. <button class="btn btn-primary" type="submit" id="SubmitButton">@T["Finish Setup"]</button>
-#: OrchardCore.Setup\Views\Setup\Index.cshtml:248
+#: OrchardCore.Setup\Views\Setup\Index.cshtml:256
 msgctxt "OrchardCore.Setup.Views.Setup.Index"
 msgid "Finish Setup"
 msgstr "Selesaikan Pengaturan"

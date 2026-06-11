@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2026-04-22 13:54\n"
+"PO-Revision-Date: 2026-06-03 19:56\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Templates\AdminMenu.cs:18
@@ -80,13 +80,25 @@ msgstr "已存在具有相同名称的模板。"
 #: OrchardCore.Templates\Controllers\TemplateController.cs:393
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "If you left the content empty because you want to hide the shape, use <a href=\"{0}\">Placements</a> instead. See <a href=\"{1}\">the docs</a> for more info about this feature."
-msgstr ""
+msgstr "如果您因为想要隐藏形状而将内容留空，请改用 <a href=\"{0}\">布局</a>。有关此功能的更多信息，请参见 <a href=\"{1}\">文档</a>。"
 
 #. ModelState.AddModelError(nameof(TemplateViewModel.Content), S["The content is mandatory."]);
 #: OrchardCore.Templates\Controllers\TemplateController.cs:395
 msgctxt "OrchardCore.Templates.Controllers.TemplateController"
 msgid "The content is mandatory."
 msgstr "内容为必填项。"
+
+#. Category = S["Development"];
+#: OrchardCore.Templates\Deployment\AllAdminTemplatesDeploymentStep.cs:19
+msgctxt "OrchardCore.Templates.Deployment.AllAdminTemplatesDeploymentStep"
+msgid "Development"
+msgstr ""
+
+#. Category = S["Development"];
+#: OrchardCore.Templates\Deployment\AllTemplatesDeploymentStep.cs:19
+msgctxt "OrchardCore.Templates.Deployment.AllTemplatesDeploymentStep"
+msgid "Development"
+msgstr ""
 
 #. Description = S["Template for a {0} part in detail views", contentPartDefinition.DisplayName()],
 #: OrchardCore.Templates\Settings\TemplateContentPartDefinitionDriver.cs:28
@@ -125,19 +137,19 @@ msgid "Template for the {0} part in a {1} type in summary views"
 msgstr "摘要视图中 {1} 类型 {0} 部件的模板"
 
 #. <h5>@T["All Admin Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:3
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "All Admin Templates"
 msgstr "所有管理模板"
 
 #. <label class="form-check-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:7
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "Export templates as files"
 msgstr "导出模板为文件"
 
 #. <span class="hint dashed">@T["Check if the templates should be exported as files instead of inline."]</span>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:8
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "Check if the templates should be exported as files instead of inline."
 msgstr "检查模板是否应导出为文件而不是内联。"
@@ -167,19 +179,19 @@ msgid "Exports admin templates."
 msgstr "导出管理模板。"
 
 #. <h5>@T["All Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:3
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "All Templates"
 msgstr "所有模板"
 
 #. <label class="form-check-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:7
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "Export templates as files"
 msgstr "导出模板为文件"
 
 #. <span class="hint dashed">@T["Check if the templates should be exported as files instead of inline."]</span>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:8
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "Check if the templates should be exported as files instead of inline."
 msgstr "检查模板是否应导出为文件而不是内联。"
@@ -244,38 +256,38 @@ msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Preview"
 msgstr "预览"
 
-#. <label asp-for="Name" class="form-label">@T["Name"]</label>
+#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
 #: OrchardCore.Templates\Views\Template\Create.cshtml:38
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Name"
 msgstr "名称"
 
 #. <span class="hint">@T["The name of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:41
+#: OrchardCore.Templates\Views\Template\Create.cshtml:42
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The name of the template."
 msgstr "模板的名称。"
 
-#. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:45
+#. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:47
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Description"
 msgstr "描述"
 
 #. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:47
+#: OrchardCore.Templates\Views\Template\Create.cshtml:50
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The description of the template."
 msgstr "模板的说明。"
 
-#. <label asp-for="Content" class="form-label">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:51
+#. <label asp-for="Content" class="ocat-label">@T["Content"]</label>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:55
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Content"
 msgstr "内容"
 
 #. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:55
+#: OrchardCore.Templates\Views\Template\Create.cshtml:60
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The Liquid template."
 msgstr "Liquid 模板。"
@@ -322,58 +334,41 @@ msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Preview"
 msgstr "预览"
 
-#. <label asp-for="Name" class="form-label">@T["Name"]</label>
+#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
 #: OrchardCore.Templates\Views\Template\Edit.cshtml:46
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Name"
 msgstr "名称"
 
 #. <span class="hint">@T["The name of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:49
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:50
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The name of the template."
 msgstr "模板的名称。"
 
-#. <label asp-for="Description" class="form-label">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:53
+#. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:55
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Description"
 msgstr "描述"
 
 #. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:55
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:58
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The description of the template."
 msgstr "模板描述。"
 
-#. <label asp-for="Content" class="form-label">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:59
+#. <label asp-for="Content" class="ocat-label">@T["Content"]</label>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:63
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Content"
 msgstr "内容"
 
 #. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:63
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:68
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The Liquid template."
 msgstr "Liquid 模板。"
-
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:0
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Template Preview"
-msgstr "模板预览"
-
-#. <span>@T["Preview Disconnected"] </span>
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:15
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Preview Disconnected"
-msgstr "预览断开连接"
-
-#. <p>@T["Preview Error"] </p>
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:20
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Preview Error"
-msgstr "预览错误"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Admin Templates"])</h1></zone>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:10
@@ -410,7 +405,7 @@ msgstr "选择全部"
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "{0} item"
 msgid_plural "{0} items"
-msgstr[0] ""
+msgstr[0] "{0} 个"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Templates.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Templates\Views\Template\Index.cshtml:48
@@ -474,6 +469,23 @@ msgstr "查看文档"
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "selected"
 msgstr "已选择"
+
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:0
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Template Preview"
+msgstr "模板预览"
+
+#. <span>@T["Preview Disconnected"] </span>
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:15
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Preview Disconnected"
+msgstr "预览断开连接"
+
+#. <p>@T["Preview Error"] </p>
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:20
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Preview Error"
+msgstr "预览错误"
 
 #. @T["Edit templates"]
 #: OrchardCore.Templates\Views\TemplateSettings.cshtml:5

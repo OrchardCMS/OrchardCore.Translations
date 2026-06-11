@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2026-04-22 13:44\n"
+"PO-Revision-Date: 2026-06-03 19:43\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Placements\AdminMenu.cs:18
@@ -36,7 +36,7 @@ msgstr "删除"
 #: OrchardCore.Placements\Controllers\AdminController.cs:193
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "The Shape type can't be empty."
-msgstr ""
+msgstr "形状类型不能为空。"
 
 #. await _notifier.WarningAsync(H["Placement rules for \"{0}\" already exists. Please edit existing rule.", viewModel.ShapeType]);
 #: OrchardCore.Placements\Controllers\AdminController.cs:204
@@ -48,7 +48,7 @@ msgstr "{0} 的布置规则已经存在。请编辑现有的规则。"
 #: OrchardCore.Placements\Controllers\AdminController.cs:218
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "A valid placement must contain either <b>place</b>, <b>shape</b>, <b>wrappers</b> or <b>alternates</b>. Please correct the placements at positions: {0}."
-msgstr ""
+msgstr "有效的位置必须包含 <b>位置</b>, <b>形状</b>, <b>包装器</b> 或 <b>候补</b>请更正位置的位置： {0}。"
 
 #. await _notifier.SuccessAsync(H["The \"{0}\" placement have been saved.", viewModel.ShapeType]);
 #: OrchardCore.Placements\Controllers\AdminController.cs:228
@@ -81,6 +81,12 @@ msgstr "保存位置时出错。"
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "Placements successfully removed."
 msgstr "位置已成功删除。"
+
+#. Category = S["Development"];
+#: OrchardCore.Placements\Deployment\PlacementsDeploymentStep.cs:19
+msgctxt "OrchardCore.Placements.Deployment.PlacementsDeploymentStep"
+msgid "Development"
+msgstr ""
 
 #. Description = S["Placement for a {0} part", displayName],
 #: OrchardCore.Placements\Settings\PlacementContentPartDefinitionDriver.cs:30
@@ -166,50 +172,50 @@ msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Edit Placement"
 msgstr "编辑位置"
 
-#. <label asp-for="ShapeType" class="form-label">@T["Shape type"]</label>
+#. <label asp-for="ShapeType" class="ocat-label">@T["Shape type"]</label>
 #: OrchardCore.Placements\Views\Admin\Edit.cshtml:22
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Shape type"
 msgstr "形状类型"
 
 #. <span class="hint">@T["The type of the shape."]</span>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:25
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:26
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "The type of the shape."
 msgstr "形状的类型。"
 
-#. <label asp-for="Nodes" class="form-label">@T["Placement rules"]</label>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:29
+#. <label asp-for="Nodes" class="ocat-label">@T["Placement rules"]</label>
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:31
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Placement rules"
 msgstr "位置规则"
 
 #. <button type="submit" name="submit" class="btn btn-primary">@T["Save"]</button>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:35
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:40
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Save"
 msgstr "保存"
 
 #. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:37
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:42
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Toggle Dropdown"
 msgstr "切换下拉列表"
 
 #. <button class="dropdown-item" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:40
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:45
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "and continue"
 msgstr "并继续"
 
 #. <a asp-route-action="Delete" asp-route-area="OrchardCore.Placements" asp-route-shapeType="@Model.ShapeType" class="btn btn-danger" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Delete"]</a>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:46
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:51
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Delete"
 msgstr "删除"
 
 #. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:49
+#: OrchardCore.Placements\Views\Admin\Edit.cshtml:54
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Cancel"
 msgstr "取消"
@@ -243,7 +249,7 @@ msgstr "选择全部"
 msgctxt "OrchardCore.Placements.Views.Admin.Index"
 msgid "{0} item"
 msgid_plural "{0} items"
-msgstr[0] ""
+msgstr[0] "{0} 个"
 
 #. <label id="items" for="select-all">@T.Plural(Model.ShapePlacements.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Placements\Views\Admin\Index.cshtml:40
@@ -303,7 +309,7 @@ msgid "selected"
 msgstr "已选择"
 
 #. <h5>@T["Placements"]</h5>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Edit.cshtml:3
+#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Edit.cshtml:5
 msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Edit"
 msgid "Placements"
 msgstr "位置"

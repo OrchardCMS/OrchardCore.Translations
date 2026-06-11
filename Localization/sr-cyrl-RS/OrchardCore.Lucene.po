@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Cyrillic\n"
 "Language: sr_cyrl_RS\n"
-"PO-Revision-Date: 2026-04-22 14:21\n"
+"PO-Revision-Date: 2026-06-03 20:28\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Lucene\AdminMenu.cs:18
@@ -38,6 +38,24 @@ msgstr ""
 #: OrchardCore.Lucene\Controllers\AdminController.cs:199
 msgctxt "OrchardCore.Lucene.Controllers.AdminController"
 msgid "Invalid query: {0}"
+msgstr ""
+
+#. Category = S["Search"];
+#: OrchardCore.Lucene\Deployment\LuceneIndexDeploymentStep.cs:19
+msgctxt "OrchardCore.Lucene.Deployment.LuceneIndexDeploymentStep"
+msgid "Search"
+msgstr ""
+
+#. Category = S["Search"];
+#: OrchardCore.Lucene\Deployment\LuceneIndexRebuildDeploymentStep.cs:19
+msgctxt "OrchardCore.Lucene.Deployment.LuceneIndexRebuildDeploymentStep"
+msgid "Search"
+msgstr ""
+
+#. Category = S["Search"];
+#: OrchardCore.Lucene\Deployment\LuceneIndexResetDeploymentStep.cs:19
+msgctxt "OrchardCore.Lucene.Deployment.LuceneIndexResetDeploymentStep"
+msgid "Search"
 msgstr ""
 
 #. new SelectListItem(S["Lucene 4.8"], nameof(LuceneVersion.LUCENE_48), queryMetadata.DefaultVersion == LuceneVersion.LUCENE_48),
@@ -98,68 +116,68 @@ msgctxt "OrchardCore.Lucene.ViewModels.AdminQueryViewModel"
 msgid "The Index field is required."
 msgstr ""
 
-#. <label asp-for="Index" class="form-label">@T["Index"]</label>
-#: OrchardCore.Lucene\Views\ContentPickerFieldLuceneEditorSettings.Edit.cshtml:6
+#. <label asp-for="Index" class="ocat-label">@T["Index"]</label>
+#: OrchardCore.Lucene\Views\ContentPickerFieldLuceneEditorSettings.Edit.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.ContentPickerFieldLuceneEditorSettings.Edit"
 msgid "Index"
 msgstr ""
 
 #. <span class="hint">@T["The Lucene index to query for content items"]</span>
-#: OrchardCore.Lucene\Views\ContentPickerFieldLuceneEditorSettings.Edit.cshtml:14
+#: OrchardCore.Lucene\Views\ContentPickerFieldLuceneEditorSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Lucene.Views.ContentPickerFieldLuceneEditorSettings.Edit"
 msgid "The Lucene index to query for content items"
 msgstr ""
 
 #. <h4>Lucene @T["Index settings"]</h4>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:3
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Index settings"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="LuceneContentIndexSettings.Included">@T["Include this element in the index"]</label>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:8
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:13
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Include this element in the index"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to include the value of this element in the index."]</span>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:9
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:14
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Check to include the value of this element in the index."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="LuceneContentIndexSettings.Keyword">@T["Keyword"]</label>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:14
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Keyword"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to index as a keyword value (indexed as a single token)."]</span>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:15
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:20
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Check to index as a keyword value (indexed as a single token)."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="LuceneContentIndexSettings.Stored">@T["Stored"]</label>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:19
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:24
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Stored"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to be able to retrieve the original value from the index."]</span>
-#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:20
+#: OrchardCore.Lucene\Views\LuceneContentIndexSettings.Edit.cshtml:25
 msgctxt "OrchardCore.Lucene.Views.LuceneContentIndexSettings.Edit"
 msgid "Check to be able to retrieve the original value from the index."
 msgstr ""
 
 #. <h5>@T["Lucene Search Indexes"]</h5>
-#: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:8
+#: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:10
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "Lucene Search Indexes"
 msgstr ""
 
-#. @T["Include all search indexes."]
-#: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:16
+#. <label class="form-check-label" asp-for="IncludeAll">@T["Include all search indexes."]</label>
+#: OrchardCore.Lucene\Views\Items\LuceneIndexDeploymentStep.Fields.Edit.cshtml:18
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexDeploymentStep.Fields.Edit"
 msgid "Include all search indexes."
 msgstr ""
@@ -206,32 +224,32 @@ msgctxt "OrchardCore.Lucene.Views.LuceneIndexProfile.ActionsMenuItems.SummaryAdm
 msgid "Query Index"
 msgstr ""
 
-#. <label asp-for="AnalyzerName" class="form-label">@T["Analyzer"]</label>
+#. <label asp-for="AnalyzerName" class="ocat-label">@T["Analyzer"]</label>
 #: OrchardCore.Lucene\Views\LuceneIndexProfile.Edit.cshtml:4
 msgctxt "OrchardCore.Lucene.Views.LuceneIndexProfile.Edit"
 msgid "Analyzer"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="StoreSourceData">@T["Store Source Data"]</label>
-#: OrchardCore.Lucene\Views\LuceneIndexProfile.Edit.cshtml:12
+#: OrchardCore.Lucene\Views\LuceneIndexProfile.Edit.cshtml:15
 msgctxt "OrchardCore.Lucene.Views.LuceneIndexProfile.Edit"
 msgid "Store Source Data"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to store the fields in the index for future retrieval."]</span>
-#: OrchardCore.Lucene\Views\LuceneIndexProfile.Edit.cshtml:13
+#: OrchardCore.Lucene\Views\LuceneIndexProfile.Edit.cshtml:16
 msgctxt "OrchardCore.Lucene.Views.LuceneIndexProfile.Edit"
 msgid "Check to store the fields in the index for future retrieval."
 msgstr ""
 
 #. <h5>@T["Rebuild Lucene Search Indices"]</h5>
-#: OrchardCore.Lucene\Views\Items\LuceneIndexRebuildDeploymentStep.Fields.Edit.cshtml:3
+#: OrchardCore.Lucene\Views\Items\LuceneIndexRebuildDeploymentStep.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexRebuildDeploymentStep.Fields.Edit"
 msgid "Rebuild Lucene Search Indices"
 msgstr ""
 
-#. @T["Include all Lucene search indices."]
-#: OrchardCore.Lucene\Views\Items\LuceneIndexRebuildDeploymentStep.Fields.Edit.cshtml:11
+#. <label class="form-check-label" asp-for="IncludeAll">@T["Include all Lucene search indices."]</label>
+#: OrchardCore.Lucene\Views\Items\LuceneIndexRebuildDeploymentStep.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexRebuildDeploymentStep.Fields.Edit"
 msgid "Include all Lucene search indices."
 msgstr ""
@@ -273,13 +291,13 @@ msgid "Rebuild all or specified Lucene search indices."
 msgstr ""
 
 #. <h5>@T["Reset Lucene Search Indices"]</h5>
-#: OrchardCore.Lucene\Views\Items\LuceneIndexResetDeploymentStep.Fields.Edit.cshtml:3
+#: OrchardCore.Lucene\Views\Items\LuceneIndexResetDeploymentStep.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexResetDeploymentStep.Fields.Edit"
 msgid "Reset Lucene Search Indices"
 msgstr ""
 
-#. @T["Include all Lucene search indices."]
-#: OrchardCore.Lucene\Views\Items\LuceneIndexResetDeploymentStep.Fields.Edit.cshtml:11
+#. <label class="form-check-label" asp-for="IncludeAll">@T["Include all Lucene search indices."]</label>
+#: OrchardCore.Lucene\Views\Items\LuceneIndexResetDeploymentStep.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Lucene.Views.Items.LuceneIndexResetDeploymentStep.Fields.Edit"
 msgid "Include all Lucene search indices."
 msgstr ""
@@ -326,44 +344,44 @@ msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Buttons.SummaryAdmin"
 msgid "Run"
 msgstr ""
 
-#. <label asp-for="Index" class="form-label">@T["Index"]</label>
+#. <label asp-for="Index" class="ocat-label">@T["Index"]</label>
 #: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:8
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Index"
 msgstr ""
 
 #. <option value="">@T["Select an index"]</option>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:10
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:11
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Select an index"
 msgstr ""
 
 #. <span class="hint">@T["The Lucene index to search on"]</span>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:12
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:13
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "The Lucene index to search on"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="ReturnContentItems">@T["Return Content Items"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:18
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:21
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Return Content Items"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to return the corresponding content items."]</span>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:19
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:22
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Check to return the corresponding content items."
 msgstr ""
 
-#. <label asp-for="Query" class="form-label">@T["Query"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:24
+#. <label asp-for="Query" class="ocat-label">@T["Query"]</label>
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:28
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "Query"
 msgstr ""
 
 #. <span class="hint">@T["The search query uses the Lucene format. Some documentation can be found <a target=\"_blank\" href=\"{0}\">here</a>.", "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html"]</span>
-#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:26
+#: OrchardCore.Lucene\Views\LuceneQuery.Edit.cshtml:31
 msgctxt "OrchardCore.Lucene.Views.LuceneQuery.Edit"
 msgid "The search query uses the Lucene format. Some documentation can be found <a target=\"_blank\" href=\"{0}\">here</a>."
 msgstr ""
@@ -374,44 +392,44 @@ msgctxt "OrchardCore.Lucene.Views.LuceneQuery.SummaryAdmin"
 msgid "Lucene query"
 msgstr ""
 
-#. <h4 class="mt-4">@T["Default Query Settings"]</h4>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:5
+#. <h4 class="mt-4 mb-0">@T["Default Query Settings"]</h4>
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:7
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Default Query Settings"
 msgstr ""
 
-#. <label asp-for="QueryAnalyzerName" class="form-label">@T["Query analyzer"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:8
+#. <label asp-for="QueryAnalyzerName" class="ocat-label">@T["Query analyzer"]</label>
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:12
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Query analyzer"
 msgstr ""
 
-#. <label asp-for="DefaultVersion" class="form-label">@T["Version"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:14
+#. <label asp-for="DefaultVersion" class="ocat-label">@T["Version"]</label>
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:20
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Version"
 msgstr ""
 
 #. <label class="form-check-label" asp-for="AllowLuceneQueries">@T["Allow Lucene queries"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:22
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:31
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Allow Lucene queries"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check to allow Lucene queries."]</span>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:23
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:32
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Check to allow Lucene queries."
 msgstr ""
 
-#. <label asp-for="DefaultSearchFields" class="form-label">@T["Query field names"]</label>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:28
+#. <label asp-for="DefaultSearchFields" class="ocat-label">@T["Query field names"]</label>
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:38
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "Query field names"
 msgstr ""
 
 #. <span class="hint">@T["The fields to use for query. Leave it blank to query all fields."]</span>
-#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:50
+#: OrchardCore.Lucene\Views\LuceneQuerySettings.Edit.cshtml:61
 msgctxt "OrchardCore.Lucene.Views.LuceneQuerySettings.Edit"
 msgid "The fields to use for query. Leave it blank to query all fields."
 msgstr ""
@@ -440,74 +458,74 @@ msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Lucene Query"
 msgstr ""
 
-#. <label asp-for="Id" class="form-label">@T["Index"]</label>
+#. <label asp-for="Id" class="ocat-label">@T["Index"]</label>
 #: OrchardCore.Lucene\Views\Admin\Query.cshtml:18
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Index"
 msgstr ""
 
 #. <option value="">@T["Select an index"]</option>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:20
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:21
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Select an index"
 msgstr ""
 
 #. <span class="hint">@T["The Lucene index to search on"]</span>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:22
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:23
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "The Lucene index to search on"
 msgstr ""
 
-#. <label asp-for="DecodedQuery" class="form-label">@T["Query"]</label>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:26
+#. <label asp-for="DecodedQuery" class="ocat-label">@T["Query"]</label>
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:28
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Query"
 msgstr ""
 
 #. <span class="hint">@T["You can use the <a href=\"{0}\">Match All query</a> to search all documents.", Html.Raw(Url.Action("Query", "Admin", new { area = "OrchardCore.Lucene", query = Model.MatchAllQuery, id = Model.Id }))]</span>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:28
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:31
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "You can use the <a href=\"{0}\">Match All query</a> to search all documents."
 msgstr ""
 
 #. <span class="hint">@T["The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"]</span>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:29
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:32
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "The search query uses the Elasticsearch format. Some documentation can be found here <a target=\"_blank\" href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html\">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html</a>"
 msgstr ""
 
-#. <label asp-for="Parameters" class="form-label">@T["Parameters"]</label>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:33
+#. <label asp-for="Parameters" class="ocat-label">@T["Parameters"]</label>
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:37
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Parameters"
 msgstr ""
 
 #. <span class="hint">@T["An optional Json object containing the parameter values for this query."]</span>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:35
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:40
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "An optional Json object containing the parameter values for this query."
 msgstr ""
 
 #. <button type="submit" class="btn btn-primary">@T["Run Query"]</button>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:39
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:46
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Run Query"
 msgstr ""
 
 #. <p><span class="text-muted">@T["Found {0} result(s) in {1} ms", Model.Count.ToString(), Model.Elapsed.TotalMilliseconds.ToString()]</span></p>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:46
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:54
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Found {0} result(s) in {1} ms"
 msgstr ""
 
 #. <a href="@Url.Action("Create", "Admin", new { area = "OrchardCore.Queries", id = "Lucene", query = Model.DecodedQuery })" class="btn btn-secondary">@T["Save Query"]</a>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:55
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:64
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "Save Query"
 msgstr ""
 
 #. <p><span class="text-muted">@T["The results displayed are coming from the stored fields in Lucene."]</span></p>
-#: OrchardCore.Lucene\Views\Admin\Query.cshtml:87
+#: OrchardCore.Lucene\Views\Admin\Query.cshtml:97
 msgctxt "OrchardCore.Lucene.Views.Admin.Query"
 msgid "The results displayed are coming from the stored fields in Lucene."
 msgstr ""
