@@ -4,8 +4,14 @@ name: Publish Stable Packages
 
 on:
   push:
-    tags: 
+    tags:
       - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version to publish (e.g. 3.0.0)'
+        required: true
+        type: string
 
 jobs:
   build:
@@ -21,8 +27,12 @@ jobs:
 
     - name: Build version number
       run: |
-        arrTag=(${GITHUB_REF//\// })
-        VERSION="${arrTag[2]}"
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          VERSION="${{ github.event.inputs.version }}"
+        else
+          arrTag=(${GITHUB_REF//\// })
+          VERSION="${arrTag[2]}"
+        fi
         VERSION="${VERSION//v}"
         echo "$VERSION"
         echo "nugetVersion=$VERSION" >> $GITHUB_ENV
