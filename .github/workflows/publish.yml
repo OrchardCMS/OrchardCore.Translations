@@ -14,7 +14,11 @@ on:
         type: string
 
 jobs:
-  build:
+  publish:
+
+    name: 📦 Publish to nuget
+    permissions:
+      id-token: write # Enables OIDC token generation
 
     runs-on: ubuntu-latest
     env:
@@ -23,7 +27,7 @@ jobs:
 
     steps:
     - name: Checkout source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Build version number
       run: |
@@ -37,9 +41,15 @@ jobs:
         echo "$VERSION"
         echo "nugetVersion=$VERSION" >> $GITHUB_ENV
         
+    - name: 🔑 Nuget trusted publishing
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: Orchard
+        
     - name: Pack
       run: .\pack.ps1
       shell: pwsh
 
     - name: Push with dotnet
-      run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
+      run: dotnet nuget push **/*.nupkg --api-key ${{steps.login.outputs.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
