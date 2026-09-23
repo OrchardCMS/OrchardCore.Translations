@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2026-06-03 19:44\n"
+"PO-Revision-Date: 2026-07-07 11:39\n"
 
 #. .Add(S["Search"], NavigationConstants.AdminMenuSearchPosition, search => search
 #: OrchardCore.Queries\AdminMenu.cs:18
@@ -30,7 +30,7 @@ msgstr "Queries"
 #: OrchardCore.Queries\AdminMenu.cs:22
 msgctxt "OrchardCore.Queries.AdminMenu"
 msgid "All Queries"
-msgstr ""
+msgstr "Tutte Le Query"
 
 #. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
 #: OrchardCore.Queries\Controllers\AdminController.cs:102
@@ -66,13 +66,13 @@ msgstr "Query rimossa con successo."
 #: OrchardCore.Queries\Deployment\AllQueriesDeploymentStep.cs:19
 msgctxt "OrchardCore.Queries.Deployment.AllQueriesDeploymentStep"
 msgid "Content Management"
-msgstr ""
+msgstr "Gestione Contenuti"
 
 #. Category = S["Content Management"];
 #: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStep.cs:20
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStep"
 msgid "Content Management"
-msgstr ""
+msgstr "Gestione Contenuti"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(step.QueryName), S["Your Query is not returning content items."]);
 #: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:57
@@ -172,7 +172,7 @@ msgstr "Il campo query è obbligatorio"
 #: OrchardCore.Queries\Sql\Drivers\SqlQueryDisplayDriver.cs:103
 msgctxt "OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver"
 msgid "Potentially unsafe Liquid output expressions ('{{ ... }}') were detected in this SQL query. Avoid injecting user input with Liquid output and use SQL parameters instead."
-msgstr ""
+msgstr "In questa query SQL sono state rilevate espressioni di Liquid potenzialmente non sicure ('{{ ... }}'). Si consiglia di evitare di usare direttamente l'input dell'utente nella sintassi Liquid: utilizzare invece i parametri SQL."
 
 #. Description = S["Represents the {0} Query : {1}", query.Source, query.Name],
 #. Description = S["Represents the {0} Query : {1}", query.Source, query.Name],
@@ -180,7 +180,7 @@ msgstr ""
 #: OrchardCore.Queries\Sql\GraphQL\SqlQueryFieldTypeProvider.cs:198
 msgctxt "OrchardCore.Queries.Sql.GraphQL.Queries.SqlQueryFieldTypeProvider"
 msgid "Represents the {0} Query : {1}"
-msgstr ""
+msgstr "Rappresenta {0} Query : {1}"
 
 #. <h5>@T["All Queries"]</h5>
 #: OrchardCore.Queries\Views\Items\AllQueriesDeploymentStep.Edit.cshtml:5
@@ -253,8 +253,8 @@ msgstr "Seleziona tutto"
 msgctxt "OrchardCore.Queries.Views.Admin.Index"
 msgid "{0} item"
 msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} elemento"
+msgstr[1] "{0} elementi"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Queries.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
 #: OrchardCore.Queries\Views\Admin\Index.cshtml:39
@@ -572,13 +572,13 @@ msgstr "Quando selezionato, il risultato deve essere un elenco di id documento."
 #: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:26
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "SQL queries are Liquid templates. Never inject user input with Liquid output expressions like '{{ input }}'. Use SQL parameters (for example '@name' or '@name:default') passed in by the caller for user-provided values."
-msgstr ""
+msgstr "Le query SQL sono supportano sintassi Liquid. Si raccomanda attenzione nell'uso diretto dell'input dell'utente con sintassi Liquid come '{{ input }}': questo comporta un rischio di SQL injection. Utilizzare i parametri SQL (ad esempio '@name' o '@name:default')."
 
 #. @T["Potentially unsafe Liquid output expressions ('{{ ... }}') were detected in this query template. This can lead to SQL injection if untrusted input is rendered directly into SQL."]
 #: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:36
 msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
 msgid "Potentially unsafe Liquid output expressions ('{{ ... }}') were detected in this query template. This can lead to SQL injection if untrusted input is rendered directly into SQL."
-msgstr ""
+msgstr "In questo modello di query è stata rilevata una sintassi Liquid potenzialmente non sicura ('{{ ... }}'). Questo può portare a SQL injection dato che l'input viene reso direttamente nella query SQL."
 
 #. <label asp-for="Query" class="ocat-label">@T["Query"]</label>
 #: OrchardCore.Queries\Views\SqlQuery.Edit.cshtml:43
