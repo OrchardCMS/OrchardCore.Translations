@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2026-06-03 19:56\n"
+"PO-Revision-Date: 2026-10-02 11:17\n"
 
 #. .Add(S["Design"], design => design
 #: OrchardCore.Templates\AdminMenu.cs:18
@@ -94,10 +94,22 @@ msgctxt "OrchardCore.Templates.Deployment.AllAdminTemplatesDeploymentStep"
 msgid "Development"
 msgstr ""
 
+#. Title = S["All Admin Templates"];
+#: OrchardCore.Templates\Deployment\AllAdminTemplatesDeploymentStep.cs:20
+msgctxt "OrchardCore.Templates.Deployment.AllAdminTemplatesDeploymentStep"
+msgid "All Admin Templates"
+msgstr ""
+
 #. Category = S["Development"];
 #: OrchardCore.Templates\Deployment\AllTemplatesDeploymentStep.cs:19
 msgctxt "OrchardCore.Templates.Deployment.AllTemplatesDeploymentStep"
 msgid "Development"
+msgstr ""
+
+#. Title = S["All Templates"];
+#: OrchardCore.Templates\Deployment\AllTemplatesDeploymentStep.cs:20
+msgctxt "OrchardCore.Templates.Deployment.AllTemplatesDeploymentStep"
+msgid "All Templates"
 msgstr ""
 
 #. Description = S["Template for a {0} part in detail views", contentPartDefinition.DisplayName()],
@@ -136,20 +148,14 @@ msgctxt "OrchardCore.Templates.Settings.TemplateContentTypePartDefinitionDriver"
 msgid "Template for the {0} part in a {1} type in summary views"
 msgstr "Szablon dla {0} części w typie {1} w widoku podsumowania"
 
-#. <h5>@T["All Admin Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
-msgid "All Admin Templates"
-msgstr ""
-
 #. <label class="form-check-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:13
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "Export templates as files"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check if the templates should be exported as files instead of inline."]</span>
-#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:15
+#: OrchardCore.Templates\Views\Items\AllAdminTemplatesDeploymentStep.Fields.Edit.cshtml:10
 msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Fields.Edit"
 msgid "Check if the templates should be exported as files instead of inline."
 msgstr ""
@@ -178,20 +184,14 @@ msgctxt "OrchardCore.Templates.Views.Items.AllAdminTemplatesDeploymentStep.Thumb
 msgid "Exports admin templates."
 msgstr "Eksportuje szablony administratora."
 
-#. <h5>@T["All Templates"]</h5>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
-msgid "All Templates"
-msgstr ""
-
 #. <label class="form-check-label" asp-for="ExportAsFiles">@T["Export templates as files"]</label>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:13
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:8
 msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "Export templates as files"
 msgstr ""
 
 #. <span class="hint dashed">@T["Check if the templates should be exported as files instead of inline."]</span>
-#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:15
+#: OrchardCore.Templates\Views\Items\AllTemplatesDeploymentStep.Fields.Edit.cshtml:10
 msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Fields.Edit"
 msgid "Check if the templates should be exported as files instead of inline."
 msgstr ""
@@ -220,188 +220,237 @@ msgctxt "OrchardCore.Templates.Views.Items.AllTemplatesDeploymentStep.Thumbnail"
 msgid "Exports templates."
 msgstr "Eksport szablonów."
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Template"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:7
+#. <breadcrumb name="TemplatesCreate" title="@T["Create Template"]">
+#: OrchardCore.Templates\Views\Template\Create.cshtml:8
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Create Template"
 msgstr "Utwórz szablon"
 
+#. <breadcrumb-item id="Templates" action="@(Model.AdminTemplates ? "Admin" : "Index")" controller="Template" area="OrchardCore.Templates" permission="@Permissions.ManageTemplates.Name">@(Model.AdminTemplates ? T["Admin Templates"] : T["Templates"])</breadcrumb-item>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "Admin Templates"
+msgstr ""
+
+#. <breadcrumb-item id="Templates" action="@(Model.AdminTemplates ? "Admin" : "Index")" controller="Template" area="OrchardCore.Templates" permission="@Permissions.ManageTemplates.Name">@(Model.AdminTemplates ? T["Admin Templates"] : T["Templates"])</breadcrumb-item>
+#: OrchardCore.Templates\Views\Template\Create.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Template.Create"
+msgid "Templates"
+msgstr ""
+
 #. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:14
+#: OrchardCore.Templates\Views\Template\Create.cshtml:18
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Save"
 msgstr "Zapisz"
 
 #. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:16
+#: OrchardCore.Templates\Views\Template\Create.cshtml:20
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Toggle Dropdown"
 msgstr "Rozwiń menu"
 
 #. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:19
+#: OrchardCore.Templates\Views\Template\Create.cshtml:23
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "and continue"
 msgstr "i kontynuuj"
 
 #. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:25
+#: OrchardCore.Templates\Views\Template\Create.cshtml:29
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Cancel"
 msgstr "Anuluj"
 
 #. <a class="btn btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:30
+#: OrchardCore.Templates\Views\Template\Create.cshtml:34
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Preview"
 msgstr "Podgląd"
 
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:38
+#: OrchardCore.Templates\Views\Template\Create.cshtml:42
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Name"
 msgstr "Nazwa"
 
 #. <span class="hint">@T["The name of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:42
+#: OrchardCore.Templates\Views\Template\Create.cshtml:46
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The name of the template."
 msgstr "Nazwa szablonu."
 
 #. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:47
+#: OrchardCore.Templates\Views\Template\Create.cshtml:51
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Description"
 msgstr "Opis"
 
 #. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:50
+#: OrchardCore.Templates\Views\Template\Create.cshtml:54
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The description of the template."
 msgstr "Opis szablonu."
 
 #. <label asp-for="Content" class="ocat-label">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:55
+#: OrchardCore.Templates\Views\Template\Create.cshtml:59
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "Content"
 msgstr "Treść"
 
 #. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Create.cshtml:60
+#: OrchardCore.Templates\Views\Template\Create.cshtml:64
 msgctxt "OrchardCore.Templates.Views.Template.Create"
 msgid "The Liquid template."
 msgstr "Szablon \"Liquid\"."
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Admin Template"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:9
+#. <breadcrumb name="TemplatesEdit" title="@(Model.AdminTemplates ? T["Edit Admin Template"] : T["Edit Template"])">
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:8
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Edit Admin Template"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Template"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:13
+#. <breadcrumb name="TemplatesEdit" title="@(Model.AdminTemplates ? T["Edit Admin Template"] : T["Edit Template"])">
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:8
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Edit Template"
 msgstr "Edytuj szablon"
 
+#. <breadcrumb-item id="Templates" action="@(Model.AdminTemplates ? "Admin" : "Index")" controller="Template" area="OrchardCore.Templates" permission="@Permissions.ManageTemplates.Name">@(Model.AdminTemplates ? T["Admin Templates"] : T["Templates"])</breadcrumb-item>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "Admin Templates"
+msgstr ""
+
+#. <breadcrumb-item id="Templates" action="@(Model.AdminTemplates ? "Admin" : "Index")" controller="Template" area="OrchardCore.Templates" permission="@Permissions.ManageTemplates.Name">@(Model.AdminTemplates ? T["Admin Templates"] : T["Templates"])</breadcrumb-item>
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:9
+msgctxt "OrchardCore.Templates.Views.Template.Edit"
+msgid "Templates"
+msgstr ""
+
 #. <button type="submit" name="submit" class="btn btn-primary save">@T["Save"]</button>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:21
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:18
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Save"
 msgstr "Zapisz"
 
 #. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:23
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:20
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Toggle Dropdown"
 msgstr "Rozwiń menu"
 
 #. <button class="dropdown-item save-continue" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:26
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:23
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "and continue"
 msgstr "i kontynuuj"
 
 #. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:32
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:29
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Cancel"
 msgstr "Anuluj"
 
 #. <a class="btn btn-info" role="button" href="@Url.Action("Index", "Preview", new { area = "OrchardCore.Templates" })" target="_blank">@T["Preview"]</a>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:37
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:34
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Preview"
 msgstr "Podgląd"
 
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:46
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:43
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Name"
 msgstr "Nazwa"
 
 #. <span class="hint">@T["The name of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:50
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:47
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The name of the template."
 msgstr "Nazwa szablonu."
 
 #. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:55
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:52
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Description"
 msgstr "Opis"
 
 #. <span class="hint">@T["The description of the template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:58
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:55
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The description of the template."
 msgstr "Opis szablonu."
 
 #. <label asp-for="Content" class="ocat-label">@T["Content"]</label>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:63
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:60
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "Content"
 msgstr "Treść"
 
 #. <span class="hint">@T["The Liquid template."]</span>
-#: OrchardCore.Templates\Views\Template\Edit.cshtml:68
+#: OrchardCore.Templates\Views\Template\Edit.cshtml:65
 msgctxt "OrchardCore.Templates.Views.Template.Edit"
 msgid "The Liquid template."
 msgstr "Szablon \"Liquid\"."
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Admin Templates"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:10
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:0
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Template Preview"
+msgstr "Podgląd szablonu"
+
+#. <span>@T["Preview Disconnected"] </span>
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:14
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Preview Disconnected"
+msgstr "Podgląd rozłączony"
+
+#. <p>@T["Preview Error"] </p>
+#: OrchardCore.Templates\Views\Preview\Index.cshtml:19
+msgctxt "OrchardCore.Templates.Views.Preview.Index"
+msgid "Preview Error"
+msgstr "Błąd podglądu"
+
+#. <breadcrumb name="Templates" title="@(Model.Options.AdminTemplates ? T["Admin Templates"] : T["Templates"])" />
+#: OrchardCore.Templates\Views\Template\Index.cshtml:9
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Admin Templates"
 msgstr "Szablony administratora"
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Templates"])</h1></zone>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:14
+#. <breadcrumb name="Templates" title="@(Model.Options.AdminTemplates ? T["Admin Templates"] : T["Templates"])" />
+#: OrchardCore.Templates\Views\Template\Index.cshtml:9
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Templates"
 msgstr "Szablony"
 
+#. <form asp-action="@formAction" data-list-management data-selected-label="@T["selected"]">
+#. <ul class="list-group with-checkbox bulk-select-list" data-checkbox-name="itemIds" data-bulk-action-name="Options.BulkAction" data-selected-text="@T["selected"]">
+#: OrchardCore.Templates\Views\Template\Index.cshtml:13
+#: OrchardCore.Templates\Views\Template\Index.cshtml:34
+msgctxt "OrchardCore.Templates.Views.Template.Index"
+msgid "selected"
+msgstr ""
+
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Templates\Views\Template\Index.cshtml:30
+#: OrchardCore.Templates\Views\Template\Index.cshtml:25
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Search"
 msgstr ""
 
 #. <a asp-route-action="Create" asp-route-admintemplates="@Model.Options.AdminTemplates" asp-route-returnUrl="@FullRequestPath" class="btn btn-secondary create" role="button">@T["Add Template"]</a>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:34
+#: OrchardCore.Templates\Views\Template\Index.cshtml:29
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Add Template"
 msgstr "Dodaj Szablon"
 
 #. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:47
+#: OrchardCore.Templates\Views\Template\Index.cshtml:42
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Select All"
 msgstr ""
 
 #. <label id="items" for="select-all">@T.Plural(Model.Templates.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:48
+#: OrchardCore.Templates\Views\Template\Index.cshtml:43
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "{0} item"
 msgid_plural "{0} items"
@@ -411,13 +460,13 @@ msgstr[2] ""
 msgstr[3] ""
 
 #. <label id="items" for="select-all">@T.Plural(Model.Templates.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:48
+#: OrchardCore.Templates\Views\Template\Index.cshtml:43
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Items {0} to {1}"
 msgstr "Elementy od {0} do {1}"
 
 #. <label id="items" for="select-all">@T.Plural(Model.Templates.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:48
+#: OrchardCore.Templates\Views\Template\Index.cshtml:43
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid " / {0} item in total"
 msgid_plural " / {0} items in total"
@@ -427,71 +476,46 @@ msgstr[2] " / {0} elementów łącznie"
 msgstr[3] " / {0} elementów łącznie"
 
 #. @T["Actions"]
-#: OrchardCore.Templates\Views\Template\Index.cshtml:55
+#: OrchardCore.Templates\Views\Template\Index.cshtml:50
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Actions"
 msgstr ""
 
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:60
+#: OrchardCore.Templates\Views\Template\Index.cshtml:55
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Bulk Action"
 msgstr ""
 
 #. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:60
+#: OrchardCore.Templates\Views\Template\Index.cshtml:55
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Are you sure you want to {0} these items?"
 msgstr ""
 
 #. <a asp-action="Edit" asp-route-name="@entry.Name" asp-route-admintemplates="@Model.Options.AdminTemplates" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:76
+#: OrchardCore.Templates\Views\Template\Index.cshtml:71
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Edit"
 msgstr "Edytuj"
 
 #. <a asp-action="Delete" asp-route-name="@entry.Name" asp-route-admintemplates="@Model.Options.AdminTemplates" asp-route-returnUrl="@FullRequestPath" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:77
+#: OrchardCore.Templates\Views\Template\Index.cshtml:72
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "Delete"
 msgstr "Usuń"
 
 #. @T["<strong>Nothing here!</strong> There are no templates for the moment."]
-#: OrchardCore.Templates\Views\Template\Index.cshtml:92
+#: OrchardCore.Templates\Views\Template\Index.cshtml:87
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "<strong>Nothing here!</strong> There are no templates for the moment."
 msgstr "<strong>Nic tu nie ma!</strong> Obecnie nie ma żadnych szablonów."
 
 #. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Templates" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Templates\Views\Template\Index.cshtml:93
+#: OrchardCore.Templates\Views\Template\Index.cshtml:88
 msgctxt "OrchardCore.Templates.Views.Template.Index"
 msgid "See documentation"
 msgstr ""
-
-#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Templates\Views\Template\Index.cshtml:144
-#: OrchardCore.Templates\Views\Template\Index.cshtml:155
-msgctxt "OrchardCore.Templates.Views.Template.Index"
-msgid "selected"
-msgstr ""
-
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:0
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Template Preview"
-msgstr "Podgląd szablonu"
-
-#. <span>@T["Preview Disconnected"] </span>
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:15
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Preview Disconnected"
-msgstr "Podgląd rozłączony"
-
-#. <p>@T["Preview Error"] </p>
-#: OrchardCore.Templates\Views\Preview\Index.cshtml:20
-msgctxt "OrchardCore.Templates.Views.Preview.Index"
-msgid "Preview Error"
-msgstr "Błąd podglądu"
 
 #. @T["Edit templates"]
 #: OrchardCore.Templates\Views\TemplateSettings.cshtml:5
