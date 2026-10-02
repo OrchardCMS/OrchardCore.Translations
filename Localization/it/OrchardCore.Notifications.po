@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2026-06-03 20:12\n"
+"PO-Revision-Date: 2026-10-02 11:32\n"
 
 #. public override LocalizedString DisplayText => S["Notify Content's Owner Task"];
 #: OrchardCore.Notifications\Activities\NotifyContentOwnerTask.cs:34
@@ -30,19 +30,19 @@ msgctxt "OrchardCore.Notifications.Activities.NotifyUserTaskActivity"
 msgid "Notifications"
 msgstr "Notifiche"
 
-#. => Outcomes(S["Done"], S["Failed"], S["Failed: no user found"]);
+#. => Outcome(S["Done"], S["Failed"], S["Failed: no user found"]);
 #: OrchardCore.Notifications\Activities\NotifyUserTaskActivity.cs:75
 msgctxt "OrchardCore.Notifications.Activities.NotifyUserTaskActivity"
 msgid "Done"
 msgstr "Fatto"
 
-#. => Outcomes(S["Done"], S["Failed"], S["Failed: no user found"]);
+#. => Outcome(S["Done"], S["Failed"], S["Failed: no user found"]);
 #: OrchardCore.Notifications\Activities\NotifyUserTaskActivity.cs:75
 msgctxt "OrchardCore.Notifications.Activities.NotifyUserTaskActivity"
 msgid "Failed"
 msgstr "Fallito"
 
-#. => Outcomes(S["Done"], S["Failed"], S["Failed: no user found"]);
+#. => Outcome(S["Done"], S["Failed"], S["Failed: no user found"]);
 #: OrchardCore.Notifications\Activities\NotifyUserTaskActivity.cs:75
 msgctxt "OrchardCore.Notifications.Activities.NotifyUserTaskActivity"
 msgid "Failed: no user found"
@@ -154,8 +154,8 @@ msgctxt "OrchardCore.Notifications.Drivers.NotifyUserTaskDisplayDriver"
 msgid "Please provide at least one username to notify."
 msgstr "Fornisci almeno un nome utente per notificare."
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Notification Center"])</h1></zone>
-#: OrchardCore.Notifications\Views\Admin\List.cshtml:3
+#. <breadcrumb name="Notifications" title="@T["Notification Center"]" />
+#: OrchardCore.Notifications\Views\Admin\List.cshtml:4
 msgctxt "OrchardCore.Notifications.Views.Admin.List"
 msgid "Notification Center"
 msgstr "Centro notifiche"
@@ -174,19 +174,19 @@ msgctxt "OrchardCore.Notifications.Views.NotificationsActions_SummaryAdmin"
 msgid "Mark as read"
 msgstr "Segna come letto"
 
-#. @T["No notifications found."]
-#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:62
-msgctxt "OrchardCore.Notifications.Views.NotificationsAdminList"
-msgid "No notifications found."
-msgstr "Nessuna notifica."
-
-#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:117
-#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:128
+#. <div data-list-management data-selected-label="@T["selected"]">
+#. <div class="list-group with-checkbox notification-container bulk-select-list" data-checkbox-name="itemIds" data-bulk-action-name="Options.BulkAction" data-selected-text="@T["selected"]">
+#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:3
+#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:32
 msgctxt "OrchardCore.Notifications.Views.NotificationsAdminList"
 msgid "selected"
 msgstr "selezionato"
+
+#. @T["No notifications found."]
+#: OrchardCore.Notifications\Views\NotificationsAdminList.cshtml:63
+msgctxt "OrchardCore.Notifications.Views.NotificationsAdminList"
+msgid "No notifications found."
+msgstr "Nessuna notifica."
 
 #. @T["Actions"]
 #: OrchardCore.Notifications\Views\NotificationsAdminList.Fields.BulkActions.cshtml:7
