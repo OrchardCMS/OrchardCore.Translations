@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2026-06-03 20:22\n"
+"PO-Revision-Date: 2026-10-02 11:43\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.DataLocalization\AdminMenu.cs:32
@@ -106,224 +106,225 @@ msgctxt "OrchardCore.DataLocalization.Views.Items.AllDataTranslationsDeploymentS
 msgid "Exports all data translations."
 msgstr "Exporte toutes les traductions de données."
 
-#. <h1>@RenderTitleSegments(T["Dynamic Translations"])</h1>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:10
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:0
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
+msgid "Translations saved successfully."
+msgstr "Traductions enregistrées avec succès."
+
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:0
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
+msgid "Failed to save translations."
+msgstr "Impossible d'enregistrer les traductions."
+
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:0
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
+msgid "An error occurred while saving."
+msgstr "Une erreur s'est produite lors de l'enregistrement."
+
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:0
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
+msgid "You have unsaved changes. Do you want to discard them?"
+msgstr "Vous avez des modifications non enregistrées. Voulez-vous les supprimer ?"
+
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:0
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
+msgid "Failed to load translations."
+msgstr "Impossible de charger les traductions."
+
+#. <breadcrumb name="DynamicTranslations" title="@T["Dynamic Translations"]" />
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:18
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Dynamic Translations"
 msgstr "Traductions dynamiques"
 
 #. @T["You have read-only access to dynamic translations. Contact an administrator to request edit permissions."]
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:16
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:24
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "You have read-only access to dynamic translations. Contact an administrator to request edit permissions."
 msgstr "Vous avez un accès en lecture seule aux traductions dynamiques. Contactez un administrateur pour demander des autorisations de modification."
 
 #. <label class="ocat-label" for="culture-select">@T["Culture"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:31
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:42
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Culture"
 msgstr "Culture"
 
 #. <label class="ocat-label" for="filter-select">@T["Category"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:41
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:52
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Category"
 msgstr "Catégorie"
 
 #. <option value="">@T["All Categories"]</option>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:44
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:55
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "All Categories"
 msgstr "Toutes les catégories"
 
 #. <label class="ocat-label" for="search-box">@T["Search"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:52
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:63
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Search"
 msgstr "Recherche"
 
 #. <input id="search-box" type="search" class="form-control" v-model="searchQuery" placeholder="@T["Search translations"]" autocomplete="off" />
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:55
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:66
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Search translations"
 msgstr "Rechercher des traductions"
 
 #. <label class="form-check-label" for="missing-only-toggle">@T["Missing only"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:63
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:74
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Missing only"
 msgstr "Manquantes seulement"
 
 #. <label class="form-check-label" for="auto-save-toggle">@T["Auto-save"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:67
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:78
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Auto-save"
 msgstr "Auto-enregistrement"
 
 #. <span class="badge text-bg-warning">@T["Unsaved changes"]</span>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:76
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:87
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Unsaved changes"
 msgstr "Modifications non enregistrées"
 
 #. <span class="visually-hidden">@T["Loading..."]</span>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:83
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:94
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Loading..."
 msgstr "Chargement..."
 
 #. <span class="hint">({{ getTotalStringsCount(provider) }} @T["strings"]<span v-if="getTotalTranslatedCount(provider) > 0">, {{ getTotalTranslatedCount(provider) }} @T["translated"]</span>)</span>
 #. <span class="hint">({{ getFilteredStrings(subGroup.strings).length }} @T["strings"])</span>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:92
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:123
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:103
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:134
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "strings"
 msgstr "chaînes de caractères"
 
 #. <span class="hint">({{ getTotalStringsCount(provider) }} @T["strings"]<span v-if="getTotalTranslatedCount(provider) > 0">, {{ getTotalTranslatedCount(provider) }} @T["translated"]</span>)</span>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:92
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:103
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "translated"
 msgstr "traduites"
 
 #. <th class="col-5">@T["Original"]</th>
 #. <th class="col-5">@T["Original"]</th>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:99
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:128
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:110
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:139
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Original"
 msgstr "Original"
 
 #. <th class="col-7">@T["Translation"]</th>
 #. <th class="col-7">@T["Translation"]</th>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:100
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:129
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:111
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:140
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Translation"
 msgstr "Traduction"
 
 #. @T["No translatable strings found matching your criteria."]
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:153
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:164
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "No translatable strings found matching your criteria."
 msgstr "Aucune chaîne traduisible trouvée correspondant à vos critères."
 
 #. @T["Save"]
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:161
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:172
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Save"
 msgstr "Enregistrer"
 
 #. <a class="btn btn-secondary" role="button" href="@Url.Action("Statistics", "Admin", new { area = "OrchardCore.DataLocalization" })">@T["Statistics"]</a>
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:163
+#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:174
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
 msgid "Statistics"
 msgstr "Statistiques"
 
-#. this.showNotification('@T["Translations saved successfully."]', 'success');
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:340
-msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
-msgid "Translations saved successfully."
-msgstr "Traductions enregistrées avec succès."
-
-#. this.showNotification(error.message || '@T["Failed to save translations."]', 'danger');
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:343
-msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
-msgid "Failed to save translations."
-msgstr "Impossible d'enregistrer les traductions."
-
-#. this.showNotification('@T["An error occurred while saving."]', 'danger');
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:347
-msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
-msgid "An error occurred while saving."
-msgstr "Une erreur s'est produite lors de l'enregistrement."
-
-#. if (!confirm('@T["You have unsaved changes. Do you want to discard them?"]')) {
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:354
-msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
-msgid "You have unsaved changes. Do you want to discard them?"
-msgstr "Vous avez des modifications non enregistrées. Voulez-vous les supprimer ?"
-
-#. this.showNotification('@T["Failed to load translations."]', 'danger');
-#: OrchardCore.DataLocalization\Views\Admin\Index.cshtml:374
-msgctxt "OrchardCore.DataLocalization.Views.Admin.Index"
-msgid "Failed to load translations."
-msgstr "Impossible de charger les traductions."
-
-#. <h1>@RenderTitleSegments(T["Dynamic Translation Statistics"])</h1>
+#. <breadcrumb name="DynamicTranslationsStatistics" title="@T["Statistics"]">
 #: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:9
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
-msgid "Dynamic Translation Statistics"
-msgstr "Statistiques de traduction dynamiques"
+msgid "Statistics"
+msgstr ""
+
+#. <breadcrumb-item id="DynamicTranslations" action="Index" controller="Admin" area="OrchardCore.DataLocalization" permission="@DataLocalizationPermissions.ViewDynamicTranslations.Name">@T["Dynamic Translations"]</breadcrumb-item>
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:10
+msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
+msgid "Dynamic Translations"
+msgstr ""
 
 #. <legend>@T["Overall Progress"]</legend>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:15
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:17
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Overall Progress"
 msgstr "Progression globale"
 
 #. <strong>{{ stats.overall.translated }}</strong> / {{ stats.overall.total }} @T["strings"]
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:29
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:31
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "strings"
 msgstr "chaînes de caractères"
 
 #. <legend>@T["Progress by Culture"]</legend>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:36
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:38
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Progress by Culture"
 msgstr "Progression par culture"
 
 #. <th class="col-3">@T["Culture"]</th>
 #. <label class="ocat-label" for="selected-culture">@T["Culture"]</label>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:40
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:79
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:42
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:81
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Culture"
 msgstr "Culture"
 
 #. <th class="col-6">@T["Progress"]</th>
 #. <th class="col-6">@T["Progress"]</th>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:41
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:92
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:43
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:94
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Progress"
 msgstr "Progression"
 
 #. <th class="col-3 text-end">@T["Completion"]</th>
 #. <th class="col-3 text-end">@T["Completion"]</th>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:42
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:93
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:44
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:95
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Completion"
 msgstr "Achèvement"
 
 #. <a :href="getEditorUrl(culture.culture)" class="btn btn-sm btn-secondary ms-2" title="@T["Edit translations"]">
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:66
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:68
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Edit translations"
 msgstr "Modifier les traductions"
 
 #. <legend>@T["Progress by Category"]</legend>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:77
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:79
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Progress by Category"
 msgstr "Progression par catégorie"
 
 #. <th class="col-3">@T["Category"]</th>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:91
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:93
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Category"
 msgstr "Catégorie"
 
 #. @T["No categories found for this culture."]
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:122
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:124
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "No categories found for this culture."
 msgstr "Aucune catégorie trouvée pour cette culture."
 
 #. <a class="btn btn-primary" role="button" href="@Url.Action("Index", "Admin", new { area = "OrchardCore.DataLocalization" })">@T["Edit Translations"]</a>
-#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:129
+#: OrchardCore.DataLocalization\Views\Admin\Statistics.cshtml:131
 msgctxt "OrchardCore.DataLocalization.Views.Admin.Statistics"
 msgid "Edit Translations"
 msgstr "Modifier les traductions"
