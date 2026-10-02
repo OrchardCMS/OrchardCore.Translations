@@ -10,7 +10,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2026-06-03 19:25\n"
+"PO-Revision-Date: 2026-10-02 13:48\n"
+
+#. public override LocalizedString DisplayText => S["Meta Conversions API Event Task"];
+#: OrchardCore.Facebook\Activities\MetaConversionsApiEventTask.cs:33
+msgctxt "OrchardCore.Facebook.Activities.MetaConversionsApiEventTask"
+msgid "Meta Conversions API Event Task"
+msgstr "Tâche d’événement de l’API Meta Conversions"
+
+#. public override LocalizedString Category => S["Meta"];
+#: OrchardCore.Facebook\Activities\MetaConversionsApiEventTask.cs:35
+msgctxt "OrchardCore.Facebook.Activities.MetaConversionsApiEventTask"
+msgid "Meta"
+msgstr "Meta"
+
+#. => Outcome(S["Done"], S["Failed"]);
+#: OrchardCore.Facebook\Activities\MetaConversionsApiEventTask.cs:62
+msgctxt "OrchardCore.Facebook.Activities.MetaConversionsApiEventTask"
+msgid "Done"
+msgstr "Terminé"
+
+#. => Outcome(S["Done"], S["Failed"]);
+#: OrchardCore.Facebook\Activities\MetaConversionsApiEventTask.cs:62
+msgctxt "OrchardCore.Facebook.Activities.MetaConversionsApiEventTask"
+msgid "Failed"
+msgstr "Echoué"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Facebook\AdminMenu.cs:27
@@ -126,6 +150,12 @@ msgctxt "OrchardCore.Facebook.Deployment.FacebookLoginDeploymentStep"
 msgid "Meta"
 msgstr "Meta"
 
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(viewModel.EventName), S["Event Name requires a value."]);
+#: OrchardCore.Facebook\Drivers\MetaConversionsApiEventTaskDisplayDriver.cs:41
+msgctxt "OrchardCore.Facebook.Drivers.MetaConversionsApiEventTaskDisplayDriver"
+msgid "Event Name requires a value."
+msgstr "Le nom de l'événement nécessite une valeur."
+
 #. [RegularExpression(@"\/[-A-Za-z0-9+&@#\/%?=~_|!:,.;]+[-A-Za-z0-9+&@#\/%=~_|]", ErrorMessage = "Invalid path")]
 #: OrchardCore.Facebook\Login\ViewModels\FacebookLoginSettingsViewModel.cs:7
 msgctxt "OrchardCore.Facebook.Login.ViewModels.FacebookLoginSettingsViewModel"
@@ -143,6 +173,42 @@ msgstr "L’AppId est requis."
 msgctxt "OrchardCore.Facebook.Services.FacebookService"
 msgid "The App Secret is required."
 msgstr "L'App Secret est requis."
+
+#. return Result.Failed(S["The event name is required."]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:51
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "The event name is required."
+msgstr "Le nom de l'événement est requis."
+
+#. return Result.Failed(S["The Meta Pixel is not configured. Set the Pixel ID under Settings > Meta Pixel."]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:58
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "The Meta Pixel is not configured. Set the Pixel ID under Settings > Meta Pixel."
+msgstr "Le Meta Pixel n'est pas configuré. Définissez l'ID de Pixel sous Paramètres > Meta Pixel."
+
+#. return Result.Failed(S["The Meta Conversions API access token is not configured. Set it under Settings > Meta Pixel."]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:63
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "The Meta Conversions API access token is not configured. Set it under Settings > Meta Pixel."
+msgstr "Le jeton d'accès à l'API Meta Conversions n'est pas configuré. Définissez-le dans Paramètres > Meta Pixel."
+
+#. return Result.Failed(S["The Meta Conversions API access token could not be decrypted. Re-enter it under Settings > Meta Pixel."]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:76
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "The Meta Conversions API access token could not be decrypted. Re-enter it under Settings > Meta Pixel."
+msgstr "Le jeton d'accès à l'API Meta Conversions n'a pas pu être déchiffré. Veuillez le saisir à nouveau dans Paramètres > Meta Pixel."
+
+#. return Result.Failed(S["The Meta Conversions API request failed with status {0}.", (int)response.StatusCode]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:115
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "The Meta Conversions API request failed with status {0}."
+msgstr "La requête d'API Meta Conversions a échoué avec le statut {0}."
+
+#. return Result.Failed(S["An error occurred connecting to the Meta Conversions API."]);
+#: OrchardCore.Facebook\Services\MetaConversionsApiService.cs:121
+msgctxt "OrchardCore.Facebook.Services.MetaConversionsApiService"
+msgid "An error occurred connecting to the Meta Conversions API."
+msgstr "Une erreur s'est produite lors de la connexion à l'API Meta Conversions."
 
 #. context.Updater.ModelState.AddModelError(nameof(model.Liquid), S["The FaceBook Body doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
 #: OrchardCore.Facebook\Widgets\Drivers\FacebookPluginPartDisplayDriver.cs:78
@@ -234,17 +300,59 @@ msgctxt "OrchardCore.Facebook.Views.FacebookLoginSettings.Edit"
 msgid "<a href='{0}'>Meta Integration settings</a> must be configured in order to use the Login Feature"
 msgstr "<a href=\"{0}\">Les paramètres d'intégration de Meta</a> doivent être configurés pour utiliser la fonctionnalité de connexion"
 
+#. <p class="alert alert-danger">@T["An error occurred while decrypting a setting. Please apply and save."]</p>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:9
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "An error occurred while decrypting a setting. Please apply and save."
+msgstr "Une erreur s'est produite lors du déchiffrement d'un paramètre. Veuillez appliquer et sauvegarder."
+
 #. <label asp-for="PixelId" class="ocat-label">@T["Pixel Identifier"]</label>
-#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:6
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:15
 msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
 msgid "Pixel Identifier"
 msgstr "Pixel Identifier"
 
 #. <span class="hint">@T["The Pixel ID found on the Meta Data Sources portal."]</span>
-#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:10
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
 msgid "The Pixel ID found on the Meta Data Sources portal."
 msgstr "Le Pixel ID du portail Meta."
+
+#. <h3>@T["Conversions API"]</h3>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:25
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "Conversions API"
+msgstr "API de conversion"
+
+#. <p class="hint">@T["Optional server-side event delivery to Meta, in addition to the browser-side pixel. Configure this to let workflows send events (e.g. Purchase, Lead) directly from the server."]</p>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:26
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "Optional server-side event delivery to Meta, in addition to the browser-side pixel. Configure this to let workflows send events (e.g. Purchase, Lead) directly from the server."
+msgstr "Livraison d'événements côté serveur optionnelle vers Meta, en plus du pixel côté navigateur. Configurez ceci pour permettre aux workflows d'envoyer des événements (par exemple Achat, Lead) directement à partir du serveur."
+
+#. <label asp-for="ConversionsApiAccessToken" class="ocat-label">@T["Conversions API Access Token"]</label>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:31
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "Conversions API Access Token"
+msgstr "Jeton d'accès API Conversions"
+
+#. <span class="hint">@T["The access token generated for this dataset in the Events Manager's Conversions API settings."]</span>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:35
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "The access token generated for this dataset in the Events Manager's Conversions API settings."
+msgstr "Le jeton d'accès généré pour ce jeu de données dans les paramètres de l'API Conversions du Gestionnaire d'événements."
+
+#. <label asp-for="ConversionsApiTestEventCode" class="ocat-label">@T["Test Event Code"]</label>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:40
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "Test Event Code"
+msgstr "Code d'événement de test"
+
+#. <span class="hint">@T["Optional. Found on the Events Manager's Test Events tab. When set, every Conversions API event includes it, so events show up in the test console instead of counting as production data. Remove it before going live."]</span>
+#: OrchardCore.Facebook\Views\FacebookPixelSettings.Edit.cshtml:44
+msgctxt "OrchardCore.Facebook.Views.FacebookPixelSettings.Edit"
+msgid "Optional. Found on the Events Manager's Test Events tab. When set, every Conversions API event includes it, so events show up in the test console instead of counting as production data. Remove it before going live."
+msgstr "Optionnel. Trouvé dans l'onglet Événements de test du Gestionnaire d'événements. Lorsqu'il est défini, chaque événement de l'API de conversion l'inclut, de sorte que les événements s'affichent dans la console de test au lieu de compter comme des données de production. Retirez-le avant de passer en production."
 
 #. <label asp-for="Liquid" class="ocat-label">@T["Body"]</label>
 #: OrchardCore.Facebook\Views\FacebookPluginPart.Edit.cshtml:12
@@ -359,4 +467,70 @@ msgstr "Paramètres de l'appel FB.init()"
 msgctxt "OrchardCore.Facebook.Views.FacebookSettings.Edit"
 msgid "AppId and Version are filled automatically. Check the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/javascript/reference/FB.init/v3.2\">reference doc for the <code>FB.init</code></a> function for more info"
 msgstr "AppId et Version sont remplis automatiquement. Vérifiez le document de référence <a target=\"_blank\" href=\"https://developers.facebook.com/docs/javascript/reference/FB.init/v3.2\">pour la fonction <code>FB.init</code></a> pour plus d'informations"
+
+#. <i class="fa-brands fa-meta" aria-hidden="true"></i>@Model.Activity.GetTitleOrDefault(() => T["Meta Conversions API Event"])
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Design.cshtml:9
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Design"
+msgid "Meta Conversions API Event"
+msgstr "Événement de l'API Meta Conversions"
+
+#. <label asp-for="EventName" class="ocat-label">@T["Event Name"]</label>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:7
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Event Name"
+msgstr "Nom de l'événement"
+
+#. <span class="hint">@T["A Meta standard event name (e.g. Purchase, Lead) or a custom event name. With Liquid support."]</span>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:22
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "A Meta standard event name (e.g. Purchase, Lead) or a custom event name. With Liquid support."
+msgstr "Un nom d'événement standard Meta (par exemple Achat, Lead) ou un nom d'événement personnalisé. Avec le support de Liquid."
+
+#. <label asp-for="ActionSource" class="ocat-label">@T["Action Source"]</label>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:27
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Action Source"
+msgstr "Source de l'action"
+
+#. <span class="hint">@T["Where the conversion took place. Most server-side events triggered from a website workflow should use Website."]</span>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:30
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Where the conversion took place. Most server-side events triggered from a website workflow should use Website."
+msgstr "Lorsque la conversion a eu lieu, la plupart des événements côté serveur déclenchés par un flux de travail sur un site Web doivent utiliser le site Web."
+
+#. <label asp-for="EventSourceUrl" class="ocat-label">@T["Event Source URL"]</label>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:35
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Event Source URL"
+msgstr "URL de la source de l'événement"
+
+#. <span class="hint">@T["Optional. The browser URL where the event happened. With Liquid support."]</span>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:39
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Optional. The browser URL where the event happened. With Liquid support."
+msgstr "Optionnel. L'URL du navigateur où l'événement s'est produit. Avec le support de Liquid."
+
+#. <label asp-for="EventId" class="ocat-label">@T["Event ID"]</label>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:44
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Event ID"
+msgstr "ID de l'événement"
+
+#. <span class="hint">@T["Optional. A unique id for this event, used to deduplicate it against the same event reported by the browser Meta Pixel. With Liquid support."]</span>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Edit.cshtml:48
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Edit"
+msgid "Optional. A unique id for this event, used to deduplicate it against the same event reported by the browser Meta Pixel. With Liquid support."
+msgstr "Optionnel. Un id unique pour cet événement, utilisé pour le dédupliquer sur le même événement signalé par le navigateur Meta Pixel. Avec support Liquid."
+
+#. <i class="fa-brands fa-meta" aria-hidden="true"></i>@T["Meta Conversions API Event"]
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Thumbnail.cshtml:2
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Thumbnail"
+msgid "Meta Conversions API Event"
+msgstr "Événement de l'API Meta Conversions"
+
+#. <p>@T["Send a server-side conversion event to Meta (e.g. Purchase, Lead)."]</p>
+#: OrchardCore.Facebook\Views\Items\MetaConversionsApiEventTask.Fields.Thumbnail.cshtml:4
+msgctxt "OrchardCore.Facebook.Views.Items.MetaConversionsApiEventTask.Fields.Thumbnail"
+msgid "Send a server-side conversion event to Meta (e.g. Purchase, Lead)."
+msgstr "Envoyer un événement de conversion côté serveur à Meta (par exemple Achat, Lead)."
 

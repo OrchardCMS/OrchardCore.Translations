@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2026-06-03 19:32\n"
+"PO-Revision-Date: 2026-10-02 10:25\n"
 
 #. .Add(S["Security"], security => security
 #. .Add(S["Security"], S["Security"].PrefixPosition(), security => security
@@ -44,20 +44,20 @@ msgctxt "OrchardCore.Https.AdminMenu"
 msgid "HTTPS"
 msgstr "HTTPS"
 
-#. await _notifier.WarningAsync(H["For safety, Enabling require HTTPS over HTTP has been prevented."]);
+#. await _notifier.WarningAsync(H["For safety, changing HTTPS-only settings over HTTP has been prevented."]);
 #: OrchardCore.Https\Drivers\HttpsSettingsDisplayDriver.cs:58
 msgctxt "OrchardCore.Https.Drivers.HttpsSettingsDisplayDriver"
-msgid "For safety, Enabling require HTTPS over HTTP has been prevented."
-msgstr "З міркувань безпеки, вмикання вимоги HTTPS через HTTP було заборонено."
+msgid "For safety, changing HTTPS-only settings over HTTP has been prevented."
+msgstr ""
 
 #. services.AddSiteSettingsPropertyDeploymentStep<HttpsSettings, DeploymentStartup>(S => S["Https settings"], S => S["Exports the Https settings."]);
-#: OrchardCore.Https\Startup.cs:68
+#: OrchardCore.Https\Startup.cs:74
 msgctxt "OrchardCore.Https.DeploymentStartup"
 msgid "Https settings"
 msgstr "Налаштування Https"
 
 #. services.AddSiteSettingsPropertyDeploymentStep<HttpsSettings, DeploymentStartup>(S => S["Https settings"], S => S["Exports the Https settings."]);
-#: OrchardCore.Https\Startup.cs:68
+#: OrchardCore.Https\Startup.cs:74
 msgctxt "OrchardCore.Https.DeploymentStartup"
 msgid "Exports the Https settings."
 msgstr "Експортує налаштування Https."
@@ -74,44 +74,62 @@ msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Require HTTPS for all requests"
 msgstr "Вимагати HTTPS для всіх запитів"
 
-#. <label class="form-check-label" asp-for="EnableStrictTransportSecurity">@T["Enable HSTS"]</label>
+#. <label asp-for="StrictTransportSecurityMode" class="ocat-label">@T["HSTS mode"]</label>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:14
+msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
+msgid "HSTS mode"
+msgstr ""
+
+#. <option value="@nameof(OrchardCore.Https.Settings.HttpStrictTransportSecurityMode.Disabled)">@T["Disabled"]</option>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:17
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
-msgid "Enable HSTS"
-msgstr "Увімкнути HSTS"
+msgid "Disabled"
+msgstr ""
 
-#. <span class="hint dashed">@T["Indicates to browsers that connecting without transport security (e.g SSL or TLS) isn't allowed."]</span>
+#. <option value="@nameof(OrchardCore.Https.Settings.HttpStrictTransportSecurityMode.Enabled)">@T["Enabled"]</option>
 #: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:18
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
-msgid "Indicates to browsers that connecting without transport security (e.g SSL or TLS) isn't allowed."
-msgstr "Вказує браузерам, що підключення без захисту передачі (наприклад, SSL або TLS) заборонено."
+msgid "Enabled"
+msgstr ""
 
-#. <div class="alert alert-danger">@T["This option should be enabled with caution, as it may prevent users from connecting if HTTPS was later disabled or wasn't available."]</div>
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:25
+#. <option value="@nameof(OrchardCore.Https.Settings.HttpStrictTransportSecurityMode.FromConfiguration)">@T["From environment — enabled in Production, disabled otherwise"]</option>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:19
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
-msgid "This option should be enabled with caution, as it may prevent users from connecting if HTTPS was later disabled or wasn't available."
-msgstr "Цю опцію слід вмикати з обережністю, оскільки вона може перешкодити користувачам підключитися, якщо HTTPS пізніше було вимкнено або він був недоступний."
+msgid "From environment — enabled in Production, disabled otherwise"
+msgstr ""
+
+#. <span class="hint">@T["Determines whether HTTP Strict Transport Security (HSTS) headers are disabled by default, enabled explicitly, or follow the current environment."]</span>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:21
+msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
+msgid "Determines whether HTTP Strict Transport Security (HSTS) headers are disabled by default, enabled explicitly, or follow the current environment."
+msgstr ""
+
+#. <div class="alert alert-danger mt-3">@T["Use HSTS with caution, as browsers may stop connecting over HTTP after receiving the header if HTTPS later becomes unavailable."]</div>
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:22
+msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
+msgid "Use HSTS with caution, as browsers may stop connecting over HTTP after receiving the header if HTTPS later becomes unavailable."
+msgstr ""
 
 #. <label class="form-check-label" asp-for="RequireHttpsPermanent">@T["Require HTTPS Permanent"]</label>
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:33
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:31
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Require HTTPS Permanent"
 msgstr "Вимагати HTTPS постійно"
 
 #. <span class="hint dashed">@T["Specifies whether a permanent redirect, 308 Moved Permanently, should be used instead of a temporary redirect, 307 Found, when redirecting to HTTPS"]</span>
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:34
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:32
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "Specifies whether a permanent redirect, 308 Moved Permanently, should be used instead of a temporary redirect, 307 Found, when redirecting to HTTPS"
 msgstr "Вказує, чи слід використовувати постійне перенаправлення \"308 Moved Permanently,\" замість тимчасового перенаправлення \"307 Found\" під час перенаправлення на HTTPS"
 
 #. <label asp-for="SslPort" class="ocat-label">@T["SSL Port"]</label>
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:40
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:38
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "SSL Port"
 msgstr "SSL-порт"
 
 #. <span class="hint">@T["The SSL Port Number, leave empty to let the middleware try to determinate it."]</span>
-#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:44
+#: OrchardCore.Https\Views\HttpsSettings.Edit.cshtml:42
 msgctxt "OrchardCore.Https.Views.HttpsSettings.Edit"
 msgid "The SSL Port Number, leave empty to let the middleware try to determinate it."
 msgstr "Номер порту SSL. Залиште поле порожнім, щоб проміжне програмне забезпечення спробувало його визначити."
