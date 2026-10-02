@@ -267,45 +267,65 @@ msgid "Check to index draft if it exists, otherwise only the published version i
 msgstr ""
 
 #: OrchardCore.Indexing\Views\Admin\Create.cshtml:6
-#. <h1>@RenderTitleSegments(T["New '{0}' index", Model.DisplayName])</h1>
+#. <breadcrumb name="IndexesCreate" title="@T["New '{0}' index", Model.DisplayName]">
 msgctxt "OrchardCore.Indexing.Views.Admin.Create"
 msgid "New '{0}' index"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Admin\Create.cshtml:15
+#: OrchardCore.Indexing\Views\Admin\Create.cshtml:7
+#. <breadcrumb-item id="Indexes" action="Index" controller="Admin" area="OrchardCore.Indexing" permission="@IndexingPermissions.ManageIndexes.Name">@T["Indexes"]</breadcrumb-item>
+msgctxt "OrchardCore.Indexing.Views.Admin.Create"
+msgid "Indexes"
+msgstr ""
+
+#: OrchardCore.Indexing\Views\Admin\Create.cshtml:17
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Indexing.Views.Admin.Create"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Admin\Create.cshtml:16
+#: OrchardCore.Indexing\Views\Admin\Create.cshtml:18
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Indexing.Views.Admin.Create"
 msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\Admin\Edit.cshtml:6
-#. <h1>@RenderTitleSegments(T["Edit '{0}' index", Model.DisplayName])</h1>
+#. <breadcrumb name="IndexesEdit" title="@T["Edit '{0}' index", Model.DisplayName]">
 msgctxt "OrchardCore.Indexing.Views.Admin.Edit"
 msgid "Edit '{0}' index"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Admin\Edit.cshtml:13
+#: OrchardCore.Indexing\Views\Admin\Edit.cshtml:7
+#. <breadcrumb-item id="Indexes" action="Index" controller="Admin" area="OrchardCore.Indexing" permission="@IndexingPermissions.ManageIndexes.Name">@T["Indexes"]</breadcrumb-item>
+msgctxt "OrchardCore.Indexing.Views.Admin.Edit"
+msgid "Indexes"
+msgstr ""
+
+#: OrchardCore.Indexing\Views\Admin\Edit.cshtml:15
 #. <button class="btn btn-primary" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.Indexing.Views.Admin.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Admin\Edit.cshtml:15
+#: OrchardCore.Indexing\Views\Admin\Edit.cshtml:17
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.Indexing.Views.Admin.Edit"
 msgid "Cancel"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\Admin\Index.cshtml:10
-#. <h1>@RenderTitleSegments(T["Indexes"])</h1>
+#. <breadcrumb name="Indexes" title="@T["Indexes"]" />
 msgctxt "OrchardCore.Indexing.Views.Admin.Index"
 msgid "Indexes"
+msgstr ""
+
+#: OrchardCore.Indexing\Views\Admin\Index.cshtml:14
+#. <form asp-action="Index" method="post" class="no-multisubmit" data-list-management data-client-side-search="true" data-selected-label="@T["selected"]">
+#: OrchardCore.Indexing\Views\Admin\Index.cshtml:36
+#. <ul class="list-group with-checkbox bulk-select-list" id="rewrite-rules-sortable-list" data-selected-text="@T["selected"]">
+msgctxt "OrchardCore.Indexing.Views.Admin.Index"
+msgid "selected"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\Admin\Index.cshtml:25
@@ -392,12 +412,6 @@ msgstr ""
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
 msgctxt "OrchardCore.Indexing.Views.Admin.Index"
 msgid "Cancel"
-msgstr ""
-
-#: OrchardCore.Indexing\Views\Admin\Index.cshtml:148
-#. AdminIndexList.initialize('@T["selected"]');
-msgctxt "OrchardCore.Indexing.Views.Admin.Index"
-msgid "selected"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:8
@@ -511,13 +525,13 @@ msgid "Author"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\IndexProfile.DefaultTags.SummaryAdmin.cshtml:6
-#. <span class="badge ta-badge bg-warning-subtle font-weight-normal" data-bs-toggle="tooltip" title="@T["Provider"]">
+#. <span class="badge ta-badge bg-warning-subtle fw-normal" data-bs-toggle="tooltip" title="@T["Provider"]">
 msgctxt "OrchardCore.Indexing.Views.IndexProfile.DefaultTags.SummaryAdmin"
 msgid "Provider"
 msgstr ""
 
 #: OrchardCore.Indexing\Views\IndexProfile.DefaultTags.SummaryAdmin.cshtml:10
-#. <span class="badge ta-badge bg-primary-subtle font-weight-normal" data-bs-toggle="tooltip" title="@T["Type"]">
+#. <span class="badge ta-badge bg-primary-subtle fw-normal" data-bs-toggle="tooltip" title="@T["Type"]">
 msgctxt "OrchardCore.Indexing.Views.IndexProfile.DefaultTags.SummaryAdmin"
 msgid "Type"
 msgstr ""
@@ -536,25 +550,19 @@ msgctxt "OrchardCore.Indexing.Views.IndexProfile.SummaryAdmin"
 msgid "Actions"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:7
-#. <h5>@T["Index Profiles"]</h5>
-msgctxt "OrchardCore.Indexing.Views.Items.IndexProfileDeploymentStep.Fields.Edit"
-msgid "Index Profiles"
-msgstr ""
-
-#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:15
+#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:9
 #. <label class="form-check-label" asp-for="IncludeAll">@T["Include all index profiles"]</label>
 msgctxt "OrchardCore.Indexing.Views.Items.IndexProfileDeploymentStep.Fields.Edit"
 msgid "Include all index profiles"
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:28
+#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:22
 #. <span class="hint">@T["The index profiles to export as part of the plan."]</span>
 msgctxt "OrchardCore.Indexing.Views.Items.IndexProfileDeploymentStep.Fields.Edit"
 msgid "The index profiles to export as part of the plan."
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:50
+#: OrchardCore.Indexing\Views\Items\IndexProfileDeploymentStep.Fields.Edit.cshtml:44
 #. @T["No index profiles are available."]
 msgctxt "OrchardCore.Indexing.Views.Items.IndexProfileDeploymentStep.Fields.Edit"
 msgid "No index profiles are available."
@@ -608,19 +616,13 @@ msgctxt "OrchardCore.Indexing.Views.IndexProfileFields.Edit"
 msgid "A unique name for the index."
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\RebuildIndexDeploymentStep.Fields.Edit.cshtml:7
-#. <h5>@T["Rebuild Indexes"]</h5>
-msgctxt "OrchardCore.Indexing.Views.Items.RebuildIndexDeploymentStep.Fields.Edit"
-msgid "Rebuild Indexes"
-msgstr ""
-
-#: OrchardCore.Indexing\Views\Items\RebuildIndexDeploymentStep.Fields.Edit.cshtml:15
+#: OrchardCore.Indexing\Views\Items\RebuildIndexDeploymentStep.Fields.Edit.cshtml:9
 #. <label class="form-check-label" asp-for="IncludeAll">@T["Include all indexes."]</label>
 msgctxt "OrchardCore.Indexing.Views.Items.RebuildIndexDeploymentStep.Fields.Edit"
 msgid "Include all indexes."
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\RebuildIndexDeploymentStep.Fields.Edit.cshtml:23
+#: OrchardCore.Indexing\Views\Items\RebuildIndexDeploymentStep.Fields.Edit.cshtml:17
 #. <span class="hint">@T["The indexes to rebuild as part of the plan."]</span>
 msgctxt "OrchardCore.Indexing.Views.Items.RebuildIndexDeploymentStep.Fields.Edit"
 msgid "The indexes to rebuild as part of the plan."
@@ -656,19 +658,13 @@ msgctxt "OrchardCore.Indexing.Views.Items.RebuildIndexDeploymentStep.Fields.Thum
 msgid "Rebuild all or specified indexes."
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\ResetIndexDeploymentStep.Fields.Edit.cshtml:7
-#. <h5>@T["Reset Indexes"]</h5>
-msgctxt "OrchardCore.Indexing.Views.Items.ResetIndexDeploymentStep.Fields.Edit"
-msgid "Reset Indexes"
-msgstr ""
-
-#: OrchardCore.Indexing\Views\Items\ResetIndexDeploymentStep.Fields.Edit.cshtml:15
+#: OrchardCore.Indexing\Views\Items\ResetIndexDeploymentStep.Fields.Edit.cshtml:9
 #. <label class="form-check-label" asp-for="IncludeAll">@T["Include all indexes."]</label>
 msgctxt "OrchardCore.Indexing.Views.Items.ResetIndexDeploymentStep.Fields.Edit"
 msgid "Include all indexes."
 msgstr ""
 
-#: OrchardCore.Indexing\Views\Items\ResetIndexDeploymentStep.Fields.Edit.cshtml:23
+#: OrchardCore.Indexing\Views\Items\ResetIndexDeploymentStep.Fields.Edit.cshtml:17
 #. <span class="hint">@T["The indexes to reset as part of the plan."]</span>
 msgctxt "OrchardCore.Indexing.Views.Items.ResetIndexDeploymentStep.Fields.Edit"
 msgid "The indexes to reset as part of the plan."

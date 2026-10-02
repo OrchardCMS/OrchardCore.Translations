@@ -24,13 +24,13 @@ msgctxt "OrchardCore.Admin.AdminMenu"
 msgid "Admin"
 msgstr ""
 
-#: OrchardCore.Admin\Startup.cs:97
+#: OrchardCore.Admin\Startup.cs:104
 #. services.AddSiteSettingsPropertyDeploymentStep<AdminSettings, DeploymentStartup>(S => S["Admin settings"], S => S["Exports the admin settings."]);
 msgctxt "OrchardCore.Admin.DeploymentStartup"
 msgid "Admin settings"
 msgstr ""
 
-#: OrchardCore.Admin\Startup.cs:97
+#: OrchardCore.Admin\Startup.cs:104
 #. services.AddSiteSettingsPropertyDeploymentStep<AdminSettings, DeploymentStartup>(S => S["Admin settings"], S => S["Exports the admin settings."]);
 msgctxt "OrchardCore.Admin.DeploymentStartup"
 msgid "Exports the admin settings."
@@ -43,57 +43,203 @@ msgid "Welcome to Orchard Core"
 msgstr ""
 
 #: OrchardCore.Admin\Views\AdminDashboard.cshtml:3
-#. <p class="mb-0">@T["Feel free to browse the menu and discover all its possibilities."]</p>
+#. <p class="mb-0">@T["Your site is ready. Get started with the actions below, or browse the menu to discover all its possibilities."]</p>
 msgctxt "OrchardCore.Admin.Views.AdminDashboard"
-msgid "Feel free to browse the menu and discover all its possibilities."
+msgid "Your site is ready. Get started with the actions below, or browse the menu to discover all its possibilities."
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:7
+#: OrchardCore.Admin\Views\AdminDashboardDocumentation.cshtml:4
+#. <h5 class="card-title"><i class="fa-solid fa-book" aria-hidden="true"></i> @T["Learn more"]</h5>
+msgctxt "OrchardCore.Admin.Views.AdminDashboardDocumentation"
+msgid "Learn more"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminDashboardDocumentation.cshtml:5
+#. <p class="card-text">@T["Read the documentation and join the community."]</p>
+msgctxt "OrchardCore.Admin.Views.AdminDashboardDocumentation"
+msgid "Read the documentation and join the community."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminDashboardDocumentation.cshtml:6
+#. <a href="https://docs.orchardcore.net" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">@T["Documentation"]</a>
+msgctxt "OrchardCore.Admin.Views.AdminDashboardDocumentation"
+msgid "Documentation"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:8
 #. <label asp-for="DisplayThemeToggler" class="form-check-label">@T["Enable theme toggler"]</label>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Enable theme toggler"
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:9
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:10
 #. <span class="hint">@T["Whether or not to display a theme toggler."]</span>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Whether or not to display a theme toggler."
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:17
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:18
 #. <label asp-for="DisplayMenuFilter" class="form-check-label">@T["Enable Admin Menu filter"]</label>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Enable Admin Menu filter"
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:19
-#. <span class="hint">@T["Whether a quick search to filter the admin menu is displayed."]</span>
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:20
+#. <span class="hint">@T["Whether a filter input is displayed above the admin menu."]</span>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
-msgid "Whether a quick search to filter the admin menu is displayed."
+msgid "Whether a filter input is displayed above the admin menu."
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:27
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:28
+#. <label asp-for="DisplayQuickNavigation" class="form-check-label">@T["Enable quick navigation"]</label>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Enable quick navigation"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:30
+#. <span class="hint">@T["Whether the quick navigation palette (Ctrl+K / Cmd+K) is displayed."]</span>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Whether the quick navigation palette (Ctrl+K / Cmd+K) is displayed."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:38
 #. <label asp-for="DisplayNewMenu" class="form-check-label">@T["Display New menu"]</label>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Display New menu"
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:29
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:40
 #. <span class="hint">@T["Whether a New menu is displayed in the admin menu."]</span>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Whether a New menu is displayed in the admin menu."
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:37
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:48
 #. <label asp-for="DisplayTitlesInTopbar" class="form-check-label">@T["Display titles in top bar"]</label>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Display titles in top bar"
 msgstr ""
 
-#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:39
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:50
 #. <span class="hint">@T["Whether the titles are displayed in the top bar."]</span>
 msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
 msgid "Whether the titles are displayed in the top bar."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:58
+#. <label asp-for="ShowBreadcrumb" class="form-check-label">@T["Show breadcrumb"]</label>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Show breadcrumb"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:60
+#. <span class="hint">@T["Whether the breadcrumb trail is displayed on admin screens."]</span>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Whether the breadcrumb trail is displayed on admin screens."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:69
+#. <label class="ocat-label">@T["Navigation menu behavior"]</label>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Navigation menu behavior"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:73
+#. <label for="@(menuBehaviorId)_Focused" class="form-check-label">@T["Focused"]</label>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Focused"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:74
+#. <span class="hint d-block">@T["Only the section of the current page is open, and opening a section closes the others."]</span>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Only the section of the current page is open, and opening a section closes the others."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:78
+#. <label for="@(menuBehaviorId)_Persistent" class="form-check-label">@T["Persistent"]</label>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Persistent"
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:79
+#. <span class="hint d-block">@T["Sections stay open until you close them, from page to page, so several can be open at once."]</span>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "Sections stay open until you close them, from page to page, so several can be open at once."
+msgstr ""
+
+#: OrchardCore.Admin\Views\AdminSettings.Edit.cshtml:81
+#. <span class="hint">@T["The section holding the current page is always open, whichever behavior is chosen."]</span>
+msgctxt "OrchardCore.Admin.Views.AdminSettings.Edit"
+msgid "The section holding the current page is always open, whichever behavior is chosen."
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:13
+#. <button type="button" class="btn btn-link nav-link" id="adminQuickNavigationToggle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@T["Quick navigation (Ctrl+K)"]" aria-label="@T["Quick navigation"]" aria-haspopup="dialog" aria-controls="adminQuickNavigationModal">
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Quick navigation (Ctrl+K)"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:13
+#. <button type="button" class="btn btn-link nav-link" id="adminQuickNavigationToggle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@T["Quick navigation (Ctrl+K)"]" aria-label="@T["Quick navigation"]" aria-haspopup="dialog" aria-controls="adminQuickNavigationModal">
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:19
+#. <h2 id="adminQuickNavigationLabel" class="visually-hidden">@T["Quick navigation"]</h2>
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Quick navigation"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:16
+#. <div class="modal fade" id="adminQuickNavigationModal" tabindex="-1" role="dialog" aria-labelledby="adminQuickNavigationLabel" aria-hidden="true" data-index-url="@indexUrl" data-no-results="@T["No destinations found"]" data-loading="@T["Loading navigation..."]" data-load-error="@T["Unable to load navigation. Close and reopen the palette to try again."]" data-max-results="15">
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "No destinations found"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:16
+#. <div class="modal fade" id="adminQuickNavigationModal" tabindex="-1" role="dialog" aria-labelledby="adminQuickNavigationLabel" aria-hidden="true" data-index-url="@indexUrl" data-no-results="@T["No destinations found"]" data-loading="@T["Loading navigation..."]" data-load-error="@T["Unable to load navigation. Close and reopen the palette to try again."]" data-max-results="15">
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Loading navigation..."
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:16
+#. <div class="modal fade" id="adminQuickNavigationModal" tabindex="-1" role="dialog" aria-labelledby="adminQuickNavigationLabel" aria-hidden="true" data-index-url="@indexUrl" data-no-results="@T["No destinations found"]" data-loading="@T["Loading navigation..."]" data-load-error="@T["Unable to load navigation. Close and reopen the palette to try again."]" data-max-results="15">
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Unable to load navigation. Close and reopen the palette to try again."
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:23
+#. <input type="text" id="adminQuickNavigationInput" class="form-control form-control-lg border-0 shadow-none" placeholder="@T["Go to an admin page..."]" aria-label="@T["Filter navigation destinations"]" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="adminQuickNavigationResults" />
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Go to an admin page..."
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:23
+#. <input type="text" id="adminQuickNavigationInput" class="form-control form-control-lg border-0 shadow-none" placeholder="@T["Go to an admin page..."]" aria-label="@T["Filter navigation destinations"]" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="adminQuickNavigationResults" />
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Filter navigation destinations"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:25
+#. <ul id="adminQuickNavigationResults" class="admin-quick-navigation-results list-unstyled mb-0" role="listbox" aria-label="@T["Navigation destinations"]"></ul>
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "Navigation destinations"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:28
+#. <span><kbd>↑</kbd><kbd>↓</kbd> @T["to navigate"]</span>
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "to navigate"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:29
+#. <span><kbd>↵</kbd> @T["to open"]</span>
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "to open"
+msgstr ""
+
+#: OrchardCore.Admin\Views\QuickNavigationNavbarItem.cshtml:30
+#. <span><kbd>Esc</kbd> @T["to close"]</span>
+msgctxt "OrchardCore.Admin.Views.QuickNavigationNavbarItem"
+msgid "to close"
 msgstr ""
 
 #: OrchardCore.Admin\Views\VisitSiteNavbarItem.cshtml:2

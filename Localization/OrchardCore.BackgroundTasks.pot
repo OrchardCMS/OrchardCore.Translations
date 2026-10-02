@@ -42,189 +42,249 @@ msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "Disabled"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:215
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:113
+#. new SelectListItem(S["Enable"], nameof(BackgroundTaskBulkAction.Enable)),
+msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
+msgid "Enable"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:114
+#. new SelectListItem(S["Disable"], nameof(BackgroundTaskBulkAction.Disable)),
+msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
+msgid "Disable"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:163
+#. await _notifier.WarningAsync(H["Please select one or more tasks."]);
+msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
+msgid "Please select one or more tasks."
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:196
+#. await _notifier.SuccessAsync(H["The tasks have been enabled."]);
+msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
+msgid "The tasks have been enabled."
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:199
+#. await _notifier.SuccessAsync(H["The tasks have been disabled."]);
+msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
+msgid "The tasks have been disabled."
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:275
 #. await _notifier.SuccessAsync(H["The task has been updated."]);
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been updated."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:250
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:310
 #. await _notifier.SuccessAsync(H["The task has been enabled."]);
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been enabled."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:279
+#: OrchardCore.BackgroundTasks\Controllers\BackgroundTaskController.cs:339
 #. await _notifier.SuccessAsync(H["The task has been disabled."]);
 msgctxt "OrchardCore.BackgroundTasks.Controllers.BackgroundTaskController"
 msgid "The task has been disabled."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:3
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Task Settings"])</h1></zone>
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:4
+#. <breadcrumb name="BackgroundTasksEdit" title="@T["Edit Task Settings"]">
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Edit Task Settings"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:11
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:5
+#. <breadcrumb-item id="BackgroundTasks" action="Index" controller="BackgroundTask" area="OrchardCore.BackgroundTasks" permission="@Permissions.ManageBackgroundTasks.Name">@T["Background Tasks"]</breadcrumb-item>
+msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
+msgid "Background Tasks"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:15
 #. <a class="nav-link active" id="properties-tab" data-bs-toggle="tab" href="#properties" role="tab" aria-controls="site" aria-selected="true">@T["Properties"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Properties"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:14
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:18
 #. <a class="nav-link" id="advanced-tab" data-bs-toggle="tab" href="#advanced" role="tab" aria-controls="resources">@T["Advanced"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Advanced"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:22
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:26
 #. <label asp-for="Title" class="ocat-label">@T["Title"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Title"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:29
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:33
 #. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Description"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:36
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:40
 #. <label asp-for="Schedule" class="ocat-label">@T["Schedule"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Schedule"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:40
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:44
 #. <button type="button" id="use-default-schedule" class="btn btn-outline-danger">@T["Reset Schedule"]</button>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Reset Schedule"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:42
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:46
 #. <span class="hint">@T["The task schedule as a cron expression."]</span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The task schedule as a cron expression."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:50
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:54
 #. <label class="form-check-label" asp-for="UsePipeline">@T["Use Tenant Pipeline"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Use Tenant Pipeline"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:52
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:56
 #. <span class="hint">@T["Whether or not the tenant pipeline should be built to configure endpoints and then executed to allow route urls generation in the background."]</span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Whether or not the tenant pipeline should be built to configure endpoints and then executed to allow route urls generation in the background."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:56
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:60
 #. <div><span asp-validation-for="LockTimeout" class="text-danger">@T["Invalid lock timeout value in the advanced tab"]</span></div>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Invalid lock timeout value in the advanced tab"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:57
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:61
 #. <div><span asp-validation-for="LockExpiration" class="text-danger">@T["Invalid lock expiration value in the advanced tab"]</span></div>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Invalid lock expiration value in the advanced tab"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:62
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:66
 #. <label asp-for="LockTimeout" class="ocat-label">@T["Lock timeout (ms)"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Lock timeout (ms)"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:65
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:69
 #. <span class="hint">@T["The timeout in milliseconds to acquire a lock before executing the task atomically. Leave it to zero to not use any locking."]</span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The timeout in milliseconds to acquire a lock before executing the task atomically. Leave it to zero to not use any locking."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:66
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:70
 #. <span class="hint">@T["Ignored if there is no distributed lock feature enabled."]</span>
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:75
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:79
 #. <span class="hint">@T["Ignored if there is no distributed lock feature enabled."]</span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Ignored if there is no distributed lock feature enabled."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:71
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:75
 #. <label asp-for="LockExpiration" class="ocat-label">@T["Lock expiration (ms)"]</label>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Lock expiration (ms)"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:74
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:78
 #. <span class="hint">@T["The expiration in milliseconds of the lock acquired before executing the task atomically. Leave it to zero to not use any locking."]</span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "The expiration in milliseconds of the lock acquired before executing the task atomically. Leave it to zero to not use any locking."
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:83
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:87
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Save"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:84
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Edit.cshtml:88
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Edit"
 msgid "Cancel"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:3
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Background Tasks"])</h1></zone>
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:4
+#. <breadcrumb name="BackgroundTasks" title="@T["Background Tasks"]" />
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Background Tasks"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:15
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:7
+#. <form asp-action="Index" method="post" class="no-multisubmit" data-list-management data-selected-label="@T["selected"]">
+msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
+msgid "selected"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:19
 #. <input id="search-box" asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Search"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:30
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:35
+#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
+msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
+msgid "Select All"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:36
+#. <label id="items" for="select-all">@T["{0} tasks", Model.Tasks.Count]</label>
+msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
+msgid "{0} tasks"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:44
+#. @T["Actions"]
+msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
+msgid "Actions"
+msgstr ""
+
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:54
 #. <select asp-for="Options.Status" asp-items="@Model.Options.Statuses" class="selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Status"]" data-style="btn-sm"></select>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Filter by status"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:30
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:54
 #. <select asp-for="Options.Status" asp-items="@Model.Options.Statuses" class="selectpicker show-tick me-2" data-header="@T["Filter by status"]" data-width="fit" data-selected-text-format="static" data-dropdown-align-right="true" title="@T["Status"]" data-style="btn-sm"></select>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Status"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:42
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:74
 #. <span class="text-primary" title="@T["Settings"]"><i class="fa-solid fa-gear" aria-hidden="true"></i></span>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Settings"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:46
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:78
 #. <a asp-action="Edit" asp-route-name="@task.Name" class="btn btn-primary btn-sm">@T["Edit"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Edit"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:50
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:82
 #. <a asp-action="Disable" asp-route-name="@task.Name" class="btn btn-sm btn-danger" data-url-af="UnsafeUrl">@T["Disable"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Disable"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:54
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:86
 #. <a asp-action="Enable" asp-route-name="@task.Name" class="btn btn-sm btn-success" data-url-af="UnsafeUrl">@T["Enable"]</a>
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "Enable"
 msgstr ""
 
-#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:74
+#: OrchardCore.BackgroundTasks\Views\BackgroundTask\Index.cshtml:108
 #. @T["<strong>Nothing here!</strong> Your search returned no results."]
 msgctxt "OrchardCore.BackgroundTasks.Views.BackgroundTask.Index"
 msgid "<strong>Nothing here!</strong> Your search returned no results."
