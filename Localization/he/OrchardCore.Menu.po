@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==2 ? 1 : 2);\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: he\n"
@@ -10,18 +10,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2026-06-03 19:39\n"
+"PO-Revision-Date: 2026-10-02 11:00\n"
 
 #. .Add(S["Content"], design => design
-#: OrchardCore.Menu\AdminMenu.cs:27
+#: OrchardCore.Menu\AdminMenu.cs:34
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Content"
 msgstr ""
 
 #. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
 #. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
-#: OrchardCore.Menu\AdminMenu.cs:28
-#: OrchardCore.Menu\AdminMenu.cs:28
+#: OrchardCore.Menu\AdminMenu.cs:35
+#: OrchardCore.Menu\AdminMenu.cs:35
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Menus"
 msgstr ""
@@ -48,17 +48,14 @@ msgctxt "OrchardCore.Menu.Drivers.LinkMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr ""
 
-#. await _notifier.WarningAsync(H["The menu item content item with id {0} has no matching {1} content type definition.", menuItem.ContentItem.ContentItemId, menuItem.ContentItem.ContentType]);
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:57
+#. await _notifier.WarningAsync(H.Plural(
+#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:62
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
-msgid "The menu item content item with id {0} has no matching {1} content type definition."
-msgstr ""
-
-#. await _notifier.WarningAsync(H["Publishing this content item may erase created content. Fix any content type issues beforehand."]);
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:64
-msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
-msgid "Publishing this content item may erase created content. Fix any content type issues beforehand."
-msgstr ""
+msgid "The menu item content item {1} has no matching content type definition. Publishing this content item may erase created content. Fix any content type issues beforehand."
+msgid_plural "The following menu item content items have no matching content type definitions: {1}. Publishing these content items may erase created content. Fix any content type issues beforehand."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #. .Description(S["The menu items."])
 #: OrchardCore.Menu\GraphQL\MenuItemsListQueryObjectType.cs:14
@@ -70,6 +67,30 @@ msgstr ""
 #: OrchardCore.Menu\Services\MenuItemStereotypesProvider.cs:18
 msgctxt "OrchardCore.Menu.Services.MenuItemStereotypesProvider"
 msgid "Menu Item"
+msgstr ""
+
+#. { "TypeToSearch", S["Type to search"].Value },
+#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:16
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Type to search"
+msgstr ""
+
+#. { "Select", S["Select"].Value },
+#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:17
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Select"
+msgstr ""
+
+#. { "Remove", S["Remove"].Value },
+#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:18
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Remove"
+msgstr ""
+
+#. { "NoResultFound", S["No result found"].Value },
+#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:19
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "No result found"
 msgstr ""
 
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
@@ -102,16 +123,36 @@ msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
 msgid "Links to a Content url."
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["New {0}", localizedTypeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:17
+#. <breadcrumb name="MenuCreate" title="@T["New {0}", localizedTypeDisplayName]">
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:20
 msgctxt "OrchardCore.Menu.Views.Admin.Create"
 msgid "New {0}"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit {0}", localizedTypeDisplayName])</h1></zone>
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:16
+#. <breadcrumb-item id="Contents" action="List" controller="Admin" area="OrchardCore.Contents" route-contentTypeId="">@T["Manage Content"]</breadcrumb-item>
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:21
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "Manage Content"
+msgstr ""
+
+#. <breadcrumb-item id="Menu" action="Edit" controller="Admin" area="OrchardCore.Contents" route-contentItemId="@menuContentItemId">@T["Edit {0}", menu?.DisplayText]</breadcrumb-item>
+#: OrchardCore.Menu\Views\Admin\Create.cshtml:25
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "Edit {0}"
+msgstr ""
+
+#. <breadcrumb name="MenuEdit" title="@T["Edit {0}", localizedTypeDisplayName]">
+#. <breadcrumb-item id="Menu" action="Edit" controller="Admin" area="OrchardCore.Contents" route-contentItemId="@menuContentItemId">@T["Edit {0}", menu?.DisplayText]</breadcrumb-item>
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:19
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:24
 msgctxt "OrchardCore.Menu.Views.Admin.Edit"
 msgid "Edit {0}"
+msgstr ""
+
+#. <breadcrumb-item id="Contents" action="List" controller="Admin" area="OrchardCore.Contents" route-contentTypeId="">@T["Manage Content"]</breadcrumb-item>
+#: OrchardCore.Menu\Views\Admin\Edit.cshtml:20
+msgctxt "OrchardCore.Menu.Views.Admin.Edit"
+msgid "Manage Content"
 msgstr ""
 
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
@@ -259,19 +300,19 @@ msgid "Links to a custom url."
 msgstr ""
 
 #. @T["Edit"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:35
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:37
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Edit"
 msgstr ""
 
 #. @T["Add"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:38
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:40
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Add"
 msgstr ""
 
 #. @T["Delete"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:47
+#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:49
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Delete"
 msgstr ""
@@ -283,37 +324,13 @@ msgid "Add"
 msgstr ""
 
 #. <label asp-for="SelectedPermissionNames" class="ocat-label">@T["Permissions"]</label>
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:14
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:15
 msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
 msgid "Permissions"
 msgstr ""
 
-#. placeholder="@T["Type to search"]"
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:37
-msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
-msgid "Type to search"
-msgstr ""
-
-#. select-label="@T["Select"]"
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:44
-msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
-msgid "Select"
-msgstr ""
-
-#. deselect-label="@T["Remove"]">
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:45
-msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
-msgid "Remove"
-msgstr ""
-
-#. @T["No result found"]
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:50
-msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
-msgid "No result found"
-msgstr ""
-
-#. <span class="hint">@T["The permissions required to display this menu item (optional)."]</span>
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:53
+#. <div id="PermissionPicker" class="vue-multiselect" data-selected-items="@selectedItems" data-all-items="@allItems" data-translations="@translationsJson" data-selected-names-input-id="@Html.IdFor(m => m.SelectedPermissionNames)" data-selected-names-input-name="@Html.NameFor(m => m.SelectedPermissionNames)" data-hint-text="@T["The permissions required to display this menu item (optional)."]" v-cloak>
+#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:17
 msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
 msgid "The permissions required to display this menu item (optional)."
 msgstr ""
@@ -324,21 +341,21 @@ msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Add Menu Item"
 msgstr ""
 
+#. <ol id="menu" class="list-group mt-3" data-hierarchy-input="@Html.IdFor(m => m.Hierarchy)" data-leave-message="@T["You have reordered the navigation."]">
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:37
+msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
+msgid "You have reordered the navigation."
+msgstr ""
+
 #. <h5 class="modal-title" id="available-menu-items-title">@T["Available Menu Items"]</h5>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:59
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:60
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Available Menu Items"
 msgstr ""
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:78
+#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:79
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Cancel"
-msgstr ""
-
-#. <div id="msg-leave" style="display:none" data>@T["You have reordered the navigation."]</div>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:85
-msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
-msgid "You have reordered the navigation."
 msgstr ""
 
