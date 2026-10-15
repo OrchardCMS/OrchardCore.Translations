@@ -10,32 +10,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2026-06-03 19:49\n"
+"PO-Revision-Date: 2026-10-02 17:01\n"
 
 #. .Add(S["Configuration"], NavigationConstants.AdminMenuConfigurationPosition, configuration => configuration
-#: OrchardCore.Settings\AdminMenu.cs:29
+#: OrchardCore.Settings\AdminMenu.cs:35
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Configuration"
 msgstr "Configuration"
 
 #. .Add(S["Settings"], "1", settings => settings
-#. .Add(S["Settings"], "after.100", settings => settings
-#: OrchardCore.Settings\AdminMenu.cs:32
-#: OrchardCore.Settings\AdminMenu.cs:51
+#. .Add(S["Settings"], "end.100", settings => settings
+#: OrchardCore.Settings\AdminMenu.cs:38
+#: OrchardCore.Settings\AdminMenu.cs:64
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Settings"
 msgstr "Paramètres"
 
 #. .Add(S["General"], "1", entry => entry
 #. .Add(S["General"], "before", general => general
-#: OrchardCore.Settings\AdminMenu.cs:33
-#: OrchardCore.Settings\AdminMenu.cs:54
+#: OrchardCore.Settings\AdminMenu.cs:39
+#: OrchardCore.Settings\AdminMenu.cs:67
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "General"
 msgstr "Général"
 
-#. .Add(S["Tools"], "after.50", tools => tools
-#: OrchardCore.Settings\AdminMenu.cs:47
+#. .Add(S["Debugging"], "2", entry => entry
+#. .Add(S["Debugging"], "after", debugging => debugging
+#: OrchardCore.Settings\AdminMenu.cs:46
+#: OrchardCore.Settings\AdminMenu.cs:74
+msgctxt "OrchardCore.Settings.AdminMenu"
+msgid "Debugging"
+msgstr "Debogage"
+
+#. .Add(S["Tools"], "end.50", tools => tools
+#: OrchardCore.Settings\AdminMenu.cs:60
 msgctxt "OrchardCore.Settings.AdminMenu"
 msgid "Tools"
 msgstr "Outils"
@@ -52,26 +60,74 @@ msgctxt "OrchardCore.Settings.Deployment.SiteSettingsDeploymentStep"
 msgid "Configuration"
 msgstr "Configuration"
 
+#. Title = S["Site Settings"];
+#: OrchardCore.Settings\Deployment\SiteSettingsDeploymentStep.cs:20
+msgctxt "OrchardCore.Settings.Deployment.SiteSettingsDeploymentStep"
+msgid "Site Settings"
+msgstr "Paramètres du Site"
+
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize), S["The page size must be greater than zero."]);
-#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:74
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:96
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be greater than zero."
 msgstr "La taille de la page doit être supérieure à zéro."
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize), S["The page size must be less than or equal to {0}.", site.MaxPageSize]);
-#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:79
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:101
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be less than or equal to {0}."
 msgstr "La taille de la page doit être inférieure ou égale à {0}."
 
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSizeOptions), S["Enter at least one page size when page size selection is allowed."]);
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:110
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "Enter at least one page size when page size selection is allowed."
+msgstr "Entrez au moins une taille de page lorsque la sélection de taille de page est autorisée."
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSizeOptions), S["The page size options must be less than or equal to {0}.", site.MaxPageSize]);
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:115
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The page size options must be less than or equal to {0}."
+msgstr "Les options de taille de page doivent être inférieures ou égales à {0}."
+
+#. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSizeOptions), S["The page size options must be a comma-separated list of positive numbers."]);
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:120
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The page size options must be a comma-separated list of positive numbers."
+msgstr "Les options de taille de page doivent être une liste de nombres positifs séparés par des virgules."
+
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.BaseUrl), S["The Base url must be a fully qualified URL."]);
-#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:84
+#: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:125
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The Base url must be a fully qualified URL."
 msgstr "L'url de base doit être une URL entièrement qualifiée."
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Settings"])</h1></zone>
-#: OrchardCore.Settings\Views\Admin\Index.cshtml:3
+#. S => S["Debugging settings"],
+#: OrchardCore.Settings\Startup.cs:129
+msgctxt "OrchardCore.Settings.DeploymentStartup"
+msgid "Debugging settings"
+msgstr "Paramètres de débogage"
+
+#. S => S["Exports the debugging settings."]);
+#: OrchardCore.Settings\Startup.cs:130
+msgctxt "OrchardCore.Settings.DeploymentStartup"
+msgid "Exports the debugging settings."
+msgstr "Exporte les paramètres de débogage."
+
+#. <label asp-for="WriteShapeDebugInformation" class="form-check-label">@T["Write shape debug information"]</label>
+#: OrchardCore.Settings\Views\DebugSettings.Edit.cshtml:7
+msgctxt "OrchardCore.Settings.Views.DebugSettings.Edit"
+msgid "Write shape debug information"
+msgstr "Écrire les informations de débogage de shape"
+
+#. <span class="hint">@T["Wrap rendered shapes in HTML comments to help identify the template or binding that produced each fragment."]</span>
+#: OrchardCore.Settings\Views\DebugSettings.Edit.cshtml:9
+msgctxt "OrchardCore.Settings.Views.DebugSettings.Edit"
+msgid "Wrap rendered shapes in HTML comments to help identify the template or binding that produced each fragment."
+msgstr "Envelopper les formes affichées dans les commentaires HTML pour aider à identifier le modèle ou la liaison qui a produit chaque fragment."
+
+#. <breadcrumb name="GeneralSettings" title="@T["Settings"]" />
+#: OrchardCore.Settings\Views\Admin\Index.cshtml:4
 msgctxt "OrchardCore.Settings.Views.Admin.Index"
 msgid "Settings"
 msgstr "Paramètres"
@@ -203,70 +259,105 @@ msgid "Determines whether scripts and stylesheets load in their debuggable or mi
 msgstr "Détermine si les scripts et les feuilles de style se chargent dans leur forme déboggable ou minifiée."
 
 #. <label asp-for="SiteName" class="ocat-label">@T["Site name"]</label>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:7
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:16
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Site name"
 msgstr "Nom du site"
 
 #. <span class="hint">@T["The site name."]</span>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:11
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:20
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "The site name."
 msgstr "Le nom du site."
 
 #. <label asp-for="PageTitleFormat" class="ocat-label">@T["Page title format"]</label>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:16
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:25
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Page title format"
 msgstr "Format de titre de page"
 
 #. <span class="hint">@T["The default format of page titles."]</span>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:20
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:29
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "The default format of page titles."
 msgstr "Le format par défaut des titres de page."
 
 #. <label asp-for="BaseUrl" class="ocat-label">@T["Base url"]</label>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:25
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:34
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Base url"
 msgstr "URL de base"
 
 #. <span class="hint">@T["Enter the fully qualified base URL of the web site."]</span>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:29
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:38
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Enter the fully qualified base URL of the web site."
 msgstr "Entrez l’URL de base complète du site web."
 
 #. <label asp-for="TimeZone" class="ocat-label">@T["Default Time Zone"]</label>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:34
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:43
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Default Time Zone"
 msgstr "Fuseau horaire par défaut"
 
 #. <option value="">@T["Local to server"]</option>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:37
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:46
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Local to server"
 msgstr "Local au serveur"
 
 #. <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."]</span>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:46
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:49
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Determines the default time zone used when displaying and editing dates and times. DST (daylight saving time) will be applied automatically per time zone if available."
 msgstr "Détermine le fuseau horaire par défaut utilisé lors de l'affichage et de l'édition des dates et des heures. Le DST (heure d'été du jour) sera appliqué automatiquement par fuseau horaire si disponible."
 
 #. <label asp-for="PageSize" class="ocat-label">@T["Page size"]</label>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:51
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:54
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "Page size"
 msgstr "Taille des pages"
 
 #. <span class="hint">@T["The default page size."]</span>
-#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:55
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:58
 msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
 msgid "The default page size."
 msgstr "La taille de page par défaut."
+
+#. <label class="ocat-label">@T["Page size selection"]</label>
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:63
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page size selection"
+msgstr "Sélection de la taille de page"
+
+#. <label asp-for="AllowPageSizeSelection" class="form-check-label">@T["Allow users to change the page size on listing pages"]</label>
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:67
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Allow users to change the page size on listing pages"
+msgstr "Permettre aux utilisateurs de modifier la taille de la page sur les pages de liste"
+
+#. <span class="hint">@T["When enabled, a selector is shown on listing pages so users can choose how many items are displayed per page."]</span>
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:69
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "When enabled, a selector is shown on listing pages so users can choose how many items are displayed per page."
+msgstr "Lorsqu'il est activé, un sélecteur est affiché sur les pages de liste afin que les utilisateurs puissent choisir le nombre d'éléments affichés par page."
+
+#. <label asp-for="PageSizeOptions" class="ocat-label">@T["Page size options"]</label>
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:74
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page size options"
+msgstr "Options de taille de page"
+
+#. @T["A comma-separated list of the page size values users can select from, for example 10, 25, 50, 100."]
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:79
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "A comma-separated list of the page size values users can select from, for example 10, 25, 50, 100."
+msgstr "Une liste séparée par des virgules des valeurs de taille de page que les utilisateurs peuvent sélectionner, par exemple 10, 25, 50, 100."
+
+#: OrchardCore.Settings\Views\Settings-Site.Edit.cshtml:0
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Values cannot exceed the maximum page size of {0}."
+msgstr "Les valeurs ne peuvent pas dépasser la taille maximale de la page {0}."
 
 #. <button class="primaryAction btn btn-primary save" type="submit">@T["Save"]</button>
 #: OrchardCore.Settings\Views\SiteSettings.SaveButton.cshtml:3
@@ -280,14 +371,8 @@ msgctxt "OrchardCore.Settings.Views.SiteSettings.SaveButton"
 msgid "Cancel"
 msgstr "Annuler"
 
-#. <h5>@T["Site Settings"]</h5>
-#: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:10
-msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
-msgid "Site Settings"
-msgstr "Paramètres du Site"
-
 #. <span class="hint">@T["The site settings to add as part of the plan."]</span>
-#: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:11
+#: OrchardCore.Settings\Views\Items\SiteSettingsDeploymentStep.Fields.Edit.cshtml:10
 msgctxt "OrchardCore.Settings.Views.Items.SiteSettingsDeploymentStep.Fields.Edit"
 msgid "The site settings to add as part of the plan."
 msgstr "Les paramètres du site à ajouter au plan."

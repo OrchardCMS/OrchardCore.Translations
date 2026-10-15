@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Macedonian\n"
 "Language: mk_MK\n"
-"PO-Revision-Date: 2026-06-03 19:35\n"
+"PO-Revision-Date: 2026-10-02 10:55\n"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.ContentType), S["Content type field is required."]);
 #: OrchardCore.Lists\AdminNodes\ListsAdminNodeDriver.cs:65
@@ -37,7 +37,7 @@ msgid "the content item id of the parent list of the content item to filter"
 msgstr "идентификатор на содржинскиот елемент од родителската листа на содржински елементи за филтрирање"
 
 #. .Description(S["The parent content item of type {0}.", type.Name])
-#: OrchardCore.Lists\GraphQL\ContainedPartContentItemTypeInitializer.cs:43
+#: OrchardCore.Lists\GraphQL\ContainedPartContentItemTypeInitializer.cs:57
 msgctxt "OrchardCore.Lists.GraphQL.ContainedPartContentItemTypeInitializer"
 msgid "The parent content item of type {0}."
 msgstr ""
@@ -96,22 +96,42 @@ msgctxt "OrchardCore.Lists.Handlers.ContainedPartHandler"
 msgid "The content item of type '{0}' must have a valid ListContentItemId as it is contained by a list."
 msgstr ""
 
+#. throw new InvalidOperationException(S["The media path is invalid."].Value);
+#. throw new InvalidOperationException(S["The media path is invalid."].Value);
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:164
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:170
+msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
+msgid "The media path is invalid."
+msgstr ""
+
+#. throw new InvalidOperationException(S["Not authorized to upload media."].Value);
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:180
+msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
+msgid "Not authorized to upload media."
+msgstr ""
+
+#. throw new InvalidOperationException(S["This file extension is not allowed: {0}", extension].Value);
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:191
+msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
+msgid "This file extension is not allowed: {0}"
+msgstr ""
+
 #. ?? throw new Exception(S["The specified Blog Post doesn't exist anymore. Please create a new Blog Post."]);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:352
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:394
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The specified Blog Post doesn't exist anymore. Please create a new Blog Post."
 msgstr "Соодветниот пост на блогот веќе не постои. Ве молиме креирајте нов пост на блогот."
 
 #. throw new InvalidOperationException(S["Not authorized to delete this content"].Value);
 #. throw new InvalidOperationException(S["Not authorized to delete this content"].Value);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:409
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:476
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:451
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:518
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "Not authorized to delete this content"
 msgstr "Не сте овластени да ја избришете оваа содржина"
 
 #. throw new InvalidOperationException(S["The username or e-mail or password provided is incorrect."].Value);
-#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:425
+#: OrchardCore.Lists\RemotePublishing\MetaWeblogHandler.cs:467
 msgctxt "OrchardCore.Lists.RemotePublishing.MetaWeblogHandler"
 msgid "The username or e-mail or password provided is incorrect."
 msgstr "Поднесените корисничкото име, е-пошта или лозинка не се точни."
@@ -218,26 +238,32 @@ msgctxt "OrchardCore.Lists.Views.ListPartFeed.Edit"
 msgid "The number of elements to display in the feed."
 msgstr "Број на елементи кои треба да се прикажат на фидот."
 
+#. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List {0} Items", D[Model.ContainedContentTypeDefinitions[0].DisplayName, DataLocalizationContext.ContentType]]</a>
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:32
+msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
+msgid "List {0} Items"
+msgstr ""
+
 #. <a class="btn btn-secondary me-1" asp-action="Display" asp-controller="Admin" asp-route-contentItemId="@Model.Container.ContentItemId">@T["List Items"]</a>
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:29
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:36
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "List Items"
 msgstr ""
 
 #. @T["Edit {0}", D[Model.ContainerContentTypeDefinition?.DisplayName, DataLocalizationContext.ContentType]]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:35
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:43
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Edit {0}"
 msgstr ""
 
 #. @T["Create {0}", D[contentTypeDefinition.DisplayName, DataLocalizationContext.ContentType]]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:44
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:52
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "Create {0}"
 msgstr ""
 
 #. @T["New"]
-#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:50
+#: OrchardCore.Lists\Views\ListPartNavigationAdmin.cshtml:58
 msgctxt "OrchardCore.Lists.Views.ListPartNavigationAdmin"
 msgid "New"
 msgstr ""
@@ -302,8 +328,14 @@ msgctxt "OrchardCore.Lists.Views.ListPartSettings.Edit"
 msgid "When enabled, the list uses a full pager with numbered pages. Note: This requires an additional database query to determine the total item count."
 msgstr ""
 
+#. <a class="btn btn-sm btn-secondary" admin-for="@Model.ContentItem">@T["List {0} Items", D[Model.ContainedContentTypes[0], DataLocalizationContext.ContentType]]</a>
+#: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:10
+msgctxt "OrchardCore.Lists.Views.ListPartSummaryAdmin"
+msgid "List {0} Items"
+msgstr ""
+
 #. <a class="btn btn-sm btn-secondary" admin-for="@Model.ContentItem">@T["List Items"]</a>
-#: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:3
+#: OrchardCore.Lists\Views\ListPartSummaryAdmin.cshtml:14
 msgctxt "OrchardCore.Lists.Views.ListPartSummaryAdmin"
 msgid "List Items"
 msgstr ""
