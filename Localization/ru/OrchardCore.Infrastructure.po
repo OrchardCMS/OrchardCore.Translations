@@ -1,68 +1,70 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Infrastructure.pot\n"
 "X-Crowdin-File-ID: 760\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2026-10-02 10:53\n"
+"PO-Revision-Date: 2026-10-24 02:43\n"
 
-#. await Context.Output.WriteLineAsync(S["List of available commands:"]);
-#: OrchardCore.Infrastructure\Commands\Builtin\HelpCommand.cs:21
-msgctxt "OrchardCore.Environment.Commands.Builtin.HelpCommand"
-msgid "List of available commands:"
-msgstr "Список доступных команд:"
-
-#. await Context.Output.WriteLineAsync(S["Command {0} doesn't exist", command]);
-#: OrchardCore.Infrastructure\Commands\Builtin\HelpCommand.cs:45
+#. Format arguments: {0}: command
+#: Commands/Builtin/HelpCommand.cs
+#, csharp-format
 msgctxt "OrchardCore.Environment.Commands.Builtin.HelpCommand"
 msgid "Command {0} doesn't exist"
 msgstr "Команда {0} не существует"
 
-#. return S["{0}.{1}: no help text", descriptor.MethodInfo.DeclaringType?.FullName, descriptor.MethodInfo.Name];
-#: OrchardCore.Infrastructure\Commands\Builtin\HelpCommand.cs:66
+#: Commands/Builtin/HelpCommand.cs
+msgctxt "OrchardCore.Environment.Commands.Builtin.HelpCommand"
+msgid "List of available commands:"
+msgstr "Список доступных команд:"
+
+#. Format arguments: {0}: descriptor.MethodInfo.DeclaringType?.FullName; {1}: descriptor.MethodInfo.Name
+#: Commands/Builtin/HelpCommand.cs
+#, csharp-format
 msgctxt "OrchardCore.Environment.Commands.Builtin.HelpCommand"
 msgid "{0}.{1}: no help text"
 msgstr "{0}.{1}: нет текста помощи"
 
-#. throw new Exception(S["Multiple commands found matching arguments \"{0}\". Commands available: {1}.",
-#: OrchardCore.Infrastructure\Commands\DefaultCommandManager.cs:34
+#. Format arguments: {0}: commandMatch; {1}: commandList
+#: Commands/DefaultCommandManager.cs
+#, csharp-format
 msgctxt "OrchardCore.Environment.Commands.DefaultCommandManager"
 msgid "Multiple commands found matching arguments \"{0}\". Commands available: {1}."
 msgstr "Несколько команд найдено для соответствующих аргументов \"{0}\". Доступные команды: {1}."
 
-#. throw new Exception(S["No command found matching arguments \"{0}\". Commands available: {1}.",
-#: OrchardCore.Infrastructure\Commands\DefaultCommandManager.cs:37
+#. Format arguments: {0}: commandMatch; {1}: commandList
+#: Commands/DefaultCommandManager.cs
+#, csharp-format
 msgctxt "OrchardCore.Environment.Commands.DefaultCommandManager"
 msgid "No command found matching arguments \"{0}\". Commands available: {1}."
 msgstr "Команда не найдена для соответствующих аргументов \"{0}\". Команды доступны: {1}."
 
-#. problemDetails.Title = S["Authentication required"];
-#: OrchardCore.Infrastructure\ErrorHandling\ApiProblemDetailsMiddleware.cs:78
-msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
-msgid "Authentication required"
-msgstr ""
-
-#. problemDetails.Detail = S["Authentication is required to access this resource. Additional details may be found in the WWW-Authenticate HTTP response header."];
-#: OrchardCore.Infrastructure\ErrorHandling\ApiProblemDetailsMiddleware.cs:79
-msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
-msgid "Authentication is required to access this resource. Additional details may be found in the WWW-Authenticate HTTP response header."
-msgstr ""
-
-#. problemDetails.Title = S["Access forbidden"];
-#: OrchardCore.Infrastructure\ErrorHandling\ApiProblemDetailsMiddleware.cs:83
+#: ErrorHandling/ApiProblemDetailsMiddleware.cs
 msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
 msgid "Access forbidden"
 msgstr ""
 
-#. problemDetails.Detail = S["Access to this resource is forbidden or you do not have sufficient permissions to perform this action."];
-#: OrchardCore.Infrastructure\ErrorHandling\ApiProblemDetailsMiddleware.cs:84
+#: ErrorHandling/ApiProblemDetailsMiddleware.cs
 msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
 msgid "Access to this resource is forbidden or you do not have sufficient permissions to perform this action."
+msgstr ""
+
+#: ErrorHandling/ApiProblemDetailsMiddleware.cs
+msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
+msgid "Authentication is required to access this resource. Additional details may be found in the WWW-Authenticate HTTP response header."
+msgstr ""
+
+#: ErrorHandling/ApiProblemDetailsMiddleware.cs
+msgctxt "OrchardCore.Infrastructure.ErrorHandling.ApiProblemDetailsMiddleware"
+msgid "Authentication required"
 msgstr ""
 
