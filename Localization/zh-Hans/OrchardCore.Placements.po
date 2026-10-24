@@ -1,364 +1,301 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Placements.pot\n"
 "X-Crowdin-File-ID: 788\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2026-10-02 11:04\n"
+"PO-Revision-Date: 2026-10-24 03:04\n"
 
-#. .Add(S["Design"], design => design
-#: OrchardCore.Placements\AdminMenu.cs:18
+#: AdminMenu.cs
 msgctxt "OrchardCore.Placements.AdminMenu"
 msgid "Design"
 msgstr "设计"
 
-#. .Add(S["Placements"], S["Placements"].PrefixPosition(), import => import
-#. .Add(S["Placements"], S["Placements"].PrefixPosition(), import => import
-#: OrchardCore.Placements\AdminMenu.cs:19
-#: OrchardCore.Placements\AdminMenu.cs:19
+#: AdminMenu.cs
 msgctxt "OrchardCore.Placements.AdminMenu"
 msgid "Placements"
 msgstr "位置"
 
-#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
-#: OrchardCore.Placements\Controllers\AdminController.cs:105
-msgctxt "OrchardCore.Placements.Controllers.AdminController"
-msgid "Delete"
-msgstr "删除"
-
-#. ModelState.AddModelError(nameof(viewModel.ShapeType), S["The Shape type can't be empty."]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:193
-msgctxt "OrchardCore.Placements.Controllers.AdminController"
-msgid "The Shape type can't be empty."
-msgstr "形状类型不能为空。"
-
-#. await _notifier.WarningAsync(H["Placement rules for \"{0}\" already exists. Please edit existing rule.", viewModel.ShapeType]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:204
-msgctxt "OrchardCore.Placements.Controllers.AdminController"
-msgid "Placement rules for \"{0}\" already exists. Please edit existing rule."
-msgstr "{0} 的布置规则已经存在。请编辑现有的规则。"
-
-#. await _notifier.ErrorAsync(H["A valid placement must contain either <b>place</b>, <b>shape</b>, <b>wrappers</b> or <b>alternates</b>. Please correct the placements at positions: {0}.", string.Join(", ", emptyNodesIndexes)]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:218
+#. Format arguments: {0}: string.Join(", ", emptyNodesIndexes)
+#: Controllers/AdminController.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "A valid placement must contain either <b>place</b>, <b>shape</b>, <b>wrappers</b> or <b>alternates</b>. Please correct the placements at positions: {0}."
 msgstr "有效的位置必须包含 <b>位置</b>, <b>形状</b>, <b>包装器</b> 或 <b>候补</b>请更正位置的位置： {0}。"
 
-#. await _notifier.SuccessAsync(H["The \"{0}\" placement have been saved.", viewModel.ShapeType]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:228
-msgctxt "OrchardCore.Placements.Controllers.AdminController"
-msgid "The \"{0}\" placement have been saved."
-msgstr "\"{0}\"的位置已被保存。"
-
-#. await _notifier.SuccessAsync(H["The \"{0}\" placement has been deleted.", viewModel.ShapeType]);
-#. await _notifier.SuccessAsync(H["The \"{0}\" placement has been deleted.", shapeType]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:234
-#: OrchardCore.Placements\Controllers\AdminController.cs:266
-msgctxt "OrchardCore.Placements.Controllers.AdminController"
-msgid "The \"{0}\" placement has been deleted."
-msgstr "\"{0}\"的位置已被删除。"
-
-#. await _notifier.ErrorAsync(H["An error occurred while parsing the placement<br/>{0}", jsonException.Message]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:239
+#. Format arguments: {0}: jsonException.Message
+#: Controllers/AdminController.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "An error occurred while parsing the placement<br/>{0}"
 msgstr "解析位置时发生错误<br/>{0}"
 
-#. await _notifier.ErrorAsync(H["An error occurred while saving the placement."]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:244
+#: Controllers/AdminController.cs
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "An error occurred while saving the placement."
 msgstr "保存位置时出错。"
 
-#. await _notifier.SuccessAsync(H["Placements successfully removed."]);
-#: OrchardCore.Placements\Controllers\AdminController.cs:291
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Placements.Controllers.AdminController"
+msgid "Delete"
+msgstr "删除"
+
+#. Format arguments: {0}: viewModel.ShapeType
+#: Controllers/AdminController.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Controllers.AdminController"
+msgid "Placement rules for \"{0}\" already exists. Please edit existing rule."
+msgstr "{0} 的布置规则已经存在。请编辑现有的规则。"
+
+#: Controllers/AdminController.cs
 msgctxt "OrchardCore.Placements.Controllers.AdminController"
 msgid "Placements successfully removed."
 msgstr "位置已成功删除。"
 
-#. Category = S["Development"];
-#: OrchardCore.Placements\Deployment\PlacementsDeploymentStep.cs:19
-msgctxt "OrchardCore.Placements.Deployment.PlacementsDeploymentStep"
-msgid "Development"
+#. Format arguments: {0}: shapeType, viewModel.ShapeType
+#: Controllers/AdminController.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Controllers.AdminController"
+msgid "The \"{0}\" placement has been deleted."
+msgstr "\"{0}\"的位置已被删除。"
+
+#. Format arguments: {0}: viewModel.ShapeType
+#: Controllers/AdminController.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Controllers.AdminController"
+msgid "The \"{0}\" placement have been saved."
+msgstr "\"{0}\"的位置已被保存。"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Placements.Controllers.AdminController"
+msgid "The Shape type can't be empty."
+msgstr "形状类型不能为空。"
+
+#: Permissions.cs
+msgctxt "OrchardCore.Placements.Permissions"
+msgid "Manage placements"
 msgstr ""
 
-#. Description = S["Placement for a {0} part", displayName],
-#: OrchardCore.Placements\Settings\PlacementContentPartDefinitionDriver.cs:30
+#. Format arguments: {0}: displayName
+#: Settings/PlacementContentPartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentPartDefinitionDriver"
 msgid "Placement for a {0} part"
 msgstr "{0} 部分的位置"
 
-#. Description = S["Placement for a {0} part in detail views", displayName],
-#: OrchardCore.Placements\Settings\PlacementContentPartDefinitionDriver.cs:38
+#. Format arguments: {0}: displayName
+#: Settings/PlacementContentPartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentPartDefinitionDriver"
 msgid "Placement for a {0} part in detail views"
 msgstr "{0} 部分详细视图的位置"
 
-#. Description = S["Placement for a {0} part in summary views", displayName],
-#: OrchardCore.Placements\Settings\PlacementContentPartDefinitionDriver.cs:46
+#. Format arguments: {0}: displayName
+#: Settings/PlacementContentPartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentPartDefinitionDriver"
 msgid "Placement for a {0} part in summary views"
 msgstr "在摘要视图中放置一个 {0} 部分"
 
-#. Description = S["Placement in admin editor for a {0} part", displayName],
-#: OrchardCore.Placements\Settings\PlacementContentPartDefinitionDriver.cs:53
+#. Format arguments: {0}: displayName
+#: Settings/PlacementContentPartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentPartDefinitionDriver"
 msgid "Placement in admin editor for a {0} part"
 msgstr "在 {0} 部分的管理员编辑器中的位置"
 
-#. Description = S["Placement for the {0} field in a {1}", displayName, partName],
-#: OrchardCore.Placements\Settings\PlacementContentPartFieldDefinitionDisplayDriver.cs:33
-msgctxt "OrchardCore.Placements.Settings.PlacementContentPartFieldDefinitionDisplayDriver"
+#. Format arguments: {0}: displayName; {1}: partName
+#: Settings/PlacementContentPartFieldDefinitionDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} field in a {1}"
-msgstr "{0} 字段在 {1} 中的位置"
+msgstr ""
 
-#. Description = S["Placement for the {0} field in a {1} in detail views", displayName, partName],
-#: OrchardCore.Placements\Settings\PlacementContentPartFieldDefinitionDisplayDriver.cs:42
-msgctxt "OrchardCore.Placements.Settings.PlacementContentPartFieldDefinitionDisplayDriver"
+#. Format arguments: {0}: displayName; {1}: partName
+#: Settings/PlacementContentPartFieldDefinitionDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} field in a {1} in detail views"
-msgstr "{0} 字段放置于一个 {1} 的详细视图"
+msgstr ""
 
-#. Description = S["Placement for the {0} field in a {1} in summary views", displayName, partName],
-#: OrchardCore.Placements\Settings\PlacementContentPartFieldDefinitionDisplayDriver.cs:51
-msgctxt "OrchardCore.Placements.Settings.PlacementContentPartFieldDefinitionDisplayDriver"
+#. Format arguments: {0}: displayName; {1}: partName
+#: Settings/PlacementContentPartFieldDefinitionDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} field in a {1} in summary views"
-msgstr "{0} 字段放置在一个 {1} 的摘要视图"
+msgstr ""
 
-#. Description = S["Placement in admin editor for the {0} field in a {1}", displayName, partName],
-#: OrchardCore.Placements\Settings\PlacementContentPartFieldDefinitionDisplayDriver.cs:59
-msgctxt "OrchardCore.Placements.Settings.PlacementContentPartFieldDefinitionDisplayDriver"
-msgid "Placement in admin editor for the {0} field in a {1}"
-msgstr "在 {0} 字段的管理员编辑器中放置 {1}"
-
-#. Description = S["Placement for the {0} part in a {1} type", partName, displayName],
-#: OrchardCore.Placements\Settings\PlacementContentTypePartDefinitionDriver.cs:32
+#. Format arguments: {0}: partName; {1}: displayName
+#: Settings/PlacementContentTypePartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} part in a {1} type"
 msgstr "{0} 部件在 {1} 类型中的位置"
 
-#. Description = S["Placement for the {0} part in a {1} type in detail views", partName, displayName],
-#: OrchardCore.Placements\Settings\PlacementContentTypePartDefinitionDriver.cs:41
+#. Format arguments: {0}: partName; {1}: displayName
+#: Settings/PlacementContentTypePartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} part in a {1} type in detail views"
 msgstr "{0} 部件在 {1} 类型中的位置"
 
-#. Description = S["Placement for the {0} part in a {1} type in summary views", partName, displayName],
-#: OrchardCore.Placements\Settings\PlacementContentTypePartDefinitionDriver.cs:50
+#. Format arguments: {0}: partName; {1}: displayName
+#: Settings/PlacementContentTypePartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement for the {0} part in a {1} type in summary views"
 msgstr "{0} 部件在 {1} 类型中的位置"
 
-#. Description = S["Placement in admin editor for the {0} part in a {1} type", partName, displayName],
-#: OrchardCore.Placements\Settings\PlacementContentTypePartDefinitionDriver.cs:58
+#. Format arguments: {0}: displayName; {1}: partName
+#: Settings/PlacementContentPartFieldDefinitionDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
+msgid "Placement in admin editor for the {0} field in a {1}"
+msgstr ""
+
+#. Format arguments: {0}: partName; {1}: displayName
+#: Settings/PlacementContentTypePartDefinitionDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Placements.Settings.PlacementContentTypePartDefinitionDriver"
 msgid "Placement in admin editor for the {0} part in a {1} type"
 msgstr "{0} 部件在 {1} 类型中的位置"
 
-#. <breadcrumb name="PlacementsEdit" title="@(Model.Creating ? T["Create Placement"] : T["Edit Placement"])">
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Create Placement"
-msgstr "创建位置"
-
-#. <breadcrumb name="PlacementsEdit" title="@(Model.Creating ? T["Create Placement"] : T["Edit Placement"])">
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:13
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Edit Placement"
-msgstr "编辑位置"
-
-#. <breadcrumb-item id="Placements" action="Index" controller="Admin" area="OrchardCore.Placements" permission="@Permissions.ManagePlacements.Name">@T["Placements"]</breadcrumb-item>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:14
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Placements"
-msgstr ""
-
-#. <label asp-for="ShapeType" class="ocat-label">@T["Shape type"]</label>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:26
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Shape type"
-msgstr "形状类型"
-
-#. <span class="hint">@T["The type of the shape."]</span>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:30
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "The type of the shape."
-msgstr "形状的类型。"
-
-#. <label asp-for="Nodes" class="ocat-label">@T["Placement rules"]</label>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:35
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Placement rules"
-msgstr "位置规则"
-
-#. <button type="submit" name="submit" class="btn btn-primary">@T["Save"]</button>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:44
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Save"
-msgstr "保存"
-
-#. <span class="visually-hidden">@T["Toggle Dropdown"]</span>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:46
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Toggle Dropdown"
-msgstr "切换下拉列表"
-
-#. <button class="dropdown-item" name="submit" type="submit" value="SaveAndContinue">@T["and continue"]</button>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:49
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "and continue"
-msgstr "并继续"
-
-#. <a asp-route-action="Delete" asp-route-area="OrchardCore.Placements" asp-route-shapeType="@Model.ShapeType" class="btn btn-danger" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Delete"]</a>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:55
-msgctxt "OrchardCore.Placements.Views.Admin.Edit"
-msgid "Delete"
-msgstr "删除"
-
-#. <a class="btn btn-secondary cancel" role="button" href="@returnUrl">@T["Cancel"]</a>
-#: OrchardCore.Placements\Views\Admin\Edit.cshtml:58
+#: Views/Admin/Edit.cshtml
 msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Cancel"
 msgstr "取消"
 
-#. <breadcrumb name="Placements" title="@T["Placements"]" />
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:8
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Placements"
-msgstr "位置"
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Create Placement"
+msgstr "创建位置"
 
-#. <form asp-action="Index" data-list-management data-selected-label="@T["selected"]">
-#. <ul class="list-group with-checkbox bulk-select-list" data-checkbox-name="itemIds" data-bulk-action-name="Options.BulkAction" data-selected-text="@T["selected"]">
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:12
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:33
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "selected"
-msgstr "已选择"
-
-#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:23
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Search"
-msgstr "搜索"
-
-#. <a asp-route-action="Create" class="btn btn-secondary create" role="button" asp-route-returnUrl="@FullRequestPath">@T["Add Placement"]</a>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:27
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Add Placement"
-msgstr "添加位置"
-
-#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:41
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Select All"
-msgstr "选择全部"
-
-#. <label id="items" for="select-all">@T.Plural(Model.ShapePlacements.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:42
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "{0} item"
-msgid_plural "{0} items"
-msgstr[0] "{0} 个"
-
-#. <label id="items" for="select-all">@T.Plural(Model.ShapePlacements.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:42
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Items {0} to {1}"
-msgstr "项目 {0} 到 {1}"
-
-#. <label id="items" for="select-all">@T.Plural(Model.ShapePlacements.Count, "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:42
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid " / {0} item in total"
-msgid_plural " / {0} items in total"
-msgstr[0] " / 总计 {0} 个项目"
-
-#. @T["Actions"]
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:49
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Actions"
-msgstr "操作"
-
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:54
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Bulk Action"
-msgstr "批量操作"
-
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:54
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Are you sure you want to {0} these items?"
-msgstr "您确定要 {0} 这些项目吗？"
-
-#. <a asp-action="Edit" asp-route-shapeType="@entry.ShapeType" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:70
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
-msgid "Edit"
-msgstr "编辑"
-
-#. <a asp-action="Delete" asp-route-shapeType="@entry.ShapeType" asp-route-returnUrl="@FullRequestPath" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:71
-msgctxt "OrchardCore.Placements.Views.Admin.Index"
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
 msgid "Delete"
 msgstr "删除"
 
-#. @T["<strong>Nothing here!</strong> There are no placements at the moment."]
-#: OrchardCore.Placements\Views\Admin\Index.cshtml:82
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Edit Placement"
+msgstr "编辑位置"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Placement rules"
+msgstr "位置规则"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Placements"
+msgstr ""
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Save"
+msgstr "保存"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Shape type"
+msgstr "形状类型"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "The type of the shape."
+msgstr "形状的类型。"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "Toggle Dropdown"
+msgstr "切换下拉列表"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Edit"
+msgid "and continue"
+msgstr "并继续"
+
+#: Views/Admin/Index.cshtml
 msgctxt "OrchardCore.Placements.Views.Admin.Index"
 msgid "<strong>Nothing here!</strong> There are no placements at the moment."
 msgstr "<strong>这里没有任何东西！</strong> 目前没有任何位置。"
 
-#. <h5>@T["Placements"]</h5>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Edit.cshtml:5
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "Actions"
+msgstr "操作"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "Add Placement"
+msgstr "添加位置"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "Placements"
+msgstr "位置"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "Search"
+msgstr "搜索"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "Shape type"
+msgstr ""
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Placements.Views.Admin.Index"
+msgid "selected"
+msgstr "已选择"
+
+#: Views/Items/PlacementsDeploymentStep.Edit.cshtml
 msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Edit"
 msgid "Placements"
 msgstr "位置"
 
-#. <h5>@T["Placements"]</h5>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Summary.cshtml:3
-msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Summary"
-msgid "Placements"
-msgstr "位置"
-
-#. <span class="hint">@T["Adds all placements to the plan."]</span>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Summary.cshtml:5
+#: Views/Items/PlacementsDeploymentStep.Summary.cshtml
 msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Summary"
 msgid "Adds all placements to the plan."
 msgstr "将所有位置添加到计划中。"
 
-#. <h4 class="card-title">@T["All Placements"]</h4>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Thumbnail.cshtml:3
+#: Views/Items/PlacementsDeploymentStep.Summary.cshtml
+msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Summary"
+msgid "Placements"
+msgstr "位置"
+
+#: Views/Items/PlacementsDeploymentStep.Thumbnail.cshtml
 msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Thumbnail"
 msgid "All Placements"
 msgstr "所有位置"
 
-#. <p>@T["Exports placements defined in Placements module."]</p>
-#: OrchardCore.Placements\Views\Items\PlacementsDeploymentStep.Thumbnail.cshtml:4
+#: Views/Items/PlacementsDeploymentStep.Thumbnail.cshtml
 msgctxt "OrchardCore.Placements.Views.Items.PlacementsDeploymentStep.Thumbnail"
 msgid "Exports placements defined in Placements module."
 msgstr "导出占位模块中定义的位置。"
 
-#. @T["Edit placements"]
-#: OrchardCore.Placements\Views\PlacementSettings.cshtml:5
+#: Views/PlacementSettings.cshtml
 msgctxt "OrchardCore.Placements.Views.PlacementSettings"
 msgid "Edit placements"
 msgstr "编辑位置"
 
-#. <a asp-route-action="Edit" asp-route-area="OrchardCore.Placements" asp-route-shapeType="@Model.ShapeType" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-#: OrchardCore.Placements\Views\Shared\DisplayTemplates\ShapePlacementViewModel.cshtml:5
-msgctxt "OrchardCore.Placements.Views.Shared.DisplayTemplates.ShapePlacementViewModel"
-msgid "Edit"
-msgstr "编辑"
-
-#. <a asp-route-action="Delete" asp-route-area="OrchardCore.Placements" asp-route-shapeType="@Model.ShapeType" class="btn btn-danger btn-sm" role="button" data-url-af="UnsafeUrl RemoveUrl">@T["Delete"]</a>
-#: OrchardCore.Placements\Views\Shared\DisplayTemplates\ShapePlacementViewModel.cshtml:6
-msgctxt "OrchardCore.Placements.Views.Shared.DisplayTemplates.ShapePlacementViewModel"
+#: Views/ShapePlacement.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Placements.Views.ShapePlacement.Buttons.SummaryAdmin"
 msgid "Delete"
-msgstr "删除"
+msgstr ""
+
+#: Views/ShapePlacement.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Placements.Views.ShapePlacement.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr ""
 
