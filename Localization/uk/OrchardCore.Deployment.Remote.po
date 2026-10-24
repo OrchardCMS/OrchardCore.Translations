@@ -1,544 +1,371 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Deployment.Remote.pot\n"
 "X-Crowdin-File-ID: 728\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2026-10-02 10:42\n"
+"PO-Revision-Date: 2026-10-24 02:59\n"
 
-#. .Add(S["Configuration"], configuration => configuration
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:20
-msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
-msgid "Configuration"
-msgstr "Конфігурація"
-
-#. .Add(S["Import/Export"], import => import
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:21
-msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
-msgid "Import/Export"
-msgstr "Імпорт/Експорт"
-
-#. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Instances"], S["Remote Instances"].PrefixPosition(), remote => remote
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:22
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:22
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:41
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:41
-msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
-msgid "Remote Instances"
-msgstr "Віддалені екземпляри"
-
-#. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
-#. .Add(S["Remote Clients"], S["Remote Clients"].PrefixPosition(), remote => remote
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:27
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:27
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:46
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:46
-msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
-msgid "Remote Clients"
-msgstr "Віддалені клієнти"
-
-#. .Add(S["Tools"], tools => tools
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:39
-msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
-msgid "Tools"
-msgstr "Інструменти"
-
-#. .Add(S["Deployments"], import => import
-#: OrchardCore.Deployment.Remote\AdminMenu.cs:40
+#: AdminMenu.cs
 msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
 msgid "Deployments"
 msgstr "Розгортання"
 
-#. await _notifier.SuccessAsync(H["Deployment executed successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\ExportRemoteInstanceController.cs:114
-msgctxt "OrchardCore.Deployment.Remote.Controllers.ExportRemoteInstanceController"
-msgid "Deployment executed successfully."
-msgstr "Розгортання успішно виконано."
+#: AdminMenu.cs
+msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
+msgid "Remote Clients"
+msgstr "Віддалені клієнти"
 
-#. await _notifier.ErrorAsync(H["An error occurred while sending the deployment to the remote instance: \"{0} ({1})\"", response.ReasonPhrase, (int)response.StatusCode]);
-#: OrchardCore.Deployment.Remote\Controllers\ExportRemoteInstanceController.cs:118
+#: AdminMenu.cs
+msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
+msgid "Remote Instances"
+msgstr "Віддалені екземпляри"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Deployment.Remote.AdminMenu"
+msgid "Tools"
+msgstr "Інструменти"
+
+#. Format arguments: {0}: response.ReasonPhrase; {1}: response.StatusCode
+#: Controllers/ExportRemoteInstanceController.cs
+#, csharp-format
 msgctxt "OrchardCore.Deployment.Remote.Controllers.ExportRemoteInstanceController"
 msgid "An error occurred while sending the deployment to the remote instance: \"{0} ({1})\""
 msgstr "Виникла помилка при відправці розгортання до віддаленої інстанції: \"{0} ({1})\""
 
-#. await _notifier.ErrorAsync(H["The deployment plan failed with the following errors: {0}", string.Join(' ', e.StepResult.Errors)]);
-#: OrchardCore.Deployment.Remote\Controllers\ImportRemoteInstanceController.cs:110
+#: Controllers/ExportRemoteInstanceController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.ExportRemoteInstanceController"
+msgid "Deployment executed successfully."
+msgstr "Розгортання успішно виконано."
+
+#. Format arguments: {0}: string.Join(' ', e.StepResult.Errors)
+#: Controllers/ImportRemoteInstanceController.cs
+#, csharp-format
 msgctxt "OrchardCore.Deployment.Remote.Controllers.ImportRemoteInstanceController"
 msgid "The deployment plan failed with the following errors: {0}"
 msgstr "План розгортання не вдалося виконати через такі помилки: {0}"
 
-#. await _notifier.ErrorAsync(H["Unexpected error occurred while executing a deployment plan."]);
-#: OrchardCore.Deployment.Remote\Controllers\ImportRemoteInstanceController.cs:116
+#: Controllers/ImportRemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.ImportRemoteInstanceController"
 msgid "Unexpected error occurred while executing a deployment plan."
 msgstr "Під час виконання плану розгортання сталася неочікувана помилка."
 
-#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:96
+#: Controllers/RemoteClientController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Delete"
 msgstr "Видалити"
 
-#. await _notifier.SuccessAsync(H["Remote client created successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:139
+#: Controllers/RemoteClientController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote client created successfully."
 msgstr "Віддаленого клієнта успішно створено."
 
-#. await _notifier.SuccessAsync(H["Remote client updated successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:195
-msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
-msgid "Remote client updated successfully."
-msgstr "Віддалений клієнт оновлений успішно."
-
-#. await _notifier.SuccessAsync(H["Remote client deleted successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:221
+#: Controllers/RemoteClientController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote client deleted successfully."
 msgstr "Віддалений клієнт успішно видалений."
 
-#. await _notifier.SuccessAsync(H["Remote clients successfully removed."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:249
+#: Controllers/RemoteClientController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
+msgid "Remote client updated successfully."
+msgstr "Віддалений клієнт оновлений успішно."
+
+#: Controllers/RemoteClientController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "Remote clients successfully removed."
 msgstr "Віддалені клієнти успішно вилучені."
 
-#. ModelState.AddModelError(nameof(EditRemoteClientViewModel.ClientName), S["The client name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:263
-msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
-msgid "The client name is mandatory."
-msgstr "Ім'я клієнта є обов'язковим."
-
-#. ModelState.AddModelError(nameof(EditRemoteClientViewModel.ApiKey), S["The api key is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteClientController.cs:268
+#: Controllers/RemoteClientController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
 msgid "The api key is mandatory."
 msgstr "Ключ API є обов'язковим."
 
-#. new SelectListItem(S["Delete"], nameof(ContentsBulkAction.Remove)),
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:89
+#: Controllers/RemoteClientController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteClientController"
+msgid "The client name is mandatory."
+msgstr "Ім'я клієнта є обов'язковим."
+
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Delete"
 msgstr "Видалити"
 
-#. await _notifier.SuccessAsync(H["Remote instance created successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:132
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instance created successfully."
 msgstr "Віддалений екземпляр успішно створено."
 
-#. await _notifier.SuccessAsync(H["Remote instance updated successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:190
-msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
-msgid "Remote instance updated successfully."
-msgstr "Віддалений екземпляр успішно оновлено."
-
-#. await _notifier.SuccessAsync(H["Remote instance deleted successfully."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:216
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instance deleted successfully."
 msgstr "Віддалений екземпляр успішно видалено."
 
-#. await _notifier.SuccessAsync(H["Remote instances successfully removed."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:244
+#: Controllers/RemoteInstanceController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
+msgid "Remote instance updated successfully."
+msgstr "Віддалений екземпляр успішно оновлено."
+
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "Remote instances successfully removed."
 msgstr "Віддалені екземпляри успішно видалено."
 
-#. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Name), S["The name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:258
-msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
-msgid "The name is mandatory."
-msgstr "Назва обов'язкова."
-
-#. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.ClientName), S["The client name is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:263
-msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
-msgid "The client name is mandatory."
-msgstr "Ім'я клієнта є обов'язковим."
-
-#. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.ApiKey), S["The api key is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:268
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The api key is mandatory."
 msgstr "Ключ API є обов'язковим."
 
-#. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Url), S["The url is mandatory."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:273
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
-msgid "The url is mandatory."
-msgstr "Url-адреса обов'язкова."
+msgid "The client name is mandatory."
+msgstr "Ім'я клієнта є обов'язковим."
 
-#. ModelState.AddModelError(nameof(EditRemoteInstanceViewModel.Url), S["The url is invalid."]);
-#: OrchardCore.Deployment.Remote\Controllers\RemoteInstanceController.cs:279
+#: Controllers/RemoteInstanceController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
+msgid "The name is mandatory."
+msgstr "Назва обов'язкова."
+
+#: Controllers/RemoteInstanceController.cs
 msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
 msgid "The url is invalid."
 msgstr "Url-адреса недійсна."
 
-#. description: S["Sends the deployment plan to a remote instance."],
-#: OrchardCore.Deployment.Remote\Services\RemoteInstanceDeploymentTargetProvider.cs:27
-msgctxt "OrchardCore.Deployment.RemoteInstanceDeploymentTargetProvider"
-msgid "Sends the deployment plan to a remote instance."
-msgstr "Надсилає план розгортання до віддаленої інстанції."
+#: Controllers/RemoteInstanceController.cs
+msgctxt "OrchardCore.Deployment.Remote.Controllers.RemoteInstanceController"
+msgid "The url is mandatory."
+msgstr "Url-адреса обов'язкова."
 
-#. <label asp-for="ClientName" class="ocat-label">@T["Client Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Create.cshtml:7
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
-msgid "Client Name"
-msgstr "Ім'я клієнта"
-
-#. <label asp-for="ApiKey" class="ocat-label">@T["Api Key"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Create.cshtml:15
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
-msgid "Api Key"
-msgstr "Ключ API"
-
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Create.cshtml:24
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
-msgid "Create"
-msgstr "Створити"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Create.cshtml:25
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
-msgid "Cancel"
-msgstr "Скасувати"
-
-#. <breadcrumb name="RemoteInstancesCreate" title="@T["Create Remote Instance"]">
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:4
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Create Remote Instance"
-msgstr "Створення віддаленого екземпляра"
-
-#. <breadcrumb-item id="RemoteInstances" action="Index" controller="RemoteInstance" area="OrchardCore.Deployment.Remote" permission="@DeploymentPermissions.ManageRemoteInstances.Name">@T["Remote Instances"]</breadcrumb-item>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:5
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Remote Instances"
+#: Views/RemoteClient.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Buttons.SummaryAdmin"
+msgid "Delete"
 msgstr ""
 
-#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:12
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Name"
-msgstr "Ім’я"
+#: Views/RemoteClient.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr ""
 
-#. <label asp-for="Url" class="ocat-label">@T["Url"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:20
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Url"
-msgstr "URL-адреса"
-
-#. <label asp-for="ClientName" class="ocat-label">@T["Client Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:28
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Client Name"
-msgstr "Ім'я клієнта"
-
-#. <label asp-for="ApiKey" class="ocat-label">@T["Api Key"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:36
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+#: Views/RemoteClient/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
 msgid "Api Key"
 msgstr "Ключ API"
 
-#. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:45
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
-msgid "Create"
-msgstr "Створити"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Create.cshtml:46
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+#: Views/RemoteClient/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#. <breadcrumb name="RemoteClientsEdit" title="@T["Edit Remote Client"]">
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:4
+#: Views/RemoteClient/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
+msgid "Client Name"
+msgstr "Ім'я клієнта"
+
+#: Views/RemoteClient/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Create"
+msgid "Create"
+msgstr "Створити"
+
+#: Views/RemoteClient/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
+msgid "Api Key"
+msgstr "Ключ API"
+
+#: Views/RemoteClient/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: Views/RemoteClient/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
+msgid "Client Name"
+msgstr "Ім'я клієнта"
+
+#: Views/RemoteClient/Edit.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
 msgid "Edit Remote Client"
 msgstr "Редагувати віддаленого клієнта"
 
-#. <breadcrumb-item id="RemoteClients" action="Index" controller="RemoteClient" area="OrchardCore.Deployment.Remote" permission="@DeploymentPermissions.ManageRemoteClients.Name">@T["Remote Clients"]</breadcrumb-item>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:5
+#: Views/RemoteClient/Edit.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
 msgid "Remote Clients"
 msgstr ""
 
-#. <label asp-for="ClientName" class="ocat-label">@T["Client Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:14
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
-msgid "Client Name"
-msgstr "Ім'я клієнта"
-
-#. <label asp-for="ApiKey" class="ocat-label">@T["Api Key"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:22
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
-msgid "Api Key"
-msgstr "Ключ API"
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:31
+#: Views/RemoteClient/Edit.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
 msgid "Save"
 msgstr "Зберегти"
 
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Edit.cshtml:32
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Edit"
-msgid "Cancel"
-msgstr "Скасувати"
-
-#. <breadcrumb name="RemoteInstancesEdit" title="@T["Edit Remote Instance"]">
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:4
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Edit Remote Instance"
-msgstr "Редагувати віддалений екземпляр"
-
-#. <breadcrumb-item id="RemoteInstances" action="Index" controller="RemoteInstance" area="OrchardCore.Deployment.Remote" permission="@DeploymentPermissions.ManageRemoteInstances.Name">@T["Remote Instances"]</breadcrumb-item>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:5
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Remote Instances"
-msgstr ""
-
-#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:14
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Name"
-msgstr "Назва"
-
-#. <label asp-for="Url" class="ocat-label">@T["Url"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:22
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Url"
-msgstr "Url-адреса"
-
-#. <label asp-for="ClientName" class="ocat-label">@T["Client Name"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:30
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Client Name"
-msgstr "Ім'я клієнта"
-
-#. <label asp-for="ApiKey" class="ocat-label">@T["Api Key"]</label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:38
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Api Key"
-msgstr "Ключ API"
-
-#. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:47
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Save"
-msgstr "Зберегти"
-
-#. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Edit.cshtml:48
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
-msgid "Cancel"
-msgstr "Скасувати"
-
-#. <breadcrumb name="RemoteClients" title="@T["Remote Clients"]" />
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:8
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Remote Clients"
-msgstr "Віддалені клієнти"
-
-#. @T["Url to use from client instances: <b>{0}</b>", Url.Action("Import", "ImportRemoteInstance", null, Context.Request.Scheme)]
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:12
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Url to use from client instances: <b>{0}</b>"
-msgstr "Url-адреса для використання з клієнтських інстанцій: <b>{0}</b>"
-
-#. <form asp-action="Index" data-list-management data-selected-label="@T["selected"]">
-#. <ul class="list-group with-checkbox bulk-select-list" data-selected-text="@T["selected"]">
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:16
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:36
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "selected"
-msgstr "обрано"
-
-#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:27
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Search"
-msgstr "Шукати"
-
-#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add Remote Client"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:31
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Add Remote Client"
-msgstr "Додати віддаленого клієнта"
-
-#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:45
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Select All"
-msgstr "Обрати все"
-
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteClients.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:46
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "{0} item"
-msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteClients.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:46
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Items {0} to {1}"
-msgstr "Елементів: {0} з {1}"
-
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteClients.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:46
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid " / {0} item in total"
-msgid_plural " / {0} items in total"
-msgstr[0] " / {0} всього елементів"
-msgstr[1] " / {0} всього елементів"
-msgstr[2] " / {0} всього елементів"
-msgstr[3] " / {0} всього елементів"
-
-#. @T["Actions"]
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:55
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Actions"
-msgstr "Дії"
-
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:60
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Bulk Action"
-msgstr "Масова дія"
-
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:60
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Are you sure you want to {0} these items?"
-msgstr "Ви справді бажаєте {0} ці елементи?"
-
-#. <a asp-action="Edit" asp-route-id="@entry.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:77
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Edit"
-msgstr "Редагувати"
-
-#. <a asp-action="Delete" asp-route-id="@entry.Id" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:78
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
-msgid "Delete"
-msgstr "Видалити"
-
-#. @T["<strong>Nothing here!</strong> There are no remote clients for the moment."]
-#: OrchardCore.Deployment.Remote\Views\RemoteClient\Index.cshtml:89
+#: Views/RemoteClient/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
 msgid "<strong>Nothing here!</strong> There are no remote clients for the moment."
 msgstr "<strong>Тут пусто!</strong> Наразі немає віддалених клієнтів."
 
-#. <breadcrumb name="RemoteInstances" title="@T["Remote Instances"]" />
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:8
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Remote Instances"
-msgstr "Віддалені екземпляри"
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
+msgid "Actions"
+msgstr "Дії"
 
-#. <form asp-action="Index" data-list-management data-selected-label="@T["selected"]">
-#. <ul class="list-group with-checkbox bulk-select-list" data-selected-text="@T["selected"]">
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:12
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:32
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
+msgid "Add Remote Client"
+msgstr "Додати віддаленого клієнта"
+
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
+msgid "Client name"
+msgstr ""
+
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
+msgid "Remote Clients"
+msgstr "Віддалені клієнти"
+
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
+msgid "Search"
+msgstr "Шукати"
+
+#: Views/RemoteClient/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteClient.Index"
 msgid "selected"
 msgstr "обрано"
 
-#. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:23
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Search"
-msgstr "Пошук"
+#: Views/RemoteInstance.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Buttons.SummaryAdmin"
+msgid "Delete"
+msgstr ""
 
-#. <a asp-route-action="Create" class="btn btn-secondary create" role="button">@T["Add Remote Instance"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:27
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Add Remote Instance"
-msgstr "Додати віддалений екземпляр"
+#: Views/RemoteInstance.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr ""
 
-#. <label class="form-check-label" for="select-all" id="select-all-label" title="@T["Select All"]"></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:40
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Select All"
-msgstr "Обрати все"
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Api Key"
+msgstr "Ключ API"
 
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteInstances.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:41
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "{0} item"
-msgid_plural "{0} items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Cancel"
+msgstr "Скасувати"
 
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteInstances.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:41
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Items {0} to {1}"
-msgstr "Елементи з {0} по {1}"
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Client Name"
+msgstr "Ім'я клієнта"
 
-#. <label id="items" for="select-all">@T.Plural(Model.RemoteInstances.Count(), "{0} item", "{0} items")<span class="text-muted" title="@T["Items {0} to {1}", startIndex, endIndex]">@T.Plural((int)Model.Pager.TotalItemCount, " / {0} item in total", " / {0} items in total")</span></label>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:41
-msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid " / {0} item in total"
-msgid_plural " / {0} items in total"
-msgstr[0] " / всього {0} елемент"
-msgstr[1] " / всього {0} елементи"
-msgstr[2] " / всього {0} елементи"
-msgstr[3] " / всього {0} елементів"
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Create"
+msgstr "Створити"
 
-#. @T["Actions"]
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:48
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Create Remote Instance"
+msgstr "Створення віддаленого екземпляра"
+
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Name"
+msgstr "Ім’я"
+
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Remote Instances"
+msgstr ""
+
+#: Views/RemoteInstance/Create.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Create"
+msgid "Url"
+msgstr "URL-адреса"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Api Key"
+msgstr "Ключ API"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Client Name"
+msgstr "Ім'я клієнта"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Edit Remote Instance"
+msgstr "Редагувати віддалений екземпляр"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Name"
+msgstr "Назва"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Remote Instances"
+msgstr ""
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Save"
+msgstr "Зберегти"
+
+#: Views/RemoteInstance/Edit.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Edit"
+msgid "Url"
+msgstr "Url-адреса"
+
+#: Views/RemoteInstance/Index.cshtml
+msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
+msgid "<strong>Nothing here!</strong> There are no remote instances for the moment."
+msgstr "<strong>Тут пусто!</strong> Наразі немає віддалених екземплярів."
+
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
 msgid "Actions"
 msgstr "Дії"
 
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:53
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Bulk Action"
-msgstr "Масова дія"
+msgid "Add Remote Instance"
+msgstr "Додати віддалений екземпляр"
 
-#. <li><a class="dropdown-item" href="javascript:void(0)" data-action="@item.Value" data-title="@T["Bulk Action"]" data-message="@T["Are you sure you want to {0} these items?", @item.Text.ToLower()]">@item.Text</a></li>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:53
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Are you sure you want to {0} these items?"
-msgstr "Ви впевнені, що хочете {0} ці елементи?"
+msgid "Name"
+msgstr ""
 
-#. <a asp-action="Edit" asp-route-id="@entry.Id" class="btn btn-primary btn-sm">@T["Edit"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:70
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Edit"
-msgstr "Редагувати"
+msgid "Remote Instances"
+msgstr "Віддалені екземпляри"
 
-#. <a asp-action="Delete" asp-route-id="@entry.Id" class="btn btn-danger btn-sm" data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:71
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "Delete"
-msgstr "Видалити"
+msgid "Search"
+msgstr "Пошук"
 
-#. @T["<strong>Nothing here!</strong> There are no remote instances for the moment."]
-#: OrchardCore.Deployment.Remote\Views\RemoteInstance\Index.cshtml:83
+#: Views/RemoteInstance/Index.cshtml
 msgctxt "OrchardCore.Deployment.Remote.Views.RemoteInstance.Index"
-msgid "<strong>Nothing here!</strong> There are no remote instances for the moment."
-msgstr "<strong>Тут пусто!</strong> Наразі немає віддалених екземплярів."
+msgid "selected"
+msgstr "обрано"
+
+#: Services/RemoteInstanceDeploymentTargetProvider.cs
+msgctxt "OrchardCore.Deployment.RemoteInstanceDeploymentTargetProvider"
+msgid "Sends the deployment plan to a remote instance."
+msgstr "Надсилає план розгортання до віддаленої інстанції."
 
