@@ -1,102 +1,97 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Alias.pot\n"
 "X-Crowdin-File-ID: 700\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2026-06-03 19:07\n"
+"PO-Revision-Date: 2026-10-24 02:59\n"
 
-#. Description = S["the alias part of the content item"];
-#: OrchardCore.Alias\GraphQL\AliasInputObjectType.cs:14
-msgctxt "OrchardCore.Alias.GraphQL.AliasInputObjectType"
-msgid "the alias part of the content item"
-msgstr "частина псевдоніма елемента контенту"
-
-#. AddScalarFilterFields<StringGraphType>("alias", S["the alias of the content item"]);
-#: OrchardCore.Alias\GraphQL\AliasInputObjectType.cs:16
+#: GraphQL/AliasInputObjectType.cs
 msgctxt "OrchardCore.Alias.GraphQL.AliasInputObjectType"
 msgid "the alias of the content item"
 msgstr "псевдонім елемента контенту"
 
-#. Description = S["Alternative path for the content item"];
-#: OrchardCore.Alias\GraphQL\AliasQueryObjectType.cs:12
+#: GraphQL/AliasInputObjectType.cs
+msgctxt "OrchardCore.Alias.GraphQL.AliasInputObjectType"
+msgid "the alias part of the content item"
+msgstr "частина псевдоніма елемента контенту"
+
+#: GraphQL/AliasQueryObjectType.cs
 msgctxt "OrchardCore.Alias.GraphQL.AliasQueryObjectType"
 msgid "Alternative path for the content item"
 msgstr "Альтернативний шлях для елемента контенту"
 
-#. yield return new ValidationResult(S["Your alias is too long. The alias can only be up to {0} characters. \"{1}\"", AliasPart.MaxAliasLength, part.Alias], new string[] { nameof(part.Alias) });
-#: OrchardCore.Alias\Models\AliasPartExtensions.cs:16
-msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
-msgid "Your alias is too long. The alias can only be up to {0} characters. \"{1}\""
-msgstr "Псевдонім занадто довгий. Може бути лише {0} символів. \"{1}\""
-
-#. yield return new ValidationResult(S["Your alias is already in use. \"{0}\"", part.Alias], new[] { nameof(part.Alias) });
-#: OrchardCore.Alias\Models\AliasPartExtensions.cs:21
+#. Format arguments: {0}: part.Alias
+#: Models/AliasPartExtensions.cs
+#, csharp-format
 msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
 msgid "Your alias is already in use. \"{0}\""
 msgstr "Цей псевдонім вже використовується. \"{0}\""
 
-#. context.Updater.ModelState.AddModelError(nameof(model.Pattern), S["Pattern doesn't contain a valid Liquid expression. Details: {0}", string.Join(" ", errors)]);
-#: OrchardCore.Alias\Settings\AliasPartSettingsDisplayDriver.cs:47
+#. Format arguments: {0}: AliasPart.MaxAliasLength; {1}: part.Alias
+#: Models/AliasPartExtensions.cs
+#, csharp-format
+msgctxt "OrchardCore.Alias.Models.AliasPartExtensions"
+msgid "Your alias is too long. The alias can only be up to {0} characters. \"{1}\""
+msgstr "Псевдонім занадто довгий. Може бути лише {0} символів. \"{1}\""
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Settings/AliasPartSettingsDisplayDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Alias.Settings.AliasPartSettingsDisplayDriver"
 msgid "Pattern doesn't contain a valid Liquid expression. Details: {0}"
 msgstr "Шаблон не містить дійсного виразу Liquid. Деталі: {0}"
 
-#. <label asp-for="Alias" class="ocat-label">@T["Alias"] </label>
-#: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:10
+#: Views/AliasPart.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
 msgid "Alias"
 msgstr "Псевдонім"
 
-#. @T["The alias of the content item."]
-#: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:15
-msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
-msgid "The alias of the content item."
-msgstr "Псевдонім елемента контенту."
-
-#: OrchardCore.Alias\Views\AliasPart.Edit.cshtml:0
+#: Views/AliasPart.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
 msgid "Leave empty to re-generate it."
 msgstr "Залиште порожнім, щоб згенерувати його повторно."
 
-#. <option value="" selected="@string.IsNullOrEmpty(currentEditor)">@T["Standard"]</option>
-#: OrchardCore.Alias\Views\AliasPart.Option.cshtml:4
+#: Views/AliasPart.Edit.cshtml
+msgctxt "OrchardCore.Alias.Views.AliasPart.Edit"
+msgid "The alias of the content item."
+msgstr "Псевдонім елемента контенту."
+
+#: Views/AliasPart.Option.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPart.Option"
 msgid "Standard"
 msgstr "Стандартний"
 
-#. <label asp-for="Options" class="ocat-label">@T["Options"]</label>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:14
-msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
-msgid "Options"
-msgstr "Опції"
-
-#. <option value="@AliasPartOptions.Editable" selected="@(Model.Options == AliasPartOptions.Editable)">@T["Alias is editable"]</option>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:17
+#: Views/AliasPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Alias is editable"
 msgstr "Псевдонім можна редагувати"
 
-#. <option value="@AliasPartOptions.GeneratedDisabled" selected="@(Model.Options == AliasPartOptions.GeneratedDisabled)">@T["Alias is generated and input is disabled"]</option>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:18
+#: Views/AliasPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Alias is generated and input is disabled"
 msgstr "Псевдонім згенеровано, а введення вимкнено"
 
-#. <label asp-for="Pattern" class="ocat-label">@T["Pattern"]</label>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:23
+#: Views/AliasPartSettings.Edit.cshtml
+msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
+msgid "Options"
+msgstr "Опції"
+
+#: Views/AliasPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "Pattern"
 msgstr "Шаблон"
 
-#. <span class="hint">@T["The pattern used to render the alias of this content type."]</span>
-#: OrchardCore.Alias\Views\AliasPartSettings.Edit.cshtml:26
+#: Views/AliasPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Alias.Views.AliasPartSettings.Edit"
 msgid "The pattern used to render the alias of this content type."
 msgstr "Шаблон, який використовується для показу псевдоніма цього типу контенту."
