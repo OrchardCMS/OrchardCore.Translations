@@ -1,188 +1,248 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: fa\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Users.Core.pot\n"
 "X-Crowdin-File-ID: 836\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
-"PO-Revision-Date: 2026-10-02 11:21\n"
+"PO-Revision-Date: 2026-10-24 03:21\n"
 
-#. Description = S["Represents a user."];
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:18
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "Represents a user."
-msgstr ""
-
-#. .Description(S["The id of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:21
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The id of the user."
-msgstr ""
-
-#. .Description(S["The name of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:24
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The name of the user."
-msgstr ""
-
-#. .Description(S["The email of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:27
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The email of the user."
-msgstr ""
-
-#. .Description(S["The phone number of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:30
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The phone number of the user."
-msgstr ""
-
-#. .Description(S["Custom user settings of {0}.", contentItemType.Name])
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:43
+#. Format arguments: {0}: contentItemType.Name
+#: GraphQL/UserType.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.GraphQL.UserType"
 msgid "Custom user settings of {0}."
 msgstr ""
 
-#. reportError(string.Empty, S["Local login is disabled."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:64
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Local login is disabled."
-msgstr "ورود به سیستم محلی غیر فعال شده است."
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "Represents a user."
+msgstr ""
 
-#. reportError("Username", S["A user name is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:70
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "A user name is required."
-msgstr "نام کاربر ضروری است."
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The email of the user."
+msgstr ""
 
-#. reportError("Password", S["A password is required."]);
-#. reportError(nameof(ResetPasswordForm.NewPassword), S["A password is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:76
-#: OrchardCore.Users.Core\Services\UserService.cs:235
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The id of the user."
+msgstr ""
+
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The name of the user."
+msgstr ""
+
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The phone number of the user."
+msgstr ""
+
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A password is required."
 msgstr "رمزعبور ضروری است."
 
-#. reportError(string.Empty, S["The specified username/password couple is invalid."]);
-#. reportError(string.Empty, S["The specified username/password couple is invalid."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:88
-#: OrchardCore.Users.Core\Services\UserService.cs:111
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified username/password couple is invalid."
-msgstr "نام کاربری ویا رمزعبور صحیح نیست."
-
-#. reportError(string.Empty, S["The user is locked out."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:96
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The user is locked out."
-msgstr "کاربر قفل شده است."
-
-#. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
-#. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:101
-#: OrchardCore.Users.Core\Services\UserService.cs:117
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified user is not allowed to sign in."
-msgstr "کاربر مورد نظر اجازه ورود به حساب کاربری را ندارد."
-
-#. reportError(string.Empty, S["The specified user is not allowed to sign in using password authentication."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:106
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified user is not allowed to sign in using password authentication."
-msgstr "کاربر مورد نظر اجازه ورود با رمزعبور را ندارد."
-
-#. reportError(nameof(ResetPasswordForm.UsernameOrEmail), S["A username or email address is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:229
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "A username or email address is required."
-msgstr ""
-
-#. reportError(nameof(ResetPasswordForm.ResetToken), S["A token is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:241
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A token is required."
 msgstr "توکن ضروری است."
 
-#. reportError("Password", S["Passwords must have at least one digit character ('0'-'9')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:307
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one digit character ('0'-'9')."
-msgstr "رمزعبور باید حداقل شامل یک عدد باشد (٠ - ٩)."
+msgid "A user name is required."
+msgstr "نام کاربر ضروری است."
 
-#. reportError("Password", S["Passwords must have at least one lowercase character ('a'-'z')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:310
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one lowercase character ('a'-'z')."
-msgstr "رمزعبور باید حداقل شامل یک حرف کوچک انگلیسی باشد (a - z)."
+msgid "A username or email address is required."
+msgstr ""
 
-#. reportError("Password", S["Passwords must have at least one uppercase character ('A'-'Z')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:313
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one uppercase character ('A'-'Z')."
-msgstr "رمزعبور باید حداقل شامل یک حرف بزرگ انگلیسی باشد (A - Z)."
-
-#. reportError("Password", S["Passwords must have at least one non letter or digit character."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:316
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one non letter or digit character."
-msgstr "رمزعبور باید شامل حداقل یک عدد یا یک نشانه باشد."
-
-#. reportError("Password", S["Passwords must be at least {0} characters.", _identityOptions.Password.RequiredLength]);
-#: OrchardCore.Users.Core\Services\UserService.cs:319
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must be at least {0} characters."
-msgstr "رمزعبور باید حداقل {0} کاراکتر باشد."
-
-#. reportError("Password", S["Passwords must contain at least {0} unique characters.", _identityOptions.Password.RequiredUniqueChars]);
-#: OrchardCore.Users.Core\Services\UserService.cs:322
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must contain at least {0} unique characters."
-msgstr "رمزعبور باید شامل حداقل {0} کاراکتر منحصر‌به‌فرد باشد."
-
-#. reportError("CurrentPassword", S["Incorrect password."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:327
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Incorrect password."
-msgstr "رمزعبور نادرست است."
-
-#. reportError("UserName", S["User name '{0}' is invalid, can only contain letters or digits.", user.UserName]);
-#: OrchardCore.Users.Core\Services\UserService.cs:332
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "User name '{0}' is invalid, can only contain letters or digits."
-msgstr "نام کاربری '{0}' نامعتبر است، نام کاربری باید فقط شامل حروف و اعداد باشد."
-
-#. reportError("UserName", S["User name '{0}' is already used.", user.UserName]);
-#: OrchardCore.Users.Core\Services\UserService.cs:335
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "User name '{0}' is already used."
-msgstr "نام کاربری {0} قبلا ثبت شده است."
-
-#. reportError("Email", S["Email '{0}' is already used.", user.Email]);
-#: OrchardCore.Users.Core\Services\UserService.cs:340
+#. Format arguments: {0}: user.Email
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is already used."
 msgstr "ایمیل \"{0}\" قبلا استفاده شده است."
 
-#. reportError("Email", S["Email '{0}' is invalid.", user.Email]);
-#: OrchardCore.Users.Core\Services\UserService.cs:343
+#. Format arguments: {0}: user.Email
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is invalid."
 msgstr "ایمیل {0} نامعتبر است."
 
-#. reportError(string.Empty, S["The reset token is invalid. Please request a new token."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:346
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Incorrect password."
+msgstr "رمزعبور نادرست است."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Local login is disabled."
+msgstr "ورود به سیستم محلی غیر فعال شده است."
+
+#. Format arguments: {0}: _identityOptions.Password.RequiredLength
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must be at least {0} characters."
+msgstr "رمزعبور باید حداقل {0} کاراکتر باشد."
+
+#. Format arguments: {0}: _identityOptions.Password.RequiredUniqueChars
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must contain at least {0} unique characters."
+msgstr "رمزعبور باید شامل حداقل {0} کاراکتر منحصر‌به‌فرد باشد."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one digit character ('0'-'9')."
+msgstr "رمزعبور باید حداقل شامل یک عدد باشد (٠ - ٩)."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one lowercase character ('a'-'z')."
+msgstr "رمزعبور باید حداقل شامل یک حرف کوچک انگلیسی باشد (a - z)."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one non letter or digit character."
+msgstr "رمزعبور باید شامل حداقل یک عدد یا یک نشانه باشد."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one uppercase character ('A'-'Z')."
+msgstr "رمزعبور باید حداقل شامل یک حرف بزرگ انگلیسی باشد (A - Z)."
+
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The reset token is invalid. Please request a new token."
 msgstr ""
 
-#. reportError(string.Empty, S["Unexpected error: '{0}'.", error.Code]);
-#: OrchardCore.Users.Core\Services\UserService.cs:349
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified user is not allowed to sign in using password authentication."
+msgstr "کاربر مورد نظر اجازه ورود با رمزعبور را ندارد."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified user is not allowed to sign in."
+msgstr "کاربر مورد نظر اجازه ورود به حساب کاربری را ندارد."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified username/password couple is invalid."
+msgstr "نام کاربری ویا رمزعبور صحیح نیست."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The user is locked out."
+msgstr "کاربر قفل شده است."
+
+#. Format arguments: {0}: error.Code
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Unexpected error: '{0}'."
 msgstr "خطای غیرمنتظره: '{0}'."
+
+#. Format arguments: {0}: user.UserName
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "User name '{0}' is already used."
+msgstr "نام کاربری {0} قبلا ثبت شده است."
+
+#. Format arguments: {0}: user.UserName
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "User name '{0}' is invalid, can only contain letters or digits."
+msgstr "نام کاربری '{0}' نامعتبر است، نام کاربری باید فقط شامل حروف و اعداد باشد."
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Assign any role to users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Assign {0} role to users"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Delete any user"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Delete users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Disable two-factor authentication for any user"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit any user"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit own user information"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "List all users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "List users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Manage security settings and all users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Manage users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "View user profiles"
+msgstr ""
 
