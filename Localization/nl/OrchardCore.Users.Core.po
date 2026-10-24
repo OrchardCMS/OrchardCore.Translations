@@ -1,188 +1,248 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: nl\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Users.Core.pot\n"
 "X-Crowdin-File-ID: 836\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2026-10-02 10:23\n"
+"PO-Revision-Date: 2026-10-24 02:34\n"
 
-#. Description = S["Represents a user."];
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:18
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "Represents a user."
-msgstr "Stelt een gebruiker voor."
-
-#. .Description(S["The id of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:21
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The id of the user."
-msgstr "Het id van de gebruiker."
-
-#. .Description(S["The name of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:24
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The name of the user."
-msgstr "De naam van de gebruiker."
-
-#. .Description(S["The email of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:27
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The email of the user."
-msgstr "Het e-mailadres van de gebruiker."
-
-#. .Description(S["The phone number of the user."]);
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:30
-msgctxt "OrchardCore.Users.GraphQL.UserType"
-msgid "The phone number of the user."
-msgstr "Het telefoonnummer van de gebruiker."
-
-#. .Description(S["Custom user settings of {0}.", contentItemType.Name])
-#: OrchardCore.Users.Core\GraphQL\UserType.cs:43
+#. Format arguments: {0}: contentItemType.Name
+#: GraphQL/UserType.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.GraphQL.UserType"
 msgid "Custom user settings of {0}."
 msgstr "Aangepaste gebruikersinstellingen van {0}."
 
-#. reportError(string.Empty, S["Local login is disabled."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:64
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Local login is disabled."
-msgstr "Lokale login is uitgeschakeld."
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "Represents a user."
+msgstr "Stelt een gebruiker voor."
 
-#. reportError("Username", S["A user name is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:70
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "A user name is required."
-msgstr "Een gebruikersnaam is vereist."
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The email of the user."
+msgstr "Het e-mailadres van de gebruiker."
 
-#. reportError("Password", S["A password is required."]);
-#. reportError(nameof(ResetPasswordForm.NewPassword), S["A password is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:76
-#: OrchardCore.Users.Core\Services\UserService.cs:235
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The id of the user."
+msgstr "Het id van de gebruiker."
+
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The name of the user."
+msgstr "De naam van de gebruiker."
+
+#: GraphQL/UserType.cs
+msgctxt "OrchardCore.Users.GraphQL.UserType"
+msgid "The phone number of the user."
+msgstr "Het telefoonnummer van de gebruiker."
+
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A password is required."
 msgstr "Een wachtwoord is vereist."
 
-#. reportError(string.Empty, S["The specified username/password couple is invalid."]);
-#. reportError(string.Empty, S["The specified username/password couple is invalid."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:88
-#: OrchardCore.Users.Core\Services\UserService.cs:111
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified username/password couple is invalid."
-msgstr "Het opgegeven gebruikersnaam/wachtwoord paar is ongeldig."
-
-#. reportError(string.Empty, S["The user is locked out."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:96
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The user is locked out."
-msgstr "Het account is geblokkeerd."
-
-#. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
-#. reportError(string.Empty, S["The specified user is not allowed to sign in."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:101
-#: OrchardCore.Users.Core\Services\UserService.cs:117
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified user is not allowed to sign in."
-msgstr "De opgegeven gebruiker mag zich niet aanmelden."
-
-#. reportError(string.Empty, S["The specified user is not allowed to sign in using password authentication."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:106
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "The specified user is not allowed to sign in using password authentication."
-msgstr "De opgegeven gebruiker mag niet inloggen met behulp van wachtwoordverificatie."
-
-#. reportError(nameof(ResetPasswordForm.UsernameOrEmail), S["A username or email address is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:229
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "A username or email address is required."
-msgstr "Een gebruikersnaam of e-mailadres is vereist."
-
-#. reportError(nameof(ResetPasswordForm.ResetToken), S["A token is required."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:241
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "A token is required."
 msgstr "Een token is vereist."
 
-#. reportError("Password", S["Passwords must have at least one digit character ('0'-'9')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:307
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one digit character ('0'-'9')."
-msgstr "Wachtwoorden moeten uit minstens één cijfer ('0'-'9') bestaan."
+msgid "A user name is required."
+msgstr "Een gebruikersnaam is vereist."
 
-#. reportError("Password", S["Passwords must have at least one lowercase character ('a'-'z')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:310
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one lowercase character ('a'-'z')."
-msgstr "Wachtwoorden moeten tenminste één kleine letter ('a' - 'z') bevatten."
+msgid "A username or email address is required."
+msgstr "Een gebruikersnaam of e-mailadres is vereist."
 
-#. reportError("Password", S["Passwords must have at least one uppercase character ('A'-'Z')."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:313
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one uppercase character ('A'-'Z')."
-msgstr "Wachtwoorden moeten minstens één hoofdletter ('A' - 'Z') hebben."
-
-#. reportError("Password", S["Passwords must have at least one non letter or digit character."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:316
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must have at least one non letter or digit character."
-msgstr "Wachtwoorden moeten minstens één teken bevatten dat geen letter of cijfer is."
-
-#. reportError("Password", S["Passwords must be at least {0} characters.", _identityOptions.Password.RequiredLength]);
-#: OrchardCore.Users.Core\Services\UserService.cs:319
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must be at least {0} characters."
-msgstr "Wachtwoorden moeten tenminste {0} tekens bevatten."
-
-#. reportError("Password", S["Passwords must contain at least {0} unique characters.", _identityOptions.Password.RequiredUniqueChars]);
-#: OrchardCore.Users.Core\Services\UserService.cs:322
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Passwords must contain at least {0} unique characters."
-msgstr "Wachtwoorden moeten tenminste {0} unieke tekens bevatten."
-
-#. reportError("CurrentPassword", S["Incorrect password."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:327
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "Incorrect password."
-msgstr "Onjuist wachtwoord."
-
-#. reportError("UserName", S["User name '{0}' is invalid, can only contain letters or digits.", user.UserName]);
-#: OrchardCore.Users.Core\Services\UserService.cs:332
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "User name '{0}' is invalid, can only contain letters or digits."
-msgstr "Gebruikersnaam '{0}' is ongeldig, kan alleen letters of cijfers bevatten."
-
-#. reportError("UserName", S["User name '{0}' is already used.", user.UserName]);
-#: OrchardCore.Users.Core\Services\UserService.cs:335
-msgctxt "OrchardCore.Users.Services.UserService"
-msgid "User name '{0}' is already used."
-msgstr "Gebruikersnaam '{0}' is al in gebruik."
-
-#. reportError("Email", S["Email '{0}' is already used.", user.Email]);
-#: OrchardCore.Users.Core\Services\UserService.cs:340
+#. Format arguments: {0}: user.Email
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is already used."
 msgstr "E-mail '{0}' is al in gebruik."
 
-#. reportError("Email", S["Email '{0}' is invalid.", user.Email]);
-#: OrchardCore.Users.Core\Services\UserService.cs:343
+#. Format arguments: {0}: user.Email
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Email '{0}' is invalid."
 msgstr "E-mail '{0}' is ongeldig."
 
-#. reportError(string.Empty, S["The reset token is invalid. Please request a new token."]);
-#: OrchardCore.Users.Core\Services\UserService.cs:346
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Incorrect password."
+msgstr "Onjuist wachtwoord."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Local login is disabled."
+msgstr "Lokale login is uitgeschakeld."
+
+#. Format arguments: {0}: _identityOptions.Password.RequiredLength
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must be at least {0} characters."
+msgstr "Wachtwoorden moeten tenminste {0} tekens bevatten."
+
+#. Format arguments: {0}: _identityOptions.Password.RequiredUniqueChars
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must contain at least {0} unique characters."
+msgstr "Wachtwoorden moeten tenminste {0} unieke tekens bevatten."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one digit character ('0'-'9')."
+msgstr "Wachtwoorden moeten uit minstens één cijfer ('0'-'9') bestaan."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one lowercase character ('a'-'z')."
+msgstr "Wachtwoorden moeten tenminste één kleine letter ('a' - 'z') bevatten."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one non letter or digit character."
+msgstr "Wachtwoorden moeten minstens één teken bevatten dat geen letter of cijfer is."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "Passwords must have at least one uppercase character ('A'-'Z')."
+msgstr "Wachtwoorden moeten minstens één hoofdletter ('A' - 'Z') hebben."
+
+#: Services/UserService.cs
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "The reset token is invalid. Please request a new token."
 msgstr "De reset token is ongeldig. Vraag een nieuwe token aan."
 
-#. reportError(string.Empty, S["Unexpected error: '{0}'.", error.Code]);
-#: OrchardCore.Users.Core\Services\UserService.cs:349
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified user is not allowed to sign in using password authentication."
+msgstr "De opgegeven gebruiker mag niet inloggen met behulp van wachtwoordverificatie."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified user is not allowed to sign in."
+msgstr "De opgegeven gebruiker mag zich niet aanmelden."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The specified username/password couple is invalid."
+msgstr "Het opgegeven gebruikersnaam/wachtwoord paar is ongeldig."
+
+#: Services/UserService.cs
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "The user is locked out."
+msgstr "Het account is geblokkeerd."
+
+#. Format arguments: {0}: error.Code
+#: Services/UserService.cs
+#, csharp-format
 msgctxt "OrchardCore.Users.Services.UserService"
 msgid "Unexpected error: '{0}'."
 msgstr "Onverwachte fout: '{0}'."
+
+#. Format arguments: {0}: user.UserName
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "User name '{0}' is already used."
+msgstr "Gebruikersnaam '{0}' is al in gebruik."
+
+#. Format arguments: {0}: user.UserName
+#: Services/UserService.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.Services.UserService"
+msgid "User name '{0}' is invalid, can only contain letters or digits."
+msgstr "Gebruikersnaam '{0}' is ongeldig, kan alleen letters of cijfers bevatten."
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Assign any role to users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Assign {0} role to users"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Delete any user"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Delete users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Disable two-factor authentication for any user"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit any user"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit own user information"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Edit users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "List all users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "List users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Manage security settings and all users"
+msgstr ""
+
+#. Format arguments: {0}
+#: UsersPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "Manage users in {0} role"
+msgstr ""
+
+#: UsersPermissions.cs
+msgctxt "OrchardCore.Users.UsersPermissions"
+msgid "View user profiles"
+msgstr ""
 
