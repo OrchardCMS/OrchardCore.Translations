@@ -1,359 +1,315 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: orchard-core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/Localization/OrchardCore.Menu.pot\n"
 "X-Crowdin-File-ID: 780\n"
-"Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2026-10-02 11:01\n"
+"PO-Revision-Date: 2026-10-24 03:04\n"
 
-#. .Add(S["Content"], design => design
-#: OrchardCore.Menu\AdminMenu.cs:34
+#: AdminMenu.cs
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Content"
 msgstr "内容"
 
-#. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
-#. .Add(S["Menus"], S["Menus"].PrefixPosition(), menus => menus
-#: OrchardCore.Menu\AdminMenu.cs:35
-#: OrchardCore.Menu\AdminMenu.cs:35
+#: AdminMenu.cs
 msgctxt "OrchardCore.Menu.AdminMenu"
 msgid "Menus"
 msgstr "菜单"
 
-#. await _notifier.SuccessAsync(H["Menu item deleted successfully."]);
-#: OrchardCore.Menu\Controllers\AdminController.cs:276
+#: Controllers/AdminController.cs
 msgctxt "OrchardCore.Menu.Controllers.AdminController"
 msgid "Menu item deleted successfully."
 msgstr "菜单项删除成功。"
 
-#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:105
-#: OrchardCore.Menu\Drivers\HtmlMenuItemPartDisplayDriver.cs:113
+#. Format arguments: {0}: part.Url
+#: Drivers/HtmlMenuItemPartDisplayDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Menu.Drivers.HtmlMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr "{0} 是无效的 url。"
 
-#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#. context.Updater.ModelState.AddModelError(nameof(part.Url), S["{0} is an invalid url.", part.Url]);
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:95
-#: OrchardCore.Menu\Drivers\LinkMenuItemPartDisplayDriver.cs:103
+#. Format arguments: {0}: part.Url
+#: Drivers/LinkMenuItemPartDisplayDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Menu.Drivers.LinkMenuItemPartDisplayDriver"
 msgid "{0} is an invalid url."
 msgstr "{0} 是无效的 url。"
 
-#. await _notifier.WarningAsync(H.Plural(
-#: OrchardCore.Menu\Drivers\MenuPartDisplayDriver.cs:62
+#. Format arguments: {0}: count; {1}: string.Join(", ", invalidMenuItemDescriptions)
+#: Drivers/MenuPartDisplayDriver.cs
+#, csharp-format
 msgctxt "OrchardCore.Menu.Drivers.MenuPartDisplayDriver"
 msgid "The menu item content item {1} has no matching content type definition. Publishing this content item may erase created content. Fix any content type issues beforehand."
 msgid_plural "The following menu item content items have no matching content type definitions: {1}. Publishing these content items may erase created content. Fix any content type issues beforehand."
 msgstr[0] ""
 
-#. .Description(S["The menu items."])
-#: OrchardCore.Menu\GraphQL\MenuItemsListQueryObjectType.cs:14
+#: GraphQL/MenuItemsListQueryObjectType.cs
 msgctxt "OrchardCore.Menu.GraphQL.MenuItemsListQueryObjectType"
 msgid "The menu items."
 msgstr "菜单项。"
 
-#. [new StereotypeDescription { Stereotype = "MenuItem", DisplayName = S["Menu Item"] }]);
-#: OrchardCore.Menu\Services\MenuItemStereotypesProvider.cs:18
+#: Permissions.cs
+msgctxt "OrchardCore.Menu.Permissions"
+msgid "Manage menus"
+msgstr ""
+
+#: Services/MenuItemStereotypesProvider.cs
 msgctxt "OrchardCore.Menu.Services.MenuItemStereotypesProvider"
 msgid "Menu Item"
 msgstr "菜单项"
 
-#. { "TypeToSearch", S["Type to search"].Value },
-#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:16
-msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
-msgid "Type to search"
-msgstr ""
-
-#. { "Select", S["Select"].Value },
-#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:17
-msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
-msgid "Select"
-msgstr ""
-
-#. { "Remove", S["Remove"].Value },
-#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:18
-msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
-msgid "Remove"
-msgstr ""
-
-#. { "NoResultFound", S["No result found"].Value },
-#: OrchardCore.Menu\Services\MenuJSLocalizer.cs:19
+#: Services/MenuJSLocalizer.cs
 msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
 msgid "No result found"
 msgstr ""
 
-#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:4
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
-msgid "Name"
-msgstr "名称"
+#: Services/MenuJSLocalizer.cs
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Remove"
+msgstr ""
 
-#. <label class="form-check-label" asp-for="CheckContentPermissions">@T["Check content permissions"]</label>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:14
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
-msgid "Check content permissions"
-msgstr "检查内容权限"
+#: Services/MenuJSLocalizer.cs
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Select"
+msgstr ""
 
-#. <span class="hint dashed">@T["When enabled, we will verify the user's permission to view content items before displaying them in the menu. This process may negatively impact performance, so it is highly recommended to cache the menu when this option is activated."]</span>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Edit.cshtml:15
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
-msgid "When enabled, we will verify the user's permission to view content items before displaying them in the menu. This process may negatively impact performance, so it is highly recommended to cache the menu when this option is activated."
-msgstr "如果启用，我们将验证用户在菜单中显示内容项目之前的查看权限。 此进程可能会对性能产生负面影响，所以强烈建议在启用此选项时缓存菜单。"
+#: Services/MenuJSLocalizer.cs
+msgctxt "OrchardCore.Menu.Services.MenuJSLocalizer"
+msgid "Type to search"
+msgstr ""
 
-#. <h4 class="card-title">@T["Content Menu Item"]</h4>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Thumbnail.cshtml:1
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
-msgid "Content Menu Item"
-msgstr "内容菜单项"
+#. Format arguments: {0}: menu?.DisplayText
+#: Views/Admin/Create.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "Edit {0}"
+msgstr ""
 
-#. <p>@T["Links to a Content url."]</p>
-#: OrchardCore.Menu\Views\ContentMenuItemPart.Thumbnail.cshtml:2
-msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
-msgid "Links to a Content url."
-msgstr "链接到内容url。"
+#: Views/Admin/Create.cshtml
+msgctxt "OrchardCore.Menu.Views.Admin.Create"
+msgid "Manage Content"
+msgstr ""
 
-#. <breadcrumb name="MenuCreate" title="@T["New {0}", localizedTypeDisplayName]">
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:20
+#. Format arguments: {0}: localizedTypeDisplayName
+#: Views/Admin/Create.cshtml
+#, csharp-format
 msgctxt "OrchardCore.Menu.Views.Admin.Create"
 msgid "New {0}"
 msgstr "新建 {0}"
 
-#. <breadcrumb-item id="Contents" action="List" controller="Admin" area="OrchardCore.Contents" route-contentTypeId="">@T["Manage Content"]</breadcrumb-item>
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:21
-msgctxt "OrchardCore.Menu.Views.Admin.Create"
-msgid "Manage Content"
-msgstr ""
-
-#. <breadcrumb-item id="Menu" action="Edit" controller="Admin" area="OrchardCore.Contents" route-contentItemId="@menuContentItemId">@T["Edit {0}", menu?.DisplayText]</breadcrumb-item>
-#: OrchardCore.Menu\Views\Admin\Create.cshtml:25
-msgctxt "OrchardCore.Menu.Views.Admin.Create"
-msgid "Edit {0}"
-msgstr ""
-
-#. <breadcrumb name="MenuEdit" title="@T["Edit {0}", localizedTypeDisplayName]">
-#. <breadcrumb-item id="Menu" action="Edit" controller="Admin" area="OrchardCore.Contents" route-contentItemId="@menuContentItemId">@T["Edit {0}", menu?.DisplayText]</breadcrumb-item>
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:19
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:24
+#. Format arguments: {0}: localizedTypeDisplayName, menu?.DisplayText
+#: Views/Admin/Edit.cshtml
+#, csharp-format
 msgctxt "OrchardCore.Menu.Views.Admin.Edit"
 msgid "Edit {0}"
 msgstr "编辑 {0}"
 
-#. <breadcrumb-item id="Contents" action="List" controller="Admin" area="OrchardCore.Contents" route-contentTypeId="">@T["Manage Content"]</breadcrumb-item>
-#: OrchardCore.Menu\Views\Admin\Edit.cshtml:20
+#: Views/Admin/Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.Admin.Edit"
 msgid "Manage Content"
 msgstr ""
 
-#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:4
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+#: Views/ContentMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
+msgid "Check content permissions"
+msgstr "检查内容权限"
+
+#: Views/ContentMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Url" class="ocat-label">@T["Url"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:11
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Url"
-msgstr "网址"
+#: Views/ContentMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Edit"
+msgid "When enabled, we will verify the user's permission to view content items before displaying them in the menu. This process may negatively impact performance, so it is highly recommended to cache the menu when this option is activated."
+msgstr "如果启用，我们将验证用户在菜单中显示内容项目之前的查看权限。 此进程可能会对性能产生负面影响，所以强烈建议在启用此选项时缓存菜单。"
 
-#. <label asp-for="Target" class="ocat-label">@T["Target"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:18
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Target"
-msgstr "目标"
+#: Views/ContentMenuItemPart.Thumbnail.cshtml
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
+msgid "Content Menu Item"
+msgstr "内容菜单项"
 
-#. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (this is default)."]</option>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:22
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Opens the linked document in the same frame as it was clicked (this is default)."
-msgstr "打开链接的文档与单击相同的帧(这是默认)。"
+#: Views/ContentMenuItemPart.Thumbnail.cshtml
+msgctxt "OrchardCore.Menu.Views.ContentMenuItemPart.Thumbnail"
+msgid "Links to a Content url."
+msgstr "链接到内容url。"
 
-#. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:23
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Opens the linked document in a new window or tab."
-msgstr "在新窗口或标签打开链接的文档。"
-
-#. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:24
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Opens the linked document in the parent frame."
-msgstr "在父框架中打开链接的文档。"
-
-#. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:25
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "Opens the linked document in the full body of the window."
-msgstr "在窗口正文打开链接的文档。"
-
-#. <span class="hint">@T["The target attribute of the A tag, see more:"] <a class="seedoc" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target">target</a></span>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:27
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
-msgid "The target attribute of the A tag, see more:"
-msgstr "A标签的目标属性，查看更多："
-
-#. <label asp-for="Html" class="ocat-label">@T["Html"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Edit.cshtml:32
+#: Views/HtmlMenuItemPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
 msgid "Html"
 msgstr "Html"
 
-#. <h4 class="card-title">@T["Html Menu Item"]</h4>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Thumbnail.cshtml:1
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Name"
+msgstr "名称"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in a new window or tab."
+msgstr "在新窗口或标签打开链接的文档。"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the full body of the window."
+msgstr "在窗口正文打开链接的文档。"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the parent frame."
+msgstr "在父框架中打开链接的文档。"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Opens the linked document in the same frame as it was clicked (this is default)."
+msgstr "打开链接的文档与单击相同的帧(这是默认)。"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Target"
+msgstr "目标"
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "The target attribute of the A tag, see more:"
+msgstr "A标签的目标属性，查看更多："
+
+#: Views/HtmlMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Edit"
+msgid "Url"
+msgstr "网址"
+
+#: Views/HtmlMenuItemPart.Thumbnail.cshtml
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Thumbnail"
 msgid "Html Menu Item"
 msgstr "Html 菜单项"
 
-#. <p>@T["Links to a custom url with HTML."]</p>
-#: OrchardCore.Menu\Views\HtmlMenuItemPart.Thumbnail.cshtml:2
+#: Views/HtmlMenuItemPart.Thumbnail.cshtml
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPart.Thumbnail"
 msgid "Links to a custom url with HTML."
 msgstr "通过 HTML 链接到一个自定义URL。"
 
-#. <label class="form-check-label" asp-for="SanitizeHtml">@T["Sanitize Html"]</label>
-#: OrchardCore.Menu\Views\HtmlMenuItemPartSettings.Edit.cshtml:7
+#: Views/HtmlMenuItemPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
 msgid "Sanitize Html"
 msgstr "Html无害化"
 
-#. @T["Whether the Html is sanitized to prevent custom scripts."]
-#: OrchardCore.Menu\Views\HtmlMenuItemPartSettings.Edit.cshtml:10
-msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
-msgid "Whether the Html is sanitized to prevent custom scripts."
-msgstr "Html 是否被净化以防止自定义脚本。"
-
-#. <a class="seedoc" href="@(OrchardCore.Admin.Constants.DocsUrl)reference/modules/Sanitizer" target="_blank">@T["See documentation"]</a>
-#: OrchardCore.Menu\Views\HtmlMenuItemPartSettings.Edit.cshtml:11
+#: Views/HtmlMenuItemPartSettings.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
 msgid "See documentation"
 msgstr "查看文档"
 
-#. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:4
+#: Views/HtmlMenuItemPartSettings.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.HtmlMenuItemPartSettings.Edit"
+msgid "Whether the Html is sanitized to prevent custom scripts."
+msgstr "Html 是否被净化以防止自定义脚本。"
+
+#: Views/LinkMenuItemPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Name"
 msgstr "名称"
 
-#. <label asp-for="Url" class="ocat-label">@T["Url"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:11
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Url"
-msgstr "网址"
-
-#. <label asp-for="Target" class="ocat-label">@T["Target"]</label>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:18
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Target"
-msgstr "目标"
-
-#. <option value="_self">@T["Opens the linked document in the same frame as it was clicked (this is default)."]</option>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:22
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Opens the linked document in the same frame as it was clicked (this is default)."
-msgstr "打开链接的文档与单击相同的帧(这是默认)。"
-
-#. <option value="_blank">@T["Opens the linked document in a new window or tab."]</option>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:23
+#: Views/LinkMenuItemPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Opens the linked document in a new window or tab."
 msgstr "在新窗口或标签打开链接的文档。"
 
-#. <option value="_parent">@T["Opens the linked document in the parent frame."]</option>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:24
-msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
-msgid "Opens the linked document in the parent frame."
-msgstr "在父框架中打开链接的文档。"
-
-#. <option value="_top">@T["Opens the linked document in the full body of the window."]</option>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:25
+#: Views/LinkMenuItemPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "Opens the linked document in the full body of the window."
 msgstr "在窗口正文打开链接的文档。"
 
-#. <span class="hint">@T["The target attribute of the A tag, see more:"] <a class="seedoc" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target">target</a></span>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Edit.cshtml:27
+#: Views/LinkMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in the parent frame."
+msgstr "在父框架中打开链接的文档。"
+
+#: Views/LinkMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Opens the linked document in the same frame as it was clicked (this is default)."
+msgstr "打开链接的文档与单击相同的帧(这是默认)。"
+
+#: Views/LinkMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Target"
+msgstr "目标"
+
+#: Views/LinkMenuItemPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
 msgid "The target attribute of the A tag, see more:"
 msgstr "A标签的目标属性，查看更多："
 
-#. <h4 class="card-title">@T["Link Menu Item"]</h4>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Thumbnail.cshtml:1
+#: Views/LinkMenuItemPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Edit"
+msgid "Url"
+msgstr "网址"
+
+#: Views/LinkMenuItemPart.Thumbnail.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Thumbnail"
 msgid "Link Menu Item"
 msgstr "链接菜单项"
 
-#. <p>@T["Links to a custom url."]</p>
-#: OrchardCore.Menu\Views\LinkMenuItemPart.Thumbnail.cshtml:2
+#: Views/LinkMenuItemPart.Thumbnail.cshtml
 msgctxt "OrchardCore.Menu.Views.LinkMenuItemPart.Thumbnail"
 msgid "Links to a custom url."
 msgstr "指向自定义网址的链接。"
 
-#. @T["Edit"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:37
-msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
-msgid "Edit"
-msgstr "编辑"
-
-#. @T["Add"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:40
+#: Views/MenuItem.Admin.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Add"
 msgstr "添加"
 
-#. @T["Delete"]
-#: OrchardCore.Menu\Views\MenuItem.Admin.cshtml:49
+#: Views/MenuItem.Admin.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
 msgid "Delete"
 msgstr "删除"
 
-#. <a class="btn btn-primary btn-sm thumbnail-link-create" asp-route-action="Create" asp-route-controller="Admin" asp-route-id="@Model.MenuItemType" asp-route-menuContentItemId="@Model.MenuContentItemId" asp-route-area="OrchardCore.Menu">@T["Add"]</a>
-#: OrchardCore.Menu\Views\MenuItem.Thumbnail.cshtml:16
+#: Views/MenuItem.Admin.cshtml
+msgctxt "OrchardCore.Menu.Views.MenuItem.Admin"
+msgid "Edit"
+msgstr "编辑"
+
+#: Views/MenuItem.Thumbnail.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuItem.Thumbnail"
 msgid "Add"
 msgstr "添加"
 
-#. <label asp-for="SelectedPermissionNames" class="ocat-label">@T["Permissions"]</label>
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:15
+#: Views/MenuItemPermissionPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
 msgid "Permissions"
 msgstr "权限"
 
-#. <div id="PermissionPicker" class="vue-multiselect" data-selected-items="@selectedItems" data-all-items="@allItems" data-translations="@translationsJson" data-selected-names-input-id="@Html.IdFor(m => m.SelectedPermissionNames)" data-selected-names-input-name="@Html.NameFor(m => m.SelectedPermissionNames)" data-hint-text="@T["The permissions required to display this menu item (optional)."]" v-cloak>
-#: OrchardCore.Menu\Views\MenuItemPermissionPart.Edit.cshtml:17
+#: Views/MenuItemPermissionPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuItemPermissionPart.Edit"
 msgid "The permissions required to display this menu item (optional)."
 msgstr "显示此菜单项所需的权限(可选)。"
 
-#. @T["Add Menu Item"]
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:31
+#: Views/MenuPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Add Menu Item"
 msgstr "添加菜单项"
 
-#. <ol id="menu" class="list-group mt-3" data-hierarchy-input="@Html.IdFor(m => m.Hierarchy)" data-leave-message="@T["You have reordered the navigation."]">
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:37
-msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
-msgid "You have reordered the navigation."
-msgstr "您已重新排序导航。"
-
-#. <h5 class="modal-title" id="available-menu-items-title">@T["Available Menu Items"]</h5>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:60
+#: Views/MenuPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Available Menu Items"
 msgstr "可用的菜单项"
 
-#. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Menu\Views\MenuPart.Edit.cshtml:79
+#: Views/MenuPart.Edit.cshtml
 msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
 msgid "Cancel"
 msgstr "取消"
+
+#: Views/MenuPart.Edit.cshtml
+msgctxt "OrchardCore.Menu.Views.MenuPart.Edit"
+msgid "You have reordered the navigation."
+msgstr "您已重新排序导航。"
 
