@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2026-06-03 19:22\n"
+"PO-Revision-Date: 2026-10-02 10:43\n"
 
 #. .Add(S["Configuration"], configuration => configuration
 #: OrchardCore.Deployment\AdminMenu.cs:20
@@ -121,49 +121,49 @@ msgid "Deployment plan deleted successfully."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["Only zip or json files are supported."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:88
+#: OrchardCore.Deployment\Controllers\ImportController.cs:108
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Only zip or json files are supported."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Deployment package imported."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:95
+#: OrchardCore.Deployment\Controllers\ImportController.cs:115
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Deployment package imported."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["The import failed with the following errors: {0}", string.Join(' ', e.StepResult.Errors)]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:101
+#: OrchardCore.Deployment\Controllers\ImportController.cs:121
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "The import failed with the following errors: {0}"
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["Unexpected error occurred while importing the deployment package."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:107
+#: OrchardCore.Deployment\Controllers\ImportController.cs:127
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Unexpected error occurred while importing the deployment package."
 msgstr ""
 
 #. await _notifier.ErrorAsync(H["Please add a file to import."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:124
+#: OrchardCore.Deployment\Controllers\ImportController.cs:144
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Please add a file to import."
 msgstr ""
 
 #. ModelState.AddModelError(nameof(model.Json), S["The recipe is written in an incorrect JSON format."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:150
+#: OrchardCore.Deployment\Controllers\ImportController.cs:170
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "The recipe is written in an incorrect JSON format."
 msgstr ""
 
 #. await _notifier.SuccessAsync(H["Recipe imported successfully!"]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:164
+#: OrchardCore.Deployment\Controllers\ImportController.cs:183
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Recipe imported successfully!"
 msgstr ""
 
 #. ModelState.AddModelError(string.Empty, S["Unexpected error occurred while importing the recipe."]);
-#: OrchardCore.Deployment\Controllers\ImportController.cs:176
+#: OrchardCore.Deployment\Controllers\ImportController.cs:195
 msgctxt "OrchardCore.Deployment.Controllers.ImportController"
 msgid "Unexpected error occurred while importing the recipe."
 msgstr ""
@@ -198,6 +198,12 @@ msgctxt "OrchardCore.Deployment.Deployment.DeploymentPlanDeploymentStep"
 msgid "Deployment"
 msgstr ""
 
+#. Title = S["Deployment Plans"];
+#: OrchardCore.Deployment\Deployment\DeploymentPlanDeploymentStep.cs:19
+msgctxt "OrchardCore.Deployment.Deployment.DeploymentPlanDeploymentStep"
+msgid "Deployment Plans"
+msgstr ""
+
 #. S["No changes have been made. The following types of deployment plans cannot be added: {0}. Please ensure that the related features are enabled to add these types of deployment plans.",
 #: OrchardCore.Deployment\Recipes\DeploymentPlansRecipeStep.cs:72
 msgctxt "OrchardCore.Deployment.Recipes.DeploymentPlansRecipeStep"
@@ -222,10 +228,22 @@ msgctxt "OrchardCore.Deployment.Steps.CustomFileDeploymentStep"
 msgid "Deployment"
 msgstr ""
 
+#. Title = S["Custom File"];
+#: OrchardCore.Deployment\Steps\CustomFileDeploymentStep.cs:20
+msgctxt "OrchardCore.Deployment.Steps.CustomFileDeploymentStep"
+msgid "Custom File"
+msgstr ""
+
 #. Category = S["Deployment"];
 #: OrchardCore.Deployment\Steps\JsonRecipeDeploymentStep.cs:18
 msgctxt "OrchardCore.Deployment.Steps.JsonRecipeDeploymentStep"
 msgid "Deployment"
+msgstr ""
+
+#. Title = S["JSON Recipe"];
+#: OrchardCore.Deployment\Steps\JsonRecipeDeploymentStep.cs:19
+msgctxt "OrchardCore.Deployment.Steps.JsonRecipeDeploymentStep"
+msgid "JSON Recipe"
 msgstr ""
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(JsonRecipeDeploymentStepViewModel.Json), S["The recipe must have a name property"]);
@@ -246,80 +264,97 @@ msgctxt "OrchardCore.Deployment.Steps.RecipeFileDeploymentStep"
 msgid "Deployment"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Deployment Plan"])</h1></zone>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:3
+#. Title = S["Recipe File"];
+#: OrchardCore.Deployment\Steps\RecipeFileDeploymentStep.cs:19
+msgctxt "OrchardCore.Deployment.Steps.RecipeFileDeploymentStep"
+msgid "Recipe File"
+msgstr ""
+
+#. <breadcrumb name="DeploymentPlansCreate" title="@T["Create Deployment Plan"]">
+#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:4
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Create Deployment Plan"
 msgstr ""
 
+#. <breadcrumb-item id="DeploymentPlans" action="Index" controller="DeploymentPlan" area="OrchardCore.Deployment" permission="@DeploymentPermissions.Export.Name">@T["Deployment Plans"]</breadcrumb-item>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:5
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
+msgid "Deployment Plans"
+msgstr ""
+
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:8
+#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:12
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Name"
 msgstr "Naam"
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:17
+#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:21
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Create"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:18
+#: OrchardCore.Deployment\Views\DeploymentPlan\Create.cshtml:22
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Create"
 msgid "Cancel"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Step"])</h1></zone>
-#: OrchardCore.Deployment\Views\Step\Create.cshtml:3
+#: OrchardCore.Deployment\Views\Step\Create.cshtml:0
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
-msgid "Create Step"
+msgid "Step"
+msgstr ""
+
+#. <breadcrumb-item id="DeploymentPlans" action="Index" controller="DeploymentPlan" area="OrchardCore.Deployment" permission="@DeploymentPermissions.Export.Name">@T["Deployment Plans"]</breadcrumb-item>
+#: OrchardCore.Deployment\Views\Step\Create.cshtml:37
+msgctxt "OrchardCore.Deployment.Views.Step.Create"
+msgid "Deployment Plans"
+msgstr ""
+
+#. <breadcrumb-item id="DeploymentPlan" action="Display" controller="DeploymentPlan" area="OrchardCore.Deployment" route-id="@Model.DeploymentPlanId" permission="@DeploymentPermissions.Export.Name">@(plan?.Name ?? T["Deployment Plan"].Value)</breadcrumb-item>
+#: OrchardCore.Deployment\Views\Step\Create.cshtml:38
+msgctxt "OrchardCore.Deployment.Views.Step.Create"
+msgid "Deployment Plan"
 msgstr ""
 
 #. <button class="btn btn-primary create" type="submit">@T["Create"]</button>
-#: OrchardCore.Deployment\Views\Step\Create.cshtml:15
+#: OrchardCore.Deployment\Views\Step\Create.cshtml:52
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Create"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Display" asp-route-controller="DeploymentPlan" asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
-#: OrchardCore.Deployment\Views\Step\Create.cshtml:16
+#: OrchardCore.Deployment\Views\Step\Create.cshtml:53
 msgctxt "OrchardCore.Deployment.Views.Step.Create"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#. <h5>@T["Custom File"]</h5>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
-msgid "Custom File"
-msgstr ""
-
 #. <span class="hint">@T["The custom file to add as part of the plan."]</span>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:11
+#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:6
 msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
 msgid "The custom file to add as part of the plan."
 msgstr ""
 
 #. <label asp-for="FileName" class="ocat-label">@T["File Name"]</label>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:16
+#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:11
 msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
 msgid "File Name"
 msgstr ""
 
 #. <span class="hint">@T["The filename as it will be added in the archive."]</span>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:20
+#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
 msgid "The filename as it will be added in the archive."
 msgstr ""
 
 #. <label asp-for="FileContent" class="ocat-label">@T["File Content"]</label>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:25
+#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:20
 msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
 msgid "File Content"
 msgstr ""
 
 #. <span class="hint">@T["The content of the file."]</span>
-#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:28
+#: OrchardCore.Deployment\Views\Items\CustomFileDeploymentStep.Fields.Edit.cshtml:23
 msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Edit"
 msgid "The content of the file."
 msgstr ""
@@ -342,20 +377,14 @@ msgctxt "OrchardCore.Deployment.Views.Items.CustomFileDeploymentStep.Fields.Thum
 msgid "Exports a custom file and its content."
 msgstr ""
 
-#. <h5>@T["Deployment Plans"]</h5>
-#: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Edit.cshtml:10
-msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Edit"
-msgid "Deployment Plans"
-msgstr ""
-
 #. <label class="form-check-label" asp-for="IncludeAll">@T["Include all deployment plans."]</label>
-#: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Edit.cshtml:18
+#: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Edit.cshtml:13
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Edit"
 msgid "Include all deployment plans."
 msgstr ""
 
 #. <span class="hint">@T["The deployment plans to add as part of the plan."]</span>
-#: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Edit.cshtml:26
+#: OrchardCore.Deployment\Views\Items\DeploymentPlanDeploymentStep.Fields.Edit.cshtml:21
 msgctxt "OrchardCore.Deployment.Views.Items.DeploymentPlanDeploymentStep.Fields.Edit"
 msgid "The deployment plans to add as part of the plan."
 msgstr ""
@@ -408,128 +437,159 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentStep.Thumbnail"
 msgid "Add"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Deployment Plan"])</h1></zone>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:11
+#. <breadcrumb name="DeploymentPlansDisplay" title="@T["Deployment Plan"]">
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:12
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Deployment Plan"
 msgstr ""
 
+#. <breadcrumb-item id="DeploymentPlans" action="Index" controller="DeploymentPlan" area="OrchardCore.Deployment" permission="@DeploymentPermissions.Export.Name">@T["Deployment Plans"]</breadcrumb-item>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:13
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
+msgid "Deployment Plans"
+msgstr ""
+
 #. <div class="d-none" id="stepOrderErrorMessage" data-message="@T["Error updating step order"]"></div>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:15
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:19
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Error updating step order"
 msgstr ""
 
 #. @T["Execute"]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:21
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:25
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Execute"
 msgstr ""
 
 #. @T["Add Step"]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:27
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:31
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Add Step"
 msgstr ""
 
 #. @T["<strong>Nothing here!</strong> There are no steps on this plan for the moment."]
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:53
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:57
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "<strong>Nothing here!</strong> There are no steps on this plan for the moment."
 msgstr ""
 
 #. <h5 class="modal-title" id="available-steps-title">@T["Available Steps"]</h5>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:64
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:68
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Steps"
 msgstr ""
 
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
 #. <input class="form-control" id="search-box" type="search" placeholder="@T["Filter"]" aria-label="@T["Filter"]" autofocus />
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:71
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:71
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:75
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:75
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Filter"
 msgstr ""
 
-#. <a class="nav-link active" href="#all" data-category="all">@T["All"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:75
+#. <a class="nav-link active" href="#all" data-list-filter-link data-list-filter-attribute="data-category" data-list-filter-value="all">@T["All"]</a>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:79
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "All"
 msgstr ""
 
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
 #. <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@T["Cancel"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:101
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:136
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:105
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:140
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Cancel"
 msgstr "Annuleren"
 
 #. <h5 class="modal-title" id="available-targets-title">@T["Available Targets"]</h5>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:111
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:115
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Available Targets"
 msgstr ""
 
 #. <a class="btn btn-primary btn-sm" href="@Url.RouteUrl(routeWithId)" data-url-af="UnsafeUrl">@T["Select"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:128
+#: OrchardCore.Deployment\Views\DeploymentPlan\Display.cshtml:132
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Display"
 msgid "Select"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Deployment Plan"])</h1></zone>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:3
+#. <breadcrumb name="DeploymentPlansEdit" title="@T["Edit Deployment Plan"]">
+#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:4
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Edit Deployment Plan"
 msgstr ""
 
+#. <breadcrumb-item id="DeploymentPlans" action="Index" controller="DeploymentPlan" area="OrchardCore.Deployment" permission="@DeploymentPermissions.Export.Name">@T["Deployment Plans"]</breadcrumb-item>
+#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:5
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
+msgid "Deployment Plans"
+msgstr ""
+
 #. <label asp-for="Name" class="ocat-label">@T["Name"]</label>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:9
+#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:13
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Name"
 msgstr "Naam"
 
 #. <button class="btn btn-primary save" type="submit">@T["Save"]</button>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:18
+#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:22
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Save"
 msgstr ""
 
 #. <a class="btn btn-secondary cancel" role="button" asp-route-action="Index">@T["Cancel"]</a>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:19
+#: OrchardCore.Deployment\Views\DeploymentPlan\Edit.cshtml:23
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Edit"
 msgid "Cancel"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Edit Step"])</h1></zone>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:3
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:0
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
-msgid "Edit Step"
+msgid "Step"
+msgstr ""
+
+#. <breadcrumb-item id="DeploymentPlans" action="Index" controller="DeploymentPlan" area="OrchardCore.Deployment" permission="@DeploymentPermissions.Export.Name">@T["Deployment Plans"]</breadcrumb-item>
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:37
+msgctxt "OrchardCore.Deployment.Views.Step.Edit"
+msgid "Deployment Plans"
+msgstr ""
+
+#. <breadcrumb-item id="DeploymentPlan" action="Display" controller="DeploymentPlan" area="OrchardCore.Deployment" route-id="@Model.DeploymentPlanId" permission="@DeploymentPermissions.Export.Name">@(plan?.Name ?? T["Deployment Plan"].Value)</breadcrumb-item>
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:38
+msgctxt "OrchardCore.Deployment.Views.Step.Edit"
+msgid "Deployment Plan"
 msgstr ""
 
 #. <button class="btn btn-primary btn-sm save" type="submit">@T["Save"]</button>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:15
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:52
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Save"
 msgstr ""
 
 #. data-url-af="RemoveUrl UnsafeUrl">@T["Delete"]</a>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:23
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:60
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Delete"
 msgstr ""
 
 #. asp-route-id="@Model.DeploymentPlanId">@T["Cancel"]</a>
-#: OrchardCore.Deployment\Views\Step\Edit.cshtml:29
+#: OrchardCore.Deployment\Views\Step\Edit.cshtml:66
 msgctxt "OrchardCore.Deployment.Views.Step.Edit"
 msgid "Cancel"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Deployment Plans"])</h1></zone>
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:8
+#. <breadcrumb name="DeploymentPlans" title="@T["Deployment Plans"]" />
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:7
 msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "Deployment Plans"
+msgstr ""
+
+#. <form asp-action="Index" method="post" class="no-multisubmit" data-list-management data-selected-label="@T["selected"]">
+#. <ul class="list-group with-checkbox bulk-select-list" data-selected-text="@T["selected"]">
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:10
+#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:30
+msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
+msgid "selected"
 msgstr ""
 
 #. <input asp-for="Options.Search" class="form-control" placeholder="@T["Search"]" type="search" autofocus />
@@ -614,64 +674,50 @@ msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
 msgid "<strong>Nothing here!</strong> There are no deployment plans at the moment."
 msgstr ""
 
-#. selectedItems.text($(":checkbox[name='itemIds']:checked").length + ' @T["selected"]');
-#. selectedItems.text(selectedItemsCount + ' @T["selected"]');
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:138
-#: OrchardCore.Deployment\Views\DeploymentPlan\Index.cshtml:149
-msgctxt "OrchardCore.Deployment.Views.DeploymentPlan.Index"
-msgid "selected"
-msgstr ""
-
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Import Deployment Package"])</h1></zone>
-#: OrchardCore.Deployment\Views\Import\Index.cshtml:1
+#. <breadcrumb name="DeploymentImport" title="@T["Import Deployment Package"]" />
+#: OrchardCore.Deployment\Views\Import\Index.cshtml:2
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import Deployment Package"
 msgstr ""
 
 #. <label for="file" class="form-label">@T["Select a file"]</label>
-#: OrchardCore.Deployment\Views\Import\Index.cshtml:6
+#: OrchardCore.Deployment\Views\Import\Index.cshtml:8
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Select a file"
 msgstr ""
 
 #. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
-#: OrchardCore.Deployment\Views\Import\Index.cshtml:11
+#: OrchardCore.Deployment\Views\Import\Index.cshtml:13
 msgctxt "OrchardCore.Deployment.Views.Import.Index"
 msgid "Import"
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["JSON Import"])</h1></zone>
-#: OrchardCore.Deployment\Views\Import\Json.cshtml:2
+#. <breadcrumb name="DeploymentImportJson" title="@T["JSON Import"]" />
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:3
 msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "JSON Import"
 msgstr "JSON importeren"
 
 #. <label asp-for="Json" class="ocat-label">@T["JSON"]</label>
-#: OrchardCore.Deployment\Views\Import\Json.cshtml:13
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:15
 msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "JSON"
 msgstr ""
 
 #. <button class="btn btn-primary import" type="submit">@T["Import"]</button>
-#: OrchardCore.Deployment\Views\Import\Json.cshtml:20
+#: OrchardCore.Deployment\Views\Import\Json.cshtml:22
 msgctxt "OrchardCore.Deployment.Views.Import.Json"
 msgid "Import"
 msgstr "Importeren"
 
-#. <h5>@T["JSON Recipe"]</h5>
-#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
-msgid "JSON Recipe"
-msgstr ""
-
 #. <label asp-for="Json" class="ocat-label">@T["Recipe"]</label>
-#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:10
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:5
 msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
 msgid "Recipe"
 msgstr ""
 
 #. <span class="hint">@T["The json recipe."]</span>
-#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:16
+#: OrchardCore.Deployment\Views\Items\JsonRecipeDeploymentStep.Fields.Edit.cshtml:11
 msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Edit"
 msgid "The json recipe."
 msgstr ""
@@ -694,122 +740,116 @@ msgctxt "OrchardCore.Deployment.Views.Items.JsonRecipeDeploymentStep.Fields.Thum
 msgid "Exports a JSON Recipe."
 msgstr ""
 
-#. <h5>@T["Recipe File"]</h5>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:5
-msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
-msgid "Recipe File"
-msgstr ""
-
 #. <span class="hint">@T["The recipe file to add as part of the plan."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:11
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:6
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe file to add as part of the plan."
 msgstr ""
 
 #. <label asp-for="RecipeName" class="ocat-label">@T["Recipe Name"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:16
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:11
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Recipe Name"
 msgstr ""
 
 #. <span class="hint">@T["The recipe name."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:19
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:14
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe name."
 msgstr ""
 
 #. <label asp-for="DisplayName" class="ocat-label">@T["Display Name"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:24
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:19
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Display Name"
 msgstr ""
 
 #. <span class="hint">@T["The recipe display name."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:27
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:22
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe display name."
 msgstr ""
 
 #. <label asp-for="Description" class="ocat-label">@T["Description"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:32
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:27
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Description"
 msgstr ""
 
 #. <span class="hint">@T["The recipe description."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:35
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:30
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe description."
 msgstr ""
 
 #. <label asp-for="Author" class="ocat-label">@T["Author"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:40
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:35
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Author"
 msgstr ""
 
 #. <span class="hint">@T["The recipe author."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:43
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:38
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe author."
 msgstr ""
 
 #. <label asp-for="WebSite" class="ocat-label">@T["WebSite"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:48
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:43
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "WebSite"
 msgstr ""
 
 #. <span class="hint">@T["The recipe web site."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:51
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:46
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe web site."
 msgstr ""
 
 #. <label asp-for="Version" class="ocat-label">@T["Version"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:56
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:51
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Version"
 msgstr ""
 
 #. <span class="hint">@T["The recipe version."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:59
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:54
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe version."
 msgstr ""
 
 #. <label asp-for="Categories" class="ocat-label">@T["Categories"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:64
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:59
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Categories"
 msgstr ""
 
 #. <span class="hint">@T["The recipe categories (comma separated values)."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:67
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:62
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe categories (comma separated values)."
 msgstr ""
 
 #. <label asp-for="Tags" class="ocat-label">@T["Tags"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:72
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:67
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Tags"
 msgstr ""
 
 #. <span class="hint">@T["The recipe tags (comma separated values)."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:75
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:70
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "The recipe tags (comma separated values)."
 msgstr ""
 
 #. <label class="form-check-label" asp-for="IsSetupRecipe">@T["Setup recipe"]</label>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:83
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:78
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Setup recipe"
 msgstr ""
 
 #. <span class="hint">@T["Check if the recipe is for setup."]</span>
-#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:85
+#: OrchardCore.Deployment\Views\Items\RecipeFileDeploymentStep.Fields.Edit.cshtml:80
 msgctxt "OrchardCore.Deployment.Views.Items.RecipeFileDeploymentStep.Fields.Edit"
 msgid "Check if the recipe is for setup."
 msgstr ""

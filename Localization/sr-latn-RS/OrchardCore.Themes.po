@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Serbian Latin\n"
 "Language: sr_latn_RS\n"
-"PO-Revision-Date: 2026-06-03 19:58\n"
+"PO-Revision-Date: 2026-10-02 11:19\n"
 
 #. .Add(S["Design"], NavigationConstants.AdminMenuDesignPosition, design => design
 #: OrchardCore.Themes\AdminMenu.cs:18
@@ -68,78 +68,102 @@ msgctxt "OrchardCore.Themes.Deployment.ThemesDeploymentStep"
 msgid "Theming"
 msgstr ""
 
-#. throw new InvalidOperationException(H["The theme \"{0}\" is already in the stack of themes that need features disabled.", themeName].ToString());
-#: OrchardCore.Themes\Services\ThemeService.cs:39
+#. throw new InvalidOperationException(S["The theme \"{0}\" is already in the stack of themes that need features disabled.", themeName]);
+#: OrchardCore.Themes\Services\ThemeService.cs:43
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "The theme \"{0}\" is already in the stack of themes that need features disabled."
 msgstr ""
 
-#. throw new InvalidOperationException(H["The theme \"{0}\" is already in the stack of themes that need features enabled.", themeName].ToString());
-#: OrchardCore.Themes\Services\ThemeService.cs:76
+#. throw new InvalidOperationException(S["The theme \"{0}\" is already in the stack of themes that need features enabled.", themeName]);
+#: OrchardCore.Themes\Services\ThemeService.cs:80
 msgctxt "OrchardCore.Themes.Services.ThemeService"
 msgid "The theme \"{0}\" is already in the stack of themes that need features enabled."
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["{0} was enabled.", enabledFeature.Name]);
-#: OrchardCore.Themes\Services\ThemeService.cs:119
+#. await _notifier.SuccessAsync(H.Plural(enabledFeatures.Length, "The feature {1} was enabled.", "The following features were enabled: {1}.", string.Join(", ", enabledFeatures.Select(f => f.Name ?? f.Id))));
+#: OrchardCore.Themes\Services\ThemeService.cs:123
 msgctxt "OrchardCore.Themes.Services.ThemeService"
-msgid "{0} was enabled."
+msgid "The feature {1} was enabled."
+msgid_plural "The following features were enabled: {1}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#. await _notifier.SuccessAsync(H.Plural(features.Length, "The feature {1} was disabled.", "The following features were disabled: {1}.", string.Join(", ", features.Select(f => f.Name ?? f.Id))));
+#: OrchardCore.Themes\Services\ThemeService.cs:150
+msgctxt "OrchardCore.Themes.Services.ThemeService"
+msgid "The feature {1} was disabled."
+msgid_plural "The following features were disabled: {1}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#. <h5 class="card-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> @T["Customize theme"]</h5>
+#: OrchardCore.Themes\Views\AdminDashboardThemes.cshtml:4
+msgctxt "OrchardCore.Themes.Views.AdminDashboardThemes"
+msgid "Customize theme"
 msgstr ""
 
-#. await _notifier.SuccessAsync(H["{0} was disabled.", feature.Name]);
-#: OrchardCore.Themes\Services\ThemeService.cs:146
-msgctxt "OrchardCore.Themes.Services.ThemeService"
-msgid "{0} was disabled."
+#. <p class="card-text">@T["Install and configure current theme for your site."]</p>
+#: OrchardCore.Themes\Views\AdminDashboardThemes.cshtml:5
+msgctxt "OrchardCore.Themes.Views.AdminDashboardThemes"
+msgid "Install and configure current theme for your site."
 msgstr ""
 
-#. <zone Name="Title"><h1>@RenderTitleSegments(T["Themes"])</h1></zone>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:11
+#. <a asp-action="Index" asp-controller="Admin" asp-route-area="OrchardCore.Themes" class="btn btn-sm btn-primary">@T["Manage themes"]</a>
+#: OrchardCore.Themes\Views\AdminDashboardThemes.cshtml:6
+msgctxt "OrchardCore.Themes.Views.AdminDashboardThemes"
+msgid "Manage themes"
+msgstr ""
+
+#. <breadcrumb name="Themes" title="@T["Themes"]" />
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:12
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Themes"
 msgstr ""
 
 #. <p>@T["There are no themes installed."]</p>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:15
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:17
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "There are no themes installed."
 msgstr ""
 
 #. <h4>@T["Reset current themes"]</h4>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:29
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:31
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset current themes"
 msgstr ""
 
 #. <p>@T["The following actions reset the themes. It is used for sites that can't use theming."]</p>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:30
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "The following actions reset the themes. It is used for sites that can't use theming."
 msgstr ""
 
 #. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
 #. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:31
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:31
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:33
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:33
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Site Theme"
 msgstr ""
 
 #. <a asp-action="ResetSiteTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Site Theme"]" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:31
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:33
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Site theme?"
 msgstr ""
 
 #. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
 #. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:34
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:34
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Reset Admin Theme"
 msgstr ""
 
 #. <a asp-action="ResetAdminTheme" data-url-af="UnsafeUrl RemoveUrl" data-title="@T["Reset Admin Theme"]" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
-#: OrchardCore.Themes\Views\Admin\Index.cshtml:32
+#: OrchardCore.Themes\Views\Admin\Index.cshtml:34
 msgctxt "OrchardCore.Themes.Views.Admin.Index"
 msgid "Are you sure you want to reset the Admin theme?"
 msgstr ""
