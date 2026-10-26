@@ -65,21 +65,21 @@ msgstr "查询已成功删除。"
 #: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:56
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Your Query is not returning content items."
-msgstr ""
+msgstr "您的查询未返回内容项。"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters),
 #. S["Make sure it is a valid JSON object. Example: { key : 'value' }"]);
 #: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:66
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Make sure it is a valid JSON object. Example: { key : 'value' }"
-msgstr ""
+msgstr "请确保这是有效的 JSON 对象。示例：{ key : 'value' }"
 
 #. updater.ModelState.AddModelError(Prefix, nameof(step.QueryParameters),
 #. S["Something is wrong with your JSON."]);
 #: OrchardCore.Queries\Deployment\QueryBasedContentDeploymentStepDriver.cs:71
 msgctxt "OrchardCore.Queries.Deployment.QueryBasedContentDeploymentStepDriver"
 msgid "Something is wrong with your JSON."
-msgstr ""
+msgstr "您的 JSON 出现问题。"
 
 #. updater.ModelState.AddModelError(nameof(model.Name), S["Name is
 #. required"]);
@@ -474,7 +474,7 @@ msgstr "导出每个查询。"
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "The name of the Query which will be used to fetch content items."
-msgstr ""
+msgstr "用于获取内容项的查询名称。"
 
 #. <label class="form-check-label" asp-for="ExportAsSetupRecipe">@T["Export As
 #. Setup recipe"]</label>
@@ -482,7 +482,7 @@ msgstr ""
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Export As Setup recipe"
-msgstr ""
+msgstr "导出为安装配方"
 
 #. <span class="hint">@T["Check if the data should be exported as a Setup
 #. recipe."]</span>
@@ -490,7 +490,7 @@ msgstr ""
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Check if the data should be exported as a Setup recipe."
-msgstr ""
+msgstr "检查是否应将数据导出为安装配方。"
 
 #. <div class="alert alert-warning">@T["If checked, you will have to manually
 #. declare variables for content item references like Content Picker Fields,
@@ -506,13 +506,15 @@ msgid ""
 "List item IDs and replace them where needed in the recipe. Any reference to "
 "these content items will be lost."
 msgstr ""
+"如果选中此项，则必须手动为内容项引用（如内容选择器字段、分类字段、标签字段和列表项 "
+"ID）声明变量，并在配方中适当的位置替换它们。任何对这些内容项的引用都将丢失。"
 
 #. <label asp-for="QueryName">@T["Query"]</label>
 #: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:24
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Query"
-msgstr ""
+msgstr "查询"
 
 #. <div class="alert alert-warning">@T["Note: The Query must be configured to
 #. return Documents."]</div>
@@ -520,14 +522,14 @@ msgstr ""
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Note: The Query must be configured to return Documents."
-msgstr ""
+msgstr "注意：查询必须配置为返回文档。"
 
 #. <label asp-for="QueryParameters">@T["Parameters"]</label>
 #: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Edit.cshtml:39
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid "Parameters"
-msgstr ""
+msgstr "参数"
 
 #. <div class="hint">@T["An optional JSON object containing the parameter
 #. values for this query."]</div>
@@ -536,25 +538,123 @@ msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Edit"
 msgid ""
 "An optional JSON object containing the parameter values for this query."
-msgstr ""
+msgstr "包含此查询参数值的可选 JSON 对象。"
 
 #. <h5>@T["Content Items fetched by a Query"]</h5>
 #: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Summary.cshtml:5
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Summary"
 msgid "Content Items fetched by a Query"
-msgstr ""
+msgstr "由查询获取的内容项"
 
 #. <h4 class="card-title">@T["Queried Content Items"]</h4>
 #: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Thumbnail.cshtml:5
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Thumbnail"
 msgid "Queried Content Items"
-msgstr ""
+msgstr "已查询的内容项"
 
 #. <p>@T["Exports all content items fetched by a Query."]</p>
 #: OrchardCore.Queries\Views\Items\QueryBasedContentDeploymentStep.Fields.Thumbnail.cshtml:6
 msgctxt ""
 "OrchardCore.Queries.Views.Items.QueryBasedContentDeploymentStep.Fields.Thumbnail"
 msgid "Exports all content items fetched by a Query."
+msgstr "导出由查询获取的所有内容项。"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Queries.AdminMenu"
+msgid "All Queries"
+msgstr "所有查询"
+
+#: QueriesLocalizationSources.cs
+msgctxt "OrchardCore.Queries.QueriesLocalizationSources"
+msgid "Queried Content Items"
+msgstr "已查询的内容项"
+
+#. Format arguments: {0}: name
+#: Recipes/QueryStep.cs
+#, csharp-format
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid ""
+"Could not find query source value. The query '{0}' will not be imported."
+msgstr "找不到查询源值。查询“{0}”将不会被导入。"
+
+#. Format arguments: {0}: sourceName; {1}: name
+#: Recipes/QueryStep.cs
+#, csharp-format
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid ""
+"Could not find query source: '{0}'. The query '{1}' will not be imported."
+msgstr "找不到查询源：“{0}”。查询“{1}”将不会被导入。"
+
+#: Recipes/QueryStep.cs
+msgctxt "OrchardCore.Queries.Recipes.QueryStep"
+msgid "Query name is missing or empty. The query will not be imported."
+msgstr "查询名称缺失或为空。该查询不会被导入。"
+
+#: Sql/Drivers/SqlQueryDisplayDriver.cs
+msgctxt "OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver"
+msgid ""
+"Potentially unsafe Liquid output expressions ('{{ ... }}') were detected in "
+"this SQL query. Avoid injecting user input with Liquid output and use SQL "
+"parameters instead."
 msgstr ""
+"在此 SQL 查询中检测到潜在不安全的 Liquid 输出表达式（'{{ ... }}'）。请避免通过 Liquid 输出注入用户输入，而应改用 SQL"
+" 参数。"
+
+#. Format arguments: {0}: query.Source; {1}: query.Name
+#: Sql/GraphQL/SqlQueryFieldTypeProvider.cs
+#, csharp-format
+msgctxt "OrchardCore.Queries.Sql.GraphQL.Queries.SqlQueryFieldTypeProvider"
+msgid "Represents the {0} Query : {1}"
+msgstr "表示 {0} 查询：{1}"
+
+#: Views/Admin/Create.cshtml
+msgctxt "OrchardCore.Queries.Views.Admin.Create"
+msgid "Queries"
+msgstr "查询"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Queries.Views.Admin.Edit"
+msgid "Queries"
+msgstr "查询"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid "Name"
+msgstr "名称"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Queries.Views.Admin.Index"
+msgid "Source"
+msgstr "源"
+
+#: Views/Admin/Query.cshtml
+msgctxt "OrchardCore.Queries.Views.Admin.Query"
+msgid "Queries"
+msgstr "查询"
+
+#: Views/SqlQuery.Edit.cshtml
+msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
+msgid ""
+"Potentially unsafe Liquid output expressions ('{{ ... }}') were detected in "
+"this query template. This can lead to SQL injection if untrusted input is "
+"rendered directly into SQL."
+msgstr ""
+"在此查询模板中检测到潜在不安全的 Liquid 输出表达式（'{{ ... }}'）。如果直接将不受信任的输入渲染到 SQL 中，这可能导致 SQL "
+"注入。"
+
+#: Views/SqlQuery.Edit.cshtml
+msgctxt "OrchardCore.Queries.Views.SqlQuery.Edit"
+msgid ""
+"SQL queries are Liquid templates. Never inject user input with Liquid output"
+" expressions like '{{ input }}'. Use SQL parameters (for example '@name' or "
+"'@name:default') passed in by the caller for user-provided values."
+msgstr ""
+"SQL 查询是 Liquid 模板。切勿通过 '{{ input }}' 等 Liquid 输出表达式注入用户输入。请使用调用方传入的 SQL "
+"参数（例如 '@name' 或 '@name:default'）来处理用户提供的值。"
+
+#: Views/SqlQuery.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Queries.Views.SqlQuery.SummaryAdmin"
+msgid "Source"
+msgstr "源"

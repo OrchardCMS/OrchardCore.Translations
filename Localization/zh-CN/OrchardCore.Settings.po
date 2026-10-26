@@ -36,14 +36,14 @@ msgstr "设置更新成功"
 #: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:67
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be greater than zero."
-msgstr ""
+msgstr "每页显示数量必须大于零。"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.PageSize),
 #. S["The page size must be less than or equal to {0}.", site.MaxPageSize]);
 #: OrchardCore.Settings\Drivers\DefaultSiteSettingsDisplayDriver.cs:72
 msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
 msgid "The page size must be less than or equal to {0}."
-msgstr ""
+msgstr "每页显示数量必须小于或等于 {0}。"
 
 #. context.Updater.ModelState.AddModelError(Prefix, nameof(model.BaseUrl),
 #. S["The Base url must be a fully qualified URL."]);
@@ -113,3 +113,268 @@ msgstr "导出当前站点设置。"
 msgctxt "OrchardCore.Settings.Views.Shared.DisplayTemplates.RemovableCulture"
 msgid "Delete"
 msgstr "删除"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Settings.AdminMenu"
+msgid "Debugging"
+msgstr "调试"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Settings.AdminMenu"
+msgid "Tools"
+msgstr "工具"
+
+#: Startup.cs
+msgctxt "OrchardCore.Settings.DeploymentStartup"
+msgid "Debugging settings"
+msgstr "调试设置"
+
+#: Startup.cs
+msgctxt "OrchardCore.Settings.DeploymentStartup"
+msgid "Exports the debugging settings."
+msgstr "导出调试设置。"
+
+#: Drivers/DefaultSiteSettingsDisplayDriver.cs
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "Enter at least one page size when page size selection is allowed."
+msgstr "允许选择每页显示数量时，请至少输入一个每页显示数量。"
+
+#: Drivers/DefaultSiteSettingsDisplayDriver.cs
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The CDN base url must be a fully qualified URL."
+msgstr "CDN 基础 URL 必须是完整限定的 URL。"
+
+#: Drivers/DefaultSiteSettingsDisplayDriver.cs
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid ""
+"The page size options must be a comma-separated list of positive numbers."
+msgstr "每页显示数量选项必须是以逗号分隔的正数列表。"
+
+#. Format arguments: {0}: site.MaxPageSize
+#: Drivers/DefaultSiteSettingsDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver"
+msgid "The page size options must be less than or equal to {0}."
+msgstr "每页显示数量选项必须小于或等于 {0}。"
+
+#: SettingsLocalizationSources.cs
+msgctxt "OrchardCore.Settings.SettingsLocalizationSources"
+msgid "Site Settings"
+msgstr "站点设置"
+
+#: Views/DebugSettings.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.DebugSettings.Edit"
+msgid ""
+"Wrap rendered shapes in HTML comments to help identify the template or "
+"binding that produced each fragment."
+msgstr "使用 HTML 注释包裹渲染后的形状，以帮助识别生成每个片段的模板或绑定。"
+
+#: Views/DebugSettings.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.DebugSettings.Edit"
+msgid "Write shape debug information"
+msgstr "写入形状调试信息"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Cache Mode"
+msgstr "缓存模式"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Determines whether caches are enabled or disabled."
+msgstr "确定缓存是启用还是禁用。"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Disabled"
+msgstr "已禁用"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Enabled"
+msgstr "已启用"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Enabled with cache debug mode"
+msgstr "已启用缓存调试模式"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "From environment — enabled in Production, disabled otherwise"
+msgstr "根据环境 — 生产环境中启用，其他环境中禁用"
+
+#: Views/Settings-Cache.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Cache.Edit"
+msgid "Settings for dynamic caches"
+msgstr "动态缓存设置"
+
+#: Views/Settings-Reload.Wrapper.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Reload.Wrapper"
+msgid ""
+"The website might be restarted upon saving the settings, potentially leading"
+" to temporary unresponsiveness during the process."
+msgstr "保存设置时，网站可能会重启，因此此过程中可能会暂时无响应。"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid ""
+"A base CDN URL prefixed to the local scripts and stylesheets. It is disabled"
+" if the value is empty or if the Resource Debug Mode is enabled, e.g. "
+"<em>https://cdn.mysite.com</em>"
+msgstr ""
+"用于本地脚本和样式表的基础 CDN URL。值为空或启用资源调试模式时将禁用该功能，例如 <em>https://cdn.mysite.com</em>"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid ""
+"Determines whether scripts and stylesheets load in their debuggable or "
+"minified form."
+msgstr "确定脚本和样式表以可调试形式还是压缩形式加载。"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Disabled — use minified version of resources"
+msgstr "已禁用 — 使用资源的压缩版本"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Enabled — use debuggable version of resources"
+msgstr "已启用 — 使用资源的可调试版本"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "From environment — disabled in Production, enabled otherwise"
+msgstr "根据环境 — 生产环境中禁用，其他环境中启用"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Resource Debug Mode"
+msgstr "资源调试模式"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Settings for scripts and stylesheets"
+msgstr "脚本和样式表设置"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Site CDN (Content Delivery Network) base url"
+msgstr "站点 CDN（内容分发网络）基础 URL"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Use framework CDN (Content Delivery Network)"
+msgstr "使用框架 CDN（内容分发网络）"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid "Use resources cache busting"
+msgstr "启用资源缓存失效"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid ""
+"Whether a framework CDN is used for registered scripts and stylesheets, such"
+" as jQuery, or their local version"
+msgstr "确定是否对已注册的脚本和样式表（例如 jQuery）使用框架 CDN，还是使用其本地版本"
+
+#: Views/Settings-Resources.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Resources.Edit"
+msgid ""
+"Whether cache busting (append a version) is used for scripts and stylesheets"
+msgstr "确定是否通过附加版本号来避免脚本和样式表使用缓存"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid ""
+"A comma-separated list of the page size values users can select from, for "
+"example 10, 25, 50, 100."
+msgstr "供用户选择的每页显示数量，以逗号分隔，例如 10, 25, 50, 100。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Allow users to change the page size on listing pages"
+msgstr "允许用户在列表页面更改每页显示数量"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Base url"
+msgstr "基础 URL"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Default Time Zone"
+msgstr "默认时区"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid ""
+"Determines the default time zone used when displaying and editing dates and "
+"times. DST (daylight saving time) will be applied automatically per time "
+"zone if available."
+msgstr "确定显示和编辑日期及时间时使用的默认时区。如果可用，将自动按时区应用夏令时（DST，daylight saving time）。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Enter the fully qualified base URL of the web site."
+msgstr "请输入网站的完整限定基础 URL。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Local to server"
+msgstr "服务器本地时区"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page size"
+msgstr "每页显示数量"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page size options"
+msgstr "每页显示数量选项"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page size selection"
+msgstr "每页显示数量选择"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Page title format"
+msgstr "页面标题格式"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Site name"
+msgstr "站点名称"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "The default format of page titles."
+msgstr "页面标题的默认格式。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "The default page size."
+msgstr "默认每页显示数量。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "The site name."
+msgstr "站点名称。"
+
+#. Format arguments: {0}: Model.MaxPageSize
+#: Views/Settings-Site.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid "Values cannot exceed the maximum page size of {0}."
+msgstr "值不能超过最大每页显示数量 {0}。"
+
+#: Views/Settings-Site.Edit.cshtml
+msgctxt "OrchardCore.Settings.Views.Settings-Site.Edit"
+msgid ""
+"When enabled, a selector is shown on listing pages so users can choose how "
+"many items are displayed per page."
+msgstr "启用后，列表页面会显示选择器，用户可据此选择每页显示的内容数量。"
