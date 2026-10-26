@@ -985,3 +985,997 @@ msgstr "确定"
 msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditMediaTextModal"
 msgid "Cancel"
 msgstr "取消"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Media.AdminMenu"
+msgid "API"
+msgstr "API"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Media.AdminMenu"
+msgid "Library"
+msgstr "媒体库"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Media.AdminMenu"
+msgid "Options"
+msgstr "选项"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Media.AdminMenu"
+msgid "Profiles"
+msgstr "配置文件"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Media.AdminMenu"
+msgid "Settings"
+msgstr "设置"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Media.Controllers.AdminController"
+msgid "Unspecified"
+msgstr "未指定"
+
+#: Drivers/MediaApiSettingsDisplayDriver.cs
+msgctxt "OrchardCore.Media.Drivers.MediaApiSettingsDisplayDriver"
+msgid "Bearer — OAuth2 + PKCE (requires OpenID Connect)"
+msgstr "****** OAuth2 + PKCE（需要 OpenID Connect）"
+
+#: Drivers/MediaApiSettingsDisplayDriver.cs
+msgctxt "OrchardCore.Media.Drivers.MediaApiSettingsDisplayDriver"
+msgid "Cookie (default)"
+msgstr "Cookie（默认）"
+
+#. Format arguments: {0}: context.PartFieldDefinition.DisplayName()
+#: Drivers/MediaFieldDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
+msgid "A value is required for {0}."
+msgstr "{0} 的值为必填项。"
+
+#. Format arguments: {0}: string.Join(", ", settings.AllowedExtensions)
+#: Drivers/MediaFieldDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
+msgid ""
+"Media extension is not allowed. Only media with '{0}' extensions are "
+"allowed."
+msgstr "不允许此媒体扩展名。仅允许扩展名为“{0}”的媒体。"
+
+#. Format arguments: {0}: context.PartFieldDefinition.DisplayName(); {1}:
+#. ex.FileName
+#: Drivers/MediaFieldDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Drivers.MediaFieldDisplayDriver"
+msgid "{0}: The file {1} was not found. Reupload the file."
+msgstr "{0}：未找到文件 {1}。请重新上传该文件。"
+
+#: Endpoints/Api/UploadMediaEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "A file with this name already exists in the current folder."
+msgstr "当前文件夹中已存在同名文件。"
+
+#: Endpoints/Api/CopyMediaEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot copy media because a file already exists with the same name"
+msgstr "无法复制媒体，因为已存在同名文件"
+
+#: Endpoints/Api/CreateFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot create folder because a file already exists with the same name"
+msgstr "无法创建文件夹，因为已存在同名文件"
+
+#: Endpoints/Api/CreateFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid ""
+"Cannot create folder because a folder already exists with the same name"
+msgstr "无法创建文件夹，因为已存在同名文件夹"
+
+#: Endpoints/Api/CreateFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid ""
+"Cannot create folder because the folder name contains invalid characters"
+msgstr "无法创建文件夹，因为文件夹名称包含无效字符"
+
+#: Endpoints/Api/CreateFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot create folder inside a system folder"
+msgstr "无法在系统文件夹中创建文件夹"
+
+#: Endpoints/Api/DeleteFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot delete a system folder"
+msgstr "无法删除系统文件夹"
+
+#: Endpoints/Api/DeleteFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot delete path because it is not a directory"
+msgstr "无法删除此路径，因为它不是目录"
+
+#: Endpoints/Api/DeleteFolderEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot delete root media folder"
+msgstr "无法删除根媒体文件夹"
+
+#: Endpoints/Api/MoveMediaEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Cannot move media because a file already exists with the same name"
+msgstr "无法移动媒体，因为已存在同名文件"
+
+#. Format arguments: {0}: string.Join(",", filesOnError)
+#: Endpoints/Api/MoveMediaListEndpoint.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid ""
+"Error when moving files. Maybe they already exist on the target folder? "
+"Files on error: {0}"
+msgstr "移动文件时出错。它们可能已存在于目标文件夹中？出错的文件：{0}"
+
+#. Format arguments: {0}: extension, newExtension
+#: Endpoints/Api/CopyMediaEndpoint.cs Endpoints/Api/MoveMediaEndpoint.cs
+#: Endpoints/Api/UploadMediaEndpoint.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "This file extension is not allowed: {0}"
+msgstr "不允许此文件扩展名：{0}"
+
+#: Endpoints/Api/GetPermittedStorageEndpoint.cs
+msgctxt "OrchardCore.Media.Endpoints.Api.MediaApiEndpoints"
+msgid "Unspecified"
+msgstr "未指定"
+
+#. Format arguments: {0}: rolesUrl
+#: Events/SecureMediaFeatureEventHandler.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Events.SecureMediaFeatureEventHandler"
+msgid ""
+"<p><strong>Secure Media</strong> is now enabled. Review and update role "
+"<strong>permissions</strong> to ensure users can access only the media they "
+"should.</p><p>Open the <a href=\"{0}\">Roles page</a> to configure "
+"permissions.<br />For guidance, see the <a "
+"href=\"https://docs.orchardcore.net/en/latest/reference/modules/Media/#secure-"
+"media\" target=\"_blank\" rel=\"noopener noreferrer\">secure media "
+"documentation</a>.</p>"
+msgstr ""
+"<p><strong>安全媒体</strong>现已启用。请检查并更新角色的<strong>权限</strong>，确保用户只能访问其应访问的媒体。</p><p>打开<a"
+" href=\"{0}\">“角色”页面</a>配置权限。<br />如需指导，请参阅<a "
+"href=\"https://docs.orchardcore.net/en/latest/reference/modules/Media/#secure-"
+"media\" target=\"_blank\" rel=\"noopener noreferrer\">安全媒体文档</a>。</p>"
+
+#: GraphQL/MediaAssetObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaAssetObjectType"
+msgid "The date and time in UTC when the asset was last modified."
+msgstr "资源上次修改时的 UTC 日期和时间。"
+
+#: GraphQL/MediaAssetObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaAssetObjectType"
+msgid "The length of the file."
+msgstr "文件的长度。"
+
+#: GraphQL/MediaAssetObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaAssetObjectType"
+msgid "The name of the asset."
+msgstr "资源的名称。"
+
+#: GraphQL/MediaAssetObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaAssetObjectType"
+msgid "The url to the asset."
+msgstr "资源的 URL。"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFieldQueryObjectType"
+msgid "the absolute urls of the media items"
+msgstr "媒体项的绝对 URL"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFieldQueryObjectType"
+msgid "the files of the media items"
+msgstr "媒体项中的文件"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFieldQueryObjectType"
+msgid "the media file names"
+msgstr "媒体文件名"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFieldQueryObjectType"
+msgid "the media paths"
+msgstr "媒体路径"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFieldQueryObjectType"
+msgid "the media texts"
+msgstr "媒体文本"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "auto-orient the image based on EXIF data (defaults to true)"
+msgstr "根据 EXIF 数据自动调整图像方向（默认为 true）"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the background color of the image"
+msgstr "图像的背景色"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the file name of the media file item"
+msgstr "媒体文件项的文件名"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the format of the image (jpg, png, gif, webp)"
+msgstr "图像格式（jpg、png、gif、webp）"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the height of the image"
+msgstr "图像高度"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the media profile name to use for image processing"
+msgstr "用于图像处理的媒体配置文件名称"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the media text of the file item"
+msgstr "文件项的媒体文本"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the path of the media file item"
+msgstr "媒体文件项的路径"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the quality of the image (1-100)"
+msgstr "图像质量（1-100）"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the resize mode (pad, boxpad, max, min, stretch)"
+msgstr "调整大小模式（pad、boxpad、max、min、stretch）"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the url name of the media file item"
+msgstr "媒体文件项的 URL 名称"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the url of the media file item with image processing parameters"
+msgstr "包含图像处理参数的媒体文件项 URL"
+
+#: GraphQL/MediaFieldQueryObjectType.cs
+msgctxt "OrchardCore.Media.GraphQL.MediaFileItemType"
+msgid "the width of the image"
+msgstr "图像宽度"
+
+#: MediaCacheAdminMenu.cs
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Cache"
+msgstr "缓存"
+
+#: MediaCacheAdminMenu.cs
+msgctxt "OrchardCore.Media.MediaCacheAdminMenu"
+msgid "Settings"
+msgstr "设置"
+
+#: MediaLocalizationSources.cs
+msgctxt "OrchardCore.Media.MediaLocalizationSources"
+msgid "Media"
+msgstr "媒体"
+
+#. Format arguments: {0}: file.TargetPath
+#: Recipes/MediaStep.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Recipes.MediaStep"
+msgid "File extension not allowed: '{0}'"
+msgstr "不允许此文件扩展名：{0}"
+
+#. Format arguments: {0}: file.TargetPath
+#: Recipes/MediaStep.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Recipes.MediaStep"
+msgid ""
+"Media target path must be a relative file path without traversal segments: "
+"'{0}'"
+msgstr "媒体目标路径必须是不包含路径遍历段的相对文件路径：'{0}'"
+
+#. Format arguments: {0}
+#: SecureMediaPermissions.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.SecureMediaPermissions"
+msgid "View media content in folder '{0}'"
+msgstr "查看文件夹“{0}”中的媒体内容"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "A file with this name already exists in the current folder."
+msgstr "当前文件夹中已存在同名文件。"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "A folder must be selected"
+msgstr "必须选择一个文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Add media"
+msgstr "添加媒体"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Anchor"
+msgstr "定位点"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Are you sure you want to delete these files?"
+msgstr "确定要删除这些文件吗？"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Are you sure you want to delete this file?"
+msgstr "确定要删除此文件吗？"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Are you sure you want to delete this folder?"
+msgstr "确定要删除此文件夹吗？"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Are you sure you want to move the selected file(s) to this folder?"
+msgstr "确定要将选中的文件移动到此文件夹吗？"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Available Storage"
+msgstr "可用存储空间"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Cancel"
+msgstr "取消"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Cannot delete the root folder"
+msgstr "无法删除根文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Clear Errors"
+msgstr "清除错误"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Copied!"
+msgstr "已复制！"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Copy"
+msgstr "复制"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Copy error"
+msgstr "复制错误"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Copy file"
+msgstr "复制文件"
+
+#. Format arguments: {0}
+#: Services/MediaJSLocalizer.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid ""
+"Could not sign in to the Media API. The sign-in service at {0} could not be "
+"reached — check that OpenID Connect is enabled and the Media API bearer "
+"client is configured, or switch the Media API to Cookie authentication in "
+"the Media settings."
+msgstr ""
+"无法登录 Media API。无法访问位于 {0} 的登录服务 — 请检查是否已启用 OpenID Connect，并确认已配置 Media API "
+"bearer 客户端；或者在媒体设置中将 Media API 切换为 Cookie 身份验证。"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Create a subfolder"
+msgstr "创建子文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Create folder"
+msgstr "创建文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Delete"
+msgstr "删除"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Delete file"
+msgstr "删除文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Delete folder"
+msgstr "删除文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Download"
+msgstr "下载"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Drop files here"
+msgstr "将文件拖放到此处"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Drop your file here"
+msgstr "将文件拖放到此处"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Enter media text"
+msgstr "输入媒体文本"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Error getting folders"
+msgstr "获取文件夹时出错"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Error moving file"
+msgstr "移动文件时出错"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Error:"
+msgstr "错误："
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Errors"
+msgstr "错误"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Failed to download file"
+msgstr "文件下载失败"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "File copied successfully."
+msgstr "文件复制成功。"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "File name"
+msgstr "文件名"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "File name is required"
+msgstr "必须填写文件名"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "File(s) moved successfully."
+msgstr "文件移动成功。"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Files"
+msgstr "文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "First"
+msgstr "首页"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Folder Action"
+msgstr "文件夹操作"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Invalid file extension"
+msgstr "文件扩展名无效"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Large Thumbs"
+msgstr "大缩略图"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Last"
+msgstr "末页"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Last modified"
+msgstr "最后修改时间"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Loading media browser..."
+msgstr "正在加载媒体浏览器..."
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Media text"
+msgstr "媒体文本"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Move"
+msgstr "移动"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Move file"
+msgstr "移动文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Move file(s)"
+msgstr "移动文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Name"
+msgstr "名称"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Next"
+msgstr "下一页"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "No Files"
+msgstr "无文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Not Found"
+msgstr "未找到"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Nothing to show with this filter"
+msgstr "筛选后没有可显示的内容"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "OK"
+msgstr "确定"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Ok"
+msgstr "确定"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Pause upload"
+msgstr "暂停上传"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Previous"
+msgstr "上一页"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Remove"
+msgstr "移除"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Rename"
+msgstr "重命名"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Rename file"
+msgstr "重命名文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Reset Anchor"
+msgstr "重置定位点"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Resume upload"
+msgstr "继续上传"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Resumed"
+msgstr "已继续"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Search and filter..."
+msgstr "搜索和筛选..."
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select All"
+msgstr "全选"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select Media"
+msgstr "选择媒体"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select None"
+msgstr "取消全选"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select a file"
+msgstr "选择文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select a folder"
+msgstr "选择文件夹"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Select an anchor"
+msgstr "选择定位点"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Size"
+msgstr "大小"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Small Thumbs"
+msgstr "小缩略图"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Storage Info"
+msgstr "存储信息"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Success"
+msgstr "成功"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Temporarily unavailable"
+msgstr "暂时不可用"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "The file is already in this folder"
+msgstr "该文件已在此文件夹中"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "This file exceeds the maximum upload size"
+msgstr "此文件超过最大上传大小"
+
+#. Format arguments: {0}
+#: Services/MediaJSLocalizer.cs
+#, csharp-format
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "This file exceeds the maximum upload size of {0}"
+msgstr "此文件超过最大上传大小 {0}"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "This folder is empty"
+msgstr "此文件夹为空"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Unauthorized"
+msgstr "未授权"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Upload files"
+msgstr "上传文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Uploads"
+msgstr "上传"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "Validation error"
+msgstr "验证错误"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "View"
+msgstr "查看"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "What do you want to do with this folder?"
+msgstr "要对此文件夹执行什么操作？"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "You are not authorized to perform this action on these files"
+msgstr "您无权对此操作这些文件"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "You are not authorized to perform this action on this file"
+msgstr "您无权对此文件执行此操作"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid "You are not authorized to perform this action on this folder"
+msgstr "您无权对此文件夹执行此操作"
+
+#: Services/MediaJSLocalizer.cs
+msgctxt "OrchardCore.Media.Services.MediaJSLocalizer"
+msgid ""
+"Your files will be uploaded to the current folder when you drop them here"
+msgstr "将文件拖放到此处后，文件会上传到当前文件夹"
+
+#: Settings/MediaFieldSettingsDriver.cs
+msgctxt "OrchardCore.Media.Settings.MediaFieldSettingsDriver"
+msgid "Please select at least one extension."
+msgstr "请至少选择一个扩展名。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Atomic move"
+msgstr "原子移动"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Hierarchical namespace"
+msgstr "层次命名空间"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Indicates whether SignalR is enabled for real-time media updates."
+msgstr "指示是否启用 SignalR，以便实时更新媒体。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Indicates whether the TUS resumable upload protocol is enabled."
+msgstr "指示是否启用 TUS 可续传上传协议。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"Indicates whether the storage provider supports a true hierarchical folder "
+"structure."
+msgstr "指示存储提供程序是否支持真正的层次文件夹结构。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"Indicates whether the storage provider supports atomic move operations."
+msgstr "指示存储提供程序是否支持原子移动操作。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"Indicates whether the thumbnails (grid) view is disabled in the media "
+"gallery."
+msgstr "指示是否在媒体库中禁用缩略图（网格）视图。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Max secure files browser cache days"
+msgstr "安全文件浏览器缓存最长天数"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Max upload chunk size"
+msgstr "最大上传分块大小"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Restricted file extensions"
+msgstr "受限文件扩展名"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "SignalR"
+msgstr "SignalR"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Storage provider"
+msgstr "存储提供程序"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "TUS uploads"
+msgstr "TUS 上传"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Temporary file lifetime"
+msgstr "临时文件有效期"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"The default number of days for the media cache control header for secure "
+"files."
+msgstr "安全文件媒体缓存控制标头的默认天数。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "The lifetime of temporary files created during upload."
+msgstr "上传过程中创建的临时文件的有效期。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"The maximum chunk size when uploading files in bytes. If 0 or null, no "
+"chunked upload is used."
+msgstr "上传文件时的最大分块大小（字节）。如果为 0 或 null，则不使用分块上传。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "The name of the configured media storage provider."
+msgstr "已配置的媒体存储提供程序的名称。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"The name of the folder used to store media assets inside the App_Data "
+"folder."
+msgstr "在 App_Data 文件夹内用于存储媒体资源的文件夹名称。"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid "Thumbnails disabled"
+msgstr "已禁用缩略图"
+
+#: Views/Admin/Options.cshtml
+msgctxt "OrchardCore.Media.Views.Admin.Options"
+msgid ""
+"Users need the 'Upload media file extensions requiring additional "
+"permission' permission to upload files with these extensions."
+msgstr "用户需要具有“上传需要额外权限的媒体文件扩展名”权限，才能上传这些扩展名的文件。"
+
+#: Views/MediaApiSettings.Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaApiSettings.Edit"
+msgid ""
+"How the Media Gallery, uploads and realtime updates authenticate to the "
+"Media API (api/media). Exactly one scheme is active at a time — never both. "
+"Cookie works out of the box with the admin session (with antiforgery "
+"protection on writes). Bearer uses OAuth2 bearer tokens and requires the "
+"OpenID Connect Token Validation feature and a registered PKCE client."
+msgstr ""
+"媒体库、上传和实时更新通过 Media API（api/media）进行身份验证。同一时间只能启用一种方案，不能同时启用两种。Cookie "
+"可直接使用管理会话（写入操作受防伪保护）。****** OAuth2 bearer 令牌需要 OpenID Connect Token "
+"Validation 功能以及已注册的 PKCE 客户端。"
+
+#: Views/MediaApiSettings.Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaApiSettings.Edit"
+msgid "Media API authentication"
+msgstr "Media API 身份验证"
+
+#: Views/MediaField-Gallery.Option.cshtml
+msgctxt "OrchardCore.Media.Views.MediaField-Gallery.Option"
+msgid "Gallery"
+msgstr "媒体库"
+
+#: Views/MediaFieldSettings.Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
+msgid "Allow all default media types"
+msgstr "允许所有默认媒体类型"
+
+#. Format arguments: {0}: group.Key
+#: Views/MediaFieldSettings.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
+msgid "Select all extensions with the '{0}' type."
+msgstr "选择类型为“{0}”的所有扩展名。"
+
+#: Views/MediaFieldSettings.Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
+msgid ""
+"This will allow the user to attach any accessible file from the media "
+"library."
+msgstr "这将允许用户从媒体库附加任何可访问的文件。"
+
+#. Format arguments: {0}: group.Key
+#: Views/MediaFieldSettings.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Media.Views.MediaFieldSettings.Edit"
+msgid "{0} types"
+msgstr "{0} 类型"
+
+#: Views/MediaProfileEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfileEntry.Buttons.SummaryAdmin"
+msgid "Delete"
+msgstr "删除"
+
+#: Views/MediaProfileEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfileEntry.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr "编辑"
+
+#: Views/MediaProfiles/Create.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
+msgid "Auto Orient"
+msgstr "自动定向"
+
+#: Views/MediaProfiles/Create.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
+msgid ""
+"Automatically orient the image based on EXIF metadata. Enabled by default."
+msgstr "根据 EXIF 元数据自动调整图像方向。默认启用。"
+
+#: Views/MediaProfiles/Create.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Create"
+msgid "Media Profiles"
+msgstr "媒体配置文件"
+
+#: Views/MediaProfiles/Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
+msgid "Auto Orient"
+msgstr "自动定向"
+
+#: Views/MediaProfiles/Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
+msgid ""
+"Automatically orient the image based on EXIF metadata. Enabled by default."
+msgstr "根据 EXIF 元数据自动调整图像方向。默认启用。"
+
+#: Views/MediaProfiles/Edit.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Edit"
+msgid "Media Profiles"
+msgstr "媒体配置文件"
+
+#: Views/MediaProfiles/Index.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
+msgid "Add Media Profile"
+msgstr "添加媒体配置文件"
+
+#: Views/MediaProfiles/Index.cshtml
+msgctxt "OrchardCore.Media.Views.MediaProfiles.Index"
+msgid "Name"
+msgstr "名称"
+
+#: Views/Shared/MediaFieldEditLocalization.cshtml
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "File has been deleted"
+msgstr "文件已删除"
+
+#: Views/Shared/MediaFieldEditLocalization.cshtml
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "No Files"
+msgstr "无文件"
+
+#: Views/Shared/MediaFieldEditLocalization.cshtml
+msgctxt "OrchardCore.Media.Views.Shared.MediaFieldEditLocalization"
+msgid "Temporarily unavailable"
+msgstr "暂时不可用"
