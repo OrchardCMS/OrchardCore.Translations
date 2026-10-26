@@ -849,8 +849,7 @@ msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
 msgid ""
 "The name of the looping variable. The current value of each iteration is set"
 " to a property with this name as well as the last result."
-msgstr ""
-"循环变量的名称。每次迭代的当前值都设置为具有此名称的属性以及最后的结果。"
+msgstr "循环变量的名称。每次迭代的当前值都设置为具有此名称的属性以及最后的结果。"
 
 #. <h4 class="card-title"><i class="fa fa-circle-o-notch" aria-
 #. hidden="true"></i>@T["For Loop"]</h4>
@@ -893,8 +892,7 @@ msgctxt "OrchardCore.Workflows.Views.Items.HttpRedirectTask.Fields.Edit"
 msgid ""
 "Check if the redirect should be permanent (301). Leave unchecked for a "
 "temporary redirect (302)."
-msgstr ""
-"检查重定向是否应该是永久性的（301）。保持未选中状态以进行临时重定向（302）。"
+msgstr "检查重定向是否应该是永久性的（301）。保持未选中状态以进行临时重定向（302）。"
 
 #. <h4 class="card-title"><i class="fa fa-globe" aria-
 #. hidden="true"></i>@T["HTTP Redirect"]</h4>
@@ -2303,3 +2301,887 @@ msgctxt ""
 "OrchardCore.Workflows.Views.Shared.Components.SelectWorkflowType.Default"
 msgid "-"
 msgstr "-"
+
+#: Activities/LiquidTask.cs
+msgctxt "OrchardCore.Workflows.Activities.LiquidTask"
+msgid "Control Flow"
+msgstr "控制流"
+
+#: Activities/LiquidTask.cs
+msgctxt "OrchardCore.Workflows.Activities.LiquidTask"
+msgid "Done"
+msgstr "完成"
+
+#: Activities/LiquidTask.cs
+msgctxt "OrchardCore.Workflows.Activities.LiquidTask"
+msgid "Liquid Task"
+msgstr "Liquid 任务"
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Workflows.AdminMenu"
+msgid "Design"
+msgstr "设计"
+
+#: Controllers/WorkflowController.cs
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "Another instance is already running."
+msgstr "已有另一个实例正在运行。"
+
+#. Format arguments: {0}: count; {1}: string.Join(", ", deletedWorkflowIds)
+#: Controllers/WorkflowController.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "The workflow \"{1}\" has been deleted."
+msgid_plural "The following workflows have been deleted: {1}."
+msgstr[0] "工作流“{1}”已删除。"
+
+#. Format arguments: {0}: id
+#: Controllers/WorkflowController.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowController"
+msgid "Workflow {0} has been restarted."
+msgstr "工作流 {0} 已重新启动。"
+
+#. Format arguments: {0}: count; {1}: string.Join(", ",
+#. deletedWorkflowTypeNames)
+#: Controllers/WorkflowTypeController.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
+msgid "The workflow \"{1}\" has been deleted."
+msgid_plural "The following workflows have been deleted: {1}."
+msgstr[0] "工作流“{1}”已删除。"
+
+#: Controllers/WorkflowTypeController.cs
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
+msgid ""
+"This workflow has no startup task, so it will never run. Select an event and"
+" mark it as the startup task."
+msgstr "此工作流没有启动任务，因此永远不会运行。请选择一个事件并将其标记为启动任务。"
+
+#: Controllers/WorkflowTypeController.cs
+msgctxt "OrchardCore.Workflows.Controllers.WorkflowTypeController"
+msgid "Workflow Types"
+msgstr "工作流类型"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/ForEachTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.ForEachTaskDisplayDriver"
+msgid "Enumerable doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Enumerable 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/ForEachTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.ForEachTaskDisplayDriver"
+msgid "Enumerable is required field."
+msgstr "Enumerable 是必填字段。"
+
+#. Format arguments: {0}: label; {1}: string.Join(" ", errors)
+#: Drivers/ForLoopTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.ForLoopTaskDisplayDriver"
+msgid "{0} doesn't contain a valid Liquid expression. Details: {1}"
+msgstr "{0} 不包含有效的 Liquid 表达式。详细信息：{1}"
+
+#. Format arguments: {0}: label
+#: Drivers/ForLoopTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.ForLoopTaskDisplayDriver"
+msgid "{0} is required field."
+msgstr "{0} 是必填字段。"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/IfElseTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.IfElseTaskDisplayDriver"
+msgid "Condition doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Condition 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/IfElseTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.IfElseTaskDisplayDriver"
+msgid "Condition is required field."
+msgstr "Condition 是必填字段。"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/LiquidTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.LiquidTaskDisplayDriver"
+msgid "Expression doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Expression 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/LiquidTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.LiquidTaskDisplayDriver"
+msgid "Expression is required field."
+msgstr "Expression 是必填字段。"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/SetOutputTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.SetOutputTaskDisplayDriver"
+msgid "Value doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Value 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/SetOutputTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.SetOutputTaskDisplayDriver"
+msgid "Value is required field."
+msgstr "Value 是必填字段。"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/SetVariableTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.SetVariableTaskDisplayDriver"
+msgid "Value doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Value 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/SetVariableTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.SetVariableTaskDisplayDriver"
+msgid "Value is required field."
+msgstr "Value 是必填字段。"
+
+#. Format arguments: {0}: string.Join(" ", errors)
+#: Drivers/WhileLoopTaskDisplayDriver.cs
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Drivers.WhileLoopTaskDisplayDriver"
+msgid "Condition doesn't contain a valid Liquid expression. Details: {0}"
+msgstr "Condition 不包含有效的 Liquid 表达式。详细信息：{0}"
+
+#: Drivers/WhileLoopTaskDisplayDriver.cs
+msgctxt "OrchardCore.Workflows.Drivers.WhileLoopTaskDisplayDriver"
+msgid "Condition is required field."
+msgstr "Condition 是必填字段。"
+
+#: Events/WorkflowFaultEvent.cs
+msgctxt "OrchardCore.Workflows.Events.WorkflowFaultEvent"
+msgid "Background"
+msgstr "后台"
+
+#: Events/WorkflowFaultEvent.cs
+msgctxt "OrchardCore.Workflows.Events.WorkflowFaultEvent"
+msgid "Catch Workflow Fault Event"
+msgstr "捕获工作流错误事件"
+
+#: Events/WorkflowFaultEvent.cs
+msgctxt "OrchardCore.Workflows.Events.WorkflowFaultEvent"
+msgid "Done"
+msgstr "完成"
+
+#: Trimming/AdminMenu.cs
+msgctxt "OrchardCore.Workflows.Trimming.AdminMenu"
+msgid "Settings"
+msgstr "设置"
+
+#: Trimming/AdminMenu.cs
+msgctxt "OrchardCore.Workflows.Trimming.AdminMenu"
+msgid "Workflow Trimming"
+msgstr "工作流清理"
+
+#: Views/Activity/Create.cshtml
+msgctxt "OrchardCore.Workflows.Views.Activity.Create"
+msgid "Workflows"
+msgstr "工作流"
+
+#: Views/Activity.Design.cshtml
+msgctxt "OrchardCore.Workflows.Views.Activity.Design"
+msgid "Startup event"
+msgstr "启动事件"
+
+#: Views/Activity/EditActivity.cshtml
+msgctxt "OrchardCore.Workflows.Views.Activity.EditActivity"
+msgid "Workflows"
+msgstr "工作流"
+
+#: Views/Items/CorrelateTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/CorrelateTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/CorrelateTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#: Views/Items/CorrelateTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
+msgid ""
+"The value to correlate workflow instances with. With JavaScript support."
+msgstr "用于关联工作流实例的值。支持 JavaScript。"
+
+#: Views/Items/CorrelateTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.CorrelateTask.Fields.Edit"
+msgid "The value to correlate workflow instances with. With Liquid support."
+msgstr "用于关联工作流实例的值。支持 Liquid。"
+
+#: Views/Items/ForEachTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/ForEachTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/ForEachTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#. Format arguments: {0}: "input(\"Items\")"
+#: Views/Items/ForEachTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Edit"
+msgid "The JavaScript list to iterate. Example: {0}"
+msgstr "用于迭代的 JavaScript 列表。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties.Items | json }}"
+#: Views/Items/ForEachTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Edit"
+msgid ""
+"The Liquid list to iterate. Render a JSON array or comma-separated list. "
+"Example: {0}"
+msgstr "用于迭代的 Liquid 列表。输出 JSON 数组或逗号分隔的列表。示例：{0}"
+
+#: Views/Items/ForEachTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForEachTask.Fields.Thumbnail"
+msgid "Iterate over a JavaScript or Liquid list of items."
+msgstr "对 JavaScript 或 Liquid 项列表进行迭代。"
+
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#. Format arguments: {0}: "10"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The JavaScript end value. Example: {0}"
+msgstr "JavaScript 结束值。示例：{0}"
+
+#. Format arguments: {0}: "0"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The JavaScript start value. Example: {0}"
+msgstr "JavaScript 起始值。示例：{0}"
+
+#. Format arguments: {0}: "1"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The JavaScript step value. Example: {0}"
+msgstr "JavaScript 步长值。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties.End }}"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The Liquid end value. Example: {0}"
+msgstr "Liquid 结束值。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties.Start }}"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The Liquid start value. Example: {0}"
+msgstr "Liquid 起始值。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties.Step }}"
+#: Views/Items/ForLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Edit"
+msgid "The Liquid step value. Example: {0}"
+msgstr "Liquid 步长值。示例：{0}"
+
+#: Views/Items/ForLoopTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.ForLoopTask.Fields.Thumbnail"
+msgid "Iterate from a JavaScript or Liquid start value to an end value."
+msgstr "使用 JavaScript 或 Liquid 从起始值迭代到结束值。"
+
+#: Views/Items/HttpRequestEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
+msgid "Form Location Key"
+msgstr "表单位置键"
+
+#: Views/Items/HttpRequestEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
+msgid ""
+"This key name is used to store and then retrieve the current form's "
+"location. Leave blank if the workflow doesn't handle any form or a single "
+"one."
+msgstr "此键名用于存储并随后检索当前表单的位置。如果工作流不处理任何表单或只处理一个表单，请留空。"
+
+#: Views/Items/HttpRequestEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.HttpRequestEvent.Fields.Edit"
+msgid "URL"
+msgstr "URL"
+
+#. Format arguments: {0}: "input(\"Count\") > 0"
+#: Views/Items/IfElseTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Edit"
+msgid "A JavaScript expression that evaluates to true or false. Example: {0}"
+msgstr "计算结果为 true 或 false 的 JavaScript 表达式。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties[\"Sample\"].size > 0 }}"
+#: Views/Items/IfElseTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Edit"
+msgid "A Liquid expression that evaluates to true or false. Example: {0}"
+msgstr "计算结果为 true 或 false 的 Liquid 表达式。示例：{0}"
+
+#: Views/Items/IfElseTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/IfElseTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/IfElseTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#: Views/Items/IfElseTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.IfElseTask.Fields.Thumbnail"
+msgid ""
+"Evaluate a JavaScript or Liquid boolean condition and continue execution "
+"based on the outcome."
+msgstr "计算 JavaScript 或 Liquid 布尔条件，并根据结果继续执行。"
+
+#: Views/Items/LiquidTask.Fields.Design.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.LiquidTask.Fields.Design"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/LiquidTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.LiquidTask.Fields.Edit"
+msgid "Expression"
+msgstr "表达式"
+
+#. Format arguments: {0}: "{{ Workflow.Input.ContentItem.DisplayText }}"
+#: Views/Items/LiquidTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.LiquidTask.Fields.Edit"
+msgid ""
+"The Liquid expression to evaluate. The result is stored as the last result. "
+"Example: {0}"
+msgstr "要计算的 Liquid 表达式。结果将存储为最后的结果。示例：{0}"
+
+#: Views/Items/LiquidTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.LiquidTask.Fields.Thumbnail"
+msgid ""
+"Evaluate a Liquid expression and store the result as the workflow's last "
+"result."
+msgstr "计算 Liquid 表达式，并将结果存储为工作流的最后一个结果。"
+
+#: Views/Items/LiquidTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.LiquidTask.Fields.Thumbnail"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/SetOutputTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/SetOutputTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/SetOutputTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#: Views/Items/SetOutputTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Edit"
+msgid "The JavaScript value to store in the specified output variable."
+msgstr "要存储到指定输出变量中的 JavaScript 值。"
+
+#: Views/Items/SetOutputTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Edit"
+msgid "The Liquid value to store in the specified output variable."
+msgstr "要存储到指定输出变量中的 Liquid 值。"
+
+#: Views/Items/SetOutputTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetOutputTask.Fields.Thumbnail"
+msgid ""
+"Evaluate a JavaScript or Liquid expression and store the result into the "
+"workflow's output."
+msgstr "计算 JavaScript 或 Liquid 表达式，并将结果存储到工作流的输出中。"
+
+#: Views/Items/SetPropertyTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/SetPropertyTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/SetPropertyTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#: Views/Items/SetPropertyTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Edit"
+msgid "The JavaScript value to store in the specified property."
+msgstr "要存储到指定属性中的 JavaScript 值。"
+
+#: Views/Items/SetPropertyTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Edit"
+msgid "The Liquid value to store in the specified property."
+msgstr "要存储到指定属性中的 Liquid 值。"
+
+#: Views/Items/SetPropertyTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.SetPropertyTask.Fields.Thumbnail"
+msgid "Assign a JavaScript or Liquid value to a property on the workflow."
+msgstr "将 JavaScript 或 Liquid 值赋给工作流上的属性。"
+
+#: Views/Items/TimerEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Edit"
+msgid ""
+"The CRON expression uses UTC by default. Check this box to use the site's "
+"time zone instead."
+msgstr "CRON 表达式默认使用 UTC。选中此框可改用网站时区。"
+
+#: Views/Items/TimerEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.TimerEvent.Fields.Edit"
+msgid "Use site time zone"
+msgstr "使用网站时区"
+
+#. Format arguments: {0}: "input(\"Count\") > 0"
+#: Views/Items/WhileLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Edit"
+msgid "A JavaScript expression that evaluates to true or false. Example: {0}"
+msgstr "计算结果为 true 或 false 的 JavaScript 表达式。示例：{0}"
+
+#. Format arguments: {0}: "{{ Workflow.Properties.Count > 0 }}"
+#: Views/Items/WhileLoopTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Edit"
+msgid "A Liquid template that renders true or false. Example: {0}"
+msgstr "用于呈现 true 或 false 的 Liquid 模板。示例：{0}"
+
+#: Views/Items/WhileLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Edit"
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: Views/Items/WhileLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Edit"
+msgid "Liquid"
+msgstr "Liquid"
+
+#: Views/Items/WhileLoopTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Edit"
+msgid "Syntax"
+msgstr "语法"
+
+#: Views/Items/WhileLoopTask.Fields.Thumbnail.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WhileLoopTask.Fields.Thumbnail"
+msgid "Iterate while a JavaScript or Liquid condition is true."
+msgstr "当 JavaScript 或 Liquid 条件为 true 时进行迭代。"
+
+#: Views/Items/WorkflowFaultEvent.Fields.Design.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Design"
+msgid "Workflow Fault Event"
+msgstr "工作流错误事件"
+
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid ""
+"Check the captured workflow error information and return a Boolean value. If"
+" it is true, it will be processed by the current workflow. Javascript "
+"syntax."
+msgstr "检查捕获的工作流错误信息并返回布尔值。如果为 true，则由当前工作流处理该信息。JavaScript 语法。"
+
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "Trigger Condition"
+msgstr "触发条件"
+
+#. Format arguments: {0}: WorkflowFaultModel.WorkflowFaultInputKey
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid ""
+"You can use input('{0}') to get error information, contains the following "
+"attributes："
+msgstr "可以使用 input('{0}') 获取错误信息，其中包含以下属性："
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ActivityId)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Activity Id."
+msgstr "{0}：活动 ID。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ActivityTypeName)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Activity Type Name."
+msgstr "{0}：活动类型名称。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.FaultMessage)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Contains error messages manually raised by workflow activity."
+msgstr "{0}：包含工作流活动手动引发的错误消息。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ExceptionDetails)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Exception Details."
+msgstr "{0}：异常详细信息。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ErrorMessage)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Exception Information Summary."
+msgstr "{0}：异常信息摘要。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ExecutedActivityCount)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Executed activity count."
+msgstr "{0}：已执行活动数。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.ActivityDisplayName)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：The name of the activity."
+msgstr "{0}：活动名称。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.WorkflowId)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Workflow Id."
+msgstr "{0}：工作流 ID。"
+
+#. Format arguments: {0}: nameof(WorkflowFaultModel.WorkflowName)
+#: Views/Items/WorkflowFaultEvent.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Edit"
+msgid "{0}：Workflow name."
+msgstr "{0}：工作流名称。"
+
+#: Views/Items/WorkflowFaultEvent.Fields.Thumbnail.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Thumbnail"
+msgid ""
+"Trigger and capture exception information when exception occurs in any other"
+" workflow."
+msgstr "当其他工作流发生异常时触发并捕获异常信息。"
+
+#: Views/Items/WorkflowFaultEvent.Fields.Thumbnail.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.Items.WorkflowFaultEvent.Fields.Thumbnail"
+msgid "Workflow Fault Event"
+msgstr "工作流错误事件"
+
+#: Views/Workflow/Details.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
+msgid "Are you sure you want to restart this workflow instance?"
+msgstr "确定要重新启动此工作流实例吗？"
+
+#: Views/Workflow/Details.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Details"
+msgid "Restart"
+msgstr "重新启动"
+
+#: Views/Workflow/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid ""
+"<strong>Nothing here!</strong> There are no workflow instances at the "
+"moment."
+msgstr "<strong>这里没有内容！</strong> 当前没有工作流实例。"
+
+#: Views/Workflow/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Back to workflows"
+msgstr "返回工作流"
+
+#: Views/Workflow/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Created"
+msgstr "创建时间"
+
+#: Views/Workflow/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.Workflow.Index"
+msgid "Workflow"
+msgstr "工作流"
+
+#: Views/WorkflowEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.Buttons.SummaryAdmin"
+msgid "Are you sure you want to delete this workflow instance?"
+msgstr "确定要删除此工作流实例吗？"
+
+#: Views/WorkflowEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.Buttons.SummaryAdmin"
+msgid "Are you sure you want to restart this workflow instance?"
+msgstr "确定要重新启动此工作流实例吗？"
+
+#: Views/WorkflowEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.Buttons.SummaryAdmin"
+msgid "Delete"
+msgstr "删除"
+
+#: Views/WorkflowEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.Buttons.SummaryAdmin"
+msgid "Restart"
+msgstr "重新启动"
+
+#: Views/WorkflowEntry.DefaultMeta.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.DefaultMeta.SummaryAdmin"
+msgid "Created"
+msgstr "创建时间"
+
+#: Views/WorkflowEntry.DefaultTags.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowEntry.DefaultTags.SummaryAdmin"
+msgid "Status"
+msgstr "状态"
+
+#: Views/WorkflowInstancesFilters.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowInstancesFilters"
+msgid "Filter by status"
+msgstr "按状态筛选"
+
+#: Views/WorkflowInstancesFilters.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowInstancesFilters"
+msgid "Sort"
+msgstr "排序"
+
+#: Views/WorkflowInstancesFilters.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowInstancesFilters"
+msgid "Sort by"
+msgstr "排序依据"
+
+#: Views/WorkflowInstancesFilters.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowInstancesFilters"
+msgid "Status"
+msgstr "状态"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Aborted"
+msgstr "已中止"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Disable"
+msgstr "禁用"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Executing"
+msgstr "正在执行"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Faulted"
+msgstr "发生错误"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Finished"
+msgstr "已完成"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Halted"
+msgstr "已停止"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Idle"
+msgstr "空闲"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Last run"
+msgstr "上次运行"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Never"
+msgstr "从未"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Resuming"
+msgstr "正在恢复"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Retention period"
+msgstr "保留期限"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Starting"
+msgstr "正在启动"
+
+#. Format arguments: {0}: status.ToString()
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Status: {0}"
+msgstr "状态：{0}"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Statuses"
+msgstr "状态"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "The last time the background trimming task was run."
+msgstr "后台清理任务上次运行的时间。"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "The number of days a workflow instance is retained for."
+msgstr "工作流实例的保留天数。"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Whether the task is disabled."
+msgstr "此任务是否已禁用。"
+
+#: Views/WorkflowTrimming.Fields.Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTrimming.Fields.Edit"
+msgid "Workflows with the selected statuses will be trimmed."
+msgstr "具有所选状态的工作流将被清理。"
+
+#: Views/WorkflowType/Duplicate.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Duplicate"
+msgid "Workflows"
+msgstr "工作流"
+
+#: Views/WorkflowType/Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
+msgid "All"
+msgstr "全部"
+
+#: Views/WorkflowType/Edit.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Edit"
+msgid "Export"
+msgstr "导出"
+
+#: Views/WorkflowType/EditProperties.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.EditProperties"
+msgid "Workflows"
+msgstr "工作流"
+
+#: Views/WorkflowType/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid ""
+"<strong>Nothing here!</strong> There are no workflow types for the moment."
+msgstr "<strong>这里没有内容！</strong> 当前没有工作流类型。"
+
+#: Views/WorkflowType/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Name"
+msgstr "名称"
+
+#: Views/WorkflowType/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Status"
+msgstr "状态"
+
+#: Views/WorkflowType/Index.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowType.Index"
+msgid "Workflows"
+msgstr "工作流"
+
+#: Views/WorkflowTypeEntry.ActionsMenuItems.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.ActionsMenuItems.SummaryAdmin"
+msgid "Duplicate"
+msgstr "复制"
+
+#: Views/WorkflowTypeEntry.ActionsMenuItems.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.ActionsMenuItems.SummaryAdmin"
+msgid "Export"
+msgstr "导出"
+
+#: Views/WorkflowTypeEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTypeEntry.Buttons.SummaryAdmin"
+msgid "Delete"
+msgstr "删除"
+
+#: Views/WorkflowTypeEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTypeEntry.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr "编辑"
+
+#: Views/WorkflowTypeEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Workflows.Views.WorkflowTypeEntry.Buttons.SummaryAdmin"
+msgid "Properties"
+msgstr "属性"
+
+#: Views/WorkflowTypeEntry.DefaultTags.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.DefaultTags.SummaryAdmin"
+msgid "Disabled"
+msgstr "已禁用"
+
+#: Views/WorkflowTypeEntry.DefaultTags.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.DefaultTags.SummaryAdmin"
+msgid "Instances"
+msgstr "实例"
+
+#: Views/WorkflowTypeEntry.DefaultTags.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.DefaultTags.SummaryAdmin"
+msgid "No startup task"
+msgstr "无启动任务"
+
+#: Views/WorkflowTypeEntry.DefaultTags.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Workflows.Views.WorkflowTypeEntry.DefaultTags.SummaryAdmin"
+msgid "Status"
+msgstr "状态"
+
+#: WorkflowsLocalizationSources.cs
+msgctxt "OrchardCore.Workflows.WorkflowsLocalizationSources"
+msgid "All Workflow Types"
+msgstr "所有工作流类型"
+
+#: WorkflowsLocalizationSources.cs
+msgctxt "OrchardCore.Workflows.WorkflowsLocalizationSources"
+msgid "Workflows"
+msgstr "工作流"

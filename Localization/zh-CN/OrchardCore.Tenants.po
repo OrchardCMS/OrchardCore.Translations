@@ -200,21 +200,21 @@ msgstr "租户名称已存在。"
 #: OrchardCore.Tenants\Services\TenantValidator.cs:115
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The provided database provider is not supported."
-msgstr ""
+msgstr "不支持提供的数据库提供程序。"
 
 #. errors.Add(new ModelError(nameof(TenantViewModel.ConnectionString), S["The
 #. provided connection string is invalid or server is unreachable."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:118
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The provided connection string is invalid or server is unreachable."
-msgstr ""
+msgstr "提供的连接字符串无效或服务器无法访问。"
 
 #. errors.Add(new ModelError(String.Empty, S["The related database file is
 #. already in use."]));
 #: OrchardCore.Tenants\Services\TenantValidator.cs:123
 msgctxt "OrchardCore.Tenants.Services.TenantValidator"
 msgid "The related database file is already in use."
-msgstr ""
+msgstr "相关数据库文件已被使用。"
 
 #. public override LocalizedString Category => S["Tenant"];
 #: OrchardCore.Tenants\Workflows\Activities\CreateTenantTask.cs:29
@@ -406,14 +406,14 @@ msgstr "启用"
 #: OrchardCore.Tenants\Views\ManageTenantActionButtons.cshtml:22
 msgctxt "OrchardCore.Tenants.Views.ManageTenantActionButtons"
 msgid "Setup"
-msgstr ""
+msgstr "设置"
 
 #. <a asp-action="Reload" asp-route-id="@Model.Value.Name" class="btn btn-
 #. secondary btn-sm reload" data-url-af="UnsafeUrl">@T["Reload"]</a>
 #: OrchardCore.Tenants\Views\ManageTenantActionButtons.cshtml:24
 msgctxt "OrchardCore.Tenants.Views.ManageTenantActionButtons"
 msgid "Reload"
-msgstr ""
+msgstr "重新加载"
 
 #. <zone Name="Title"><h1>@RenderTitleSegments(T["Create Tenant"])</h1></zone>
 #: OrchardCore.Tenants\Views\Admin\Create.cshtml:4
@@ -892,3 +892,639 @@ msgstr "创建租户任务"
 msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Thumbnail"
 msgid "Setup a tenant."
 msgstr "创建租户任务."
+
+#: AdminMenu.cs
+msgctxt "OrchardCore.Tenants.AdminMenu"
+msgid "Multi-Tenancy"
+msgstr "多租户"
+
+#. Format arguments: {0}: id; {1}: context.ErrorMessage
+#: Controllers/AdminController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "An error occurred while removing the tenant '{0}'. {1}"
+msgstr "移除租户“{0}”时发生错误。{1}"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "An error occurred while saving the tenant settings."
+msgstr "保存租户设置时发生错误。"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "An error occurred while validating the tenant database settings."
+msgstr "验证租户数据库设置时发生错误。"
+
+#. Format arguments: {0}: shellSettings.Name
+#: Controllers/AdminController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "The tenant '{0}' was removed, see the log file for more info."
+msgstr "租户“{0}”已移除，请查看日志文件以获取更多信息。"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "You can only disable a Running tenant."
+msgstr "只能禁用处于“运行中”状态的租户。"
+
+#: Controllers/AdminController.cs
+msgctxt "OrchardCore.Tenants.Controllers.AdminController"
+msgid "You can only remove a 'Disabled' or 'Uninitialized' tenant."
+msgstr "只能移除处于“已禁用”或“未初始化”状态的租户。"
+
+#. Format arguments: {0}: tenantName
+#: Controllers/TenantApiController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "An error occurred while removing the tenant '{0}'."
+msgstr "移除租户“{0}”时发生错误。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "An error occurred while saving the tenant settings."
+msgstr "保存租户设置时发生错误。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "An error occurred while validating the tenant database settings."
+msgstr "验证租户数据库设置时发生错误。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "Either a 'recipe' file or 'RecipeName' is required."
+msgstr "必须提供“配方”文件或“RecipeName”。"
+
+#. Format arguments: {0}: recipeName
+#: Controllers/TenantApiController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "Recipe '{0}' not found."
+msgstr "找不到配方“{0}”。"
+
+#. Format arguments: {0}: model.Name
+#: Controllers/TenantApiController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "Tenant not found: '{0}'"
+msgstr "找不到租户：“{0}”"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "The connection string is required for this database provider."
+msgstr "此数据库提供程序需要连接字符串。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "The database provider is not defined."
+msgstr "未定义数据库提供程序。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "The database provider is not supported."
+msgstr "不支持此数据库提供程序。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "The email is invalid."
+msgstr "电子邮件无效。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "The tenant can't be setup."
+msgstr "无法设置此租户。"
+
+#. Format arguments: {0}: model.UserName
+#: Controllers/TenantApiController.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "User name '{0}' is invalid, can only contain letters or digits."
+msgstr "用户名“{0}”无效，只能包含字母或数字。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "You can only disable a Running tenant."
+msgstr "只能禁用处于“运行中”状态的租户。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "You can only enable a Disabled tenant."
+msgstr "只能启用处于“已禁用”状态的租户。"
+
+#: Controllers/TenantApiController.cs
+msgctxt "OrchardCore.Tenants.Controllers.TenantApiController"
+msgid "You can only remove a 'Disabled' or an 'Uninitialized' tenant."
+msgstr "只能移除处于“已禁用”或“未初始化”状态的租户。"
+
+#: FeatureProfilesAdminMenu.cs
+msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
+msgid "Feature Profiles"
+msgstr "功能配置文件"
+
+#: FeatureProfilesAdminMenu.cs
+msgctxt "OrchardCore.Tenants.FeatureProfilesAdminMenu"
+msgid "Multi-Tenancy"
+msgstr "多租户"
+
+#: Permissions.cs
+msgctxt "OrchardCore.Tenants.Permissions"
+msgid "Manage tenant feature profiles"
+msgstr "管理租户功能配置文件"
+
+#: Permissions.cs
+msgctxt "OrchardCore.Tenants.Permissions"
+msgid "Manage tenants"
+msgstr "管理租户"
+
+#. Format arguments: {0}: optionDisplayName
+#: Services/TenantDatabasePatternResolver.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Services.TenantDatabasePatternResolver"
+msgid "The configured {0} is invalid."
+msgstr "配置的 {0} 无效。"
+
+#. Format arguments: {0}: optionDisplayName
+#: Services/TenantDatabasePatternResolver.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Services.TenantDatabasePatternResolver"
+msgid ""
+"The configured {0} must resolve to a valid SQL identifier using only "
+"letters, numbers, and underscores, and it must start with a letter or "
+"underscore."
+msgstr "配置的 {0} 必须解析为有效的 SQL 标识符，只能包含字母、数字和下划线，并且必须以字母或下划线开头。"
+
+#. Format arguments: {0}: optionDisplayName
+#: Services/TenantDatabasePatternResolver.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Services.TenantDatabasePatternResolver"
+msgid "The configured {0} resolved to an empty value."
+msgstr "配置的 {0} 解析为空值。"
+
+#: Services/TenantValidator.cs
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid "A table prefix is required."
+msgstr "必须提供表前缀。"
+
+#: Services/TenantValidator.cs
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid "The existing tenant to be validated was not found."
+msgstr "找不到要验证的现有租户。"
+
+#: Services/TenantValidator.cs
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid "The provided database, table prefix and schema are already in use."
+msgstr "提供的数据库、表前缀和架构已被使用。"
+
+#. Format arguments: {0}: "TrustServerCertificate=True"
+#: Services/TenantValidator.cs
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid ""
+"The security certificate on the server is from a non-trusted source (the "
+"certificate issuing authority isn't listed as a trusted authority in Trusted"
+" Root Certification Authorities on the client machine). In a development "
+"environment, you have the option to use the '{0}' parameter in your "
+"connection string to bypass the validation performed by the certificate "
+"authority."
+msgstr ""
+"服务器上的安全证书来自不受信任的来源（证书颁发机构未列入客户端计算机的“受信任的根证书颁发机构”中）。在开发环境中，可以在连接字符串中使用“{0}”参数绕过证书颁发机构执行的验证。"
+
+#: Services/TenantValidator.cs
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid ""
+"The table prefix must be a valid SQL identifier using only letters, numbers,"
+" and underscores, and it must start with a letter or underscore."
+msgstr "表前缀必须是有效的 SQL 标识符，只能包含字母、数字和下划线，并且必须以字母或下划线开头。"
+
+#: Services/TenantValidator.cs
+msgctxt "OrchardCore.Tenants.Services.TenantValidator"
+msgid ""
+"The table schema must be a valid SQL identifier using only letters, numbers,"
+" and underscores, and it must start with a letter or underscore."
+msgstr "表架构必须是有效的 SQL 标识符，只能包含字母、数字和下划线，并且必须以字母或下划线开头。"
+
+#: Views/Admin/Create.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Create"
+msgid "Create &amp; Setup"
+msgstr "创建 &amp; 设置"
+
+#: Views/Admin/Create.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Create"
+msgid "Tenants"
+msgstr "租户"
+
+#: Views/Admin/Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Edit"
+msgid "Tenants"
+msgstr "租户"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "<strong>Nothing here!</strong> There are no tenants for the moment."
+msgstr "<strong>这里没有内容！</strong> 暂时没有租户。"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "Database"
+msgstr "数据库"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "Name"
+msgstr "名称"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "Recipe"
+msgstr "配方"
+
+#: Views/Admin/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.Admin.Index"
+msgid "Tags"
+msgstr "标签"
+
+#: Views/FeatureProfileEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.FeatureProfileEntry.Buttons.SummaryAdmin"
+msgid "Delete"
+msgstr "删除"
+
+#: Views/FeatureProfileEntry.Buttons.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.FeatureProfileEntry.Buttons.SummaryAdmin"
+msgid "Edit"
+msgstr "编辑"
+
+#: Views/FeatureProfiles/Create.cshtml
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Create"
+msgid "Feature Profiles"
+msgstr "功能配置文件"
+
+#: Views/FeatureProfiles/Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Edit"
+msgid "Feature Profiles"
+msgstr "功能配置文件"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "Cancel"
+msgstr "取消"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "Name"
+msgstr "名称"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "Rules"
+msgstr "规则"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "Save"
+msgstr "保存"
+
+#. Format arguments: {0}: "OrchardCore.Flows"
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+#, csharp-format
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid ""
+"The feature rules. Here is an example if a rule that would exclude '{0}' "
+"feature."
+msgstr "功能规则。下面是一个会排除“{0}”功能的规则示例。"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "The name of the feature profile."
+msgstr "功能配置文件的名称。"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "Toggle Dropdown"
+msgstr "切换下拉菜单"
+
+#: Views/FeatureProfiles/EditorTemplates/FeatureProfileViewModel.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.FeatureProfiles.EditorTemplates.FeatureProfileViewModel"
+msgid "and continue"
+msgstr "并继续"
+
+#: Views/FeatureProfiles/Index.cshtml
+msgctxt "OrchardCore.Tenants.Views.FeatureProfiles.Index"
+msgid "Name"
+msgstr "名称"
+
+#: Views/Items/CreateTenantTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
+msgid ""
+"(Optional) Example: If prefix is \"site1\", the tenant URL prefix is "
+"\"http://orchardproject.net/site1\"."
+msgstr "（可选）示例：如果前缀为 \"site1\"，租户 URL 前缀为 \"http://orchardproject.net/site1\"。"
+
+#. Format arguments: {0}: "dbo"
+#: Views/Items/CreateTenantTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
+msgid "For example, '{0}' for SQL Server."
+msgstr "例如，对于 SQL Server，为“{0}”。"
+
+#: Views/Items/CreateTenantTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
+msgid "Schema"
+msgstr "架构"
+
+#: Views/Items/CreateTenantTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Items.CreateTenantTask.Fields.Edit"
+msgid "When left blank, the default value on the server will be used."
+msgstr "如果留空，将使用服务器上的默认值。"
+
+#. Format arguments: {0}: "dbo"
+#: Views/Items/SetupTenantTask.Fields.Edit.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
+msgid "For example, '{0}' for SQL Server."
+msgstr "例如，对于 SQL Server，为“{0}”。"
+
+#: Views/Items/SetupTenantTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
+msgid "Schema"
+msgstr "架构"
+
+#: Views/Items/SetupTenantTask.Fields.Edit.cshtml
+msgctxt "OrchardCore.Tenants.Views.Items.SetupTenantTask.Fields.Edit"
+msgid "When left blank, the default value on the server will be used."
+msgstr "如果留空，将使用服务器上的默认值。"
+
+#: Views/ManageTenantActionButtons.cshtml
+msgctxt "OrchardCore.Tenants.Views.ManageTenantActionButtons"
+msgid "Are you sure you want to remove this tenant?"
+msgstr "确定要移除此租户吗？"
+
+#: Views/ManageTenantActionButtons.cshtml
+msgctxt "OrchardCore.Tenants.Views.ManageTenantActionButtons"
+msgid "Remove"
+msgstr "移除"
+
+#: Views/ProfileFeatureTags.cshtml
+msgctxt "OrchardCore.Tenants.Views.ProfileFeatureTags"
+msgid "Feature Profile"
+msgstr "功能配置文件"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Configured in the application's root settings."
+msgstr "已在应用程序的根设置中配置。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Connection string"
+msgstr "连接字符串"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Database Presets"
+msgstr "数据库预设"
+
+#. Format arguments: {0}: "dbo"
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "For example, '{0}' for SQL Server."
+msgstr "例如，对于 SQL Server，为“{0}”。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"Generated automatically from the configured tenant schema pattern when the "
+"tenant is created."
+msgstr "创建租户时，将根据已配置的租户架构模式自动生成。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Generated automatically from the configured tenant schema pattern."
+msgstr "根据已配置的租户架构模式自动生成。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"Generated automatically from the configured tenant table prefix pattern when"
+" the tenant is created."
+msgstr "创建租户时，将根据已配置的租户表前缀模式自动生成。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"Generated automatically from the configured tenant table prefix pattern."
+msgstr "根据已配置的租户表前缀模式自动生成。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "None"
+msgstr "无"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"Optionally specify which presets should be used for the Setup experience."
+msgstr "可以选择指定设置体验应使用的预设。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Table Prefix"
+msgstr "表前缀"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "Table Schema"
+msgstr "表架构"
+
+#. Format arguments: {0}: provider.SampleConnectionString,
+#. selectedProvider?.SampleConnectionString
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+#, csharp-format
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "The connection string to your database instance, e.g. {0}."
+msgstr "数据库实例的连接字符串，例如 {0}。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"This value is required by configuration when the selected database provider "
+"supports table prefixes."
+msgstr "当所选数据库提供程序支持表前缀时，此值是配置所要求的。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid ""
+"Used to prefix this tenant's database tables when tenants share the same "
+"database."
+msgstr "当多个租户共享同一个数据库时，使用此前缀来区分该租户的数据库表。"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "What type of database to use?"
+msgstr "要使用哪种数据库？"
+
+#: Views/Shared/_TenantDatabaseInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantDatabaseInfo"
+msgid "When left blank, the default value on the server will be used."
+msgstr "如果留空，将使用服务器上的默认值。"
+
+#: Views/Shared/_TenantFeatureProfile.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantFeatureProfile"
+msgid "Feature profile"
+msgstr "功能配置文件"
+
+#: Views/Shared/_TenantFeatureProfile.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantFeatureProfile"
+msgid ""
+"Optionally specify which feature profile should be applied to this tenant."
+msgstr "可以选择指定应应用于此租户的功能配置文件。"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid ""
+"(Optional) Example: If prefix is \"site1\", the tenant URL prefix is "
+"\"https://orchardcore.net/site1\"."
+msgstr "（可选）示例：如果前缀为 \"site1\"，租户 URL 前缀为 \"https://orchardcore.net/site1\"。"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "Category"
+msgstr "类别"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "Description"
+msgstr "描述"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid ""
+"Example: If host is \"orchardproject.net\", the tenant site URL is "
+"\"https://orchardcore.net/\"."
+msgstr "示例：如果主机为 \"orchardproject.net\"，租户站点 URL 为 \"https://orchardcore.net/\"。"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "Hostname"
+msgstr "主机名"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "The category of the tenant."
+msgstr "租户的类别。"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "The description of the tenant."
+msgstr "租户的描述。"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid "Url Prefix"
+msgstr "URL 前缀"
+
+#: Views/Shared/_TenantInfo.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantInfo"
+msgid ""
+"You may define multiple domains using the comma (,) as a separator. Use the "
+"'*.' prefix to map all subdomains."
+msgstr "可以使用逗号（,）作为分隔符定义多个域。使用“*.”前缀可映射所有子域。"
+
+#: Views/Shared/_TenantRecipes.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantRecipes"
+msgid ""
+"Optionally specify which presets should be used for the Setup experience."
+msgstr "可以选择指定设置体验应使用的预设。"
+
+#: Views/Shared/_TenantRecipes.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantRecipes"
+msgid "Recipe"
+msgstr "配方"
+
+#: Views/Shared/_TenantRecipes.cshtml
+msgctxt "OrchardCore.Tenants.Views.Shared._TenantRecipes"
+msgid "Select a recipe"
+msgstr "选择配方"
+
+#: Views/ShellSettingsEntry.Category.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.Category.SummaryAdmin"
+msgid "Category"
+msgstr "类别"
+
+#: Views/ShellSettingsEntry.Database.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.Database.SummaryAdmin"
+msgid "Database provider"
+msgstr "数据库提供程序"
+
+#: Views/ShellSettingsEntry.Description.SummaryAdmin.cshtml
+msgctxt ""
+"OrchardCore.Tenants.Views.ShellSettingsEntry.Description.SummaryAdmin"
+msgid "Url host"
+msgstr "URL 主机"
+
+#: Views/ShellSettingsEntry.Recipe.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.Recipe.SummaryAdmin"
+msgid "Recipe"
+msgstr "配方"
+
+#: Views/ShellSettingsEntry.State.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.State.SummaryAdmin"
+msgid "Disabled"
+msgstr "已禁用"
+
+#: Views/ShellSettingsEntry.State.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.State.SummaryAdmin"
+msgid "Initializing"
+msgstr "正在初始化"
+
+#: Views/ShellSettingsEntry.State.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.State.SummaryAdmin"
+msgid "Invalid"
+msgstr "无效"
+
+#: Views/ShellSettingsEntry.State.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.State.SummaryAdmin"
+msgid "Running"
+msgstr "运行中"
+
+#: Views/ShellSettingsEntry.State.SummaryAdmin.cshtml
+msgctxt "OrchardCore.Tenants.Views.ShellSettingsEntry.State.SummaryAdmin"
+msgid "Uninitialized"
+msgstr "未初始化"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "Category"
+msgstr "类别"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "Filter by category"
+msgstr "按类别筛选"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "Filter by state"
+msgstr "按状态筛选"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "Sort"
+msgstr "排序"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "Sort by"
+msgstr "排序依据"
+
+#: Views/TenantsFilters.cshtml
+msgctxt "OrchardCore.Tenants.Views.TenantsFilters"
+msgid "State"
+msgstr "状态"
