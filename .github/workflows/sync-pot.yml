@@ -1,0 +1,74 @@
+name: Sync POT files
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-pot
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout translations
+      uses: actions/checkout@v4
+
+    - name: Clone Orchard Core
+      run: git clone --depth 1 --branch main https://github.com/OrchardCMS/OrchardCore.git "$RUNNER_TEMP/orchardcore"
+
+    - name: Replace POT files
+      shell: bash
+      run: |
+        mapfile -d '' -t pot_files < <(find "$RUNNER_TEMP/orchardcore" -type f -name '*.pot' -print0)
+        if [ "${#pot_files[@]}" -eq 0 ]; then
+          echo "::error::No POT files were found in Orchard Core."
+          exit 1
+        fi
+
+        declare -A templates
+        for file in "${pot_files[@]}"; do
+          name=$(basename "$file")
+          if [[ -v "templates[$name]" ]]; then
+            echo "::error::Duplicate POT filename: $name"
+            exit 1
+          fi
+          templates[$name]="$file"
+        done
+
+        find Localization -maxdepth 1 -type f -name '*.pot' -delete
+        for file in "${pot_files[@]}"; do
+          cp -- "$file" Localization/
+        done
+
+    - name: Detect changes with Git
+      id: changes
+      shell: bash
+      run: |
+        git add --all -- 'Localization/*.pot'
+        if git diff --cached --quiet -- 'Localization/*.pot'; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Create or update pull request
+      if: steps.changes.outputs.changed == 'true'
+      uses: peter-evans/create-pull-request@v7
+      with:
+        branch: automation/sync-pot
+        add-paths: Localization/*.pot
+        commit-message: Update POT files from Orchard Core
+        title: Update POT files from Orchard Core
+        body: |
+          Replaces `Localization/*.pot` with the POT files committed to the
+          `main` branch of [OrchardCMS/OrchardCore](https://github.com/OrchardCMS/OrchardCore).
+
+          Existing translated PO files are preserved.
