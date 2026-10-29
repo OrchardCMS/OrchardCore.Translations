@@ -1,44 +1,64 @@
+#
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: orchard-core\n"
-"X-Crowdin-Project-ID: 307044\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /main/Localization/OrchardCore.Setup.Core.pot\n"
-"X-Crowdin-File-ID: 812\n"
 "Project-Id-Version: orchard-core\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"PO-Revision-Date: 2022-10-11 20:27\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2022-10-11 20:27\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.Setup.Core.pot\n"
+"X-Crowdin-File-ID: 812\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
 
-#. context.Errors.Add(String.Empty, S["DatabaseProvider setting is required."]);
+#. context.Errors.Add(String.Empty, S["DatabaseProvider setting is
+#. required."]);
 #: OrchardCore.Setup.Core\SetupService.cs:177
 msgctxt "OrchardCore.Setup.Services.SetupService"
 msgid "DatabaseProvider setting is required."
-msgstr ""
+msgstr "需要 DatabaseProvider 设置。"
 
-#. context.Errors.Add(String.Empty, S["The provided database provider is not supported."]);
+#. context.Errors.Add(String.Empty, S["The provided database provider is not
+#. supported."]);
 #: OrchardCore.Setup.Core\SetupService.cs:180
 msgctxt "OrchardCore.Setup.Services.SetupService"
 msgid "The provided database provider is not supported."
-msgstr ""
+msgstr "提供的数据库提供程序不受支持。"
 
-#. context.Errors.Add(String.Empty, S["The provided connection string is invalid or server is unreachable."]);
+#. context.Errors.Add(String.Empty, S["The provided connection string is
+#. invalid or server is unreachable."]);
 #: OrchardCore.Setup.Core\SetupService.cs:183
 msgctxt "OrchardCore.Setup.Services.SetupService"
 msgid "The provided connection string is invalid or server is unreachable."
-msgstr ""
+msgstr "提供的连接字符串无效或服务器无法访问。"
 
-#. context.Errors.Add(String.Empty, S["The provided database and table prefix are already in use."]);
-#: OrchardCore.Setup.Core\SetupService.cs:186
+#: Services/SetupService.cs
 msgctxt "OrchardCore.Setup.Services.SetupService"
-msgid "The provided database and table prefix are already in use."
-msgstr ""
+msgid "An error occurred while initializing the datastore."
+msgstr "初始化数据存储时发生错误。"
 
-#. context.Errors.Add(String.Empty, S["An error occurred while initializing the datastore: {0}", e.Message]);
-#: OrchardCore.Setup.Core\SetupService.cs:225
+#: Services/SetupService.cs
 msgctxt "OrchardCore.Setup.Services.SetupService"
-msgid "An error occurred while initializing the datastore: {0}"
-msgstr "初始化数据存储时发生错误: {0}"
+msgid "The provided database, table prefix and schema are already in use."
+msgstr "提供的数据库、表前缀和架构已被使用。"
 
+#. Format arguments: {0}: "TrustServerCertificate=True"
+#: Services/SetupService.cs
+#, csharp-format
+msgctxt "OrchardCore.Setup.Services.SetupService"
+msgid ""
+"The security certificate on the server is from a non-trusted source (the "
+"certificate issuing authority isn't listed as a trusted authority in Trusted"
+" Root Certification Authorities on the client machine). In a development "
+"environment, you have the option to use the '{0}' parameter in your "
+"connection string to bypass the validation performed by the certificate "
+"authority."
+msgstr ""
+"服务器上的安全证书来自不受信任的来源（证书颁发机构未被列为客户端计算机“受信任的根证书颁发机构”中的受信任颁发机构）。在开发环境中，您可以在连接字符串中使用“{0}”参数绕过证书颁发机构执行的验证。"
+
+#: Services/SetupService.cs
+msgctxt "OrchardCore.Setup.Services.SetupService"
+msgid "Unexpected error occurred while importing the recipe."
+msgstr "导入配方时发生意外错误。"
