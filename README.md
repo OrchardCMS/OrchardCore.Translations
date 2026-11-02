@@ -11,6 +11,44 @@ Crowdin Translations:
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/orchard-core/localized.svg)](https://crowdin.com/project/orchard-core)
 
+## AI-assisted translations
+
+The repository includes the
+[`orchardcore-translations` skill](.github/skills/orchardcore-translations/SKILL.md)
+for generating translation batches and safely importing their JSON responses.
+It fills only missing translation values, preserves populated translations, and
+removes obsolete entries from the selected culture without changing POT files or
+other cultures. Review AI-generated translations before merging them.
+
+In the Copilot app, select the **Orchard Core translator** custom agent, or ask:
+
+> Use the orchardcore-translations skill to complete French translations in
+> Localization/fr, with 200 translation values per batch. Locate the Orchard Core
+> source checkout before generating prompts.
+
+In IDEs that support Copilot prompt files, use **`/translate-culture`**. The skill
+is also discoverable automatically by compatible Copilot clients. Prompt files
+are IDE entry points, not Copilot app suggested-prompt configuration.
+
+The full translation workflow requires the Copilot app's coordinated chat-session
+tools so each batch inherits the caller's model and effort settings. Other
+clients can generate prompts and import completed JSON responses using the
+bundled scripts, but should not silently substitute another dispatcher. To
+generate prompts without changing catalogs, explicitly request "generate prompts
+only." All generation requires a separate, readable
+`OrchardCMS/OrchardCore` source checkout for translation context, Python 3.10 or
+later, and the dependency in
+[requirements.txt](.github/skills/orchardcore-translations/scripts/requirements.txt).
+The agent asks for missing inputs, including the batch size, before generating.
+Keep generated artifacts outside this repository.
+
+Run the skill's regression tests from the repository root:
+
+```shell
+python3 -m pip install -r .github/skills/orchardcore-translations/scripts/requirements.txt
+python3 -m unittest discover -s .github/skills/orchardcore-translations/scripts -p 'test_*.py'
+```
+
 ## Automatic POT Updates
 
 The **Sync POT files** GitHub Actions workflow runs every Monday at 03:00 UTC and
