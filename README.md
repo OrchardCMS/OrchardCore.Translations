@@ -13,8 +13,9 @@ Crowdin Translations:
 
 ## Catalogs, cultures, and packages
 
-`Localization/*.pot` contains the English source catalogs extracted from Orchard
-Core. Translated catalogs live in `Localization/<culture>/*.po`. Crowdin
+`Localization/*.pot` contains the English source catalogs copied from Orchard
+Core by the [Sync POT files workflow](.github/workflows/sync-pot.yml).
+Translated catalogs live in `Localization/<culture>/*.po`. Crowdin
 synchronizes the source catalogs and proposes translation updates through GitHub
 pull requests, using the integration configuration in [`crowdin.yml`](crowdin.yml).
 Repository-side translation edits must also be imported into Crowdin; ensure the
@@ -96,7 +97,7 @@ python3 -m unittest discover -s .github/skills/orchardcore-translations/scripts 
 
 ## Automatic POT Updates
 
-The **Sync POT files** GitHub Actions workflow runs every Monday at 03:00 UTC and
+The [**Sync POT files**](.github/workflows/sync-pot.yml) GitHub Actions workflow runs every Monday at 03:00 UTC and
 can also be started manually using **Run workflow** in the Actions tab. It clones
 the `main` branch of `OrchardCMS/OrchardCore`, replaces `Localization/*.pot` with
 the upstream templates (including removing obsolete templates), and creates or
@@ -110,14 +111,16 @@ with write permissions for repository contents and pull requests.
 
 The following steps are needed to release new Orchard Core Translations NuGet packages:
 
-1. Install or update [PO Extractor](https://github.com/OrchardCoreContrib/OrchardCoreContrib.PoExtractor):
-   `dotnet tool install --global OrchardCoreContrib.PoExtractor`
-2. Check out this reporsitory and the main Orchard Core repository into separate folders (e.g. C:\Orchard\OrchardCore and C:\Orchard\OrchardCore.Translations).
-3. Run PO Extractor to save the new .pot files into the [Localization](https://github.com/OrchardCMS/OrchardCore.Translations/tree/main/Localization) folder like this:
-   `extractpo C:\Orchard\OrchardCore and C:\Orchard\OrchardCore.Translations`
-4. Go to https://crowdin.com/project/orchard-core.
-5. Then go to Integrations > GitHub and click the "Sync Now" button.
-6. Go to https://github.com/OrchardCMS/OrchardCore.Translations/pulls.
-7. Find the "New Crowdin updates" pull request.
-8. Review and merge it.
-9. push a new version tag to this repository, such as `v3.0.0`.
+1. In GitHub's Actions tab, select **Sync POT files** and click **Run workflow**
+   on `main`, or use the latest scheduled run.
+2. Review and merge the resulting **Update POT files from Orchard Core** pull
+   request, if there are changes. This copies the upstream POT files directly;
+   no local source checkout or extraction tool is needed.
+3. Go to https://crowdin.com/project/orchard-core.
+4. Go to Integrations > GitHub and click **Sync Now** to synchronize the updated
+   source catalogs, then complete any missing translations in Crowdin.
+5. Sync again to export translations and find the **New Crowdin updates** pull
+   request at https://github.com/OrchardCMS/OrchardCore.Translations/pulls.
+6. Review and merge it.
+7. Push a new version tag to this repository, such as `v3.0.0`, to publish stable
+   packages, or run **Publish Stable Packages** manually with the desired version.
