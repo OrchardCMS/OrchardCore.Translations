@@ -4,12 +4,57 @@
 
 Orchard Core translations provide two kinds of NuGet packages:
 
-- __Culture Specific Packages__: A NuGet package that targets a single culture, named `OrchardCore.Translation.{culture}.nupkg` where `{culture}` is the culture it contains.
-- __Translations Meta Package__: A NuGet package named `OrchardCore.Translation.All.nupkg` which references all translation packages that Orchard Core supports out of the box.
+- __Culture Specific Packages__: A NuGet package that targets a single culture, named `OrchardCore.Translations.{culture}.nupkg` where `{culture}` is the culture it contains.
+- __Translations Meta Package__: A NuGet package named `OrchardCore.Translations.All.nupkg` which references the cultures selected for inclusion in the meta package.
 
 Crowdin Translations: 
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/orchard-core/localized.svg)](https://crowdin.com/project/orchard-core)
+
+## Catalogs, cultures, and packages
+
+`Localization/*.pot` contains the English source catalogs extracted from Orchard
+Core. Translated catalogs live in `Localization/<culture>/*.po`. Crowdin
+synchronizes the source catalogs and proposes translation updates through GitHub
+pull requests, using the integration configuration in [`crowdin.yml`](crowdin.yml).
+Repository-side translation edits must also be imported into Crowdin; ensure the
+integration is configured to import new translations, or upload them explicitly.
+Exporting translations from Crowdin is not a substitute for importing those edits.
+
+[`cultures.json`](cultures.json) controls packaging, not Crowdin's language mapping.
+[`pack.ps1`](pack.ps1) reads each culture's settings:
+
+| Setting | Purpose |
+|---|---|
+| `name` | Culture suffix of the NuGet package and culture folder inside that package. |
+| `folder` | Source folder under `Localization` from which to copy the PO files. |
+| `display-name` | Human-readable language name used in package metadata. |
+| `generate-package` | Whether to build the culture-specific package. |
+| `meta-package` | Whether to include that package as a dependency of `OrchardCore.Translations.All`. |
+
+All three packaging workflows call `pack.ps1`: pull requests build packages,
+pushes to `main` or `dev` publish preview packages to Cloudsmith, and version tags
+or a manual release run publish stable packages to NuGet.org. Packaging copies
+the selected catalogs; it does not translate them or reconcile duplicate folders.
+
+### Chinese cultures
+
+Maintain only two Chinese source folders, matching Crowdin's current output:
+`Localization/zh-Hans` for Simplified Chinese and `Localization/zh-Hant` for
+Traditional Chinese. The culture mappings generate four packages:
+
+| Package suffix | Source folder | Folder inside the package |
+|---|---|---|
+| `zh-Hans` | `Localization/zh-Hans` | `content/Localization/zh-Hans` |
+| `zh-CN` | `Localization/zh-Hans` | `content/Localization/zh-CN` |
+| `zh-Hant` | `Localization/zh-Hant` | `content/Localization/zh-Hant` |
+| `zh-TW` | `Localization/zh-Hant` | `content/Localization/zh-TW` |
+
+The regional packages intentionally reuse the corresponding script-level
+translations. Separate `Localization/zh-CN` and `Localization/zh-TW` source folders
+are unnecessary and are not read by packaging. Update `zh-Hans` or `zh-Hant`
+directly, including when generating AI-assisted translations; do not recreate
+the historical regional folders.
 
 ## AI-assisted translations
 
