@@ -118,6 +118,132 @@ class ApplyTranslationsTests(unittest.TestCase):
             subprocess.run(["msgfmt", "--check-format", "-o", os.devnull, str(target)],
                            check=True, capture_output=True)
 
+    def test_plural_index_zero_can_use_count_and_another_index_can_use_singular(self):
+        self.rule = "nplurals=2; plural=(n == 1 ? 1 : 0);"
+        self.catalog([self.entry("1 hour ago", msgid_plural="{0} hours ago",
+                                flags=["csharp-format", "range: 0..23"],
+                                comment="Format arguments: {0}: hours")])
+        target = self.catalog([
+            self.entry("1 hour ago", msgid_plural="{0} hours ago",
+                       msgstr_plural={0: "", 1: ""}, flags=["fuzzy"], tcomment="Reviewed"),
+        ], locale="fr")
+        manifest = self.generate()
+        response = self.response(manifest, ["il y a {0} heures", "il y a 1 heure"])
+        self.apply(response)
+        po = polib.pofile(str(target))
+        self.assertEqual(po[0].msgstr_plural,
+                         {0: "il y a {0} heures", 1: "il y a 1 heure"})
+        self.assertEqual(po[0].flags, ["fuzzy"])
+        self.assertEqual(po[0].tcomment, "Reviewed")
+        self.assertEqual(po.metadata["Plural-Forms"], self.rule)
+        before = target.read_bytes()
+        self.assertEqual(self.apply(response)["files_changed"], 0)
+        self.assertEqual(before, target.read_bytes())
+
+    def test_new_ranged_plural_retains_metadata_and_fills_all_three_forms(self):
+        self.rule = (
+            "nplurals=3; plural=(n == 0 || n == 1) ? 0 : "
+            "(n != 0 && n % 1000000 == 0) ? 2 : 1;"
+        )
+        flags = ["csharp-format", "range: 0..23"]
+        self.catalog([self.entry("1 hour ago", msgid_plural="{0} hours ago",
+                                flags=flags, comment="Format arguments: {0}: hours")])
+        manifest = self.generate()
+        response = self.response(manifest, ["il y a {0} heure", "il y a {0} heures",
+                                            "il y a {0} heures"])
+        self.apply(response)
+        target = self.root / "fr/A.po"
+        po = polib.pofile(str(target))
+        self.assertEqual(po[0].flags, flags)
+        self.assertEqual(po[0].comment, "Format arguments: {0}: hours")
+        self.assertEqual(set(po[0].msgstr_plural), {0, 1, 2})
+        self.assertTrue(all(po[0].msgstr_plural.values()))
+        if shutil.which("msgfmt"):
+            subprocess.run(["msgfmt", "--check-format", "-o", os.devnull, str(target)],
+                           check=True, capture_output=True)
+
+    def test_plural_alternatives_still_reject_changed_placeholders_markup_and_whitespace(self):
+        self.catalog([self.entry(' <b>1 hour for {1}</b>\n',
+                                msgid_plural=' <b>{0:N2} hours for {1}</b>\n')])
+        target = self.catalog([
+            self.entry(' <b>1 hour for {1}</b>\n',
+                       msgid_plural=' <b>{0:N2} hours for {1}</b>\n'),
+        ], locale="fr")
+        manifest = self.generate()
+        before = target.read_bytes()
+        for value in (
+            ' <b>{0} heures pour {1}</b>\n',
+            ' <b>{0:N2} heures pour {2}</b>\n',
+            ' <b>{0:N2} heures</b>\n',
+            ' <i>{0:N2} heures pour {1}</i>\n',
+            '<b>{0:N2} heures pour {1}</b>',
+        ):
+            with self.subTest(value=value):
+                response = self.response(manifest, [value, value])
+                with self.assertRaisesRegex(ValueError, "neither plural source form"):
+                    self.apply(response)
+                self.assertEqual(before, target.read_bytes())
+
+    def test_import_rejects_existing_headerless_plural_even_for_singular_batch(self):
+        self.catalog([self.entry("A label"),
+                      self.entry("{0} item", msgid_plural="{0} items")])
+        target = self.catalog([
+            self.entry("A label"),
+            self.entry("{0} item", msgid_plural="{0} items",
+                       msgstr_plural={0: "{0} élément", 1: ""}),
+        ], locale="fr")
+        manifest = self.generate(max_entries=1)
+        response = self.response(manifest, ["Libellé"])
+        po = polib.pofile(str(target))
+        del po.metadata["Plural-Forms"]
+        po.save()
+        before = target.read_bytes()
+        with self.assertRaisesRegex(ValueError, "migrate.*separately"):
+            self.apply(response)
+        self.assertEqual(before, target.read_bytes())
+
+    def test_singular_import_does_not_install_rule_in_headerless_catalog(self):
+        self.catalog([self.entry("Label")])
+        target = self.catalog([self.entry("Label")], locale="fr")
+        po = polib.pofile(str(target))
+        del po.metadata["Plural-Forms"]
+        po.save()
+        manifest = self.generate()
+        response = self.response(manifest, ["Libellé"])
+        self.apply(response)
+        po = polib.pofile(str(target))
+        self.assertNotIn("Plural-Forms", po.metadata)
+        self.assertEqual(po[0].msgstr, "Libellé")
+
+    def test_import_rejects_invalid_header_and_stale_translator_metadata_without_writes(self):
+        pot = self.catalog([self.entry("One", msgid_plural="Many")])
+        target = self.catalog([self.entry("One", msgid_plural="Many")], locale="fr")
+        manifest = self.generate()
+        response = self.response(manifest, ["Un", "Plusieurs"])
+        for rule in ("nplurals=2; plural=invalid;", "nplurals=101; plural=0;"):
+            po = polib.pofile(str(target))
+            po.metadata["Plural-Forms"] = rule
+            po.save()
+            before = target.read_bytes()
+            with self.assertRaisesRegex(ValueError, "invalid or unsupported"):
+                self.apply(response)
+            self.assertEqual(before, target.read_bytes())
+        self.catalog([self.entry("One", msgid_plural="Many")], locale="fr")
+        before = target.read_bytes()
+        for changes in ({"comment": "New meaning"}, {"flags": ["range: 0..23"]}):
+            self.catalog([self.entry("One", msgid_plural="Many", **changes)])
+            with self.assertRaisesRegex(ValueError, "translator metadata changed"):
+                self.apply(response)
+            self.assertEqual(before, target.read_bytes())
+        self.assertTrue(pot.exists())
+
+    def test_metadata_notes_allow_intentionally_unchanged_identifier(self):
+        self.catalog([self.entry("previous", comment="CSS class, not displayed.")])
+        manifest = self.generate()
+        response = self.response(manifest, ["previous"])
+        self.apply(response)
+        self.assertEqual(polib.pofile(str(self.root / "fr/A.po"))[0].msgstr, "previous")
+
     def test_rejects_invalid_json_keys_or_values_without_writes(self):
         self.catalog([self.entry("One"), self.entry("Two")])
         target = self.catalog([self.entry("One"), self.entry("Two")], locale="fr")
