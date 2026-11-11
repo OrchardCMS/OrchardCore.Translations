@@ -34,7 +34,7 @@ Exporting translations from Crowdin is not a substitute for importing those edit
 | `meta-package` | Whether to include that package as a dependency of `OrchardCore.Translations.All`. |
 
 All three packaging workflows call `pack.ps1`: pull requests build packages,
-pushes to `main` or `dev` publish preview packages to Cloudsmith, and version tags
+pushes to `main` or `dev` publish `4.0.0-preview-*` packages to Cloudsmith, and version tags
 or a manual release run publish stable packages to NuGet.org. Packaging copies
 the selected catalogs; it does not translate them or reconcile duplicate folders.
 
