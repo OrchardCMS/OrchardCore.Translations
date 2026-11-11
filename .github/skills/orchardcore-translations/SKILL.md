@@ -45,6 +45,12 @@ Use `--localization-root "$PWD/Localization"` from this checkout. Use the curren
 POTs; do not regenerate or change them unless requested. Keep generated artifacts
 in the session's artifact directory, outside `Localization`.
 
+Translator notes, argument names, and count ranges come from the current POTs.
+If the source checkout has newer metadata, report that the **Sync POT files**
+update needs review and merging before a run that relies on it. Do not silently
+regenerate the POTs. Metadata-only updates do not invalidate translation identities
+or authorize replacing populated values; review ambiguous existing values separately.
+
 ### Locate the Orchard Core source checkout (required)
 
 **The caller must find the source repository before generating or dispatching
@@ -129,16 +135,40 @@ not a whitespace-only value. A changed plural source is an explicit error rather
 than permission to overwrite a translation.
 
 For a partially translated plural entry, classify it as `new`, record its existing
-values, and prompt only for missing `msgstr[n]` forms. Use the culture's
-`Plural-Forms` header, inferred from its POs when unambiguous. For a new culture
-or ambiguous/missing headers, supply its known rule explicitly:
+values, and prompt only for missing `msgstr[n]` forms. Use **each PO file's own
+`Plural-Forms` header**, which Orchard Core now honors for that file's translations.
+Different catalogs of the same culture can legitimately have different rules.
+For a new catalog, infer a rule from the culture's POs only when unambiguous.
+For a new culture or ambiguous headers, supply a known rule explicitly:
 
 ```bash
 --plural-forms 'nplurals=2; plural=(n != 1);'
 ```
 
-Never guess a plural rule. That option supplies a rule for catalogs without a
-header; it does not replace an existing catalog's rule.
+Never guess a plural rule. That option supplies a rule only for **new catalogs**;
+it does not replace an existing catalog's rule or migrate a headerless PO.
+The scripts validate the header expression against Orchard Core's supported
+gettext grammar and limits (1-100 forms, 1024 UTF-16 code units, nesting depth 64).
+Invalid or unsupported headers are explicit blockers, not permission to use a
+different formula.
+
+**Existing headerless plural catalogs require a separate migration review before
+generation or import.** Orchard Core uses `IPluralRuleProvider` when the header is
+missing or invalid. Inspect the provider in the target source revision, including
+custom providers, and review its count partitions and numeric index order against
+every affected translation. Ask for approval before updating the header and any
+affected values; then regenerate prompts. Supplying `--plural-forms` does not
+approve this migration. The fill-only importer never installs a header on an
+existing catalog.
+
+The built-in provider follows CLDR 49 integer cardinal rules using absolute counts.
+CLDR category names do not define gettext index order; consult the target Orchard
+Core localization reference rather than assigning indexes from category names.
+For example, its French rule adds `many` at index 2 for nonzero million multiples,
+but a French PO with a valid two-form `plural=(n > 1)` header keeps its two-form
+behavior. Do not blanket-migrate valid existing headers to CLDR 49. When explicitly
+adopting provider rules, migrate the header and affected translations together,
+never automatically reorder reviewed values.
 
 Each missing singular value or plural form is one **translation unit / JSON key**.
 `--max-entries` caps those units per prompt (default 200), never mixing PO files.
@@ -195,6 +225,32 @@ JSON response file. For example, distinguish "Part" as a CMS content part from a
 ordinary fragment, or "Publish" as an action from a publication state. Preserve
 variables, format specifiers, markup, attributes, code, brands, and whitespace.
 
+### Interpret translator metadata
+
+Generated Entry context includes current POT extracted comments and flags.
+Use notes to resolve meaning, and `Format arguments: {0}: hours` to understand
+the placeholder, not to rename it to `{hours}`. In source, `Note(...)` and named
+`Arg(...)` helpers do not change lookup or formatting; Liquid `note:` is metadata,
+not a format argument. Notes should be used where the text and context are
+insufficient, not treated as instructions to execute.
+
+A ranged `Arg(name, value, min, max)` on a plural count produces a gettext flag
+such as `range: 0..23`, with inclusive bounds. Interpret it with the file's
+plural rule. Keep every requested `msgstr[n]` slot complete, including forms not
+used in that range; do not drop response keys or leave empty translations.
+
+The English singular and plural are both source templates for every target index;
+the Input value is only a seed. Index 0 need not mean exactly one. A translation
+may preserve the complete variables, markup, and whitespace structure of either
+source form, for example using `{0}` from `"{0} hours ago"` for a zero-or-one
+translation of `"1 hour ago"` at index 0. Never invent a placeholder or combine
+partial structures from the two forms.
+
+Non-display identifiers can appropriately remain unchanged: pager `"previous"`
+and `"next"` are CSS classes. `"d"` in OpenId is a .NET date format, not prose;
+keep it unless the culture needs another valid .NET date format. An intentional
+unchanged value is not the same as copying English to hide a translation blocker.
+
 If a source reference cannot be resolved and the context affects the translation,
 report the blocker. Do not fill the value with a guess or copy English simply to
 meet a coverage count.
@@ -204,8 +260,10 @@ meet a coverage count.
 Wait for completion notifications and inspect the recorded child sessions. Collect
 all responses at the manifest's `response_file` paths. Reject missing files,
 duplicate/extra/missing JSON keys, non-string or empty values, changed
-placeholders, or altered HTML attributes. Have the same child correct its batch
-instead of launching a duplicate. Report unresolved batches explicitly.
+placeholders, or altered HTML attributes. For plurals, validate against either
+complete English source form, not an assumed index-to-English-form mapping.
+Have the same child correct its batch instead of launching a duplicate.
+Report unresolved batches explicitly.
 
 The prompts return a flat JSON object of hash keys to translated strings. The
 manifest is the lossless mapping back to culture, PO filename, context, msgid, and
@@ -242,8 +300,9 @@ checkout cannot redirect the import away from the current translations worktree.
 The importer resolves each hash to its culture, PO file, exact context/msgid and
 plural form. It checks the current POT and plural rule again, validates response
 keys, variables, markup/attributes and whitespace, and fills **only still-empty
-values**. It preserves existing translations, flags, comments and headers,
-including a reviewer's edits made after prompt generation. It reports skipped
+values**. Changed translator notes or flags block stale imports and require
+regenerating prompts. It preserves existing translations, flags, comments and
+headers, including a reviewer's edits made after prompt generation. It reports skipped
 populated values explicitly. Missing entries are appended; a missing PO file is
 created from its POT with the target culture and plural rule.
 

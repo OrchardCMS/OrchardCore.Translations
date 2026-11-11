@@ -197,6 +197,85 @@ class GeneratePromptsTests(unittest.TestCase):
         self.assertEqual(manifest["catalogs"][0]["po_file"], "hu/A.po")
         self.assertFalse((self.root / "hu").exists())
 
+    def test_headerless_existing_plural_requires_separate_migration(self):
+        rule = "nplurals=2; plural=(n > 1);"
+        self.catalog("Other", [self.entry("Label", "Libellé")],
+                     locale="fr", plural_forms=rule)
+        self.catalog("A", [self.entry("{0} item", msgid_plural="{0} items")])
+        target = self.catalog("A", [
+            self.entry("{0} item", msgid_plural="{0} items",
+                       msgstr_plural={0: "{0} élément", 1: ""}),
+        ], locale="fr")
+        before = self.snapshots()
+        for kwargs in ({}, {"plural_forms": rule}):
+            with self.subTest(kwargs=kwargs):
+                with self.assertRaisesRegex(ValueError, "migrate.*separately"):
+                    self.run_generate(**kwargs)
+                self.assertFalse(self.output.exists())
+                self.assertEqual(before, self.snapshots())
+        po = polib.pofile(str(target))
+        po.metadata["Plural-Forms"] = rule
+        po.save()
+        manifest = self.run_generate()
+        self.assertEqual(manifest["summary"]["new_values"], 1)
+        self.assertEqual(manifest["catalogs"][0]["plural_forms"], rule)
+
+    def test_headerless_singular_and_orphan_catalogs_do_not_get_inferred_headers(self):
+        self.catalog("A", [self.entry("Label")])
+        self.catalog("A", [self.entry("Label")], locale="fr")
+        self.catalog("Orphan", [
+            self.entry("One", msgid_plural="Many", msgstr_plural={0: "Un", 1: "Plusieurs"}),
+        ], locale="fr")
+        manifest = self.run_generate(plural_forms="nplurals=2; plural=n != 1;")
+        self.assertTrue(all(c["plural_forms"] is None for c in manifest["catalogs"]))
+        self.assertEqual(manifest["summary"]["old"], 1)
+
+    def test_invalid_plural_expressions_fail_without_output_or_catalog_changes(self):
+        self.catalog("A", [self.entry("One", msgid_plural="Many")])
+        for rule in ("nplurals=2; plural=invalid;", "nplurals=101; plural=0;"):
+            with self.subTest(rule=rule):
+                self.catalog("A", [self.entry("One", msgid_plural="Many")],
+                             locale="fr", plural_forms=rule)
+                before = self.snapshots()
+                with self.assertRaisesRegex(ValueError, "invalid or unsupported"):
+                    self.run_generate()
+                self.assertFalse(self.output.exists())
+                self.assertEqual(before, self.snapshots())
+
+    def test_notes_argument_names_and_range_flags_reach_every_plural_prompt(self):
+        rule = (
+            "nplurals=3; plural=(n == 0 || n == 1) ? 0 : "
+            "(n != 0 && n % 1000000 == 0) ? 2 : 1;"
+        )
+        comment = "Relative date shown for past dates.\nFormat arguments: {0}: hours"
+        self.catalog("A", [
+            self.entry("1 hour ago", msgid_plural="{0} hours ago", comment=comment,
+                       flags=["csharp-format", "range: 0..23"]),
+        ])
+        manifest = self.run_generate(max_entries=1, plural_forms=rule)
+        self.assertEqual(manifest["summary"]["new_values"], 3)
+        for job in manifest["prompts"]:
+            prompt = (self.output / job["prompt_file"]).read_text()
+            context = json.loads(prompt.split("Entry context (read-only):\n")[1]
+                                 .split("\nInput:\n")[0])
+            record = context[job["keys"][0]]
+            self.assertEqual(record["flags"], ["csharp-format", "range: 0..23"])
+            self.assertEqual(record["extracted_comment"], comment)
+            self.assertIn(rule, prompt)
+            self.assertIn("Return every requested form", prompt)
+            self.assertIn("may use {0} even at index 0", prompt)
+            self.assertIn("never replace it with {hours}", prompt)
+
+    def test_metadata_only_changes_preserve_populated_translations(self):
+        self.catalog("A", [self.entry("Open", comment="Action, not a status.")])
+        self.catalog("A", [self.entry("Open", "Ouvrir", flags=["fuzzy"])], locale="fr")
+        before = self.snapshots()
+        manifest = self.run_generate()
+        self.assertEqual(manifest["prompts"], [])
+        self.assertEqual(manifest["catalogs"][0]["existing"][0]["translations"],
+                         {"singular": "Ouvrir"})
+        self.assertEqual(before, self.snapshots())
+
     def test_duplicate_identities_fail_instead_of_losing_values(self):
         self.catalog("A", [self.entry("One"), self.entry("One")])
         with self.assertRaises(ValueError):

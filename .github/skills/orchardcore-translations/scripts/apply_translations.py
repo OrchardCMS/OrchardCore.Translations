@@ -11,7 +11,8 @@ import tempfile
 from collections import Counter
 from pathlib import Path
 
-from generate_prompts import identity, json_text, plural_count, read_catalog, translation_key
+from generate_prompts import identity, json_text, read_catalog, translation_key
+from plural_forms import plural_count
 
 
 VARIABLES = re.compile(r"\{\{.*?\}\}|\{%.*?%\}|\{[^{}]+\}|%\d+", re.DOTALL)
@@ -63,6 +64,17 @@ def validate_value(source, translated, key):
         raise ValueError(f"{key}: line breaks or tabs changed.")
 
 
+def validate_plural_value(source, translated, key):
+    errors = []
+    for text in (source.msgid, source.msgid_plural):
+        try:
+            validate_value(text, translated, key)
+            return
+        except ValueError as error:
+            errors.append(str(error))
+    raise ValueError(f"{key}: translation matches neither plural source form: {'; '.join(errors)}")
+
+
 def prepare_updates(manifest, responses, root, remove_obsolete=False):
     units = {}
     for catalog in manifest["catalogs"]:
@@ -99,6 +111,17 @@ def prepare_updates(manifest, responses, root, remove_obsolete=False):
             pot = read_catalog(catalog_path(root, pot_file))
             original = target.read_bytes() if target.exists() else None
             po = read_catalog(target) if original is not None else copy.deepcopy(pot)
+            header = po.metadata.get("Plural-Forms")
+            if header:
+                plural_count(header, po_file)
+            if any(entry.msgid_plural for entry in pot if not entry.obsolete):
+                if original is not None and not header:
+                    raise ValueError(
+                        f"{po_file}: existing plural catalog has no Plural-Forms header; "
+                        "migrate its header and affected translations separately "
+                        "and regenerate prompts before importing."
+                    )
+                plural_count(header or catalog["plural_forms"], po_file)
             if original is None:
                 po.metadata["Language"] = manifest["culture"]
                 header = catalog["plural_forms"]
@@ -121,9 +144,11 @@ def prepare_updates(manifest, responses, root, remove_obsolete=False):
         source = state["sources"].get((record["msgctxt"], record["msgid"]))
         if source is None or source.msgid_plural != (record["msgid_plural"] or ""):
             raise ValueError(f"{po_file}: source entry changed or no longer exists: {key}")
+        if source.comment != record["extracted_comment"] or source.flags != record["flags"]:
+            raise ValueError(f"{po_file}: translator metadata changed; regenerate prompts: {key}")
         index = unit["plural_index"]
         if source.msgid_plural:
-            header = po.metadata.get("Plural-Forms") or catalog["plural_forms"]
+            header = po.metadata.get("Plural-Forms")
             if not header or not catalog["plural_forms"]:
                 raise ValueError(f"{po_file}: missing Plural-Forms.")
             if re.sub(r"\s+", "", header) != re.sub(r"\s+", "", catalog["plural_forms"]):
@@ -136,7 +161,10 @@ def prepare_updates(manifest, responses, root, remove_obsolete=False):
         source_text = source.msgid_plural if index is not None and index > 0 else source.msgid
         if key != expected_key or unit["source"] != source_text:
             raise ValueError(f"{po_file}: response identity does not match current source: {key}")
-        validate_value(source_text, value, key)
+        if source.msgid_plural:
+            validate_plural_value(source, value, key)
+        else:
+            validate_value(source_text, value, key)
         entry = state["active"].get(identity(source))
         if entry is not None and entry.msgid_plural != source.msgid_plural:
             raise ValueError(f"{po_file}: existing PO plural source does not match POT.")
@@ -154,8 +182,6 @@ def prepare_updates(manifest, responses, root, remove_obsolete=False):
             po.append(entry)
             state["active"][identity(source)] = entry
         if source.msgid_plural:
-            if not po.metadata.get("Plural-Forms"):
-                po.metadata["Plural-Forms"] = header
             for slot in range(plural_count(header, po_file)):
                 entry.msgstr_plural.setdefault(slot, "")
             entry.msgstr_plural[index] = value

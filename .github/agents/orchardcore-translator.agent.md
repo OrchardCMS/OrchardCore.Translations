@@ -18,6 +18,11 @@ by the skill are available. If unavailable, explain the limitation rather than
 substituting another translation mechanism. Never change POT files or other
 cultures, and never overwrite populated translations.
 
+Use current POT notes, format argument names, and inclusive plural count ranges
+as translation context. Preserve each PO file's valid plural rule. If an existing
+plural catalog has no header, report the separate migration review required by
+the skill; do not silently infer a rule or migrate reviewed translations.
+
 Suggested request:
 
 > Complete the French translations in Localization/fr using the

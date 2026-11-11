@@ -66,6 +66,14 @@ It fills only missing translation values, preserves populated translations, and
 removes obsolete entries from the selected culture without changing POT files or
 other cultures. Review AI-generated translations before merging them.
 
+Generated prompts include POT translator notes, format argument names, and
+inclusive plural count ranges. Each PO file keeps its own valid `Plural-Forms`
+rule, rather than being automatically migrated to Orchard Core's CLDR 49
+fallback. Existing headerless plural catalogs require a separate review and
+migration before generating or importing translations; `--plural-forms` supplies
+rules only for new catalogs. Merge relevant **Sync POT files** updates before
+relying on new source metadata.
+
 In the Copilot app, select the **Orchard Core translator** custom agent, or ask:
 
 > Use the orchardcore-translations skill to complete French translations in
