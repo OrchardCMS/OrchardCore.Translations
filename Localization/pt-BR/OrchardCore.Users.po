@@ -13,7 +13,7 @@ msgstr ""
 "X-Crowdin-File-ID: 838\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2026-11-03 02:07\n"
+"PO-Revision-Date: 2026-11-11 06:41\n"
 
 #: ViewModels/ChangePasswordViewModel.cs
 #: ViewModels/EditPasswordViewModel.cs
@@ -1035,6 +1035,7 @@ msgctxt "OrchardCore.Users.Views.AuditTrailAdmin.Index"
 msgid "Audit Trail User Event Settings"
 msgstr ""
 
+#. Redaction option that stores the value of a user property as is, without redacting it.
 #: Views/AuditTrailAdmin/Index.cshtml
 msgctxt "OrchardCore.Users.Views.AuditTrailAdmin.Index"
 msgid "Store"
@@ -3121,11 +3122,6 @@ msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
 msgid "Failed"
 msgstr "Falhou"
 
-#: Workflows/Activities/AssignUserRoleTask.cs
-msgctxt "OrchardCore.Users.Workflows.Activities.AssignUserRoleTask"
-msgid "User"
-msgstr "Usuário"
-
 #: Workflows/Activities/RegisterUserTask.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
 msgid "Done"
@@ -3143,7 +3139,7 @@ msgstr "Tarefa de Cadastro de usuário"
 
 #: Workflows/Activities/RegisterUserTask.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.RegisterUserTask"
-msgid "User"
+msgid "The URL that confirms the email of the registered user."
 msgstr ""
 
 #: Workflows/Activities/RegisterUserTask.cs
@@ -3155,11 +3151,6 @@ msgstr "Válido"
 msgctxt "OrchardCore.Users.Workflows.Activities.UserActivity"
 msgid "Done"
 msgstr "Concluído"
-
-#: Workflows/Activities/UserActivity.cs
-msgctxt "OrchardCore.Users.Workflows.Activities.UserActivity"
-msgid "User"
-msgstr "Usuário"
 
 #: Workflows/Activities/UserConfirmedEvent.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.UserConfirmedEvent"
@@ -3186,10 +3177,45 @@ msgctxt "OrchardCore.Users.Workflows.Activities.UserEnabledEvent"
 msgid "User Enabled Event"
 msgstr "Evento de usuário ativado"
 
+#: Workflows/Activities/UserEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserEvent"
+msgid "The user of the event."
+msgstr ""
+
+#: Workflows/Activities/UserLoggedInEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
+msgid "The claims of the external login."
+msgstr ""
+
+#: Workflows/Activities/UserLoggedInEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
+msgid "The external login provider, or nothing for a local login."
+msgstr ""
+
+#: Workflows/Activities/UserLoggedInEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
+msgid "The name of the user who logged in."
+msgstr ""
+
+#: Workflows/Activities/UserLoggedInEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
+msgid "The names of the user's roles."
+msgstr ""
+
 #: Workflows/Activities/UserLoggedInEvent.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedInEvent"
 msgid "User Loggedin Event"
 msgstr "Evento de início de sessão"
+
+#: Workflows/Activities/UserLoggedOutEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedOutEvent"
+msgid "The name of the user who logged out."
+msgstr ""
+
+#: Workflows/Activities/UserLoggedOutEvent.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedOutEvent"
+msgid "The names of the user's roles."
+msgstr ""
 
 #: Workflows/Activities/UserLoggedOutEvent.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.UserLoggedOutEvent"
@@ -3218,8 +3244,13 @@ msgstr "Com a função"
 
 #: Workflows/Activities/ValidateUserTask.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
-msgid "User"
-msgstr "Usuário"
+msgid "The name of the signed-in user."
+msgstr ""
+
+#: Workflows/Activities/ValidateUserTask.cs
+msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
+msgid "The names of the user's roles, when the user is in one of the roles."
+msgstr ""
 
 #: Workflows/Activities/ValidateUserTask.cs
 msgctxt "OrchardCore.Users.Workflows.Activities.ValidateUserTask"
