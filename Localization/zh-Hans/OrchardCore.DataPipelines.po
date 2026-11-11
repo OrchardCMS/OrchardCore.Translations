@@ -1,13 +1,19 @@
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: OrchardCore.DataPipelines\n"
-"Language: zh-CN\n"
+"Project-Id-Version: orchard-core\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "X-OrchardCore-Catalog-Schema: 1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: orchard-core\n"
+"X-Crowdin-Project-ID: 307044\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.DataPipelines.pot\n"
+"X-Crowdin-File-ID: 1017\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2026-11-03 02:55\n"
 
 #: AdminMenu.cs
 msgctxt "OrchardCore.DataPipelines.AdminMenu"
@@ -52,9 +58,7 @@ msgstr "名称为必填项。"
 #: Controllers/AdminController.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Controllers.AdminController"
-msgid ""
-"The next run of the pipeline '{0}' starts over, such as reading every row "
-"again."
+msgid "The next run of the pipeline '{0}' starts over, such as reading every row again."
 msgstr "管道“{0}”的下一次运行将从头开始，例如重新读取每一行。"
 
 #. Format arguments: {0}: pipeline.Name
@@ -159,9 +163,7 @@ msgstr "请选择文件格式。"
 
 #: Drivers/SourceAndFileStepDisplayDrivers.cs
 msgctxt "OrchardCore.DataPipelines.Drivers.DataSourceStepDisplayDriver"
-msgid ""
-"A step that reads only the new rows reads all of them: set the maximum "
-"number of rows to 0."
+msgid "A step that reads only the new rows reads all of them: set the maximum number of rows to 0."
 msgstr "仅读取新行的步骤会读取全部行：请将最大行数设置为 0。"
 
 #: Drivers/SourceAndFileStepDisplayDrivers.cs
@@ -200,8 +202,7 @@ msgstr "“{0}”不是有效的标头名称。"
 
 #: Drivers/DestinationStepDisplayDrivers.cs
 msgctxt "OrchardCore.DataPipelines.Drivers.SendToWebApiStepDisplayDriver"
-msgid ""
-"Enter an absolute http or https URL, such as https://api.example.com/files."
+msgid "Enter an absolute http or https URL, such as https://api.example.com/files."
 msgstr "请输入绝对 http 或 https URL，例如 https://api.example.com/files。"
 
 #: Drivers/DestinationStepDisplayDrivers.cs
@@ -232,8 +233,7 @@ msgstr "数据管道“{0}”没有名称。"
 #: Recipes/DataPipelinesRecipeStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Recipes.DataPipelinesRecipeStep"
-msgid ""
-"The identifier of the data pipeline '{0}' is longer than {1} characters."
+msgid "The identifier of the data pipeline '{0}' is longer than {1} characters."
 msgstr "数据管道“{0}”的标识符超过 {1} 个字符。"
 
 #: Services/DataPipelineDesignerModelBuilder.cs
@@ -379,12 +379,10 @@ msgstr "媒体库中没有文件“{0}”。"
 #: Steps/Media/ReadMediaFileStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.ReadMediaFileStep"
-msgid ""
-"The user the pipeline runs for may not read the media of the folder '{0}'."
+msgid "The user the pipeline runs for may not read the media of the folder '{0}'."
 msgstr "管道运行所使用的用户可能无权读取文件夹“{0}”中的媒体。"
 
-#. Format arguments: {0}: mapping.Target ?? string.Empty; {1}:
-#. settings.ContentType
+#. Format arguments: {0}: mapping.Target ?? string.Empty; {1}: settings.ContentType
 #: Steps/Contents/SaveContentItemsStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
@@ -401,14 +399,11 @@ msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
 msgid "Choose the field that finds the items to update."
 msgstr "请选择用于查找要更新项目的字段。"
 
-#. Format arguments: {0}: created; {1}: updated; {2}: settings.ContentType;
-#. {3}: skipped; {4}: failed
+#. Format arguments: {0}: created; {1}: updated; {2}: settings.ContentType; {3}: skipped; {4}: failed
 #: Steps/Contents/SaveContentItemsStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
-msgid ""
-"Created {0} and updated {1} '{2}' content items; skipped {3} and rejected "
-"{4} rows."
+msgid "Created {0} and updated {1} '{2}' content items; skipped {3} and rejected {4} rows."
 msgstr "已创建 {0} 个并更新了 {1} 个“{2}”内容项；已跳过 {3} 行并拒绝 {4} 行。"
 
 #: Steps/Contents/SaveContentItemsStep.cs
@@ -466,8 +461,7 @@ msgstr "输入中没有名为“{0}”的字段。"
 #: Steps/Contents/SaveContentItemsStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
-msgid ""
-"The user the pipeline runs for may not edit or publish '{0}' content items."
+msgid "The user the pipeline runs for may not edit or publish '{0}' content items."
 msgstr "管道运行所使用的用户可能无权编辑或发布“{0}”内容项。"
 
 #. Format arguments: {0}: failed
@@ -510,21 +504,14 @@ msgstr "文件夹必须位于媒体库内。"
 #: Steps/Media/SaveToMediaStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveToMediaStep"
-msgid ""
-"The media library doesn't accept files with the extension '{0}'. Add it to "
-"the allowed file extensions of the media library (the "
-"OrchardCore:Media:AllowedFileExtensions setting), or create a file in a "
-"format it accepts, such as an Excel workbook."
-msgstr ""
-"媒体库不接受扩展名为“{0}”的文件。请将其添加到媒体库的允许文件扩展名中（OrchardCore:Media:AllowedFileExtensions"
-" 设置），或创建媒体库接受的格式的文件，例如 Excel 工作簿。"
+msgid "The media library doesn't accept files with the extension '{0}'. Add it to the allowed file extensions of the media library (the OrchardCore:Media:AllowedFileExtensions setting), or create a file in a format it accepts, such as an Excel workbook."
+msgstr "媒体库不接受扩展名为“{0}”的文件。请将其添加到媒体库的允许文件扩展名中（OrchardCore:Media:AllowedFileExtensions 设置），或创建媒体库接受的格式的文件，例如 Excel 工作簿。"
 
 #. Format arguments: {0}: folder
 #: Steps/Media/SaveToMediaStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveToMediaStep"
-msgid ""
-"The user the pipeline runs for may not manage the media of the folder '{0}'."
+msgid "The user the pipeline runs for may not manage the media of the folder '{0}'."
 msgstr "管道运行所使用的用户可能无权管理文件夹“{0}”中的媒体。"
 
 #: Steps/Destinations/SendByEmailStep.cs
@@ -554,8 +541,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
 msgid "Sent an email without attachments to {0}"
 msgstr "已向 {0} 发送了一封不带附件的电子邮件"
 
-#. Format arguments: {0}: string.Join(", ", files.Select(file =>
-#. $"'{file.FileName}'")); {1}: recipients
+#. Format arguments: {0}: string.Join(", ", files.Select(file => $"'{file.FileName}'")); {1}: recipients
 #: Steps/Destinations/SendByEmailStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
@@ -569,14 +555,11 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
 msgid "The email could not be sent: {0}"
 msgstr "无法发送电子邮件：{0}"
 
-#. Format arguments: {0}: ((double)size / BytesPerMegabyte).ToString("0.##",
-#. CultureInfo.InvariantCulture); {1}: settings.MaxAttachmentSizeMegabytes
+#. Format arguments: {0}: ((double)size / BytesPerMegabyte).ToString("0.##", CultureInfo.InvariantCulture); {1}: settings.MaxAttachmentSizeMegabytes
 #: Steps/Destinations/SendByEmailStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
-msgid ""
-"The files weigh {0} MB, more than the {1} MB the attachments of the email "
-"can weigh. Raise the limit, or zip the files."
+msgid "The files weigh {0} MB, more than the {1} MB the attachments of the email can weigh. Raise the limit, or zip the files."
 msgstr "这些文件共 {0} MB，超过电子邮件附件允许的 {1} MB。请提高限制，或压缩这些文件。"
 
 #: Steps/Destinations/SendByEmailStep.cs
@@ -603,8 +586,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "'{0}' isn't a valid header name."
 msgstr "“{0}”不是有效的标头名称。"
 
-#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}:
-#. DataPipelineRemotePaths.Redact(ex.Message, secret, url.Query)
+#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}: DataPipelineRemotePaths.Redact(ex.Message, secret, url.Query)
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
@@ -640,9 +622,7 @@ msgstr "请输入基本身份验证的用户名。"
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
-msgid ""
-"Headers are not secret: set the credentials with the authentication "
-"settings, not with the '{0}' header."
+msgid "Headers are not secret: set the credentials with the authentication settings, not with the '{0}' header."
 msgstr "标头并不保密：请在身份验证设置中设置凭据，不要使用“{0}”标头。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
@@ -655,8 +635,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "Sends each file to a web API, in an HTTP request."
 msgstr "通过 HTTP 请求将每个文件发送到 Web API。"
 
-#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}:
-#. response.StatusCode
+#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}: response.StatusCode
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
@@ -672,14 +651,12 @@ msgstr "“{0}”标头由此步骤设置。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
-msgid ""
-"The URL can't hold credentials: set them in the authentication settings."
+msgid "The URL can't hold credentials: set them in the authentication settings."
 msgstr "URL 不能包含凭据：请在身份验证设置中进行设置。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
-msgid ""
-"The URL isn't https: the credentials and the files travel in clear text."
+msgid "The URL isn't https: the credentials and the files travel in clear text."
 msgstr "URL 不是 https：凭据和文件将以明文传输。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
@@ -689,9 +666,7 @@ msgstr "Web API 的 URL 必须是绝对 http 或 https URL。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
-msgid ""
-"The secret of the authentication can't be read on this site, such as when "
-"its data protection keys changed: enter it again."
+msgid "The secret of the authentication can't be read on this site, such as when its data protection keys changed: enter it again."
 msgstr "无法读取此站点上的身份验证密钥，例如数据保护密钥已更改：请重新输入。"
 
 #: Steps/Destinations/SendToWebApiStep.cs
@@ -706,22 +681,18 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "The value of the '{0}' header can't hold line breaks."
 msgstr "“{0}”标头的值不能包含换行符。"
 
-#. Format arguments: {0}: displayUrl; {1}: response.StatusCode; {2}:
-#. response.ReasonPhrase; {3}: file.FileName; {4}:
-#. DataPipelineRemotePaths.Redact(body, secret)
+#. Format arguments: {0}: displayUrl; {1}: response.StatusCode; {2}: response.ReasonPhrase; {3}: file.FileName; {4}: DataPipelineRemotePaths.Redact(body, secret)
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "The web API at {0} answered {1} ({2}) to '{3}': {4}"
 msgstr "位于 {0} 的 Web API 对“{3}”返回了 {1}（{2}）：{4}"
 
-#. Format arguments: {0}: displayUrl; {1}: timeout.TotalSeconds; {2}:
-#. file.FileName
+#. Format arguments: {0}: displayUrl; {1}: timeout.TotalSeconds; {2}: file.FileName
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
-msgid ""
-"The web API at {0} didn't answer within {1} seconds when sending '{2}'."
+msgid "The web API at {0} didn't answer within {1} seconds when sending '{2}'."
 msgstr "位于 {0} 的 Web API 在发送“{2}”时未在 {1} 秒内响应。"
 
 #. Format arguments: {0}: MaxDays
@@ -741,9 +712,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.ShareDownloadLinkStep"
 msgid "Share a download link"
 msgstr "共享下载链接"
 
-#. Format arguments: {0}: file.FileName; {1}: string.Join(", ",
-#. result.Link.RecipientNames); {2}: result.Link.ExpiresUtc.ToString("u",
-#. CultureInfo.InvariantCulture)
+#. Format arguments: {0}: file.FileName; {1}: string.Join(", ", result.Link.RecipientNames); {2}: result.Link.ExpiresUtc.ToString("u", CultureInfo.InvariantCulture)
 #: Steps/Destinations/ShareDownloadLinkStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.ShareDownloadLinkStep"
@@ -759,9 +728,7 @@ msgstr "通过安全且会过期的下载链接与用户共享文件。"
 #: Steps/Destinations/ShareDownloadLinkStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.ShareDownloadLinkStep"
-msgid ""
-"The link to '{0}' could not be emailed to {1}: they have no email address, "
-"or the email failed."
+msgid "The link to '{0}' could not be emailed to {1}: they have no email address, or the email failed."
 msgstr "无法通过电子邮件将指向“{0}”的链接发送给 {1}：该用户没有电子邮件地址，或电子邮件发送失败。"
 
 #: Steps/Destinations/ShareDownloadLinkStep.cs
@@ -796,9 +763,7 @@ msgstr "名称"
 
 #: Views/Admin/Create.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Admin.Create"
-msgid ""
-"You design the pipeline next: add a source to read data from, then the steps"
-" that transform and deliver it."
+msgid "You design the pipeline next: add a source to read data from, then the steps that transform and deliver it."
 msgstr "接下来设计管道：添加一个数据读取源，然后添加用于转换和传递数据的步骤。"
 
 #. Format arguments: {0}: count
@@ -816,8 +781,7 @@ msgstr "<strong>此处为空！</strong> 没有与搜索条件匹配的数据管
 
 #: Views/Admin/Index.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Admin.Index"
-msgid ""
-"<strong>Nothing here!</strong> There are no data pipelines for the moment."
+msgid "<strong>Nothing here!</strong> There are no data pipelines for the moment."
 msgstr "<strong>此处为空！</strong> 当前没有数据管道。"
 
 #: Views/Admin/Index.cshtml
@@ -834,9 +798,7 @@ msgstr "添加管道"
 #: Views/Admin/Index.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.Admin.Index"
-msgid ""
-"Are you sure you want to delete the pipeline '{0}', its versions and its run"
-" history?"
+msgid "Are you sure you want to delete the pipeline '{0}', its versions and its run history?"
 msgstr "确定要删除管道“{0}”、其版本以及运行历史吗？"
 
 #: Views/Admin/Index.cshtml
@@ -873,9 +835,7 @@ msgstr "编辑"
 #: Views/Admin/Index.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.Admin.Index"
-msgid ""
-"Forget what the runs of the pipeline '{0}' kept, such as how far its sources"
-" read new rows? Its next run starts over, and may deliver data again."
+msgid "Forget what the runs of the pipeline '{0}' kept, such as how far its sources read new rows? Its next run starts over, and may deliver data again."
 msgstr "清除管道“{0}”各次运行保存的状态，例如源读取新行的进度？下一次运行将从头开始，并可能再次传递数据。"
 
 #: Views/Admin/Index.cshtml
@@ -1247,16 +1207,12 @@ msgstr "不分组"
 
 #: Views/Aggregate.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
-msgid ""
-"The rows with the same values of these fields form a group. Select none to "
-"summarize every row into one."
+msgid "The rows with the same values of these fields form a group. Select none to summarize every row into one."
 msgstr "这些字段具有相同值的行组成一个分组。不选择字段时，所有行将汇总为一组。"
 
 #: Views/Aggregate.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
-msgid ""
-"The values computed for each group, such as the number of rows or the sum of"
-" a field."
+msgid "The values computed for each group, such as the number of rows or the sum of a field."
 msgstr "为每个分组计算的值，例如行数或某个字段的总和。"
 
 #: Views/Aggregate.Fields.Edit.cshtml
@@ -1281,10 +1237,7 @@ msgstr "计算字段"
 
 #: Views/CalculatedFields.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.CalculatedFields.Fields.Edit"
-msgid ""
-"Each formula can use the fields of the input and the fields calculated "
-"before it. A field with the name of an input field replaces its value. Click"
-" a field or a function to insert it into the formula you last edited."
+msgid "Each formula can use the fields of the input and the fields calculated before it. A field with the name of an input field replaces its value. Click a field or a function to insert it into the formula you last edited."
 msgstr "每个公式都可以使用输入字段以及在它之前计算的字段。名称与输入字段相同的字段会替换该字段的值。点击字段或函数可将其插入最近编辑的公式中。"
 
 #: Views/ConvertTimeZone.Fields.Design.cshtml
@@ -1323,10 +1276,7 @@ msgstr "{0}：从 {1} 转换为 UTC"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
-msgid ""
-"A published pipeline runs for the user who published it, and a preview for "
-"you. A user who chose no time zone in their profile gets the time zone of "
-"the site."
+msgid "A published pipeline runs for the user who published it, and a preview for you. A user who chose no time zone in their profile gets the time zone of the site."
 msgstr "已发布的数据管道以发布者的身份运行，预览则以您的身份运行。如果用户在个人资料中未选择时区，则使用站点时区。"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
@@ -1371,17 +1321,12 @@ msgstr "名称"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
-msgid ""
-"Orchard Core stores dates in UTC: convert them from UTC to show local dates "
-"and times, and convert local dates and times, such as the ones of a file, to"
-" UTC to save them."
+msgid "Orchard Core stores dates in UTC: convert them from UTC to show local dates and times, and convert local dates and times, such as the ones of a file, to UTC to save them."
 msgstr "Orchard Core 以 UTC 存储日期：转换为 UTC 时区以显示本地日期和时间；将文件等本地日期和时间转换为 UTC 后保存。"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
-msgid ""
-"The date and time fields to convert. Select none to convert all of them. "
-"Dates without a time have no time zone, so they aren't converted."
+msgid "The date and time fields to convert. Select none to convert all of them. Dates without a time have no time zone, so they aren't converted."
 msgstr "要转换的日期和时间字段。不选择字段时，将转换所有字段。不带时间的日期没有时区，因此不会转换。"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
@@ -1416,11 +1361,7 @@ msgstr "CSV 分隔符"
 
 #: Views/CreateFile.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.CreateFile.Fields.Edit"
-msgid ""
-"Connect several steps to the input to write each one to its own worksheet of"
-" the workbook. Name the worksheets one per line, in the order of the "
-"connections; a worksheet without a name is named after the step it comes "
-"from."
+msgid "Connect several steps to the input to write each one to its own worksheet of the workbook. Name the worksheets one per line, in the order of the connections; a worksheet without a name is named after the step it comes from."
 msgstr "将多个步骤连接到输入后，每个步骤会写入工作簿中的一个工作表。工作表名称每行一个，并按照连接顺序排列；未命名的工作表以其来源步骤的名称命名。"
 
 #: Views/CreateFile.Fields.Edit.cshtml
@@ -1448,14 +1389,11 @@ msgctxt "OrchardCore.DataPipelines.Views.CreateFile.Fields.Edit"
 msgid "Start with a row of column names"
 msgstr "以列名行开头"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/CreateFile.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.CreateFile.Fields.Edit"
-msgid ""
-"Without the extension. Placeholders: {0}, {1}, and {2}, where the format is "
-"a .NET date format such as yyyy-MM-dd."
+msgid "Without the extension. Placeholders: {0}, {1}, and {2}, where the format is a .NET date format such as yyyy-MM-dd."
 msgstr "不包含扩展名。占位符：{0}、{1} 和 {2}；格式为 .NET 日期格式，例如 yyyy-MM-dd。"
 
 #: Views/CreateFile.Fields.Edit.cshtml
@@ -1464,34 +1402,27 @@ msgid "Worksheet names"
 msgstr "工作表名称"
 
 #: Views/DataPipelineDesigner/DataPipelineDesignerSettings.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
-msgid ""
-"A disabled pipeline doesn't run, whether it is started by a user or a "
-"workflow."
+msgctxt "OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
+msgid "A disabled pipeline doesn't run, whether it is started by a user or a workflow."
 msgstr "禁用的数据管道不会运行，无论由用户启动还是由工作流启动。"
 
 #: Views/DataPipelineDesigner/DataPipelineDesignerSettings.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
+msgctxt "OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
 msgid "Description"
 msgstr "说明"
 
 #: Views/DataPipelineDesigner/DataPipelineDesignerSettings.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
+msgctxt "OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
 msgid "Enabled"
 msgstr "启用"
 
 #: Views/DataPipelineDesigner/DataPipelineDesignerSettings.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
+msgctxt "OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
 msgid "Name"
 msgstr "名称"
 
 #: Views/DataPipelineDesigner/DataPipelineDesignerSettings.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
+msgctxt "OrchardCore.DataPipelines.Views.DataPipelineDesigner.DataPipelineDesignerSettings"
 msgid "What the pipeline does, shown in the list of pipelines."
 msgstr "数据管道的用途，显示在数据管道列表中。"
 
@@ -1565,13 +1496,8 @@ msgstr "数据集"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid ""
-"Each successful run keeps the largest value of the field it read, and the "
-"next run reads only the rows with a larger value, such as the items modified"
-" since the last run. Use a field that grows whenever a row is added or "
-"changed. A preview reads every row."
-msgstr ""
-"每次成功运行都会保留该字段读取到的最大值，下次运行只读取值更大的行，例如自上次运行以来修改的项目。请使用在添加或更改行时会不断增大的字段。预览会读取所有行。"
+msgid "Each successful run keeps the largest value of the field it read, and the next run reads only the rows with a larger value, such as the items modified since the last run. Use a field that grows whenever a row is added or changed. A preview reads every row."
+msgstr "每次成功运行都会保留该字段读取到的最大值，下次运行只读取值更大的行，例如自上次运行以来修改的项目。请使用在添加或更改行时会不断增大的字段。预览会读取所有行。"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
@@ -1607,13 +1533,8 @@ msgstr "否，读取所有行"
 #: Views/DataSource.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid ""
-"Only the rows that match every filter are read. Dates and times are compared"
-" in UTC. To use a placeholder, such as {0}, or a date without a time on a "
-"date and time field, which covers the whole day, write the value as text."
-msgstr ""
-"只读取符合所有筛选器的行。日期和时间以 UTC 进行比较。若要在日期时间字段中使用占位符（例如 "
-"{0}），或使用不带时间的日期（该日期表示整天），请将值写为文本。"
+msgid "Only the rows that match every filter are read. Dates and times are compared in UTC. To use a placeholder, such as {0}, or a date without a time on a date and time field, which covers the whole day, write the value as text."
+msgstr "只读取符合所有筛选器的行。日期和时间以 UTC 进行比较。若要在日期时间字段中使用占位符（例如 {0}），或使用不带时间的日期（该日期表示整天），请将值写为文本。"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
@@ -1627,9 +1548,7 @@ msgstr "仅读取新行"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid ""
-"The data is read with the access of the user who publishes the pipeline. "
-"Choosing another data set clears the fields and the filters."
+msgid "The data is read with the access of the user who publishes the pipeline. Choosing another data set clears the fields and the filters."
 msgstr "数据读取时使用发布数据管道的用户的权限。选择其他数据集会清除字段和筛选器。"
 
 #: Views/DataSource.Fields.Edit.cshtml
@@ -1639,9 +1558,7 @@ msgstr "要读取的字段及其顺序。不选择字段时，将读取所有字
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid ""
-"The parameters of a data set that takes them, such as a saved query: one "
-"name=value per line."
+msgid "The parameters of a data set that takes them, such as a saved query: one name=value per line."
 msgstr "采用参数的数据集（例如已保存的查询）所需的参数；每行填写一个名称=值。"
 
 #. Format arguments: {0}: string.Join(", ", Model.Fields)
@@ -1658,9 +1575,7 @@ msgstr "所有字段"
 
 #: Views/Distinct.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
-msgid ""
-"A row is a duplicate when these fields hold the same values as a row before "
-"it. Select none to compare every field. Values are compared exactly."
+msgid "A row is a duplicate when these fields hold the same values as a row before it. Select none to compare every field. Values are compared exactly."
 msgstr "当某行的这些字段值与它之前的行相同时，该行被视为重复。不选择字段时，将比较所有字段。字段值按完全匹配方式比较。"
 
 #: Views/Distinct.Fields.Edit.cshtml
@@ -1685,256 +1600,198 @@ msgstr "条件"
 
 #: Views/Filter.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Filter.Fields.Edit"
-msgid ""
-"The rows for which the condition is true go to the Matched output; the "
-"others to the Unmatched output."
+msgid "The rows for which the condition is true go to the Matched output; the others to the Unmatched output."
 msgstr "条件为真时，行将进入“已匹配”输出；其他行进入“未匹配”输出。"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Design.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
 msgid "Any run"
 msgstr "任意运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Design.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
 msgid "Data Pipeline Run Completed"
 msgstr "数据管道运行已完成"
 
 #. Format arguments: {0}: Model.Activity.Status
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Design.cshtml
 #, csharp-format
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Design"
 msgid "{0} runs"
 msgstr "{0} 次运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Any data pipeline"
 msgstr "任意数据管道"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Data pipeline"
 msgstr "数据管道"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Every run"
 msgstr "所有运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Runs"
 msgstr "运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Runs that failed or were cancelled"
 msgstr "失败或已取消的运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
 msgid "Runs that succeeded"
 msgstr "成功的运行"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
-msgid ""
-"The run is the last result: its RunId, PipelineName, Status, Error, "
-"Deliveries and Steps."
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Edit"
+msgid "The run is the last result: its RunId, PipelineName, Status, Error, Deliveries and Steps."
 msgstr "运行结果是最后一个结果，包括 RunId、PipelineName、Status、Error、Deliveries 和 Steps。"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Thumbnail"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Thumbnail"
 msgid "Data Pipeline Run Completed"
 msgstr "数据管道运行已完成"
 
 #: Views/Items/DataPipelineRunCompletedEvent.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Thumbnail"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelineRunCompletedEvent.Fields.Thumbnail"
 msgid "Executes when a run of a data pipeline ends."
 msgstr "数据管道运行结束时执行。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
-msgid ""
-"Exports data pipelines with their published definition, or their draft when "
-"they were never published. Secrets, such as passwords, aren't exported."
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgid "Exports data pipelines with their published definition, or their draft when they were never published. Secrets, such as passwords, aren't exported."
 msgstr "导出数据管道及其已发布的定义；从未发布的数据管道导出草稿。不导出密码等机密。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
 msgid "Include all the data pipelines"
 msgstr "包含所有数据管道"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
-msgid ""
-"Including the ones created after this step. Uncheck it to export the "
-"selected pipelines only."
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgid "Including the ones created after this step. Uncheck it to export the selected pipelines only."
 msgstr "包括此步骤之后创建的数据管道。取消选中时，仅导出所选数据管道。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
 msgid "Pipelines"
 msgstr "数据管道"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
 msgid "The pipelines to export."
 msgstr "要导出的数据管道。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Edit"
 msgid "There is no data pipeline yet."
 msgstr "尚无数据管道。"
 
 #. Format arguments: {0}: count
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Summary.cshtml
 #, csharp-format
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
 msgid "Adds 1 data pipeline, without its secrets."
 msgid_plural "Adds {0} data pipelines, without their secrets."
 msgstr[0] "添加 {0} 个数据管道，不包含其机密。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Summary.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
 msgid "Adds every data pipeline, without its secrets."
 msgstr "添加所有数据管道，不包含其机密。"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Summary.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Summary"
 msgid "Data Pipelines"
 msgstr "数据管道"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Thumbnail"
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Thumbnail"
 msgid "Data Pipelines"
 msgstr "数据管道"
 
 #: Views/Items/DataPipelinesDeploymentStep.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Thumbnail"
-msgid ""
-"Exports every data pipeline, or the selected ones, without the secrets of "
-"their steps."
+msgctxt "OrchardCore.DataPipelines.Views.Items.DataPipelinesDeploymentStep.Fields.Thumbnail"
+msgid "Exports every data pipeline, or the selected ones, without the secrets of their steps."
 msgstr "导出所有数据管道或所选数据管道，不包含步骤中的机密。"
 
 #: Views/Items/RunDataPipelineTask.Fields.Design.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
 msgid "Doesn't wait for the run"
 msgstr "不等待运行结束"
 
 #: Views/Items/RunDataPipelineTask.Fields.Design.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
 msgid "Run Data Pipeline"
 msgstr "运行数据管道"
 
 #: Views/Items/RunDataPipelineTask.Fields.Design.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Design"
 msgid "Waits for the run"
 msgstr "等待运行结束"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
 msgid "Choose a data pipeline"
 msgstr "选择数据管道"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
 msgid "Data pipeline"
 msgstr "数据管道"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
 msgid "Parameters"
 msgstr "参数"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
 msgid "Skip when a run is already queued or running"
 msgstr "如果运行已排队或正在运行，则跳过"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
-msgid ""
-"The published version of the pipeline runs in the background, with the "
-"access of the user who published it."
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgid "The published version of the pipeline runs in the background, with the access of the user who published it."
 msgstr "以发布者的身份在后台运行已发布版本的数据管道。"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
-msgid ""
-"The workflow then continues with the Skipped outcome instead of queuing "
-"another run, such as when a timer starts it more often than a run lasts."
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgid "The workflow then continues with the Skipped outcome instead of queuing another run, such as when a timer starts it more often than a run lasts."
 msgstr "工作流随后通过“已跳过”结果继续，而不是再次排队运行，例如计时器启动运行的频率高于运行持续时间时。"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
-msgid ""
-"The workflow then continues with the Succeeded or Failed outcome, and the "
-"run as its last result and its DataPipelineRun output. Otherwise it "
-"continues at once with the Queued outcome."
-msgstr ""
-"工作流随后通过“已成功”或“失败”结果继续，并将运行作为最后一个结果及其 DataPipelineRun 输出。否则，工作流立即通过“已排队”结果继续。"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgid "The workflow then continues with the Succeeded or Failed outcome, and the run as its last result and its DataPipelineRun output. Otherwise it continues at once with the Queued outcome."
+msgstr "工作流随后通过“已成功”或“失败”结果继续，并将运行作为最后一个结果及其 DataPipelineRun 输出。否则，工作流立即通过“已排队”结果继续。"
 
 #. Format arguments: {0}: "{Parameter:name}"
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
 #, csharp-format
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
-msgid ""
-"Values passed to the run, one name=value per line, with Liquid. Steps use "
-"them with the {0} placeholder, such as in the parameters and filters of a "
-"data source."
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgid "Values passed to the run, one name=value per line, with Liquid. Steps use them with the {0} placeholder, such as in the parameters and filters of a data source."
 msgstr "传递给运行的值，每行填写一个名称=值，并支持 Liquid。步骤可以通过 {0} 占位符使用这些值，例如在数据源的参数和筛选器中。"
 
 #: Views/Items/RunDataPipelineTask.Fields.Edit.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Edit"
 msgid "Wait for the run to end"
 msgstr "等待运行结束"
 
 #: Views/Items/RunDataPipelineTask.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Thumbnail"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Thumbnail"
 msgid "Run Data Pipeline"
 msgstr "运行数据管道"
 
 #: Views/Items/RunDataPipelineTask.Fields.Thumbnail.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Thumbnail"
+msgctxt "OrchardCore.DataPipelines.Views.Items.RunDataPipelineTask.Fields.Thumbnail"
 msgid "Runs a data pipeline, and can wait for the run to end."
 msgstr "运行数据管道，并可等待运行结束。"
 
@@ -1970,8 +1827,7 @@ msgstr "添加一对字段"
 
 #: Views/Join.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Join.Fields.Edit"
-msgid ""
-"Added to a field of the right input whose name the left input already has."
+msgid "Added to a field of the right input whose name the left input already has."
 msgstr "添加到右侧输入中与左侧输入同名的字段。"
 
 #: Views/Join.Fields.Edit.cshtml
@@ -2016,9 +1872,7 @@ msgstr "要保留的行"
 
 #: Views/Join.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Join.Fields.Edit"
-msgid ""
-"The right input is held in memory, so connect the smaller data set to the "
-"right."
+msgid "The right input is held in memory, so connect the smaller data set to the right."
 msgstr "右侧输入保留在内存中，因此请将较小的数据集连接到右侧。"
 
 #: Views/Join.Fields.Edit.cshtml
@@ -2185,16 +2039,12 @@ msgstr "用于查找行所更新的内容项的行字段。"
 
 #: Views/SaveContentItems.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SaveContentItems.Fields.Edit"
-msgid ""
-"The parts and fields of the items, and the fields of the rows that set them."
-" Lists such as content pickers take ids separated by commas."
+msgid "The parts and fields of the items, and the fields of the rows that set them. Lists such as content pickers take ids separated by commas."
 msgstr "内容项的部件和字段，以及设置这些部件和字段的行字段。内容选择器等列表使用逗号分隔的 ID。"
 
 #: Views/SaveContentItems.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SaveContentItems.Fields.Edit"
-msgid ""
-"The user who publishes the pipeline must be allowed to edit, and to publish,"
-" items of this type."
+msgid "The user who publishes the pipeline must be allowed to edit, and to publish, items of this type."
 msgstr "发布数据管道的用户必须拥有编辑和发布此类型内容项的权限。"
 
 #: Views/SaveContentItems.Fields.Edit.cshtml
@@ -2229,23 +2079,15 @@ msgstr "替换同名文件"
 
 #: Views/SaveToMedia.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SaveToMedia.Fields.Edit"
-msgid ""
-"The folder of the media library the files are saved to; empty for the root. "
-"The user who publishes the pipeline must be allowed to manage its media."
+msgid "The folder of the media library the files are saved to; empty for the root. The user who publishes the pipeline must be allowed to manage its media."
 msgstr "文件保存到的媒体库文件夹；为空时表示根目录。发布数据管道的用户必须拥有管理该媒体库的权限。"
 
 #. Format arguments: {0}: string.Join(", ", Model.RejectedExtensions)
 #: Views/SaveToMedia.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.SaveToMedia.Fields.Edit"
-msgid ""
-"The media library doesn't accept {0} files, so a run fails when it saves "
-"one. Create files in a format it accepts, such as an Excel workbook, or add "
-"the extensions to its allowed file extensions (the "
-"OrchardCore:Media:AllowedFileExtensions setting)."
-msgstr ""
-"媒体库不接受 {0} 文件，因此保存此类文件时运行会失败。请创建其接受的格式，例如 Excel "
-"工作簿，或在允许的文件扩展名中添加这些扩展名（OrchardCore:Media:AllowedFileExtensions 设置）。"
+msgid "The media library doesn't accept {0} files, so a run fails when it saves one. Create files in a format it accepts, such as an Excel workbook, or add the extensions to its allowed file extensions (the OrchardCore:Media:AllowedFileExtensions setting)."
+msgstr "媒体库不接受 {0} 文件，因此保存此类文件时运行会失败。请创建其接受的格式，例如 Excel 工作簿，或在允许的文件扩展名中添加这些扩展名（OrchardCore:Media:AllowedFileExtensions 设置）。"
 
 #: Views/SelectFields.Fields.Design.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SelectFields.Fields.Design"
@@ -2264,10 +2106,7 @@ msgstr "字段"
 
 #: Views/SelectFields.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SelectFields.Fields.Edit"
-msgid ""
-"The fields to keep, in this order, with an optional new name and type. "
-"Without any field, the rows pass unchanged. A value that can't be converted "
-"becomes empty."
+msgid "The fields to keep, in this order, with an optional new name and type. Without any field, the rows pass unchanged. A value that can't be converted becomes empty."
 msgstr "要保留的字段及其顺序，可选择新名称和类型。不选择字段时，行保持不变。无法转换的值将变为空。"
 
 #. Format arguments: {0}: count
@@ -2308,14 +2147,11 @@ msgctxt "OrchardCore.DataPipelines.Views.SendByEmail.Fields.Edit"
 msgid "Maximum size (MB)"
 msgstr "最大大小 (MB)"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"; {3}: SendByEmailStep.FileNamesPlaceholder
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"; {3}: SendByEmailStep.FileNamesPlaceholder
 #: Views/SendByEmail.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.SendByEmail.Fields.Edit"
-msgid ""
-"Placeholders of the subject and the body: {0}, {1}, {2}, and {3}, the names "
-"of the attached files."
+msgid "Placeholders of the subject and the body: {0}, {1}, {2}, and {3}, the names of the attached files."
 msgstr "主题和正文的占位符：{0}、{1}、{2} 和 {3}，分别表示附件文件名。"
 
 #: Views/SendByEmail.Fields.Edit.cshtml
@@ -2335,9 +2171,7 @@ msgstr "正文是 HTML"
 
 #: Views/SendByEmail.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendByEmail.Fields.Edit"
-msgid ""
-"The step fails when the attachments weigh more. Most mail servers refuse "
-"emails larger than 10 to 25 MB."
+msgid "The step fails when the attachments weigh more. Most mail servers refuse emails larger than 10 to 25 MB."
 msgstr "附件超过此大小时，步骤会失败。大多数邮件服务器拒绝大于 10 到 25 MB 的电子邮件。"
 
 #: Views/SendByEmail.Fields.Edit.cshtml
@@ -2378,7 +2212,7 @@ msgstr "基本身份验证（用户名和密码）"
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
 msgid "Bearer token"
-msgstr "Bearer token"
+msgstr ""
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
@@ -2387,9 +2221,7 @@ msgstr "正文"
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
-msgid ""
-"Each file is sent in its own request. A response other than 2xx fails the "
-"step."
+msgid "Each file is sent in its own request. A response other than 2xx fails the step."
 msgstr "每个文件会作为单独的请求发送。非 2xx 响应会导致此步骤失败。"
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
@@ -2409,8 +2241,7 @@ msgstr "请求头"
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
-msgid ""
-"Headers are not secret: set the credentials with the authentication below."
+msgid "Headers are not secret: set the credentials with the authentication below."
 msgstr "请求头并非保密信息：请在下方通过身份验证设置凭据。"
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
@@ -2491,7 +2322,7 @@ msgstr "令牌"
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #: Views/SendToWebApi.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SendToWebApi.Fields.Edit"
@@ -2533,9 +2364,7 @@ msgstr "电子邮件主题"
 
 #: Views/ShareDownloadLink.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
-msgid ""
-"How many times each link can be used, by all its recipients together. 0 for "
-"no limit."
+msgid "How many times each link can be used, by all its recipients together. 0 for no limit."
 msgstr "每个链接可供所有收件人合计使用的次数。输入 0 表示不限制。"
 
 #: Views/ShareDownloadLink.Fields.Edit.cshtml
@@ -2548,8 +2377,7 @@ msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
 msgid "Message"
 msgstr "消息"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/ShareDownloadLink.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
@@ -2563,33 +2391,26 @@ msgstr "收件人"
 
 #: Views/ShareDownloadLink.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
-msgid ""
-"The user names or emails of the users of this site the files are shared "
-"with, separated by commas. They receive the link by email, and it works only"
-" for them, once signed in."
+msgid "The user names or emails of the users of this site the files are shared with, separated by commas. They receive the link by email, and it works only for them, once signed in."
 msgstr "与其共享文件的站点用户的用户名或电子邮件地址，以逗号分隔。登录后，用户会收到电子邮件中的链接；链接仅对这些用户有效。"
 
 #: Views/Shared/DataPipelineCalculatedFieldRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
 msgid "Formula"
 msgstr "公式"
 
 #: Views/Shared/DataPipelineCalculatedFieldRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
 msgid "Move up"
 msgstr "上移"
 
 #: Views/Shared/DataPipelineCalculatedFieldRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
 msgid "Name"
 msgstr "名称"
 
 #: Views/Shared/DataPipelineCalculatedFieldRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineCalculatedFieldRow"
 msgid "Remove"
 msgstr "移除"
 
@@ -2614,184 +2435,154 @@ msgid "Remove"
 msgstr "移除"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Choose a value"
 msgstr "选择值"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Comparison"
 msgstr "比较方式"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Field"
 msgstr "字段"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "No"
 msgstr "否"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Remove"
 msgstr "移除"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Second value"
 msgstr "第二个值"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Value"
 msgstr "值"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Values, separated by commas"
 msgstr "以逗号分隔的值"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Write the value as text"
 msgstr "将值写成文本"
 
 #. Format arguments: {0}: "{Parameter:Since}"
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
 #, csharp-format
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Write the value as text, such as {0}"
 msgstr "将值写成文本，例如 {0}"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "Yes"
 msgstr "是"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "and"
 msgstr "并且"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "contains"
 msgstr "包含"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "days"
 msgstr "天"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "doesn't contain"
 msgstr "不包含"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "doesn't equal"
 msgstr "不等于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "ends with"
 msgstr "以…结尾"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "equals"
 msgstr "等于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is between"
 msgstr "介于…之间"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is empty"
 msgstr "为空"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is greater than"
 msgstr "大于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is greater than or equal to"
 msgstr "大于或等于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is in the last"
 msgstr "在最近"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is in the next"
 msgstr "在接下来"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is less than"
 msgstr "小于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is less than or equal to"
 msgstr "小于或等于"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "is one of"
 msgstr "属于以下值之一"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "isn't empty"
 msgstr "不为空"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "isn't one of"
 msgstr "不属于以下值之一"
 
 #: Views/Shared/DataPipelineDataSourceFilterRow.cshtml
-msgctxt ""
-"OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
+msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineDataSourceFilterRow"
 msgid "starts with"
 msgstr "以…开头"
 
@@ -3068,9 +2859,7 @@ msgstr "<strong>这里没有内容！</strong>尚未共享任何内容。"
 
 #: Views/SharedLinksAdmin/Index.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.SharedLinksAdmin.Index"
-msgid ""
-"A link works only for its recipients, once signed in. A link is deleted a "
-"day after it stops working."
+msgid "A link works only for its recipients, once signed in. A link is deleted a day after it stops working."
 msgstr "链接仅对登录后的收件人有效。链接失效一天后会被删除。"
 
 #: Views/SharedLinksAdmin/Index.cshtml
@@ -3167,8 +2956,7 @@ msgctxt "OrchardCore.DataPipelines.Views.SharedLinksAdmin.Index"
 msgid "Stop the link to '{0}' from working?"
 msgstr "停止指向“{0}”的链接？"
 
-#. Format arguments: {0}: link.ExpiresUtc.ToString("g",
-#. System.Globalization.CultureInfo.CurrentCulture)
+#. Format arguments: {0}: link.ExpiresUtc.ToString("g", System.Globalization.CultureInfo.CurrentCulture)
 #: Views/SharedLinksAdmin/Index.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.SharedLinksAdmin.Index"
@@ -3227,9 +3015,7 @@ msgstr "排序依据"
 
 #: Views/Sort.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Sort.Fields.Edit"
-msgid ""
-"The most significant field first. Sorting holds every row in memory before "
-"writing the first one."
+msgid "The most significant field first. Sorting holds every row in memory before writing the first one."
 msgstr "最重要的字段排在最前面。排序会先将所有行保留在内存中，再写出第一行。"
 
 #: Views/Union.Fields.Design.cshtml
@@ -3239,10 +3025,7 @@ msgstr "追加各输入端的行"
 
 #: Views/Union.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Union.Fields.Edit"
-msgid ""
-"Connect the outputs of several steps to the input of this step: their rows "
-"are appended one after the other. Fields are matched by name; a field some "
-"rows don't have is empty in them."
+msgid "Connect the outputs of several steps to the input of this step: their rows are appended one after the other. Fields are matched by name; a field some rows don't have is empty in them."
 msgstr "将多个步骤的输出连接到此步骤的输入端：这些行会依次追加。字段按名称匹配；某些行中不存在的字段在这些行中为空。"
 
 #: Views/ZipFiles.Fields.Edit.cshtml
@@ -3250,8 +3033,7 @@ msgctxt "OrchardCore.DataPipelines.Views.ZipFiles.Fields.Edit"
 msgid "Archive name"
 msgstr "存档名称"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/ZipFiles.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.ZipFiles.Fields.Edit"
@@ -3565,3 +3347,4 @@ msgstr "用户角色"
 msgctxt "OrchardCore.DataSources.Users.UsersDataSource"
 msgid "Users"
 msgstr "用户"
+
