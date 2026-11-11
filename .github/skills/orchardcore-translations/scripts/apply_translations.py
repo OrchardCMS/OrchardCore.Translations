@@ -260,6 +260,8 @@ def apply(manifest_path, responses, check=False, localization_root=None, remove_
                     dir=path.parent, prefix=f".{path.name}.", delete=False,
                 ) as stream:
                     temporary = Path(stream.name)
+                    # Match Crowdin's PO export, which never wraps long strings.
+                    state["po"].wrapwidth = 0
                     stream.write(str(state["po"]))
                 if path.exists():
                     temporary.chmod(stat.S_IMODE(path.stat().st_mode))

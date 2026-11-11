@@ -304,7 +304,9 @@ values**. Changed translator notes or flags block stale imports and require
 regenerating prompts. It preserves existing translations, flags, comments and
 headers, including a reviewer's edits made after prompt generation. It reports skipped
 populated values explicitly. Missing entries are appended; a missing PO file is
-created from its POT with the target culture and plural rule.
+created from its POT with the target culture and plural rule. Changed catalogs are
+written without line wrapping, matching Crowdin's PO export, so Crowdin syncs do
+not produce formatting-only diffs.
 
 Old entries need no JSON response. With `--remove-obsolete`, the importer removes
 only recorded old entries that are still absent from the current POT or still

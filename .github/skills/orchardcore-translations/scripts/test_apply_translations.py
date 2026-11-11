@@ -51,6 +51,17 @@ class ApplyTranslationsTests(unittest.TestCase):
     def apply(self, *responses, **kwargs):
         return apply(self.output / "manifest.json", list(responses), **kwargs)
 
+    def test_writes_unwrapped_strings_like_crowdin(self):
+        reviewed = "Valeur relue suffisamment longue pour dépasser la largeur par défaut de polib."
+        translated = "Traduction importée suffisamment longue pour dépasser la largeur de 78 caractères."
+        self.catalog([self.entry("Reviewed"), self.entry("New")])
+        target = self.catalog([self.entry("Reviewed", reviewed)], locale="fr")
+        manifest = self.generate()
+        self.apply(self.response(manifest, [translated]))
+        text = target.read_text(encoding="utf-8")
+        self.assertIn(f'msgstr "{reviewed}"', text)
+        self.assertIn(f'msgstr "{translated}"', text)
+
     def test_fills_only_missing_values_preserving_reviewed_and_old_entries(self):
         self.catalog([self.entry("Add"), self.entry("Edit"), self.entry("New")])
         target = self.catalog([
