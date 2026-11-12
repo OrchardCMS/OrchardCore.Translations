@@ -1,20 +1,19 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: orchard-core\n"
-"PO-Revision-Date: 2026-11-03 02:55\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-OrchardCore-Catalog-Schema: 1\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Crowdin-File: /main/Localization/OrchardCore.DataPipelines.pot\n"
-"X-Crowdin-File-ID: 1017\n"
-"X-Crowdin-Language: fr\n"
 "X-Crowdin-Project: orchard-core\n"
 "X-Crowdin-Project-ID: 307044\n"
-"X-OrchardCore-Catalog-Schema: 1\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /main/Localization/OrchardCore.DataPipelines.pot\n"
+"X-Crowdin-File-ID: 1017\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"PO-Revision-Date: 2026-11-12 18:22\n"
 
 #: AdminMenu.cs
 msgctxt "OrchardCore.DataPipelines.AdminMenu"
@@ -384,8 +383,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.ReadMediaFileStep"
 msgid "The user the pipeline runs for may not read the media of the folder '{0}'."
 msgstr "L’utilisateur au nom duquel le pipeline s’exécute n’est pas autorisé à lire les médias du dossier « {0} »."
 
-#. Format arguments: {0}: mapping.Target ?? string.Empty; {1}:
-#. settings.ContentType
+#. Format arguments: {0}: mapping.Target ?? string.Empty; {1}: settings.ContentType
 #: Steps/Contents/SaveContentItemsStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
@@ -402,8 +400,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
 msgid "Choose the field that finds the items to update."
 msgstr "Choisissez le champ permettant de trouver les éléments à mettre à jour."
 
-#. Format arguments: {0}: created; {1}: updated; {2}: settings.ContentType;
-#. {3}: skipped; {4}: failed
+#. Format arguments: {0}: created; {1}: updated; {2}: settings.ContentType; {3}: skipped; {4}: failed
 #: Steps/Contents/SaveContentItemsStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SaveContentItemsStep"
@@ -545,8 +542,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
 msgid "Sent an email without attachments to {0}"
 msgstr "E-mail sans pièce jointe envoyé à {0}"
 
-#. Format arguments: {0}: string.Join(", ", files.Select(file =>
-#. $"'{file.FileName}'")); {1}: recipients
+#. Format arguments: {0}: string.Join(", ", files.Select(file => $"'{file.FileName}'")); {1}: recipients
 #: Steps/Destinations/SendByEmailStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
@@ -560,8 +556,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
 msgid "The email could not be sent: {0}"
 msgstr "Impossible d’envoyer l’e-mail : {0}"
 
-#. Format arguments: {0}: ((double)size / BytesPerMegabyte).ToString("0.##",
-#. CultureInfo.InvariantCulture); {1}: settings.MaxAttachmentSizeMegabytes
+#. Format arguments: {0}: ((double)size / BytesPerMegabyte).ToString("0.##", CultureInfo.InvariantCulture); {1}: settings.MaxAttachmentSizeMegabytes
 #: Steps/Destinations/SendByEmailStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendByEmailStep"
@@ -592,8 +587,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "'{0}' isn't a valid header name."
 msgstr "« {0} » n’est pas un nom d’en-tête valide."
 
-#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}:
-#. DataPipelineRemotePaths.Redact(ex.Message, secret, url.Query)
+#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}: DataPipelineRemotePaths.Redact(ex.Message, secret, url.Query)
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
@@ -642,8 +636,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "Sends each file to a web API, in an HTTP request."
 msgstr "Envoie chaque fichier à une API web dans une requête HTTP."
 
-#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}:
-#. response.StatusCode
+#. Format arguments: {0}: file.FileName; {1}: displayUrl; {2}: response.StatusCode
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
@@ -689,17 +682,14 @@ msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "The value of the '{0}' header can't hold line breaks."
 msgstr "La valeur de l’en-tête « {0} » ne peut pas contenir de saut de ligne."
 
-#. Format arguments: {0}: displayUrl; {1}: response.StatusCode; {2}:
-#. response.ReasonPhrase; {3}: file.FileName; {4}:
-#. DataPipelineRemotePaths.Redact(body, secret)
+#. Format arguments: {0}: displayUrl; {1}: response.StatusCode; {2}: response.ReasonPhrase; {3}: file.FileName; {4}: DataPipelineRemotePaths.Redact(body, secret)
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
 msgid "The web API at {0} answered {1} ({2}) to '{3}': {4}"
 msgstr "L’API web à l’adresse {0} a répondu {1} ({2}) au fichier « {3} » : {4}"
 
-#. Format arguments: {0}: displayUrl; {1}: timeout.TotalSeconds; {2}:
-#. file.FileName
+#. Format arguments: {0}: displayUrl; {1}: timeout.TotalSeconds; {2}: file.FileName
 #: Steps/Destinations/SendToWebApiStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.SendToWebApiStep"
@@ -723,9 +713,7 @@ msgctxt "OrchardCore.DataPipelines.Steps.ShareDownloadLinkStep"
 msgid "Share a download link"
 msgstr "Partager un lien de téléchargement"
 
-#. Format arguments: {0}: file.FileName; {1}: string.Join(", ",
-#. result.Link.RecipientNames); {2}: result.Link.ExpiresUtc.ToString("u",
-#. CultureInfo.InvariantCulture)
+#. Format arguments: {0}: file.FileName; {1}: string.Join(", ", result.Link.RecipientNames); {2}: result.Link.ExpiresUtc.ToString("u", CultureInfo.InvariantCulture)
 #: Steps/Destinations/ShareDownloadLinkStep.cs
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Steps.ShareDownloadLinkStep"
@@ -1214,6 +1202,11 @@ msgstr "Ajouter une valeur"
 
 #: Views/Aggregate.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
+msgid "Deselect all"
+msgstr "Tout désélectionner"
+
+#: Views/Aggregate.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
 msgid "Group by"
 msgstr "Regrouper par"
 
@@ -1221,6 +1214,11 @@ msgstr "Regrouper par"
 msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
 msgid "No grouping"
 msgstr "Aucun regroupement"
+
+#: Views/Aggregate.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
+msgid "Select all"
+msgstr "Tout sélectionner"
 
 #: Views/Aggregate.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
@@ -1313,6 +1311,11 @@ msgstr "Convertir"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
+msgid "Deselect all"
+msgstr "Tout désélectionner"
+
+#: Views/ConvertTimeZone.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
 msgid "Every date and time"
 msgstr "Chaque date et heure"
 
@@ -1340,6 +1343,11 @@ msgstr "Nom"
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
 msgid "Orchard Core stores dates in UTC: convert them from UTC to show local dates and times, and convert local dates and times, such as the ones of a file, to UTC to save them."
 msgstr "Orchard Core stocke les dates en UTC : convertissez-les depuis UTC pour afficher les dates et heures locales, et convertissez les dates et heures locales, comme celles d'un fichier, en UTC pour les enregistrer."
+
+#: Views/ConvertTimeZone.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
+msgid "Select all"
+msgstr "Tout sélectionner"
 
 #: Views/ConvertTimeZone.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
@@ -1406,8 +1414,7 @@ msgctxt "OrchardCore.DataPipelines.Views.CreateFile.Fields.Edit"
 msgid "Start with a row of column names"
 msgstr "Commencer par une ligne de noms de colonnes"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/CreateFile.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.CreateFile.Fields.Edit"
@@ -1516,6 +1523,11 @@ msgstr "Jeu de données"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
+msgid "Deselect all"
+msgstr "Tout désélectionner"
+
+#: Views/DataSource.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
 msgid "Each successful run keeps the largest value of the field it read, and the next run reads only the rows with a larger value, such as the items modified since the last run. Use a field that grows whenever a row is added or changed. A preview reads every row."
 msgstr "Chaque exécution réussie conserve la valeur maximale du champ lu ; l'exécution suivante ne lit que les lignes dont la valeur est supérieure, par exemple les éléments modifiés depuis la dernière exécution. Utilisez un champ qui augmente chaque fois qu'une ligne est ajoutée ou modifiée. Un aperçu lit toutes les lignes."
 
@@ -1568,6 +1580,11 @@ msgstr "Lire uniquement les nouvelles lignes"
 
 #: Views/DataSource.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
+msgid "Select all"
+msgstr "Tout sélectionner"
+
+#: Views/DataSource.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
 msgid "The data is read with the access of the user who publishes the pipeline. Choosing another data set clears the fields and the filters."
 msgstr "Les données sont lues avec les droits de l'utilisateur qui publie le pipeline. Le choix d'un autre jeu de données efface les champs et les filtres."
 
@@ -1605,8 +1622,18 @@ msgstr "Comparer"
 
 #: Views/Distinct.Fields.Edit.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
+msgid "Deselect all"
+msgstr "Tout désélectionner"
+
+#: Views/Distinct.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
 msgid "Every field"
 msgstr "Tous les champs"
+
+#: Views/Distinct.Fields.Edit.cshtml
+msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
+msgid "Select all"
+msgstr "Tout sélectionner"
 
 #: Views/Filter.Fields.Design.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Filter.Fields.Design"
@@ -2170,8 +2197,7 @@ msgctxt "OrchardCore.DataPipelines.Views.SendByEmail.Fields.Edit"
 msgid "Maximum size (MB)"
 msgstr "Taille maximale (Mo)"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"; {3}: SendByEmailStep.FileNamesPlaceholder
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"; {3}: SendByEmailStep.FileNamesPlaceholder
 #: Views/SendByEmail.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.SendByEmail.Fields.Edit"
@@ -2402,8 +2428,7 @@ msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
 msgid "Message"
 msgstr "Message"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/ShareDownloadLink.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.ShareDownloadLink.Fields.Edit"
@@ -2847,6 +2872,7 @@ msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineSortRow"
 msgid "Move up"
 msgstr "Déplacer vers le haut"
 
+#. Sort direction: ascending or descending.
 #: Views/Shared/DataPipelineSortRow.cshtml
 msgctxt "OrchardCore.DataPipelines.Views.Shared.DataPipelineSortRow"
 msgid "Order"
@@ -2984,8 +3010,7 @@ msgctxt "OrchardCore.DataPipelines.Views.SharedLinksAdmin.Index"
 msgid "Stop the link to '{0}' from working?"
 msgstr "Désactiver le lien vers « {0} » ?"
 
-#. Format arguments: {0}: link.ExpiresUtc.ToString("g",
-#. System.Globalization.CultureInfo.CurrentCulture)
+#. Format arguments: {0}: link.ExpiresUtc.ToString("g", System.Globalization.CultureInfo.CurrentCulture)
 #: Views/SharedLinksAdmin/Index.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.SharedLinksAdmin.Index"
@@ -3063,8 +3088,7 @@ msgctxt "OrchardCore.DataPipelines.Views.ZipFiles.Fields.Edit"
 msgid "Archive name"
 msgstr "Nom de l'archive"
 
-#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}:
-#. "{Date:format}"
+#. Format arguments: {0}: "{PipelineName}"; {1}: "{RunId}"; {2}: "{Date:format}"
 #: Views/ZipFiles.Fields.Edit.cshtml
 #, csharp-format
 msgctxt "OrchardCore.DataPipelines.Views.ZipFiles.Fields.Edit"
@@ -3369,42 +3393,3 @@ msgctxt "OrchardCore.DataSources.Users.UsersDataSource"
 msgid "Users"
 msgstr "Utilisateurs"
 
-#: Views/Aggregate.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
-msgid "Deselect all"
-msgstr "Tout désélectionner"
-
-#: Views/Aggregate.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.Aggregate.Fields.Edit"
-msgid "Select all"
-msgstr "Tout sélectionner"
-
-#: Views/ConvertTimeZone.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
-msgid "Deselect all"
-msgstr "Tout désélectionner"
-
-#: Views/ConvertTimeZone.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.ConvertTimeZone.Fields.Edit"
-msgid "Select all"
-msgstr "Tout sélectionner"
-
-#: Views/DataSource.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid "Deselect all"
-msgstr "Tout désélectionner"
-
-#: Views/DataSource.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.DataSource.Fields.Edit"
-msgid "Select all"
-msgstr "Tout sélectionner"
-
-#: Views/Distinct.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
-msgid "Deselect all"
-msgstr "Tout désélectionner"
-
-#: Views/Distinct.Fields.Edit.cshtml
-msgctxt "OrchardCore.DataPipelines.Views.Distinct.Fields.Edit"
-msgid "Select all"
-msgstr "Tout sélectionner"
