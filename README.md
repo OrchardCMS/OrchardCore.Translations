@@ -13,12 +13,62 @@ Crowdin Translations:
 
 ## Translation editor
 
-The [translation editor](editor/README.md) is a static web app, published to GitHub
-Pages from this repository, that shows the translation status of every language and
-edits the `.po` files section by section: untranslated strings, plural forms, and
-entries that are missing from or no longer in the templates. It can write to a local
-clone directly or export a patch to apply on a branch. Run it locally with
-`dotnet run editor/site.cs -- serve`.
+The translation editor is a web app for translating Orchard Core directly in this
+repository:
+
+**<https://orchardcms.github.io/OrchardCore.Translations/>**
+
+[![The translation editor's dashboard](editor/docs/dashboard.png)](editor/README.md)
+
+It shows the translation status of every language and edits the `.po` files section
+by section: untranslated strings, plural forms, strings a file is missing, and
+strings that are no longer in the templates. Only the lines you change are rewritten.
+
+To contribute translations with it:
+
+1. Open the editor, pick your language, then a section, and translate.
+2. Move your changes into a clone of this repository, in one of two ways:
+   - **Local folder** (Chrome or Edge): open your clone from the editor and save;
+     the `.po` files are edited in place.
+   - **Patch** (any browser): download a patch from the editor's *Changes* page and
+     apply it with `git apply --3way`.
+3. Commit on a branch and open a pull request. The [owners of the language](#language-owners)
+   are asked to review it.
+
+The [editor guide](editor/README.md) explains each step with screenshots, how to run
+the editor locally (`dotnet run editor/site.cs -- serve`), and how it is tested and
+deployed.
+
+## Language owners
+
+A language owner reviews the translations of one language. GitHub automatically
+requests their review on every pull request that changes files in
+`Localization/<culture>/`, including the pull requests opened by Crowdin. Owners are
+listed, one line per language, in [`.github/CODEOWNERS`](.github/CODEOWNERS). A
+language can have several owners, and a language without a line has no automatic
+reviewer.
+
+### Becoming a language owner
+
+1. Open a pull request that adds your GitHub username to the line of your language in
+   [`.github/CODEOWNERS`](.github/CODEOWNERS), or adds a line if the language has
+   none, keeping the lines sorted by culture:
+
+   ```text
+   /Localization/it/ @your-github-username
+   ```
+
+2. In the description, say which language you want to own and mention your previous
+   translation contributions, if any.
+3. A maintainer reviews the request. GitHub only accepts code owners who have write
+   access to the repository, so the maintainer grants it to you when merging.
+
+### Stepping down
+
+Open a pull request that removes your username from
+[`.github/CODEOWNERS`](.github/CODEOWNERS), or ask a maintainer in an issue. When you
+are the only owner of a language, remove its whole line. Maintainers may also remove
+an owner who no longer responds to review requests.
 
 ## Catalogs, cultures, and packages
 

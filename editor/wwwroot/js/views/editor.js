@@ -118,7 +118,7 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
   const filterBar = h('div', { class: 'filters', role: 'tablist' });
   const list = h('div', { class: 'rows' });
   const bulkBar = h('span', { class: 'bulk' });
-  const search = h('input', { type: 'search', placeholder: 'Search source, translation or context', oninput: () => renderList() });
+  const search = h('input', { type: 'search', placeholder: 'Search strings', title: 'Search in source text, translations and contexts', oninput: () => renderList() });
   let filter = 'all';
 
   const matches = {
