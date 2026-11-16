@@ -11,6 +11,15 @@ Crowdin Translations:
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/orchard-core/localized.svg)](https://crowdin.com/project/orchard-core)
 
+## Translation editor
+
+The [translation editor](editor/README.md) is a static web app, published to GitHub
+Pages from this repository, that shows the translation status of every language and
+edits the `.po` files section by section: untranslated strings, plural forms, and
+entries that are missing from or no longer in the templates. It can write to a local
+clone directly or export a patch to apply on a branch. Run it locally with
+`dotnet run editor/site.cs -- serve`.
+
 ## Catalogs, cultures, and packages
 
 `Localization/*.pot` contains the English source catalogs copied from Orchard

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Translation editor tests</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <main>
+    <div class="page-head"><h1>Translation editor tests</h1></div>
+    <p class="muted" id="summary">Running against the files served with this page…</p>
+    <div id="results"></div>
+    <p><a href="./">Back to the editor</a></p>
+  </main>
+  <script type="module">
+    import { run } from './tests/harness.js';
+    import './tests/core.test.js';
+
+    const summary = document.getElementById('summary');
+    const results = document.getElementById('results');
+    try {
+      const index = await (await fetch('data/index.json', { cache: 'no-cache' })).json();
+      const env = {
+        index,
+        templates: index.templates.map((t) => t.name),
+        cultures: Object.fromEntries(index.cultures.map((c) => [c.code, Object.keys(c.files)])),
+        async read(path) {
+          const response = await fetch(path, { cache: 'no-cache' });
+          return response.ok ? response.text() : null;
+        },
+      };
+      const all = await run(env, (r) => {
+        const line = document.createElement('div');
+        line.className = `test ${r.ok ? 'test-ok' : 'test-fail'}`;
+        line.textContent = `${r.name}${r.note ? ` (${r.note})` : ''} [${r.ms} ms]${r.ok ? '' : `\n      ${r.error?.message ?? r.error}`}`;
+        results.append(line);
+      });
+      const failed = all.filter((r) => !r.ok).length;
+      summary.textContent = `${all.length - failed} passed, ${failed} failed`;
+      document.title = failed ? `FAILED (${failed})` : 'All tests passed';
+      window.testResults = { passed: all.length - failed, failed };
+    } catch (e) {
+      summary.textContent = `Could not start the tests: ${e.message}`;
+      window.testResults = { passed: 0, failed: 1, error: e.message };
+    }
+  </script>
+</body>
+</html>
