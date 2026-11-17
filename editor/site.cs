@@ -9,7 +9,9 @@
 //
 //   dotnet run editor/site.cs -- build --out _site
 //       Writes the static site that GitHub Pages hosts: the editor, a copy of the
-//       .pot/.po files and data/index.json.
+//       .pot/.po files and data/index.json. A relative --out is resolved from the
+//       repository root, because `dotnet run <file>` starts the app in the file's
+//       folder, not in the folder the command was typed in.
 //
 // This program only counts entries for the dashboard. Everything that edits .po files
 // lives in wwwroot/js; a test compares both readers so they cannot drift apart.
@@ -44,7 +46,7 @@ switch (command)
 {
     case "build":
     {
-        var output = Path.GetFullPath(Option("--out") ?? "_site");
+        var output = Path.GetFullPath(Option("--out") ?? "_site", repoRoot);
         var marker = Path.Combine(output, ".po-editor-site");
         if (Directory.Exists(output) && Directory.EnumerateFileSystemEntries(output).Any())
         {

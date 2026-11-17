@@ -233,7 +233,7 @@ written back byte for byte, that edits only touch the expected lines, and that t
 statistics computed by `site.cs` match the editor's own.
 
 - In the browser: <http://localhost:5080/tests.html>
-- From a terminal (needs Node, no packages):
+- From a terminal, at the root of the repository (needs Node, no packages):
 
   ```bash
   dotnet run editor/site.cs -- build --out _site
