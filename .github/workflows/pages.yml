@@ -1,0 +1,67 @@
+# Builds, tests and publishes the translation editor (editor/) to GitHub Pages.
+# The published site contains a copy of the catalogs, so it is rebuilt whenever
+# they change. Pull requests only build and test.
+
+name: Translation editor
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Localization/**'
+      - 'editor/**'
+      - 'cultures.json'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    paths:
+      - 'Localization/**'
+      - 'editor/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: translation-editor-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build the site
+        run: dotnet run editor/site.cs -- build --out _site
+
+      # Uses the runner's preinstalled Node; the tests have no npm dependencies.
+      - name: Test the editor against every catalog
+        run: node editor/wwwroot/tests/run-node.mjs --index _site/data/index.json
+
+      - name: Upload the site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
