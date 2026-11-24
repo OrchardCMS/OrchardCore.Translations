@@ -3,6 +3,8 @@
 import { h, replace, fmt, count, percent, progressBar } from '../dom.js';
 import { drafts } from '../drafts.js';
 import { bulkCulture } from '../workspace.js';
+import { pluralRuleFor } from '../plural-rules.js';
+import { sameRule, describeRule } from '../plurals.js';
 
 let needsWorkOnly = false;
 
@@ -83,6 +85,27 @@ export async function languageView(app, root, { culture }, isCurrent) {
     }, 'Match template order'),
   ];
 
+  // The editor's own plural rule for the language, compared with the rule of its files.
+  const rule = pluralRuleFor(culture);
+  const defaults = files.size ? await app.cultureDefaults(culture) : null;
+  if (!isCurrent()) return;
+  let pluralNotice = null;
+  if (rule) {
+    const updateRule = h('button', {
+      class: 'btn',
+      title: `Queue updating every file of ${name} to the plural rule “${rule}”`,
+      onclick: () => bulk('plurals', (r) => `Queued updating the plural rule of ${count(r.files, 'file')}. Forms the new rule adds are left empty.`),
+    }, 'Update plural rule');
+    buttons.push(updateRule);
+    const fileRule = defaults?.siblingPluralForms;
+    if (fileRule && !sameRule(fileRule, rule)) {
+      pluralNotice = h('div', { class: 'notice' },
+        `The files of ${name} use the plural rule “${fileRule}”. The current rule (Unicode CLDR, as in Orchard Core) is “${rule}” (${describeRule(rule)}). `,
+        'The files keep working with their rule. ',
+        h('strong', {}, 'Update plural rule'), ' rewrites their Plural-Forms header and moves the translations to the new forms; forms the new rule adds are left empty.');
+    }
+  }
+
   renderBody();
   replace(root,
     h('div', { class: 'page-head' },
@@ -93,6 +116,7 @@ export async function languageView(app, root, { culture }, isCurrent) {
         h('span', { class: 'chip chip-missing' }, `${fmt(totals.missing)} missing`),
         h('span', { class: 'chip chip-deprecated' }, `${fmt(totals.deprecated)} deprecated`))),
     h('div', { class: 'toolbar' }, filter, h('label', { class: 'check' }, onlyWork, ' Needs work only'), h('span', { class: 'spacer' }), buttons),
+    pluralNotice,
     status,
     h('table', { class: 'grid' },
       h('thead', {}, h('tr', {},

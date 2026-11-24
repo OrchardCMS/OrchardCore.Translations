@@ -7,6 +7,7 @@
 
 import { h, replace } from './dom.js';
 import { parsePo, headerFields } from './po.js';
+import { pluralRuleFor } from './plural-rules.js';
 import { HostedSource, FolderSource, folderAccessSupported, rememberFolder, rememberedFolder } from './sources.js';
 import { drafts } from './drafts.js';
 import { dashboardView } from './views/dashboard.js';
@@ -67,16 +68,22 @@ export const app = {
     return this.pots.get(name);
   },
 
-  /** Plural rule and language for a file that has to be created, from a sibling file. */
+  /**
+   * Plural rule and language for a file that has to be created. The plural rule is the
+   * editor's own (plural-rules.js); a sibling file supplies the language, and the rule
+   * of a culture the editor has no rule for.
+   */
   async cultureDefaults(code) {
     if (!this.defaults.has(code)) {
-      const result = { pluralForms: 'nplurals=2; plural=(n != 1);', language: code.replace(/-/g, '_') };
+      const known = pluralRuleFor(code);
+      const result = { pluralForms: known ?? 'nplurals=2; plural=(n != 1);', language: code.replace(/-/g, '_') };
       const names = [...(this.culture(code)?.files.keys() ?? [])];
       const sibling = names.find((n) => this.templates.has(n)) ?? names[0];
       const text = sibling ? await this.source.readPo(code, sibling) : null;
       if (text) {
         const fields = headerFields(parsePo(text));
-        result.pluralForms = fields.get('Plural-Forms') || result.pluralForms;
+        result.siblingPluralForms = fields.get('Plural-Forms') ?? null;
+        if (!known) result.pluralForms = result.siblingPluralForms || result.pluralForms;
         result.language = fields.get('Language') || result.language;
       }
       this.defaults.set(code, result);

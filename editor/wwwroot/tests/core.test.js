@@ -3,8 +3,9 @@
 
 import { test, assert, equal, deepEqual, throws } from './harness.js';
 import { parsePo, serializePo, escapePo, unescapePo, blockKey, entryKey, headerFields, pluralCount, entryBlocks } from '../js/po.js';
-import { buildRows, computeStats, applyOps, isOrdered, statsArray } from '../js/catalog.js';
-import { parsePluralForms, describeForms, parseRange, formatNumbers } from '../js/plurals.js';
+import { buildRows, computeStats, applyOps, isOrdered, statsArray, usesPluralRule, applyPluralRule } from '../js/catalog.js';
+import { parsePluralForms, describeForms, parseRange, formatNumbers, sameRule, formMapping } from '../js/plurals.js';
+import { pluralRules, pluralRuleFor } from '../js/plural-rules.js';
 import { diffLines, filePatch, gitBlobSha, diffStat, textHunks } from '../js/diff.js';
 import { createZip } from '../js/zip.js';
 import { splitLines } from '../js/po.js';
@@ -311,6 +312,87 @@ test('plural rules are evaluated without eval', async (env) => {
     for (let n = 0; n <= 1000; n++) assert(rule.select(n) >= 0, `${culture}: n=${n} selects no form`);
   }
   return `${seen.size} distinct rules in the repository`;
+});
+
+test('plural rule database follows CLDR with Orchard Core form indexes', async (env) => {
+  for (const [code, rule] of pluralRules()) {
+    const forms = parsePluralForms(rule);
+    const used = new Set();
+    for (let n = 0; n <= 3000; n++) used.add(forms.select(n));
+    for (const n of [100000, 1000000, 2000000, 1100000]) used.add(forms.select(n));
+    assert(!used.has(-1), `${code}: a number selects no form`);
+    equal(used.size, forms.nplurals, `${code}: every form is used`);
+  }
+  const select = (code, numbers) => numbers.map(parsePluralForms(pluralRuleFor(code)).select);
+  deepEqual(select('fr', [0, 1, 2, 1000000, 2000000, 1000001]), [0, 0, 1, 2, 2, 1]);
+  deepEqual(select('es', [0, 1, 2, 1000000]), [1, 0, 1, 2]);
+  deepEqual(select('he', [1, 2, 3]), [0, 2, 1]);
+  deepEqual(select('sl', [1, 2, 3, 5, 101]), [1, 2, 3, 0, 1]);
+  deepEqual(select('vi', [0, 1, 2]), [0, 0, 1]);
+  equal(pluralRuleFor('sr-cyrl-RS'), pluralRuleFor('sr'));
+  equal(pluralRuleFor('zh_Hans'), 'nplurals=1; plural=0;');
+  equal(pluralRuleFor('pt-BR'), pluralRuleFor('pt'));
+  assert(pluralRuleFor('pt-PT') !== pluralRuleFor('pt'), 'pt-PT has its own rule');
+  equal(pluralRuleFor('xx'), null);
+  // Rules written differently but meaning the same are not reported as outdated.
+  assert(sameRule('nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);', pluralRuleFor('ar')));
+  assert(!sameRule('nplurals=2; plural=(n > 1);', pluralRuleFor('fr')));
+  const outdated = [];
+  for (const [culture, names] of Object.entries(env.cultures)) {
+    const rule = pluralRuleFor(culture);
+    if (!names.length || !rule) continue;
+    if (!usesPluralRule(parsePo(await env.read(poPath(culture, names[0]))), rule)) outdated.push(culture);
+  }
+  return `outdated in the repository: ${outdated.join(', ') || 'none'}`;
+});
+
+test('form mapping keeps translations and leaves added forms empty', () => {
+  const map = (from, to) => formMapping(parsePluralForms(from), parsePluralForms(to));
+  deepEqual(map('nplurals=2; plural=(n > 1);', pluralRuleFor('fr')), [0, 1, -1], 'fr: "many" is new');
+  deepEqual(map('nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;', pluralRuleFor('cs')), [0, 1, 3], 'cs: unused form dropped');
+  deepEqual(map('nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;', pluralRuleFor('sl')), [3, 0, 1, 2], 'sl: forms reordered');
+  deepEqual(map('nplurals=3; plural=(n==1 ? 0 : n==2 ? 1 : 2);', pluralRuleFor('he')), [0, 2, 1], 'he: "two" moved last');
+  deepEqual(map('nplurals=1; plural=0;', pluralRuleFor('vi')), [0, -1], 'vi: "other" is new');
+  deepEqual(map(pluralRuleFor('ru'), pluralRuleFor('ru')), [0, 1, 2]);
+});
+
+test('updating the plural rule of a file only touches its plural lines', async (env) => {
+  const name = 'OrchardCore.Admin';
+  const path = poPath('fr', name);
+  const text = await env.read(path);
+  const template = await pot(env, name);
+  const before = parsePo(text);
+  if (usesPluralRule(before, pluralRuleFor('fr'))) return 'skipped (already updated)';
+  const plurals = entryBlocks(before).filter((b) => b.idPlural !== null);
+  assert(plurals.length > 0, 'the file has plural entries');
+  const next = applyOps({ pot: template, poText: text, ops: { entries: {}, plurals: pluralRuleFor('fr') } });
+  const after = parsePo(next);
+  equal(serializePo(after), next);
+  equal(headerFields(after).get('Plural-Forms'), pluralRuleFor('fr'));
+  equal(pluralCount(after), 3);
+  for (const block of plurals) {
+    const updated = after.blocks.find((b) => blockKey(b) === blockKey(block));
+    deepEqual(updated.str, [block.str[0], block.str[1], ''], `forms of "${block.id}"`);
+  }
+  const { added, removed } = changes(text, next);
+  const eol = text.includes('\r\n') ? '\r\n' : '\n';
+  deepEqual(removed, [`"Plural-Forms: nplurals=2; plural=(n > 1);\\n"${eol}`]);
+  equal(added.length, 1 + plurals.length);
+  deepEqual(added.slice(1), plurals.map(() => `msgstr[2] ""${eol}`));
+  equal(applyOps({ pot: template, poText: next, ops: { entries: {}, plurals: pluralRuleFor('fr') } }), next, 'updating twice changes nothing');
+  // An edit queued with the update is applied to the new forms.
+  const key = blockKey(plurals[0]);
+  const edited = applyOps({ pot: template, poText: text, ops: { entries: { [key]: { t: 'set', v: ['a', 'b', 'c'], b: null } }, plurals: pluralRuleFor('fr') } });
+  deepEqual(parsePo(edited).blocks.find((b) => blockKey(b) === key).str, ['a', 'b', 'c']);
+  patches.push(await filePatch(path, text, next));
+  return `${plurals.length} plural entries`;
+});
+
+test('a header without Plural-Forms gets one', () => {
+  const text = 'msgid ""\nmsgstr ""\n"Language: vi\\n"\n\nmsgid "file"\nmsgid_plural "files"\nmsgstr[0] "tệp"\n';
+  const file = parsePo(text);
+  assert(applyPluralRule(file, pluralRuleFor('vi')));
+  equal(serializePo(file), 'msgid ""\nmsgstr ""\n"Language: vi\\n"\n"Plural-Forms: nplurals=2; plural=(n > 1);\\n"\n\nmsgid "file"\nmsgid_plural "files"\nmsgstr[0] "tệp"\nmsgstr[1] ""\n');
 });
 
 test('unified diff and git blob ids', async () => {
