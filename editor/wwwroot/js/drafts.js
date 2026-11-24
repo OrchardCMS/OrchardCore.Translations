@@ -45,7 +45,7 @@ const notify = () => listeners.forEach((fn) => fn());
 export const drafts = {
   get(culture, name) {
     const ops = read(storageKey(culture, name));
-    return { entries: ops?.entries ?? {}, ...(ops?.reorder ? { reorder: true } : {}) };
+    return { entries: ops?.entries ?? {}, ...(ops?.reorder ? { reorder: true } : {}), ...(ops?.plurals ? { plurals: ops.plurals } : {}) };
   },
   set(culture, name, ops) {
     write(storageKey(culture, name), isEmptyOps(ops) ? null : ops);

@@ -171,6 +171,33 @@ export function headerFields(file) {
   return fields;
 }
 
+/**
+ * Sets a header field ("Plural-Forms", …) of a file, rewriting only the line that
+ * holds it, or appending a line at the end of the header when it has none.
+ */
+export function setHeaderField(file, name, value) {
+  const header = headerBlock(file);
+  if (!header) return false;
+  const text = `"${escapePo(`${name}: ${value}\n`)}"`;
+  for (let i = header.strFrom + 1; i < header.strTo; i++) {
+    const m = CONTINUATION.exec(header.lines[i].text);
+    if (!m) continue;
+    const content = unescapePo(m[1]);
+    const colon = content.indexOf(':');
+    if (colon > 0 && content.slice(0, colon).trim() === name) {
+      if (header.lines[i].text === text) return false;
+      header.lines[i] = { text, eol: header.lines[i].eol };
+      analyze(header);
+      return true;
+    }
+  }
+  const last = header.lines[header.strTo - 1];
+  header.lines.splice(header.strTo, 0, { text, eol: last.eol });
+  if (!last.eol) last.eol = file.eol;
+  analyze(header);
+  return true;
+}
+
 /** Number of plural forms the file is written with. */
 export function pluralCount(file) {
   const forms = headerFields(file).get('Plural-Forms');

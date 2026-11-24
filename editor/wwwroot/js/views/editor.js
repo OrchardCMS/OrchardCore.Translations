@@ -2,7 +2,7 @@
 
 import { h, replace, fmt, count as countOf, visibleText } from '../dom.js';
 import { drafts } from '../drafts.js';
-import { describeForms, parseRange } from '../plurals.js';
+import { describeForms, describeRule, parseRange } from '../plurals.js';
 import {
   computeStats, rowStatus, isChanged, isConflict, currentValues, baseValues, formCount,
   sameValues, pruneOps, isEmptyOps,
@@ -58,7 +58,7 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
   const cultureName = app.cultureName(culture);
   app.setCrumbs({ text: cultureName, href: `#/${encodeURIComponent(culture)}` }, { text: name });
 
-  const file = await loadFile(app, culture, name);
+  const file = await loadFile(app, culture, name, drafts.get(culture, name));
   if (!isCurrent()) return;
   if (!file.pot && !file.po) {
     replace(root, h('div', { class: 'notice' }, `There is no “${name}” section. `, h('a', { href: `#/${encodeURIComponent(culture)}` }, `Back to ${cultureName}`)));
@@ -68,6 +68,7 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
   const { rows, nplurals } = file;
   let ops = pruneOps(drafts.get(culture, name), rows, nplurals);
   if (ops.reorder && file.ordered) delete ops.reorder;
+  if (ops.plurals && !file.upgraded) delete ops.plurals;
 
   // ---- Saving drafts ----
   let saveTimer = null;
@@ -133,11 +134,12 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
   function renderCounters() {
     const stats = computeStats(rows, ops.entries, nplurals);
     const todo = stats.missing + stats.empty + stats.partial;
+    const structural = (ops.reorder ? 1 : 0) + (ops.plurals ? 1 : 0);
     replace(chips,
       stats.total ? h('span', { class: 'chip chip-translated' }, `${fmt(stats.translated)} of ${fmt(stats.total)} translated`) : null,
       todo ? h('span', { class: 'chip chip-untranslated' }, `${fmt(todo)} untranslated`) : null,
       stats.deprecated ? h('span', { class: 'chip chip-deprecated' }, `${fmt(stats.deprecated)} deprecated`) : null,
-      stats.changed || ops.reorder ? h('a', { class: 'chip chip-changed', href: '#/changes' }, countOf(stats.changed + (ops.reorder ? 1 : 0), 'pending change')) : null);
+      stats.changed || structural ? h('a', { class: 'chip chip-changed', href: '#/changes' }, countOf(stats.changed + structural, 'pending change')) : null);
     replace(filterBar, FILTERS.map((f) => {
       const count = rows.filter(matches[f.key]).length;
       return h('button', {
@@ -157,7 +159,15 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
       }, ops.reorder ? '✓ Will match template order' : 'Match template order') : null,
       !isEmptyOps(ops) ? h('button', {
         class: 'btn btn-quiet', title: 'Forget every pending change of this file',
-        onclick: () => { if (confirm('Discard all pending changes of this file?')) { ops = { entries: {} }; saveNow(); renderCounters(); renderList(); } },
+        onclick: () => {
+          if (!confirm('Discard all pending changes of this file?')) return;
+          const reload = !!ops.plurals;
+          ops = { entries: {} };
+          saveNow();
+          if (reload) { app.refresh(); return; }
+          renderCounters();
+          renderList();
+        },
       }, 'Discard changes') : null);
   }
 
@@ -300,6 +310,23 @@ export async function editorView(app, root, { culture, name }, isCurrent) {
   if (!file.pot) notices.push(h('div', { class: 'notice' }, 'This file has no template any more: all of its entries are deprecated and can only be removed.'));
   if (file.pot && !file.po) notices.push(h('div', { class: 'notice' }, `${cultureName} has no ${name}.po yet. It is created when you translate a string, with the plural rule “${file.defaults.pluralForms}”.`));
   if (file.formsError) notices.push(h('div', { class: 'notice notice-error' }, `The Plural-Forms header of this file cannot be read (${file.formsError}); plural forms are shown without examples.`));
+  if (file.outdated) {
+    const wanted = describeRule(file.rule);
+    const setPlurals = (value) => {
+      if (value) ops.plurals = value;
+      else delete ops.plurals;
+      saveNow();
+      app.refresh();
+    };
+    notices.push(file.upgraded
+      ? h('div', { class: 'notice' },
+        `The plural rule of this file will be updated to “${file.rule}” (${wanted}). Forms the new rule adds are empty until you translate them. `,
+        h('button', { class: 'link', onclick: () => setPlurals(null) }, 'Keep the current rule'))
+      : h('div', { class: 'notice' },
+        `This file uses the plural rule “${file.fileRule ?? 'none'}”. The current rule for ${cultureName} is “${file.rule}” (${wanted}). `,
+        'The file keeps working with its rule; updating it adds the forms the language needs. ',
+        h('button', { class: 'btn', onclick: () => setPlurals(file.rule) }, 'Update plural rule')));
+  }
 
   renderCounters();
   renderList();

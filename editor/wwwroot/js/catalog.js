@@ -1,14 +1,16 @@
 // Merges a template (.pot) with a translation file (.po) into editor rows, computes
 // statistics, and applies pending changes ("ops") to produce the new file text.
 //
-// Ops for one file: { entries: { [key]: op }, reorder?: true }
+// Ops for one file: { entries: { [key]: op }, reorder?: true, plurals?: string }
 //   op = { t: 'set', v: string[], b: string[] | null, add?: true }  translation (b = value seen when edited)
 //      | { t: 'remove' }                                            delete the entry
+//   plurals: the Plural-Forms value to update the file to (see applyPluralRule)
 
 import {
-  parsePo, serializePo, blockKey, headerBlock, pluralCount, setMsgstr,
+  parsePo, serializePo, blockKey, headerBlock, headerFields, pluralCount, setMsgstr, setHeaderField,
   adoptTemplateShape, entryFromTemplate, insertAfter, removeBlock, createFromTemplate,
 } from './po.js';
+import { parsePluralForms, sameForms, sameRule, formMapping } from './plurals.js';
 
 export const STAT_KEYS = ['translated', 'partial', 'empty', 'missing', 'deprecated'];
 
@@ -116,10 +118,36 @@ export function pruneOps(ops, rows, nplurals) {
   }
   const result = { entries };
   if (ops?.reorder) result.reorder = true;
+  if (ops?.plurals) result.plurals = ops.plurals;
   return result;
 }
 
-export const isEmptyOps = (ops) => !ops || (!ops.reorder && Object.keys(ops.entries ?? {}).length === 0);
+export const isEmptyOps = (ops) => !ops || (!ops.reorder && !ops.plurals && Object.keys(ops.entries ?? {}).length === 0);
+
+/** True when a file's Plural-Forms header already means the same as `rule`. */
+export const usesPluralRule = (file, rule) => sameRule(headerFields(file).get('Plural-Forms'), rule);
+
+/**
+ * Updates a parsed file to the Plural-Forms value `rule`: rewrites the header line and
+ * moves the forms of every plural entry to the new rule (see formMapping). Forms the
+ * new rule adds are left empty. Returns false when the file already uses the rule.
+ */
+export function applyPluralRule(file, rule) {
+  const to = parsePluralForms(rule);
+  let from = null;
+  try {
+    from = parsePluralForms(headerFields(file).get('Plural-Forms'));
+  } catch { /* unreadable header: keep the forms by index */ }
+  if (from && sameForms(from, to)) return false;
+  const mapping = from ? formMapping(from, to) : Array.from({ length: to.nplurals }, (_, i) => i);
+  setHeaderField(file, 'Plural-Forms', rule);
+  for (const block of file.blocks) {
+    if (block.kind !== 'entry' || block.idPlural === null) continue;
+    const values = mapping.map((j) => (j >= 0 ? block.str[j] ?? '' : ''));
+    if (!sameValues(values, block.str)) setMsgstr(file, block, values);
+  }
+  return true;
+}
 
 /** True when the entries shared with the template appear in template order. */
 export function isOrdered(pot, po) {
@@ -175,6 +203,7 @@ export function applyOps({ pot, poText, ops, defaults }) {
     file = createFromTemplate(pot, defaults ?? {});
   } else {
     file = parsePo(poText);
+    if (ops?.plurals) applyPluralRule(file, ops.plurals);
   }
   const nplurals = pluralCount(file);
   const templates = new Map();
