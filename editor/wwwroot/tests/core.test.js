@@ -407,16 +407,67 @@ test('unified diff and git blob ids', async () => {
   equal(await filePatch('same.txt', 'x\n', 'x\n'), '');
 });
 
+/**
+ * Insertion, deletion and creation patches against the checkout that do not depend on
+ * which entries or files the corpus currently lacks, each touching a distinct file.
+ */
+async function fixturePatches(env) {
+  const candidates = [];
+  const cultures = ['de', ...Object.keys(env.cultures).filter((c) => c !== 'de').sort()];
+  for (const culture of cultures) {
+    for (const name of env.cultures[culture]) {
+      const template = await pot(env, name);
+      if (!template) continue;
+      const text = await env.read(poPath(culture, name));
+      const row = buildRows(template, parsePo(text)).find((r) => r.inPot && r.inPo);
+      if (row) candidates.push({ path: poPath(culture, name), name, text, template, row });
+      if (candidates.length === 2) break;
+    }
+    if (candidates.length === 2) break;
+  }
+  assert(candidates.length === 2, 'the corpus has two translated files with templates');
+  const [insertInto, deleteFrom] = candidates;
+
+  // A template entry the file cannot have yet, placed after the first existing entry.
+  const extra = entryBlocks(parsePo('msgid ""\nmsgstr ""\n\nmsgctxt "PoEditor.Tests"\nmsgid "Inserted by the editor tests"\nmsgstr ""\n'))[0];
+  const blocks = insertInto.template.blocks.slice();
+  blocks.splice(blocks.findIndex((b) => b.kind === 'entry' && blockKey(b) === insertInto.row.key) + 1, 0, extra);
+  const template = { ...insertInto.template, blocks };
+  const inserted = applyOps({ pot: template, poText: insertInto.text, ops: { entries: { [blockKey(extra)]: { t: 'set', v: ['Eingefügt'], b: null } } } });
+  const insertion = changes(insertInto.text, inserted);
+  assert(insertion.added.length > 0 && insertion.removed.length === 0, 'insertion only adds lines');
+
+  const deleted = applyOps({ pot: deleteFrom.template, poText: deleteFrom.text, ops: { entries: { [deleteFrom.row.key]: { t: 'remove' } } } });
+  const deletion = changes(deleteFrom.text, deleted);
+  assert(deletion.removed.length > 0 && deletion.added.length === 0, 'deletion only removes lines');
+
+  let culture = 'qps-ploc';
+  while (env.cultures[culture]) culture += 'x';
+  const createdTemplate = await pot(env, env.templates[0]);
+  const row = buildRows(createdTemplate, null)[0];
+  const defaults = { pluralForms: 'nplurals=2; plural=(n != 1);', language: culture };
+  const created = applyOps({ pot: createdTemplate, poText: null, ops: { entries: { [row.key]: { t: 'set', v: ['Wert'], b: null } } }, defaults });
+
+  return [
+    await filePatch(insertInto.path, insertInto.text, inserted),
+    await filePatch(deleteFrom.path, deleteFrom.text, deleted),
+    await filePatch(poPath(culture, env.templates[0]), null, created),
+  ];
+}
+
 test('generated patches apply with git', async (env) => {
   if (!env.gitApplyCheck) return 'skipped (browser)';
-  assert(patches.length >= 3, 'earlier tests produced patches');
-  for (const patch of patches) {
+  const fixtures = await fixturePatches(env);
+  assert(fixtures[2].includes('--- /dev/null\n'), 'creation patch adds a new file');
+  const all = [...fixtures, ...patches];
+  for (const patch of all) {
     const error = await env.gitApplyCheck(patch);
     assert(error === null, `git apply --check failed for ${patch.split('\n')[0]}:\n${error}`);
   }
-  const all = await env.gitApplyCheck(patches.filter((p, i, list) => list.findIndex((q) => q.split('\n')[0] === p.split('\n')[0]) === i).join(''));
-  assert(all === null, `combined patch failed:\n${all}`);
-  return `${patches.length} patches`;
+  const combined = all.filter((p, i, list) => list.findIndex((q) => q.split('\n')[0] === p.split('\n')[0]) === i);
+  const error = await env.gitApplyCheck(combined.join(''));
+  assert(error === null, `combined patch failed:\n${error}`);
+  return `${all.length} patches (${fixtures.length} fixtures), ${combined.length} combined`;
 });
 
 test('zip archive structure', () => {
