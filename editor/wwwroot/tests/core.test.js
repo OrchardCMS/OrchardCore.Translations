@@ -3,8 +3,9 @@
 
 import { test, assert, equal, deepEqual, throws } from './harness.js';
 import { parsePo, serializePo, escapePo, unescapePo, blockKey, entryKey, headerFields, pluralCount, entryBlocks } from '../js/po.js';
-import { buildRows, computeStats, applyOps, isOrdered, statsArray } from '../js/catalog.js';
-import { parsePluralForms, describeForms, parseRange, formatNumbers } from '../js/plurals.js';
+import { buildRows, computeStats, applyOps, isOrdered, statsArray, usesPluralRule, applyPluralRule } from '../js/catalog.js';
+import { parsePluralForms, describeForms, parseRange, formatNumbers, sameRule, formMapping } from '../js/plurals.js';
+import { pluralRules, pluralRuleFor } from '../js/plural-rules.js';
 import { diffLines, filePatch, gitBlobSha, diffStat, textHunks } from '../js/diff.js';
 import { createZip } from '../js/zip.js';
 import { splitLines } from '../js/po.js';
@@ -313,6 +314,87 @@ test('plural rules are evaluated without eval', async (env) => {
   return `${seen.size} distinct rules in the repository`;
 });
 
+test('plural rule database follows CLDR with Orchard Core form indexes', async (env) => {
+  for (const [code, rule] of pluralRules()) {
+    const forms = parsePluralForms(rule);
+    const used = new Set();
+    for (let n = 0; n <= 3000; n++) used.add(forms.select(n));
+    for (const n of [100000, 1000000, 2000000, 1100000]) used.add(forms.select(n));
+    assert(!used.has(-1), `${code}: a number selects no form`);
+    equal(used.size, forms.nplurals, `${code}: every form is used`);
+  }
+  const select = (code, numbers) => numbers.map(parsePluralForms(pluralRuleFor(code)).select);
+  deepEqual(select('fr', [0, 1, 2, 1000000, 2000000, 1000001]), [0, 0, 1, 2, 2, 1]);
+  deepEqual(select('es', [0, 1, 2, 1000000]), [1, 0, 1, 2]);
+  deepEqual(select('he', [1, 2, 3]), [0, 2, 1]);
+  deepEqual(select('sl', [1, 2, 3, 5, 101]), [1, 2, 3, 0, 1]);
+  deepEqual(select('vi', [0, 1, 2]), [0, 0, 1]);
+  equal(pluralRuleFor('sr-cyrl-RS'), pluralRuleFor('sr'));
+  equal(pluralRuleFor('zh_Hans'), 'nplurals=1; plural=0;');
+  equal(pluralRuleFor('pt-BR'), pluralRuleFor('pt'));
+  assert(pluralRuleFor('pt-PT') !== pluralRuleFor('pt'), 'pt-PT has its own rule');
+  equal(pluralRuleFor('xx'), null);
+  // Rules written differently but meaning the same are not reported as outdated.
+  assert(sameRule('nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);', pluralRuleFor('ar')));
+  assert(!sameRule('nplurals=2; plural=(n > 1);', pluralRuleFor('fr')));
+  const outdated = [];
+  for (const [culture, names] of Object.entries(env.cultures)) {
+    const rule = pluralRuleFor(culture);
+    if (!names.length || !rule) continue;
+    if (!usesPluralRule(parsePo(await env.read(poPath(culture, names[0]))), rule)) outdated.push(culture);
+  }
+  return `outdated in the repository: ${outdated.join(', ') || 'none'}`;
+});
+
+test('form mapping keeps translations and leaves added forms empty', () => {
+  const map = (from, to) => formMapping(parsePluralForms(from), parsePluralForms(to));
+  deepEqual(map('nplurals=2; plural=(n > 1);', pluralRuleFor('fr')), [0, 1, -1], 'fr: "many" is new');
+  deepEqual(map('nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;', pluralRuleFor('cs')), [0, 1, 3], 'cs: unused form dropped');
+  deepEqual(map('nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;', pluralRuleFor('sl')), [3, 0, 1, 2], 'sl: forms reordered');
+  deepEqual(map('nplurals=3; plural=(n==1 ? 0 : n==2 ? 1 : 2);', pluralRuleFor('he')), [0, 2, 1], 'he: "two" moved last');
+  deepEqual(map('nplurals=1; plural=0;', pluralRuleFor('vi')), [0, -1], 'vi: "other" is new');
+  deepEqual(map(pluralRuleFor('ru'), pluralRuleFor('ru')), [0, 1, 2]);
+});
+
+test('updating the plural rule of a file only touches its plural lines', async (env) => {
+  const name = 'OrchardCore.Admin';
+  const path = poPath('fr', name);
+  const text = await env.read(path);
+  const template = await pot(env, name);
+  const before = parsePo(text);
+  if (usesPluralRule(before, pluralRuleFor('fr'))) return 'skipped (already updated)';
+  const plurals = entryBlocks(before).filter((b) => b.idPlural !== null);
+  assert(plurals.length > 0, 'the file has plural entries');
+  const next = applyOps({ pot: template, poText: text, ops: { entries: {}, plurals: pluralRuleFor('fr') } });
+  const after = parsePo(next);
+  equal(serializePo(after), next);
+  equal(headerFields(after).get('Plural-Forms'), pluralRuleFor('fr'));
+  equal(pluralCount(after), 3);
+  for (const block of plurals) {
+    const updated = after.blocks.find((b) => blockKey(b) === blockKey(block));
+    deepEqual(updated.str, [block.str[0], block.str[1], ''], `forms of "${block.id}"`);
+  }
+  const { added, removed } = changes(text, next);
+  const eol = text.includes('\r\n') ? '\r\n' : '\n';
+  deepEqual(removed, [`"Plural-Forms: nplurals=2; plural=(n > 1);\\n"${eol}`]);
+  equal(added.length, 1 + plurals.length);
+  deepEqual(added.slice(1), plurals.map(() => `msgstr[2] ""${eol}`));
+  equal(applyOps({ pot: template, poText: next, ops: { entries: {}, plurals: pluralRuleFor('fr') } }), next, 'updating twice changes nothing');
+  // An edit queued with the update is applied to the new forms.
+  const key = blockKey(plurals[0]);
+  const edited = applyOps({ pot: template, poText: text, ops: { entries: { [key]: { t: 'set', v: ['a', 'b', 'c'], b: null } }, plurals: pluralRuleFor('fr') } });
+  deepEqual(parsePo(edited).blocks.find((b) => blockKey(b) === key).str, ['a', 'b', 'c']);
+  patches.push(await filePatch(path, text, next));
+  return `${plurals.length} plural entries`;
+});
+
+test('a header without Plural-Forms gets one', () => {
+  const text = 'msgid ""\nmsgstr ""\n"Language: vi\\n"\n\nmsgid "file"\nmsgid_plural "files"\nmsgstr[0] "tệp"\n';
+  const file = parsePo(text);
+  assert(applyPluralRule(file, pluralRuleFor('vi')));
+  equal(serializePo(file), 'msgid ""\nmsgstr ""\n"Language: vi\\n"\n"Plural-Forms: nplurals=2; plural=(n > 1);\\n"\n\nmsgid "file"\nmsgid_plural "files"\nmsgstr[0] "tệp"\nmsgstr[1] ""\n');
+});
+
 test('unified diff and git blob ids', async () => {
   equal(await gitBlobSha('hello\n'), 'ce013625030ba8dba906f756967f9e9ca394464a');
   const a = 'one\ntwo\nthree\nfour\nfive\nsix\nseven\neight\nnine\n';
@@ -325,16 +407,67 @@ test('unified diff and git blob ids', async () => {
   equal(await filePatch('same.txt', 'x\n', 'x\n'), '');
 });
 
+/**
+ * Insertion, deletion and creation patches against the checkout that do not depend on
+ * which entries or files the corpus currently lacks, each touching a distinct file.
+ */
+async function fixturePatches(env) {
+  const candidates = [];
+  const cultures = ['de', ...Object.keys(env.cultures).filter((c) => c !== 'de').sort()];
+  for (const culture of cultures) {
+    for (const name of env.cultures[culture]) {
+      const template = await pot(env, name);
+      if (!template) continue;
+      const text = await env.read(poPath(culture, name));
+      const row = buildRows(template, parsePo(text)).find((r) => r.inPot && r.inPo);
+      if (row) candidates.push({ path: poPath(culture, name), name, text, template, row });
+      if (candidates.length === 2) break;
+    }
+    if (candidates.length === 2) break;
+  }
+  assert(candidates.length === 2, 'the corpus has two translated files with templates');
+  const [insertInto, deleteFrom] = candidates;
+
+  // A template entry the file cannot have yet, placed after the first existing entry.
+  const extra = entryBlocks(parsePo('msgid ""\nmsgstr ""\n\nmsgctxt "PoEditor.Tests"\nmsgid "Inserted by the editor tests"\nmsgstr ""\n'))[0];
+  const blocks = insertInto.template.blocks.slice();
+  blocks.splice(blocks.findIndex((b) => b.kind === 'entry' && blockKey(b) === insertInto.row.key) + 1, 0, extra);
+  const template = { ...insertInto.template, blocks };
+  const inserted = applyOps({ pot: template, poText: insertInto.text, ops: { entries: { [blockKey(extra)]: { t: 'set', v: ['Eingefügt'], b: null } } } });
+  const insertion = changes(insertInto.text, inserted);
+  assert(insertion.added.length > 0 && insertion.removed.length === 0, 'insertion only adds lines');
+
+  const deleted = applyOps({ pot: deleteFrom.template, poText: deleteFrom.text, ops: { entries: { [deleteFrom.row.key]: { t: 'remove' } } } });
+  const deletion = changes(deleteFrom.text, deleted);
+  assert(deletion.removed.length > 0 && deletion.added.length === 0, 'deletion only removes lines');
+
+  let culture = 'qps-ploc';
+  while (env.cultures[culture]) culture += 'x';
+  const createdTemplate = await pot(env, env.templates[0]);
+  const row = buildRows(createdTemplate, null)[0];
+  const defaults = { pluralForms: 'nplurals=2; plural=(n != 1);', language: culture };
+  const created = applyOps({ pot: createdTemplate, poText: null, ops: { entries: { [row.key]: { t: 'set', v: ['Wert'], b: null } } }, defaults });
+
+  return [
+    await filePatch(insertInto.path, insertInto.text, inserted),
+    await filePatch(deleteFrom.path, deleteFrom.text, deleted),
+    await filePatch(poPath(culture, env.templates[0]), null, created),
+  ];
+}
+
 test('generated patches apply with git', async (env) => {
   if (!env.gitApplyCheck) return 'skipped (browser)';
-  assert(patches.length >= 3, 'earlier tests produced patches');
-  for (const patch of patches) {
+  const fixtures = await fixturePatches(env);
+  assert(fixtures[2].includes('--- /dev/null\n'), 'creation patch adds a new file');
+  const all = [...fixtures, ...patches];
+  for (const patch of all) {
     const error = await env.gitApplyCheck(patch);
     assert(error === null, `git apply --check failed for ${patch.split('\n')[0]}:\n${error}`);
   }
-  const all = await env.gitApplyCheck(patches.filter((p, i, list) => list.findIndex((q) => q.split('\n')[0] === p.split('\n')[0]) === i).join(''));
-  assert(all === null, `combined patch failed:\n${all}`);
-  return `${patches.length} patches`;
+  const combined = all.filter((p, i, list) => list.findIndex((q) => q.split('\n')[0] === p.split('\n')[0]) === i);
+  const error = await env.gitApplyCheck(combined.join(''));
+  assert(error === null, `combined patch failed:\n${error}`);
+  return `${all.length} patches (${fixtures.length} fixtures), ${combined.length} combined`;
 });
 
 test('zip archive structure', () => {

@@ -73,6 +73,30 @@ are limited to that range.
 Fill in every form, including one marked *not used*: a string counts as translated
 only when all its forms have a value.
 
+#### Plural rules
+
+The editor has its own list of plural rules, one per language, in
+`wwwroot/js/plural-rules.js`. They follow the
+[Unicode CLDR plural rules](https://www.unicode.org/cldr/charts/49/supplemental/language_plural_rules.html)
+in the same form as Orchard Core's `DefaultPluralRuleProvider`: when CLDR added a
+category, Orchard Core gave it the next free index so that the existing forms keep
+their position. A new `.po` file gets the rule of its language from this list, or from
+the other files of the language, or English's `nplurals=2; plural=(n != 1);` when the
+language is in neither.
+
+An existing file keeps the rule of its `Plural-Forms` header: Orchard Core and Crowdin
+both read that header, so older rules keep working. When the header differs from the
+editor's rule (French files with two forms where CLDR has three, for instance), the
+section and the language page say so and offer **Update plural rule**. The update
+rewrites the `Plural-Forms` header and moves every plural translation to the form
+that now covers the same numbers. Forms the new rule adds are left empty, so those
+strings show as untranslated until someone fills them in; forms that no number used
+any more are dropped. Like every other change, the update is a pending change until
+you save or export it, and **Keep the current rule** cancels it for a section.
+
+Rules that are written differently but pick the same form for every number count as
+the same, so the update only touches files whose forms actually change.
+
 ### Bulk helpers
 
 The buttons next to the filters apply to the whole section. The first three are also
@@ -83,6 +107,7 @@ on the language page, where they apply to every existing file of the language.
 | **Remove deprecated** | Removes every deprecated string. |
 | **Add missing** | Adds the strings the file lacks, with an empty translation, so the file lists everything the template has. |
 | **Match template order** | Shown when a file's strings are not in the template's order. Reorders them. |
+| **Update plural rule** | On the language page only: updates every file whose `Plural-Forms` header differs from the editor's rule (see [Plural rules](#plural-rules)). |
 | **Discard changes** | Forgets your pending changes for the section. |
 
 Before removing deprecated strings, check whether one of them is an older wording of
@@ -247,7 +272,8 @@ statistics computed by `site.cs` match the editor's own.
 | `site.cs` | File-based C# app: `serve` for local use, `build` to produce the static site with its statistics index (`data/index.json`). |
 | `wwwroot/js/po.js` | Lossless PO parser and serializer. |
 | `wwwroot/js/catalog.js` | Merges a template with a translation file, computes statistics, applies pending changes. |
-| `wwwroot/js/plurals.js` | `Plural-Forms` parser and evaluator. |
+| `wwwroot/js/plurals.js` | `Plural-Forms` parser and evaluator, and the mapping of forms between two rules. |
+| `wwwroot/js/plural-rules.js` | The editor's plural rule for each language (Unicode CLDR, with Orchard Core's form indexes). |
 | `wwwroot/js/sources.js` | Hosted copy and local folder access. |
 | `wwwroot/js/drafts.js` | Pending changes in local storage. |
 | `wwwroot/js/diff.js`, `zip.js` | Patch and zip export. |

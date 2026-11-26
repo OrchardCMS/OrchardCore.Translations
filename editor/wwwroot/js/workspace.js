@@ -2,28 +2,44 @@
 // into new file contents, and the bulk helpers.
 
 import { parsePo, headerFields, pluralCount } from './po.js';
-import { buildRows, applyOps, pruneOps, isOrdered, isConflict } from './catalog.js';
+import { buildRows, applyOps, pruneOps, isOrdered, isConflict, usesPluralRule, applyPluralRule } from './catalog.js';
 import { parsePluralForms } from './plurals.js';
+import { pluralRuleFor } from './plural-rules.js';
 import { diffStat } from './diff.js';
 import { drafts } from './drafts.js';
 
 export const poPath = (culture, name) => `Localization/${culture}/${name}.po`;
 
-/** Everything the editor needs to know about one file of one culture. */
-export async function loadFile(app, culture, name) {
+/**
+ * Everything the editor needs to know about one file of one culture. When `ops` holds
+ * a pending plural rule update, rows and forms are those of the updated file.
+ *   rule      the editor's plural rule for the culture (null when unknown)
+ *   outdated  the file's Plural-Forms header differs from `rule`
+ *   upgraded  rows and forms already follow `ops.plurals`
+ */
+export async function loadFile(app, culture, name, ops) {
   const [pot, poText] = await Promise.all([app.pot(name), app.source.readPo(culture, name)]);
   const po = poText == null ? null : parsePo(poText);
   const defaults = po ? null : await app.cultureDefaults(culture);
-  const rule = po ? headerFields(po).get('Plural-Forms') : defaults.pluralForms;
+  const rule = pluralRuleFor(culture);
+  const fileRule = po ? headerFields(po).get('Plural-Forms') ?? null : null;
+  const outdated = !!(po && rule && !usesPluralRule(po, rule));
+  let upgraded = false;
+  if (po && ops?.plurals) {
+    try {
+      upgraded = applyPluralRule(po, ops.plurals);
+    } catch { /* invalid pending rule: ignored */ }
+  }
+  const header = po ? headerFields(po).get('Plural-Forms') : defaults.pluralForms;
   let forms = null;
   let formsError = null;
   try {
-    forms = parsePluralForms(rule);
+    forms = parsePluralForms(header);
   } catch (e) {
     formsError = e.message;
   }
   return {
-    culture, name, pot, po, poText, defaults, forms, formsError,
+    culture, name, pot, po, poText, defaults, forms, formsError, rule, fileRule, outdated, upgraded,
     nplurals: po ? pluralCount(po) : forms?.nplurals ?? 2,
     rows: buildRows(pot, po),
     ordered: isOrdered(pot, po),
@@ -32,9 +48,10 @@ export async function loadFile(app, culture, name) {
 
 /** The effect of a file's pending changes: old and new text, line counts, conflicts. */
 export async function computeChange(app, culture, name, ops) {
-  const file = await loadFile(app, culture, name);
+  const file = await loadFile(app, culture, name, ops);
   const pruned = pruneOps(ops, file.rows, file.nplurals);
   if (pruned.reorder && file.ordered) delete pruned.reorder;
+  if (pruned.plurals && !file.upgraded) delete pruned.plurals;
   const applied = applyOps({ pot: file.pot, poText: file.poText, ops: pruned, defaults: file.defaults });
   const changed = applied != null && applied !== file.poText;
   return {
@@ -87,10 +104,17 @@ export function queueReorder(file, ops) {
   return 1;
 }
 
+export function queuePluralRule(file, ops) {
+  if (!file.outdated || ops.plurals === file.rule) return 0;
+  ops.plurals = file.rule;
+  return 1;
+}
+
 const ACTIONS = {
   removeDeprecated: { queue: queueRemoveDeprecated, relevant: (stats) => !stats || stats[4] > 0 },
   addMissing: { queue: queueAddMissing, relevant: (stats) => !stats || stats[3] > 0 },
   reorder: { queue: queueReorder, relevant: () => true },
+  plurals: { queue: queuePluralRule, relevant: () => true },
 };
 
 /**
@@ -107,8 +131,8 @@ export async function bulkCulture(app, culture, action, onProgress) {
   await Promise.all(Array.from({ length: 6 }, async () => {
     while (next < files.length) {
       const name = files[next++];
-      const file = await loadFile(app, culture, name);
       const ops = drafts.get(culture, name);
+      const file = await loadFile(app, culture, name, ops);
       const count = queue(file, ops);
       if (count) {
         drafts.set(culture, name, ops);
